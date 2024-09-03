@@ -12,6 +12,7 @@ const NavbarItem = ({ text, hasIcon, alt }) => (
 );
 
 const Navbar = () => (
+  <>
   <nav className="flex relative flex-wrap gap-5 justify-between items-center self-center w-full max-w-[1520px] max-md:max-w-full">
     <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006" className="object-contain shrink-0 self-stretch max-w-full aspect-[1.77] w-[124px]" alt="Brand logo" />
     <div className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
@@ -34,6 +35,8 @@ const Navbar = () => (
       <button className="gap-3 self-stretch p-2.5 my-auto text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[216px]">Get In Touch</button>
     </div>
   </nav>
+  <div className="relative shrink-0 mt-8 h-px border border-solid border-neutral-200 max-md:max-w-full" />
+  </>
 );
 
 export default Navbar;
