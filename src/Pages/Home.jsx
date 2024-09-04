@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import MainFooter from '../Components/Footer/MainFooter';
 
 // Menu items for the navbar
 const menuItems = [
@@ -31,7 +32,7 @@ const carouselData = [
   }
 ];
 
-function HeadlineSection() {
+function Home() {
   const [language, setLanguage] = useState('English');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -46,6 +47,7 @@ function HeadlineSection() {
   const currentData = carouselData[currentIndex];
 
   return (
+    <>
     <div className="flex overflow-hidden flex-col bg-white h-screen">
       <div className="flex relative flex-col py-6 w-full h-full max-md:max-w-full">
         <img
@@ -155,7 +157,9 @@ function HeadlineSection() {
         </section>
       </div>
     </div>
+      < MainFooter />
+  </>
   );
 }
 
-export default HeadlineSection;
+export default Home;

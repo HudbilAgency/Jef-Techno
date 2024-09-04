@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import HeadlineSection from './Pages/HeadlineSection.jsx';
+
+import Home from './Pages/Home.jsx';
 function App() {
 
   return (
     <>
-    <HeadlineSection />
+    <Home />
 
   </>
   )
