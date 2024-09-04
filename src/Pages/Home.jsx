@@ -10,6 +10,32 @@ const menuItems = [
   { label: 'Careers', hasDropdown: false }
 ];
 
+// OurContact's Section
+
+const inputFields = [
+  { label: 'Name', type: 'text' },
+  { label: 'Email', type: 'email' },
+  { label: 'Mobile Number', type: 'tel' },
+];
+
+// Blog's Data
+
+const blogData = [
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img1.png",
+    title: "Earthing System Ceremony Celebrates Outstanding Contributions",
+  },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img2.png",
+    title: "JEF and Saudi Broadcasting Authority (SBA) form astrategic partnership to",
+  },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img3.png",
+    title: "JEF social responsibility program reach 50,000 beneficiaries",
+  },
+];
+
+
 // Carousel data with images, text, and dot colors
 const carouselData = [
   {
@@ -157,8 +183,145 @@ function Home() {
         </section>
       </div>
     </div>
+
+
+
+    {/*  Founder's Message Section   */}
+
+        <section>
+
+          <main className="flex overflow-hidden flex-col font-bold text-white bg-white bg-opacity-50">
+            <section className="flex relative flex-col justify-center items-start px-20 py-16 w-full min-h-[858px] max-md:px-5 max-md:max-w-full">
+              <img loading="lazy" src="./HomePageImg/FounderImg.png" alt="" className="object-cover absolute inset-0 size-full" />
+              <div className="flex lg:mx-[120px] relative flex-col items-start max-w-full w-[909px]">
+              <h1 className="text-6xl max-md:max-w-full max-md:text-4xl">
+                Founder's message
+              </h1>
+              <p className="self-stretch mt-6 text-3xl leading-10 max-md:max-w-full">
+                JEF is an innovative company with Indian roots and an extensive international presence across 21+ countries in the ASEAN, Middle Eastern, African and European regions. We have been the preferred vendor for prestigious projects in many countries with 3000+ global customers and an astounding 90% customer retention rate.
+              </p>
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9413036975d5e878aae400b5c1b1dede1eb9dddb15de69b0300085276dd801b0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Signature" className="object-contain mt-8 max-w-full aspect-[2.93] w-[226px]" />
+                <h2 className="mt-5 text-5xl max-md:text-4xl">Prashanth BG</h2>
+                <p className="mt-5 text-3xl max-md:max-w-full">
+                  CEO, JEF TECHNO SOLUTIONS PVT LTD
+                </p>
+              </div>
+            </section>
+          </main>
+
+          </section>
+
+
+  {/*  Blog's Section  */}
+
+
+
+    <section >
+      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
+          <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
+            <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
+              <h1 className="text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+              <div className="flex gap-7 text-base tracking-[3px]">
+                <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
+                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 w-14 aspect-square" />
+              </div>
+            </header>
+            <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
+              <a href="#newest" className="text-red-700 basis-auto">Newest</a>
+              <a href="#oldest" className="text-neutral-900">Oldest</a>
+            </nav>
+            <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
+              <div className="flex gap-5 max-md:flex-col">
+                {blogData.map((blog, index) => (
+                  <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
+                ))}
+              </div>
+            </section>
+          </div>
+        </main>
+    </section>
+
+
+   {/*  Contact Us Section    */}
+
+    <section className="flex overflow-hidden flex-col text-base font-light bg-white text-stone-300">
+      <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
+        <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
+        <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
+          <h1 className="text-5xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+            Contact us
+          </h1>
+          <p className="self-stretch mt-4 text-lg font-normal leading-none text-neutral-900 max-md:max-w-full">
+            Fill in the details our marketing expert will reach you soon.
+          </p>
+          <form className="w-full mt-12 max-md:mt-10">
+            {inputFields.map((field, index) => (
+              <FormInput key={index} label={field.label} type={field.type} />
+            ))}
+            <button
+              type="submit"
+              className="overflow-hidden px-16 py-4 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+  
+
+
+
       < MainFooter />
   </>
+  );
+}
+
+
+
+// Blog's Section Extra
+
+
+function BlogCard({ imageSrc, title }) {
+  return (
+    <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+      <div className="flex flex-col grow max-md:mt-10">
+        <div className="flex flex-col justify-center w-full min-h-[420px]">
+          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[360px] aspect-square" />
+        </div>
+        <div className="flex flex-col items-start pr-16 mt-8 w-full max-w-[412px] max-md:pr-5">
+          <h2 className="text-lg leading-6 text-stone-900">{title}</h2>
+          <div className="flex gap-2 mt-8 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
+            <div className="grow">Read more</div>
+            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
+
+
+
+// Our Contact's Input Section
+
+function FormInput({ label, type }) {
+  const id = label.toLowerCase().replace(' ', '-');
+
+  return (
+    <div className="mb-6">
+      <label htmlFor={id} className="sr-only">{label}</label>
+      <input
+        type={type}
+        id={id}
+        name={id}
+        placeholder={label}
+        className="overflow-hidden px-5 py-3.5 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+        required
+      />
+    </div>
   );
 }
 
