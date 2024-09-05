@@ -221,7 +221,7 @@ function Home() {
 
     {/*  Founder's Message Section   */}
 
-        <section>
+     <section>
 
           <main className="flex overflow-hidden flex-col font-bold text-white bg-white bg-opacity-50">
             <section className="flex relative flex-col justify-center items-start px-20 py-16 w-full min-h-[858px] max-md:px-5 max-md:max-w-full">
@@ -243,6 +243,7 @@ function Home() {
           </main>
 
           </section>
+
 
 
   {/*  Blog's Section  */}
@@ -284,8 +285,8 @@ function Home() {
           <h1 className="text-5xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
             Contact us
           </h1>
-          <p className="self-stretch mt-4 text-lg font-normal leading-none text-neutral-900 max-md:max-w-full">
-            Fill in the details our marketing expert will reach you soon.
+          <p className="self-stretch mt-4 text-lg font-normal leading-none text-white max-md:max-w-full">
+          Get in touch with us for any business enquiry.
           </p>
           <form className="w-full mt-12 max-md:mt-10">
             {inputFields.map((field, index) => (
