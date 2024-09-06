@@ -49,15 +49,15 @@ const inputFields = [
 const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
-    title: "Earthing System Ceremony Celebrates Outstanding Contributions",
+    title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
-    title: "JEF and Saudi Broadcasting Authority (SBA) form astrategic partnership to",
+    title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
-    title: "JEF social responsibility program reach 50,000 beneficiaries",
+    title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
   },
 ];
 
@@ -85,41 +85,38 @@ const carouselData = [
 ];
 
 function Home() {
-{/*Gsap Annimation*/}
 
 
-useGSAP(()=>{
+  {/*Gsap Annimation*/}
 
-  let tl=gsap.timeline({
-    scrollTrigger:{
-      trigger:".container",
-      toggleActions:"play none none reverse",
-      
-      start:"30% 30%",
-      end:"center 10%",
-      pin:true
-    }
+
+  useGSAP(()=>{
+
+    let tl=gsap.timeline({
+      scrollTrigger:{
+        trigger:".container",
+        toggleActions:"play none none reverse",
+
+        start:"30% 30%",
+        end:"center 10%",
+        pin:true
+      }
+    })
+    {/*Text Animation*/}
+
+    tl.to(".title1",{x:50,opacity:0,scrub:true,},"display")
+    tl.to(".description1",{y:20,opacity:0},"display")
+    tl.fromTo(".title2",{x:30,opacity:0},{x:0,opacity:1})
+    tl.fromTo(".description2",{y:10,opacity:0},{y:0,opacity:1})
+
+    {/*Image Animation*/}
+
+    tl.to(".image1",{x:750,y:-630},"display")
+
+
+    tl.to(".image2",{x:-720,y:-620},"display")
+
   })
-  {/*Text Animation*/}
-  
-  tl.to(".title1",{x:50,opacity:0,scrub:true,},"display")
-  tl.to(".description1",{y:20,opacity:0},"display")
-  tl.fromTo(".title2",{x:30,opacity:0},{x:0,opacity:1})
-  tl.fromTo(".description2",{y:10,opacity:0},{y:0,opacity:1})
-  
-  {/*Image Animation*/}
-  
-  tl.to(".image1",{x:750,y:-630},"display")
-  
-  
-  tl.to(".image2",{x:-720,y:-620},"display")
-  
-})
-  
-  
-  
-
-
 
 
   const [language, setLanguage] = useState('English');
@@ -134,8 +131,6 @@ useGSAP(()=>{
   };
 
   const currentData = carouselData[currentIndex];
-
-
 
   return (
     <>
@@ -210,7 +205,7 @@ useGSAP(()=>{
         />
         <div className="flex relative mt-56 justify-end mx-[80px]">
           <button
-            className="flex flex-col px-1 py-2 w-12 rounded-full border border-white border-solid"
+            className="flex flex-col px-1 py-2 w-12 active:bg-red-500 transition duration-100 ease-in-out rounded-full border border-white border-solid"
             onClick={handleButtonClick}
           >
             <img
@@ -251,22 +246,27 @@ useGSAP(()=>{
 
     {/*  Why choose JEF Section  */}
 
-    <main className="container flex lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
+    <main className="flex lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-wrap gap-7 w-full max-w-[1522px] max-md:max-w-full">
       </header>
-      
-        <FeatureSection 
-          
-          
+      {featureData.map((feature, index) => (
+        <FeatureSection
+          key={index}
+          title={feature.title}
+          description={feature.description}
+          imageSrc={feature.imageSrc}
         />
-      
+      ))}
     </main>
 
 
 
     {/*  Founder's Message Section   */}
 
-     <section>
+
+    
+
+     {/* <section>
 
           <main className="flex overflow-hidden flex-col font-bold text-white bg-white bg-opacity-50">
             <section className="flex relative flex-col justify-center items-start px-20 py-16 w-full min-h-[858px] max-md:px-5 max-md:max-w-full">
@@ -287,7 +287,38 @@ useGSAP(()=>{
             </section>
           </main>
 
-          </section>
+          </section> */}
+
+
+
+    <main className="flex overflow-hidden flex-col">
+      <section className="overflow-hidden  relative  w-full">
+        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="object-cover absolute inset-0 size-full" />
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
+            <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
+              <h1 className="text-6xl font-bold uppercase tracking-[3px] max-md:max-w-full max-md:text-4xl">
+                Founder message
+              </h1>
+              <p className="self-stretch my-20 w-[45vw] text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+                Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
+                <br />
+                I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
+              </p>
+              <h2 className="text-5xl font-semibold max-md:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className="mt-4 text-3xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="mt-4 text-3xl">{"JEF Group"}</p>
+            </div>
+          </div>
+          <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
 
 
 
@@ -299,7 +330,7 @@ useGSAP(()=>{
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
           <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
             <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-              <h1 className="text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+              <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
               <div className="flex gap-7 text-base tracking-[3px]">
                 <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
                 <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 w-14 aspect-square" />
@@ -323,7 +354,7 @@ useGSAP(()=>{
 
    {/*  Contact Us Section    */}
 
-    <section className="flex  flex-col text-base font-light bg-white text-stone-300">
+    <section className="flex overflow-hidden flex-col text-base font-light bg-white text-stone-300">
       <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
         <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
@@ -381,43 +412,33 @@ useGSAP(()=>{
 
 
 
-function FeatureSection({ title, description, imageSrc,number }) {
+function FeatureSection({ title, description, imageSrc }) {
   return (
-    <section className=" self-center my-20 w-full h-[110vh] max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
-      <div className=" text-3xl text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
+    <section className="self-center my-20 w-full max-w-[1472px] max-md:mt-10 max-md:max-w-full">
+      <div className="flex gap-5 max-md:flex-col">
+        <div className="flex  flex-col w-[36%] max-md:ml-0 max-md:w-full">
+          <img loading="lazy" src={imageSrc} className="object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
+        </div>
+        <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
+          <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
+            <div className=" text-3xl font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
               Why choose JEF ?
             </div>
-      <div className={`flex gap-5 max-md:flex-col`}>
-        <div className={` image1 flex  flex-col w-[36%] max-md:ml-0 max-md:w-full`}>
-          <img loading="lazy" src={"https://cdn.builder.io/api/v1/image/assets/TEMP/c4c01e3bc7bed86c38d371bdd6bd1af13d97347baf0d4bf14d4585deece35459?apiKey=7904fd7afaaf4ee2b0837ab86d91b244&"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
-        
-        <div className={` box flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
-          <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-            <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[100%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
-                  Smart digitalisation 
-            </h2>
-            <h2 className='absolute title2 mt-10  ml-[40%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
-            Our L&d centre
+            <h2 className="mt-10 relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[20vw] tracking-[3px] max-md:mt-10  max-md:text-4xl">
+                  {title} 
             </h2>
             <div className="flex flex-col self-end mt-10 max-w-full w-[855px] max-md:mt-10">
-              <p className="description1 text-2xl font-light leading-10 max-md:max-w-full">
-              Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
-              </p>
-              <p className='description2 absolute text-2xl font-light leading-10 max-md:max-w-full'>
-              Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
+              <p className="text-2xl font-light leading-10 max-md:max-w-full">
+                {description}
               </p>
               <button className="flex gap-2.5 justify-center items-center self-start  px-6 mt-20 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
                <span className="self-stretch my-auto">Read More</span>
-               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
+               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className="object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
               </button>
             </div>
           </div>
         </div>
       </div>
-      <div className={`ml-auto mt-28 image2 flex  flex-col w-[36%] max-md:ml-0 max-md:w-full`}>
-          <img loading="lazy" src={"https://cdn.builder.io/api/v1/image/assets/TEMP/c07d5e60d7acc2dfbda12fa854cc93fa978c2cbc0d3964684876aa0f84fa2b99?apiKey=7904fd7afaaf4ee2b0837ab86d91b244&"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
     </section>
   );
 }
@@ -435,12 +456,12 @@ function BlogCard({ imageSrc, title }) {
   return (
     <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
       <div className="flex flex-col grow max-md:mt-10">
-        <div className="flex flex-col justify-center w-full min-h-[420px]">
-          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[360px] aspect-square" />
+        <div className="flex flex-col justify-center w-full min-h-[400px]">
+          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
         </div>
-        <div className="flex flex-col items-start pr-16 mt-8 w-full max-w-[412px] max-md:pr-5">
-          <h2 className="text-lg leading-6 text-stone-900">{title}</h2>
-          <div className="flex gap-2 mt-8 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
+        <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
+          <h2 className="text-lg leading-6 lg:h-16 text-stone-900">{title}</h2>
+          <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
             <div className="grow">Read more</div>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
           </div>
