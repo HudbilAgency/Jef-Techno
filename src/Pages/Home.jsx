@@ -41,15 +41,15 @@ const inputFields = [
 const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
-    title: "Earthing System Ceremony Celebrates Outstanding Contributions",
+    title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
-    title: "JEF and Saudi Broadcasting Authority (SBA) form astrategic partnership to",
+    title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
-    title: "JEF social responsibility program reach 50,000 beneficiaries",
+    title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
   },
 ];
 
@@ -221,7 +221,10 @@ function Home() {
 
     {/*  Founder's Message Section   */}
 
-     <section>
+
+    
+
+     {/* <section>
 
           <main className="flex overflow-hidden flex-col font-bold text-white bg-white bg-opacity-50">
             <section className="flex relative flex-col justify-center items-start px-20 py-16 w-full min-h-[858px] max-md:px-5 max-md:max-w-full">
@@ -242,7 +245,38 @@ function Home() {
             </section>
           </main>
 
-          </section>
+          </section> */}
+
+
+
+    <main className="flex overflow-hidden flex-col">
+      <section className="overflow-hidden  relative  w-full">
+        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="object-cover absolute inset-0 size-full" />
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
+            <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
+              <h1 className="text-6xl font-bold uppercase tracking-[3px] max-md:max-w-full max-md:text-4xl">
+                Founder message
+              </h1>
+              <p className="self-stretch my-20 w-[45vw] text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+                Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
+                <br />
+                I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
+              </p>
+              <h2 className="text-5xl font-semibold max-md:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className="mt-4 text-3xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="mt-4 text-3xl">{"JEF Group"}</p>
+            </div>
+          </div>
+          <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
+          </div>
+        </div>
+      </section>
+    </main>
+
+
+
+
 
 
 
@@ -380,12 +414,12 @@ function BlogCard({ imageSrc, title }) {
   return (
     <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
       <div className="flex flex-col grow max-md:mt-10">
-        <div className="flex flex-col justify-center w-full min-h-[420px]">
-          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[360px] aspect-square" />
+        <div className="flex flex-col justify-center w-full min-h-[400px]">
+          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
         </div>
-        <div className="flex flex-col items-start pr-16 mt-8 w-full max-w-[412px] max-md:pr-5">
-          <h2 className="text-lg leading-6 text-stone-900">{title}</h2>
-          <div className="flex gap-2 mt-8 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
+        <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
+          <h2 className="text-lg leading-6 h-16 text-stone-900">{title}</h2>
+          <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
             <div className="grow">Read more</div>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
           </div>
