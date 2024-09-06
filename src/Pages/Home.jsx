@@ -1,13 +1,5 @@
 import React, { useState } from 'react';
 import MainFooter from '../Components/Footer/MainFooter';
-import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-
-gsap.registerPlugin(ScrollTrigger);
-
-
 
 // Menu items for the navbar
 const menuItems = [
@@ -85,40 +77,6 @@ const carouselData = [
 ];
 
 function Home() {
-
-
-  {/*Gsap Annimation*/}
-
-
-  useGSAP(()=>{
-
-    let tl=gsap.timeline({
-      scrollTrigger:{
-        trigger:".container",
-        toggleActions:"play none none reverse",
-
-        start:"30% 30%",
-        end:"center 10%",
-        pin:true
-      }
-    })
-    {/*Text Animation*/}
-
-    tl.to(".title1",{x:50,opacity:0,scrub:true,},"display")
-    tl.to(".description1",{y:20,opacity:0},"display")
-    tl.fromTo(".title2",{x:30,opacity:0},{x:0,opacity:1})
-    tl.fromTo(".description2",{y:10,opacity:0},{y:0,opacity:1})
-
-    {/*Image Animation*/}
-
-    tl.to(".image1",{x:750,y:-630},"display")
-
-
-    tl.to(".image2",{x:-720,y:-620},"display")
-
-  })
-
-
   const [language, setLanguage] = useState('English');
   const [currentIndex, setCurrentIndex] = useState(0);
 
