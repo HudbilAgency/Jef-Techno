@@ -163,7 +163,7 @@ function Home() {
         />
         <div className="flex relative mt-56 justify-end mx-[80px]">
           <button
-            className="flex flex-col px-1 py-2 w-12 rounded-full border border-white border-solid"
+            className="flex flex-col px-1 py-2 w-12 active:bg-red-500 transition duration-100 ease-in-out rounded-full border border-white border-solid"
             onClick={handleButtonClick}
           >
             <img
@@ -253,7 +253,7 @@ function Home() {
       <section className="overflow-hidden  relative  w-full">
         <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="object-cover absolute inset-0 size-full" />
         <div className="flex gap-5 max-md:flex-col">
-          <div className="flex mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
+          <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
             <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
               <h1 className="text-6xl font-bold uppercase tracking-[3px] max-md:max-w-full max-md:text-4xl">
                 Founder message
@@ -418,7 +418,7 @@ function BlogCard({ imageSrc, title }) {
           <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
         </div>
         <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
-          <h2 className="text-lg leading-6 h-16 text-stone-900">{title}</h2>
+          <h2 className="text-lg leading-6 lg:h-16 text-stone-900">{title}</h2>
           <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
             <div className="grow">Read more</div>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
