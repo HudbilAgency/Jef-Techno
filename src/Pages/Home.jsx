@@ -1,5 +1,11 @@
 import React, { useState } from 'react';
 import MainFooter from '../Components/Footer/MainFooter';
+import gsap from 'gsap'
+import { useGSAP } from '@gsap/react'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 // Menu items for the navbar
 const menuItems = [
@@ -77,6 +83,41 @@ const carouselData = [
 ];
 
 function Home() {
+
+
+
+{/*Gsap Annimation*/}
+
+
+useGSAP(()=>{
+
+  let tl=gsap.timeline({
+    scrollTrigger:{
+      trigger:".container",
+      toggleActions:"play none none reverse",
+      
+      start:"30% 30%",
+      end:"center 10%",
+      pin:true
+    }
+  })
+  {/*Text Animation*/}
+  
+  tl.to(".title1",{x:50,opacity:0,scrub:true,},"display")
+  tl.to(".description1",{y:20,opacity:0},"display")
+  tl.fromTo(".title2",{x:30,opacity:0},{x:0,opacity:1})
+  tl.fromTo(".description2",{y:10,opacity:0},{y:0,opacity:1})
+  
+  {/*Image Animation*/}
+  
+  tl.to(".image1",{x:750,y:-630},"display")
+  
+  
+  tl.to(".image2",{x:-720,y:-620},"display")
+  
+})
+
+
   const [language, setLanguage] = useState('English');
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -207,14 +248,8 @@ function Home() {
     <main className="flex lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-wrap gap-7 w-full max-w-[1522px] max-md:max-w-full">
       </header>
-      {featureData.map((feature, index) => (
-        <FeatureSection
-          key={index}
-          title={feature.title}
-          description={feature.description}
-          imageSrc={feature.imageSrc}
-        />
-      ))}
+      
+      <FeatureSection/>
     </main>
 
 
@@ -370,33 +405,43 @@ function Home() {
 
 
 
-function FeatureSection({ title, description, imageSrc }) {
+function FeatureSection() {
   return (
-    <section className="self-center my-20 w-full max-w-[1472px] max-md:mt-10 max-md:max-w-full">
-      <div className="flex gap-5 max-md:flex-col">
-        <div className="flex  flex-col w-[36%] max-md:ml-0 max-md:w-full">
-          <img loading="lazy" src={imageSrc} className="object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
-        <div className="flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full">
-          <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-            <div className=" text-3xl font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
+    <section className="overflow-hidden container self-center my-20 w-full h-[110vh] max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
+      <div className=" text-3xl text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
               Why choose JEF ?
             </div>
-            <h2 className="mt-10 relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[20vw] tracking-[3px] max-md:mt-10  max-md:text-4xl">
-                  {title} 
+      <div className={`flex gap-5 max-md:flex-col`}>
+        <div className={` image1 flex  flex-col w-[36%] max-md:ml-0 max-md:w-full`}>
+          <img loading="lazy" src={"https://cdn.builder.io/api/v1/image/assets/TEMP/c4c01e3bc7bed86c38d371bdd6bd1af13d97347baf0d4bf14d4585deece35459?apiKey=7904fd7afaaf4ee2b0837ab86d91b244&"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
+        </div>
+        
+        <div className={` box flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
+          <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
+            <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[100%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
+                  Smart digitalisation 
+            </h2>
+            <h2 className='absolute title2 mt-10  ml-[40%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
+            Our L&d centre
             </h2>
             <div className="flex flex-col self-end mt-10 max-w-full w-[855px] max-md:mt-10">
-              <p className="text-2xl font-light leading-10 max-md:max-w-full">
-                {description}
+              <p className="description1 text-2xl font-light leading-10 max-md:max-w-full">
+              Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
+              </p>
+              <p className='description2 absolute text-2xl font-light leading-10 max-md:max-w-full'>
+              Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
               </p>
               <button className="flex gap-2.5 justify-center items-center self-start  px-6 mt-20 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
                <span className="self-stretch my-auto">Read More</span>
-               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className="object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
+               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
               </button>
             </div>
           </div>
         </div>
       </div>
+      <div className={`ml-auto mt-28 image2 flex  flex-col w-[36%] max-md:ml-0 max-md:w-full`}>
+          <img loading="lazy" src={"https://cdn.builder.io/api/v1/image/assets/TEMP/c07d5e60d7acc2dfbda12fa854cc93fa978c2cbc0d3964684876aa0f84fa2b99?apiKey=7904fd7afaaf4ee2b0837ab86d91b244&"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
+        </div>
     </section>
   );
 }
