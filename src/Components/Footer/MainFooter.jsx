@@ -62,10 +62,10 @@ function Footer() {
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-[1720px] text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full max-w-[1450px] max-md:max-w-full">
-          <div className="flex shrink gap-3 self-start text-base basis-auto grow-0 tracking-[2px]">
-            <div className="grow">· Privacy Policy</div>
+          <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
+            <div className="grow">Privacy Policy</div>
             <div className="basis-auto">· Terms of Use</div>
-            <div className="text-base tracking-[2px]">· Cookie Policy</div>
+            <div className=" basis-auto">· Cookie Policy</div>
           </div>
           <div className="text-xl flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
