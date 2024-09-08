@@ -167,10 +167,10 @@ useGSAP(()=>{
   
   {/*Image Animation*/}
   
-  tl.to(".image1",{x:750,y:-630},"display")
+  tl.to(".image1",{x:750,y:-750},"display")
   
   
-  tl.to(".image2",{x: -880, y: -620},"display")
+  tl.to(".image2",{x: -1000, y: -620},"display")
   
 })
 
@@ -280,7 +280,7 @@ useGSAP(()=>{
 
     {/*  Why choose JEF Section  */}
 
-    <main className="flex lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
+    <main className="flex bg-fixed lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-wrap gap-7 w-full max-w-[1522px] max-md:max-w-full">
       </header>
       
@@ -442,18 +442,18 @@ useGSAP(()=>{
 
 function FeatureSection() {
   return (
-    <section className="overflow-hidden container self-center my-20 w-full h-[110vh] max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
+    <section className="overflow-hidden shrink-0 container self-center my-20 w-full h-[650px] max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
       <div className=" text-3xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
               Why choose JEF ?
             </div>
       <div className={`flex gap-5 max-md:flex-col`}>
-        <div className={` image1 flex  flex-col w-[36%] max-md:ml-0 max-md:w-full`}>
+        <div className={` image1 flex  flex-col 2xl:w-[28%] w-[36%] max-md:ml-0 max-md:w-full`}>
           <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
         </div>
         
         <div className={` box flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
           <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-            <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[100%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
+            <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
                   Smart digitalisation 
             </h2>
             <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
@@ -475,7 +475,7 @@ function FeatureSection() {
           </div>
         </div>
       </div>
-      <div className={`ml-auto mt-28 image2 flex  flex-col w-[32%] max-md:w-full`}>
+      <div className={`ml-auto mt-28 2xl:mr-[2rem] image2 flex 2xl:w-[28%] flex-col w-[32%] max-md:w-full`}>
           <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
         </div>
     </section>
