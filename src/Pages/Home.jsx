@@ -216,7 +216,7 @@ useGSAP(()=>{
             </div>
           </div>
         </div>
-        <div className="w-full h-full  bg-[url('./HomePageImg/Img2.png')] bg-cover">
+        <div style={{ backgroundImage: "url('./HomePageImg/Img2.png')" }} className="w-full h-full bg-cover">
 
         <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center  w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
@@ -239,7 +239,7 @@ useGSAP(()=>{
           </div>
         
         </div>
-        <div className="w-full h-full  bg-[url('./HomePageImg/Img3.png')] bg-cover">
+        <div style={{ backgroundImage: "url('./HomePageImg/Img3.png')" }} className="w-full h-full bg-cover">
         
         <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
