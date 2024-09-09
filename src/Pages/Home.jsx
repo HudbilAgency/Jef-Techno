@@ -146,33 +146,38 @@ function Home() {
 {/*Gsap Annimation*/}
 
 
-useGSAP(()=>{
+useGSAP(() => {
+  let mm = gsap.matchMedia();
 
-  let tl=gsap.timeline({
-    scrollTrigger:{
-      trigger:".container",
-      toggleActions:"play none none reverse",
-      
-      start:"10% 10%",
-      end:"center 35%",
-      pin:true
-    }
-  })
-  {/*Text Animation*/}
-  
-  tl.to(".title1",{x:50,opacity:0,scrub:true,},"display")
-  tl.to(".description1",{y:20,opacity:0},"display")
-  tl.fromTo(".title2",{x:30,opacity:0},{x:0,opacity:1})
-  tl.fromTo(".description2",{y:10,opacity:0},{y:0,opacity:1})
-  
-  {/*Image Animation*/}
-  
-  tl.to(".image1",{x:750,y:-750},"display")
-  
-  
-  tl.to(".image2",{x: -1000, y: -620},"display")
-  
-})
+  mm.add({
+    // For larger screens (3072 x 1920)
+    largeScreen: "(min-width: 1920px)",
+    // For smaller screens (1920 x 1080)
+    smallScreen: "(max-width: 1919px)"
+  }, (context) => {
+    let { largeScreen, smallScreen } = context.conditions;
+
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".container",
+        toggleActions: "play none none reverse",
+        start: "10% 10%",
+        end: "center 35%",
+        pin: true
+      }
+    });
+
+    // Text Animation
+    tl.to(".title1", { x: largeScreen ? 50 : 20, opacity: 0, scrub: true }, "display")
+      .to(".description1", { y: largeScreen ? 20 : 10, opacity: 0 }, "display")
+      .fromTo(".title2", { x: largeScreen ? 30 : 15, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(".description2", { y: largeScreen ? 10 : 5, opacity: 0 }, { y: 0, opacity: 1 });
+
+    // Image Animation
+    tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
+      .to(".image2", { x: largeScreen ? -980 : -900, y: largeScreen ? -580 : -580 }, "display");
+  });
+});
 
 
   const [language, setLanguage] = useState('English');
@@ -196,7 +201,11 @@ useGSAP(()=>{
 < Navbar />
     <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
-        <div  style={{ backgroundImage: "url('./HomePageImg/Img1.png')" }} className="w-full h-full bg-cover">
+        <div className="w-full h-full ">
+          <video autoPlay loop muted className="absolute" >
+              <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
           <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, THINK JEF
@@ -216,8 +225,11 @@ useGSAP(()=>{
             </div>
           </div>
         </div>
-        <div style={{ backgroundImage: "url('./HomePageImg/Img2.png')" }} className="w-full h-full bg-cover">
-
+        <div  className="w-full h-full bg-cover">
+           <video autoPlay loop muted className="fixed" >
+              <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
         <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center  w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
@@ -239,8 +251,11 @@ useGSAP(()=>{
           </div>
         
         </div>
-        <div style={{ backgroundImage: "url('./HomePageImg/Img3.png')" }} className="w-full h-full bg-cover">
-        
+        <div className="w-full h-full bg-cover">
+             <video autoPlay loop muted className="fixed" >
+                <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+            </video>
         <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
