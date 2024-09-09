@@ -175,7 +175,7 @@ useGSAP(() => {
 
     // Image Animation
     tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
-      .to(".image2", { x: largeScreen ? -980 : -900, y: largeScreen ? -580 : -580 }, "display");
+      .to(".image2", { x: largeScreen ? -1000 : -900, y: largeScreen ? -580 : -580 }, "display");
   });
 });
 
@@ -212,6 +212,7 @@ useGSAP(() => {
       { text: "Instrumentation Earthing", className: "" }
     ];
   
+    const totalSlides = 3;
 
 
 
@@ -229,9 +230,10 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-            THINK ELECTRICAL, THINK JEF
+          <div className="mt-[33rem] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+            <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            THINK ELECTRICAL, <br />
+            THINK JEF
             </h1>
             <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>
@@ -253,8 +255,8 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center  w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="mt-[33rem]  lg:mx-[200px] flex relative flex-col self-center  w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
             </h1>
@@ -279,8 +281,8 @@ useGSAP(() => {
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-        <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="mt-[33rem] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+            <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
             <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
@@ -301,20 +303,42 @@ useGSAP(() => {
         </div>
       </div>
     <div ref={coverRef} className="absolute  w-full h-full bg-zinc-800"></div>
-      <div
-        className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-        onClick={handlePrev}
-      >
-        <img src="./HomePageImg/LeftArrow.png" />
-      </div>
-      <div
-        className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-        onClick={handleNext}
-      >
-         <img src="./HomePageImg/RightArrow.png" />
-      </div>
-      
+    {index > 0 && (
+        <div
+          className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          onClick={handlePrev}
+        >
+          <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
+        </div>
+      )}
+      {index < totalSlides - 1 && (
+        <div
+          className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          onClick={handleNext}
+        >
+          <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
+        </div>
+      )}
     </div>
+
+
+
+  {/* const [currentSlide, setCurrentSlide] = useState(0);
+  const totalSlides = 3; // Total number of slides
+
+  const handlePrev = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+  };
+
+  const handleNext = () => {
+    if (currentSlide < totalSlides - 1) {
+      setCurrentSlide(currentSlide + 1);
+    }
+  }; */}
+
+
 
 
 

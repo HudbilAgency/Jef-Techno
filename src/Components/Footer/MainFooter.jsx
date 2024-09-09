@@ -60,7 +60,7 @@ function Footer() {
           />
         </div>
       </div>
-      <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-[1720px] text-white bg-stone-900  max-md:max-w-full">
+      <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full max-w-[1450px] max-md:max-w-full">
           <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
             <div className="grow">Privacy Policy</div>
