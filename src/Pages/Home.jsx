@@ -224,7 +224,7 @@ useGSAP(() => {
 < Navbar />
     <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
-        <div className="w-full h-full ">
+        <div className="w-full h-full bg-cover">
           <video autoPlay loop muted className="absolute" >
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -248,7 +248,7 @@ useGSAP(() => {
             </div>
           </div>
         </div>
-        <div  className="w-screen h-screen bg-cover">
+        <div  className="w-full h-full bg-cover">
            <video autoPlay loop muted className="fixed object-cover bg-cover" >
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
