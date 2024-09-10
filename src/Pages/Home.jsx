@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
+import { div } from "framer-motion/client";
 
 
 
@@ -228,7 +229,7 @@ useGSAP(() => {
 
     // Image Animation
     tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
-      .to(".image2", { x: largeScreen ? -1020 : -900, y: largeScreen ? -580 : -580 }, "display");
+      .to(".image2", { x: largeScreen ? -1060 : -900, y: largeScreen ? -580 : -580 }, "display");
   });
 });
 
@@ -250,20 +251,20 @@ useGSAP(() => {
 
   // What we do Sectionn 
 
-  const CircleItem = ({ text, className }) => (
-    <div className={`px-8 py-16 max-w-full rounded-full border border-solid ${className}`}>
-      {text}
-    </div>
-  );
+  // const CircleItem = ({ text, className }) => (
+  //   <div className={`px-8 py-16 max-w-full rounded-full border border-solid ${className}`}>
+  //     {text}
+  //   </div>
+  // );
   
  
-    const circleItems = [
-      { text: "Earthing studies", className: "bg-red-700 border-red-700" },
-      { text: "Lightning Protection System Studies", className: "" },
-      { text: "Power Quality & Root cause Analysis", className: "border-stone-300" },
-      { text: "Power System Studies", className: "border-stone-300" },
-      { text: "Instrumentation Earthing", className: "" }
-    ];
+  //   const circleItems = [
+  //     { text: "Earthing studies", className: "bg-red-700 border-red-700" },
+  //     { text: "Lightning Protection System Studies", className: "" },
+  //     { text: "Power Quality & Root cause Analysis", className: "border-stone-300" },
+  //     { text: "Power System Studies", className: "border-stone-300" },
+  //     { text: "Instrumentation Earthing", className: "" }
+  //   ];
 
     
     const totalSlides = 3;
@@ -300,7 +301,7 @@ useGSAP(() => {
 < Navbar />
     <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
-        <div className="w-full h-full bg-cover">
+        <div className="w-full h-full ">
           <video autoPlay loop muted className="absolute" >
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
@@ -670,6 +671,12 @@ const WhatWeDoSection = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   return (
+
+
+
+    
+
+
     <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
        {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
@@ -684,6 +691,18 @@ const WhatWeDoSection = () => {
           </video>
         </div>
       )}
+{/* 
+      <div className="w-[200px] h-full mx-auto perspective-[1000px] backface-visibility-hidden bg-white">
+            <button className="relative top-1/2 left-1/2 -ml-[50px] -mt-[50px] w-[100px] h-[100px] text-lg font-light text-center tracking-tight leading-[100px] text-white uppercase rounded-full bg-[#5a99d4] cursor-pointer animate-[pulse_1.5s_infinite] hover:animate-none">
+              Pulse
+            </button>
+          </div> */}
+
+{/* <div className="flex justify-center items-center h-screen">
+            <div className="bg-blue-500 rounded-full w-48 h-48 flex justify-center items-center">
+                <div className="bg-red-500 rounded-full w-44 h-44"></div>
+            </div>
+        </div> */}
 
       {/* Section Content */}
       {showSection && (
@@ -712,18 +731,14 @@ const WhatWeDoSection = () => {
                  <div className="grow max-md:mt-10 max-md:max-w-full ">
                    <div className="flex flex-wrap gap-5 h-full max-md:flex-col">
                      {buttonData.map((button, index) => (
-                       
-                         
-                       
- 
-                       <button
+                        <button
                          key={index}
-                         className={`border-[.5px] p-4 border-white rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
+                         className={`border-[.5px] p-4 border-white  rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
                          onMouseEnter={() => setHoveredButtonIndex(index)}
                          onMouseLeave={() => setHoveredButtonIndex(null)}
                        >
                          <span className="text-white text-sm uppercase ">{button.text}</span>
-                       </button>
+                       </button>                     
                      ))}
                    </div>
                  </div>
