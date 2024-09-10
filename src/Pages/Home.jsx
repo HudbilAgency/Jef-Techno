@@ -228,7 +228,7 @@ useGSAP(() => {
 
     // Image Animation
     tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
-      .to(".image2", { x: largeScreen ? -1000 : -900, y: largeScreen ? -580 : -580 }, "display");
+      .to(".image2", { x: largeScreen ? -1020 : -900, y: largeScreen ? -580 : -580 }, "display");
   });
 });
 
@@ -498,10 +498,11 @@ useGSAP(() => {
     {/*  Why choose JEF Section  */}
 
     <main className="flex bg-fixed lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
-      <header className="flex flex-wrap gap-7 w-full max-w-[1522px] max-md:max-w-full">
+      <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
+      <img className="h-32 my-auto" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+      <FeatureSection/>
       </header>
       
-      <FeatureSection/>
     </main>
 
 
