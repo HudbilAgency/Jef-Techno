@@ -60,6 +60,18 @@ const blogData = [
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
     title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
   },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img1.png",
+    title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
+  },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img2.png",
+    title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
+  },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img3.png",
+    title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
+  },
 ];
 
 
@@ -88,11 +100,11 @@ const carouselData = [
 //button data for hover effect in What We do Section
 
 const buttonData = [
-  { image: 'https://images.unsplash.com/photo-1666489022945-2a8588bee9d7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGhvcml6b250YWwlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]"},
-  { image: 'https://images.unsplash.com/photo-1615653051904-d8e1e5b30519?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvcml6b250YWwlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]"},
-  { image: 'https://images.unsplash.com/photo-1615653051566-ae327de9b4bd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]"},
-  { image: 'https://images.unsplash.com/photo-1707669812580-4a6b2ce75f03?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]"},
-  { image: 'https://images.unsplash.com/photo-1614209255222-3666dde8c39b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]"},
+  { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]"},
+  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]"},
+  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]"},
+  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]"},
+  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]"},
 ];
 function Home() {
 
@@ -526,7 +538,7 @@ useGSAP(() => {
 
 
 
-    <section >
+    {/* <section >
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
           <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
             <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
@@ -551,7 +563,13 @@ useGSAP(() => {
             </section>
           </div>
         </main>
-    </section>
+    </section> */}
+
+ < BlogCarousel />
+
+
+
+
 
 
 
@@ -597,6 +615,9 @@ useGSAP(() => {
 
 
 
+// what we do Section
+
+
 const WhatWeDoSection = () => {
 
   const [hoveredButtonIndex, setHoveredButtonIndex] = useState(null);
@@ -636,7 +657,7 @@ const WhatWeDoSection = () => {
        <div className="flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
          <img
            loading="lazy"
-           src={buttonData[hoveredButtonIndex]?.image || 'https://cdn.builder.io/api/v1/image/assets/TEMP/7a2ceda35d03e9aba12e6edcbd87485058a157c6b826569162b32f9a272e9db4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244'}
+           src={buttonData[hoveredButtonIndex]?.image || './HomePageImg/WhatWeDoSection/Earthing Studies 1.png'}
            alt=""
            className="transition-all duration-5900 object-cover absolute inset-0 size-full"
          />
@@ -719,6 +740,55 @@ const WhatWeDoSection = () => {
 
 
 
+
+
+const BlogCarousel = () => {
+  const [startIndex, setStartIndex] = useState(0);
+
+  const handleNext = () => {
+    if (startIndex + 3 < blogData.length) {
+      setStartIndex((prevIndex) => prevIndex + 1);
+    }
+  };
+
+  return (
+    <section>
+      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
+        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
+          <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
+            <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <div className="flex gap-7 text-base tracking-[3px]">
+              <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
+              <button onClick={handleNext} disabled={startIndex + 3 >= blogData.length}>
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                  alt=""
+                  className="object-contain shrink-0 w-14 aspect-square"
+                />
+              </button>
+            </div>
+          </header>
+          <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
+            <a href="#newest" className="text-red-700 basis-auto">Newest</a>
+            <a href="#oldest" className="text-neutral-900">Oldest</a>
+          </nav>
+          <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
+            <div className="flex justify-between items-center">
+              
+              <div className="flex gap-5 max-md:flex-col w-full justify-center">
+                {blogData.slice(startIndex, startIndex + 3).map((blog, index) => (
+                  <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
+                ))}
+              </div>
+              
+            </div>
+          </section>
+        </div>
+      </main>
+    </section>
+  );
+};
 
 
 
