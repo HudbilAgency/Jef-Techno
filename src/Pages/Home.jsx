@@ -85,6 +85,15 @@ const carouselData = [
   }
 ];
 
+//button data for hover effect in What We do Section
+
+const buttonData = [
+  { image: 'https://images.unsplash.com/photo-1666489022945-2a8588bee9d7?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mjd8fGhvcml6b250YWwlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]"},
+  { image: 'https://images.unsplash.com/photo-1615653051904-d8e1e5b30519?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGhvcml6b250YWwlMjB3YWxscGFwZXJ8ZW58MHx8MHx8fDA%3D', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]"},
+  { image: 'https://images.unsplash.com/photo-1615653051566-ae327de9b4bd?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]"},
+  { image: 'https://images.unsplash.com/photo-1707669812580-4a6b2ce75f03?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]"},
+  { image: 'https://images.unsplash.com/photo-1614209255222-3666dde8c39b?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8aG9yaXpvbnRhbCUyMHdhbGxwYXBlcnxlbnwwfHwwfHx8MA%3D%3D', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]"},
+];
 function Home() {
 
 
@@ -589,6 +598,9 @@ useGSAP(() => {
 
 
 const WhatWeDoSection = () => {
+
+  const [hoveredButtonIndex, setHoveredButtonIndex] = useState(null);
+
   const [showSection, setShowSection] = useState(false);
   const videoRef = useRef(null);
 
@@ -620,30 +632,44 @@ const WhatWeDoSection = () => {
 
       {/* Section Content */}
       {showSection && (
-       <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
+       <section className="flex h-screen overflow-hidden flex-col bg-zinc-800 ">
        <div className="flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a2ceda35d03e9aba12e6edcbd87485058a157c6b826569162b32f9a272e9db4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-cover absolute inset-0 size-full" />
-         <div className="flex relative  flex-col mb-0 w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
+         <img
+           loading="lazy"
+           src={buttonData[hoveredButtonIndex]?.image || 'https://cdn.builder.io/api/v1/image/assets/TEMP/7a2ceda35d03e9aba12e6edcbd87485058a157c6b826569162b32f9a272e9db4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244'}
+           alt=""
+           className="transition-all duration-5900 object-cover absolute inset-0 size-full"
+         />
+         <div className="flex  relative flex-col mb-0  w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
            <header className="flex flex-wrap gap-5 justify-between text-white uppercase tracking-[3px] max-md:max-w-full">
              <div className="flex flex-col self-start text-3xl font-bold">
                <h1 className="">what we do</h1>
-               <div  className="shrink-0 mt-5  border border-zinc-400 thin-border" />
+               <div className="shrink-0 mt-5 border border-zinc-400 thin-border" />
              </div>
              <div className="flex flex-col text-3xl font-medium leading-10 max-md:max-w-full">
-               <div className="shrink-0 mt-6  border border-zinc-400 thin-border max-md:max-w-full" />
+               <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
                <h2 className="mt-7 max-md:max-w-full">Grounding studies projects completed</h2>
              </div>
            </header>
            <div className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
              <div className="flex gap-5 max-md:flex-col">
                <div className="flex flex-row w-6/12 max-md:ml-0 max-md:w-full">
-                 <div className="grow mt-24 max-md:mt-10 max-md:max-w-full">
-                   <div className="flex gap-5 mx-20 max-md:flex-col">
-                     {/* {circleItems.map((item, index) => (
-                       <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                         <CircleItem text={item.text} className={`text-base leading-6 text-center text-white uppercase w-[201px] ${item.className}`} />
-                       </div>
-                     ))} */}
+                 <div className="grow max-md:mt-10 max-md:max-w-full ">
+                   <div className="flex flex-wrap gap-5 h-full max-md:flex-col">
+                     {buttonData.map((button, index) => (
+                       
+                         
+                       
+ 
+                       <button
+                         key={index}
+                         className={`border-[.5px] p-4 border-white rounded-full w-36 h-36 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
+                         onMouseEnter={() => setHoveredButtonIndex(index)}
+                         onMouseLeave={() => setHoveredButtonIndex(null)}
+                       >
+                         <span className="text-white text-sm uppercase ">{button.text}</span>
+                       </button>
+                     ))}
                    </div>
                  </div>
                </div>
@@ -653,7 +679,7 @@ const WhatWeDoSection = () => {
                      <div className="flex gap-5 max-md:flex-col">
                        <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
                          <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
-                           <h3 className="text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
+                           <h3 className="text-2xl font-bold items-start self-start text-green-600">Total  Projects</h3>
                            <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
                              <p>165</p>
                              <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
