@@ -687,7 +687,7 @@ const WhatWeDoSection = () => {
       {/* Section Content */}
       {showSection && (
        <section className="flex h-screen overflow-hidden flex-col bg-zinc-800 ">
-       <div className="flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
+       <div className="flex relative flex-col px-20 pt-12 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
          <img
            loading="lazy"
            src={buttonData[hoveredButtonIndex]?.image || './HomePageImg/WhatWeDoSection/Earthing Studies 1.png'}
@@ -702,7 +702,7 @@ const WhatWeDoSection = () => {
              </div>
              <div className="flex flex-col text-3xl font-medium leading-10 max-md:max-w-full">
                <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
-               <h2 className="mt-7 w-[35rem] max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
+               <h2 className="mt-8 w-[35rem] max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
              </div>
            </header>
            <div className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
@@ -751,7 +751,7 @@ const WhatWeDoSection = () => {
                    </div>
                    <div>
                    <h3 className="mt-10 text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">cAPACITY | UNIT | SQM AREA</h3>
-                   <p className="self-stretch mt-12 text-2xl h-56 leading-9 text-white max-md:mt-10 max-md:max-w-full">
+                   <p className="self-stretch  mt-6 text-xl h-44 leading-9 text-white max-md:mt-10 max-md:max-w-full">
                    {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation." }
                    </p>
                    <button className="gap-2.5 self-stretch px-2.5 py-2 mt-14 text-2xl text-red-700 uppercase bg-white min-h-[42px] h-14 rounded-[50px] w-[240px] max-md:mt-10">
