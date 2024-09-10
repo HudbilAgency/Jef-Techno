@@ -100,12 +100,44 @@ const carouselData = [
 //button data for hover effect in What We do Section
 
 const buttonData = [
-  { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]"},
-  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]"},
-  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]"},
-  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]"},
-  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]"},
+  { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]" , 
+    title : "Grounding studies projects completed",
+    totalProjects: 165, 
+    indiaProjects: 123,
+    gcc:42,
+    description:"Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."
+   },
+  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]",
+    title : "Lightning Protection Studies Projects Completed",
+    totalProjects: 233, 
+    indiaProjects: 195,
+    gcc:38,
+    description:"The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets."
+  },
+  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]", 
+    title : "Power System Studies Projects Completed",
+    totalProjects: 74, 
+    indiaProjects: 58,
+    gcc:16,
+    description:"A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety."
+    },
+  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]", 
+    title : "Power Quality & Root Cause Studies Projects Completed",
+    totalProjects: 66, 
+    indiaProjects: 36,
+    gcc:30,
+    description:"A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies."},
+  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]", 
+    title : "Instrumentation Earthing Studies Projects Completed",
+    totalProjects: 32, 
+    indiaProjects: 24,
+    gcc: "08",
+    description:"An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation."
+  },
 ];
+
+
+
 function Home() {
 
 
@@ -232,7 +264,8 @@ useGSAP(() => {
       { text: "Power System Studies", className: "border-stone-300" },
       { text: "Instrumentation Earthing", className: "" }
     ];
-  
+
+    
     const totalSlides = 3;
 
 
@@ -661,15 +694,15 @@ const WhatWeDoSection = () => {
            alt=""
            className="transition-all duration-5900 object-cover absolute inset-0 size-full"
          />
-         <div className="flex  relative flex-col mb-0  w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
-           <header className="flex flex-wrap gap-5 justify-between text-white uppercase tracking-[3px] max-md:max-w-full">
+         <div className="flex 2xl:mx-[150px] relative flex-col mb-0  w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
+           <header className="flex flex-wrap  justify-between text-white uppercase tracking-[3px] max-md:max-w-full">
              <div className="flex flex-col self-start text-3xl font-bold">
                <h1 className="">what we do</h1>
                <div className="shrink-0 mt-5 border border-zinc-400 thin-border" />
              </div>
              <div className="flex flex-col text-3xl font-medium leading-10 max-md:max-w-full">
                <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
-               <h2 className="mt-7 max-md:max-w-full">Grounding studies projects completed</h2>
+               <h2 className="mt-7 w-[35rem] max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
              </div>
            </header>
            <div className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
@@ -684,7 +717,7 @@ const WhatWeDoSection = () => {
  
                        <button
                          key={index}
-                         className={`border-[.5px] p-4 border-white rounded-full w-36 h-36 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
+                         className={`border-[.5px] p-4 border-white rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
                          onMouseEnter={() => setHoveredButtonIndex(index)}
                          onMouseLeave={() => setHoveredButtonIndex(null)}
                        >
@@ -694,7 +727,7 @@ const WhatWeDoSection = () => {
                    </div>
                  </div>
                </div>
-               <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+               <div className="flex flex-col ml-[13rem] w-5/12 max-md:ml-0 max-md:w-full">
                  <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
                    <div className="max-w-full w-[413px]">
                      <div className="flex gap-5 max-md:flex-col">
@@ -702,27 +735,29 @@ const WhatWeDoSection = () => {
                          <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
                            <h3 className="text-2xl font-bold items-start self-start text-green-600">Total  Projects</h3>
                            <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
-                             <p>165</p>
+                             <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165 }</p>
                              <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
-                             <p>42</p>
+                             <p>{buttonData[hoveredButtonIndex]?.gcc || 42 }</p>
                            </div>
                          </div>
                        </div>
                        <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
                          <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
                            <h3 className="text-2xl font-bold text-center text-green-600">INDIA</h3>
-                           <p className="self-start mt-5 text-2xl text-white">123</p>
+                           <p className="self-start mt-5 text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123 }</p>
                          </div>
                        </div>
                      </div>
                    </div>
-                   <h3 className="mt-10 text-2xl font-bold text-center text-green-500 uppercase tracking-[3px] max-md:max-w-full">cAPACITY | UNIT | SQM AREA</h3>
-                   <p className="self-stretch mt-12 text-2xl leading-9 text-white max-md:mt-10 max-md:max-w-full">
-                     Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation.
+                   <div>
+                   <h3 className="mt-10 text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">cAPACITY | UNIT | SQM AREA</h3>
+                   <p className="self-stretch mt-12 text-2xl h-56 leading-9 text-white max-md:mt-10 max-md:max-w-full">
+                   {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation." }
                    </p>
                    <button className="gap-2.5 self-stretch px-2.5 py-2 mt-14 text-2xl text-red-700 uppercase bg-white min-h-[42px] h-14 rounded-[50px] w-[240px] max-md:mt-10">
                      Read more
                    </button>
+                   </div>
                  </div>
                </div>
              </div>
