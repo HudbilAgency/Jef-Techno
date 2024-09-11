@@ -922,7 +922,6 @@ function BlogCard({ imageSrc, title }) {
 }
 
 
-
 // Our Contact's Input Section
 
 function FormInput({ label, type }) {
