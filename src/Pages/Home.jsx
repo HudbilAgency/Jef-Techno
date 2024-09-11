@@ -4,7 +4,6 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
-import { div } from "framer-motion/client";
 
 
 
@@ -229,7 +228,7 @@ useGSAP(() => {
 
     // Image Animation
     tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
-      .to(".image2", { x: largeScreen ? -1060 : -900, y: largeScreen ? -580 : -580 }, "display");
+      .to(".image2", { x: largeScreen ? -1020 : -910, y: largeScreen ? -580 : -580 }, "display");
   });
 });
 
@@ -671,12 +670,6 @@ const WhatWeDoSection = () => {
   const [fadeOut, setFadeOut] = useState(false);
 
   return (
-
-
-
-    
-
-
     <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
        {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
@@ -733,7 +726,7 @@ const WhatWeDoSection = () => {
                      {buttonData.map((button, index) => (
                         <button
                          key={index}
-                         className={`border-[.5px] p-4 border-white  rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
+                         className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
                          onMouseEnter={() => setHoveredButtonIndex(index)}
                          onMouseLeave={() => setHoveredButtonIndex(null)}
                        >
@@ -860,7 +853,7 @@ const BlogCarousel = () => {
 
 function FeatureSection() {
   return (
-    <section className="overflow-hidden shrink-0 container self-center my-20 w-full h-[650px] max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
+    <section className="overflow-hidden shrink-0 container self-center my-20 w-full h-screen max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
       <div className=" text-3xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
               Why choose JEF ?
             </div>
