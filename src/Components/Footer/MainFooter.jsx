@@ -51,13 +51,11 @@ function Footer() {
         <div className="text-xl tracking-widest text-white uppercase w-[438px] max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
-        <div className="flex flex-col w-[205px]">
-          <img
-            loading="lazy"
-            src="https://cdn.builder.io/api/v1/image/assets/TEMP/9c9aadd3c9d10397dcb0e244635f2dec456306d0a4ade1d36949a079b975827c?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-            alt=""
-            className="object-contain w-full aspect-[6.85]"
-          />
+        <div className="flex flex-row w-[215px]">
+          <img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" className="object-contain w-full aspect-[1.75]"/>
+          <img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" className="object-contain w-full aspect-[1.75]"/>
+          <img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" className="object-contain w-full aspect-[1.75]"/>
+          <img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" className="object-contain w-full aspect-[1.75]"/>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
