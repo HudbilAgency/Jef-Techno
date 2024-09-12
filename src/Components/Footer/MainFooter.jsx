@@ -1,5 +1,5 @@
 import * as React from 'react';
-
+import { Link } from "react-router-dom";
 function MainFooter() {
 
     const itemsAbout = [
@@ -63,9 +63,9 @@ function Footer() {
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full max-w-[1450px] max-md:max-w-full">
           <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
-            <div className="grow">Privacy Policy</div>
-            <div className="basis-auto">· Terms of Use</div>
-            <div className=" basis-auto">· Cookie Policy</div>
+            <Link  to="/PrivacyPolicy" reloadDocument>Privacy Policy</Link>
+            <Link>· Terms of Use</Link>
+            <Link to="/CookiePolicy" reloadDocument>· Cookie Policy</Link>
           </div>
           <div className="text-xl flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 

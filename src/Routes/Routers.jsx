@@ -4,7 +4,7 @@ import Home from '../Pages/Home';
 import CookiePolicy from '../Pages/CookiePolicy';
 import PrivacyPolicy from '../Pages/PrivacyPolicy';
 
-const AppRoutes = () => { 
+const Routers = () => { 
   return (
     <>
     <Router>
@@ -18,4 +18,4 @@ const AppRoutes = () => {
   );
 }
 
-export default AppRoutes;
+export default Routers;

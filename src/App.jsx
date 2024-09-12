@@ -4,14 +4,14 @@ import Carousel from './Components/Carousel/Carousel.jsx';
 import NavbarOther from './Components/Navbar/NavbarOther.jsx';
 import CookiePolicy from './Pages/CookiePolicy.jsx';
 import PrivacyPolicy from './Pages/PrivacyPolicy.jsx';
-import AppRoutes from './Routes/AppRoutes.jsx';
+import Routers from './Routes/Routers.jsx';
 
 function App() {
 
   return (
     <>
     {/* <Home /> */}
-    < AppRoutes/>
+    < Routers/>
     {/* < Carousel /> */}
 
     {/* < CookiePolicy /> */}
