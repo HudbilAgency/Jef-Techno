@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Link } from "react-router-dom";
 function MainFooter() {
 
+
     const itemsAbout = [
         'What is JEF',
         'JEF leadership team',
@@ -44,6 +45,23 @@ function MainFooter() {
 
 
 function Footer() {
+
+   // JEF Techno Socials
+
+   const handleYoutubeButtonClick = () => {
+    window.location.href = 'https://www.youtube.com/@JEFgroup'; 
+   };
+   const handleFacebookButtonClick = () => {
+    window.location.href = 'https://www.facebook.com/JEFTECHNO/'; 
+   };
+   const handleLinkedinButtonClick = () => {
+    window.location.href = 'https://www.linkedin.com/company/jeftechnosolutions/'; 
+   };
+   const handleTwitterButtonClick = () => {
+    window.location.href = 'https://x.com/JeftechnoIndia'; 
+   };
+
+
   return (
     <footer className="flex flex-col items-center pt-10 bg-zinc-800">
       <hr className="shrink-0 mt-2 max-w-full h-px border border-solid border-neutral-400 w-[1480px] max-md:mt-8" />
@@ -52,18 +70,18 @@ function Footer() {
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex flex-row w-[215px]">
-          <img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" className="object-contain w-full aspect-[1.75]"/>
-          <img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" className="object-contain w-full aspect-[1.75]"/>
-          <img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" className="object-contain w-full aspect-[1.75]"/>
-          <img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" className="object-contain w-full aspect-[1.75]"/>
+          <button onClick={handleYoutubeButtonClick} className="object-contain w-full aspect-[1.75]"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
+          <button onClick={handleFacebookButtonClick} className="object-contain w-full aspect-[1.75]"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
+          <button onClick={handleLinkedinButtonClick} className="object-contain w-full aspect-[1.75]"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
+          <button onClick={handleTwitterButtonClick} className="object-contain w-full aspect-[1.75]"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full max-w-[1450px] max-md:max-w-full">
           <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
-            <Link  to="/PrivacyPolicy" reloadDocument>Privacy Policy</Link>
+            <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link>· Terms of Use</Link>
-            <Link to="/CookiePolicy" reloadDocument>· Cookie Policy</Link>
+            <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
           <div className="text-xl flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
