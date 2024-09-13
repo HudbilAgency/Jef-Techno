@@ -67,7 +67,7 @@ const NavbarOther = () => {
               <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
                 <img
                   loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+                  src="./HomePageImg/NavbarImg/Dropdown.png"
                   alt="Language selector"
                   className="object-contain aspect-[1.8] w-[18px]"
                 />
