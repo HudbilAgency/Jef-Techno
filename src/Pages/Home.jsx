@@ -285,21 +285,21 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          <div className="mt-[35rem] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+          <div className="2xl:mt-[35rem] p-4 inset-y-2/4 md:inset-0 md:p-0 lg:mx-[200px] flex relative flex-col self-center w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
             </h1>
-            <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                   alt="Electrical icon"
-                  className="bg-repeat object-contain w-16"
+                  className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] w-[239px]">
+              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
                 Learn More
               </button>
             </div>
