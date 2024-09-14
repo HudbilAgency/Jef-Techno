@@ -270,27 +270,6 @@ useGSAP(() => {
     const totalSlides = 3;
 
 
-    // Blog's Section 
-
-
-    const [isCarouselVisible, setIsCarouselVisible] = useState(false);
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-    const handleCarouselToggle = () => {
-      setIsCarouselVisible(!isCarouselVisible);
-    };
-
-    const handleNextImage = () => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % blogData.length);
-    };
-
-    const handlePrevImage = () => {
-      setCurrentImageIndex((prevIndex) => 
-        (prevIndex - 1 + blogData.length) % blogData.length
-      );
-    };
-
-
 
 
   return (
@@ -301,8 +280,8 @@ useGSAP(() => {
 < Navbar />
     <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
-        <div className="w-full h-full ">
-          <video autoPlay loop muted className="absolute" >
+        <div className="relative w-full h-full ">
+          <video autoPlay loop muted className="absolute size-full object-cover" >
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -326,8 +305,8 @@ useGSAP(() => {
             </div>
           </div>
         </div>
-        <div  className="w-full h-full bg-cover">
-           <video autoPlay loop muted className="fixed object-cover bg-cover" >
+        <div  className="relative w-full h-full">
+           <video autoPlay loop muted className="absolute size-full object-cover" >
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -352,8 +331,8 @@ useGSAP(() => {
           </div>
         
         </div>
-        <div className="w-full h-full bg-cover">
-             <video autoPlay loop muted className="fixed" >
+        <div className="relative w-full h-full">
+             <video autoPlay loop muted className="absolute size-full object-cover" >
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
