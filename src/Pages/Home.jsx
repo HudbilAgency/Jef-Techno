@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
+import CarousalImg from "../Components/Carousel/CarousalImg";
 
 
 
@@ -572,35 +573,39 @@ useGSAP(() => {
 
 
 
-    {/* <section >
-      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
-          <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
-            <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-              <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
-              <div className="flex gap-7 text-base tracking-[3px]">
-                <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
-                <button>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 w-14 aspect-square" />
-                </button>
-              </div>
-            </header>
-            <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
-              <a href="#newest" className="text-red-700 basis-auto">Newest</a>
-              <a href="#oldest" className="text-neutral-900">Oldest</a>
-            </nav>
-            <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
-              <div className="flex gap-5 max-md:flex-col">
-                {blogData.map((blog, index) => (
-                  <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
-                ))}
-              </div>
-            </section>
-          </div>
-        </main>
-    </section> */}
+  <section>
+      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
+        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
+          <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
+            <h1 className="text-6xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <div className="flex gap-7 text-base tracking-[3px]">
+              <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
+              <button>
+                <img
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                  alt=""
+                  className="object-contain shrink-0 w-14 aspect-square"
+                />
+              </button>
+            </div>
+          </header>
+          <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
+            <a href="#newest" className="text-red-700 basis-auto">Newest</a>
+            <a href="#oldest" className="text-neutral-900">Oldest</a>
+          </nav>
+        </div>
+      </main>
+          <section>
+          < CarousalImg/>
+          </section>
+    </section>
 
+    
+{/* 
  < BlogCarousel />
-
+< CarousalImg/>
+ */}
 
 
 
@@ -786,53 +791,53 @@ const WhatWeDoSection = () => {
 
 
 
-const BlogCarousel = () => {
-  const [startIndex, setStartIndex] = useState(0);
+// const BlogCarousel = () => {
+//   const [startIndex, setStartIndex] = useState(0);
 
-  const handleNext = () => {
-    if (startIndex + 3 < blogData.length) {
-      setStartIndex((prevIndex) => prevIndex + 1);
-    }
-  };
+//   const handleNext = () => {
+//     if (startIndex + 3 < blogData.length) {
+//       setStartIndex((prevIndex) => prevIndex + 1);
+//     }
+//   };
 
-  return (
-    <section>
-      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
-          <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-            <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
-            <div className="flex gap-7 text-base tracking-[3px]">
-              <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
-              <button onClick={handleNext} disabled={startIndex + 3 >= blogData.length}>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                  alt=""
-                  className="object-contain shrink-0 w-14 aspect-square"
-                />
-              </button>
-            </div>
-          </header>
-          <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
-            <a href="#newest" className="text-red-700 basis-auto">Newest</a>
-            <a href="#oldest" className="text-neutral-900">Oldest</a>
-          </nav>
-          <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
-            <div className="flex justify-between items-center">
+//   return (
+//     <section>
+//       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
+//         <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
+//           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
+//             <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+//             <div className="flex gap-7 text-base tracking-[3px]">
+//               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
+//               <button onClick={handleNext} disabled={startIndex + 3 >= blogData.length}>
+//                 <img
+//                   loading="lazy"
+//                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+//                   alt=""
+//                   className="object-contain shrink-0 w-14 aspect-square"
+//                 />
+//               </button>
+//             </div>
+//           </header>
+//           <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
+//             <a href="#newest" className="text-red-700 basis-auto">Newest</a>
+//             <a href="#oldest" className="text-neutral-900">Oldest</a>
+//           </nav>
+//           <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
+//             <div className="flex justify-between items-center">
               
-              <div className="flex gap-5 max-md:flex-col w-full justify-center">
-                {blogData.slice(startIndex, startIndex + 3).map((blog, index) => (
-                  <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
-                ))}
-              </div>
+//               <div className="flex gap-5 max-md:flex-col w-full justify-center">
+//                 {blogData.slice(startIndex, startIndex + 3).map((blog, index) => (
+//                   <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
+//                 ))}
+//               </div>
               
-            </div>
-          </section>
-        </div>
-      </main>
-    </section>
-  );
-};
+//             </div>
+//           </section>
+//         </div>
+//       </main>
+//     </section>
+//   );
+// };
 
 
 
@@ -902,24 +907,24 @@ function FeatureSection() {
 // Blog's Section Extra
 
 
-function BlogCard({ imageSrc, title }) {
-  return (
-    <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-      <div className="flex flex-col grow max-md:mt-10">
-        <div className="flex flex-col justify-center w-full min-h-[400px]">
-          <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
-        </div>
-        <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
-          <h2 className="text-lg leading-6 lg:h-16 text-stone-900">{title}</h2>
-          <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
-            <div className="grow">Read more</div>
-            <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
-          </div>
-        </div>
-      </div>
-    </article>
-  );
-}
+// function BlogCard({ imageSrc, title }) {
+//   return (
+//     <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+//       <div className="flex flex-col grow max-md:mt-10">
+//         <div className="flex flex-col justify-center w-full min-h-[400px]">
+//           <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
+//         </div>
+//         <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
+//           <h2 className="text-lg leading-6 lg:h-16 text-stone-900">{title}</h2>
+//           <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
+//             <div className="grow">Read more</div>
+//             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
+//           </div>
+//         </div>
+//       </div>
+//     </article>
+//   );
+// }
 
 
 // Our Contact's Input Section
