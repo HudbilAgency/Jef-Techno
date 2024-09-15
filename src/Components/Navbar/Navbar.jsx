@@ -76,7 +76,7 @@ const Navbar = () => {
             <button className="gap-3 self-stretch p-2.5 my-auto text-xs lg:text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[8rem] 2xl:w-[216px]">
               Get In Touch
             </button>
-            <button className='md:hidden justify-items-center w-[2.3rem]'>
+            <button className='md:hidden mr-2 justify-items-center w-[2.3rem]'>
               <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
             </button>
           </div>
