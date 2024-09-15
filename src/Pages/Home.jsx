@@ -5,6 +5,7 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
 import CarousalImg from "../Components/Carousel/CarousalImg";
+import { Link } from "react-router-dom";
 
 
 
@@ -559,14 +560,16 @@ useGSAP(() => {
             <h1 className="text-6xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 text-base tracking-[3px]">
               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                  alt=""
-                  className="object-contain shrink-0 w-14 aspect-square"
-                />
-              </button>
+              <Link to="/Blog">
+                  <button>
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                      alt=""
+                      className="object-contain shrink-0 w-14 aspect-square"
+                    />
+                  </button>
+              </Link>
             </div>
           </header>
           <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
