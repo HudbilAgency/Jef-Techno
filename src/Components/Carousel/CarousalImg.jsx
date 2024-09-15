@@ -49,7 +49,7 @@ const HorizontalScrollResources = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-100">
-      <div className="sticky flex-shrink-0 mx-[160px] top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky flex-shrink-0 mx-[10px] lg:mx-[160px] top-0 flex h-screen items-center overflow-hidden">
         <motion.div
           style={{ x }}
           className="flex gap-4"
@@ -65,7 +65,7 @@ const HorizontalScrollResources = () => {
 
 function BlogCard({ imageSrc, title }) {
   return (
-    <article className="flex flex-col mx-6 w-[22vw] max-md:w-full"> {/* Use vw for fixed width */}
+    <article className="flex -mt-20 lg:-mt-0 flex-col lg:mx-6 w-[90vw] lg:w-[22vw] "> {/* Use vw for fixed width */}
       <div className="flex flex-col grow max-md:mt-10">
         <div className="flex flex-col justify-center w-full min-h-[400px]">
           <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-full h-auto aspect-square" />

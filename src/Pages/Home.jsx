@@ -554,8 +554,8 @@ useGSAP(() => {
 
 
   <section>
-      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
+      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
+        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px]  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
             <h1 className="text-6xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 text-base tracking-[3px]">
