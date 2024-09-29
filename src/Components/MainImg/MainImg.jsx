@@ -38,7 +38,6 @@ const MainImg = () => {
           <NavLink 
             to={item.path} // Add the path for navigation
             className="self-stretch my-auto text-2xl font-medium text-white tracking-[2px]"
-            activeClassName="active" // Optional: styling for active link
           >
             {item.label}
           </NavLink>

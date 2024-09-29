@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react';
 import MainImg from '../Components/MainImg/MainImg'
 import MainFooter from '../Components/Footer/MainFooter'
 
@@ -22,21 +22,37 @@ const ServicePage = () => {
       ];
 
       const components = [
-        {
-          imageSrc: './SerivePage/01.png',
-          title: 'Riser Integrity Testing',
-          description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.'
-        },
-        {
-          imageSrc: './SerivePage/02.png',
-          title: 'Grid Integrity Testing',
-          description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.'
-        },
-        {
-          imageSrc: './SerivePage/03.png',
-          title: 'Soil Resistivity Testing',
-          description: 'Conducting tests to measure soil resistivity and design effective grounding systems.'
-        }
+        
+  {
+    imageSrc: './SerivePage/01.png',
+    title: 'Riser Integrity Testing',
+    description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
+  },
+  {
+    imageSrc: './SerivePage/02.png',
+    title: 'Grid Integrity Testing',
+    description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.',
+  },
+  {
+    imageSrc: './SerivePage/03.png',
+    title: 'Soil Resistivity Testing',
+    description: 'Conducting tests to measure soil resistivity and design effective grounding systems.',
+  },
+  {
+    imageSrc: './SerivePage/04.png',
+    title: 'Touch and Step Potential Measurement',
+    description: 'Assessing the potential differences that can occur on the surface of the ground to ensure personnel safety.',
+  },
+  {
+    imageSrc: './SerivePage/05.png',
+    title: 'Simulation',
+    description: 'Earthing grid in CDEGS software.',
+  },
+  {
+    imageSrc: './SerivePage/07.png',
+    title: 'Earth Electrode Resistance Testing',
+    description: 'Measuring the resistance of earth electrodes using both Fall of Potential and Stake less methods.',
+  },
       ]
 
       const buttons = [
@@ -202,7 +218,7 @@ const ServicePage = () => {
 
 
 
-    <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
+    {/* <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
       <div className="flex flex-wrap gap-5 justify-between w-full  max-md:max-w-full">
         <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
           KEY COMPONENTS OF THE STUDY
@@ -225,10 +241,10 @@ const ServicePage = () => {
       </div>
       <div className="flex gap-5 justify-between items-center mt-48 w-full text-2xl max-md:mt-10">
       {components.map((component, index) => (
-        <React.Fragment key={component.title}> {/* Use a unique key */}
+        <React.Fragment key={component.title}> 
           <div className="flex flex-col items-start mt-2.5 max-md:max-w-full">
             <div className="">
-              <img src={component.imageSrc} alt={component.title} className="w-full h-auto" /> {/* Accessing imageSrc */}
+              <img src={component.imageSrc} alt={component.title} className="w-full h-auto" /> 
             </div>
             <h3 className="mt-8 font-normal leading-none text-red-700">{component.title}</h3>
             <p className="w-[45%] xl:w-[80%] lg:w-full mt-8 font-thin leading-8 text-gray-400 max-md:w-full">
@@ -241,8 +257,11 @@ const ServicePage = () => {
         </React.Fragment>
       ))}
     </div>
-    </section>
+    </section> */}
 
+      <section>
+        < CarouselSection components={components} />
+      </section>
     <section>
 
       <div className='py-20 bg-stone-900'>
@@ -354,5 +373,109 @@ const ServiceItem = ({ text }) => {
     </div>
   );
 };
+
+
+function CarouselSection({ components }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const visibleCards = 3; // Number of visible cards at once
+  const totalCards = components.length;
+
+  // Function to handle the right click (move forward)
+  const handleCarouselClickRight = () => {
+    setCurrentIndex((prevIndex) => {
+      return (prevIndex + visibleCards) % totalCards;
+    });
+  };
+
+  // Function to handle the left click (move backward)
+  const handleCarouselClickLeft = () => {
+    setCurrentIndex((prevIndex) => {
+      return (prevIndex - visibleCards + totalCards) % totalCards;
+    });
+  };
+
+  return (
+    <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
+      <div className="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full">
+        <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
+          KEY COMPONENTS OF THE STUDY
+        </h2>
+        <div className="flex self-end flex-col min-h-[60px]">
+          <div className="flex gap-5 items-start w-full max-w-[140px]">
+            {/* Left Arrow Button */}
+            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
+              <button onClick={handleCarouselClickLeft}>
+                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/150914823e04aa0b72d10dfe3eaaf22d38b599636111c8b7ad6e80476980a940?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                    alt="Left Arrow"
+                    className="object-contain flex-1 w-6 aspect-square"
+                  />
+                </div>
+              </button>
+            </div>
+            {/* Right Arrow Button */}
+            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
+              <button onClick={handleCarouselClickRight}>
+                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                    alt="Right Arrow"
+                    className="object-contain flex-1 w-6 aspect-square"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Carousel Section */}
+      <div className="flex justify-between items-center mt-36 w-full text-2xl max-md:mt-10 overflow-hidden">
+        {/* Carousel wrapper */}
+        <div
+          className="flex transition-transform duration-500 ease-in-out"
+          style={{
+            // Translate based on the currentIndex and the number of visible cards
+            transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
+            width: `${(totalCards / visibleCards) * 100}%`, // Total width based on total cards and visible cards
+          }}
+        >
+          {components.map((component, index) => (
+            <React.Fragment key={component.title}>
+              <div
+                className="flex flex-col items-start  max-md:max-w-full"
+                style={{
+                  flex: `0 0 ${31}%`, // Make sure each card takes up exactly 1/3 of the carousel
+                }}
+              >
+                {/* Each card */}
+                <div className="">
+                  <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
+                </div>
+                <h3 className="mt-8 xl:w-[75%] font-normal leading-none text-red-700">
+                  {component.title}
+                </h3>
+                <p className="w-[45%] xl:w-[77%] lg:w-full mt-8 right-0 font-thin leading-8 text-gray-400 max-md:w-full">
+                  {component.description}
+                </p>
+              </div>
+              {index < components.length - 1 && (
+                <img
+                  src="./SerivePage/Line 14.png"
+                  alt="LineImg"
+                  className="mr-16"
+                />
+              )}
+            </React.Fragment>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 export default ServicePage

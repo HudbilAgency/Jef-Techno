@@ -861,7 +861,7 @@ function FeatureSection() {
               <p className="description1 text-2xl mt-10 font-light leading-10 max-md:max-w-full">
               Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
               </p>
-              <p className='description2 -mt-20 text-2xl font-light leading-10 max-md:max-w-full'>
+              <p className='description2 -mt-[5%] text-2xl font-light leading-10 max-md:max-w-full'>
               Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
               </p>
               
