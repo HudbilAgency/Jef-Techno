@@ -7,6 +7,8 @@ import ScrollToTop from '../Components/ScrollToTop';
 import Blog from '../Pages/Blog';
 import BlogInside from '../Pages/BlogInside';
 import GetInTouchForm from '../Pages/GetInTouchForm';
+import GetInTouchPage from '../Pages/GetInTouchPage';
+import ServicePage from '../Pages/ServicePage';
 
 
 const Routers = () => { 
@@ -21,7 +23,8 @@ const Routers = () => {
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside" element={<BlogInside/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
-        
+        <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
+        <Route path="/ServicePage" element={<ServicePage/>} />
       </Routes> 
     </Router>
     </>

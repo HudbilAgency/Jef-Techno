@@ -45,7 +45,7 @@ const HorizontalScrollResources = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-90%"]); // Adjusted to scroll through 3 cards
+  const x = useTransform(scrollYProgress, [0, 1], ["0%", "-50%"]); // Adjusted to scroll through 3 cards
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-neutral-100">

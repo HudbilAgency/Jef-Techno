@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 
 const menuItems = [
-  { label: 'Home', hasDropdown: false },
+  { label: 'Home', hasDropdown: false , path: '/'  },
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
@@ -32,24 +33,28 @@ const MainImg = () => {
             className="object-contain w-[124px] aspect-[1.77]"
           />
           <nav className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
-            {menuItems.map((item, index) => (
-              <div key={index} className="flex gap-2.5 justify-center items-center self-stretch my-auto">
-                <div className="self-stretch my-auto text-2xl font-medium text-white tracking-[2px]">
-                  {item.label}
-                </div>
-                {item.hasDropdown && (
-                  <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                    <img
-                      loading="lazy"
-                      src="./HomePageImg/NavbarImg/Dropdown.png"
-                      alt={`${item.label} dropdown`}
-                      className="object-contain aspect-[1.8] w-[18px]"
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+      {menuItems.map((item, index) => (
+        <div key={index} className="flex gap-2.5 justify-center items-center self-stretch my-auto">
+          <NavLink 
+            to={item.path} // Add the path for navigation
+            className="self-stretch my-auto text-2xl font-medium text-white tracking-[2px]"
+            activeClassName="active" // Optional: styling for active link
+          >
+            {item.label}
+          </NavLink>
+          {item.hasDropdown && (
+            <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+              <img
+                loading="lazy"
+                src="./HomePageImg/NavbarImg/Dropdown.png"
+                alt={`${item.label} dropdown`}
+                className="object-contain aspect-[1.8] w-[18px]"
+              />
+            </div>
+          )}
+        </div>
+      ))}
+    </nav>
           <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
             <img
               loading="lazy"

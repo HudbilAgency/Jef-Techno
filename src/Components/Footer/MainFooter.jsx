@@ -31,7 +31,7 @@ function MainFooter() {
 
   return (
     <main className="flex overflow-hidden flex-col items-center pt-24 bg-zinc-800">
-      <div className="flex flex-wrap gap-24 tracking-wider items-start max-md:max-w-full">
+      <div className="flex w-[75%] tracking-wider justify-between max-md:max-w-full">
         <Section title="About" items={itemsAbout} />
         <Section title="Services" items={itemsService} />
         <Section title="Locations" items={itemsLocation} />
@@ -64,7 +64,7 @@ function Footer() {
 
   return (
     <footer className="flex flex-col items-center pt-10 bg-zinc-800">
-      <hr className="shrink-0 mt-2 max-w-full h-px border border-solid border-neutral-400 w-[1450px] max-md:mt-8" />
+      <hr className="shrink-0 mt-2 max-w-full h-px border border-solid border-neutral-400 w-[74%] max-md:mt-8" />
       <div className="flex flex-wrap gap-10 justify-between items-start mt-5 w-full max-w-[1450px] max-md:max-w-full">
         <div className="text-xl tracking-widest text-white uppercase w-[438px] max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
