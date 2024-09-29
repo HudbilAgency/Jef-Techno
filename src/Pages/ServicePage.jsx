@@ -243,7 +243,12 @@ const ServicePage = () => {
     </div>
     </section>
 
-      
+    <section>
+
+      <div className='py-20 bg-stone-900'>
+      < ServicesSection />
+      </div>
+    </section>
 
 
 
@@ -296,5 +301,58 @@ const ServicePage = () => {
    </>
   )
 }
+
+
+
+const ServicesSection = () => {
+  const services = [
+    { text: '' },
+    { text: '' },
+    { text: '' },
+    { text: 'Earthing studies' },
+    { text: 'Lightning Protection System Studies' },
+    { text: 'Power System Studies' },
+    { text: '' },
+    { text: '' },
+    { text: '' },
+  ];
+  const services1 = [
+    { text: '' },
+    { text: '' },
+    { text: '' },
+    { text: '' },
+    { text: 'Power Quality &  Root cause Analysis' },
+    { text: 'Instrumentation Earthing' },
+    { text: '' },
+    { text: '' },
+    { text: '' },
+  ];
+
+  return (
+    <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
+      <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+        our services
+      </h2>
+      <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
+        {services.slice(0, 9).map((service, index) => (
+          <ServiceItem key={index} {...service} />
+        ))}
+      </div>
+      <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
+        {services1.slice(0).map((service, index) => (
+          <ServiceItem key={index + 5} {...service} />
+        ))}
+      </div>
+    </section>
+  );
+};
+
+const ServiceItem = ({ text }) => {
+  return (
+    <div className="flex w-[10%] -ml-[7%] rounded-full border border-solid items-center justify-center p-4 transition-colors duration-300 hover:bg-red-600 aspect-square">
+      <span className="text-center">{text}</span> {/* Centering the text */}
+    </div>
+  );
+};
 
 export default ServicePage

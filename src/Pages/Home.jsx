@@ -598,7 +598,7 @@ useGSAP(() => {
 
    {/*  Contact Us Section    */}
 
-    <section className="flex overflow-hidden flex-col text-base font-light bg-white text-stone-300">
+    <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
       <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
         <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
