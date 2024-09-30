@@ -63,7 +63,7 @@ const ServicePage = () => {
     serviceRefs.current.forEach((ref, index) => {
       if (ref) {
         if (index === hoveredIndex && services[index]?.text !== '') {
-          gsap.to(ref, { scale: 1.5, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
         } else {
           gsap.to(ref, {
             scale: hoveredIndex !== null ? 0.9 : 1,
@@ -372,7 +372,7 @@ const ServicePage = () => {
               <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[50vh]">
+              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[60vh]">
                 <div className='flex items-center gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
@@ -502,22 +502,23 @@ const ServicesSection = () => {
 const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
   return (
     <div
-      ref={ref}
-      className={`flex w-[150px] h-[150px] rounded-full items-center justify-center p-4 transition-all duration-300 
-        ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
-      onMouseEnter={() => {
-        if (text !== "") {
-          onMouseEnter();
-        }
-      }}
-      onMouseLeave={() => {
-        if (text !== "") {
-          onMouseLeave();
-        }
-      }}
-    >
-      <span className="text-center">{text}</span>
-    </div>
+  ref={ref}
+  className={`flex w-[13rem] h-[13rem] rounded-full items-center justify-center p-[1.5%] transition-all duration-300 
+    ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
+  onMouseEnter={() => {
+    if (text !== "") {
+      onMouseEnter();
+    }
+  }}
+  onMouseLeave={() => {
+    if (text !== "") {
+      onMouseLeave();
+    }
+  }}
+>
+  <span className="text-center">{text}</span>
+</div>
+
   );
 });
 
