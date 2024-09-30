@@ -11,6 +11,11 @@ const ServicePage = () => {
         { label: 'SERVICES', isActive: true },
         { label: 'EARTHING STUDIES', isActive: false },
       ];
+      const [activeIndex, setActiveIndex] = useState(0);
+
+      const handleClick = (index) => {
+        setActiveIndex(index);
+      };
     
       const benefitItems = [
         "ABOUT Earthing studies",
@@ -167,15 +172,26 @@ const ServicePage = () => {
               <div className="mr-6 max-md:mr-2.5 max-md:max-w-full">
                 <div className="flex gap-5 max-md:flex-col">
                   <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
-                    <div className="flex flex-col grow tracking-normal uppercase max-md:max-w-full">
-                      <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
-                        {benefitItems.map((item, index) => (
-                          <li key={index} className="flex items-start w-full rounded-xl">
-                            <div className="pr-20 min-w-[180px]">{item}</div>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
+                  <div className="flex flex-col grow tracking-normal uppercase max-md:max-w-full">
+                        <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
+                          {benefitItems.map((item, index) => (
+                            <li
+                              key={index}
+                              className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                                activeIndex === index ? 'text-white text-2xl h-40' : 'h-auto text-base' 
+                              }`}
+                              onClick={() => handleClick(index)}
+                            >
+                              {activeIndex === index && (
+                                <div className="bg-red-500 w-1 h-full mr-4"></div> 
+                              )}
+                              <div className={`w-[80%] min-w-[20%] ${activeIndex === index ? 'text-white' : 'text-gray-400'}`}>
+                                {item}
+                              </div>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                   </div>
                   <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
                     <div className="flex flex-col items-start text-3xl text-red-700  max-md:max-w-full">

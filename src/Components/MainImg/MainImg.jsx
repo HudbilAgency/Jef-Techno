@@ -23,7 +23,7 @@ const MainImg = () => {
 
 
   return (
-    <div className="flex absolute w-full z-50 overflow-hidden flex-col bg-stone-800">
+    <div className="flex absolute w-full h-auto max-h-[15%] z-50 overflow-hidden flex-col bg-stone-800">
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
         <header className="flex relative flex-wrap justify-between items-center self-center w-full max-w-[1520px] max-md:max-w-full">
           <img
