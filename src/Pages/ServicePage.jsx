@@ -1,9 +1,82 @@
-import React, { useState } from 'react';
-import MainImg from '../Components/MainImg/MainImg'
-import MainFooter from '../Components/Footer/MainFooter'
+import React, { useState, useEffect, useRef } from 'react';
+import MainImg from '../Components/MainImg/MainImg';
+import MainFooter from '../Components/Footer/MainFooter';
+import gsap from 'gsap';
 
 const ServicePage = () => {
 
+  const services = [
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' },
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' },
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+    { image: '', text: '' },
+  ];
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [backgroundImage, setBackgroundImage] = useState('');
+  const serviceRefs = useRef([]);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img) {
+      gsap.fromTo(img, 
+        { opacity: 0 }, 
+        { 
+          opacity: 1, 
+          duration: 2.5,
+          ease: 'power2.inOut'
+        }
+      );
+    }
+  }, [imgRef]);
+
+  const handleMouseEnter = (index, image) => {
+    setHoveredIndex(index);
+    setBackgroundImage(image);
+  };
+
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+    setBackgroundImage('');
+  };
+
+  useEffect(() => {
+    serviceRefs.current = serviceRefs.current.slice(0, services.length);
+  }, [services]);
+
+  useEffect(() => {
+    serviceRefs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.5, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.5 : 1,
+            border: hoveredIndex !== null && services[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services[index]?.text === '' ? 'transparent' : '',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services]);
 
 
       const navItems = [
@@ -279,13 +352,56 @@ const ServicePage = () => {
       <section>
         < CarouselSection components={components} />
       </section>
-    <section>
 
-      <div className='py-20 bg-stone-900'>
-      < ServicesSection />
-      </div>
-    </section>
 
+      <section>
+        <div className={` h-full bg-slate-900`}>
+          <div 
+            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+            {backgroundImage && (
+              <div className="absolute inset-0 w-full h-full ">
+                <img
+                  ref={imgRef}
+                  src={backgroundImage}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+              <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+                Our Services
+              </h2>
+              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[50vh]">
+                <div className='flex items-center gap-x-10 circleChild'>
+                  {services.slice(0, 9).map((service, index) => (
+                    <ServiceItem
+                      key={index}
+                      text={service.text}
+                      image={service.image}
+                      ref={(el) => (serviceRefs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+                <div className='flex gap-x-10'>
+                  {services.slice(9).map((service, index) => (
+                    <ServiceItem
+                      key={index + 9}
+                      text={service.text}
+                      image={service.image}
+                      ref={(el) => (serviceRefs.current[index + 9] = el)}
+                      onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
+            </div>
+        </div>
+      </section>
 
 
 
@@ -383,13 +499,27 @@ const ServicesSection = () => {
   );
 };
 
-const ServiceItem = ({ text }) => {
+const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
   return (
-    <div className="flex w-[10%] -ml-[7%] rounded-full border border-solid items-center justify-center p-4 transition-colors duration-300 hover:bg-red-600 aspect-square">
-      <span className="text-center">{text}</span> {/* Centering the text */}
+    <div
+      ref={ref}
+      className={`flex w-[150px] h-[150px] rounded-full items-center justify-center p-4 transition-all duration-300 
+        ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center">{text}</span>
     </div>
   );
-};
+});
 
 
 function CarouselSection({ components }) {
