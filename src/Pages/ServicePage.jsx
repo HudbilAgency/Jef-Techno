@@ -11,6 +11,7 @@ const ServicePage = () => {
         { label: 'SERVICES', isActive: true },
         { label: 'EARTHING STUDIES', isActive: false },
       ];
+
       const [activeIndex, setActiveIndex] = useState(0);
 
       const handleClick = (index) => {
