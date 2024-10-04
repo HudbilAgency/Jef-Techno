@@ -30,8 +30,8 @@ function MainFooter() {
       ];   
 
   return (
-    <main className="flex overflow-hidden flex-col items-center pt-24 bg-zinc-800">
-      <div className="flex w-[75%] tracking-wider justify-between max-md:max-w-full">
+    <main className="flex overflow-hidden flex-col items-center pt-24 bg-stone-800">
+      <div className="flex w-[85vw] max-w-[95vw] tracking-wider justify-between max-md:max-w-full">
         <Section title="About" items={itemsAbout} />
         <Section title="Services" items={itemsService} />
         <Section title="Locations" items={itemsLocation} />
@@ -63,21 +63,21 @@ function Footer() {
 
 
   return (
-    <footer className="flex flex-col items-center pt-10 bg-zinc-800">
-      <hr className="shrink-0 mt-2 max-w-full h-px border border-solid border-neutral-400 w-[74%] max-md:mt-8" />
-      <div className="flex flex-wrap gap-10 justify-between items-start mt-5 w-full max-w-[1450px] max-md:max-w-full">
-        <div className="text-xl tracking-widest text-white uppercase w-[438px] max-md:max-w-full">
+    <footer className="flex flex-col items-center pt-10 bg-stone-800">
+      <hr className="shrink-0 mt-2 max-w-[95vw] w-[85vw] border border-solid border-neutral-400 max-md:mt-8" />
+      <div className="flex flex-row gap-10 justify-between items-start mt-5 lg:w-[85vw] max-w-[95vw]">
+        <div className="text-2xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
-        <div className="flex flex-row space-x-6">
-          <button onClick={handleYoutubeButtonClick} className="object-contain w-full "><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
-          <button onClick={handleFacebookButtonClick} className="object-contain w-full"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
-          <button onClick={handleLinkedinButtonClick} className="object-contain w-full "><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
-          <button onClick={handleTwitterButtonClick} className="object-contain w-full "><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
+        <div className="flex flex-row h-full space-x-6">
+          <button onClick={handleYoutubeButtonClick} className="object-contain"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
+          <button onClick={handleFacebookButtonClick} className="object-contain "><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
+          <button onClick={handleLinkedinButtonClick} className="object-contain  "><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
+          <button onClick={handleTwitterButtonClick} className="object-contain "><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
-        <div className="flex flex-wrap justify-between gap-6 w-full max-w-[1450px] max-md:max-w-full">
+        <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link>· Terms of Use</Link>
