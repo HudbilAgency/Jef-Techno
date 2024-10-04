@@ -31,7 +31,7 @@ function MainFooter() {
 
   return (
     <main className="flex overflow-hidden flex-col items-center pt-24 bg-stone-800">
-      <div className="flex w-[85vw] max-w-[95vw] tracking-wider justify-between max-md:max-w-full">
+      <div className="flex flex-col md:flex-row w-[85vw] max-w-[95vw] tracking-wider justify-between ">
         <Section title="About" items={itemsAbout} />
         <Section title="Services" items={itemsService} />
         <Section title="Locations" items={itemsLocation} />

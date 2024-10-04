@@ -9,6 +9,7 @@ import BlogInside from '../Pages/BlogInside';
 import GetInTouchForm from '../Pages/GetInTouchForm';
 import GetInTouchPage from '../Pages/GetInTouchPage';
 import ServicePage from '../Pages/ServicePage';
+import Career from '../Pages/Career';
 
 
 const Routers = () => { 
@@ -25,6 +26,7 @@ const Routers = () => {
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/ServicePage" element={<ServicePage/>} />
+        <Route path="/Career" element={<Career/>} />
       </Routes> 
     </Router>
     </>
