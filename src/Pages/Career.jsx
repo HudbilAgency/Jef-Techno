@@ -183,11 +183,11 @@ const Career = () => {
             ))}
           </div>
         </div>
-        <div className="flex relative flex-wrap gap-10 justify-between px-20 py-10 w-full bg-stone-900 max-md:px-5">
+        {/* <div className="flex flex-wrap gap-10 justify-between px-20 py-10 w-full bg-stone-900 max-md:px-5">
           {companyLogos.map((logo, index) => (
             <img key={index} loading="lazy" src={logo} alt={`Company logo ${index + 1}`} className="object-contain shrink-0 h-auto" />
           ))}
-        </div>
+        </div> */}
       </section>
       <section className="flex flex-col self-center py-16 mt-24 w-full max-w-[1440px] max-md:mt-10 max-md:max-w-full">
         <div className="flex flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">

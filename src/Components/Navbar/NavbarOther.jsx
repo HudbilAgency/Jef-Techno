@@ -8,7 +8,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false }
+  { label: 'Careers', hasDropdown: false , path: '/Career'}
 ];
 
 const NavbarOther = () => {
