@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from "react";
 import MainImg from '../Components/MainImg/MainImg';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
@@ -238,7 +238,7 @@ const ServicePage = () => {
 
     
 
-    <section >
+    {/* <section >
       <div className="overflow-hidden py-32 pl-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-[68%] max-md:ml-0 max-md:w-full">
@@ -304,7 +304,9 @@ const ServicePage = () => {
         </div>
       </div>
 
-    </section>
+    </section> */}
+
+    < VerticalCarousel />
 
 
 
@@ -624,6 +626,171 @@ function CarouselSection({ components }) {
     </section>
   );
 }
+
+
+
+
+
+
+const VerticalCarousel = () => {
+  const benefitItems = [
+    "ABOUT Earthing studies",
+    "What is an Earthing/Grounding System Studies",
+    "Earthing/Grounding System Studies",
+    "Our Certifications and Expertise",
+    "Detailed Study Reports and Analysis",
+    "Benefits of Professional Earthing/Grounding System Studies",
+  ];
+
+  const cardContents = [
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "What is an earthing / grounding system studies",
+      description:
+        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Our certifications and expertize",
+      description:
+        "JEFs team is certified and trained in the latest standards and practices, including: •3 patents in the area of Grounding System Testing. •IEEE Standards: Compliance with IEEE 80, IEEE 81, IEEE 142, and IEEE 1100.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Earthing/Grounding System Studies",
+      description:
+        "This study helps pinpoint defective joints that affect the safety and performance of systems.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Our Certifications and Expertise",
+      description:
+        "We are certified experts with years of experience in conducting comprehensive grounding studies.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Detailed Study Reports and Analysis",
+      description:
+        "Our reports provide detailed insights and analysis of your earthing system's efficiency.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Benefits of Professional Earthing/Grounding System Studies",
+      description:
+        "Professional studies ensure the highest level of safety and efficiency in your electrical systems.",
+    },
+  ];
+
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  return (
+    <section>
+      <div className="overflow-hidden py-32 pl-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+        <div className="flex gap-5 max-md:flex-col">
+          {/* Left Side: Benefit Items */}
+          <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
+            <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
+              {benefitItems.map((item, index) => (
+                <li
+                  key={index}
+                  className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                    activeIndex === index
+                      ? "text-white text-2xl h-40"
+                      : "h-auto text-base"
+                  }`}
+                  onClick={() => handleClick(index)}
+                >
+                  {activeIndex === index && (
+                    <div className="bg-red-500 w-1 h-full mr-4"></div>
+                  )}
+                  <div
+                    className={`w-[80%] uppercase min-w-[20%] ${
+                      activeIndex === index ? "text-white" : "text-gray-400"
+                    }`}
+                  >
+                    {item}
+                  </div>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Right Side: Vertical Carousel Content */}
+          <div className="relative flex flex-col w-[56%] h-[500px] overflow-hidden max-md:ml-0 max-md:w-full">
+            <div
+              className="absolute transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
+            >
+              {cardContents.map((content, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col items-start text-3xl text-red-700 h-[500px] max-md:max-w-full"
+                >
+                  <img
+                    loading="lazy"
+                    src={content.imgSrc}
+                    alt={content.title}
+                    className="object-contain max-w-full aspect-[1.77] w-[124px] transition-opacity duration-500 ease-in-out"
+                  />
+                  <h2 className="mt-6 ml-5 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                    {content.title}
+                  </h2>
+                  <div className="mt-3.5 max-md:max-w-full">
+                    <div className="flex gap-5 max-md:flex-col">
+                      <div className="flex flex-col w-full max-md:w-full">
+                        {/* Splitting description by period and inserting line breaks */}
+                        {content.description.split("•").map((sentence, idx) => (
+                          <p
+                            key={idx}
+                            className="mt-2 ml-5 text-2xl leading-9 tracking-widest text-white max-md:max-w-full"
+                          >
+                            {`${sentence.trim()}${idx < content.description.split("•").length - 1 ? '.' : ''}`}
+                            {idx < content.description.split("•").length - 1 && <br />}
+                          </p>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Additional Image Section */}
+          <div className="ml-5 w-[32%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col grow justify-center my-[6%] h-[30rem] max-md:mt-10 max-md:max-w-full">
+              <img
+                loading="lazy"
+                src="./SerivePage/magna-discovery.jpg.png"
+                alt="Earthing/Grounding System Illustration"
+                className="object-contain w-full h-full aspect-[0.96] max-md:max-w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+
+
+
+
+
+
+
+
 
 
 export default ServicePage
