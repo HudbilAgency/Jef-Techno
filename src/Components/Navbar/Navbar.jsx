@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 
 
 const menuItems = [
-  { label: 'Home', hasDropdown: false },
+  { label: 'Home', hasDropdown: false ,path: '/'  },
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false }
+  { label: 'Careers', hasDropdown: false , path: '/Career'}
 ];
 
 const Navbar = () => {
@@ -31,7 +32,7 @@ const Navbar = () => {
             alt="JEF Company logo"
             className="object-contain w-[5rem] 2xl:w-[124px] aspect-[1.77]"
           />
-          <nav className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
+          {/* <nav className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
             {menuItems.map((item, index) => (
               <div key={index} className="lg:flex hidden gap-2.5 justify-center items-center self-stretch my-auto">
                 <div className="self-stretch my-auto text-2xl font-medium text-zinc-900 tracking-[2px]">
@@ -42,6 +43,29 @@ const Navbar = () => {
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/5b78ea1e174590f051c423d232a44cf9a06dd7609926986d4d37c5c9a94107e0?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+                      alt={`${item.label} dropdown`}
+                      className="object-contain aspect-[1.8] w-[18px]"
+                    />
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav> */}
+          <nav className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
+                {menuItems.map((item, index) => (
+              <div key={index} className="lg:flex hidden gap-2.5 justify-center items-center self-stretch my-auto">
+                <NavLink 
+                  to={item.path} // Add the path for navigation
+                  className="self-stretch my-auto text-2xl font-medium text-black tracking-[2px]"
+                  activeClassName="active" // Optional: styling for active link
+                >
+                  {item.label}
+                </NavLink>
+                {item.hasDropdown && (
+                  <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                    <img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                       alt={`${item.label} dropdown`}
                       className="object-contain aspect-[1.8] w-[18px]"
                     />
@@ -60,7 +84,7 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className="self-stretch my-auto text-2xl font-light text-neutral-900 tracking-[2px]"
+                className="self-stretch my-auto text-2xl font-light text-black tracking-[2px]"
               >
                 {language}
               </button>
