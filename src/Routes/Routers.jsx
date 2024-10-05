@@ -10,6 +10,7 @@ import GetInTouchForm from '../Pages/GetInTouchForm';
 import GetInTouchPage from '../Pages/GetInTouchPage';
 import ServicePage from '../Pages/ServicePage';
 import Career from '../Pages/Career';
+import TermsAndConditions from '../Pages/TermsAndConditions';
 
 
 const Routers = () => { 
@@ -27,6 +28,7 @@ const Routers = () => {
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/ServicePage" element={<ServicePage/>} />
         <Route path="/Career" element={<Career/>} />
+        <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
       </Routes> 
     </Router>
     </>

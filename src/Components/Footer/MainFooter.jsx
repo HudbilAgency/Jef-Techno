@@ -80,7 +80,7 @@ function Footer() {
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex shrink gap-4 self-start text-xl font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
-            <Link>· Terms of Use</Link>
+            <Link to="/TermsAndConditions" >· Terms of Use</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
           <div className="text-xl flex gap-4 tracking-wide max-md:max-w-full">
