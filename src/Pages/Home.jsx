@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
 import CarousalImg from "../Components/Carousel/CarousalImg";
 import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 
@@ -104,6 +105,7 @@ const carouselData = [
 const buttonData = [
   { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]" , 
     title : "Grounding studies projects completed",
+    path: '/EarthingStudies',
     totalProjects: 165, 
     indiaProjects: 123,
     gcc:42,
@@ -655,7 +657,8 @@ const WhatWeDoSection = () => {
   };
 
   const [fadeOut, setFadeOut] = useState(false);
-
+  
+  
   return (
     <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
        {!showSection && (
@@ -710,16 +713,22 @@ const WhatWeDoSection = () => {
                <div className="flex flex-row w-6/12 max-md:ml-0 max-md:w-full">
                  <div className="grow max-md:mt-10 max-md:max-w-full ">
                    <div className="flex flex-wrap gap-5 h-full max-md:flex-col">
-                     {buttonData.map((button, index) => (
-                        <button
-                         key={index}
-                         className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center  cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none'  : 'bg-transparent'}`}
-                         onMouseEnter={() => setHoveredButtonIndex(index)}
-                         onMouseLeave={() => setHoveredButtonIndex(null)}
-                       >
-                         <span className="text-white text-sm uppercase ">{button.text}</span>
-                       </button>                     
-                     ))}
+{buttonData.map((button, index) => (
+  <Link
+    key={index}
+    to={button.path}
+    className={`inline-flex`} // Ensures the link behaves like a flex container
+  >
+    <button
+      className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+      onMouseEnter={() => setHoveredButtonIndex(index)}
+      onMouseLeave={() => setHoveredButtonIndex(null)}
+    >
+      <span className="text-white text-sm uppercase">{button.text}</span>
+    </button>
+  </Link>
+))}
+
                    </div>
                  </div>
                </div>
