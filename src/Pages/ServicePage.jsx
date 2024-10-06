@@ -655,35 +655,35 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Our certifications and expertize",
       description:
-        "JEFs team is certified and trained in the latest standards and practices, including: •3 patents in the area of Grounding System Testing. •IEEE Standards: Compliance with IEEE 80, IEEE 81, IEEE 142, and IEEE 1100.",
+        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Earthing/Grounding System Studies",
+      title: "Earthing/Grounding System Studies ?",
       description:
-        "This study helps pinpoint defective joints that affect the safety and performance of systems.",
+        "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensuring the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC, and local regulations.|Preventing operational disruptions and improving system efficiency",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our Certifications and Expertise",
+      title: "Preventing operational disruptions and improving system efficiency.",
       description:
-        "We are certified experts with years of experience in conducting comprehensive grounding studies.",
+        "|Comprehensive documentation of test results, findings and observations with details of specific risers &amp; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Detailed Study Reports and Analysis",
       description:
-        "Our reports provide detailed insights and analysis of your earthing system's efficiency.",
+        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Benefits of Professional Earthing/Grounding System Studies",
       description:
-        "Professional studies ensure the highest level of safety and efficiency in your electrical systems.",
+        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
     },
   ];
 
@@ -695,7 +695,7 @@ const VerticalCarousel = () => {
 
   return (
     <section>
-      <div className="overflow-hidden py-32 pl-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+      <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
           <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
@@ -705,7 +705,7 @@ const VerticalCarousel = () => {
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                     activeIndex === index
-                      ? "text-white text-2xl h-40"
+                      ? "text-white text-3xl h-56"
                       : "h-auto text-base"
                   }`}
                   onClick={() => handleClick(index)}
@@ -726,54 +726,67 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-[500px] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] h-[71vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
             >
               {cardContents.map((content, index) => (
-                <div
-                  key={index}
-                  className="flex flex-col items-start text-3xl text-red-700 h-[500px] max-md:max-w-full"
-                >
-                  <img
-                    loading="lazy"
-                    src={content.imgSrc}
-                    alt={content.title}
-                    className="object-contain max-w-full aspect-[1.77] w-[124px] transition-opacity duration-500 ease-in-out"
-                  />
-                  <h2 className="mt-6 ml-5 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
-                    {content.title}
-                  </h2>
-                  <div className="mt-3.5 max-md:max-w-full">
-                    <div className="flex gap-5 max-md:flex-col">
-                      <div className="flex flex-col w-full max-md:w-full">
-                        {/* Splitting description by period and inserting line breaks */}
-                        {content.description.split("•").map((sentence, idx) => (
-                          <p
-                            key={idx}
-                            className="mt-2 ml-5 text-2xl leading-9 tracking-widest text-white max-md:max-w-full"
-                          >
-                            {`${sentence.trim()}${idx < content.description.split("•").length - 1 ? '.' : ''}`}
-                            {idx < content.description.split("•").length - 1 && <br />}
-                          </p>
+                  <div
+                    key={index}
+                    className="flex flex-col items-start text-3xl text-red-700 h-screen max-md:max-w-full"
+                  >
+                    <img
+                      loading="lazy"
+                      src={content.imgSrc}
+                      alt={content.title}
+                      className="object-contain max-w-full aspect-[1.77] w-[124px] transition-opacity duration-500 ease-in-out"
+                    />
+                    <h2 className="mt-6 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                      {content.title}
+                    </h2>
+                    <div className="mt-3.5 max-md:max-w-full">
+                      <div className="flex gap-5 max-md:flex-col">
+                        <div className="flex flex-col w-full max-md:w-full">
+                          {/* Splitting description by period and inserting line breaks with bullet */}
+                          {content.description.split("|").map((sentence, idx) => (
+                          <div key={idx} className="flex items-start">
+                            <span className="text-2xl leading-9 tracking-widest text-white max-md:max-w-full">
+                              {idx > 0 && "•"} {/* Add bullet point for new lines */}
+                            </span>
+                            <p className="ml-4 text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
+                              {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
+                                ? (
+                                  <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
+                                ) : (
+                                  sentence.trim() // Render the rest of the text as normal
+                                )}
+                            </p>
+
+
+
+                          </div>
                         ))}
+
+
+
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+
             </div>
           </div>
 
           {/* Additional Image Section */}
-          <div className="ml-5 w-[32%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow justify-center my-[6%] h-[30rem] max-md:mt-10 max-md:max-w-full">
+          <div className="ml-5 w-[45%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
                 src="./SerivePage/magna-discovery.jpg.png"
                 alt="Earthing/Grounding System Illustration"
-                className="object-contain w-full h-full aspect-[0.96] max-md:max-w-full"
+                className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />
             </div>
           </div>
