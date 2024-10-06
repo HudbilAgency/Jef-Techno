@@ -8,7 +8,7 @@ import Blog from '../Pages/Blog';
 import BlogInside from '../Pages/BlogInside';
 import GetInTouchForm from '../Pages/GetInTouchForm';
 import GetInTouchPage from '../Pages/GetInTouchPage';
-import ServicePage from '../Pages/ServicePage';
+import EarthingStudies from '../Pages/EarthingStudies';
 import Career from '../Pages/Career';
 import TermsAndConditions from '../Pages/TermsAndConditions';
 
@@ -26,7 +26,7 @@ const Routers = () => {
         <Route path="/BlogInside" element={<BlogInside/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
-        <Route path="/ServicePage" element={<ServicePage/>} />
+        <Route path="/EarthingStudies" element={<EarthingStudies/>} />
         <Route path="/Career" element={<Career/>} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
       </Routes> 
