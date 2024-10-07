@@ -113,6 +113,7 @@ const buttonData = [
    },
   { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]",
     title : "Lightning Protection Studies Projects Completed",
+    path: '/LightningProtectionStudies',
     totalProjects: 233, 
     indiaProjects: 195,
     gcc:38,
