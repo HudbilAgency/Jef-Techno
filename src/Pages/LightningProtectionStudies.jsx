@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import MainImg from '../Components/MainImg/MainImg';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
+import Navbar from "../Components/Navbar/Navbar";
 
 const LightningProtectionStudies = () => {
 
@@ -97,33 +98,23 @@ const LightningProtectionStudies = () => {
         
   {
     imageSrc: './SerivePage/01.png',
-    title: 'Riser Integrity Testing',
-    description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
+    title: 'Risk Assessment',
+    description: 'Using Risk Assessment Software to compare calculated risk against tolerable risk levels as per IEC 62305-2.',
   },
   {
     imageSrc: './SerivePage/02.png',
-    title: 'Grid Integrity Testing',
-    description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.',
+    title: 'Lightning Protection System (LPS) Design',
+    description: 'Selecting from a choice of methods like the Rolling Sphere, Protection Angle, and Mesh Methods to design effective LPS.',
   },
   {
     imageSrc: './SerivePage/03.png',
-    title: 'Soil Resistivity Testing',
-    description: 'Conducting tests to measure soil resistivity and design effective grounding systems.',
+    title: 'Surge Protection Devices (SPD):',
+    description: 'Selecting Class I, II, and III SPDs at various levels of the electrical distribution system to protect against conducted surges.',
   },
   {
     imageSrc: './SerivePage/04.png',
-    title: 'Touch and Step Potential Measurement',
-    description: 'Assessing the potential differences that can occur on the surface of the ground to ensure personnel safety.',
-  },
-  {
-    imageSrc: './SerivePage/05.png',
-    title: 'Simulation',
-    description: 'Earthing grid in CDEGS software.',
-  },
-  {
-    imageSrc: './SerivePage/07.png',
-    title: 'Earth Electrode Resistance Testing',
-    description: 'Measuring the resistance of earth electrodes using both Fall of Potential and Stake less methods.',
+    title: 'Additional Mitigation Techniques',
+    description: 'Using equi-potential bonding, warning notices, and other best engineering practices to further reduce risk.',
   },
       ]
 
@@ -136,7 +127,7 @@ const LightningProtectionStudies = () => {
   return (
    <>
     
-    < MainImg/>
+    < Navbar />
 
     {/* Landing Img Section */}
 
@@ -153,12 +144,6 @@ const LightningProtectionStudies = () => {
           Lightning Protection Studies
           </h1>
           <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e2bc32c89ba054b97e752f6d6f5997edf21d784f5801ab1d1a29fcf6c681619?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-              alt=""
-              className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square"
-            />
             <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] min-w-[240px] rounded-[50px] w-[261px]">
               Get in touch
             </button>
@@ -525,14 +510,14 @@ function CarouselSection({ components }) {
   // Function to handle the right click (move forward)
   const handleCarouselClickRight = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex + visibleCards) % totalCards;
+      return (prevIndex - visibleCards + totalCards) % totalCards;
     });
   };
 
   // Function to handle the left click (move backward)
   const handleCarouselClickLeft = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex - visibleCards + totalCards) % totalCards;
+      return (prevIndex + visibleCards) % totalCards;
     });
   };
 
@@ -597,7 +582,7 @@ function CarouselSection({ components }) {
                 <div className="">
                   <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
                 </div>
-                <h3 className="mt-8 xl:w-[75%] font-normal leading-none text-red-700">
+                <h3 className="mt-8 xl:w-[75%] h-[5vh] font-normal leading-none text-red-700">
                   {component.title}
                 </h3>
                 <p className="w-[45%] xl:w-[77%] lg:w-full mt-8 right-0 font-thin leading-8 text-gray-400 max-md:w-full">

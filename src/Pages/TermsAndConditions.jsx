@@ -1,6 +1,6 @@
 import React from 'react';
-import NavbarOther from '../Components/Navbar/NavbarOther';
 import MainFooter from '../Components/Footer/MainFooter';
+import Navbar from '../Components/Navbar/Navbar';
 
 const TermsAndConditions = () => {
   const sections = [
@@ -157,7 +157,7 @@ const TermsAndConditions = () => {
 
   return (
     <>
-       < NavbarOther/>
+       < Navbar/>
         <main className="flex overflow-hidden flex-col items-center px-20 py-56 text-base font-thin bg-neutral-100  text-zinc-800 max-md:px-5 max-md:py-24">
           <article className="flex overflow-hidden flex-col items-start px-10 py-16 ml-2.5 max-w-full bg-white w-[1024px] max-md:px-5">
             <h1 className="text-5xl font-light leading-none uppercase tracking-[4.53px] max-md:max-w-full max-md:text-4xl">

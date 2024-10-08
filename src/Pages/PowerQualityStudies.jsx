@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from "react";
+import MainImg from '../Components/MainImg/MainImg';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
 import Navbar from "../Components/Navbar/Navbar";
 
-const EarthingStudies = () => {
+const PowerQualityStudies = () => {
 
   const services = [
     { image: '', text: '' },
@@ -82,23 +83,11 @@ const EarthingStudies = () => {
       const navItems = [
         { label: 'HOME', isActive: true },
         { label: 'SERVICES', isActive: true },
-        { label: 'EARTHING STUDIES', isActive: false },
+        { label: 'Power Quality Studies', isActive: false },
       ];
 
-      const [activeIndex, setActiveIndex] = useState(0);
-
-      const handleClick = (index) => {
-        setActiveIndex(index);
-      };
     
-      const benefitItems = [
-        "ABOUT Earthing studies",
-        'What is an Earthing/Grounding System Studies',
-        'Earthing/Grounding System Studies',
-        'Our Certifications and Expertise',
-        'Detailed Study Reports and Analysis',
-        'Benefits of Professional Earthing/Grounding System Studies',
-      ];
+      
 
       const components = [
         
@@ -151,16 +140,15 @@ const EarthingStudies = () => {
       <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6786160be35ce4ae023bd2f04360f5bea335ce494790c4d2fe3eb4f272f11752?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+          src="./SerivePage/Power Quality and Root cause Analysis 3.png"
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
         <div className="flex relative flex-col mb-0 mx-40 max-w-full inset-y-2/3 max-md:mt-10 max-md:mb-2.5">
-          <h1 className="text-7xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-            EARTHING STUDIES
+          <h1 className="text-7xl font-bold uppercase tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+          Power Quality Studies
           </h1>
           <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-            
             <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] min-w-[240px] rounded-[50px] w-[261px]">
               Get in touch
             </button>
@@ -200,23 +188,22 @@ const EarthingStudies = () => {
         </div>
       </nav>
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
+        <img loading="lazy" src="./SerivePage/PowerQualityBulb.png" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
       <header className="flex flex-col items-center self-center mt-14 w-full text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
         <h1 className="flex flex-col max-w-full text-4xl font-medium uppercase leading-[60px] tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
-            Comprehensive Earthing/Grounding integrity testing services
+          Expert Power Quality Studies and Analysis Services
           </div>
         </h1>
         <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
-          As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
+        JEF specializes in providing comprehensive Lightning Protection Studies to ensure the safety
           <br />
-          With several patents in this field, our level of expertise is unmatched even we keep innovating further.
-        </p>
-        <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
-          With several patents in this field, our level of expertise is unmatched even we keep
+          and protection of your structures from lightning strikes. Our experienced team uses advanced
           <br />
-          innovating further.
+          methodologies and standards to deliver effective lightning protection solutions as per IEC
+          <br />
+          standards for both existing and new structures.
         </p>
       </header>
       <div className="flex flex-col self-center mt-14 max-w-full text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
@@ -629,56 +616,65 @@ function CarouselSection({ components }) {
 
 const VerticalCarousel = () => {
   const benefitItems = [
-    "ABOUT Earthing studies",
-    "What is an Earthing/Grounding System Studies",
-    "Earthing/Grounding System Studies",
+    "ABOUT Lightning Protection Study?",
+    "What is a Lightning Protection Study?",
+    "Importance of Lightning Protection Studies",
+    "Our Approach to Lightning Protection Study Service",
     "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
-    "Benefits of Professional Earthing/Grounding System Studies",
+    "Benefits of Professional Lightning Protection Studies"
   ];
 
   const cardContents = [
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is an earthing / grounding system studies",
+      title: "What is a Lightning Protection Study?",
       description:
-        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
+        "A Lightning Protection Study involves evaluating the adequacy and effectiveness of existing lightning protection systems. It includes risk assessment, system design and implementable protective measures to safeguard structures & equipment from lightning-induced damage.",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our certifications and expertize",
+      title: "Importance of Lightning Protection Studies",
       description:
-        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
+        `Proper lightning protection is crucial for:|Ensuring the safety of personnel and equipment by preventing lightning-related hazards.|Complying with international standards such as IEC 62305 and local regulations.|Reducing the risk of fire, equipment damage, and operational downtime.|Protecting critical infrastructure and maintaining service continuity.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Earthing/Grounding System Studies ?",
+      title: "Importance of Lightning Protection Studies",
       description:
-        "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensuring the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC, and local regulations.|Preventing operational disruptions and improving system efficiency",
+        `Proper lightning protection is crucial for:|Ensuring the safety of personnel and equipment by preventing lightning-related hazards.|Complying with international standards such as IEC 62305 and local regulations.|Reducing the risk of fire, equipment damage, and operational downtime.|Protecting critical infrastructure and maintaining service continuity.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Preventing operational disruptions and improving system efficiency.",
+      title: "Our Approach to Lightning Protection Study Service",
       description:
-        "|Comprehensive documentation of test results, findings and observations with details of specific risers &amp; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
+        "At JEF, our Lightning Protection Studies encompass a range of key services:|Risk Assessment: Evaluating the risk of lightning strikes to determine the need for protection and the level of protection required.|System Design: Designing external and internal lightning protection systems based on the assessed risk and protection levels.|Implementation: One team will always have an eye &amp; ensure the designs recommended will be practically implementable at the specific site factoring in all possible constraints and special requirements.|Cost: Our solutions will be cost optimal and our BOQ will always reflect the most effective cost for a given project.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Our Certifications and Expertise",
+      description:
+        `JEF’s team is certified and trained in the latest standards and practices, including:|IS/IEC 62305: Comprehensive guidelines for lightning protection, risk management, and system design.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Detailed Study Reports and Analysis",
       description:
-        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
+        `Our detailed reports include:|Comprehensive documentation of findings, measurements, and observations.|Summary of compliance with relevant standards and recommendations for
+improvements.|Actionable insights for optimizing system safety and protection against lightning.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Benefits of Professional Earthing/Grounding System Studies",
       description:
-        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+        "|Enhanced  Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.|Operational Reliability:  Ensuring uninterrupted operations and protecting critical infrastructure.|Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
     },
   ];
 
@@ -721,10 +717,10 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-[71vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] h-[86vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
+              style={{ transform: `translateY(-${(activeIndex * 100)/7}%)`}}
             >
               {cardContents.map((content, index) => (
                   <div
@@ -801,4 +797,4 @@ const VerticalCarousel = () => {
 
 
 
-export default EarthingStudies
+export default PowerQualityStudies

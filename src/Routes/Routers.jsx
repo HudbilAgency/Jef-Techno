@@ -12,6 +12,7 @@ import EarthingStudies from '../Pages/EarthingStudies';
 import Career from '../Pages/Career';
 import TermsAndConditions from '../Pages/TermsAndConditions';
 import LightningProtectionStudies from '../Pages/LightningProtectionStudies';
+import PowerQualityStudies from '../Pages/PowerQualityStudies';
 
 
 const Routers = () => { 
@@ -31,6 +32,7 @@ const Routers = () => {
         <Route path="/Career" element={<Career/>} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
         <Route path="/LightningProtectionStudies" element={<LightningProtectionStudies/>} />
+        <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
       </Routes> 
     </Router>
     </>

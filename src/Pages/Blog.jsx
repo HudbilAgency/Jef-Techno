@@ -1,8 +1,7 @@
 import React from 'react';
-import NavbarOther from '../Components/Navbar/NavbarOther';
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
-import MainImg from '../Components/MainImg/MainImg';
+
 
 const BlogPost = ({ date, title, content, imageUrl }) => (
   <article className="flex flex-col w-full  max-md:mt-10">
@@ -89,7 +88,7 @@ const Blog = () => {
   return (
 
     <>
-    < MainImg/>
+    < Navbar/>
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">
         <div className="flex relative flex-col pb-32 w-full min-h-[1112px] max-md:pb-24 max-md:max-w-full">

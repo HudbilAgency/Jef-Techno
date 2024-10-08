@@ -1,9 +1,6 @@
 import React from 'react';
-import NavbarOther from '../Components/Navbar/NavbarOther';
 import MainFooter from '../Components/Footer/MainFooter';
 import Navbar from '../Components/Navbar/Navbar';
-import MainImgWhite from '../Components/MainImgWhite/MainImgWhite';
-import MainImg from '../Components/MainImg/MainImg';
 
 const GetInTouchPage = () => {
   const categories = [
@@ -18,7 +15,7 @@ const GetInTouchPage = () => {
   return (
 
     <>
-    < MainImg />
+    < Navbar />
     <section className="flex py-20 overflow-hidden flex-col bg-white">
       <div className="flex overflow-hidden flex-col w-full bg-stone-900 max-md:max-w-full">
         <div className="flex flex-col justify-center w-full max-md:max-w-full">

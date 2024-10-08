@@ -1,14 +1,17 @@
 import React, { useState , useEffect } from 'react';
+import { NavLink ,useLocation } from 'react-router-dom';
+
 
 const menuItems = [
-  { label: 'Home', hasDropdown: false },
+  { label: 'Home', hasDropdown: false, path: '/' },
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false }
+  { label: 'Careers', hasDropdown: false, path: '/Career' }
 ];
 
 const Navbar = () => {
+  const location = useLocation();
   const [activeSection, setActiveSection] = useState(''); // State to track active section
   const [language, setLanguage] = useState('English');
 
@@ -39,11 +42,15 @@ const Navbar = () => {
   }, [activeSection]);
 
   return (
-    <div
-    className={`flex absolute w-full z-50 overflow-hidden flex-col ${
-      activeSection ? 'bg-stone-800' : 'lg:bg-transparent'
-    }`}
-  >
+   <div
+      className={`flex absolute w-full z-50 overflow-hidden flex-col ${
+        activeSection 
+          ? 'bg-stone-800' 
+          : location.pathname === '/' 
+            ? 'lg:bg-transparent' 
+            : 'bg-stone-800'
+       }`}
+    >
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
         <header className="flex relative flex-wrap justify-between items-center self-center w-full max-w-[1520px] max-md:max-w-full">
           <img
@@ -60,22 +67,60 @@ const Navbar = () => {
                 key={index}
                 className="lg:flex hidden gap-2.5 justify-center items-center self-stretch my-auto"
               >
-                <button
-                  onClick={() => handleMenuClick(item.label)} // Show/Hide the section
-                  className={`self-stretch my-auto text-2xl font-medium ${
-                    activeSection === item.label ? 'text-red-500' : 'text-black'
-                  } tracking-[2px]`}
-                >
-                  {item.label}
-                </button>
+                {item.path ? (
+                  <NavLink
+                    to={item.path} // Use path for routing if available
+                    className={`self-stretch my-auto text-2xl font-medium tracking-[2px] ${
+                      activeSection 
+                      ? 'text-white' 
+                      : location.pathname === '/' 
+                        ? 'text-black' 
+                        : 'text-white'
+                      }`}
+                    activeClassName="active" // Optional: styling for active link
+                  >
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <button
+                    onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
+                    className={`self-stretch my-auto text-2xl font-medium ${
+                      activeSection 
+                      ? 'text-white' 
+                      : location.pathname === '/' 
+                        ? 'text-black' 
+                        : 'text-white'
+                    } tracking-[2px]`}
+                  >
+                    {item.label}
+                  </button>
+                )}
                 {item.hasDropdown && (
                   <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                    <img
+                    
+                    {
+                      activeSection 
+                      ? (<img
+                        loading="lazy"
+                        src="./HomePageImg/NavbarImg/Dropdown.png"
+                        alt="Dropdown"
+                        className="object-contain w-9 hidden lg:block"
+                      />) 
+                      :
+                     location.pathname == '/' ? 
+                      (<img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                       alt={`${item.label} dropdown`}
                       className="object-contain aspect-[1.8] w-[18px]"
+                    />):(
+                      <img
+                      loading="lazy"
+                      src="./HomePageImg/NavbarImg/Dropdown.png"
+                      alt="Dropdown"
+                      className="object-contain w-9 hidden lg:block"
                     />
+                    )}
                   </div>
                 )}
               </div>
@@ -93,17 +138,41 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className="self-stretch my-auto text-2xl font-light text-black tracking-[2px]"
+                className={`self-stretch my-auto text-2xl font-light tracking-[2px] ${  
+                    activeSection 
+                  ? 'text-white' 
+                  : location.pathname === '/' 
+                    ? 'text-black' 
+                    : 'text-white'}`}
               >
                 {language}
               </button>
               <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Language selector"
-                  className="object-contain aspect-[1.8] w-[18px]"
-                />
+                    {
+                       activeSection 
+                       ? (
+                        <img
+                        loading="lazy"
+                        src="./HomePageImg/NavbarImg/Dropdown.png"
+                        alt="Dropdown"
+                        className="object-contain w-9 hidden lg:block"
+                      />
+                      )
+                       : 
+                     location.pathname == '/' ? 
+                      (<img
+                      loading="lazy"
+                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+                      alt={`dropdown`}
+                      className="object-contain aspect-[1.8] w-[18px]"
+                    />):(
+                      <img
+                      loading="lazy"
+                      src="./HomePageImg/NavbarImg/Dropdown.png"
+                      alt="Dropdown"
+                      className="object-contain w-9 hidden lg:block"
+                    />
+                    )}
               </div>
             </div>
             <button className="gap-3 self-stretch p-2.5 my-auto text-xs lg:text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[8rem] 2xl:w-[216px]">

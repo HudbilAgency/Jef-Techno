@@ -1,6 +1,6 @@
 import React from 'react';
-import NavbarOther from '../Components/Navbar/NavbarOther';
 import MainFooter from '../Components/Footer/MainFooter';
+import Navbar from '../Components/Navbar/Navbar';
 
 const GetInTouchForm = () => {
   const inputFields = [
@@ -14,7 +14,7 @@ const GetInTouchForm = () => {
 
 
     <>
-    < NavbarOther />
+    < Navbar />
     <section className="flex py-32 overflow-hidden flex-col bg-neutral-100">
       <div className="flex flex-col self-center mt-24 w-full max-w-[1300px] max-md:mt-10 max-md:max-w-full">
         <h1 className="pb-px w-full text-3xl leading-loose uppercase text-stone-900 tracking-[3.36px] max-md:max-w-full">

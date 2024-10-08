@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import NavbarOther from '../Components/Navbar/NavbarOther';
 import MainFooter from '../Components/Footer/MainFooter'
+import Navbar from '../Components/Navbar/Navbar';
 
 const Career = () => {
   const [searchParams, setSearchParams] = useState({
@@ -96,7 +96,7 @@ const Career = () => {
 
   return (
     <>
-    < NavbarOther />
+    < Navbar />
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
         <section className="flex  h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
         <img loading="lazy" src="./CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
