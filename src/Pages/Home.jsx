@@ -128,6 +128,7 @@ const buttonData = [
     },
   { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]", 
     title : "Power Quality & Root Cause Studies Projects Completed",
+    path: '/PowerQualityStudies',
     totalProjects: 66, 
     indiaProjects: 36,
     gcc:30,
@@ -714,21 +715,21 @@ const WhatWeDoSection = () => {
                <div className="flex flex-row w-6/12 max-md:ml-0 max-md:w-full">
                  <div className="grow max-md:mt-10 max-md:max-w-full ">
                    <div className="flex flex-wrap gap-5 h-full max-md:flex-col">
-{buttonData.map((button, index) => (
-  <Link
-    key={index}
-    to={button.path}
-    className={`inline-flex`} // Ensures the link behaves like a flex container
-  >
-    <button
-      className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
-      onMouseEnter={() => setHoveredButtonIndex(index)}
-      onMouseLeave={() => setHoveredButtonIndex(null)}
-    >
-      <span className="text-white text-sm uppercase">{button.text}</span>
-    </button>
-  </Link>
-))}
+                        {buttonData.map((button, index) => (
+                          <Link
+                            key={index}
+                            to={button.path}
+                            className={`inline-flex`} // Ensures the link behaves like a flex container
+                          >
+                            <button
+                              className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                              onMouseEnter={() => setHoveredButtonIndex(index)}
+                              onMouseLeave={() => setHoveredButtonIndex(null)}
+                            >
+                              <span className="text-white text-sm uppercase">{button.text}</span>
+                            </button>
+                          </Link>
+                        ))}
 
                    </div>
                  </div>
