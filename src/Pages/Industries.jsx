@@ -112,6 +112,15 @@ function Industries() {
         </main>
     </section>
 
+
+
+    <section>
+      < IntegratingDiverseSpecializations />
+    </section>
+
+
+
+
     {/* Service Provided Section */}
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
@@ -147,7 +156,8 @@ function Industries() {
 
 
     <section className="py-20">
-      <Segments/>
+      {/* <Segments/> */}
+      <img src="./IndustriesPage/Segments.png" alt="SegmentsPhoto" className="w-screen"/>
     </section>
 
 
@@ -183,6 +193,59 @@ function Industries() {
    </>
   );
 }
+
+
+const statistics = [
+  { label: "340 SUCCESSFUL RENEWABLE ENERGY PROJECTS" },
+  { label: "Ongoing Projects: 1.6 GW Wind 5.0 GW Solar PV" },
+  { label: "Total Projects Capacity: 5.6 GW Wind | 8.1 GW Solar PV" }
+];
+
+function StatisticItem({ label, value }) {
+  return (
+    <div className="mt-6 tracking-widest uppercase max-md:max-w-full">
+      {value && <span className="font-bold">{value}</span>} {label}
+    </div>
+  );
+}
+
+function IntegratingDiverseSpecializations() {
+  return (
+    <section className="flex overflow-hidden flex-col items-start py-28">
+      <div className="w-screen max-md:max-w-full">
+        <div className="flex max-md:flex-col">
+          <div className="flex flex-col w-[45%] max-md:ml-0 max-md:w-full">
+            <img
+              loading="lazy"
+              src="./IndustriesPage/DiverseSpecializationsImg.png"
+              alt="Illustration representing diverse specializations in electrical engineering"
+              className="object-cover grow w-full aspect-[0.79] max-md:mt-10 max-md:max-w-full"
+            />
+          </div>
+          <div className="flex p-2 self-center items-center mx-auto flex-col w-[40%] max-md:w-full">
+            <div className="flex flex-col items-center self-center mx-auto my-auto text-2xl leading-[50px] text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <h2 className="self-start lg:text-4xl w-[90%] font-medium leading-relaxed tracking-widest text-red-700 uppercase max-md:max-w-full">
+                Integrating Diverse Specializations for Value Delivery
+              </h2>
+              <p className="self-start lg:text-3xl leading-normal font-light w-[95%]  my-14  max-md:mt-10 max-md:max-w-full">
+              The diverse specializations within our team ensure a multidimensional approach to problem
+                solving, thereby positioning us as a competent and reliable service vendor partner in the
+                electrical engineering space.
+              </p>
+              <h1 className="text-lg lg:text-2xl font-semibold">
+                  {statistics.map((stat, index) => (
+                    <StatisticItem key={index} label={stat.label} />
+                  ))}
+              </h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 
 
