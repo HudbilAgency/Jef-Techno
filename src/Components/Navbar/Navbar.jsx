@@ -1,5 +1,5 @@
 import React, { useState , useEffect } from 'react';
-import { NavLink ,useLocation } from 'react-router-dom';
+import { Link, NavLink ,useLocation } from 'react-router-dom';
 
 
 const menuItems = [
@@ -212,7 +212,7 @@ function AboutSection() {
                 {navigationItems.map((item, index) => (
                   <div key={index} className="flex gap-7 items-center mt-11 uppercase tracking-[3.36px] max-md:mt-10">
                     <div className="self-stretch my-auto text-base text-red-700">{item.number}</div>
-                    <div className="self-stretch my-auto text-2xl font-medium text-white">{item.title}</div>
+                    <div className="self-stretch my-auto text-2xl hover:text-gray-400 font-medium text-white">{item.title}</div>
                     {item.number === '01' && (
                       <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px] rotate-[-1.5707963267948966rad]">
                         <img
@@ -230,9 +230,9 @@ function AboutSection() {
             </div>
           </nav>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex gap-10 mt-16 text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10">
-              <h2>About</h2>
-              <p className="flex-auto">redefining business</p>
+            <div className="flex gap-10 mt-16  text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10">
+                <Link to={"/AboutUs"}><h2 className='hover:text-gray-400'>About</h2></Link>
+              <p className="flex-auto hover:text-gray-400">redefining business</p>
             </div>
           </div>
         </div>
