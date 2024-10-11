@@ -283,7 +283,7 @@ useGSAP(() => {
 
 
 < Navbar />
-    {/* <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
         <div className="relative w-full h-full ">
           <video autoPlay loop muted className="absolute size-full object-cover" >
@@ -379,7 +379,7 @@ useGSAP(() => {
           <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
         </div>
       )}
-    </div> */}
+    </div>
 
 
 
@@ -397,8 +397,8 @@ useGSAP(() => {
       setCurrentSlide(currentSlide + 1);
     }
   }; */}
-
-   < LandingImages/>
+{/* 
+   < LandingImages/> */}
 
 
 
@@ -955,48 +955,6 @@ const LandingImages = () => {
   const currentTranslate = useRef(0);
   const prevTranslate = useRef(0);
 
-  // const handleNext = () => {
-  //   if (index < totalSlides - 1) {
-  //     gsap.fromTo(
-  //       coverRef.current,
-  //       {
-  //         x: "100%",
-  //         y: "-100%",
-  //       },
-  //       {
-  //         x: "0%",
-  //         yoyo: true,
-  //         repeat: 1,
-  //       }
-  //     );
-  //     gsap.to(carouselRef.current, {
-  //       x: `-${(index + 1) * 33.33}%`,
-  //     });
-  //     setIndex(index + 1);
-  //   }
-  // };
-
-  // const handlePrev = () => {
-  //   if (index > 0) {
-  //     gsap.fromTo(
-  //       coverRef.current,
-  //       {
-  //         x: "-100%",
-  //         y: "-100%",
-  //       },
-  //       {
-  //         x: "0%",
-  //         y: "-100%",
-  //         yoyo: true,
-  //         repeat: 1,
-  //       }
-  //     );
-  //     gsap.to(carouselRef.current, {
-  //       x: `-${(index - 1) * 33.33}%`,
-  //     });
-  //     setIndex(index - 1);
-  //   }
-  // };
 
 
   
