@@ -290,7 +290,7 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          <div className="2xl:mt-[35rem] p-4 inset-y-2/4 md:inset-0 md:p-0 lg:mx-[200px] flex relative flex-col self-center w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+          <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
@@ -315,7 +315,7 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className="2xl:mt-[35rem] p-4 inset-y-72 md:inset-0 md:p-0 lg:mx-[200px] flex relative flex-col self-center w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+        <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-36 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
@@ -341,7 +341,7 @@ useGSAP(() => {
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-        <div className="2xl:mt-[35rem] px-1 inset-y-2/4 md:inset-0 md:p-0 lg:mx-[200px] flex relative flex-col self-center w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
+        <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
