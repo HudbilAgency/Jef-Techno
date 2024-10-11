@@ -290,8 +290,8 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+          <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
+            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
             </h1>
@@ -315,8 +315,8 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-36 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="inset-y-[26rem] md:inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
+            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
             </h1>
@@ -341,8 +341,8 @@ useGSAP(() => {
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-        <div className="inset-y-2/3 lg:inset-x-40  flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="lg:text-6xl  2xl:text-7xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
+            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
             <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">

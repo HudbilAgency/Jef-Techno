@@ -52,25 +52,25 @@ const Navbar = () => {
        }`}
     >
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
-        <header className="flex relative flex-wrap justify-between items-center self-center w-full max-w-[1520px] max-md:max-w-full">
+        <header className="flex relative justify-between items-center self-center w-full  2xl:max-w-[83%] max-md:max-w-full">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
             alt="JEF Company logo"
-            className="object-contain w-[5rem] 2xl:w-[124px] aspect-[1.77]"
+            className="object-contain w-[5rem] 2xl:w-[8rem] aspect-[1.77]"
           />
 
           {/* Navigation Menu */}
-          <nav className="flex flex-wrap gap-10 items-center self-stretch my-auto max-md:max-w-full">
+          <nav className="flex gap-5 xl:gap-8 items-center  my-auto max-md:max-w-full">
             {menuItems.map((item, index) => (
               <div
                 key={index}
-                className="lg:flex hidden gap-2.5 justify-center items-center self-stretch my-auto"
+                className="lg:flex hidden gap-2 justify-center items-center self-stretch my-auto"
               >
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className={`self-stretch my-auto text-2xl font-medium tracking-[2px] ${
+                    className={`self-stretch my-auto md:text-base xl:text-2xl font-medium tracking-[2px] ${
                       activeSection 
                       ? 'text-white' 
                       : location.pathname === '/' 
@@ -84,7 +84,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch my-auto text-2xl font-medium ${
+                    className={`self-stretch my-auto md:text-base xl:text-2xl font-medium ${
                       activeSection 
                       ? 'text-white' 
                       : location.pathname === '/' 
@@ -138,7 +138,7 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className={`self-stretch my-auto text-2xl font-light tracking-[2px] ${  
+                className={`self-stretch my-auto text-base md:text-lg xl:text-2xl font-light tracking-[2px] ${  
                     activeSection 
                   ? 'text-white' 
                   : location.pathname === '/' 
@@ -175,7 +175,7 @@ const Navbar = () => {
                     )}
               </div>
             </div>
-            <button className="gap-3 self-stretch p-2.5 my-auto text-xs lg:text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[8rem] 2xl:w-[216px]">
+            <button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
               Get In Touch
             </button>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]">
