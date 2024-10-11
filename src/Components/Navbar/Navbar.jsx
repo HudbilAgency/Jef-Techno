@@ -42,15 +42,16 @@ const Navbar = () => {
   }, [activeSection]);
 
   return (
-   <div
-      className={`flex absolute w-full z-50 overflow-hidden flex-col ${
-        activeSection 
-          ? 'bg-stone-800' 
-          : location.pathname === '/' || 'AboutUs'
-            ? 'lg:bg-transparent' 
-            : 'bg-stone-800'
-       }`}
-    >
+    <div
+    className={`flex absolute w-full z-50 overflow-hidden flex-col ${
+      activeSection 
+        ? 'bg-stone-800' 
+        : location.pathname === '/' || location.pathname === '/AboutUs'
+          ? 'lg:bg-transparent' 
+          : 'bg-stone-800'
+    }`}
+  >
+  
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
         <header className="flex relative justify-between items-center self-center w-full  2xl:max-w-[83%] max-md:max-w-full">
           <img
