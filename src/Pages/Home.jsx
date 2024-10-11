@@ -304,7 +304,7 @@ useGSAP(() => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
                 Learn More
               </button>
             </div>
@@ -329,7 +329,7 @@ useGSAP(() => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="px-5 lg:px-10 self-stretch py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm lg:text-2xl 2xl:min-h-[64px] rounded-[50px] ">
                 Learn More
               </button>
             </div>
@@ -354,7 +354,7 @@ useGSAP(() => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="px-5 lg:px-10 self-stretch py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
                 Learn More
               </button>
             </div>
