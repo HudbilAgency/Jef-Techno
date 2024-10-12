@@ -40,7 +40,7 @@ const Navbar = () => {
   };
   
   useEffect(() => {
-    if (activeSection) {
+    if (activeSection || isSlideOpen) {
       document.body.style.overflow = 'hidden'; // Disable scroll
     } else {
       document.body.style.overflow = ''; // Enable scroll
@@ -50,7 +50,7 @@ const Navbar = () => {
     return () => {
       document.body.style.overflow = ''; // Reset scroll when component unmounts
     };
-  }, [activeSection]);
+  }, [activeSection || isSlideOpen]);
 
 
   const toggleSlideMenu = () => {
