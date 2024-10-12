@@ -155,13 +155,13 @@ const EarthingStudies = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex relative flex-col mb-0 mx-40 max-w-full inset-y-2/3 max-md:mt-10 max-md:mb-2.5">
-          <h1 className="text-7xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="flex inset-y-2/3 lg:inset-x-40 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+          <h1 className="xl:text-6xl  2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EARTHING STUDIES
           </h1>
           <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
             
-            <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] min-w-[240px] rounded-[50px] w-[261px]">
+            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-xl  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
           </div>
@@ -175,14 +175,14 @@ const EarthingStudies = () => {
 
 
 
-    <section className="flex overflow-hidden flex-col bg-stone-900">
+    <section className="flex h-auto -mb-11 md:mb-0 overflow-hidden flex-col bg-stone-900">
       <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full" />
       <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
         <div className="flex w-full max-md:max-w-full">
           <div className="flex items-center h-full min-w-[240px]">
             {navItems.map((item, index) => (
               <div key={index} className="flex items-center self-stretch my-auto">
-                <div className={`self-stretch my-auto text-base tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
+                <div className={`self-stretch my-auto text-sm lg:text-base tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
                   {item.label}
                 </div>
                 {item.isActive && (
@@ -202,8 +202,8 @@ const EarthingStudies = () => {
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
-      <header className="flex flex-col items-center self-center mt-14 w-full text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-4xl font-medium uppercase leading-[60px] tracking-[6.06px] w-[1071px]">
+      <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base md:text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+        <h1 className="flex flex-col max-w-full text-xl md:text-4xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
             Comprehensive Earthing/Grounding integrity testing services
           </div>
@@ -219,132 +219,29 @@ const EarthingStudies = () => {
           innovating further.
         </p>
       </header>
-      <div className="flex flex-col self-center mt-14 max-w-full text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
+      <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
         <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
           Get in touch for Real-Life Case Studies and Testimonials
         </p>
         <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
       </div>
-      <button className="flex gap-3.5 justify-center items-center self-center p-4 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px] w-[267px]">
+      <button className="flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
         <span className="self-stretch my-auto">CONTACT US</span>
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
       </button>
-    </section>
+   </section>
 
     
 
-    {/* <section >
-      <div className="overflow-hidden py-32 pl-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="flex flex-col w-[68%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col w-full max-md:mt-10 max-md:max-w-full">
-              <div className="mr-6 max-md:mr-2.5 max-md:max-w-full">
-                <div className="flex gap-5 max-md:flex-col">
-                  <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
-                  <div className="flex flex-col grow tracking-normal uppercase max-md:max-w-full">
-                        <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
-                          {benefitItems.map((item, index) => (
-                            <li
-                              key={index}
-                              className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
-                                activeIndex === index ? 'text-white text-2xl h-40' : 'h-auto text-base' 
-                              }`}
-                              onClick={() => handleClick(index)}
-                            >
-                              {activeIndex === index && (
-                                <div className="bg-red-500 w-1 h-full mr-4"></div> 
-                              )}
-                              <div className={`w-[80%] min-w-[20%] ${activeIndex === index ? 'text-white' : 'text-gray-400'}`}>
-                                {item}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                  </div>
-                  <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
-                    <div className="flex flex-col items-start text-3xl text-red-700  max-md:max-w-full">
-                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing/Grounding System Studies Icon" className="object-contain max-w-full aspect-[1.77] w-[124px]" />
-                      <h2 className="mt-6 ml-5 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
-                        What is an earthing/ grounding system studies
-                      </h2>
-                       <div className="mt-3.5 max-md:max-w-full">
-                        <div className="flex gap-5 max-md:flex-col">
-                          <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
-                            <p className="mt-7 ml-5 text-2xl leading-9 tracking-widest text-white max-md:mt-10 max-md:max-w-full">
-                              An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of
-                              both above and below ground connections in electrical installations. These studies help in 
-                              pinpointing defective joints that can seriously affect the safety and performance of electrical
-                              systems.
-                            </p>
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+   
 
-                   
-
-            </div>
-            
-          </div>
-          <div className=" ml-5 w-[32%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow justify-center my-[6%] h-[30rem] max-md:mt-10 max-md:max-w-full">
-              <img loading="lazy" src="./SerivePage/magna-discovery.jpg.png" alt="Earthing/Grounding System Illustration" className="object-contain w-full h-full aspect-[0.96] max-md:max-w-full" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> */}
-
-    < VerticalCarousel />
+      <section>
+          < VerticalCarousel />
+      </section>
 
 
 
-    {/* <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
-      <div className="flex flex-wrap gap-5 justify-between w-full  max-md:max-w-full">
-        <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
-          KEY COMPONENTS OF THE STUDY
-        </h2>
-        <div className="flex self-end flex-col min-h-[60px]">
-          <div className="flex gap-5 items-start w-full max-w-[140px]">
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
-                <button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/150914823e04aa0b72d10dfe3eaaf22d38b599636111c8b7ad6e80476980a940?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-6 aspect-square" /></button>
-              </div>
-            </div>
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
-                <button></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-6 aspect-square" />
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-5 justify-between items-center mt-48 w-full text-2xl max-md:mt-10">
-      {components.map((component, index) => (
-        <React.Fragment key={component.title}> 
-          <div className="flex flex-col items-start mt-2.5 max-md:max-w-full">
-            <div className="">
-              <img src={component.imageSrc} alt={component.title} className="w-full h-auto" /> 
-            </div>
-            <h3 className="mt-8 font-normal leading-none text-red-700">{component.title}</h3>
-            <p className="w-[45%] xl:w-[80%] lg:w-full mt-8 font-thin leading-8 text-gray-400 max-md:w-full">
-              {component.description}
-            </p>
-          </div>
-          {index < components.length - 1 && (
-            <img src="./SerivePage/Line 14.png" alt="LineImg" className='mx-5' />
-          )}
-        </React.Fragment>
-      ))}
-    </div>
-    </section> */}
+    
 
       <section>
         < CarouselSection components={components} />
@@ -691,16 +588,16 @@ const VerticalCarousel = () => {
   return (
     <section>
       <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
+        <div className="flex w-[95%] gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
-          <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
-            <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
+          <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
+            <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
               {benefitItems.map((item, index) => (
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                     activeIndex === index
-                      ? "text-white text-3xl h-56"
+                      ? "text-white md:text-xl xl:text-2xl 2xl:text-3xl h-32 xl:h-56"
                       : "h-auto text-base"
                   }`}
                   onClick={() => handleClick(index)}
@@ -709,7 +606,7 @@ const VerticalCarousel = () => {
                     <div className="bg-red-500 w-1 h-full mr-4"></div>
                   )}
                   <div
-                    className={`w-[80%] uppercase min-w-[20%] ${
+                    className={`xl:w-[80%] uppercase min-w-[20%] ${
                       activeIndex === index ? "text-white" : "text-gray-400"
                     }`}
                   >
@@ -721,7 +618,7 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-[71vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] h-screen lg:h-[71vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
@@ -729,27 +626,53 @@ const VerticalCarousel = () => {
               {cardContents.map((content, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-start text-3xl text-red-700 h-screen max-md:max-w-full"
+                    className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 h-screen max-md:max-w-full"
                   >
                     <img
                       loading="lazy"
                       src={content.imgSrc}
                       alt={content.title}
-                      className="object-contain max-w-full aspect-[1.77] w-[124px] transition-opacity duration-500 ease-in-out"
+                      className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
                     />
-                    <h2 className="mt-6 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                    <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] max-md:pl-5 max-md:ml-0">
+                        {benefitItems.slice(0, 1).map((item, index) => (
+                          <li
+                            key={index}
+                            className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                              activeIndex === index
+                                ? "text-white text-3xl h-24"
+                                : "h-auto text-base"
+                            }`}
+                            onClick={() => handleClick(index)}
+                          >
+                            {activeIndex === index && (
+                              <div className="bg-red-500 w-1 h-full mr-4"></div>
+                            )}
+                            <div
+                              className={`w-[80%] uppercase min-w-[20%] ${
+                                activeIndex === index ? "text-white" : "text-gray-400"
+                              }`}
+                            >
+                              {item}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+
+
+                    <h2 className="mt-6 lg:w-[80%] md:text-2xl lg:text-3xl ml-5 lg:ml-0 tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-3.5 max-md:max-w-full">
                       <div className="flex gap-5 max-md:flex-col">
-                        <div className="flex flex-col w-full max-md:w-full">
+                        <div className="flex h-auto flex-col w-full max-md:w-full">
                           {/* Splitting description by period and inserting line breaks with bullet */}
                           {content.description.split("|").map((sentence, idx) => (
                           <div key={idx} className="flex items-start">
                             <span className="text-2xl leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
+                            <p className="ml-4 text-xl md:text-xl lg:text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
