@@ -121,6 +121,7 @@ const buttonData = [
   },
   { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]", 
     title : "Power System Studies Projects Completed",
+    path: '/PowerSystemStudies',
     totalProjects: 74, 
     indiaProjects: 58,
     gcc:16,
@@ -563,8 +564,8 @@ useGSAP(() => {
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
         <div className="flex flex-col items-start mb-0 w-full max-w-[1480px]  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-            <h1 className="text-6xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
-            <div className="flex gap-7 text-base tracking-[3px]">
+            <h1 className="lg:text-6xl text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <div className="flex gap-7 text-sm lg:text-base tracking-[3px]">
               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
               <Link to="/Blog">
                   <button>
@@ -572,13 +573,13 @@ useGSAP(() => {
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
                       alt=""
-                      className="object-contain shrink-0 w-14 aspect-square"
+                      className="object-contain shrink-0 w-10 lg:w-14 aspect-square"
                     />
                   </button>
               </Link>
             </div>
           </header>
-          <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
+          <nav className="flex gap-8 mt-16  text-base lg:text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
             <a href="#newest" className="text-red-700 basis-auto">Newest</a>
             <a href="#oldest" className="text-neutral-900">Oldest</a>
           </nav>

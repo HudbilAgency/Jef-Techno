@@ -13,6 +13,7 @@ import Career from '../Pages/Career';
 import TermsAndConditions from '../Pages/TermsAndConditions';
 import LightningProtectionStudies from '../Pages/LightningProtectionStudies';
 import PowerQualityStudies from '../Pages/PowerQualityStudies';
+import PowerSystemStudies from '../Pages/PowerSystemStudies'
 import Industries from '../Pages/Industries';
 import AboutUs from '../Pages/AboutUs';
 import Test from '../Pages/Test';
@@ -36,6 +37,7 @@ const Routers = () => {
         <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
         <Route path="/LightningProtectionStudies" element={<LightningProtectionStudies/>} />
         <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
+        <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
         <Route path="/Industries" element={<Industries/>} />
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/Test" element={<Test/>} />

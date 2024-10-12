@@ -10,10 +10,21 @@ const menuItems = [
   { label: 'Careers', hasDropdown: false, path: '/Career' }
 ];
 
+const menuItemsMobile = [
+  { label: 'Home', path: '/' },
+  { label: 'About', path: '/AboutUs' },
+  { label: 'Our Business' },
+  { label: 'News',  },
+  { label: 'Careers', path: '/Career' }
+];
+
 const Navbar = () => {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState(''); // State to track active section
   const [language, setLanguage] = useState('English');
+  const [isSlideOpen, setIsSlideOpen] = useState(false); // State to handle slide-out menu
+
+
 
   const toggleLanguage = () => {
     setLanguage((prevLang) => (prevLang === 'English' ? 'Français' : 'English'));
@@ -40,6 +51,15 @@ const Navbar = () => {
       document.body.style.overflow = ''; // Reset scroll when component unmounts
     };
   }, [activeSection]);
+
+
+  const toggleSlideMenu = () => {
+    setIsSlideOpen(!isSlideOpen);
+  };
+
+  
+  
+
 
   return (
     <div
@@ -179,9 +199,10 @@ const Navbar = () => {
             <button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
               Get In Touch
             </button>
-            <button className="md:hidden mr-2 justify-items-center w-[2.3rem]">
+            <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
               <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
             </button>
+
           </div>
         </header>
 
@@ -191,7 +212,61 @@ const Navbar = () => {
       {/* Conditionally Render Sections */}
       {activeSection === 'About' && <AboutSection />}
       {/* Add more sections conditionally like this */}
+
+
+
+
+      {/* Mobile Navbar Content */}
+      <div
+        className={`fixed top-0 right-0 h-full w-full bg-stone-900 z-50 transform ${
+          isSlideOpen ? 'translate-x-0' : 'translate-x-full'
+        } transition-transform duration-500 ease-in-out`}
+      >
+        <button
+          className="absolute top-5 right-0 p-2 text-white"
+          onClick={toggleSlideMenu}
+        >
+          <img src="./HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]'/>
+        </button>
+        <div className="h-full">
+
+
+        <nav className="flex mt-[40%] sm:mt-[20%] md:mt-[10%] flex-col gap-10 self-center items-center my-auto w-full">
+            {menuItemsMobile.map((item, index) => (
+              <div
+                key={index}
+                className="flex justify-center items-center self-stretch my-auto"
+              >
+                {item.path ? (
+                  <NavLink
+                    to={item.path} // Use path for routing if available
+                    className="self-stretch my-auto text-white text-3xl font-medium tracking-[2px]"
+                    activeClassName="active" // Optional: styling for active link
+                  >
+                    {item.label}
+                  </NavLink>
+                ) : (
+                  <button
+                    onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
+                    className="self-stretch my-auto text-white text-3xl font-medium tracking-[2px]"
+                  >
+                    {item.label}
+                  </button>
+                  
+                )}
+              </div>
+            ))}
+            {/* <div className="w-full border-t border-neutral-500 mt-4" /> Thin line between items */}
+          </nav>
+
+
+
+        </div>
+      </div>
+
     </div>
+    
+
   );
 };
 

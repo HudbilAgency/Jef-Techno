@@ -4,6 +4,22 @@ import MainFooter from '../Components/Footer/MainFooter';
 
 const AboutUs = () => {
 
+
+  const timelineData = [
+    { year: '2024', isHighlighted: true },
+    { year: '2023' },
+    { year: '2022' },
+    { year: '2021' },
+    { year: '2020', isSmall: true },
+    { year: '2019' },
+    { year: '2018' },
+    { year: '2017' },
+    { year: '2016' },
+    { year: '2015' }
+  ];
+
+
+
   // ContactUs Data
 
 
@@ -219,6 +235,68 @@ const AboutUs = () => {
         < UniqueEnvironment />
 
     </section>
+
+
+    {/* Our Journey Section */}
+
+
+    <section className="flex overflow-hidden flex-col py-36 bg-stone-900 max-md:py-24">
+      <header className="flex flex-col justify-center items-center px-60 py-6 w-full text-5xl leading-tight text-center text-white uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full max-md:text-4xl">
+        <h1 className="flex flex-col max-w-full w-[960px] max-md:text-4xl">
+          <span className="flex justify-center items-center pr-72 pl-72 w-full max-md:px-5 max-md:max-w-full max-md:text-4xl">
+            <span className="self-stretch my-auto min-w-[240px] max-md:text-4xl">Our journey</span>
+          </span>
+        </h1>
+      </header>
+      <div className="flex relative gap-10 justify-center mt-6 w-full text-base text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
+        <div className="flex absolute inset-x-0 z-0 self-center justify-center h-px border-b border-white bottom-[3px] min-h-[1px] w-full max-md:max-w-full" />
+        {timelineData.map((item, index) => (
+          <div
+            key={index}
+            className={`flex z-0 flex-col pt-3 ${
+              item.isHighlighted
+                ? 'text-2xl leading-none text-red-700'
+                : item.isSmall
+                ? 'text-sm leading-relaxed'
+                : 'leading-loose'
+            }`}
+          >
+            <div className={`flex flex-col ${item.isHighlighted ? 'w-[59px]' : 'w-[33px]'}`}>
+              <div className="pb-px w-full">{item.year}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+      <div className="flex relative flex-col justify-center px-20 pt-11 pb-10 mt-6 w-full max-md:px-5 max-md:max-w-full">
+        <figure className="flex overflow-hidden z-0 flex-col items-center self-center max-w-full w-[1296px]">
+          <div className="flex overflow-hidden flex-col w-full">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb8c6eb0114d3c75b969834b4b20bc38915dcf13c83f86ee62bf0e2a976814f2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+              alt="Timeline visual representation"
+              className="object-contain w-full aspect-[3.04] max-md:max-w-full"
+            />
+          </div>
+        </figure>
+      </div>
+      <div className="flex justify-center pt-1.5 mt-6 w-full text-center px-[491px] max-md:px-5 max-md:max-w-full">
+        <div className="flex flex-col items-center px-16 max-w-[619px] min-w-[240px] w-[460px] max-md:px-5">
+          <time className="flex flex-col pb-2.5 text-xl tracking-widest leading-none text-red-700 uppercase whitespace-nowrap w-[61px]">
+            <span className="flex flex-col w-full">
+              <span className="w-full">June</span>
+            </span>
+          </time>
+          <p className="flex flex-col w-full text-base font-light leading-loose text-white">
+            <span className="w-full">NEOM reveals Magna, its new coastal region</span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
 
 
 
