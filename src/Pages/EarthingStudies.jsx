@@ -263,11 +263,11 @@ const EarthingStudies = () => {
               </div>
             )}
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-              <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+              <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
               <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[60vh]">
-                <div className='flex items-center gap-x-10 circleChild'>
+                <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -279,7 +279,7 @@ const EarthingStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='flex gap-x-10'>
+                <div className='flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
                   {services.slice(9).map((service, index) => (
                     <ServiceItem
                       key={index + 9}
@@ -327,7 +327,7 @@ const EarthingStudies = () => {
                   <div key={index} className="flex flex-col flex-1 grow shrink-0 justify-center p-2.5 text-sm leading-none basis-0 min-h-[80px] w-fit">
                     <div className="flex items-center py-1 w-full max-w-[235px] min-h-[60px]">
                       <button className={`flex overflow-hidden justify-center items-center self-stretch px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
-                        <span className="self-stretch pb-px my-auto">
+                        <span className="self-stretch text-xs md:text-sm my-auto">
                           {button.text}
                         </span>
                       </button>
@@ -350,54 +350,54 @@ const EarthingStudies = () => {
 
 
 
-const ServicesSection = () => {
-  const services = [
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: 'Earthing studies' },
-    { text: 'Lightning Protection System Studies' },
-    { text: 'Power System Studies' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-  ];
-  const services1 = [
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: 'Power Quality &  Root cause Analysis' },
-    { text: 'Instrumentation Earthing' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-  ];
+// const ServicesSection = () => {
+//   const services = [
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: 'Earthing studies' },
+//     { text: 'Lightning Protection System Studies' },
+//     { text: 'Power System Studies' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//   ];
+//   const services1 = [
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: 'Power Quality &  Root cause Analysis' },
+//     { text: 'Instrumentation Earthing' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//   ];
 
-  return (
-    <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
-      <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
-        our services
-      </h2>
-      <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
-        {services.slice(0, 9).map((service, index) => (
-          <ServiceItem key={index} {...service} />
-        ))}
-      </div>
-      <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
-        {services1.slice(0).map((service, index) => (
-          <ServiceItem key={index + 5} {...service} />
-        ))}
-      </div>
-    </section>
-  );
-};
+//   return (
+//     <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
+//       <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+//         our services
+//       </h2>
+//       <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
+//         {services.slice(0, 9).map((service, index) => (
+//           <ServiceItem key={index} {...service} />
+//         ))}
+//       </div>
+//       <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
+//         {services1.slice(0).map((service, index) => (
+//           <ServiceItem key={index + 5} {...service} />
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
 
 const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
   return (
     <div
   ref={ref}
-  className={`flex w-[13rem] h-[13rem] rounded-full items-center justify-center p-[1.5%] transition-all duration-300 
+  className={`flex w-[9rem] h-[9rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
     ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
   onMouseEnter={() => {
     if (text !== "") {
@@ -410,7 +410,7 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
     }
   }}
 >
-  <span className="text-center">{text}</span>
+  <span className="text-center text-xs md:text-sm lg:text-base">{text}</span>
 </div>
 
   );
@@ -459,20 +459,40 @@ function CarouselSection({ components }) {
   }, []);
 
   return (
-    <section className="flex flex-col items-start px-5 pt-16 pb-32 bg-black">
+    <section className="flex xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
       <div className="flex flex-wrap gap-5 justify-between w-full">
-        <h2 className="text-3xl font-bold leading-none text-red-700 uppercase">
+        <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
           KEY COMPONENTS OF THE STUDY
         </h2>
-        <div className="flex gap-5 items-center">
-          {/* Left Arrow Button */}
-          <button onClick={handleCarouselClickLeft} className="p-2">
-            <img src="./path_to_left_arrow.png" alt="Left Arrow" className="w-6" />
-          </button>
-          {/* Right Arrow Button */}
-          <button onClick={handleCarouselClickRight} className="p-2">
-            <img src="./path_to_right_arrow.png" alt="Right Arrow" className="w-6" />
-          </button>
+        <div className="flex self-end flex-col min-h-[60px]">
+          <div className="flex gap-5 items-start w-full max-w-[140px]">
+            {/* Left Arrow Button */}
+            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
+              <button onClick={handleCarouselClickLeft}>
+                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/150914823e04aa0b72d10dfe3eaaf22d38b599636111c8b7ad6e80476980a940?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                    alt="Left Arrow"
+                    className="object-contain flex-1 w-6 aspect-square"
+                  />
+                </div>
+              </button>
+            </div>
+            {/* Right Arrow Button */}
+            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
+              <button onClick={handleCarouselClickRight}>
+                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                    alt="Right Arrow"
+                    className="object-contain flex-1 w-6 aspect-square"
+                  />
+                </div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -489,18 +509,21 @@ function CarouselSection({ components }) {
           {components.map((component) => (
             <div
               key={component.title}
-              className="flex overflow-hidden flex-col items-center sm:items-start justify-center w-full "
+              className="flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start justify-center w-full "
               style={{
                 flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
               }}
             >
-              <img src={component.imageSrc} alt={component.title} className="w-[3rem] h-auto" />
-              <h3 className="mt-4 text-red-700 font-normal text-lg text-start">{component.title}</h3>
-              <p className="mt-2 text-gray-400 text-center sm:text-start text-sm max-w-xs">{component.description}</p>
+              <img src={component.imageSrc} alt={component.title} className="object-contain w-[4rem] aspect-square" />
+              <h3 className="text-red-700 font-normal w-[50%] sm:w-[70%] lg:text-4xl sm:text-3xl text-2xl sm:text-start my-10 text-center">{component.title}</h3>
+              <p className=" text-gray-400 text-center w-[50%] sm:w-[70%] font-thin lg:w-[90%] lg:text-2xl sm:text-start text-xl max-w-screen-xl">{component.description}</p>
             </div>
+            
+            
           ))}
         </div>
       </div>
+
     </section>
   );
 }
