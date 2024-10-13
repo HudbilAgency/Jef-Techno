@@ -417,9 +417,11 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
 });
 
 
+
+
 function CarouselSection({ components }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3; // Number of visible cards at once
+  const [visibleCards, setVisibleCards] = useState(3); // Set default to 3 for larger screens
   const totalCards = components.length;
 
   // Function to handle the right click (move forward)
@@ -436,10 +438,35 @@ function CarouselSection({ components }) {
     });
   };
 
+  // Detect screen size to set the number of visible cards
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        // If screen width is less than or equal to 640px (mobile view)
+        setVisibleCards(1);
+      } else if (window.innerWidth <= 1024 && window.innerWidth > 640) {
+        // For medium screens
+        setVisibleCards(2);
+      } else {
+        // For larger screens
+        setVisibleCards(3);
+      }
+    };
+
+    // Set the initial number of visible cards based on screen size
+    handleResize();
+
+    // Add event listener for window resize
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup event listener on component unmount
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
+    <section className="flex lg:px-[100px] h-screen md:h-auto overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
       <div className="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full">
-        <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
+        <h2 className="self-start text-3xl lg:text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
           KEY COMPONENTS OF THE STUDY
         </h2>
         <div className="flex self-end flex-col min-h-[60px]">
@@ -488,19 +515,19 @@ function CarouselSection({ components }) {
           {components.map((component, index) => (
             <React.Fragment key={component.title}>
               <div
-                className="flex flex-col items-start  max-md:max-w-full"
+                className="flex flex-col items-start w-full max-md:max-w-full"
                 style={{
-                  flex: `0 0 ${31}%`, // Make sure each card takes up exactly 1/3 of the carousel
+                  flex: `0 0 ${100 / visibleCards}%`, // Adjust card size based on the number of visible cards
                 }}
               >
                 {/* Each card */}
                 <div className="">
                   <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
                 </div>
-                <h3 className="mt-8 xl:w-[75%] font-normal leading-none text-red-700">
+                <h3 className="mt-8 font-normal leading-none text-red-700 xl:w-[75%] lg:w-[90%] md:w-[80%] sm:w-[95%]">
                   {component.title}
                 </h3>
-                <p className="w-[45%] xl:w-[77%] lg:w-full mt-8 right-0 font-thin leading-8 text-gray-400 max-md:w-full">
+                <p className="mt-8 text-xl font-thin leading-8 text-gray-400 xl:w-[75%] lg:w-[90%] md:w-[80%] sm:w-[95%]">
                   {component.description}
                 </p>
               </div>
@@ -508,7 +535,7 @@ function CarouselSection({ components }) {
                 <img
                   src="./SerivePage/Line 14.png"
                   alt="LineImg"
-                  className="mr-16"
+                  className="mr-[1.2rem]"
                 />
               )}
             </React.Fragment>
@@ -518,6 +545,10 @@ function CarouselSection({ components }) {
     </section>
   );
 }
+
+
+
+
 
 
 
@@ -618,7 +649,7 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-screen lg:h-[71vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] h-[87vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
@@ -660,7 +691,7 @@ const VerticalCarousel = () => {
                       </ul>
 
 
-                    <h2 className="mt-6 lg:w-[80%] md:text-2xl lg:text-3xl ml-5 lg:ml-0 tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-4xl ml-5 lg:ml-0 tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-3.5 max-md:max-w-full">
@@ -672,7 +703,7 @@ const VerticalCarousel = () => {
                             <span className="text-2xl leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-xl md:text-xl lg:text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
+                            <p className="ml-4 text-xl md:text-lg xl:text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
