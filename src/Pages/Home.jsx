@@ -485,9 +485,9 @@ useGSAP(() => {
 
     {/*  Why choose JEF Section  */}
 
-    <main className="flex bg-fixed lg:px-[200px] overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
+    <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
-      <img className="h-32 my-auto" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+      <img className="h-32 my-auto hidden" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
       <FeatureSection/>
       </header>
       
@@ -854,43 +854,62 @@ const WhatWeDoSection = () => {
 
 function FeatureSection() {
   return (
-    <section className="overflow-hidden shrink-0 container self-center my-20 w-full h-screen max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
-      <div className=" text-3xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
-              Why choose JEF ?
+    <>
+       {/* For Large ScreenSizes */}
+
+        <section className="hidden lg:block overflow-hidden shrink-0 container self-center my-20 w-full h-screen max-w-[1472px] max-md:mt-10 max-md:max-w-full ">
+          <div className=" text-3xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
+                  Why choose JEF ?
+                </div>
+          <div className={`flex gap-5 max-md:flex-col`}>
+            <div className={` image1 flex  flex-col 2xl:w-[28%] w-[36%] max-md:ml-0 max-md:w-full`}>
+              <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
             </div>
-      <div className={`flex gap-5 max-md:flex-col`}>
-        <div className={` image1 flex  flex-col 2xl:w-[28%] w-[36%] max-md:ml-0 max-md:w-full`}>
-          <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
-        
-        <div className={` box flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
-          <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-            <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
-                  Smart digitalisation 
-            </h2>
-            <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
-            Our L&d centre
-            </h2>
-            <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-              <p className="description1 text-2xl mt-10 font-light leading-10 max-md:max-w-full">
-              Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
-              </p>
-              <p className='description2 -mt-[5%] text-2xl font-light leading-10 max-md:max-w-full'>
-              Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
-              </p>
-              
+            
+            <div className={` box flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
+              <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
+                <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
+                      Smart digitalisation 
+                </h2>
+                <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
+                Our L&d centre
+                </h2>
+                <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
+                  <p className="description1 text-2xl mt-10 font-light leading-10 max-md:max-w-full">
+                  Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
+                  </p>
+                  <p className='description2 -mt-[5%] text-2xl font-light leading-10 max-md:max-w-full'>
+                  Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
+                  </p>
+                  
+                </div>
+                <button className="flex gap-2.5 justify-center items-center self-start  px-6 mt-24 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
+                  <span className="self-stretch my-auto">Read More</span>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
+                  </button>
+              </div>
             </div>
-            <button className="flex gap-2.5 justify-center items-center self-start  px-6 mt-24 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
-               <span className="self-stretch my-auto">Read More</span>
-               <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
-              </button>
           </div>
-        </div>
-      </div>
-      <div className={`ml-auto mt-28 2xl:mr-[2rem] image2 flex 2xl:w-[28%] flex-col w-[32%] max-md:w-full`}>
-          <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
-    </section>
+          <div className={`ml-auto mt-28 2xl:mr-[2rem] image2 flex 2xl:w-[28%] flex-col w-[32%] max-md:w-full`}>
+              <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
+            </div>
+        </section>
+
+        {/* For Mobile View */}
+
+        <section className="lg:hidden h-auto">
+
+          <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-2xl">Why choose neom ?</h1>
+          <div className="flex gap-12  mt-5">
+            <img src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" />
+            <img src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" />
+          </div>
+          <div>
+            <h1 className="text-white -mt-10 font-medium text-center text-4xl uppercase">Smart digitalisation</h1>
+            <h3 className="text-white text-base mt-5 text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+          </div>
+        </section>
+    </>
   );
 }
 
