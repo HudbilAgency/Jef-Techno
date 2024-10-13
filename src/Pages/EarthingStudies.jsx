@@ -419,132 +419,95 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
 
 
 
+
+
 function CarouselSection({ components }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [visibleCards, setVisibleCards] = useState(3); // Set default to 3 for larger screens
+  const [visibleCards, setVisibleCards] = useState(1); // Default to 1 for mobile
   const totalCards = components.length;
 
   // Function to handle the right click (move forward)
   const handleCarouselClickRight = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex + visibleCards) % totalCards;
+      return (prevIndex + 1) % totalCards; // Move forward one card
     });
   };
 
   // Function to handle the left click (move backward)
   const handleCarouselClickLeft = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex - visibleCards + totalCards) % totalCards;
+      return (prevIndex - 1 + totalCards) % totalCards; // Move backward one card
     });
   };
 
-  // Detect screen size to set the number of visible cards
+  // Update the number of visible cards based on screen size
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 640) {
-        // If screen width is less than or equal to 640px (mobile view)
-        setVisibleCards(1);
-      } else if (window.innerWidth <= 1024 && window.innerWidth > 640) {
-        // For medium screens
-        setVisibleCards(2);
+        setVisibleCards(1); // Mobile
+      } else if (window.innerWidth <= 1024) {
+        setVisibleCards(2); // Medium
       } else {
-        // For larger screens
-        setVisibleCards(3);
+        setVisibleCards(3); // Large
       }
     };
 
-    // Set the initial number of visible cards based on screen size
-    handleResize();
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize); // Listen for resize events
 
-    // Add event listener for window resize
-    window.addEventListener('resize', handleResize);
-
-    // Cleanup event listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize); // Cleanup listener
   }, []);
 
   return (
-    <section className="flex lg:px-[100px] h-screen md:h-auto overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
-      <div className="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full">
-        <h2 className="self-start text-3xl lg:text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
+    <section className="flex flex-col items-start px-5 pt-16 pb-32 bg-black">
+      <div className="flex flex-wrap gap-5 justify-between w-full">
+        <h2 className="text-3xl font-bold leading-none text-red-700 uppercase">
           KEY COMPONENTS OF THE STUDY
         </h2>
-        <div className="flex self-end flex-col min-h-[60px]">
-          <div className="flex gap-5 items-start w-full max-w-[140px]">
-            {/* Left Arrow Button */}
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <button onClick={handleCarouselClickLeft}>
-                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/150914823e04aa0b72d10dfe3eaaf22d38b599636111c8b7ad6e80476980a940?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    alt="Left Arrow"
-                    className="object-contain flex-1 w-6 aspect-square"
-                  />
-                </div>
-              </button>
-            </div>
-            {/* Right Arrow Button */}
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <button onClick={handleCarouselClickRight}>
-                <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    alt="Right Arrow"
-                    className="object-contain flex-1 w-6 aspect-square"
-                  />
-                </div>
-              </button>
-            </div>
-          </div>
+        <div className="flex gap-5 items-center">
+          {/* Left Arrow Button */}
+          <button onClick={handleCarouselClickLeft} className="p-2">
+            <img src="./path_to_left_arrow.png" alt="Left Arrow" className="w-6" />
+          </button>
+          {/* Right Arrow Button */}
+          <button onClick={handleCarouselClickRight} className="p-2">
+            <img src="./path_to_right_arrow.png" alt="Right Arrow" className="w-6" />
+          </button>
         </div>
       </div>
 
       {/* Carousel Section */}
-      <div className="flex justify-between items-center mt-36 w-full text-2xl max-md:mt-10 overflow-hidden">
+      <div className="flex justify-center items-center mt-10 w-full overflow-hidden">
         {/* Carousel wrapper */}
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            // Translate based on the currentIndex and the number of visible cards
-            transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            width: `${(totalCards / visibleCards) * 100}%`, // Total width based on total cards and visible cards
+            transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`, // Move based on currentIndex and visibleCards
+            width: `${totalCards * (100 / visibleCards)}%`, // Total width based on total cards and visible cards
           }}
         >
-          {components.map((component, index) => (
-            <React.Fragment key={component.title}>
-              <div
-                className="flex flex-col items-start w-full max-md:max-w-full"
-                style={{
-                  flex: `0 0 ${100 / visibleCards}%`, // Adjust card size based on the number of visible cards
-                }}
-              >
-                {/* Each card */}
-                <div className="">
-                  <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
-                </div>
-                <h3 className="mt-8 font-normal leading-none text-red-700 xl:w-[75%] lg:w-[90%] md:w-[80%] sm:w-[95%]">
-                  {component.title}
-                </h3>
-                <p className="mt-8 text-xl font-thin leading-8 text-gray-400 xl:w-[75%] lg:w-[90%] md:w-[80%] sm:w-[95%]">
-                  {component.description}
-                </p>
-              </div>
-              {index < components.length - 1 && (
-                <img
-                  src="./SerivePage/Line 14.png"
-                  alt="LineImg"
-                  className="mr-[1.2rem]"
-                />
-              )}
-            </React.Fragment>
+          {components.map((component) => (
+            <div
+              key={component.title}
+              className="flex overflow-hidden flex-col items-center sm:items-start justify-center w-full "
+              style={{
+                flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
+              }}
+            >
+              <img src={component.imageSrc} alt={component.title} className="w-[3rem] h-auto" />
+              <h3 className="mt-4 text-red-700 font-normal text-lg text-start">{component.title}</h3>
+              <p className="mt-2 text-gray-400 text-center sm:text-start text-sm max-w-xs">{component.description}</p>
+            </div>
           ))}
         </div>
       </div>
     </section>
   );
 }
+
+
+
+
 
 
 
