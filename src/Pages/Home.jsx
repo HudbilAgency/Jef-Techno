@@ -205,8 +205,6 @@ function Home() {
 
 {/*Gsap Annimation*/}
 
-
-
 useGSAP(() => {
   let mm = gsap.matchMedia();
 
@@ -217,14 +215,21 @@ useGSAP(() => {
   }, (context) => {
     const { largeScreen, mediumScreen, smallScreen } = context.conditions;
 
-    // Initialize the timeline
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".container",
-        toggleActions: "play none none reverse",
         start: "0% 10%",
         end: "center 35%",
         pin: true,
+        toggleActions: "play none none reverse",
+        onEnter: () => {
+          tl.play();
+          disableScroll();
+        },
+        onLeaveBack: () => {
+          tl.pause(0);
+          enableScroll();
+        }
       }
     });
 
@@ -248,15 +253,27 @@ useGSAP(() => {
 
     // Small Screen Animation
     } else if (smallScreen) {
-      tl.fromTo(".box2", { opacity: 0.5,width:"50%",marginTop:"5%" },{opacity:1,x:"-=108%",width:"60%",marginTop:0}, "display")
-      tl.fromTo(".image1", { opacity: 1,width:"60%",marginTop:"0%" },{opacity:.5,x:"-=108%",width:"50%",paddingTop:"5%"}, "display")
-        tl.to(".title1", { opacity: 0 }, "display")
-        tl.to(".description1", { opacity: 0 }, "display")
-        tl.from(".title2", { opacity: 0, y: "+=100%" }, "display")
-        tl.from(".description2", { opacity: 0, y: "+=100%" }, "display");
+      tl.fromTo(".box2", { opacity: 0.5, width: "50%", marginTop: "5%" }, { opacity: 1, x: "-=108%", width: "60%", marginTop: 0 }, "display")
+        .fromTo(".image1", { opacity: 1, width: "60%", marginTop: "0%" }, { opacity: 0.5, x: "-=108%", width: "50%", paddingTop: "5%" }, "display")
+        .to(".title1", { opacity: 0 }, "display")
+        .to(".description1", { opacity: 0 }, "display")
+        .from(".title2", { opacity: 0, y: "+=100%" }, "display")
+        .from(".description2", { opacity: 0, y: "+=100%" }, "display");
     }
   });
+
+  function disableScroll() {
+    document.body.style.overflow = 'hidden'; 
+    setTimeout(() => {
+      enableScroll(); 
+    }, 2000);
+  }
+
+  function enableScroll() {
+    document.body.style.overflow = ''; 
+  }
 });
+
 
 
 
