@@ -205,76 +205,39 @@ function Home() {
 
 {/*Gsap Annimation*/}
 
+
 useGSAP(() => {
   let mm = gsap.matchMedia();
 
   mm.add({
+    // For larger screens (3072 x 1920)
     largeScreen: "(min-width: 1920px)",
-    mediumScreen: "(min-width: 426px) and (max-width: 1919px)",
-    smallScreen: "(max-width: 426px)"
+    // For smaller screens (1920 x 1080)
+    smallScreen: "(max-width: 1919px)"
   }, (context) => {
-    const { largeScreen, mediumScreen, smallScreen } = context.conditions;
+    let { largeScreen, smallScreen } = context.conditions;
 
     let tl = gsap.timeline({
       scrollTrigger: {
         trigger: ".container",
-        start: "0% 10%",
-        end: "center 35%",
-        pin: true,
         toggleActions: "play none none reverse",
-        onEnter: () => {
-          tl.play();
-          disableScroll();
-        },
-        onLeaveBack: () => {
-          tl.pause(0);
-          enableScroll();
-        }
+        start: "10% 10%",
+        end: "center 35%",
+        pin: true
       }
     });
 
-    // Large Screen Animation
-    if (largeScreen) {
-      tl.to(".title1", { x: 50, opacity: 0 }, "display")
-        .to(".description1", { y: 20, opacity: 0 }, "display")
-        .fromTo(".title2", { x: 30, opacity: 0 }, { x: 0, opacity: 1 })
-        .fromTo(".description2", { y: 10, opacity: 0 }, { y: 0, opacity: 1 })
-        .to(".image1", { x: 750, y: -750 }, "display")
-        .to(".image2", { x: -1020, y: -580 }, "display");
+    // Text Animation
+    tl.to(".title1", { x: largeScreen ? 50 : 20, opacity: 0, scrub: true }, "display")
+      .to(".description1", { y: largeScreen ? 20 : 10, opacity: 0 }, "display")
+      .fromTo(".title2", { x: largeScreen ? 30 : 15, opacity: 0 }, { x: 0, opacity: 1 })
+      .fromTo(".description2", { y: largeScreen ? 10 : 5, opacity: 0 }, { y: 0, opacity: 1 });
 
-    // Medium Screen Animation
-    } else if (mediumScreen) {
-      tl.to(".title1", { x: 30, opacity: 0 }, "display")
-        .to(".description1", { y: 15, opacity: 0 }, "display")
-        .fromTo(".title2", { x: 20, opacity: 0 }, { x: 0, opacity: 1 })
-        .fromTo(".description2", { y: 5, opacity: 0 }, { y: 0, opacity: 1 })
-        .to(".image1", { x: 400, y: -500 }, "display")
-        .to(".image2", { x: -910, y: -400 }, "display");
-
-    // Small Screen Animation
-    } else if (smallScreen) {
-      tl.fromTo(".box2", { opacity: 0.5, width: "50%", marginTop: "5%" }, { opacity: 1, x: "-=108%", width: "60%", marginTop: 0 }, "display")
-        .fromTo(".image1", { opacity: 1, width: "60%", marginTop: "0%" }, { opacity: 0.5, x: "-=108%", width: "50%", paddingTop: "5%" }, "display")
-        .to(".title1", { opacity: 0 }, "display")
-        .to(".description1", { opacity: 0 }, "display")
-        .from(".title2", { opacity: 0, y: "+=100%" }, "display")
-        .from(".description2", { opacity: 0, y: "+=100%" }, "display");
-    }
+    // Image Animation
+    tl.to(".image1", { x: largeScreen ? 750 : 400, y: largeScreen ? -750 : -800 }, "display")
+      .to(".image2", { x: largeScreen ? -1020 : -910, y: largeScreen ? -580 : -580 }, "display");
   });
-
-  function disableScroll() {
-    document.body.style.overflow = 'hidden'; 
-    setTimeout(() => {
-      enableScroll(); 
-    }, 2000);
-  }
-
-  function enableScroll() {
-    document.body.style.overflow = ''; 
-  }
 });
-
-
 
 
   const [language, setLanguage] = useState('English');
@@ -522,16 +485,13 @@ useGSAP(() => {
 
     {/*  Why choose JEF Section  */}
 
-   
- <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900  ">
-      <header className=" flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
+    <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
+      <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
       <img className="h-32 my-auto hidden" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
       <FeatureSection/>
       </header>
       
     </main>
-
-
 
 
 
@@ -931,32 +891,23 @@ function FeatureSection() {
             </div>
           </div>
           <div className={`ml-auto mt-28 2xl:mr-[2rem] image2 flex 2xl:w-[28%] flex-col w-[32%] max-md:w-full`}>
-              <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className=  "object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
+              <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className=  "object-contain w-full aspect-[0.8] max-md:max-w-full" alt="" />
             </div>
         </section>
 
         {/* For Mobile View */}
-        <section className="lg:hidden h-screen w-[110vw] ">
 
-<h1 className="uppercase tracking-widest ms-9 mt-[1rem] text-red-600 text-lg">
-    Why choose neom ?
-  </h1>
-  <div className="relative">
-    
-  <div className="mt-10 box1">
-        <img className="image1 w-[60%] " src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" />
-        <h1 className=" title1 z-50 -mt-16 w-[60%] text-white font-medium text-center text-4xl uppercase absolute">Smart digitalisation</h1>
-        <h3 className="description1 text-white text-base mt-9 text-center  font-extralight -ms-[8%] z-50 w-[75%]">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+        <section className="lg:hidden h-auto">
 
-        <h1 className="title2 z-50 -mt-[34%]  w-72 h-fit text-white absolute font-medium text-center text-4xl uppercase">Our L&d centre</h1>
-        <h3 className="description2 z-50 text-white text-base text-center font-extralight absolute w-[83%] -ms-[9%] -mt-[10%]">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3> 
-
-      </div>
-      <div className="box2  absolute top-0 ms-[65%]">
-      <img className="" src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" />
-        
-      </div>
-  </div>
+          <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-2xl">Why choose neom ?</h1>
+          <div className="flex gap-12  mt-5">
+            <img src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" />
+            <img src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" />
+          </div>
+          <div>
+            <h1 className="text-white -mt-10 font-medium text-center text-4xl uppercase">Smart digitalisation</h1>
+            <h3 className="text-white text-base mt-5 text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+          </div>
         </section>
     </>
   );
