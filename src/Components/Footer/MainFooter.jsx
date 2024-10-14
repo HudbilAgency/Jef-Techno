@@ -82,12 +82,12 @@ function Footer() {
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
-          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-sm lg:text-xl font-light basis-auto grow-0 tracking-widest">
+          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-sm lg:text-base xl:text-xl font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms of Use</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs lg:text-xl mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs xl:text-xl lg:text-base mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
               <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-5 lg:h-8' />
           </div>   
@@ -128,12 +128,51 @@ function Section({ title, items }) {
 
 const FAQComponent = () => {
   const [faqData, setFaqData] = useState([
-    { question: "ABOUT", content: "NEOM is a region in the northwestern Saudi Arabia, focused on innovation and sustainability.", isOpen: false },
-    { question: "Services", content: "NEOM is expected to be completed in multiple phases, with various sectors becoming operational in the coming years.", isOpen: false },
-    { question: "Locations", content: "Yes, there are already individuals and companies operating in NEOM as part of the initial development.", isOpen: false },
-    { question: "Our Business", content: "You can start a business by following the guidelines provided on the NEOM official website, which outlines investment opportunities.", isOpen: false },
-    { question: "Careers", content: "NEOM is funded through a combination of government investment and private sector participation.", isOpen: false },
-  
+    { 
+      question: "ABOUT", 
+      content: [
+        { label: 'What is JEF', path: '' },
+        { label: 'JEF leadership team', path: '' },
+        { label: 'JEF Smart Digitalization', path: '' },
+        { label: 'JEF L & D Centre', path: '' }
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Services", 
+      content: [
+        { label: 'Power System Studies', path: '' },
+        { label: 'Power Quality Studies', path: '' },
+        { label: 'Earthing Studies', path: '' },
+        { label: 'LPS System Studies', path: '' },
+        { label: 'Instrumentation Studies', path: '' }
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Locations", 
+      content: [
+        { label: 'Mena', path: '' },
+        { label: 'Europe', path: '' },
+        { label: 'Asian', path: '' },
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Our Business", 
+      content: [
+        { label: 'Sectors', path: '' },
+        { label: 'Partners', path: '' },
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Careers", 
+      content: [
+        { label: 'Working at JEF', path: '' },
+      ], 
+      isOpen: false 
+    },
   ]);
 
   const toggleFAQ = (index) => {
@@ -164,7 +203,7 @@ const FAQComponent = () => {
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
-          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold text-2xl md:text-sm tracking-wider uppercase text-red-600">
+          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold md:text-3xl text-2xl tracking-wider uppercase text-red-600">
             {question}
           </h2>
           <div className="flex flex-col items-start self-stretch my-auto min-h-[40px]">
@@ -188,11 +227,24 @@ const FAQComponent = () => {
         </div>
         <div
           ref={contentRef}
-          className="overflow-hidden transition-all duration-300 ease-in-out"
+          className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
           style={{ maxHeight: `${height}px` }}
         >
           <div className="px-5 py-5">
-            <p className='text-gray-500'>{content}</p>
+            {/* Render content based on whether it's an array or a string */}
+            {Array.isArray(content) ? (
+              <ul>
+                {content.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <a href={item.path} className="text-stone-300 hover:underline">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className='text-gray-500'>{content}</p>
+            )}
           </div>
         </div>
       </div>
@@ -200,15 +252,13 @@ const FAQComponent = () => {
   };
 
   return (
-    <section
-      className="flex overflow-hidden relative flex-col"
-    >
+    <section className="flex overflow-hidden relative flex-col">
       <div className="flex absolute inset-0 z-0 flex-col py-0.5 w-full max-md:max-w-full"></div>
       <div className="flex z-0 flex-col self-center w-[95%] xl:w-[70%] lg:w-[80%]">
         <h1 className="pb-px w-full text-4xl leading-loose uppercase whitespace-nowrap text-zinc-800 tracking-[3.36px] max-md:max-w-full">
           FAQ
         </h1>
-        <div className="flex max-md:flex-col justify-between items-start w-full  max-md:max-w-full">
+        <div className="flex max-md:flex-col justify-between items-start w-full max-md:max-w-full">
           <div className="flex flex-col pt-5 min-w-[240px] w-full lg:w-[48%] max-md:max-w-full">
             {faqData.slice(0, 5).map((item, index) => (
               <FAQItem
@@ -225,6 +275,7 @@ const FAQComponent = () => {
     </section>
   );
 };
+
 
 
 export default MainFooter;

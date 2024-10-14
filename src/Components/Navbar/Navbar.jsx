@@ -279,7 +279,7 @@ const navigationItems = [
 
 function AboutSection() {
   return (
-    <section className="flex overflow-hidden flex-col items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+    <section className="flex overflow-hidden flex-col h-[80vh] items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
       <div className="ml-3.5 max-w-full w-[994px]">
         <div className="flex gap-5 max-md:flex-col">
           <nav className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">

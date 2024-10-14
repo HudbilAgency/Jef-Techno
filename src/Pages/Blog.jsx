@@ -91,13 +91,13 @@ const Blog = () => {
     < Navbar/>
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">
-        <div className="flex relative flex-col pb-32 w-full min-h-[1112px] max-md:pb-24 max-md:max-w-full">
+        <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
           <img loading="lazy" src="./BlogImg/BlogsMainImg.png" alt="MainImg" className="object-cover h-screen absolute inset-0 size-full" />
-          <div className="flex relative flex-col mb-0 ml-40 max-w-full mt-[615px] w-[349px] max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
-            <h1 className="self-start text-7xl font-bold tracking-wider text-white max-md:text-4xl">BLOGS</h1>
-            <div className="flex gap-6 items-center mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <img loading="lazy" src="./PlayButtonImg.png" alt="PlayButtonImg" className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square" />
-              <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] min-w-[240px] rounded-[50px] w-[261px]">
+          <div className="flex relative flex-col mb-0 max-w-full inset-y-2/3 lg:inset-x-40  max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
+            <h1 className="self-start xl:text-7xl lg:text-6xl text-6xl font-bold tracking-wider text-white">BLOGS</h1>
+            <div className="flex gap-2 md:gap-4 lg:gap-6 items-center mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+              {/* <img loading="lazy" src="./PlayButtonImg.png" alt="PlayButtonImg" className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square" /> */}
+              <button className="gap-1.5 self-stretch px-5 py-2 md:px-10 md:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px]">
                 Get in touch
               </button>
             </div>
