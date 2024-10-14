@@ -245,9 +245,9 @@ useGSAP(() => {
     if (smallScreen) {
       // Image and text animation for mobile view
       tl.to(".SmImg1", { x: "-150vw" }, "display")
-        .to(".SmImg2", { x: "-83vw" }, "display")
+        .to(".SmImg2", { x: "-85vw" }, "display")
         .to(".textSM1", { y: "50vh" }, "display")
-        .to(".textSM2", { y: "-42vh" }, "display");
+        .to(".textSM2", { y: "-48vh" }, "display");
     }
   });
 });
@@ -713,7 +713,7 @@ const WhatWeDoSection = () => {
 
           {/* Left Section */}
           <section className="flex flex-wrap lg:w-[50%] justify-between">
-            <div className="flex tracking-[3px] flex-col self-start text-3xl font-bold">
+            <div className="flex tracking-[3px] flex-col self-start text-2xl lg:text-3xl font-bold">
               <h1 className="text-white uppercase ">what we do</h1>
               <div className="shrink-0 border border-zinc-400 thin-border" />
             </div>
@@ -755,28 +755,28 @@ const WhatWeDoSection = () => {
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
-                            <h3 className="text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
-                            <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
+                            <h3 className="text-xl lg:text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
+                            <div className="flex flex-col items-start self-start mt-5 text-xl lg:text-2xl text-white whitespace-nowrap">
                               <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
-                              <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
+                              <h4 className="self-stretch my-5 text-xl lg:text-2xl font-bold text-center text-green-600">gcc</h4>
                               <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
                             </div>
                           </div>
                         </div>
                         <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
-                            <h3 className="text-2xl font-bold text-start text-green-600">INDIA</h3>
-                            <p className="self-start mt-5 text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                            <h3 className="text-xl lg:text-2xl font-bold text-start text-green-600">INDIA</h3>
+                            <p className="self-start mt-5 text-xl lg:text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div>
-                      <h3 className="mt-10 text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                      <p className="self-stretch mt-6 w-[80%] text-xl h-[23vh] leading-9 text-white ">
+                      <h3 className="mt-10 text-xl lg:text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
+                      <p className="self-stretch mt-6 w-[80%] text-lg lg:text-xl h-[23vh] leading-9 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-xl mt-16 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:h-14 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-xl mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:h-14 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
@@ -923,7 +923,7 @@ function FeatureSection() {
             <h3 className=" text-white text-lg mt-5 text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
           </div>
           <div className="textSM2 relative">
-            <h1 className=" text-white mt-20 font-medium text-center text-4xl uppercase">Our L&d <br />centre</h1>
+            <h1 className=" text-white mt-32 font-medium text-center text-4xl uppercase">Our L&d <br />centre</h1>
             <h3 className=" text-white text-lg mt-5 text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
           </div>
         </section>
