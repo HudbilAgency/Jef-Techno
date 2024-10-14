@@ -240,7 +240,7 @@ const Navbar = () => {
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className="self-stretch my-auto text-white text-3xl font-medium tracking-[2px]"
+                    className="self-stretch my-auto text-white text-3xl  font-medium tracking-[2px]"
                     activeClassName="active" // Optional: styling for active link
                   >
                     {item.label}
@@ -248,7 +248,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className="self-stretch my-auto text-white text-3xl font-medium tracking-[2px]"
+                    className="self-stretch my-auto text-white  text-3xl font-medium tracking-[2px]"
                   >
                     {item.label}
                   </button>

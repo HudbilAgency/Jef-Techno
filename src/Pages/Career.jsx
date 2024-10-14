@@ -98,7 +98,7 @@ const Career = () => {
     <>
     < Navbar />
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
-        <section className="flex  h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
+        <section className="lg:flex hidden h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
         <img loading="lazy" src="./CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
         <div className="flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
           <div className="flex flex-col items-center w-full  max-md:max-w-full">
@@ -190,7 +190,7 @@ const Career = () => {
         </div> */}
       </section>
       <section className="flex flex-col self-center py-16 mt-24 w-full max-w-[1440px] max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">
+        <div className="flex p-4 flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">
           <div className="flex flex-col min-w-[240px] text-stone-900 max-md:max-w-full">
             <h2 className="self-start text-5xl font-bold text-center max-md:max-w-full max-md:text-4xl">
               Recent Jobs Available
@@ -209,7 +209,7 @@ const Career = () => {
                   <div className="px-2 py-2.5 rounded-lg bg-red-700 bg-opacity-10 min-h-[28px]">
                     {job.timeAgo}
                   </div>
-                  <img loading="lazy" src="http://b.io/ext_50-" alt="" className="object-contain shrink-0 w-6 aspect-square" />
+                  <img loading="lazy" src="./CareerPage/BookmarkLogo.png" alt="" className="object-contain shrink-0 w-6 aspect-square" />
                 </div>
                 <div className="flex flex-wrap gap-5 items-start self-start mt-6 text-stone-900 max-md:max-w-full">
                   <img loading="lazy" src={job.logo} alt={`${job.company} logo`} className="object-contain shrink-0 w-10 aspect-square" />
@@ -222,19 +222,19 @@ const Career = () => {
               <div className="flex flex-wrap gap-10 justify-between items-end mt-7 w-full text-base font-semibold max-md:max-w-full">
                 <div className="flex flex-wrap gap-6 items-end text-gray-500 min-w-[240px] max-md:max-w-full">
                   <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="http://b.io/ext_51-" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="./CareerPage/Redbriefcase.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.category}</div>
                   </div>
                   <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="http://b.io/ext_52-" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="./CareerPage/clock.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.type}</div>
                   </div>
                   <div className="flex gap-3 items-center whitespace-nowrap">
-                    <img loading="lazy" src="http://b.io/ext_53-" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="./CareerPage/Wallet.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.salary}</div>
                   </div>
                   <div className="flex gap-3 items-center">
-                    <img loading="lazy" src="http://b.io/ext_54-" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+                    <img loading="lazy" src="./CareerPage/map-pin.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.location}</div>
                   </div>
                 </div>

@@ -131,7 +131,7 @@ const FAQComponent = () => {
     { 
       question: "ABOUT", 
       content: [
-        { label: 'What is JEF', path: '' },
+        { label: 'What is JEF', path: '/AboutUs' },
         { label: 'JEF leadership team', path: '' },
         { label: 'JEF Smart Digitalization', path: '' },
         { label: 'JEF L & D Centre', path: '' }
@@ -141,10 +141,10 @@ const FAQComponent = () => {
     { 
       question: "Services", 
       content: [
-        { label: 'Power System Studies', path: '' },
-        { label: 'Power Quality Studies', path: '' },
-        { label: 'Earthing Studies', path: '' },
-        { label: 'LPS System Studies', path: '' },
+        { label: 'Power System Studies', path: '/PowerSystemStudies' },
+        { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
+        { label: 'Earthing Studies', path: '/EarthingStudies' },
+        { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
         { label: 'Instrumentation Studies', path: '' }
       ], 
       isOpen: false 
@@ -169,7 +169,7 @@ const FAQComponent = () => {
     { 
       question: "Careers", 
       content: [
-        { label: 'Working at JEF', path: '' },
+        { label: 'Working at JEF', path: '/Career' },
       ], 
       isOpen: false 
     },

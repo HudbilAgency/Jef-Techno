@@ -103,7 +103,7 @@ const carouselData = [
 //button data for hover effect in What We do Section
 
 const buttonData = [
-  { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:"mt-[240px]",marginLeft:"ms-[0px]" , 
+  { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies',marginTop:" lg:mt-[240px]",marginLeft:"lg:ms-[0px]" , 
     title : "Grounding studies projects completed",
     path: '/EarthingStudies',
     totalProjects: 165, 
@@ -111,7 +111,7 @@ const buttonData = [
     gcc:42,
     description:"Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."
    },
-  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"mt-[150px]",marginLeft:"ms-[0px]",
+  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"lg:mt-[150px]",marginLeft:"lg:ms-[0px]",
     title : "Lightning Protection Studies Projects Completed",
     path: '/LightningProtectionStudies',
     totalProjects: 233, 
@@ -119,7 +119,7 @@ const buttonData = [
     gcc:38,
     description:"The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets."
   },
-  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"mt-[50px]",marginLeft:"ms-[0px]", 
+  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"lg:mt-[50px]",marginLeft:"lg:ms-[0px]", 
     title : "Power System Studies Projects Completed",
     path: '/PowerSystemStudies',
     totalProjects: 74, 
@@ -127,14 +127,14 @@ const buttonData = [
     gcc:16,
     description:"A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety."
     },
-  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"-mt-[70px]",marginLeft:"ms-[130px]", 
+  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"lg:-mt-[70px]",marginLeft:"lg:ms-[130px]", 
     title : "Power Quality & Root Cause Studies Projects Completed",
     path: '/PowerQualityStudies',
     totalProjects: 66, 
     indiaProjects: 36,
     gcc:30,
     description:"A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies."},
-  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing',marginTop:"-mt-[160px]",marginLeft:"ms-[20px]", 
+  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing',marginTop:"lg:-mt-[160px]",marginLeft:"lg:ms-[20px]", 
     title : "Instrumentation Earthing Studies Projects Completed",
     totalProjects: 32, 
     indiaProjects: 24,
@@ -423,7 +423,7 @@ useGSAP(() => {
     {/*  What we do Section */}
 
     <section>
-     < WhatWeDoSection />
+    < WhatWeDoSection />
 
     </section>
 
@@ -684,7 +684,7 @@ const WhatWeDoSection = () => {
   
   
   return (
-    <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
+    <section className="flex lg:h-screen overflow-hidden flex-col bg-zinc-800">
        {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
           <video
@@ -698,22 +698,9 @@ const WhatWeDoSection = () => {
           </video>
         </div>
       )}
-{/* 
-      <div className="w-[200px] h-full mx-auto perspective-[1000px] backface-visibility-hidden bg-white">
-            <button className="relative top-1/2 left-1/2 -ml-[50px] -mt-[50px] w-[100px] h-[100px] text-lg font-light text-center tracking-tight leading-[100px] text-white uppercase rounded-full bg-[#5a99d4] cursor-pointer animate-[pulse_1.5s_infinite] hover:animate-none">
-              Pulse
-            </button>
-          </div> */}
 
-{/* <div className="flex justify-center items-center h-screen">
-            <div className="bg-blue-500 rounded-full w-48 h-48 flex justify-center items-center">
-                <div className="bg-red-500 rounded-full w-44 h-44"></div>
-            </div>
-        </div> */}
-
-      {/* Section Content */}
       {showSection && (
-       <section className="flex h-screen overflow-hidden flex-col bg-zinc-800 ">
+       <section className="flex h-auto lg:h-screen overflow-hidden flex-col bg-zinc-800 ">
        <div className="flex relative flex-col px-20 pt-12 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
          <img
            loading="lazy"
@@ -721,77 +708,85 @@ const WhatWeDoSection = () => {
            alt=""
            className="transition-all duration-5900 object-cover absolute inset-0 size-full"
          />
-         <div className="flex 2xl:mx-[150px] relative flex-col mb-0  w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
-           <header className="flex flex-wrap  justify-between text-white uppercase tracking-[3px] max-md:max-w-full">
-             <div className="flex flex-col self-start text-3xl font-bold">
-               <h1 className="">what we do</h1>
-               <div className="shrink-0 mt-5 border border-zinc-400 thin-border" />
-             </div>
-             <div className="flex flex-col text-3xl font-medium leading-10 max-md:max-w-full">
-               <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
-               <h2 className="mt-8 w-[35rem] max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
-             </div>
-           </header>
-           <div className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
-             <div className="flex gap-5 max-md:flex-col">
-               <div className="flex flex-row w-6/12 max-md:ml-0 max-md:w-full">
-                 <div className="grow max-md:mt-10 max-md:max-w-full ">
-                   <div className="flex flex-wrap gap-5 h-full max-md:flex-col">
-                        {buttonData.map((button, index) => (
-                          <Link
-                            key={index}
-                            to={button.path}
-                            className={`inline-flex`} // Ensures the link behaves like a flex container
-                          >
-                            <button
-                              className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-44 h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
-                              onMouseEnter={() => setHoveredButtonIndex(index)}
-                              onMouseLeave={() => setHoveredButtonIndex(null)}
-                            >
-                              <span className="text-white text-sm uppercase">{button.text}</span>
-                            </button>
-                          </Link>
-                        ))}
 
-                   </div>
-                 </div>
-               </div>
-               <div className="flex flex-col ml-[13rem] w-5/12 max-md:ml-0 max-md:w-full">
-                 <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
-                   <div className="max-w-full w-[413px]">
-                     <div className="flex gap-5 max-md:flex-col">
-                       <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
-                         <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
-                           <h3 className="text-2xl font-bold items-start self-start text-green-600">Total  Projects</h3>
-                           <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
-                             <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165 }</p>
-                             <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
-                             <p>{buttonData[hoveredButtonIndex]?.gcc || 42 }</p>
-                           </div>
-                         </div>
-                       </div>
-                       <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                         <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
-                           <h3 className="text-2xl font-bold text-center text-green-600">INDIA</h3>
-                           <p className="self-start mt-5 text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123 }</p>
-                         </div>
-                       </div>
-                     </div>
-                   </div>
-                   <div>
-                   <h3 className="mt-10 text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">cAPACITY | UNIT | SQM AREA</h3>
-                   <p className="self-stretch  mt-6 text-xl h-44 leading-9 text-white max-md:mt-10 max-md:max-w-full">
-                   {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation." }
-                   </p>
-                   <button className="gap-2.5 self-stretch px-2.5 py-2 mt-14 text-2xl text-red-700 uppercase bg-white min-h-[42px] h-14 rounded-[50px] w-[240px] max-md:mt-10">
-                     Read more
-                   </button>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
+          <div className="flex flex-col md:flex-row 2xl:w-[90%] mx-auto relative mb-0 w-full max-md:mb-2.5 max-md:max-w-full justify-between">
+
+          {/* Left Section */}
+          <section className="flex flex-wrap lg:w-[50%] justify-between">
+            <div className="flex tracking-[3px] flex-col self-start text-3xl font-bold">
+              <h1 className="text-white uppercase ">what we do</h1>
+              <div className="shrink-0 border border-zinc-400 thin-border" />
+            </div>
+            <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
+              <div className="grow max-md:max-w-full">
+                <div className="hidden lg:flex flex-wrap gap-5 h-full max-md:flex-col">
+                  {buttonData.map((button, index) => (
+                    <Link key={index} to={button.path} className={`inline-flex`}>
+                      <button
+                        className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-32 h-32 xl:w-44 xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                        onMouseEnter={() => setHoveredButtonIndex(index)}
+                        onMouseLeave={() => setHoveredButtonIndex(null)}
+                      >
+                        <span className="text-white text-sm uppercase">{button.text}</span>
+                      </button>
+                    </Link>
+                  ))}
+                </div>
+                <div className="lg:hidden ">
+                  <img src="./HomePageImg/WhatWeDoSection/PhoneServices.png" alt="PhoneServices" />
+                </div>
+
+
+              </div>
+            </div>
+          </section>
+
+          {/* Right Section */}
+          <section className="lg:w-[40%] flex flex-col justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
+            <div className="flex flex-col lg:w-[80%] text-3xl font-medium leading-10 max-md:max-w-full">
+              <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
+              <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
+            </div>
+            <div className="lg:mt-12 w-full max-md:mt-10 max-md:max-w-full">
+              <div className="flex gap-5 max-md:flex-col">
+                <div className="flex flex-col max-md:ml-0 max-md:w-full">
+                  <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
+                    <div className="max-w-full w-[80%]">
+                      <div className="flex gap-5 max-md:flex-col">
+                        <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
+                          <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
+                            <h3 className="text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
+                            <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
+                              <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
+                              <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
+                              <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
+                          <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
+                            <h3 className="text-2xl font-bold text-start text-green-600">INDIA</h3>
+                            <p className="self-start mt-5 text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="mt-10 text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
+                      <p className="self-stretch mt-6 w-[80%] text-xl h-[23vh] leading-9 text-white ">
+                        {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
+                      </p>
+                      <button className="gap-2.5 text-xl mt-16 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:h-14 rounded-[50px] lg:px-14">
+                        Read more
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          </div>
+
        </div>
      </section>
       )}
