@@ -247,7 +247,7 @@ useGSAP(() => {
       tl.to(".SmImg1", { x: "-150vw" }, "display")
         .to(".SmImg2", { x: "-83vw" }, "display")
         .to(".textSM1", { y: "50vh" }, "display")
-        .to(".textSM2", { y: "-40vh" }, "display");
+        .to(".textSM2", { y: "-42vh" }, "display");
     }
   });
 });
@@ -422,7 +422,10 @@ useGSAP(() => {
 
     {/*  What we do Section */}
 
-    < WhatWeDoSection />
+    <section>
+     < WhatWeDoSection />
+
+    </section>
 
 
 
@@ -542,21 +545,22 @@ useGSAP(() => {
 
     <main className="flex overflow-hidden flex-col">
       <section className="overflow-hidden  relative  w-full">
-        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="object-cover absolute inset-0 size-full" />
-        <div className="flex gap-5 max-md:flex-col">
+        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="hidden lg:block object-cover absolute inset-0 size-full" />
+        <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full"/>
+        <div className="flex gap-5 p-4 max-md:flex-col">
           <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
             <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
               <h1 className="text-6xl font-bold uppercase tracking-[3px] max-md:max-w-full max-md:text-4xl">
                 Founder message
               </h1>
-              <p className="self-stretch my-20 w-[45vw] text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p className="self-stretch my-20 lg:w-[45vw] text-2xl lg:text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 <br />
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
-              <h2 className="text-5xl font-semibold max-md:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
-              <p className="mt-4 text-3xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
-              <p className="mt-4 text-3xl">{"JEF Group"}</p>
+              <h2 className="text-3xl lg:text-5xl font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className="my-4 text-2xl lg:text-3xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="text-2xl lg:text-3xl">{"JEF Group"}</p>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
