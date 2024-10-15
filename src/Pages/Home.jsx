@@ -555,7 +555,6 @@ useGSAP(() => {
               </h1>
               <p className="self-stretch my-20 lg:w-[45vw] text-2xl lg:text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
-                <br />
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
               <h2 className="text-3xl lg:text-5xl font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>

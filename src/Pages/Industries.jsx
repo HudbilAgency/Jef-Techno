@@ -60,7 +60,7 @@ function Industries() {
                 alt="Renewable Energy Industry background"
                 className="object-cover h-screen w-screen"
             />
-            <h1 className="absolute inset-0 flex items-center justify-center z-10">
+            <h1 className="absolute inset-0 p-4 flex items-center justify-center z-10">
                 RENEWABLE ENERGY INDUSTRY
             </h1>
             </div>
@@ -139,7 +139,7 @@ function Industries() {
                 <h4 className="mt-6 text-2xl leading-8 text-red-700 max-md:max-w-full">
                   {service.title}
                 </h4>
-                <p className="mt-10 text-2xl font-extralight leading-9 text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
+                <p className="mt-10 text-xl font-extralight leading-9 text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
                   {service.description}
                 </p>
               </article>
@@ -222,7 +222,7 @@ function IntegratingDiverseSpecializations() {
               className="object-cover grow w-full aspect-[0.79] max-md:mt-10 max-md:max-w-full"
             />
           </div>
-          <div className="flex p-2 self-center items-center mx-auto flex-col w-[40%] max-md:w-full">
+          <div className="flex p-4 self-center items-center mx-auto flex-col w-[40%] max-md:w-full">
             <div className="flex flex-col items-center self-center mx-auto my-auto text-2xl leading-[50px] text-stone-900 max-md:mt-10 max-md:max-w-full">
               <h2 className="self-start lg:text-4xl w-[90%] font-medium leading-relaxed tracking-widest text-red-700 uppercase max-md:max-w-full">
                 Integrating Diverse Specializations for Value Delivery

@@ -50,19 +50,19 @@ const AboutUs = () => {
     const visionData = [
         {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e16ee975eb679a5915e4c081858a20a90389fd8b30454bd57483da22afade137?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-          title: "BUSINESS",
-          description: "NEOM is a global hub open for business. We're building a future-oriented and sustainable economy, pioneering new benchmarks for talent and enterprise.",
+          title: "Mission",
+          description: "Deliver Value added, technically superior and cost-optimum solutions to enhance the safety & reliability of Electrical systems by combining knowledge, experience and technology.",
           learnMore: true
         },
         {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/2137e57fab69bcc7f6fe80e5f7e438b0cdfa992da4b7bf36e2da2159fb80627e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-          title: "LIVABILITY",
-          description: "NEOM is reimagining urbanism to be people-first and nature-friendly. THE LINE and the connectivity of our regions will be a model for the future- setting new global standards for livability."
+          title: "vision",
+          description: "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate."
         },
         {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/046a00e721b213a29322e89fd6ebaa8d2b511514f4b267d8a196e97e597db69f?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-          title: "CONSERVATION",
-          description: "Protection, preservation and regeneration sit at the core of NEOM's model. We're an accelerator of planetary regeneration and nature has to come first."
+          title: "assurane",
+          description: "We strive to consistently deliver projects on time, exceeding the expectations of stakeholders in terms of quality and completeness while following the mandated systems and procedures."
         }
       ];
       
@@ -74,8 +74,8 @@ const AboutUs = () => {
             <main className="flex relative flex-col h-screen w-full  max-md:px-5 max-md:py-24 max-md:max-w-full">
             <img
                 loading="lazy"
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/bdb66e4942d3414eb64bf72be6385899c1d9b672047233f207ff5143dcc1d7d9?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                alt=""
+                src="./AboutUs/AboutUsMainBG.png"
+                alt="AboutUsMainbg"
                 className="object-cover absolute inset-0 size-full"
             />
             <section className="flex relative inset-y-2/3 lg:inset-x-40 flex-col mt-8 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
@@ -106,24 +106,29 @@ const AboutUs = () => {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 bg-zinc-800 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1380px] max-md:max-w-full">
-        <header className="flex flex-col self-center max-w-full text-center text-white w-[795px]">
-          <h1 className="flex justify-center items-center px-48 w-full text-5xl font-semibold leading-none uppercase tracking-[3.36px] max-md:px-5 max-md:max-w-full max-md:text-4xl">
-            <span className="self-stretch pb-px my-auto min-w-[240px] max-md:text-4xl">
-              OUR VISION
+        <header className="flex flex-col self-center max-w-full text-center text-white ">
+          <h1 className="flex justify-center items-center px-48 w-full text-5xl font-normal leading-none uppercase tracking-[3.36px] max-md:px-5 max-md:max-w-full max-md:text-4xl">
+            <span className="text-red-600 self-stretch pb-px my-auto min-w-[240px] max-md:text-4xl">
+              Who we are ?
             </span>
           </h1>
           <p className="pb-px mt-8 w-full text-2xl font-light leading-9 max-md:max-w-full">
-            NEOM is the land of the future where the greatest minds and best <br />
-            talents are empowered to embody pioneering ideas and exceed <br />
-            boundaries in a world inspired by imagination.
+          JEF is a widely accredited technology-enabled company, focused on solving the
+          toughest <br /> problems in the electrical engineering space with a comprehensive and
+          innovative set of <br /> products and solutions.
+          </p>
+          <p className="pb-px mt-8 w-full text-2xl font-light leading-9 max-md:max-w-full">
+          It was founded in 1994 with a clear vision to provide expertise about the most <br />
+          comprehensive solutions to the toughest challenges relating to the safety of <br />
+          electrical equipment.
           </p>
         </header>
         <div className="flex flex-col items-center px-16 mt-20 max-md:px-5 max-md:mt-10 max-md:max-w-full">
           <div className="flex flex-col justify-center items-center w-full max-w-[1240px] max-md:max-w-full">
-            <div className="flex flex-wrap flex-1 justify-center pr-40 pl-40 size-full max-md:px-5">
+            <div className="flex flex-wrap flex-1 justify-center mx-auto size-full max-md:px-5">
               {visionData.map((card, index) => (
-                <article key={index} className="flex flex-col grow shrink justify-center pr-px max-w-[311px] min-w-[240px] w-[249px]">
-                  <div className="flex flex-col px-5 py-14 w-full border border-white border-opacity-10 max-w-[310px] min-h-[460px] max-md:pl-5">
+                <article key={index} className="flex flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
+                  <div className="flex flex-col px-5 py-14 w-full border border-white border-opacity-10 lg:h-[60vh] max-w-[310px] h-auto max-md:pl-5">
                     <div className="flex flex-col items-center pb-8 w-full min-h-[110px]">
                       <div className="flex justify-center items-end w-full min-h-[80px]">
                         <div className="flex overflow-hidden flex-col flex-1 shrink w-full basis-0 min-w-[240px]">
@@ -168,127 +173,57 @@ const AboutUs = () => {
     </section>
 
 
-    {/* Our Purpose */}
+    {/* Our Approach */}
 
-      <section className='overflow-hidden'>
-            <div className="flex relative flex-col justify-center bg-black items-center px-16 py-28 w-full max-md:px-5 max-md:py-24 max-md:max-w-full">
-            <div className="flex flex-col gap-24 justify-center items-start mb-0 max-w-full w-[60%] md:w-[55%] lg:w-[50%] xl:w-[40%] min-w-[40%]  max-md:mb-2.5">
-              <div className="pb-px text-5xl self-center font-bold leading-none text-center text-white uppercase min-w-[240px] tracking-[3.36px] max-md:text-4xl">
-                Our Purpose
-              </div>
-              <div className='md:flex w-full justify-center'>
-                    <div className="flex overflow-hidden px-9 py-12 flex-col grow shrink items-center border border-solid border-white border-opacity-20 min-w-[240px] w-[50%] max-md:px-5 max-md:pb-24">
-                      <div className="flex flex-col justify-center w-20 min-h-[80px]">
-                        <img
-                          loading="lazy"
-                          src="./AboutUs/OurPurposeImg1.png"
-                          alt="Vision icon"
-                          className="object-contain flex-1 w-full aspect-square"
-                        />
-                      </div>
-                      <div className="mt-8 text-2xl font-medium tracking-widest leading-none text-center text-white uppercase">
-                        VISION
-                      </div>
-                      <div className="self-stretch mt-28 text-base leading-6 text-center text-white max-md:mt-10">
-                        The land of the future, where the <br /> greatest minds and best talents are <br /> empowered to embody pioneering <br /> ideas and exceed boundaries in a<br /> world inspired by imagination.
-                      </div>
-                    </div>
-                    <div className="flex overflow-hidden flex-col grow shrink items-center px-9 py-12 border border-white border-opacity-20 min-w-[240px] w-[50%] max-md:px-5">
-                      <div className="flex flex-col justify-center w-20 min-h-[80px]">
-                        <img
-                          loading="lazy"
-                          src="./AboutUs/OurPurposeImg2.png"
-                          alt="Values icon"
-                          className="object-contain flex-1 w-full aspect-square"
-                        />
-                      </div>
-                      <div className="mt-8 text-2xl font-medium tracking-widest leading-10 text-center text-white uppercase">
-                        Values & Code of Conduct
-                      </div>
-                      <div className="self-stretch mt-14 text-base leading-6 text-center text-white max-md:mt-10">
-                        We want to create a legacy that <br /> makes the world a better place, and <br /> our key values will help us achieve that. NEOM will be built on care, curiosity, diversity, passion, respect and becoming a catalyst for change{" "}
-                      </div>
-                      <div className="flex gap-2.5 items-start mt-16 max-md:mt-10">
-                        <div className="flex flex-col text-xs tracking-widest leading-none text-center text-white uppercase">
-                          <div>Learn More</div>
-                        </div>
-                        <div className="flex flex-col justify-center w-4 min-h-[16px]">
-                          <img
-                            loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/426de649617d81523f0566c668c64884e2a271eac7dbffac28c13b7b1a6c4808?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                            alt="Learn more icon"
-                            className="object-contain flex-1 w-4 aspect-square"
-                          />
-                        </div>
-                      </div>
-                    </div>
-              </div>
-            </div>
-          </div>
-      </section>
-
-
-    
-
-    <section>
-              
-        < UniqueEnvironment />
-
+    <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 text-center bg-zinc-800 max-md:px-5">
+      <div className="flex flex-col max-w-full w-[1115px]">
+        <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-5xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] max-md:text-4xl">
+          <span className="pb-px min-w-[240px] max-md:max-w-full max-md:text-4xl">
+            Our Approach
+          </span>
+        </h2>
+        <p className="mt-16 text-xl lg:text-2xl font-light leading-9 text-white max-md:mt-10 max-md:max-w-full">
+          We provide Innovative Solutions that are{" "}
+          <span className="font-extrabold">
+            Technically Superior, Cost-effective and
+          </span>{" "}
+          <br />
+          <span className="font-extrabold">Practically Implementable</span>.
+        </p>
+      </div>
     </section>
 
 
-    {/* Our Journey Section */}
 
 
-    <section className="flex overflow-hidden flex-col py-36 bg-stone-900 max-md:py-24">
-      <header className="flex flex-col justify-center items-center px-60 py-6 w-full text-5xl leading-tight text-center text-white uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full max-md:text-4xl">
-        <h1 className="flex flex-col max-w-full w-[960px] max-md:text-4xl">
-          <span className="flex justify-center items-center pr-72 pl-72 w-full max-md:px-5 max-md:max-w-full max-md:text-4xl">
-            <span className="self-stretch my-auto min-w-[240px] max-md:text-4xl">Our journey</span>
-          </span>
-        </h1>
-      </header>
-      <div className="flex relative gap-10 justify-center mt-6 w-full text-base text-white whitespace-nowrap max-md:px-5 max-md:max-w-full">
-        <div className="flex absolute inset-x-0 z-0 self-center justify-center h-px border-b border-white bottom-[3px] min-h-[1px] w-full max-md:max-w-full" />
-        {timelineData.map((item, index) => (
-          <div
-            key={index}
-            className={`flex z-0 flex-col pt-3 ${
-              item.isHighlighted
-                ? 'text-2xl leading-none text-red-700'
-                : item.isSmall
-                ? 'text-sm leading-relaxed'
-                : 'leading-loose'
-            }`}
-          >
-            <div className={`flex flex-col ${item.isHighlighted ? 'w-[59px]' : 'w-[33px]'}`}>
-              <div className="pb-px w-full">{item.year}</div>
+  {/* Brand History */}
+
+    <section className="flex overflow-hidden flex-col justify-center items-center px-4 sm:px-8 md:px-16 py-12 sm:py-16 md:py-24 bg-neutral-100">
+      <div className="w-full max-w-[80rem]">
+        <div className="flex flex-col md:flex-row gap-5">
+          <div className="flex flex-col w-full md:w-1/2">
+            <div className="flex flex-col self-stretch my-auto max-md:mt-10">
+              <div className="flex flex-col justify-center p-2.5 w-full text-3xl sm:text-4xl md:text-5xl font-semibold leading-none text-red-700 tracking-[0.28rem]">
+                <div className="flex flex-col w-full h-[4.5rem]">
+                  <div className="flex relative flex-col w-full">
+                    <h2 className="pb-px w-full">Brand History</h2>
+                    <div className="flex absolute inset-x-0 z-0 max-w-full bottom-[-7.6875rem] min-h-[5.8125rem] w-full md:w-[33.25rem]" />
+                  </div>
+                </div>
+              </div>
+              <p className="mt-6 sm:mt-8 md:mt-11 text-base sm:text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
+                From three decades, JEF Techno as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
+              </p>
             </div>
           </div>
-        ))}
-      </div>
-      <div className="flex relative flex-col justify-center px-20 pt-11 pb-10 mt-6 w-full max-md:px-5 max-md:max-w-full">
-        <figure className="flex overflow-hidden z-0 flex-col items-center self-center max-w-full w-[1296px]">
-          <div className="flex overflow-hidden flex-col w-full">
+          <div className="flex flex-col mt-6 md:mt-0 md:ml-5 w-full md:w-1/2">
             <img
               loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/eb8c6eb0114d3c75b969834b4b20bc38915dcf13c83f86ee62bf0e2a976814f2?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-              alt="Timeline visual representation"
-              className="object-contain w-full aspect-[3.04] max-md:max-w-full"
+              src="public/AboutUs/BrandHistory.png"
+              alt="JEF Techno brand history illustration"
+              className="object-contain w-full aspect-[1.09]"
             />
           </div>
-        </figure>
-      </div>
-      <div className="flex justify-center pt-1.5 mt-6 w-full text-center px-[491px] max-md:px-5 max-md:max-w-full">
-        <div className="flex flex-col items-center px-16 max-w-[619px] min-w-[240px] w-[460px] max-md:px-5">
-          <time className="flex flex-col pb-2.5 text-xl tracking-widest leading-none text-red-700 uppercase whitespace-nowrap w-[61px]">
-            <span className="flex flex-col w-full">
-              <span className="w-full">June</span>
-            </span>
-          </time>
-          <p className="flex flex-col w-full text-base font-light leading-loose text-white">
-            <span className="w-full">NEOM reveals Magna, its new coastal region</span>
-          </p>
         </div>
       </div>
     </section>
@@ -296,245 +231,51 @@ const AboutUs = () => {
 
 
 
-
-
-
-
-    <section className="flex overflow-hidden md:pl-[10%]  flex-col justify-center items-start px-20 py-32 bg-neutral-100 max-md:px-5 max-md:py-24">
-      <div className="flex flex-col max-w-full">
-        <div className="flex flex-col w-full max-md:max-w-full">
-          <h2 className="pb-px w-full text-5xl text-red-700 leading-[71px] tracking-[4.53px] max-md:max-w-full max-md:text-4xl max-md:leading-[69px]">
-            What does <br />
-            <span className="font-bold text-red-700">JEF</span> mean?
-          </h2>
-          <p className="mt-8 w-full text-xl font-thin leading-8 text-zinc-900 max-md:max-w-full">
-            The name NEOM is derived from two words. Envisioned <br />
-            by His Royal Highness Mohammed bin Salman, Crown <br />
-            Prince and Chairman of the NEOM Company Board of <br />
-            Directors, the first three letters come from the Ancient <br />
-            Greek prefix neo – meaning 'new'. The 'M' is the first <br />
-            from 'Mustaqbal', an Arabic word meaning 'future'. The <br />
-            M is also the first letter of the Crown Prince, <br />
-            Mohammed bin Salman.
-          </p>
-        </div>
-        <div className="flex flex-wrap items-start self-center py-2.5 mt-10 w-full max-md:pr-5 max-md:max-w-full">
-          <div className="flex grow shrink items-start h-10">
-            <button className="flex overflow-hidden justify-start items-start self-stretch py-2 px-7 my-auto bg-red-700 min-h-[55px] rounded-[60px] max-md:px-5">
-              <span className="self-stretch my-auto text-base tracking-widest leading-none text-white uppercase">
-                LEARN MORE
-              </span>
-              <div className="flex flex-col items-start self-stretch pl-2.5 my-auto min-h-[16px] w-[27px]">
-                <div className="flex flex-col justify-center w-4 min-h-[16px]">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/267c57813526f8d5addde0296fd4cb603e84f278bb1ea0cae1b5b4bfbda63349?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    className="object-contain flex-1 w-full aspect-square"
-                    alt=""
-                  />
-                </div>
-              </div>
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section>
-      <div className="flex relative flex-col px-80 py-16 bg-zinc-800 max-md:px-5"
-      style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/3486dd285e7017129820ae9151645cac7970507614e144bdcb7c7e402d2b2d9c?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244')", 
-        backgroundSize: "cover", 
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat" }}>
-        {/* <img
-          loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/3486dd285e7017129820ae9151645cac7970507614e144bdcb7c7e402d2b2d9c?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-          alt="bg-img"
-          className="object-cover absolute inset-0 z-0 w-full aspect-[3.05] max-md:max-w-full"
-        /> */}
-        <div className="flex z-0 flex-col self-center max-w-full w-[770px]">
-          <div className="flex flex-col w-full max-md:max-w-full">
-            <div className="flex overflow-hidden justify-center items-end self-center max-w-full rounded-[120px]">
-              <div className="flex overflow-hidden flex-col flex-1 shrink w-full basis-0">
-                <div className="flex flex-1 justify-center items-center size-full">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/6b5888bed9ef9ad16303c58184db5c33fa656c4c45836c5280ac7f43ce29beaf?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    alt="Profile"
-                    className="object-cover self-stretch my-auto aspect-square w-[120px]"
-                  />
-                </div>
-              </div>
-            </div>
-            <section className="flex z-10 flex-col mt-10  text-center max-md:mb-2.5 max-md:max-w-full">
-              <blockquote className="w-full text-xl font-light leading-8 text-white max-md:max-w-full">
-                "If we are to solve the challenges of tomorrow, we must face up to them today,
-                <br />
-                no matter how difficult they may seem. At NEOM, we are addressing some of the
-                <br />
-                most pressing challenges facing humanity by bringing together a community of
-                <br />
-                the brightest minds committed to reimagining what a sustainable future will look
-                <br />
-                like in 20 to 30 years, and building it today. We are redefining the future now.
-                <br />
-                NEOM is open for business."
-              </blockquote>
-              <footer className="flex flex-col mt-6 w-full">
-                <p className="w-full text-base font-medium leading-loose text-red-700 max-md:px-5 max-md:max-w-full">
-                  NEOM Chief Executive Officer
-                </p>
-                <p className="mt-2.5 w-full text-xl font-semibold leading-9 text-white max-md:px-5 max-md:max-w-full">
-                  Nadhmi Al-Nasr
-                </p>
-              </footer>
-            </section>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
+    {/* Jef leaderShip */}
 
     <section>
   <div 
-    className="flex overflow-hidden relative gap-10 justify-center items-start pt-16 pb-16 bg-zinc-900"
+    className="flex overflow-hidden relative gap-10 justify-center items-start py-32 bg-zinc-900"
     style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/66f6bb7d22178abfdbaa1bd2b07992f6d1ff63598849bb870a6de98573eb4dc0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244')", 
              backgroundSize: "cover", 
              backgroundPosition: "center",
              backgroundRepeat: "no-repeat" }}>
     
-    <div className="flex z-0 flex-col lg:pl-[10%] my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
+    <div className="flex z-0 flex-col my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-md:max-w-full">
-        <div className="flex flex-col w-full max-md:max-w-full">
-          <h1 className="pb-px w-full text-5xl leading-loose text-white tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+        <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
+          <h1 className="pb-px w-full font-semibold text-5xl leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
             JEF LEADERSHIP
           </h1>
-          <p className="mt-8 w-full text-base font-thin leading-6 text-white max-md:max-w-full min-w-[90%]">
-            To bring NEOM to life requires the world's most forward-thinking
-            <br />
-            innovators leading the way. Meet the ambitious professionals doing
-            <br />
-            exactly that, and learn more about their distinguished experience.
+          <p className="mt-5 w-full text-lg font-thin leading-6 text-white max-md:max-w-full min-w-[90%]">
+          Over the last couple of decades, with our help, our clients have been able to <br /> assure
+          the long-term safety of their manpower and business.
           </p>
-        </div>
-        <div className="flex flex-wrap items-start py-2.5 pr-80 pl-2.5 mt-10 w-full max-md:pr-5 max-md:max-w-full">
-          <div className="flex grow shrink items-center h-10 w-[188px]">
-            <button className="flex overflow-hidden justify-center items-center self-stretch py-5 px-10 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[55px] min-w-fit rounded-[60px]">
-              <span className="text-sm leading-none uppercase text-zinc-900">
-                SEE ALL LEADERS
-              </span>
-              <div className="flex flex-col items-start self-stretch pl-2.5 my-auto min-h-[16px] w-[27px]">
-                <div className="flex flex-col justify-center w-4 min-h-[16px]">
-                  <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8f7562df75258c749f986bf6bb883b58568ee2e6a92f2ab4317d5c47e05e99bd?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    alt="Arrow icon"
-                    className="object-contain flex-1 w-full aspect-square"
-                  />
-                </div>
-              </div>
-            </button>
-          </div>
         </div>
       </div>
     </div>
   </div>
 </section>
  
+ 
 
-    {/* Social responsibility annual report  */}
+ <section>
+  < Overview />
+ </section>
 
-    <main className="flex overflow-hidden h-screen relative gap-10 justify-start md:pl-[5%] lg:pl-[10%] items-start bg-zinc-900 min-h-[900px] max-md:py-24"
-      style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/4dabc8b3811d06b0e7b963700886b5da1464cdce36be495b5efe65a38661a598?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244')", 
-               backgroundSize: "cover", 
-               backgroundPosition: "center",
-               backgroundRepeat: "no-repeat" }}>
+
+
+      <section>
+        < LearningDevelopment />
+      </section>
+
+
+      <section>
+        < SocialResponsibilities />
+      </section>
+    
+
   
-  <section className="flex z-0 flex-col my-auto max-md:px-5 max-md:max-w-full">
-    <div className="flex flex-col w-full max-md:max-w-full">
-      <header className="flex flex-col w-full text-white max-md:max-w-full">
-        <h1 className="pb-px w-full text-5xl leading-[71px] tracking-[4.53px] max-md:max-w-full max-md:text-4xl max-md:leading-[66px]">
-          NEOM SOCIAL <br /> RESPONSIBILITY <br /> ANNUAL REPORT
-        </h1>
-        <p className="mt-8 w-full text-base font-thin leading-6 max-md:max-w-full">
-          To build the cities of the future, we need to build the communities of the <br /> future. At NEOM Social Impact, we are developing transformative <br /> educational and training programs that empower students, <br /> entrepreneurs and individuals to be part of NEOM's sustainable society.
-        </p>
-      </header>
-      <div className="flex flex-wrap items-start py-2.5 pr-60 pl-2.5 mt-10 w-full max-md:pr-5 max-md:max-w-full">
-        <div className="flex grow shrink items-center h-10 ">
-          <a 
-            href="#download-report" 
-            className="flex overflow-hidden justify-center items-center self-stretch py-5 pr-3.5 pl-7 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[55px] min-w-[240px] rounded-[60px] w-[306px] max-md:pl-5"
-            role="button"
-          >
-            <span className="self-start my-auto text-base tracking-widest leading-none uppercase text-zinc-900">
-              Download the Report
-            </span>
-            <span className="flex flex-col items-start self-stretch pl-3 my-auto min-h-[16px] w-[27px]">
-              <img 
-                loading="lazy" 
-                src="https://cdn.builder.io/api/v1/image/assets/TEMP/409491851bdc7a2c7ae3e8c9791655132f58f36f3a281fbf935628fcdb599b4a?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" 
-                alt="" 
-                className="object-contain flex-1 w-full aspect-square" 
-              />
-            </span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section>
-</main>
-
-
-
-
-    {/* Office Location Section  */}
-
-    <section>
-      < LocationsSection />  
-    </section>   
-
-
-
-
-        {/* <section>
-          < Accordion />
-        </section> */}
-
-        <section>
-           < FAQComponent />
-        </section>
-
-
-    {/* ContactUs Section */}
-
-    <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
-      <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-          <h1 className="text-5xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
-            Contact us
-          </h1>
-          <p className="self-stretch mt-4 text-lg font-normal leading-none text-white max-md:max-w-full">
-          Get in touch with us for any business enquiry.
-          </p>
-          <form className="w-full mt-12 max-md:mt-10">
-            {inputFields.map((field, index) => (
-              <FormInput key={index} label={field.label} type={field.type} />
-            ))}
-            <button
-              type="submit"
-              className="overflow-hidden px-16 py-4 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>        
-
 
 
 
@@ -542,6 +283,120 @@ const AboutUs = () => {
    </>
   )
 }
+
+
+
+
+
+
+function SocialResponsibilities() {
+  return (
+    <main className="flex overflow-hidden flex-col text-center bg-white">
+      <section className="flex relative flex-col justify-center items-center px-[5%] py-[20vh] w-full min-h-[100vh] max-md:px-[3%] max-md:py-[10vh] max-md:max-w-full">
+        <img
+          loading="lazy"
+          src="./AboutUs/SocialResponsibility.png"
+          alt=""
+          className="object-cover absolute inset-0 w-full h-full"
+        />
+        <div className="flex relative flex-col mb-0 w-full max-w-[82rem] max-md:mb-2.5 max-md:max-w-full">
+          <h1 className="text-[3.125rem] font-semibold leading-none text-red-700 uppercase tracking-[0.28rem] max-md:max-w-full max-md:text-[2.5rem]">
+            SOCIAL RESPONSIBITIES
+          </h1>
+          <p className="mt-[3rem] lg:text-2xl leading-9 text-white max-md:mt-[2.5rem] max-md:max-w-full">
+            At JEF, we believe in creating a positive impact beyond business. We are dedicated to supporting the communities we serve by promoting sustainable engineering practices, ensuring the safety of our environment, and contributing to local development initiatives. Our social responsibility efforts focus on environmental conservation, educational programs for underprivileged communities, and ensuring that our projects align with global sustainability goals. By integrating social responsibility into every aspect of our operations, we strive to make a meaningful difference for future generations.
+          </p>
+        </div>
+      </section>
+    </main>
+  );
+}
+
+
+
+
+
+const Overview = () => {
+  return (
+    <div className="flex flex-col justify-center items-center p-20 bg-stone-900 max-md:px-5">
+      <div className="flex flex-col w-full max-w-[70%] max-md:max-w-full">
+        <div className="flex justify-center items-center self-center px-72 max-w-full text-5xl font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 max-md:text-4xl">
+          <div className="self-stretch my-auto min-w-[240px] max-md:text-4xl">
+            Overview
+          </div>
+        </div>
+        <div className="mt-20 max-md:mt-10 max-md:max-w-full">
+          <div className="flex max-md:flex-col">
+            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-2xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+                <div className="ml-4 font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] max-md:ml-2.5">
+                  From India to 24 Countries
+                </div>
+                <div className="mt-16 max-md:mt-10">
+                  Strong International Presence.
+                </div>
+                <div className="mt-5">
+                  Prestigious Projects in many countries.
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex overflow-hidden flex-col grow px-11 pt-12 pb-64 text-2xl border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+                <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
+                  3000+ Global Customer
+                </div>
+                <div className="mt-16 font-light leading-9 text-white max-md:mt-10">
+                  90% customer retention rate
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex overflow-hidden flex-col grow items-start px-11 pt-12 pb-40 text-2xl font-light leading-9 text-white border border-solid border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+                <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
+                  30 Years of Experience
+                </div>
+                <div className="mt-16 w-[323px] max-md:mt-10">
+                  Experience across geographies.
+                </div>
+                <div className="mt-4">Serving many industries segments</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+
+
+function LearningDevelopment() {
+  return (
+    <main className="flex flex-col items-center pt-14 pb-28 text-center bg-stone-900 max-md:pb-24">
+      <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-5xl leading-tight text-red-700 uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full max-md:text-4xl">
+        <div className="flex flex-col max-w-full w-[60rem]">
+          <div className="flex justify-center items-center pr-14 pl-12 w-full max-md:px-5 max-md:max-w-full">
+            <h1 className="self-stretch my-auto min-w-[15rem]">
+              LEARNING AND DEVELOPMENT
+            </h1>
+          </div>
+        </div>
+      </header>
+      <p className="mt-6 text-base font-light leading-loose text-white max-md:max-w-full">
+        This initiative will help us exceed our customers' delivery expectations in terms of Quality and Speed.
+      </p>
+      <img
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fafc4b28802577b2d55cdc14d00c68eee644a55232f04407c4b0f48fd7624e46?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+        alt="Learning and Development Initiative"
+        loading="lazy"
+        className="object-contain mt-36 w-full aspect-[2.82] max-w-[75rem] max-md:mt-10 max-md:max-w-full"
+      />
+    </main>
+  );
+}
+
+
+
 
 
 
@@ -873,20 +728,11 @@ const EnvironmentFeature = ({ imageSrc, text }) => {
 
 
 const sectors = [
-  { name: "Manufacturing", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/eea8090705ba8d0207f4e72aa7252f196defdc3f1737976d0ce4c12cf1fe471a?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Manufacturing sector icon" },
-  { name: "Water", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/29984e787b793a787fb0f1e1e18dcc903fb84c76fad8efed9d4317dff4c2ec30?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Water sector icon" },
-  { name: "Technology and Digital", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/db88c1495d8b65354c194c3cdd14b98f9c044fa4a1bb709c929252dfab391adb?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Technology and Digital sector icon" },
-  { name: "Entertainment and Culture", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/7e398c1204c016e4375e42f29d78777040df087825e916bdbb1d8fe2ffa67a70?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Entertainment and Culture sector icon" },
-  { name: "Education, Research, And Innovation", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/d12499752de7003d010eaf1e8f03b1ba1dedcc8415c109cd60c8de0936d5636d?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Education, Research, and Innovation sector icon" },
-  { name: "Design and Construction", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/eb697f2f0bf29f78e57065a60c4d606573430472469ba6a65a84b3858c9c9e93?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Design and Construction sector icon" },
-  { name: "Food", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/5f5c4c7402ef2796bdcba85bc97f83dae00b18db50f9036c047083989cb372ad?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Food sector icon" },
-  { name: "Energy", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/444134d463f92458d2e970ee7ca77be06090f8dfd4e97d21bc48bcfb4f52ce77?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Energy sector icon" },
-  { name: "Sport", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/c33b69887debb40680df3004e5edcb0e826cc5e0f2e786fb940e3874ed87ede9?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Sport sector icon" },
-  { name: "Tourism", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/8be4392318990b91f786dc4a0f9b9b82d7568813e309464fe21940f3a2b0ba45?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Tourism sector icon" },
-  { name: "Mobility", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/7c96afee46212c1703e3e09d63cf66c6b024a68f56ce30806205de9ccce3922e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Mobility sector icon" },
-  { name: "Health, Well-being and Biotech", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/a182c7f50e8b68b96f02b7ffaa7911e73347a55c9308ec6d2d16dd1b248141d5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Health, Well-being and Biotech sector icon" },
-  { name: "Financial Services", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/67359a20add1364af4e914cdd70a06c9b614ca83448d134b48ac5870b1289917?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Financial Services sector icon" },
-  { name: "Media", imageSrc: "https://cdn.builder.io/api/v1/image/assets/TEMP/ea5bb3d8d1e71aee25004f049e5b1e39216a888f611316f600c38f4e1f2c1f58?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244", altText: "Media sector icon" }
+  { name: "Oil & Gas", imageSrc: "./AboutUs/OilandGas.png", altText: "Manufacturing sector icon" },
+  { name: "Power Utilities", imageSrc: "./AboutUs/PoweUtilities.png", altText: "Water sector icon" },
+  { name: "Manufacturing Plant", imageSrc: "./AboutUs/MFplant.png", altText: "Technology and Digital sector icon" },
+  { name: "Process Plant", imageSrc: "./AboutUs/ProcessPlant.png", altText: "Entertainment and Culture sector icon" },
+  { name: "Commercial Buildings", imageSrc: "./AboutUs/CBimg.png", altText: "Education, Research, and Innovation sector icon" },
 ];
 
 function SectorIcon({ name, imageSrc, altText }) {
@@ -895,7 +741,7 @@ function SectorIcon({ name, imageSrc, altText }) {
       <div className="flex flex-col items-center self-stretch my-auto w-full">
         <div className="flex overflow-hidden flex-col flex-1 items-center w-full">
           <div className="flex flex-1 justify-center size-full">
-            <img loading="lazy" src={imageSrc} alt={altText} className="object-cover flex-1 shrink w-full aspect-[1.98] basis-0" />
+            <img loading="lazy" src={imageSrc} alt={altText} className="object-cover shrink " />
           </div>
         </div>
         <div className="mt-5 text-xs tracking-wider leading-tight text-center uppercase text-zinc-900">
@@ -917,15 +763,11 @@ function EconomicEngine() {
             </span>
           </h1>
           <p className="pb-px mt-5 w-full text-2xl font-light leading-9 max-md:max-w-full">
-            These distinct regions and sectors will be fueled by USD 500 billion from the Public Investment Fund
-            <br />
-            of the Kingdom of Saudi Arabia and local and international investors. NEOM will become a
-            <br />
-            community powered by talent and diversity across 14 sectors.
+          We provide the below-mentioned solutions for Transmission & Distribution Utilities, Oil & Gas <br /> Infrastructure, and such other customers. Earthing/Grounding Studies, Lightning Protection Studies <br /> Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>
         <div className="items-center mt-20 max-w-full  max-md:mt-10">
-          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 justify-center">
+          <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 justify-center">
             {sectors.map((sector) => (
               <SectorIcon key={sector.name} {...sector} />
             ))}

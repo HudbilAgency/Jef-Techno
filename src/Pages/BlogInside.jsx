@@ -1,6 +1,7 @@
 import React from 'react';
 import MainImgWhite from '../Components/MainImgWhite/MainImgWhite';
 import MainFooter from '../Components/Footer/MainFooter';
+import Navbar from '../Components/Navbar/Navbar';
 
 const BlogInside = () => {
   const faqItems = [
@@ -45,7 +46,7 @@ const BlogInside = () => {
 
   return (
     <>
-    < MainImgWhite />
+    < Navbar />
     <section className="flex py-24 overflow-hidden flex-col bg-neutral-100">
       <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
         <div className="flex  flex-col pt-[25rem] lg:pt-0 w-full 2xl:pb-[34rem] max-md:pb-24 max-md:max-w-full">

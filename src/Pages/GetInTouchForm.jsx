@@ -15,19 +15,19 @@ const GetInTouchForm = () => {
 
     <>
     < Navbar />
-    <section className="flex py-32 overflow-hidden flex-col bg-neutral-100">
+    <section className="flex p-5 py-32 overflow-hidden flex-col bg-neutral-100">
       <div className="flex flex-col self-center mt-24 w-full max-w-[1300px] max-md:mt-10 max-md:max-w-full">
         <h1 className="pb-px w-full text-3xl leading-loose uppercase text-stone-900 tracking-[3.36px] max-md:max-w-full">
           We just need your contact details
         </h1>
         <form className="flex flex-col mt-9 w-full max-md:max-w-full">
-          <div className="flex gap-5 max-md:flex-col">
+          <div className="flex lg:gap-5 max-md:flex-col">
             {inputFields.slice(0, 2).map((field, index) => (
               <div key={index} className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col grow justify-center pb-10 min-h-[133px] max-md:mt-10 max-md:max-w-full">
+                <div className="flex flex-col grow justify-center lg:pb-10 min-h-32  max-md:max-w-full">
                   <div className="flex flex-col w-full min-h-[93px] max-md:max-w-full">
                     <div className="flex flex-col w-full max-md:max-w-full">
-                      <div className="flex relative gap-10 w-full text-xs max-md:max-w-full">
+                      <div className="flex relative gap-4 lg:gap-10 w-full text-xs max-md:max-w-full">
                         <label htmlFor={`input-${index}`} className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
                           <span className="text-stone-900">{field.label} </span>
                           <span className="text-red-700">*</span>
@@ -52,8 +52,8 @@ const GetInTouchForm = () => {
           </div>
           <div className="flex gap-5 max-md:flex-col">
             <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col grow justify-center pb-10 min-h-[134px] max-md:mt-10 max-md:max-w-full">
-                <div className="flex flex-col w-full min-h-[94px] max-md:max-w-full">
+              <div className="flex flex-col grow justify-center max-md:mt-10 max-md:max-w-full">
+                <div className="flex flex-col w-full  max-md:max-w-full">
                   <div className="flex flex-col w-full max-md:max-w-full">
                     <div className="flex relative gap-10 w-full text-xs max-md:max-w-full">
                       <label htmlFor="email" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
@@ -80,13 +80,13 @@ const GetInTouchForm = () => {
               <div className="flex flex-col grow min-h-[134px] max-md:mt-10 max-md:max-w-full">
                 <div className="flex flex-col w-full max-md:max-w-full">
                   <div className="flex flex-wrap gap-1 items-start pb-px w-full text-xs max-md:max-w-full">
-                    <label htmlFor="phone" className="tracking-widest leading-tight uppercase text-stone-900">
+                    <label htmlFor="phone" className="tracking-widest leading-tight h-[] uppercase text-stone-900">
                       Phone number <span className="text-red-700">*</span>
                     </label>
                   </div>
                   <div className="flex flex-wrap gap-5 justify-center mt-2.5 w-full text-sm font-thin max-md:max-w-full">
                     <div className="flex flex-col grow shrink leading-10 text-center whitespace-nowrap text-stone-900 w-[116px]">
-                      <select className="flex gap-10 justify-between items-center py-2.5 pr-5 pl-2.5 w-full bg-white rounded border border-gray-200 border-solid max-md:pr-5">
+                      <select className="flex h-[100%] gap-10 justify-between items-center py-2.5 px-5 w-full bg-white rounded border border-gray-200 border-solid">
                         <option>Select</option>
                       </select>
                     </div>
@@ -104,7 +104,7 @@ const GetInTouchForm = () => {
               </div>
             </div>
           </div>
-          <div className="flex gap-5 max-md:flex-col">
+          <div className="flex max-md:flex-col">
             <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow min-h-[126px] max-md:mt-10 max-md:max-w-full">
                 <div className="flex flex-col w-full max-md:max-w-full">
@@ -129,7 +129,7 @@ const GetInTouchForm = () => {
               </div>
             </div>
             <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-              <div className="flex flex-col grow text-xs min-h-[126px] max-md:mt-10 max-md:max-w-full">
+              <div className="flex flex-col grow text-xs min-h-[126px]">
                 <div className="flex flex-col w-full max-md:max-w-full">
                   <div className="flex relative gap-10 w-full max-md:max-w-full">
                     <label htmlFor="query" className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
@@ -200,7 +200,7 @@ const GetInTouchForm = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
+              <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
                   By completing this form you are agreeing to being contacted by NEOM, If you would also like to hear updates from other parts of NEOM please select Yes. We will treat your information carefully. See our{" "}
                   <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
@@ -209,9 +209,17 @@ const GetInTouchForm = () => {
                 </p>
               </div>
             </div>
+            <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
+                <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
+                  By completing this form you are agreeing to being contacted by NEOM, If you would also like to hear updates from other parts of NEOM please select Yes. We will treat your information carefully. See our{" "}
+                  <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
+                  and <a href="#" className="font-medium text-red-700">privacy policy</a>{" "}
+                  for more details.
+                </p>
+              </div>
           </div>
           <div className="flex flex-col justify-center items-start pt-1 mt-9 w-full text-lg font-extralight tracking-widest leading-none text-center text-white uppercase whitespace-nowrap max-md:max-w-full">
-            <button type="submit" className="flex overflow-hidden uppercase w-40 h-14 justify-center items-center self-stretch px-7 py-3.5 my-auto bg-red-700 rounded-full ">
+            <button type="submit" className="flex overflow-hidden uppercase w-40 h-14 justify-center items-center self-center lg:self-stretch px-7 py-3.5 my-auto bg-red-700 rounded-full ">
               Submit
             </button>
           </div>

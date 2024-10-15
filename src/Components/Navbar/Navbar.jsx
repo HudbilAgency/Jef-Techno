@@ -5,17 +5,17 @@ import { Link, NavLink ,useLocation } from 'react-router-dom';
 const menuItems = [
   { label: 'Home', hasDropdown: false, path: '/' },
   { label: 'About', hasDropdown: true },
-  { label: 'Our Business', hasDropdown: true },
-  { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false, path: '/Career' }
+  { label: 'Our Services', hasDropdown: true },
+  { label: 'Blogs', hasDropdown: false },
+  { label: 'Industries', hasDropdown: false, path: '/Industries' }
 ];
 
 const menuItemsMobile = [
   { label: 'Home', path: '/' },
   { label: 'About', path: '/AboutUs' },
-  { label: 'Our Business' },
-  { label: 'News',  },
-  { label: 'Careers', path: '/Career' }
+  { label: 'Our Services' },
+  { label: 'Blogs',  },
+  { label: 'Industries', path: '/Industries' }
 ];
 
 const Navbar = () => {
@@ -196,9 +196,9 @@ const Navbar = () => {
                     )}
               </div>
             </div>
-            <button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
               Get In Touch
-            </button>
+            </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
               <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
             </button>

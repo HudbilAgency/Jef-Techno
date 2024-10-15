@@ -26,7 +26,7 @@ function MainFooter() {
         'Partners'
       ];  
     const itemsCareers = [
-        'Working at JEF'
+        'Jobs'
       ];   
 
   return (
@@ -84,7 +84,7 @@ function Footer() {
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-sm lg:text-base xl:text-xl font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
-            <Link to="/TermsAndConditions" >· Terms of Use</Link>
+            <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
           <div className="text-xs xl:text-xl lg:text-base mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
