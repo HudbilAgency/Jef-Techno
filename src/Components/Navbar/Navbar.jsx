@@ -57,6 +57,10 @@ const Navbar = () => {
     setIsSlideOpen(!isSlideOpen);
   };
 
+
+
+  
+
   
   
 
@@ -268,6 +272,10 @@ const Navbar = () => {
   );
 };
 
+
+
+
+
 const navigationItems = [
   { number: '01', title: 'What is JEF' },
   { number: '02', title: 'JEF leadership team' },
@@ -275,9 +283,9 @@ const navigationItems = [
   { number: '04', title: 'Our vision' }
 ];
 
-
-
 function AboutSection() {
+  const [hoveredItem, setHoveredItem] = useState(null);
+
   return (
     <section className="flex overflow-hidden flex-col h-[80vh] items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
       <div className="ml-3.5 max-w-full w-[994px]">
@@ -286,9 +294,14 @@ function AboutSection() {
             <div className="flex flex-wrap grow gap-6 max-md:mt-10 max-md:max-w-full">
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {navigationItems.map((item, index) => (
-                  <div key={index} className="flex gap-7 items-center mt-11 uppercase tracking-[3.36px] max-md:mt-10">
+                  <div
+                    key={index}
+                    className="flex gap-7 items-center mt-11 uppercase tracking-[3.36px] max-md:mt-10"
+                  >
                     <div className="self-stretch my-auto text-base text-red-700">{item.number}</div>
-                    <div className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white">{item.title}</div>
+                    <div
+                    onMouseEnter={() => setHoveredItem(item.number)}
+                    className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white">{item.title}</div>
                     {item.number === '01' && (
                       <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                         <img
@@ -306,8 +319,14 @@ function AboutSection() {
             </div>
           </nav>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="hiddedComp flex gap-10 mt-16  text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10">
-                <Link to={"/AboutUs"}><h2 className='hover:text-gray-400'>About</h2></Link>
+            <div
+              className={`transition-all duration-500 ease-in-out flex gap-10 mt-16 text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${
+                hoveredItem === '01' ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
+              }`}
+            >
+              <Link to="/AboutUs">
+                <h2 className="hover:text-gray-400">About</h2>
+              </Link>
             </div>
           </div>
         </div>
@@ -319,20 +338,60 @@ function AboutSection() {
 
 
 
-const ServiceItem = ({ icon, text , path }) => (
-  <div className="flex gap-4 items-center mt-8 first:mt-0">
-    <img loading="lazy" src={icon} alt="" className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-    <Link to={path}><div className="self-stretch my-auto">{text}</div></Link>
+
+
+
+
+
+
+
+const ServiceItem = ({ icon, text, path, isVisible }) => (
+  <div
+    className={`flex gap-4 items-center mt-8 first:mt-0 transition-all duration-500 ease-in-out ${
+      isVisible ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-4 invisible'
+    }`}
+  >
+    <img
+      loading="lazy"
+      src={icon}
+      alt=""
+      className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
+    />
+    <Link to={path}>
+      <div className="self-stretch hover:text-gray-400 my-auto">{text}</div>
+    </Link>
   </div>
 );
 
 function ServicesComponent() {
+  const [isHovered, setIsHovered] = useState(false);
+
   const services = [
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/b5f02d9fdb5718b196d139d6ebd861434cc16ed9ab32832947574565d35f1e8a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Earthing studies" , path: '/EarthingStudies' },
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/867f2d5ce1ba02732c6bd156934c4e5560b9272459baee10a94cd80ed6bccf8f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Lightning protection studies", path: '/LightningProtectionStudies' },
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/704550b3ea93f0d94056e8407f045bb96f426d89156169b780aa07bd555d1512?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "power system studies" , path: '/PowerSystemStudies'},
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e7602f18306c0a2953e65246bde5f6d381c9d6dbb4b63b81ac2662d70c68741a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Power quality studies" , path: '/PowerQualityStudies'},
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "instrumentation earthing studies" , path: ''}
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b5f02d9fdb5718b196d139d6ebd861434cc16ed9ab32832947574565d35f1e8a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Earthing studies',
+      path: '/EarthingStudies',
+    },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/867f2d5ce1ba02732c6bd156934c4e5560b9272459baee10a94cd80ed6bccf8f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Lightning protection studies',
+      path: '/LightningProtectionStudies',
+    },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/704550b3ea93f0d94056e8407f045bb96f426d89156169b780aa07bd555d1512?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Power system studies',
+      path: '/PowerSystemStudies',
+    },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e7602f18306c0a2953e65246bde5f6d381c9d6dbb4b63b81ac2662d70c68741a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Power quality studies',
+      path: '/PowerQualityStudies',
+    },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Instrumentation earthing studies',
+      path: '',
+    },
   ];
 
   return (
@@ -340,16 +399,25 @@ function ServicesComponent() {
       <div className="ml-6 max-w-full w-[1016px]">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
-            <header className="flex gap-7 items-center mt-14 max-md:mt-10">
+            <header
+              className="flex gap-7 items-center mt-14 max-md:mt-10"
+            >
               <div className="self-stretch my-auto text-base font-medium text-red-700 uppercase tracking-[3.36px]">
                 01
               </div>
-              <div className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
-                <h2 className="text-xl font-medium text-white uppercase tracking-[3.36px]">
+              <div
+              onMouseEnter={() => setIsHovered(true)}
+              className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
+                <h2 className="text-xl hover:text-gray-400 font-medium text-white uppercase tracking-[3.36px]">
                   Services
                 </h2>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3" alt="" className="object-contain w-2.5 aspect-[0.56]" />
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
+                    alt=""
+                    className="object-contain w-2.5 aspect-[0.56]"
+                  />
                 </div>
               </div>
             </header>
@@ -359,7 +427,13 @@ function ServicesComponent() {
               <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {services.map((service, index) => (
-                  <ServiceItem key={index} icon={service.icon} text={service.text} path={service.path} />
+                  <ServiceItem
+                    key={index}
+                    icon={service.icon}
+                    text={service.text}
+                    path={service.path}
+                    isVisible={isHovered}
+                  />
                 ))}
               </div>
             </div>
@@ -374,20 +448,35 @@ function ServicesComponent() {
 
 
 
-const IndustriesItem = ({ icon, text }) => (
-  <div className="flex gap-4 items-center mt-8 first:mt-0">
-    <img loading="lazy" src={icon} alt="" className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
-    <div className="self-stretch my-auto">{text}</div>
+
+
+
+
+const IndustriesItem = ({ icon, text, isVisible }) => (
+  <div
+    className={`flex gap-4 items-center mt-8 first:mt-0 transition-all duration-500 ease-in-out ${
+      isVisible ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-4 invisible'
+    }`}
+  >
+    <img
+      loading="lazy"
+      src={icon}
+      alt=""
+      className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
+    />
+    <div className="self-stretch  hover:text-gray-400 my-auto">{text}</div>
   </div>
 );
 
 function IndustriesComponent() {
+  const [isHovered, setIsHovered] = useState(false);
+
   const Industries = [
-    { icon: "./AboutUs/OilandGas.png", text: "Oil and Gas" },
-    { icon: "./AboutUs/PoweUtilities.png", text: "power utilities" },
-    { icon: "./AboutUs/MFplant.png", text: "Manufacturing plant" },
-    { icon: "./AboutUs/ProcessPlant.png", text: "process plant" },
-    { icon: "./AboutUs/CBimg.png", text: "commercial buildings" }
+    { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas' },
+    { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities' },
+    { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant' },
+    { icon: './AboutUs/ProcessPlant.png', text: 'Process Plant' },
+    { icon: './AboutUs/CBimg.png', text: 'Commercial Buildings' },
   ];
 
   return (
@@ -395,16 +484,25 @@ function IndustriesComponent() {
       <div className="ml-6 max-w-full w-[1016px]">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
-            <header className="flex gap-7 items-center mt-14 max-md:mt-10">
+            <header
+              className="flex gap-7 items-center mt-14 max-md:mt-10"
+            >
               <div className="self-stretch my-auto text-base font-medium text-red-700 uppercase tracking-[3.36px]">
                 01
               </div>
-              <div className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
-                <h2 className="text-xl font-medium text-white uppercase tracking-[3.36px]">
+              <div 
+              onMouseEnter={() => setIsHovered(true)}
+              className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
+                <h2 className="text-xl font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
                   Our Industries
                 </h2>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
-                  <img loading="lazy" src="public/AboutUs/RightArrow.png" alt="" className="object-contain w-2.5 aspect-[0.56]" />
+                  <img
+                    loading="lazy"
+                    src="./AboutUs/RightArrow.png"
+                    alt=""
+                    className="object-contain w-2.5 aspect-[0.56]"
+                  />
                 </div>
               </div>
             </header>
@@ -413,8 +511,13 @@ function IndustriesComponent() {
             <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
               <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
-                {Industries.map((Industries, index) => (
-                  <IndustriesItem key={index} icon={Industries.icon} text={Industries.text} />
+                {Industries.map((industry, index) => (
+                  <IndustriesItem
+                    key={index}
+                    icon={industry.icon}
+                    text={industry.text}
+                    isVisible={isHovered}
+                  />
                 ))}
               </div>
             </div>
@@ -424,6 +527,7 @@ function IndustriesComponent() {
     </section>
   );
 }
+
 
 
 
