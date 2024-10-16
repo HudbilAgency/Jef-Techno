@@ -582,7 +582,7 @@ useGSAP(() => {
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
         <div className="flex flex-col items-start mb-0 w-full  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-            <h1 className=" text-4xl lg:text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <h1 className=" text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 text-sm lg:text-base tracking-[3px]">
               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
               <Link to="/Blog">
@@ -597,7 +597,7 @@ useGSAP(() => {
               </Link>
             </div>
           </header>
-          <nav className="flex gap-8 mt-16  text-sm lg:text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
+          <nav className="flex gap-8 mt-16  text-sm lg:text-lg uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
             <a href="#newest" className="text-red-700 basis-auto">Newest</a>
             <a href="#oldest" className="text-neutral-900">Oldest</a>
           </nav>
