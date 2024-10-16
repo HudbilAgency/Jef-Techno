@@ -3,31 +3,36 @@ import { Link } from "react-router-dom";
 function MainFooter() {
 
 
-    const itemsAbout = [
-        'What is JEF',
-        'JEF leadership team',
-        'JEF Smart Digitalization',
-        'JEF L & D Centre',
-      ];
-    const itemsService = [
-        'Power System Studies',
-        'Power Quality Studies',
-        'Earthing Studies',
-        'LPS System Studies',
-        'Instrumentation Studies',
-      ];
-    const itemsLocation = [
-        'Mena',
-        'Europe',
-        'Asian'
-      ]; 
-    const itemsBusiness = [
-        'Sectors',
-        'Partners'
-      ];  
-    const itemsCareers = [
-        'Jobs'
-      ];   
+  const itemsAbout = [
+    { name: 'What is JEF', path: '' },
+    { name: 'JEF leadership team', path: '' },
+    { name: 'JEF Smart Digitalization', path: '' },
+    { name: 'JEF L & D Centre', path: '' }
+  ];
+  
+  const itemsService = [
+    { name: 'Power System Studies', path: '' },
+    { name: 'Power Quality Studies', path: '' },
+    { name: 'Earthing Studies', path: '' },
+    { name: 'LPS System Studies', path: '' },
+    { name: 'Instrumentation Studies', path: '' }
+  ];
+  
+  const itemsLocation = [
+    { name: 'Mena', path: '' },
+    { name: 'Europe', path: '' },
+    { name: 'Asian', path: '' }
+  ];
+  
+  const itemsBusiness = [
+    { name: 'Sectors', path: '' },
+    { name: 'Partners', path: '' }
+  ];
+  
+  const itemsCareers = [
+    { name: 'Jobs', path: '/Career' }
+  ];
+  
 
   return (
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
@@ -109,7 +114,7 @@ function Section({ title, items }) {
         {items.map((item, index) => (
           <li key={index} className="flex flex-col justify-center items-start py-2.5 w-full">
             <div className="flex items-center">
-              <div className="self-stretch my-auto">{item}</div>
+              <Link to={item.path}><div className="self-stretch my-auto">{item.name}</div></Link>
             </div>
           </li>
         ))}
