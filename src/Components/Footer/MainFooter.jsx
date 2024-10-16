@@ -75,7 +75,7 @@ function Footer() {
     <footer className="flex flex-col items-center pt-10 bg-stone-800">
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[85vw] border border-solid border-neutral-400 max-md:mt-8" />
       <div className="flex flex-row gap-10 justify-between items-start mt-5 lg:w-[85vw] max-w-[95vw]">
-        <div className="hidden lg:block text-2xl tracking-widest text-white uppercase max-md:max-w-full">
+        <div className="hidden lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex flex-row h-full space-x-12 lg:space-x-6">
@@ -87,14 +87,14 @@ function Footer() {
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
-          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-sm lg:text-base xl:text-xl font-light basis-auto grow-0 tracking-widest">
+          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-sm lg:text-sm xl:text-xl font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs xl:text-xl lg:text-base mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs xl:text-base lg:text-base mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
-              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-5 lg:h-8' />
+              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 lg:h-10 -mt-[2%] -ml-[2%]' />
           </div>   
         </div>
       </div>
@@ -107,10 +107,10 @@ function Footer() {
 function Section({ title, items }) {
   return (
     <section className="flex flex-col min-h-[234px] w-[219px]">
-      <header className="w-full text-2xl xl:text-3xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
+      <header className="w-full text-2xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
         {title}
       </header>
-      <ul className="flex overflow-hidden flex-col mt-4 w-full text-base leading-none text-white">
+      <ul className="flex overflow-hidden font-light flex-col mt-4 w-full text-base leading-none text-gray-300">
         {items.map((item, index) => (
           <li key={index} className="flex flex-col justify-center items-start py-2.5 w-full">
             <div className="flex items-center">

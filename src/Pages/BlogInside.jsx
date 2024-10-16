@@ -1,7 +1,8 @@
 import React from 'react';
-import MainImgWhite from '../Components/MainImgWhite/MainImgWhite';
+
 import MainFooter from '../Components/Footer/MainFooter';
 import Navbar from '../Components/Navbar/Navbar';
+import { Link} from 'react-router-dom';
 
 const BlogInside = () => {
   const faqItems = [
@@ -74,7 +75,7 @@ const BlogInside = () => {
         </ul>
         <h2 className="mt-10 text-xl leading-tight text-zinc-800">Our Offerings</h2>
         <p className="mt-10 text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
-          JEF offers Power System Studies for: Substations | Wind Farms | Pooling Substations | Solar Photovoltaic Power Plants | Gas Turbine Power Plants | Hydropower Stations | Distribution Stations – LV Side | Oil & Gas | Water Treatment Plants | Data Centres | Process Plants | Steel Plants | Petrochemical Plants
+          JEF offers Power System Studies for: Substations , NavLink ,useLocation | Wind Farms | Pooling Substations | Solar Photovoltaic Power Plants | Gas Turbine Power Plants | Hydropower Stations | Distribution Stations – LV Side | Oil & Gas | Water Treatment Plants | Data Centres | Process Plants | Steel Plants | Petrochemical Plants
         </p>
         <h2 className="mt-10 text-xl leading-tight text-zinc-800">Our Approach</h2>
         <p className="mt-9 text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
@@ -99,7 +100,9 @@ const BlogInside = () => {
           For more information about our power system study services, please contact our team of experts today <a href="mailto:marketing@jeftechno.com" className="text-red-700">marketing@jeftechno.com</a>
         </p>
         <div className="flex gap-4 items-center mt-10 max-md:mt-10">
-          <button className="flex gap-2.5 justify-center items-center self-stretch p-2.5 my-auto border border-black border-solid rounded-[60px] w-[102px]">
+         
+        <Link to="/Blog">
+         <button className="flex gap-2.5 justify-center items-center self-stretch p-2.5 my-auto border border-black border-solid rounded-[60px] w-[102px]">
             <span className="self-stretch my-auto text-xs tracking-widest leading-tight text-black uppercase">back</span>
             <span className="flex flex-col items-start self-stretch pl-0.5 my-auto min-h-[15px] w-[17px]">
               <span className="flex flex-col justify-center min-h-[15px] w-[15px]">
@@ -107,6 +110,7 @@ const BlogInside = () => {
               </span>
             </span>
           </button>
+          </Link>
           <button className="flex gap-2.5 justify-center items-center self-stretch px-2.5 py-2 my-auto text-xs tracking-widest leading-tight text-black uppercase border border-black border-solid min-h-[35px] rounded-[60px] w-[169px]">
             <span className="self-stretch my-auto">Share Article</span>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/fcdc8df2cf6c6018ed3b67ad00e235ecf72f8710aab646567dca0259cf55ff34?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className="object-contain shrink-0 self-stretch my-auto aspect-square w-[19px]" alt="" />

@@ -135,8 +135,7 @@ const EarthingStudies = () => {
       ]
 
       const buttons = [
-        { text: 'DISCOVER TOURISM', className: 'bg-red-700' },
-        { text: 'DISCOVER NATURE', className: 'bg-red-700' }
+        { text: 'CONTACT US', className: 'bg-red-700' }
       ];
     
 
@@ -156,12 +155,12 @@ const EarthingStudies = () => {
           className="object-cover absolute inset-0 size-full"
         />
         <div className="flex inset-y-2/3 lg:inset-x-40 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
-          <h1 className="xl:text-6xl  2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+          <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EARTHING STUDIES
           </h1>
           <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
             
-            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-xl  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
+            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-xl  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
           </div>
@@ -325,11 +324,9 @@ const EarthingStudies = () => {
               <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full sm:w-[90%] md:w-[510px] mx-auto">
                 {buttons.map((button, index) => (
                   <div key={index} className="flex flex-col flex-1 grow shrink-0 justify-center p-2.5 text-sm leading-none basis-0 min-h-[80px] w-fit">
-                    <div className="flex items-center py-1 w-full max-w-[235px] min-h-[60px]">
-                      <button className={`flex overflow-hidden justify-center items-center self-stretch px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
-                        <span className="self-stretch text-xs md:text-sm my-auto">
-                          {button.text}
-                        </span>
+                    <div className="flex items-center justify-center self-center py-1 w-full max-w-[235px] min-h-[60px]">
+                      <button className={`flex overflow-hidden justify-center items-center self-center px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
+                        CONTACT US
                       </button>
                     </div>
                   </div>
@@ -514,7 +511,7 @@ function CarouselSection({ components }) {
                 flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
               }}
             >
-              <img src={component.imageSrc} alt={component.title} className="object-contain w-[4rem] aspect-square" />
+              <img src={component.imageSrc} alt={component.title} className="object-contain flex-0 w-[4rem] aspect-square" />
               <h3 className="text-red-700 font-normal w-[50%] sm:w-[70%] lg:text-4xl sm:text-3xl text-2xl sm:text-start my-10 text-center">{component.title}</h3>
               <p className=" text-gray-400 text-center w-[50%] sm:w-[70%] font-thin lg:w-[90%] lg:text-2xl sm:text-start text-xl max-w-screen-xl">{component.description}</p>
             </div>

@@ -6,8 +6,8 @@ const menuItems = [
   { label: 'Home', hasDropdown: false, path: '/' },
   { label: 'About', hasDropdown: true },
   { label: 'Our Services', hasDropdown: true },
+  { label: 'Industries', hasDropdown: true },
   { label: 'Blogs', hasDropdown: false },
-  { label: 'Industries', hasDropdown: false, path: '/Industries' }
 ];
 
 const menuItemsMobile = [
@@ -91,7 +91,7 @@ const Navbar = () => {
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className={`self-stretch my-auto md:text-base xl:text-2xl font-medium tracking-[2px] ${
+                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium tracking-[2px] ${
                       activeSection 
                       ? 'text-white' 
                       : location.pathname === '/' 
@@ -105,7 +105,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch my-auto md:text-base xl:text-2xl font-medium ${
+                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium ${
                       activeSection 
                       ? 'text-white' 
                       : location.pathname === '/' 
@@ -150,16 +150,10 @@ const Navbar = () => {
 
           {/* Language and Other Buttons */}
           <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/d286a54bf2245ec9b8204fea512ccef9942321493eb7d4c073ee049948aa0c7a?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-              alt="Search"
-              className="object-contain w-9 hidden lg:block"
-            />
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className={`self-stretch my-auto text-base md:text-lg xl:text-2xl font-light tracking-[2px] ${  
+                className={`self-stretch my-auto text-base md:text-lg xl:text-xl font-light tracking-[2px] ${  
                     activeSection 
                   ? 'text-white' 
                   : location.pathname === '/' 
@@ -197,7 +191,7 @@ const Navbar = () => {
               </div>
             </div>
             <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
-              Get In Touch
+              Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
               <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
@@ -211,6 +205,10 @@ const Navbar = () => {
 
       {/* Conditionally Render Sections */}
       {activeSection === 'About' && <AboutSection />}
+      {activeSection === 'Our Services' && <ServicesComponent />}
+      {activeSection === 'Industries' && <IndustriesComponent />}
+      
+      
       {/* Add more sections conditionally like this */}
 
 
@@ -277,6 +275,8 @@ const navigationItems = [
   { number: '04', title: 'Our vision' }
 ];
 
+
+
 function AboutSection() {
   return (
     <section className="flex overflow-hidden flex-col h-[80vh] items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
@@ -288,9 +288,9 @@ function AboutSection() {
                 {navigationItems.map((item, index) => (
                   <div key={index} className="flex gap-7 items-center mt-11 uppercase tracking-[3.36px] max-md:mt-10">
                     <div className="self-stretch my-auto text-base text-red-700">{item.number}</div>
-                    <div className="self-stretch my-auto text-2xl hover:text-gray-400 font-medium text-white">{item.title}</div>
+                    <div className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white">{item.title}</div>
                     {item.number === '01' && (
-                      <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px] rotate-[-1.5707963267948966rad]">
+                      <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                         <img
                           loading="lazy"
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
@@ -306,9 +306,8 @@ function AboutSection() {
             </div>
           </nav>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex gap-10 mt-16  text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10">
+            <div className="hiddedComp flex gap-10 mt-16  text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10">
                 <Link to={"/AboutUs"}><h2 className='hover:text-gray-400'>About</h2></Link>
-              <p className="flex-auto hover:text-gray-400">redefining business</p>
             </div>
           </div>
         </div>
@@ -316,5 +315,116 @@ function AboutSection() {
     </section>
   );
 }
+
+
+
+
+const ServiceItem = ({ icon, text , path }) => (
+  <div className="flex gap-4 items-center mt-8 first:mt-0">
+    <img loading="lazy" src={icon} alt="" className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
+    <Link to={path}><div className="self-stretch my-auto">{text}</div></Link>
+  </div>
+);
+
+function ServicesComponent() {
+  const services = [
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/b5f02d9fdb5718b196d139d6ebd861434cc16ed9ab32832947574565d35f1e8a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Earthing studies" , path: '/EarthingStudies' },
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/867f2d5ce1ba02732c6bd156934c4e5560b9272459baee10a94cd80ed6bccf8f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Lightning protection studies", path: '/LightningProtectionStudies' },
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/704550b3ea93f0d94056e8407f045bb96f426d89156169b780aa07bd555d1512?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "power system studies" , path: '/PowerSystemStudies'},
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e7602f18306c0a2953e65246bde5f6d381c9d6dbb4b63b81ac2662d70c68741a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Power quality studies" , path: '/PowerQualityStudies'},
+    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "instrumentation earthing studies" , path: ''}
+  ];
+
+  return (
+    <section className="flex overflow-hidden flex-col h-[80vh] items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+      <div className="ml-6 max-w-full w-[1016px]">
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
+            <header className="flex gap-7 items-center mt-14 max-md:mt-10">
+              <div className="self-stretch my-auto text-base font-medium text-red-700 uppercase tracking-[3.36px]">
+                01
+              </div>
+              <div className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
+                <h2 className="text-xl font-medium text-white uppercase tracking-[3.36px]">
+                  Services
+                </h2>
+                <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3" alt="" className="object-contain w-2.5 aspect-[0.56]" />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
+              <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
+              <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
+                {services.map((service, index) => (
+                  <ServiceItem key={index} icon={service.icon} text={service.text} path={service.path} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+
+
+
+const IndustriesItem = ({ icon, text }) => (
+  <div className="flex gap-4 items-center mt-8 first:mt-0">
+    <img loading="lazy" src={icon} alt="" className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square" />
+    <div className="self-stretch my-auto">{text}</div>
+  </div>
+);
+
+function IndustriesComponent() {
+  const Industries = [
+    { icon: "./AboutUs/OilandGas.png", text: "Oil and Gas" },
+    { icon: "./AboutUs/PoweUtilities.png", text: "power utilities" },
+    { icon: "./AboutUs/MFplant.png", text: "Manufacturing plant" },
+    { icon: "./AboutUs/ProcessPlant.png", text: "process plant" },
+    { icon: "./AboutUs/CBimg.png", text: "commercial buildings" }
+  ];
+
+  return (
+    <section className="flex overflow-hidden flex-col h-[80vh] items-center px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+      <div className="ml-6 max-w-full w-[1016px]">
+        <div className="flex gap-5 max-md:flex-col">
+          <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
+            <header className="flex gap-7 items-center mt-14 max-md:mt-10">
+              <div className="self-stretch my-auto text-base font-medium text-red-700 uppercase tracking-[3.36px]">
+                01
+              </div>
+              <div className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
+                <h2 className="text-xl font-medium text-white uppercase tracking-[3.36px]">
+                  Our Industries
+                </h2>
+                <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
+                  <img loading="lazy" src="public/AboutUs/RightArrow.png" alt="" className="object-contain w-2.5 aspect-[0.56]" />
+                </div>
+              </div>
+            </header>
+          </div>
+          <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
+              <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
+              <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
+                {Industries.map((Industries, index) => (
+                  <IndustriesItem key={index} icon={Industries.icon} text={Industries.text} />
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
 
 export default Navbar;

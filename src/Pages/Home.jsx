@@ -550,16 +550,16 @@ useGSAP(() => {
         <div className="flex gap-5 p-4 max-md:flex-col">
           <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
             <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
-              <h1 className="text-6xl font-bold uppercase tracking-[3px] max-md:max-w-full max-md:text-4xl">
+              <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
-              <p className="self-stretch my-20 lg:w-[45vw] text-2xl lg:text-3xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p className="self-stretch my-20 lg:w-[35vw] text-xl lg:text-2xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
-              <h2 className="text-3xl lg:text-5xl font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
-              <p className="my-4 text-2xl lg:text-3xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
-              <p className="text-2xl lg:text-3xl">{"JEF Group"}</p>
+              <h2 className="text-2xl lg:text-3xl  font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className="my-4 text-xl lg:text-2xl  max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="text-xl lg:text-2xl ">{"JEF Group"}</p>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
@@ -580,9 +580,9 @@ useGSAP(() => {
 
   <section>
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
-        <div className="flex flex-col items-start mb-0 w-full max-w-[1480px]  max-md:max-w-full">
+        <div className="flex flex-col items-start mb-0 w-full  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-            <h1 className="lg:text-6xl text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <h1 className=" text-4xl lg:text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 text-sm lg:text-base tracking-[3px]">
               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
               <Link to="/Blog">
@@ -597,7 +597,7 @@ useGSAP(() => {
               </Link>
             </div>
           </header>
-          <nav className="flex gap-8 mt-16  text-base lg:text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
+          <nav className="flex gap-8 mt-16  text-sm lg:text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
             <a href="#newest" className="text-red-700 basis-auto">Newest</a>
             <a href="#oldest" className="text-neutral-900">Oldest</a>
           </nav>
@@ -627,10 +627,10 @@ useGSAP(() => {
       <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
         <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-          <h1 className="text-5xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+          <h1 className="text-2xl lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
             Contact us
           </h1>
-          <p className="self-stretch mt-4 text-lg font-normal leading-none text-white max-md:max-w-full">
+          <p className="self-stretch mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
           Get in touch with us for any business enquiry.
           </p>
           <form className="w-full mt-12 max-md:mt-10">
@@ -639,7 +639,7 @@ useGSAP(() => {
             ))}
             <button
               type="submit"
-              className="overflow-hidden px-16 py-4 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+              className="overflow-hidden px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
             >
               Submit
             </button>
@@ -713,8 +713,7 @@ const WhatWeDoSection = () => {
           {/* Left Section */}
           <section className="flex flex-wrap lg:w-[50%] justify-between">
             <div className="flex tracking-[3px] flex-col self-start text-2xl lg:text-3xl font-bold">
-              <h1 className="text-white uppercase ">what we do</h1>
-              <div className="shrink-0 border border-zinc-400 thin-border" />
+              <h1 className="text-white uppercase mt-[2%]">what we do</h1>
             </div>
             <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
               <div className="grow max-md:max-w-full">
@@ -742,7 +741,7 @@ const WhatWeDoSection = () => {
 
           {/* Right Section */}
           <section className="lg:w-[40%] flex flex-col justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
-            <div className="flex flex-col lg:w-[80%] text-3xl font-medium leading-10 max-md:max-w-full">
+            <div className="flex flex-col lg:w-[80%] text-2xl font-medium leading-10 max-md:max-w-full">
               <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
               <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
             </div>
@@ -775,7 +774,7 @@ const WhatWeDoSection = () => {
                       <p className="self-stretch mt-6 w-[80%] text-lg lg:text-xl h-[23vh] leading-9 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-xl mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:h-14 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-xl mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:py-4 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
@@ -871,7 +870,7 @@ function FeatureSection() {
        {/* For Large ScreenSizes */}
 
         <section className="hidden mx-auto lg:block overflow-hidden shrink-0 container self-center my-20 w-full h-screen  max-md:mt-10 max-md:max-w-full ">
-          <div className=" text-3xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
+          <div className=" text-2xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
                   Why choose JEF ?
                 </div>
           <div className={`flex gap-5 max-md:flex-col`}>
@@ -881,14 +880,14 @@ function FeatureSection() {
             
             <div className={`flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
               <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-                <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
+                <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-6xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
                       Smart digitalisation 
                 </h2>
-                <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-7xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
+                <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-6xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
                 Our L&d centre
                 </h2>
                 <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-                  <p className="description1 text-2xl mt-10 font-light leading-10 max-md:max-w-full">
+                  <p className="description1 -ml-[12%] text-2xl mt-10 font-light leading-10 max-md:max-w-full">
                   Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
                   </p>
                   <p className='description2 -mt-[5%] text-2xl font-light leading-10 max-md:max-w-full'>
@@ -972,7 +971,7 @@ function FormInput({ label, type }) {
         id={id}
         name={id}
         placeholder={label}
-        className="overflow-hidden px-5 py-3.5 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+        className="overflow-hidden px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
         required
       />
     </div>
@@ -1094,7 +1093,7 @@ const LandingImages = () => {
               Your browser does not support the video tag.
             </video>
           <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-6xl 2xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
             </h1>

@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import MainImg from '../Components/MainImg/MainImg';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
+import Navbar from "../Components/Navbar/Navbar";
 
 const LightningProtectionStudies = () => {
 
@@ -136,7 +137,7 @@ const LightningProtectionStudies = () => {
   return (
    <>
     
-    < MainImg/>
+    < Navbar/>
 
     {/* Landing Img Section */}
 
@@ -595,7 +596,7 @@ function CarouselSection({ components }) {
               >
                 {/* Each card */}
                 <div className="">
-                  <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
+                  <img src={component.imageSrc} alt={component.title} className="w-[4rem]" />
                 </div>
                 <h3 className="mt-8 xl:w-[75%] font-normal leading-none text-red-700">
                   {component.title}

@@ -52,7 +52,6 @@ const AboutUs = () => {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/e16ee975eb679a5915e4c081858a20a90389fd8b30454bd57483da22afade137?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
           title: "Mission",
           description: "Deliver Value added, technically superior and cost-optimum solutions to enhance the safety & reliability of Electrical systems by combining knowledge, experience and technology.",
-          learnMore: true
         },
         {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/2137e57fab69bcc7f6fe80e5f7e438b0cdfa992da4b7bf36e2da2159fb80627e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
@@ -762,7 +761,7 @@ function EconomicEngine() {
               An Economic Engine
             </span>
           </h1>
-          <p className="pb-px mt-5 w-full text-2xl font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-16 w-full text-2xl font-light leading-9 max-md:max-w-full">
           We provide the below-mentioned solutions for Transmission & Distribution Utilities, Oil & Gas <br /> Infrastructure, and such other customers. Earthing/Grounding Studies, Lightning Protection Studies <br /> Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>

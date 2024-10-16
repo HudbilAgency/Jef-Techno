@@ -580,7 +580,7 @@ function CarouselSection({ components }) {
               >
                 {/* Each card */}
                 <div className="">
-                  <img src={component.imageSrc} alt={component.title} className="w-full h-auto" />
+                  <img src={component.imageSrc} alt={component.title} className="w-[4rem]" />
                 </div>
                 <h3 className="mt-8 xl:w-[75%] h-[5vh] font-normal leading-none text-red-700">
                   {component.title}

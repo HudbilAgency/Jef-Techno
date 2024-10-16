@@ -1,16 +1,17 @@
 import React from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
+import { Link} from 'react-router-dom';
 
 
-const BlogPost = ({ date, title, content, imageUrl }) => (
+const BlogPost = ({ date, title, content, imageUrl , path  }) => (
   <article className="flex flex-col w-full  max-md:mt-10">
     <img loading="lazy" src={imageUrl} alt="" className="object-contain w-full aspect-[1.5]" />
     <time className="self-start mt-3.5 text-xs font-thin leading-snug uppercase text-zinc-600">{date}</time>
     <h2 className="mt-2.5 text-lg leading-6 uppercase text-stone-900">{title}</h2>
     <p className="mt-3.5 text-sm font-thin leading-6 text-stone-900">{content}</p>
     <a href="#" className="flex gap-2.5 items-center self-start mt-6">
-      <span className="self-stretch pb-px my-auto text-xs tracking-widest leading-tight text-red-700 uppercase">Learn More</span>
+      <Link to={path} ><span className="self-stretch pb-px my-auto text-xs tracking-widest leading-tight text-red-700 uppercase">Learn More</span></Link>
       <span className="flex flex-col items-start self-stretch pl-0.5 my-auto min-h-[15px] w-[17px]">
         <span className="flex flex-col justify-center min-h-[15px] w-[15px]">
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6864a9076b57404370db3fa6548d76f9442f8db4ea6397d9235cbe4290b012c0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-full aspect-square" />
@@ -26,7 +27,8 @@ const Blog = () => {
       date: "August 15, 2024",
       title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
       content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
-      imageUrl: "./BlogImg/BlogImg1.png"
+      imageUrl: "./BlogImg/BlogImg1.png",
+      path: '/BlogInside'
     },
     {
       date: "August 15, 2024",
