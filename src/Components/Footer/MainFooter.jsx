@@ -11,10 +11,10 @@ function MainFooter() {
   ];
   
   const itemsService = [
-    { name: 'Power System Studies', path: '' },
-    { name: 'Power Quality Studies', path: '' },
-    { name: 'Earthing Studies', path: '' },
-    { name: 'LPS System Studies', path: '' },
+    { name: 'Power System Studies', path: '/PowerSystemStudies' },
+    { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
+    { name: 'Earthing Studies', path: '/EarthingStudies' },
+    { name: 'LPS System Studies', path: '/LightningProtectionStudies' },
     { name: 'Instrumentation Studies', path: '' }
   ];
   
