@@ -4,7 +4,7 @@ function App() {
 
   return (
     <>
-    < Routers/>
+    <div className='font-Montserrat'>< Routers/></div>
   </>
   )
 }

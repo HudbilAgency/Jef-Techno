@@ -125,7 +125,7 @@ function Industries() {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1518px] max-md:max-w-full">
-        <h2 className="self-start text-5xl leading-none text-red-700 uppercase max-md:max-w-full max-md:text-4xl">
+        <h2 className="self-start text-4xl leading-none text-red-700 uppercase max-md:max-w-full max-md:text-4xl">
           service provided
         </h2>
         <div className="flex flex-wrap gap-10 items-start mt-20 max-md:mt-10">
@@ -134,7 +134,7 @@ function Industries() {
               <article className="flex flex-col pb-1.5 rounded-none min-w-[240px] w-[443px] max-md:max-w-full">
                 <h3 className="self-start ">
                 <img 
-                src={service.number}  />
+                src={service.number}  className="h-[2rem] lg:h-[3rem]"/>
                 </h3>
                 <h4 className="mt-6 text-2xl leading-8 text-red-700 max-md:max-w-full">
                   {service.title}
@@ -144,7 +144,7 @@ function Industries() {
                 </p>
               </article>
               {index < serviceData.length - 1 && (
-                <div className="shrink-0 w-px border border-white h-[62vh] hidden md:block" />
+                <div className="shrink-0 w-px border border-gray-400 h-[57vh] hidden md:block" />
               )}
             </React.Fragment>
           ))}
@@ -155,10 +155,21 @@ function Industries() {
 
 
 
-    <section className="py-20">
-      {/* <Segments/> */}
-      <img src="./IndustriesPage/Segments.png" alt="SegmentsPhoto" className="w-screen"/>
+    <section className="hidden lg:block py-20">
+    <main>
+      <h1 className="text-5xl text-red-700 text-center font-semibold uppercase tracking-widest">Segments</h1>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fec8dd4c0faf600f3fdc9aa66a007a0646ef06fff1de8c883aa0da6ffda49ac6?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
+        className="object-contain mt-16 w-full aspect-[7.3] max-md:mt-10 max-md:max-w-full"
+        alt="Decorative image"
+      />
+    </main>
     </section>
+    <section>
+      
+    </section>
+
 
 
 

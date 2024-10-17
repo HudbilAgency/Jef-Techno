@@ -497,8 +497,8 @@ function CarouselSection({ components }) {
                 flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
               }}
             >
-              <img src={component.imageSrc} alt={component.title} className="object-contain flex-0 w-[4rem] aspect-square" />
-              <h3 className="text-red-700 font-normal w-[50%] sm:w-[70%] lg:text-2xl text-2xl sm:text-start my-10 text-center">{component.title}</h3>
+              <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
+              <h3 className="text-red-700 font-normal sm:w-[90%] text-2xl sm:text-start my-10 text-center">{component.title}</h3>
               <p className=" text-gray-400 text-center w-[50%] sm:w-[70%] font-thin lg:w-[90%] lg:text-2xl sm:text-start text-xl max-w-screen-xl">{component.description}</p>
             </div>
             

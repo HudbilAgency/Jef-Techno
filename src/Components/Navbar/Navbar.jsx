@@ -1,4 +1,4 @@
-import React, { useState , useEffect } from 'react';
+import React, { useState , useEffect , useRef } from 'react';
 import { Link, NavLink ,useLocation } from 'react-router-dom';
 
 
@@ -7,7 +7,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Services', hasDropdown: true },
   { label: 'Industries', hasDropdown: true },
-  { label: 'Blogs', hasDropdown: false },
+  { label: 'Blogs', hasDropdown: false , path: '/Blog' },
 ];
 
 const menuItemsMobile = [
@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
   const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === 'English' ? 'Français' : 'English'));
+    setLanguage((prevLang) => (prevLang === 'English' ? 'Arabic (عربي)' : 'English'));
   };
 
   const handleMenuClick = (label) => {
@@ -95,13 +95,7 @@ const Navbar = () => {
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium tracking-[2px] ${
-                      activeSection 
-                      ? 'text-white' 
-                      : location.pathname === '/' 
-                        ? 'text-black' 
-                        : 'text-white'
-                      }`}
+                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium tracking-[2px] text-white`}
                     activeClassName="active" // Optional: styling for active link
                   >
                     {item.label}
@@ -109,13 +103,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium ${
-                      activeSection 
-                      ? 'text-white' 
-                      : location.pathname === '/' 
-                        ? 'text-black' 
-                        : 'text-white'
-                    } tracking-[2px]`}
+                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium text-white tracking-[2px]`}
                   >
                     {item.label}
                   </button>
@@ -123,29 +111,12 @@ const Navbar = () => {
                 {item.hasDropdown && (
                   <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
                     
-                    {
-                      activeSection 
-                      ? (<img
-                        loading="lazy"
-                        src="./HomePageImg/NavbarImg/Dropdown.png"
-                        alt="Dropdown"
-                        className="object-contain w-9 hidden lg:block"
-                      />) 
-                      :
-                     location.pathname == '/' ? 
-                      (<img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                      alt={`${item.label} dropdown`}
-                      className="object-contain aspect-[1.8] w-[18px]"
-                    />):(
-                      <img
+                    <img
                       loading="lazy"
                       src="./HomePageImg/NavbarImg/Dropdown.png"
                       alt="Dropdown"
                       className="object-contain w-9 hidden lg:block"
                     />
-                    )}
                   </div>
                 )}
               </div>
@@ -157,44 +128,22 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className={`self-stretch my-auto text-base md:text-lg xl:text-xl font-light tracking-[2px] ${  
-                    activeSection 
-                  ? 'text-white' 
-                  : location.pathname === '/' 
-                    ? 'text-black' 
-                    : 'text-white'}`}
+                className={`self-stretch my-auto text-base md:text-lg xl:text-xl font-light tracking-[2px] text-white {
+                  
+                }`}
               >
                 {language}
               </button>
               <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                    {
-                       activeSection 
-                       ? (
-                        <img
-                        loading="lazy"
-                        src="./HomePageImg/NavbarImg/Dropdown.png"
-                        alt="Dropdown"
-                        className="object-contain w-9 hidden lg:block"
-                      />
-                      )
-                       : 
-                     location.pathname == '/' ? 
-                      (<img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/932bb1b4188128c4db68e06cefe2307fe98ad701028c66d1c2a9754b15480222?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                      alt={`dropdown`}
-                      className="object-contain aspect-[1.8] w-[18px]"
-                    />):(
-                      <img
+                     <img
                       loading="lazy"
                       src="./HomePageImg/NavbarImg/Dropdown.png"
                       alt="Dropdown"
                       className="object-contain w-9 hidden lg:block"
                     />
-                    )}
               </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-white bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
               Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
@@ -233,7 +182,9 @@ const Navbar = () => {
         <div className="h-full">
 
 
-        <nav className="flex mt-[40%] sm:mt-[20%] md:mt-[10%] flex-col gap-10 self-center items-center my-auto w-full">
+         < FAQComponent/>
+
+        {/* <nav className="flex mt-[40%] sm:mt-[20%] md:mt-[10%] flex-col gap-10 self-center items-center my-auto w-full">
             {menuItemsMobile.map((item, index) => (
               <div
                 key={index}
@@ -258,8 +209,8 @@ const Navbar = () => {
                 )}
               </div>
             ))}
-            {/* <div className="w-full border-t border-neutral-500 mt-4" /> Thin line between items */}
-          </nav>
+            
+          </nav> */}
 
 
 
@@ -492,10 +443,10 @@ function IndustriesComponent() {
               </div>
               <div 
               onMouseEnter={() => setIsHovered(true)}
-              className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
-                <h2 className="text-xl font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
+              className="flex gap-10 self-stretch my-auto min-w-[240px] ">
+                <Link to={'/Industries'}><h2 className="text-xl font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
                   Our Industries
-                </h2>
+                </h2></Link>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                   <img
                     loading="lazy"
@@ -528,6 +479,180 @@ function IndustriesComponent() {
   );
 }
 
+
+
+
+
+const languages = ["Arabic", "French", "Deutch", "English"];
+
+const LanguageSelector = () => {
+  return (
+    <nav className="flex overflow-hidden flex-col text-base font-medium text-right text-white uppercase whitespace-nowrap max-w-[94px] tracking-[3.36px]">
+      <ul className="flex flex-col items-end w-full">
+        {languages.map((language, index) => (
+          <li key={language} className={`gap-4 self-stretch ${index > 0 ? "mt-8" : ""} w-full`}>
+            <button className="w-full text-right">{language}</button>
+          </li>
+        ))}
+      </ul>
+      <img
+        loading="lazy"
+        src="https://cdn.builder.io/api/v1/image/assets/TEMP/a81adce09be39cf88a0d46ca8aaa2c9d75422b95bb809ff25b10924e3afedcc6?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
+        alt=""
+        className="object-contain self-end mt-28 aspect-square w-[60px]"
+      />
+    </nav>
+  );
+};
+
+
+
+const FAQComponent = () => {
+  const [faqData, setFaqData] = useState([
+    { 
+      question: "Home", 
+      content: [
+        { label: 'Home', path: '/' },
+      ], 
+      isOpen: false ,
+    },
+    { 
+      question: "About", 
+      content: [
+        { label: 'About Us', path: '/AboutUs' },
+      ], 
+      isOpen: false , 
+
+      
+    },
+    { 
+      question: "Our Services", 
+      content: [
+        { label: 'Power System Studies', path: '/PowerSystemStudies' },
+        { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
+        { label: 'Earthing Studies', path: '/EarthingStudies' },
+        { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
+        { label: 'Instrumentation Studies', path: '' }
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Industries", 
+      content: [
+        { label: 'Oil and Gas', path: '' },
+        { label: 'Power Utilites', path: '' },
+        { label: 'Manufacturing Plant', path: '' },
+        { label: 'Process Plant', path: '' },
+        { label: 'Commercial Buildings', path: '' }
+      ], 
+      isOpen: false 
+    },
+    { 
+      question: "Blogs", 
+      content: [
+        { label: 'Blogs', path: '/Blog' },
+      ], 
+      isOpen: false 
+    },
+  ]);
+
+  const toggleFAQ = (index) => {
+    setFaqData(
+      faqData.map((item, i) => ({
+        ...item,
+        isOpen: i === index ? !item.isOpen : false // Close other items
+      }))
+    );
+  };
+
+  const FAQItem = ({ question, content, isOpen, onToggle }) => {
+    const contentRef = useRef(null);
+    const [height, setHeight] = useState(0);
+
+    useEffect(() => {
+      if (isOpen && contentRef.current) {
+        setHeight(contentRef.current.scrollHeight);
+      } else {
+        const timeout = setTimeout(() => {
+          setHeight(0);
+        }, 1000); // Match this duration with the transition duration
+
+        return () => clearTimeout(timeout);
+      }
+    }, [isOpen]);
+
+    return (
+      <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
+        <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
+          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold md:text-3xl text-2xl tracking-wider uppercase text-red-600">
+            {question}
+          </h2>
+          <div className="flex flex-col items-start self-stretch my-auto min-h-[40px]">
+            <button
+              className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
+              aria-expanded={isOpen}
+              aria-label={isOpen ? "Close answer" : "Open answer"}
+            >
+              <img
+                loading="lazy"
+                src={
+                  isOpen
+                    ? "./AboutUs/DropUpArr.png"
+                    : "./AboutUs/DropdownArr.png"
+                }
+                alt=""
+                className="object-contain flex-1 w-full aspect-square"
+              />
+            </button>
+          </div>
+        </div>
+        <div
+          ref={contentRef}
+          className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
+          style={{ maxHeight: `${height}px` }}
+        >
+          <div className="px-5 py-5">
+            {/* Render content based on whether it's an array or a string */}
+            {Array.isArray(content) ? (
+              <ul>
+                {content.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <a href={item.path} className="text-stone-300 hover:underline">
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className='text-gray-500'>{content}</p>
+            )}
+          </div>
+        </div>
+      </div>
+    );
+  };
+
+  return (
+    <section className="flex mt-[15%] overflow-hidden relative flex-col">
+      <div className="flex absolute inset-0 z-0 flex-col py-0.5 w-full max-md:max-w-full"></div>
+      <div className="flex z-0 flex-col self-center w-[95%] xl:w-[70%] lg:w-[80%]">
+        <div className="flex max-md:flex-col justify-between items-start w-full max-md:max-w-full">
+          <div className="flex flex-col pt-5 min-w-[240px] w-full lg:w-[48%] max-md:max-w-full">
+            {faqData.slice(0, 5).map((item, index) => (
+              <FAQItem
+                key={index}
+                question={item.question}
+                content={item.content} // Pass dynamic content
+                isOpen={item.isOpen}
+                onToggle={() => toggleFAQ(index)}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
 
 
 

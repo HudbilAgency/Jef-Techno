@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useRef } from "react";
-import MainImg from '../Components/MainImg/MainImg';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
 import Navbar from "../Components/Navbar/Navbar";
 
-const LightningProtectionStudies = () => {
+const PowerSystemStudies = () => {
 
   const services = [
     { image: '', text: '' },
@@ -92,45 +91,41 @@ const LightningProtectionStudies = () => {
         setActiveIndex(index);
       };
     
-      
+      const benefitItems = [
+        "ABOUT Earthing studies",
+        'What is an Earthing/Grounding System Studies',
+        'Earthing/Grounding System Studies',
+        'Our Certifications and Expertise',
+        'Detailed Study Reports and Analysis',
+        'Benefits of Professional Earthing/Grounding System Studies',
+      ];
 
       const components = [
         
   {
     imageSrc: './SerivePage/01.png',
-    title: 'Riser Integrity Testing',
-    description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
+    title: 'Risk Assessment',
+    description: 'Using Risk Assessment Software to compare calculated risk against tolerable risk levels as per IEC 62305-2.',
   },
   {
     imageSrc: './SerivePage/02.png',
-    title: 'Grid Integrity Testing',
-    description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.',
+    title: 'Lightning Protection System (LPS) Design',
+    description: 'Selecting from a choice of methods like the Rolling Sphere, Protection Angle, and Mesh Methods to design effective LPS.',
   },
   {
     imageSrc: './SerivePage/03.png',
-    title: 'Soil Resistivity Testing',
-    description: 'Conducting tests to measure soil resistivity and design effective grounding systems.',
+    title: 'Surge Protection Devices (SPD):',
+    description: 'Selecting Class I, II, and III SPDs at various levels of the electrical distribution system to protect against conducted surges.',
   },
   {
     imageSrc: './SerivePage/04.png',
-    title: 'Touch and Step Potential Measurement',
-    description: 'Assessing the potential differences that can occur on the surface of the ground to ensure personnel safety.',
-  },
-  {
-    imageSrc: './SerivePage/05.png',
-    title: 'Simulation',
-    description: 'Earthing grid in CDEGS software.',
-  },
-  {
-    imageSrc: './SerivePage/07.png',
-    title: 'Earth Electrode Resistance Testing',
-    description: 'Measuring the resistance of earth electrodes using both Fall of Potential and Stake less methods.',
+    title: 'Additional Mitigation Techniques',
+    description: 'Using equi-potential bonding, warning notices, and other best engineering practices to further reduce risk.',
   },
       ]
 
       const buttons = [
-        { text: 'DISCOVER TOURISM', className: 'bg-red-700' },
-        { text: 'DISCOVER NATURE', className: 'bg-red-700' }
+        { text: 'CONTACT US', className: 'bg-red-700' }
       ];
     
 
@@ -145,22 +140,17 @@ const LightningProtectionStudies = () => {
       <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
         <img
           loading="lazy"
-          src="./SerivePage/Lightning Protection 1.png"
+          src="./SerivePage/Power System Studies 3.png"
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex relative flex-col mb-0 mx-40 max-w-full inset-y-2/3 max-md:mt-10 max-md:mb-2.5">
-          <h1 className="text-7xl font-bold uppercase tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-          Lightning Protection Studies
+        <div className="flex inset-y-2/3 lg:inset-x-40 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+          <h1 className="xl:text-6xl uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+          Power System Studies
           </h1>
           <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-            <img
-              loading="lazy"
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/8e2bc32c89ba054b97e752f6d6f5997edf21d784f5801ab1d1a29fcf6c681619?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-              alt=""
-              className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square"
-            />
-            <button className="gap-2.5 self-stretch px-2.5 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] min-w-[240px] rounded-[50px] w-[261px]">
+            
+            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-xl  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
           </div>
@@ -174,14 +164,14 @@ const LightningProtectionStudies = () => {
 
 
 
-    <section className="flex overflow-hidden flex-col bg-stone-900">
+    <section className="flex h-auto -mb-11 md:mb-0 overflow-hidden flex-col bg-stone-900">
       <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full" />
       <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
         <div className="flex w-full max-md:max-w-full">
           <div className="flex items-center h-full min-w-[240px]">
             {navItems.map((item, index) => (
               <div key={index} className="flex items-center self-stretch my-auto">
-                <div className={`self-stretch my-auto text-base tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
+                <div className={`self-stretch my-auto text-sm lg:text-base tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
                   {item.label}
                 </div>
                 {item.isActive && (
@@ -199,150 +189,65 @@ const LightningProtectionStudies = () => {
         </div>
       </nav>
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-        <img loading="lazy" src="./SerivePage/LighningLogo.png" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
-      <header className="flex flex-col items-center self-center mt-14 w-full text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-4xl font-medium uppercase leading-[60px] tracking-[6.06px] w-[1071px]">
+      <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base md:text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+        <h1 className="flex flex-col max-w-full text-xl md:text-4xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
-          Lightning Protection Studies and System Testing Services
+          Power System Studies
           </div>
         </h1>
-        <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
-        JEF specializes in providing comprehensive Lightning Protection Studies to ensure the safety
-          <br />
-          and protection of your structures from lightning strikes. Our experienced team uses advanced
-          <br />
-          methodologies and standards to deliver effective lightning protection solutions as per IEC
-          <br />
-          standards for both existing and new structures.
+        <p className="self-center text-xl w-[80%] text-center mt-12 font-light max-md:mt-10 max-md:max-w-full">
+        We offer a very wide and comprehensive range of Power System Studies for Renewable
+        Energy applications including Solar PV, WIND, BESS, Hybrid Green hydrogen plants 
+        Micro grids.
+        <br />
+       <p className="my-10">
+       With experience in Grid codes of several countries, we bring comprehensive knowledge &
+       Expertise.
+       </p>
+       <p>
+       We have multiple licences & using all major Softwares like
+       <p className="my-10 gap-2">
+       PSSE <br />
+        PSCAD <br />
+        DIG SILENT <br />
+        ETAP <br />
+        EMTP RV, CFEGS. <br />
+       </p>
+       <p className="my-10">
+       We have the ability to study any possible steady state, dynamic, EMT &amp; Hormonic issues, in
+       a new or existing plant.
+       </p>
+       <p>Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure
+        meeting the objectives of the projects ensure meeting the objectives of the project including
+        technical aspects & timely completion.</p>
+       </p>
         </p>
       </header>
-      <div className="flex flex-col self-center mt-14 max-w-full text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
+      <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
         <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
           Get in touch for Real-Life Case Studies and Testimonials
         </p>
         <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
       </div>
-      <button className="flex gap-3.5 justify-center items-center self-center p-4 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px] w-[267px]">
+      <button className="flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
         <span className="self-stretch my-auto">CONTACT US</span>
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
       </button>
-    </section>
+   </section>
 
     
 
-    {/* <section >
-      <div className="overflow-hidden py-32 pl-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
-          <div className="flex flex-col w-[68%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col w-full max-md:mt-10 max-md:max-w-full">
-              <div className="mr-6 max-md:mr-2.5 max-md:max-w-full">
-                <div className="flex gap-5 max-md:flex-col">
-                  <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
-                  <div className="flex flex-col grow tracking-normal uppercase max-md:max-w-full">
-                        <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
-                          {benefitItems.map((item, index) => (
-                            <li
-                              key={index}
-                              className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
-                                activeIndex === index ? 'text-white text-2xl h-40' : 'h-auto text-base' 
-                              }`}
-                              onClick={() => handleClick(index)}
-                            >
-                              {activeIndex === index && (
-                                <div className="bg-red-500 w-1 h-full mr-4"></div> 
-                              )}
-                              <div className={`w-[80%] min-w-[20%] ${activeIndex === index ? 'text-white' : 'text-gray-400'}`}>
-                                {item}
-                              </div>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                  </div>
-                  <div className="flex flex-col w-[56%] max-md:ml-0 max-md:w-full">
-                    <div className="flex flex-col items-start text-3xl text-red-700  max-md:max-w-full">
-                      <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing/Grounding System Studies Icon" className="object-contain max-w-full aspect-[1.77] w-[124px]" />
-                      <h2 className="mt-6 ml-5 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
-                        What is an earthing/ grounding system studies
-                      </h2>
-                       <div className="mt-3.5 max-md:max-w-full">
-                        <div className="flex gap-5 max-md:flex-col">
-                          <div className="flex flex-col w-full max-md:ml-0 max-md:w-full">
-                            <p className="mt-7 ml-5 text-2xl leading-9 tracking-widest text-white max-md:mt-10 max-md:max-w-full">
-                              An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of
-                              both above and below ground connections in electrical installations. These studies help in 
-                              pinpointing defective joints that can seriously affect the safety and performance of electrical
-                              systems.
-                            </p>
-                          </div>
-                        </div>
-                      </div> 
-                    </div>
-                  </div>
-                  
-                </div>
-              </div>
+   
 
-                   
-
-            </div>
-            
-          </div>
-          <div className=" ml-5 w-[32%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow justify-center my-[6%] h-[30rem] max-md:mt-10 max-md:max-w-full">
-              <img loading="lazy" src="./SerivePage/magna-discovery.jpg.png" alt="Earthing/Grounding System Illustration" className="object-contain w-full h-full aspect-[0.96] max-md:max-w-full" />
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </section> */}
-
-    < VerticalCarousel />
+      <section>
+          < VerticalCarousel />
+      </section>
 
 
 
-    {/* <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
-      <div className="flex flex-wrap gap-5 justify-between w-full  max-md:max-w-full">
-        <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
-          KEY COMPONENTS OF THE STUDY
-        </h2>
-        <div className="flex self-end flex-col min-h-[60px]">
-          <div className="flex gap-5 items-start w-full max-w-[140px]">
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch p-5 my-auto w-full border border-white border-solid basis-0 min-h-[60px] rounded-[60px]">
-                <button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/150914823e04aa0b72d10dfe3eaaf22d38b599636111c8b7ad6e80476980a940?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-6 aspect-square" /></button>
-              </div>
-            </div>
-            <div className="flex justify-center items-center min-h-[60px] w-[60px]">
-              <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[60px] min-h-[60px] rounded-[60px] w-[60px]">
-                <button></button><img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-6 aspect-square" />
-
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div className="flex gap-5 justify-between items-center mt-48 w-full text-2xl max-md:mt-10">
-      {components.map((component, index) => (
-        <React.Fragment key={component.title}> 
-          <div className="flex flex-col items-start mt-2.5 max-md:max-w-full">
-            <div className="">
-              <img src={component.imageSrc} alt={component.title} className="w-full h-auto" /> 
-            </div>
-            <h3 className="mt-8 font-normal leading-none text-red-700">{component.title}</h3>
-            <p className="w-[45%] xl:w-[80%] lg:w-full mt-8 font-thin leading-8 text-gray-400 max-md:w-full">
-              {component.description}
-            </p>
-          </div>
-          {index < components.length - 1 && (
-            <img src="./SerivePage/Line 14.png" alt="LineImg" className='mx-5' />
-          )}
-        </React.Fragment>
-      ))}
-    </div>
-    </section> */}
+    
 
       <section>
         < CarouselSection components={components} />
@@ -364,11 +269,11 @@ const LightningProtectionStudies = () => {
               </div>
             )}
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-              <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+              <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
               <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[60vh]">
-                <div className='flex items-center gap-x-10 circleChild'>
+                <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -380,7 +285,7 @@ const LightningProtectionStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='flex gap-x-10'>
+                <div className='flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
                   {services.slice(9).map((service, index) => (
                     <ServiceItem
                       key={index + 9}
@@ -426,11 +331,9 @@ const LightningProtectionStudies = () => {
               <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full sm:w-[90%] md:w-[510px] mx-auto">
                 {buttons.map((button, index) => (
                   <div key={index} className="flex flex-col flex-1 grow shrink-0 justify-center p-2.5 text-sm leading-none basis-0 min-h-[80px] w-fit">
-                    <div className="flex items-center py-1 w-full max-w-[235px] min-h-[60px]">
-                      <button className={`flex overflow-hidden justify-center items-center self-stretch px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
-                        <span className="self-stretch pb-px my-auto">
-                          {button.text}
-                        </span>
+                    <div className="flex items-center justify-center self-center py-1 w-full max-w-[235px] min-h-[60px]">
+                      <button className={`flex overflow-hidden justify-center items-center self-center px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
+                        CONTACT US
                       </button>
                     </div>
                   </div>
@@ -451,54 +354,54 @@ const LightningProtectionStudies = () => {
 
 
 
-const ServicesSection = () => {
-  const services = [
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: 'Earthing studies' },
-    { text: 'Lightning Protection System Studies' },
-    { text: 'Power System Studies' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-  ];
-  const services1 = [
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-    { text: 'Power Quality &  Root cause Analysis' },
-    { text: 'Instrumentation Earthing' },
-    { text: '' },
-    { text: '' },
-    { text: '' },
-  ];
+// const ServicesSection = () => {
+//   const services = [
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: 'Earthing studies' },
+//     { text: 'Lightning Protection System Studies' },
+//     { text: 'Power System Studies' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//   ];
+//   const services1 = [
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//     { text: 'Power Quality &  Root cause Analysis' },
+//     { text: 'Instrumentation Earthing' },
+//     { text: '' },
+//     { text: '' },
+//     { text: '' },
+//   ];
 
-  return (
-    <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
-      <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
-        our services
-      </h2>
-      <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
-        {services.slice(0, 9).map((service, index) => (
-          <ServiceItem key={index} {...service} />
-        ))}
-      </div>
-      <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
-        {services1.slice(0).map((service, index) => (
-          <ServiceItem key={index + 5} {...service} />
-        ))}
-      </div>
-    </section>
-  );
-};
+//   return (
+//     <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
+//       <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+//         our services
+//       </h2>
+//       <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
+//         {services.slice(0, 9).map((service, index) => (
+//           <ServiceItem key={index} {...service} />
+//         ))}
+//       </div>
+//       <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
+//         {services1.slice(0).map((service, index) => (
+//           <ServiceItem key={index + 5} {...service} />
+//         ))}
+//       </div>
+//     </section>
+//   );
+// };
 
 const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
   return (
     <div
   ref={ref}
-  className={`flex w-[13rem] h-[13rem] rounded-full items-center justify-center p-[1.5%] transition-all duration-300 
+  className={`flex w-[9rem] h-[9rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
     ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
   onMouseEnter={() => {
     if (text !== "") {
@@ -511,36 +414,58 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
     }
   }}
 >
-  <span className="text-center">{text}</span>
+  <span className="text-center text-xs md:text-sm lg:text-base">{text}</span>
 </div>
 
   );
 });
 
 
+
+
+
+
 function CarouselSection({ components }) {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const visibleCards = 3; // Number of visible cards at once
+  const [visibleCards, setVisibleCards] = useState(1); // Default to 1 for mobile
   const totalCards = components.length;
 
   // Function to handle the right click (move forward)
   const handleCarouselClickRight = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex + visibleCards) % totalCards;
+      return (prevIndex + 1) % totalCards; // Move forward one card
     });
   };
 
   // Function to handle the left click (move backward)
   const handleCarouselClickLeft = () => {
     setCurrentIndex((prevIndex) => {
-      return (prevIndex - visibleCards + totalCards) % totalCards;
+      return (prevIndex - 1 + totalCards) % totalCards; // Move backward one card
     });
   };
 
+  // Update the number of visible cards based on screen size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 640) {
+        setVisibleCards(1); // Mobile
+      } else if (window.innerWidth <= 1024) {
+        setVisibleCards(2); // Medium
+      } else {
+        setVisibleCards(3); // Large
+      }
+    };
+
+    handleResize(); // Set initial value
+    window.addEventListener('resize', handleResize); // Listen for resize events
+
+    return () => window.removeEventListener('resize', handleResize); // Cleanup listener
+  }, []);
+
   return (
-    <section className="flex lg:px-[100px] overflow-hidden flex-col items-start px-14 pt-16 pb-32 bg-black max-md:px-5 max-md:pb-24">
-      <div className="flex flex-wrap gap-5 justify-between w-full max-md:max-w-full">
-        <h2 className="self-start text-4xl font-bold leading-none text-red-700 uppercase max-md:max-w-full">
+    <section className="flex xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
+      <div className="flex flex-wrap gap-5 justify-between w-full">
+        <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
           KEY COMPONENTS OF THE STUDY
         </h2>
         <div className="flex self-end flex-col min-h-[60px]">
@@ -576,46 +501,33 @@ function CarouselSection({ components }) {
       </div>
 
       {/* Carousel Section */}
-      <div className="flex justify-between items-center mt-36 w-full text-2xl max-md:mt-10 overflow-hidden">
+      <div className="flex justify-center items-center mt-10 w-full overflow-hidden">
         {/* Carousel wrapper */}
         <div
           className="flex transition-transform duration-500 ease-in-out"
           style={{
-            // Translate based on the currentIndex and the number of visible cards
-            transform: `translateX(-${currentIndex * (100 / visibleCards)}%)`,
-            width: `${(totalCards / visibleCards) * 100}%`, // Total width based on total cards and visible cards
+            transform: `translateX(-${(currentIndex * 100) / visibleCards}%)`, // Move based on currentIndex and visibleCards
+            width: `${totalCards * (100 / visibleCards)}%`, // Total width based on total cards and visible cards
           }}
         >
-          {components.map((component, index) => (
-            <React.Fragment key={component.title}>
-              <div
-                className="flex flex-col items-start  max-md:max-w-full"
-                style={{
-                  flex: `0 0 ${31}%`, // Make sure each card takes up exactly 1/3 of the carousel
-                }}
-              >
-                {/* Each card */}
-                <div className="">
-                  <img src={component.imageSrc} alt={component.title} className="w-[4rem]" />
-                </div>
-                <h3 className="mt-8 xl:w-[75%] font-normal leading-none text-red-700">
-                  {component.title}
-                </h3>
-                <p className="w-[45%] xl:w-[77%] lg:w-full mt-8 right-0 font-thin leading-8 text-gray-400 max-md:w-full">
-                  {component.description}
-                </p>
-              </div>
-              {index < components.length - 1 && (
-                <img
-                  src="./SerivePage/Line 14.png"
-                  alt="LineImg"
-                  className="mr-16"
-                />
-              )}
-            </React.Fragment>
+          {components.map((component) => (
+            <div
+              key={component.title}
+              className="flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start justify-center w-full "
+              style={{
+                flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
+              }}
+            >
+              <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
+              <h3 className="text-red-700 font-normal sm:w-[90%] text-2xl sm:text-start my-10 text-center">{component.title}</h3>
+              <p className=" text-gray-400 text-center w-[50%] sm:w-[70%] font-thin lg:w-[90%] lg:text-2xl sm:text-start text-xl max-w-screen-xl">{component.description}</p>
+            </div>
+            
+            
           ))}
         </div>
       </div>
+
     </section>
   );
 }
@@ -625,67 +537,64 @@ function CarouselSection({ components }) {
 
 
 
+
+
+
+
+
+
+
+
 const VerticalCarousel = () => {
   const benefitItems = [
-    "ABOUT Lightning Protection Study?",
-    "What is a Lightning Protection Study?",
-    "Importance of Lightning Protection Studies",
-    "Our Approach to Lightning Protection Study Service",
-    "Our Certifications and Expertise",
-    "Detailed Study Reports and Analysis",
-    "Benefits of Professional Lightning Protection Studies"
+    "ABOUT power system studies",
+    "List of Studies for Renewable Energy",
+    "For Industries",
+    "Advanced System Studies",
   ];
 
   const cardContents = [
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is a Lightning Protection Study?",
+      title: "What is a Power System Study?",
       description:
-        "A Lightning Protection Study involves evaluating the adequacy and effectiveness of existing lightning protection systems. It includes risk assessment, system design and implementable protective measures to safeguard structures & equipment from lightning-induced damage.",
+        "With our patented & unique customer designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Importance of Lightning Protection Studies",
+      title: "List of Studies for Renewable Energy",
       description:
-        `Proper lightning protection is crucial for:|Ensuring the safety of personnel and equipment by preventing lightning-related hazards.|Complying with international standards such as IEC 62305 and local regulations.|Reducing the risk of fire, equipment damage, and operational downtime.|Protecting critical infrastructure and maintaining service continuity.`,
+        `|Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Stealy State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Power Quality Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test`
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Importance of Lightning Protection Studies",
+      title: "For Industries",
       description:
-        `Proper lightning protection is crucial for:|Ensuring the safety of personnel and equipment by preventing lightning-related hazards.|Complying with international standards such as IEC 62305 and local regulations.|Reducing the risk of fire, equipment damage, and operational downtime.|Protecting critical infrastructure and maintaining service continuity.`,
+        "|Load Flow Studies|Short Circuit Studies|Protection & Relay Co-ordination Studies|Harmonic Analysis|Motor Starting Study|Transient Stability|Insulation Co-ordination Studies"
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our Approach to Lightning Protection Study Service",
+      title: "Advanced System Studies",
       description:
-        "At JEF, our Lightning Protection Studies encompass a range of key services:|Risk Assessment: Evaluating the risk of lightning strikes to determine the need for protection and the level of protection required.|System Design: Designing external and internal lightning protection systems based on the assessed risk and protection levels.|Implementation: One team will always have an eye &amp; ensure the designs recommended will be practically implementable at the specific site factoring in all possible constraints and special requirements.|Cost: Our solutions will be cost optimal and our BOQ will always reflect the most effective cost for a given project.",
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our Certifications and Expertise",
-      description:
-        `JEF’s team is certified and trained in the latest standards and practices, including:|IS/IEC 62305: Comprehensive guidelines for lightning protection, risk management, and system design.`,
+      "|Transmission Network Planning|Power System risk review|Sizing-citing of FACTS devices|HVDC interconnection studies"
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Detailed Study Reports and Analysis",
       description:
-        `Our detailed reports include:|Comprehensive documentation of findings, measurements, and observations.|Summary of compliance with relevant standards and recommendations for
-improvements.|Actionable insights for optimizing system safety and protection against lightning.`,
+        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Benefits of Professional Earthing/Grounding System Studies",
       description:
-        "|Enhanced  Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.|Operational Reliability:  Ensuring uninterrupted operations and protecting critical infrastructure.|Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
     },
   ];
 
@@ -698,16 +607,16 @@ improvements.|Actionable insights for optimizing system safety and protection ag
   return (
     <section>
       <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex gap-5 max-md:flex-col">
+        <div className="flex w-[95%] gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
-          <div className="flex flex-col w-[44%] max-md:ml-0 max-md:w-full">
-            <ul className="flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[70%] max-md:pl-5 max-md:ml-2.5">
+          <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
+            <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
               {benefitItems.map((item, index) => (
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                     activeIndex === index
-                      ? "text-white text-3xl h-56"
+                      ? "text-white md:text-xl xl:text-2xl 2xl:text-3xl h-32 xl:h-56"
                       : "h-auto text-base"
                   }`}
                   onClick={() => handleClick(index)}
@@ -716,7 +625,7 @@ improvements.|Actionable insights for optimizing system safety and protection ag
                     <div className="bg-red-500 w-1 h-full mr-4"></div>
                   )}
                   <div
-                    className={`w-[80%] uppercase min-w-[20%] ${
+                    className={`xl:w-[80%] uppercase min-w-[20%] ${
                       activeIndex === index ? "text-white" : "text-gray-400"
                     }`}
                   >
@@ -728,35 +637,61 @@ improvements.|Actionable insights for optimizing system safety and protection ag
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-[86vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] h-[87vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100)/7}%)`}}
+              style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
             >
               {cardContents.map((content, index) => (
                   <div
                     key={index}
-                    className="flex flex-col items-start text-3xl text-red-700 h-screen max-md:max-w-full"
+                    className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 h-screen max-md:max-w-full"
                   >
                     <img
                       loading="lazy"
                       src={content.imgSrc}
                       alt={content.title}
-                      className="object-contain max-w-full aspect-[1.77] w-[124px] transition-opacity duration-500 ease-in-out"
+                      className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
                     />
-                    <h2 className="mt-6 w-[80%] tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                    <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] max-md:pl-5 max-md:ml-0">
+                        {benefitItems.slice(0, 1).map((item, index) => (
+                          <li
+                            key={index}
+                            className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+                              activeIndex === index
+                                ? "text-white text-3xl h-24"
+                                : "h-auto text-base"
+                            }`}
+                            onClick={() => handleClick(index)}
+                          >
+                            {activeIndex === index && (
+                              <div className="bg-red-500 w-1 h-full mr-4"></div>
+                            )}
+                            <div
+                              className={`w-[80%] uppercase min-w-[20%] ${
+                                activeIndex === index ? "text-white" : "text-gray-400"
+                              }`}
+                            >
+                              {item}
+                            </div>
+                          </li>
+                        ))}
+                      </ul>
+
+
+                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-4xl ml-5 lg:ml-0 tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-3.5 max-md:max-w-full">
                       <div className="flex gap-5 max-md:flex-col">
-                        <div className="flex flex-col w-full max-md:w-full">
+                        <div className="flex h-auto flex-col w-full max-md:w-full">
                           {/* Splitting description by period and inserting line breaks with bullet */}
                           {content.description.split("|").map((sentence, idx) => (
                           <div key={idx} className="flex items-start">
                             <span className="text-2xl leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
+                            <p className="ml-4 text-xl md:text-lg xl:text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
@@ -808,4 +743,4 @@ improvements.|Actionable insights for optimizing system safety and protection ag
 
 
 
-export default LightningProtectionStudies
+export default PowerSystemStudies

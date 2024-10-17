@@ -81,17 +81,19 @@ const AboutUs = () => {
                 <h1 className="xl:text-7xl md:text-5xl lg:text-6xl text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, THINK JEF
                 </h1>
-                <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+                <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+              <button>
                 <img
-                    loading="lazy"
-                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/4a6ca320d2c2f4c61334df8c01339996c153854afdc04d81a5343bfaa44d492c?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                    alt=""
-                    className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square"
+                  loading="lazy"
+                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+                  alt="Electrical icon"
+                  className="bg-repeat object-contain w-9 lg:w-16"
                 />
-                <button className="gap-2.5 self-stretch px-10 py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px]">
-                    Learn More
-                </button>
-                </div>
+              </button>
+              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+                Learn More
+              </button>
+            </div>
             </section>
             </main>
 
@@ -176,12 +178,12 @@ const AboutUs = () => {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 text-center bg-zinc-800 max-md:px-5">
       <div className="flex flex-col max-w-full w-[1115px]">
-        <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-5xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] max-md:text-4xl">
-          <span className="pb-px min-w-[240px] max-md:max-w-full max-md:text-4xl">
+        <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-3xl md:text-4xl lg:text-5xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] ">
+          <span className="pb-px min-w-[240px] max-md:max-w-full ">
             Our Approach
           </span>
         </h2>
-        <p className="mt-16 text-xl lg:text-2xl font-light leading-9 text-white max-md:mt-10 max-md:max-w-full">
+        <p className="mt-16 text-lg md:text-xl lg:text-2xl font-light leading-9 text-white max-md:mt-10 max-md:max-w-full">
           We provide Innovative Solutions that are{" "}
           <span className="font-extrabold">
             Technically Superior, Cost-effective and
@@ -210,7 +212,7 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              <p className="mt-6 sm:mt-8 md:mt-11 text-base sm:text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
+              <p className="mt-6 sm:mt-8 md:mt-11 text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
                 From three decades, JEF Techno as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
               </p>
             </div>
@@ -218,7 +220,7 @@ const AboutUs = () => {
           <div className="flex flex-col mt-6 md:mt-0 md:ml-5 w-full md:w-1/2">
             <img
               loading="lazy"
-              src="public/AboutUs/BrandHistory.png"
+              src="./AboutUs/BrandHistory.png"
               alt="JEF Techno brand history illustration"
               className="object-contain w-full aspect-[1.09]"
             />
@@ -243,7 +245,7 @@ const AboutUs = () => {
     <div className="flex z-0 flex-col my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
-          <h1 className="pb-px w-full font-semibold text-5xl leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+          <h1 className="pb-px w-full font-semibold text-3xl md:text-4xl lg:text-5xl leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
             JEF LEADERSHIP
           </h1>
           <p className="mt-5 w-full text-lg font-thin leading-6 text-white max-md:max-w-full min-w-[90%]">
@@ -299,10 +301,10 @@ function SocialResponsibilities() {
           className="object-cover absolute inset-0 w-full h-full"
         />
         <div className="flex relative flex-col mb-0 w-full max-w-[82rem] max-md:mb-2.5 max-md:max-w-full">
-          <h1 className="text-[3.125rem] font-semibold leading-none text-red-700 uppercase tracking-[0.28rem] max-md:max-w-full max-md:text-[2.5rem]">
+          <h1 className="text-3xl md:text-4xl lg:text-5xl font-semibold leading-none text-red-700 uppercase tracking-[0.28rem] max-md:max-w-full">
             SOCIAL RESPONSIBITIES
           </h1>
-          <p className="mt-[3rem] lg:text-2xl leading-9 text-white max-md:mt-[2.5rem] max-md:max-w-full">
+          <p className="mt-[3rem] text-base lg:text-2xl leading-9 text-white max-md:mt-[2.5rem] max-md:max-w-full">
             At JEF, we believe in creating a positive impact beyond business. We are dedicated to supporting the communities we serve by promoting sustainable engineering practices, ensuring the safety of our environment, and contributing to local development initiatives. Our social responsibility efforts focus on environmental conservation, educational programs for underprivileged communities, and ensuring that our projects align with global sustainability goals. By integrating social responsibility into every aspect of our operations, we strive to make a meaningful difference for future generations.
           </p>
         </div>
@@ -319,8 +321,8 @@ const Overview = () => {
   return (
     <div className="flex flex-col justify-center items-center p-20 bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[70%] max-md:max-w-full">
-        <div className="flex justify-center items-center self-center px-72 max-w-full text-5xl font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 max-md:text-4xl">
-          <div className="self-stretch my-auto min-w-[240px] max-md:text-4xl">
+        <div className="flex justify-center items-center self-center px-72 max-w-full text-3xl md:text-4xl lg:text-5xl font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 ">
+          <div className="self-stretch my-auto min-w-[240px] ">
             Overview
           </div>
         </div>
@@ -372,9 +374,9 @@ const Overview = () => {
 function LearningDevelopment() {
   return (
     <main className="flex flex-col items-center pt-14 pb-28 text-center bg-stone-900 max-md:pb-24">
-      <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-5xl leading-tight text-red-700 uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full max-md:text-4xl">
+      <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-3xl md:text-4xl lg:text-5xl leading-tight text-red-700 uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[60rem]">
-          <div className="flex justify-center items-center pr-14 pl-12 w-full max-md:px-5 max-md:max-w-full">
+          <div className="flex justify-center items-center w-full max-md:px-5 max-md:max-w-full">
             <h1 className="self-stretch my-auto min-w-[15rem]">
               LEARNING AND DEVELOPMENT
             </h1>
@@ -756,12 +758,12 @@ function EconomicEngine() {
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 w-full bg-neutral-100 max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col items-center w-full max-w-[1275px] max-md:max-w-full">
         <header className="flex flex-col max-w-full text-center text-zinc-900 w-full">
-          <h1 className="flex justify-center items-center px-36 w-full text-5xl font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full max-md:text-4xl">
-            <span className="self-stretch pb-px my-auto min-w-[240px] max-md:max-w-full max-md:text-4xl">
+          <h1 className="flex justify-center items-center px-36 w-full text-3xl md:text-4xl lg:text-5xl font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full ">
+            <span className="self-stretch pb-px my-auto min-w-[240px] max-md:max-w-full">
               An Economic Engine
             </span>
           </h1>
-          <p className="pb-px mt-16 w-full text-2xl font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-16 w-full text-lg lg:text-2xl font-light leading-9 max-md:max-w-full">
           We provide the below-mentioned solutions for Transmission & Distribution Utilities, Oil & Gas <br /> Infrastructure, and such other customers. Earthing/Grounding Studies, Lightning Protection Studies <br /> Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>

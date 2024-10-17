@@ -111,7 +111,7 @@ const buttonData = [
     gcc:42,
     description:"Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."
    },
-  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"lg:mt-[150px]",marginLeft:"lg:ms-[0px]",
+  { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies',marginTop:"-mt-[70%] lg:mt-[150px]",marginLeft:"lg:ms-[0px]",
     title : "Lightning Protection Studies Projects Completed",
     path: '/LightningProtectionStudies',
     totalProjects: 233, 
@@ -119,7 +119,7 @@ const buttonData = [
     gcc:38,
     description:"The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets."
   },
-  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"lg:mt-[50px]",marginLeft:"lg:ms-[0px]", 
+  { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies',marginTop:"-mt-[100%] lg:mt-[50px]",marginLeft:"lg:ms-[0px]", 
     title : "Power System Studies Projects Completed",
     path: '/PowerSystemStudies',
     totalProjects: 74, 
@@ -127,14 +127,14 @@ const buttonData = [
     gcc:16,
     description:"A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety."
     },
-  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"lg:-mt-[70px]",marginLeft:"lg:ms-[130px]", 
+  { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis',marginTop:"mt-[20%] lg:-mt-[50px]",marginLeft:"lg:ms-[130px]", 
     title : "Power Quality & Root Cause Studies Projects Completed",
     path: '/PowerQualityStudies',
     totalProjects: 66, 
     indiaProjects: 36,
     gcc:30,
     description:"A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies."},
-  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing',marginTop:"lg:-mt-[160px]",marginLeft:"lg:ms-[20px]", 
+  { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing',marginTop:"-mt-[40%] lg:-mt-[160px]",marginLeft:"lg:ms-[20px]", 
     title : "Instrumentation Earthing Studies Projects Completed",
     totalProjects: 32, 
     indiaProjects: 24,
@@ -320,7 +320,7 @@ useGSAP(() => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
+              <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white hover:bg-red-700 hover:text-white border border-solid border-zinc-900 border-opacity-10 text-sm  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
                 Learn More
               </button>
             </div>
@@ -711,28 +711,28 @@ const WhatWeDoSection = () => {
           <div className="flex flex-col md:flex-row 2xl:w-[90%] mx-auto relative mb-0 w-full max-md:mb-2.5 max-md:max-w-full justify-between">
 
           {/* Left Section */}
-          <section className="flex flex-wrap lg:w-[50%] justify-between">
+          <section className="flex flex-wrap w-[100%] lg:w-[40%] justify-between">
             <div className="flex tracking-[3px] flex-col self-start text-2xl lg:text-3xl font-bold">
               <h1 className="text-white uppercase mt-[2%]">what we do</h1>
             </div>
             <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
               <div className="grow max-md:max-w-full">
-                <div className="hidden lg:flex flex-wrap gap-5 h-full max-md:flex-col">
+                <div className="mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
                   {buttonData.map((button, index) => (
                     <Link key={index} to={button.path} className={`inline-flex`}>
                       <button
-                        className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-32 h-32 xl:w-44 xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                        className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-28 h-28 xl:w-44 xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
                         onMouseEnter={() => setHoveredButtonIndex(index)}
                         onMouseLeave={() => setHoveredButtonIndex(null)}
                       >
-                        <span className="text-white text-sm uppercase">{button.text}</span>
+                        <span className="text-white text-[55%] lg:text-sm uppercase leading-none tracking-[0px]">{button.text}</span>
                       </button>
                     </Link>
                   ))}
                 </div>
-                <div className="lg:hidden ">
+                {/* <div className="lg:hidden ">
                   <img src="./HomePageImg/WhatWeDoSection/PhoneServices.png" alt="PhoneServices" />
-                </div>
+                </div> */}
 
 
               </div>
@@ -774,7 +774,7 @@ const WhatWeDoSection = () => {
                       <p className="self-stretch mt-6 w-[80%] text-lg lg:text-xl h-[23vh] leading-9 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-xl mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white lg:py-4 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-xl mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
@@ -911,17 +911,17 @@ function FeatureSection() {
 
         <section className="lg:hidden mx-auto h-auto sm:size-[20rem]">
 
-          <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-2xl">Why choose JEF ?</h1>
+          <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
           <div className="flex sm:gap-80 gap-12 mt-5">
             <img src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="SmImg1"/>
             <img src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className="SmImg2"/>
           </div>
           <div className="textSM1 relative">
-            <h1 className=" text-white -mt-10 font-medium text-center text-4xl uppercase">Smart <br />digitalisation</h1>
+            <h1 className=" text-white -mt-10 font-medium text-center text-3xl uppercase">Smart <br />digitalisation</h1>
             <h3 className=" text-white text-lg mt-5 text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
           </div>
           <div className="textSM2 relative">
-            <h1 className=" text-white mt-32 font-medium text-center text-4xl uppercase">Our L&d <br />centre</h1>
+            <h1 className=" text-white mt-32 font-medium text-center text-3xl uppercase">Our L&d <br />centre</h1>
             <h3 className=" text-white text-lg mt-5 text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
           </div>
         </section>
