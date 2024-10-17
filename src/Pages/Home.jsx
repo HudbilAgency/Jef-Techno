@@ -505,7 +505,7 @@ useGSAP(() => {
 
     <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
-      <img className="h-32 my-auto hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+      <img className="h-32 mt-[15%] hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
       <FeatureSection/>
       </header>
       
@@ -1131,7 +1131,7 @@ const LandingImages = () => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
                 Learn More
               </button>
             </div>
@@ -1156,7 +1156,7 @@ const LandingImages = () => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-2xl 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
                 Learn More
               </button>
             </div>
