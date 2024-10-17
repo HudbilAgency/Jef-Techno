@@ -394,7 +394,7 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
   return (
     <div
   ref={ref}
-  className={`flex w-[9rem] h-[9rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+  className={`flex w-[7.5rem] h-[7.5rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
     ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
   onMouseEnter={() => {
     if (text !== "") {
