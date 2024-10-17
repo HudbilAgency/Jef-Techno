@@ -371,9 +371,18 @@ const Overview = () => {
 
 
 
+
+
+
 function LearningDevelopment() {
+  const [activeImage, setActiveImage] = useState(null);
+
+  const handleImageClick = (image) => {
+    setActiveImage(image);
+  };
+
   return (
-    <main className="flex flex-col items-center pt-14 pb-28 text-center bg-stone-900 max-md:pb-24">
+    <main className="flex overflow-hidden flex-col items-center pt-14 pb-28 text-center bg-stone-900 max-md:pb-24">
       <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-3xl md:text-4xl lg:text-5xl leading-tight text-red-700 uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[60rem]">
           <div className="flex justify-center items-center w-full max-md:px-5 max-md:max-w-full">
@@ -386,30 +395,57 @@ function LearningDevelopment() {
       <p className="mt-6 text-base font-light leading-loose text-white max-md:max-w-full">
         This initiative will help us exceed our customers' delivery expectations in terms of Quality and Speed.
       </p>
-      <img
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fafc4b28802577b2d55cdc14d00c68eee644a55232f04407c4b0f48fd7624e46?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-        alt="Learning and Development Initiative"
-        loading="lazy"
-        className="object-contain mt-36 w-full aspect-[2.82] max-w-[75rem] max-md:mt-10 max-md:max-w-full"
-      />
-   
-    {/* <div className="absolute  w-full h-full bg-zinc-800"></div>
-  
-      <div
-          className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-          // onClick={handlePrev}
-        >
-          <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
+
+      {/* Image and Button Section */}
+      <div className="relative h-full w-full">
+        {/* Images Section */}
+        <div className="relative my-[18%] lg:my-0 lg:mt-[5%] flex justify-center mx-auto items-center w-full flex-col md:flex-row">
+          <div className="relative w-full md:w-[80%] items-center justify-center flex flex-col md:flex-row">
+            {/* Image 1 */}
+            <img
+              src="./AboutUs/Picture 1 1.png"
+              alt="img1"
+              className={`transition-all duration-500 mb-4 md:mb-0 ${
+                activeImage === 1
+                  ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125"
+                  : "z-0 w-[50%] md:w-[40%] h-auto opacity-70"
+              }`}
+            />
+            {/* Image 2 */}
+            <img
+              src="./AboutUs/Picture 2 1.png"
+              alt="img2"
+              className={`transition-all duration-500 ${
+                activeImage === 2
+                  ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125 md:-ml-20"
+                  : "z-0 w-[50%] md:w-[40%] h-auto opacity-70 md:-ml-20"
+              }`}
+            />
+          </div>
         </div>
-        <div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-          // onClick={handleNext}
-        >
-          <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
-     </div> */}
+
+        {/* Button controls over carousel */}
+        <div className="absolute mt-[2%] ml-[25%] lg:mt-0 lg:ml-0 inset-0 flex flex-col md:flex-row justify-between items-center z-50 px-10 md:px-20">
+          <button onClick={() => handleImageClick(1)} className="lg:mb-4 md:mb-0">
+            <img
+              src="./AboutUs/Button - Previous.png"
+              alt="btn1"
+              className="w-[30%] md:w-[45%] transform rotate-90 lg:rotate-0"
+            />
+          </button>
+          <button onClick={() => handleImageClick(2)}>
+            <img
+              src="./AboutUs/Button - Next.png"
+              alt="btn2"
+              className="w-[30%] md:w-[45%] transform lg:ml-[50%] rotate-90 lg:rotate-0"
+            />
+          </button>
+        </div>
+      </div>
     </main>
   );
 }
+
 
 
 
