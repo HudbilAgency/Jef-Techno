@@ -155,7 +155,7 @@ function Industries() {
 
 
 
-    <section className="hidden lg:block py-20">
+    <section className=" py-20">
     <main>
       <h1 className="text-5xl text-red-700 text-center font-semibold uppercase tracking-widest">Segments</h1>
       <img
