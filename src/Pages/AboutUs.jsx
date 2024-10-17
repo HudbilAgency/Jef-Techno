@@ -392,6 +392,21 @@ function LearningDevelopment() {
         loading="lazy"
         className="object-contain mt-36 w-full aspect-[2.82] max-w-[75rem] max-md:mt-10 max-md:max-w-full"
       />
+   
+    {/* <div className="absolute  w-full h-full bg-zinc-800"></div>
+  
+      <div
+          className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          // onClick={handlePrev}
+        >
+          <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
+        </div>
+        <div
+          className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          // onClick={handleNext}
+        >
+          <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
+     </div> */}
     </main>
   );
 }

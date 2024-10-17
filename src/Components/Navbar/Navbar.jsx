@@ -143,7 +143,7 @@ const Navbar = () => {
                     />
               </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto text-xs md:text-sm xl:text-xl text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto  md:text-base xl:text-lg text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
               Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
@@ -584,7 +584,7 @@ const FAQComponent = () => {
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
-          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold md:text-3xl text-2xl tracking-wider uppercase text-red-600">
+          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold  text-xl tracking-wider uppercase text-red-600">
             {question}
           </h2>
           <div className="flex flex-col items-start self-stretch my-auto min-h-[40px]">
