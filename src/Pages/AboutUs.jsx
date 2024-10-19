@@ -272,7 +272,8 @@ const AboutUs = () => {
 
 
       <section>
-        < SocialResponsibilities />
+        <img src="./AboutUs/SRImg.png" alt="SRimg" />
+        {/* < SocialResponsibilities /> */}
       </section>
     
 
@@ -383,7 +384,7 @@ function LearningDevelopment() {
 
   return (
     <main className="flex overflow-hidden flex-col items-center pt-14 pb-28 text-center bg-stone-900 max-md:pb-24">
-      <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-3xl md:text-4xl lg:text-5xl leading-tight text-red-700 uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full">
+      <header className="flex flex-col justify-center items-center self-stretch px-60 py-6 w-full text-3xl md:text-4xl lg:text-5xl leading-tight text-white uppercase tracking-[0.28rem] max-md:px-5 max-md:max-w-full">
         <div className="flex flex-col max-w-full w-[60rem]">
           <div className="flex justify-center items-center w-full max-md:px-5 max-md:max-w-full">
             <h1 className="self-stretch my-auto min-w-[15rem]">
