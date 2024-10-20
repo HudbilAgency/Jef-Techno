@@ -202,7 +202,7 @@ const GetInTouchForm = () => {
               </div>
               <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
-                  By completing this form you are agreeing to being contacted by NEOM, If you would also like to hear updates from other parts of NEOM please select Yes. We will treat your information carefully. See our{" "}
+                  By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
                   <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
                   and <a href="#" className="font-medium text-red-700">privacy policy</a>{" "}
                   for more details.
@@ -211,7 +211,7 @@ const GetInTouchForm = () => {
             </div>
             <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
-                  By completing this form you are agreeing to being contacted by NEOM, If you would also like to hear updates from other parts of NEOM please select Yes. We will treat your information carefully. See our{" "}
+                  By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
                   <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
                   and <a href="#" className="font-medium text-red-700">privacy policy</a>{" "}
                   for more details.
