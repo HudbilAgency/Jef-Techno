@@ -77,7 +77,7 @@ const Navbar = () => {
   >
   
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
-        <header className="flex relative justify-between items-center self-center w-full  2xl:max-w-[83%] max-md:max-w-full">
+        <header className="flex relative justify-between items-center self-center w-full  2xl:max-w-[92%] max-md:max-w-full">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
@@ -95,7 +95,7 @@ const Navbar = () => {
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium tracking-[2px] text-white`}
+                    className={`self-stretch my-auto md:text-sm xl:text-base font-medium tracking-[2px] text-white`}
                     activeClassName="active" // Optional: styling for active link
                   >
                     {item.label}
@@ -103,7 +103,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch my-auto md:text-base xl:text-xl font-medium text-white tracking-[2px]`}
+                    className={`self-stretch my-auto md:text-sm xl:text-base font-medium text-white tracking-[2px]`}
                   >
                     {item.label}
                   </button>
@@ -128,7 +128,7 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className={`self-stretch my-auto text-base md:text-lg xl:text-xl font-light tracking-[2px] text-white {
+                className={`self-stretch my-auto text-base md:text-base xl:text-base font-light tracking-[2px] text-white {
                   
                 }`}
               >
@@ -143,7 +143,7 @@ const Navbar = () => {
                     />
               </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto  md:text-base xl:text-lg text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto  md:text-sm xl:text-base text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
               Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
@@ -226,13 +226,19 @@ const Navbar = () => {
 
 
 
-
 const navigationItems = [
-  { number: '01', title: 'What is JEF' },
-  { number: '02', title: 'JEF leadership team' },
-  { number: '03', title: 'Our mission' },
-  { number: '04', title: 'Our vision' }
+  { number: "01", title: "What is JEF" },
+  { number: "02", title: "JEF leadership team" },
+  { number: "03", title: "Our mission" },
+  { number: "04", title: "Our vision" }
 ];
+
+const contentMap = {
+  "01": "About",
+  "02": "",
+  "03": "Deliver Value added, technically superior and cost-optimum solutions to enhance the safety & reliability of Electrical systems by combining knowledge, experience and technology.",
+  "04": "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate."
+};
 
 function AboutSection() {
   const [hoveredItem, setHoveredItem] = useState(null);
@@ -249,11 +255,16 @@ function AboutSection() {
                     key={index}
                     className="flex gap-7 items-center mt-11 uppercase tracking-[3.36px] max-md:mt-10"
                   >
-                    <div className="self-stretch my-auto text-base text-red-700">{item.number}</div>
+                    <div className="self-stretch my-auto text-base text-red-700">
+                      {item.number}
+                    </div>
                     <div
-                    onMouseEnter={() => setHoveredItem(item.number)}
-                    className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white">{item.title}</div>
-                    {item.number === '01' && (
+                      onMouseEnter={() => setHoveredItem(item.number)}
+                      className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white"
+                    >
+                      {item.title}
+                    </div>
+                    {item.number === "01" && (
                       <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                         <img
                           loading="lazy"
@@ -266,17 +277,23 @@ function AboutSection() {
                   </div>
                 ))}
               </div>
-              <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" role="separator" aria-orientation="vertical"></div>
+              <div
+                className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]"
+                role="separator"
+                aria-orientation="vertical"
+              ></div>
             </div>
           </nav>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <div
               className={`transition-all duration-500 ease-in-out flex gap-10 mt-16 text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${
-                hoveredItem === '01' ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-5'
+                hoveredItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
               }`}
             >
               <Link to="/AboutUs">
-                <h2 className="hover:text-gray-400">About</h2>
+                <h2 className="text-xs leading-5 hover:text-gray-400">
+                  {hoveredItem ? contentMap[hoveredItem] : "About"}
+                </h2>
               </Link>
             </div>
           </div>
@@ -285,6 +302,8 @@ function AboutSection() {
     </section>
   );
 }
+
+
 
 
 
@@ -309,7 +328,7 @@ const ServiceItem = ({ icon, text, path, isVisible }) => (
       className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
     />
     <Link to={path}>
-      <div className="self-stretch hover:text-gray-400 my-auto">{text}</div>
+      <div className="text-xs self-stretch hover:text-gray-400 my-auto">{text}</div>
     </Link>
   </div>
 );
@@ -415,7 +434,7 @@ const IndustriesItem = ({ icon, text, isVisible }) => (
       alt=""
       className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
     />
-    <div className="self-stretch  hover:text-gray-400 my-auto">{text}</div>
+    <div className="text-xs self-stretch  hover:text-gray-400 my-auto">{text}</div>
   </div>
 );
 

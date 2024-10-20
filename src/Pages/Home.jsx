@@ -238,7 +238,7 @@ useGSAP(() => {
       // Image Animation for larger screens
       tl.to(".image1", { x: "60rem", y: "-40rem" }, "display")
         .to(".image2", { x: "-63rem", y: "-40rem" }, "display")
-        .to(".buttonRM", { x: "7rem" }, "display");
+        .to(".buttonRM", { x: "3rem" }, "display");
     }
 
     // Animations for mobile screens (1024px and below)
@@ -307,21 +307,18 @@ useGSAP(() => {
               Your browser does not support the video tag.
             </video>
           <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-6xl  lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
             </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+            <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                   alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
+                  className="bg-repeat object-contain w-9 lg:w-14"
                 />
-              </button>
-              <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-4 my-auto bg-white hover:bg-red-700 hover:text-white border border-solid border-zinc-900 border-opacity-10 text-sm  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
-                Learn More
               </button>
             </div>
           </div>
@@ -332,21 +329,18 @@ useGSAP(() => {
               Your browser does not support the video tag.
             </video>
         <div className="inset-y-[26rem] md:inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
             </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+            <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                   alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
+                  className="bg-repeat object-contain w-9 lg:w-14"
                 />
-              </button>
-              <button className="px-5 lg:px-10 self-stretch py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm lg:text-2xl 2xl:min-h-[64px] rounded-[50px] ">
-                Learn More
               </button>
             </div>
           </div>
@@ -358,20 +352,17 @@ useGSAP(() => {
                 Your browser does not support the video tag.
             </video>
         <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+            <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>
                 <img
                   loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                   alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
+                  className="bg-repeat object-contain w-9 lg:w-14"
                 />
-              </button>
-              <button className="px-5 lg:px-10 self-stretch py-2 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
-                Learn More
               </button>
             </div>
           </div>
@@ -504,9 +495,9 @@ useGSAP(() => {
     {/*  Why choose JEF Section  */}
 
     <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
-      <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
-      <img className="h-32 mt-[15%] hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
-      <FeatureSection/>
+      <header className="flex flex-row gap-7 w-full  max-md:max-w-full">
+      <img className="h-32 mt-[15%] hidden lg:block -ml-[10%]" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+      <div className="ml-[10%]"><FeatureSection/></div>
       </header>
       
     </main>
@@ -553,12 +544,12 @@ useGSAP(() => {
               <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
-              <p className="self-stretch my-20 lg:w-[35vw] text-xl lg:text-2xl leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p className="self-stretch my-20 lg:w-[35vw] text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
               <h2 className="text-2xl lg:text-3xl  font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
-              <p className="my-4 text-xl lg:text-2xl  max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className=" text-xl lg:text-2xl  max-md:max-w-full">{"Chairman and Managing Director"}</p>
               <p className="text-xl lg:text-2xl ">{"JEF Group"}</p>
             </div>
           </div>
@@ -584,14 +575,14 @@ useGSAP(() => {
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
             <h1 className=" text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 text-sm lg:text-base tracking-[3px]">
-              <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
+              <div className="grow my-auto">40 ARTICLES IN TOTAL</div>
               <Link to="/Blog">
                   <button>
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
                       alt=""
-                      className="object-contain shrink-0 w-10 lg:w-14 aspect-square"
+                      className="object-contain shrink-0 w-10 lg:w-13 aspect-square"
                     />
                   </button>
               </Link>
@@ -740,41 +731,41 @@ const WhatWeDoSection = () => {
           </section>
 
           {/* Right Section */}
-          <section className="lg:w-[40%] flex flex-col justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
-            <div className="flex flex-col lg:w-[80%] text-2xl font-medium leading-10 max-md:max-w-full">
+          <section className="lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
+            <div className="flex flex-col lg:w-[80%] text-xl font-medium leading-10 max-md:max-w-full">
               <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
               <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
             </div>
             <div className="lg:mt-12 w-full max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col">
                 <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                  <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
+                  <div className="flex flex-col items-end self-end  w-full max-md:mt-10 max-md:max-w-full">
                     <div className="max-w-full w-[80%]">
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
-                            <h3 className="text-xl lg:text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
-                            <div className="flex flex-col items-start self-start mt-5 text-xl lg:text-2xl text-white whitespace-nowrap">
+                            <h3 className="text-xl font-bold items-start self-start text-green-600">Total Projects</h3>
+                            <div className="flex flex-col items-start self-start mt-5 text-xl text-white whitespace-nowrap">
                               <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
-                              <h4 className="self-stretch my-5 text-xl lg:text-2xl font-bold text-center text-green-600">gcc</h4>
+                              <h4 className="self-stretch my-5 text-xl font-bold text-center text-green-600">gcc</h4>
                               <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
                             </div>
                           </div>
                         </div>
                         <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
-                            <h3 className="text-xl lg:text-2xl font-bold text-start text-green-600">INDIA</h3>
-                            <p className="self-start mt-5 text-xl lg:text-2xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                            <h3 className="text-xl font-bold text-start text-green-600">INDIA</h3>
+                            <p className="self-start mt-5 text-xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div>
-                      <h3 className="mt-10 text-xl lg:text-2xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                      <p className="self-stretch mt-6 w-[80%] text-lg lg:text-xl h-[23vh] leading-9 text-white ">
+                    <div className="flex-col justify-end items-end ml-[20%]">
+                      <h3 className="mt-10 text-xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
+                      <p className="self-stretch mt-6 w-[80%] text-lg h-[23vh] leading-7 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-xl mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5 lg:text-2xl text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-xl  mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
@@ -887,15 +878,15 @@ function FeatureSection() {
                 Our L&d centre
                 </h2>
                 <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-                  <p className="description1 -ml-[12%] text-2xl mt-10 font-light leading-10 max-md:max-w-full">
+                  <p className="description1 -ml-[5%] text-2xl mt-10 font-light leading-10 max-md:max-w-full">
                   Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
                   </p>
-                  <p className='description2 -mt-[5%] text-2xl font-light leading-10 max-md:max-w-full'>
+                  <p className='description2 -mt-[8%] text-2xl font-light leading-10 max-md:max-w-full'>
                   Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
                   </p>
                   
                 </div>
-                <button className="buttonRM flex gap-2.5 justify-center items-center self-start  px-6 mt-16 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
+                <button className="buttonRM flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
                   <span className="self-stretch my-auto">Read More</span>
                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
                   </button>
@@ -1093,7 +1084,7 @@ const LandingImages = () => {
               Your browser does not support the video tag.
             </video>
           <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-4xl  lg:text-4xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full">
             THINK ELECTRICAL, <br />
             THINK JEF
             </h1>
@@ -1118,7 +1109,7 @@ const LandingImages = () => {
               Your browser does not support the video tag.
             </video>
         <div className="inset-y-[26rem] md:inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-5xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
             </h1>
@@ -1131,7 +1122,7 @@ const LandingImages = () => {
                   className="bg-repeat object-contain w-9 lg:w-16"
                 />
               </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
+              <button className="gap-2.5 self-stretch px-2.5 py-1 hover:bg-red-600 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
                 Learn More
               </button>
             </div>
@@ -1144,7 +1135,7 @@ const LandingImages = () => {
                 Your browser does not support the video tag.
             </video>
         <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-6xl 2xl:text-7xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <h1 className="xl:text-5xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
             <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
