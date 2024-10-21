@@ -878,10 +878,10 @@ function FeatureSection() {
                 Our L&d centre
                 </h2>
                 <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-                  <p className="description1 -ml-[5%] text-2xl mt-10 font-light leading-10 max-md:max-w-full">
+                  <p className="description1 -ml-[5%] text-xl mt-10 font-light leading-10 max-md:max-w-full">
                   Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
                   </p>
-                  <p className='description2 -mt-[8%] text-2xl font-light leading-10 max-md:max-w-full'>
+                  <p className='description2 -mt-[8%] text-xl font-light leading-10 max-md:max-w-full'>
                   Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
                   </p>
                   
