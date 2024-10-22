@@ -4,8 +4,8 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
-import CarousalImg from "../Components/Carousel/CarousalImg";
 import { Link } from "react-router-dom";
+import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 
 
@@ -147,6 +147,31 @@ const buttonData = [
 
 function Home() {
 
+
+  const itemsPerPageMobile = 1;  // 1 card on mobile
+  const itemsPerPageTablet = 2;  // 2 cards on tablet
+  const itemsPerPageDesktop = 3; // 3 cards on desktop
+
+
+  // Responsive value for `itemsPerPage`
+  const itemsPerPage = window.innerWidth >= 1024 ? itemsPerPageDesktop
+                     : window.innerWidth >= 768 ? itemsPerPageTablet
+                     : itemsPerPageMobile;// Number of cards visible at once
+  const totalItems = blogData.length; // Total number of blog cards
+
+  // Function to handle the next slide
+  const nextSlide = () => {
+    if (currentIndex < totalItems - itemsPerPage) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  // Function to handle the previous slide
+  const prevSlide = () => {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+    }
+  };
 
 // Carousal Image's Animation
 
@@ -497,40 +522,10 @@ useGSAP(() => {
     <main className="flex bg-fixed lg:px-[200px] h-screen overflow-hidden flex-col px-16 py-6 bg-stone-900 ">
       <header className="flex flex-row gap-7 w-full  max-md:max-w-full">
       <img className="h-32 mt-[15%] hidden lg:block -ml-[10%]" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
-      <div className="ml-[10%]"><FeatureSection/></div>
+      <div className="lg:ml-[10%]"><FeatureSection/></div>
       </header>
       
     </main>
-
-
-
-    {/*  Founder's Message Section   */}
-
-
-    
-
-     {/* <section>
-
-          <main className="flex overflow-hidden flex-col font-bold text-white bg-white bg-opacity-50">
-            <section className="flex relative flex-col justify-center items-start px-20 py-16 w-full min-h-[858px] max-md:px-5 max-md:max-w-full">
-              <img loading="lazy" src="./HomePageImg/FounderImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-              <div className="flex lg:mx-[120px] relative flex-col items-start max-w-full w-[909px]">
-              <h1 className="text-6xl max-md:max-w-full max-md:text-4xl">
-                Founder's message
-              </h1>
-              <p className="self-stretch mt-6 text-3xl leading-10 max-md:max-w-full">
-                JEF is an innovative company with Indian roots and an extensive international presence across 21+ countries in the ASEAN, Middle Eastern, African and European regions. We have been the preferred vendor for prestigious projects in many countries with 3000+ global customers and an astounding 90% customer retention rate.
-              </p>
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/9413036975d5e878aae400b5c1b1dede1eb9dddb15de69b0300085276dd801b0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Signature" className="object-contain mt-8 max-w-full aspect-[2.93] w-[226px]" />
-                <h2 className="mt-5 text-5xl max-md:text-4xl">Prashanth BG</h2>
-                <p className="mt-5 text-3xl max-md:max-w-full">
-                  CEO, JEF TECHNO SOLUTIONS PVT LTD
-                </p>
-              </div>
-            </section>
-          </main>
-
-          </section> */}
 
 
 
@@ -544,11 +539,11 @@ useGSAP(() => {
               <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
-              <p className="self-stretch my-20 lg:w-[35vw] text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p className="self-stretch my-20 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
-              <h2 className="text-2xl lg:text-3xl  font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <h2 className="text-xl lg:text-3xl  font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
               <p className=" text-xl lg:text-2xl  max-md:max-w-full">{"Chairman and Managing Director"}</p>
               <p className="text-xl lg:text-2xl ">{"JEF Group"}</p>
             </div>
@@ -569,7 +564,7 @@ useGSAP(() => {
 
 
 
-  <section>
+  <section className="py-10 bg-neutral-100">
       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
         <div className="flex flex-col items-start mb-0 w-full  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
@@ -588,15 +583,59 @@ useGSAP(() => {
               </Link>
             </div>
           </header>
-          <nav className="flex gap-8 mt-16  text-sm lg:text-lg uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 ">
-            <a href="#newest" className="text-red-700 basis-auto">Newest</a>
-            <a href="#oldest" className="text-neutral-900">Oldest</a>
-          </nav>
+          <div className="flex justify-between w-full">
+              <nav className="flex gap-8 mt-5 text-xs uppercase whitespace-nowrap max-md:mt-10">
+                <a href="#newest" className="text-red-700 basis-auto">Newest</a>
+                <a href="#oldest" className="text-neutral-900">Oldest</a>
+              </nav>
+              <div className="flex gap-2 md:gap-5 lg:gap-8 self-end items-end justify-end mt-5">
+                <button
+                  className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
+                  onClick={prevSlide}
+                  disabled={currentIndex === 0} // Disable button if at the first slide
+                >
+                  <img src="./HomePageImg/LeftArrow.png" alt="LeftArrow" className="w-8" />
+                </button>
+                <button
+                  className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage ? "opacity-50 cursor-not-allowed" : ""}`}
+                  onClick={nextSlide}
+                  disabled={currentIndex >= totalItems - itemsPerPage} // Disable button if at the last slide
+                >
+                  <img src="./HomePageImg/RightArrow.png" alt="RightArrow" className="w-8" />
+                </button>
+              </div>
+            </div>
+
+
+            {/* Slider Section */}
+
         </div>
       </main>
-          <section>
-          < CarousalImg/>
-          </section>
+      <section className="relative h-auto mt-5 bg-neutral-100">
+      <div className="flex-shrink-0 mx-[10px] lg:mx-[160px] top-0 flex h-auto items-center overflow-hidden">
+        <motion.div
+          className="flex gap-4 flex-row" // Arrange cards in horizontal direction
+          animate={{ x: `-${(currentIndex * (100 / itemsPerPage))/(totalItems/itemsPerPage)}%` }} // Slide based on currentIndex
+          transition={{ 
+            ease: [0.42, 0, 0.58, 1], // EaseInOut cubic-bezier for smooth transition
+            duration: 0.8 // Slightly longer duration for a smooth feel
+          }}
+          style={{ width: `${(totalItems / itemsPerPage) * 100}%` }} // Ensure motion div expands to hold all items
+        >
+          {blogData.map((blog) => (
+            <BlogCard
+              key={blog.id}
+              imageSrc={blog.imageSrc}
+              title={blog.title}
+              path={blog.path}
+            />
+          ))}
+        </motion.div>
+      </div>
+
+      {/* Slider Buttons */}
+    </section>
+
     </section>
 
     
@@ -790,62 +829,6 @@ const WhatWeDoSection = () => {
 
 
 
-// const BlogCarousel = () => {
-//   const [startIndex, setStartIndex] = useState(0);
-
-//   const handleNext = () => {
-//     if (startIndex + 3 < blogData.length) {
-//       setStartIndex((prevIndex) => prevIndex + 1);
-//     }
-//   };
-
-//   return (
-//     <section>
-//       <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 py-20 w-full bg-neutral-100 max-md:px-5 max-md:pb-24 max-md:max-w-full">
-//         <div className="flex flex-col items-start mb-0 w-full max-w-[1480px] max-md:mb-2.5 max-md:max-w-full">
-//           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-//             <h1 className="text-5xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
-//             <div className="flex gap-7 text-base tracking-[3px]">
-//               <div className="grow my-auto">99 ARTICLES IN TOTAL</div>
-//               <button onClick={handleNext} disabled={startIndex + 3 >= blogData.length}>
-//                 <img
-//                   loading="lazy"
-//                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-//                   alt=""
-//                   className="object-contain shrink-0 w-14 aspect-square"
-//                 />
-//               </button>
-//             </div>
-//           </header>
-//           <nav className="flex gap-8 mt-16 ml-3.5 text-xl uppercase whitespace-nowrap tracking-[3.36px] max-md:mt-10 max-md:ml-2.5">
-//             <a href="#newest" className="text-red-700 basis-auto">Newest</a>
-//             <a href="#oldest" className="text-neutral-900">Oldest</a>
-//           </nav>
-//           <section className="mt-10 w-full max-w-[1400px] max-md:max-w-full">
-//             <div className="flex justify-between items-center">
-              
-//               <div className="flex gap-5 max-md:flex-col w-full justify-center">
-//                 {blogData.slice(startIndex, startIndex + 3).map((blog, index) => (
-//                   <BlogCard key={index} imageSrc={blog.imageSrc} title={blog.title} />
-//                 ))}
-//               </div>
-              
-//             </div>
-//           </section>
-//         </div>
-//       </main>
-//     </section>
-//   );
-// };
-
-
-
-
-
-
-
-
-
 
 
 
@@ -909,11 +892,11 @@ function FeatureSection() {
           </div>
           <div className="textSM1 relative">
             <h1 className=" text-white -mt-10 font-medium text-center text-3xl uppercase">Smart <br />digitalisation</h1>
-            <h3 className=" text-white text-lg mt-5 text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+            <h3 className=" text-white text-lg  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
           </div>
           <div className="textSM2 relative">
             <h1 className=" text-white mt-32 font-medium text-center text-3xl uppercase">Our L&d <br />centre</h1>
-            <h3 className=" text-white text-lg mt-5 text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
+            <h3 className=" text-white text-lg text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
           </div>
         </section>
     </>
@@ -1182,6 +1165,39 @@ const LandingImages = () => {
   );
 };
 
+
+
+
+function BlogCard({ imageSrc, title ,path }) {
+  return (
+    <article className="flex flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
+      <div className="flex flex-col grow max-md:mt-10">
+        <div className="flex flex-col justify-center w-full min-h-[400px] overflow-hidden relative">
+          <img
+            loading="lazy"
+            src={imageSrc}
+            alt={title}
+            className="object-cover w-full h-full transition-transform duration-500 ease-in-out transform hover:scale-125"
+          />
+        </div>
+        <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
+          <h2 className="lg:text-base leading-6 lg:h-16 text-stone-900">{title}</h2>
+          <div className="flex gap-2 mt-6 lg:text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
+            <Link to={path}>
+              <div className="text-xs grow">Read more</div>
+            </Link>
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+              alt=""
+              className="object-contain shrink-0 aspect-[2.07] w-[21px]"
+            />
+          </div>
+        </div>
+      </div>
+    </article>
+  );
+}
 
 
 

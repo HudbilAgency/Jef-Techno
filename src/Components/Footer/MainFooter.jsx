@@ -87,12 +87,12 @@ function Footer() {
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
-          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs xl:text-base lg:text-base font-light basis-auto grow-0 tracking-widest">
+          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs md:text-sm  font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs xl:text-base lg:text-base mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs md:text-sm mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
               <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 lg:h-10 -mt-[2%] -ml-[2%]' />
           </div>   
@@ -107,7 +107,7 @@ function Footer() {
 function Section({ title, items }) {
   return (
     <section className="flex flex-col min-h-[234px] w-[219px]">
-      <header className="w-full text-2xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
+      <header className="w-full text-xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
         {title}
       </header>
       <ul className="flex overflow-hidden font-light flex-col mt-4 w-full text-base leading-none text-gray-300">
@@ -208,7 +208,7 @@ const FAQComponent = () => {
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
-          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold md:text-3xl text-2xl tracking-wider uppercase text-red-600">
+          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold text-lg md:text-xl tracking-wider uppercase text-red-600">
             {question}
           </h2>
           <div className="flex flex-col items-start self-stretch my-auto min-h-[40px]">
