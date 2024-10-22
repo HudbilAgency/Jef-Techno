@@ -68,7 +68,7 @@ const EarthingStudies = () => {
           gsap.to(ref, {
             scale: hoveredIndex !== null ? 0.9 : 1,
             opacity: hoveredIndex !== null ? 0.5 : 1,
-            border: hoveredIndex !== null && services[index]?.text === '' ? '1px solid white' : '',
+            // border: hoveredIndex !== null && services[index]?.text === '' ? '1px solid white' : '',
             backgroundColor: hoveredIndex !== null && services[index]?.text === '' ? 'transparent' : '',
             duration: 0.2,
             ease: 'power2.inOut'
@@ -154,13 +154,13 @@ const EarthingStudies = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex inset-y-2/3 lg:inset-x-40 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
-          <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+        <div className="flex inset-y-3/4 lg:inset-x-32 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+          <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EARTHING STUDIES
           </h1>
-          <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+          <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
             
-            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-xl  lg:text-2xl 2xl:min-h-[64px] rounded-[50px]">
+            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
           </div>
@@ -181,7 +181,7 @@ const EarthingStudies = () => {
           <div className="flex items-center h-full min-w-[240px]">
             {navItems.map((item, index) => (
               <div key={index} className="flex items-center self-stretch my-auto">
-                <div className={`self-stretch my-auto text-sm lg:text-base tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
+                <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
                   {item.label}
                 </div>
                 {item.isActive && (
@@ -201,8 +201,8 @@ const EarthingStudies = () => {
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
-      <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base md:text-2xl leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl md:text-4xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
+      <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
             Comprehensive Earthing/Grounding integrity testing services
           </div>
@@ -265,7 +265,7 @@ const EarthingStudies = () => {
               <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[60vh]">
+              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
                 <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
@@ -347,55 +347,12 @@ const EarthingStudies = () => {
 
 
 
-// const ServicesSection = () => {
-//   const services = [
-//     { text: '' },
-//     { text: '' },
-//     { text: '' },
-//     { text: 'Earthing studies' },
-//     { text: 'Lightning Protection System Studies' },
-//     { text: 'Power System Studies' },
-//     { text: '' },
-//     { text: '' },
-//     { text: '' },
-//   ];
-//   const services1 = [
-//     { text: '' },
-//     { text: '' },
-//     { text: '' },
-//     { text: '' },
-//     { text: 'Power Quality &  Root cause Analysis' },
-//     { text: 'Instrumentation Earthing' },
-//     { text: '' },
-//     { text: '' },
-//     { text: '' },
-//   ];
-
-//   return (
-//     <section className="flex overflow-hidden bg-stone-900 flex-col text-base leading-6 text-center text-white uppercase w-full">
-//       <h2 className="self-center text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
-//         our services
-//       </h2>
-//       <div className="flex ml-[5%] flex-wrap justify-between mt-20 max-md:mt-10 w-full">
-//         {services.slice(0, 9).map((service, index) => (
-//           <ServiceItem key={index} {...service} />
-//         ))}
-//       </div>
-//       <div className="flex flex-wrap gap-5 justify-between mt-6 w-full max-md:mt-10">
-//         {services1.slice(0).map((service, index) => (
-//           <ServiceItem key={index + 5} {...service} />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
 const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
   return (
     <div
   ref={ref}
   className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-    ${text === "" ? "bg-stone-800" : "border border-solid hover:bg-red-600"}`}
+    ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
   onMouseEnter={() => {
     if (text !== "") {
       onMouseEnter();
@@ -407,7 +364,7 @@ const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref)
     }
   }}
 >
-  <span className="text-center text-[60%] md:text-sm lg:text-base">{text}</span>
+  <span className="text-center text-[60%] md:text-sm ">{text}</span>
 </div>
 
   );
@@ -458,7 +415,7 @@ function CarouselSection({ components }) {
   return (
     <section className="flex xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
       <div className="flex flex-wrap gap-5 justify-between w-full">
-        <h2 className="xl:text-5xl lg:text-4xl md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
+        <h2 className="md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
           KEY COMPONENTS OF THE STUDY
         </h2>
         <div className="flex self-end flex-col min-h-[60px]">
@@ -506,17 +463,15 @@ function CarouselSection({ components }) {
           {components.map((component) => (
             <div
               key={component.title}
-              className="flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start justify-center w-full "
+              className="flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start w-full "
               style={{
                 flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
               }}
             >
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
-              <h3 className="text-red-700 font-normal sm:w-[90%] text-2xl sm:text-start my-10 text-center">{component.title}</h3>
-              <p className=" text-gray-400 text-center w-[50%] sm:w-[70%] font-thin lg:w-[90%] lg:text-2xl sm:text-start text-xl max-w-screen-xl">{component.description}</p>
-            </div>
-            
-            
+              <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
+              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">{component.description}</p>
+            </div>            
           ))}
         </div>
       </div>
@@ -611,7 +566,7 @@ const VerticalCarousel = () => {
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                     activeIndex === index
-                      ? "text-white md:text-xl xl:text-2xl 2xl:text-3xl h-32 xl:h-56"
+                      ? "text-white md:text-xl xl:text-2xl font-semibold h-32 xl:h-56"
                       : "h-auto text-base"
                   }`}
                   onClick={() => handleClick(index)}
@@ -632,7 +587,7 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] h-[87vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
@@ -648,13 +603,13 @@ const VerticalCarousel = () => {
                       alt={content.title}
                       className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
                     />
-                    <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] max-md:pl-5 max-md:ml-0">
+                    <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
                         {benefitItems.slice(0, 1).map((item, index) => (
                           <li
                             key={index}
                             className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                               activeIndex === index
-                                ? "text-white text-3xl h-24"
+                                ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
                                 : "h-auto text-base"
                             }`}
                             onClick={() => handleClick(index)}
@@ -674,19 +629,19 @@ const VerticalCarousel = () => {
                       </ul>
 
 
-                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-4xl ml-5 lg:ml-0 tracking-[4.53px] font-light leading-[60px] uppercase max-md:max-w-full">
+                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] lg:leading-[60px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
-                    <div className="mt-3.5 max-md:max-w-full">
+                    <div className="mt-10 max-md:max-w-full">
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="flex h-auto flex-col w-full max-md:w-full">
                           {/* Splitting description by period and inserting line breaks with bullet */}
                           {content.description.split("|").map((sentence, idx) => (
                           <div key={idx} className="flex items-start">
-                            <span className="text-2xl leading-9 tracking-widest text-white max-md:max-w-full">
+                            <span className="leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-xl md:text-lg xl:text-2xl font-light leading-9 tracking-widest text-white max-md:max-w-full">
+                            <p className="ml-4 text-base md:text-lg  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
