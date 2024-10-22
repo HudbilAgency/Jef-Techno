@@ -143,7 +143,7 @@ const Navbar = () => {
                     />
               </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-3 px-7 my-auto  md:text-sm xl:text-base text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-1.5 lg:py-3 px-4 lg:px-7 my-auto  md:text-sm xl:text-base text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
               Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>

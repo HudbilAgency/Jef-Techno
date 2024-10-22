@@ -778,33 +778,33 @@ const WhatWeDoSection = () => {
             <div className="lg:mt-12 w-full max-md:mt-10 max-md:max-w-full">
               <div className="flex gap-5 max-md:flex-col">
                 <div className="flex flex-col max-md:ml-0 max-md:w-full">
-                  <div className="flex flex-col items-end self-end  w-full max-md:mt-10 max-md:max-w-full">
+                  <div className="flex flex-col lg:items-end self-end  w-full max-md:mt-10 max-md:max-w-full">
                     <div className="max-w-full w-[80%]">
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
-                          <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
+                          <div className="flex flex-col grow uppercase tracking-[3px] ">
                             <h3 className="text-xl font-bold items-start self-start text-green-600">Total Projects</h3>
-                            <div className="flex flex-col items-start self-start mt-5 text-xl text-white whitespace-nowrap">
+                            <div className="flex flex-col items-start self-start lg:mt-5 text-xl text-white whitespace-nowrap">
                               <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
-                              <h4 className="self-stretch my-5 text-xl font-bold text-center text-green-600">gcc</h4>
+                              <h4 className="self-stretch mt-5 text-xl font-bold text-center text-green-600">gcc</h4>
                               <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
                             </div>
                           </div>
                         </div>
                         <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                          <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
+                          <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] ">
                             <h3 className="text-xl font-bold text-start text-green-600">INDIA</h3>
-                            <p className="self-start mt-5 text-xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                            <p className="self-start lg:mt-5 text-xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div className="flex-col justify-end items-end ml-[20%]">
+                    <div className="flex-col justify-end items-end lg:ml-[20%]">
                       <h3 className="mt-10 text-xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                      <p className="self-stretch mt-6 w-[80%] text-lg h-[23vh] leading-7 text-white ">
+                      <p className="self-stretch mt-6 w-[80%] text-base h-[23vh] leading-7 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-xl  mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-lg  mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
