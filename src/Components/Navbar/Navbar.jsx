@@ -540,6 +540,7 @@ const FAQComponent = () => {
       question: "About", 
       content: [
         { label: 'About Us', path: '/AboutUs' },
+        { label: 'JEF Leadership Team', path: '/LeadershipTeam' },
       ], 
       isOpen: false , 
 

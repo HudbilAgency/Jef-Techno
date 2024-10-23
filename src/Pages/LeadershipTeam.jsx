@@ -143,7 +143,7 @@ export default function LeadershipTeam() {
     <>
         < Navbar />
         <main className="flex flex-col min-h-screen bg-neutral-100">
-            <header className="relative h-screen overflow-hidden bg-pink-900">
+            <header className="relative h-screen overflow-hidden">
                 <img 
                 src="./LeadershipTeamImg/JEF Leadership image.png"
                 alt=""
