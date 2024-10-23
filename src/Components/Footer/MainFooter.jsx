@@ -137,7 +137,7 @@ const FAQComponent = () => {
       question: "ABOUT", 
       content: [
         { label: 'What is JEF', path: '/AboutUs' },
-        { label: 'JEF leadership team', path: '' },
+        { label: 'JEF leadership team', path: '/LeadershipTeam' },
         { label: 'JEF Smart Digitalization', path: '' },
         { label: 'JEF L & D Centre', path: '' }
       ], 
