@@ -89,7 +89,7 @@ function Industries() {
             Renewable Energy Industry
             </h1>
         </header>
-        <section className="mt-12 text-base xl:text-lg p-2 md:text-xl md:w-[80%] lg:w-[60%] self-center leading-10 text-zinc-900 max-md:mt-10 max-md:max-w-full">
+        <section className="mt-12 text-base xl:text-lg p-2 md:text-xl md:w-[80%] lg:w-[60%] self-center lg:leading-10 text-zinc-900 max-md:mt-10 max-md:max-w-full">
             <p>
             The Middle East, particularly the{" "}
             <span className="font-semibold">UAE, Saudi Arabia, and Qatar</span>,
@@ -125,7 +125,7 @@ function Industries() {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1518px] max-md:max-w-full">
-        <h2 className="self-start text-4xl leading-none text-red-700 uppercase max-md:max-w-full max-md:text-4xl">
+        <h2 className="self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
           service provided
         </h2>
         <div className="flex flex-wrap gap-10 items-start mt-20 max-md:mt-10">
@@ -136,10 +136,10 @@ function Industries() {
                 <img 
                 src={service.number}  className="h-[2rem] lg:h-[3rem]"/>
                 </h3>
-                <h4 className="mt-10 text-2xl leading-8 text-red-700 max-md:max-w-full">
+                <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl leading-8 text-red-700 max-md:max-w-full">
                   {service.title}
                 </h4>
-                <p className="mt-10 text-lg font-extralight leading-9 text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
+                <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight lg:leading-9 text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
                   {service.description}
                 </p>
               </article>
@@ -161,7 +161,7 @@ function Industries() {
       <img
         loading="lazy"
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/fec8dd4c0faf600f3fdc9aa66a007a0646ef06fff1de8c883aa0da6ffda49ac6?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
-        className="object-contain h-60 mt-16 w-full aspect-[7.3] max-md:mt-10 max-md:max-w-full"
+        className="object-contain lg:h-60 mt-16 w-full aspect-[7.3] max-md:mt-10 max-md:max-w-full"
         alt="Decorative image"
       />
     </main>
@@ -214,10 +214,10 @@ const statistics = [
 
 function StatisticItem({ label, value }) {
   return (
-    <div className="mt-6 tracking-widest uppercase max-md:max-w-full">
+    <div className="mt-4 tracking-widest uppercase max-md:max-w-full">
       {label && (
         <>
-          • <span className="font-bold">{label}</span>
+          • <span className="text-sm lg:text-lg font-bold">{label}</span>
         </>
       )}
 </div>
@@ -243,7 +243,7 @@ function IntegratingDiverseSpecializations() {
               <h2 className="self-start lg:text-3xl w-[90%] font-bold leading-relaxed tracking-widest text-red-700 uppercase max-md:max-w-full">
                 Integrating Diverse Specializations for Value Delivery
               </h2>
-              <p className="self-start lg:text-xl leading-normal font-light w-[95%]  my-14  max-md:mt-10 max-md:max-w-full">
+              <p className="self-start text-lg lg:text-xl leading-normal font-light w-[95%]  my-14  max-md:mt-10 max-md:max-w-full">
               The diverse specializations within our team ensure a multidimensional approach to problem
                 solving, thereby positioning us as a competent and reliable service vendor partner in the
                 electrical engineering space.
