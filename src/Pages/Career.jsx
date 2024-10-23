@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import MainFooter from '../Components/Footer/MainFooter'
 import Navbar from '../Components/Navbar/Navbar';
+import { Link } from "react-router-dom";
 
 const Career = () => {
   const [searchParams, setSearchParams] = useState({
@@ -103,8 +104,8 @@ const Career = () => {
         <div className="flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
           <div className="flex flex-col items-center w-full  max-md:max-w-full">
             <div className="flex flex-col items-center w-full text-center">
-              <div className="flex flex-col items-start w-full">
-                <h1 className="text-7xl font-semibold tracking-wide leading-none text-white max-md:max-w-full max-md:text-4xl">
+              <div className="flex flex-col items-center w-full">
+                <h1 className="text-5xl font-semibold tracking-wide leading-none text-white max-md:max-w-full max-md:text-4xl">
                   Find Your Dream Job Today!
                 </h1>
                 <p className="mt-3 self-center text-lg font-normal text-white text-opacity-80 max-md:max-w-full">
@@ -192,14 +193,14 @@ const Career = () => {
       <section className="flex flex-col self-center py-16 mt-24 w-full max-w-[1440px] max-md:mt-10 max-md:max-w-full">
         <div className="flex p-4 flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">
           <div className="flex flex-col min-w-[240px] text-stone-900 max-md:max-w-full">
-            <h2 className="self-start text-5xl font-bold text-center max-md:max-w-full max-md:text-4xl">
+            <h2 className="self-start text-4xl font-bold text-center max-md:max-w-full max-md:text-4xl">
               Recent Jobs Available
             </h2>
-            <p className="mt-10 text-base max-md:max-w-full">
+            <p className="mt-10 text-sm max-md:max-w-full">
               At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. Lectus dolor blandit massa pretium id ultrices phasellus tortor. Risus risus lectus augue justo lacus viverra sit. Ultricies purus dolor viverra mi laoreet at cursus justo. Ultrices purus diam egestas amet faucibus tempor blandit. Elit velit mauris aliquam est diam. Leo sagittis consectetur diam morbi erat aenean. Vulputate praesent congue faucibus in euismod feugiat euismod volutpat. Adipiscing risus amet phasellus imperdiet eget vel pulvinar. Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.
             </p>
           </div>
-          <a href="#" className="text-2xl font-semibold text-red-700">View all</a>
+          <a href="#" className="text-xl font-semibold text-red-700">View all</a>
         </div>
         <div className="flex flex-col items-center mt-16 w-full max-md:mt-10 max-md:max-w-full">
           {jobs.map((job) => (
@@ -238,9 +239,11 @@ const Career = () => {
                     <div className="self-stretch my-auto">{job.location}</div>
                   </div>
                 </div>
-                <button className="overflow-hidden gap-2.5 self-stretch px-5 py-4 text-white capitalize bg-red-700 rounded-lg min-h-[40px]">
+               <Link to={'/JobDetails'}>
+               <button className="overflow-hidden gap-2.5 self-stretch px-5 py-4 text-white capitalize bg-red-700 rounded-lg min-h-[40px]">
                   Job details
                 </button>
+               </Link>
               </div>
             </div>
           ))}

@@ -228,7 +228,7 @@ const Navbar = () => {
 
 const navigationItems = [
   { number: "01", title: "What is JEF" },
-  { number: "02", title: "JEF leadership team" },
+  { number: "02", title: "JEF leadership team", path: "/LeadershipTeam" },  // Add a path for the leadership team
   { number: "03", title: "Our mission" },
   { number: "04", title: "Our vision" }
 ];
@@ -258,12 +258,13 @@ function AboutSection() {
                     <div className="self-stretch my-auto text-base text-red-700">
                       {item.number}
                     </div>
-                    <div
+                    <Link
+                      to={item.path || "#"} // Use the path for clickable items, otherwise keep "#" for others
                       onMouseEnter={() => setHoveredItem(item.number)}
                       className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white"
                     >
                       {item.title}
-                    </div>
+                    </Link>
                     {item.number === "01" && (
                       <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                         <img
