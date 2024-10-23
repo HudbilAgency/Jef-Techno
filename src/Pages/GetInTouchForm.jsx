@@ -200,16 +200,16 @@ const GetInTouchForm = () => {
                   </div>
                 </div>
               </div>
-              <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
+              <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
                   By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
-                  <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
-                  and <a href="#" className="font-medium text-red-700">privacy policy</a>{" "}
+                  <a href="/TermsAndConditions" className="font-medium text-red-700">terms and Conditions</a>{" "}
+                  and <a href="/PrivacyPolicy" className="font-medium text-red-700">privacy policy</a>{" "}
                   for more details.
                 </p>
               </div>
             </div>
-            <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-base font-thin leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
+            <div className="flex lg:hidden flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
                   By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
                   <a href="#" className="font-medium text-red-700">terms of use</a>{" "}
@@ -226,9 +226,74 @@ const GetInTouchForm = () => {
         </form>
       </div>
     </section>
+
+    <section>
+          < OfficeLocations />
+    </section>
     < MainFooter />
     </>
   );
 };
+
+
+
+
+export function OfficeLocations() {
+  const offices = [
+    {
+      title: "GCC Headquarter",
+      address: "Office no: 4-B, 4th floor, Prestige Tower 16, Mohammad Bin Zayed City, Abu Dhabi, UAE, Ph. No: +971 552447290 | jefme@jeftechno.com"
+    },
+    {
+      title: "Global Head Office",
+      address: "1073, 15th Cross, 30th Main, Banashankari 2nd stage, Bangalore -560070, Phone: (080) 3756 9000 | marketing@jeftechno.com"
+    },
+    {
+      title: "Coimbatore Office:",
+      address: "Logith Nivas, 1st floor, Dr. Abdul Kalaam Street, Nethaji Nagar Extension, Nanjundapuram Road, Coimbatore - 641036, Phone: +91 4223523697"
+    },
+    {
+      title: "Middle East Regional Office",
+      address: "Ground Floor, Accelerator Building Masdar City, Abu Dhabi, UAE"
+    },
+    {
+      title: "Kingdom of Saudi Arabia - Regional Office",
+      address: "Shariq Hub, Office No-606, Prince Turki St, PO Box- 6140, Al Khobar Corniche, PC-34423, KSA."
+    },
+    {
+      title: "Registered Office",
+      address: "No. 9, TSP building, 2nd Floor, Ganapathy Colony, Thiru Vi Ka Industrial Estate, Guindy, Chennai - 600032"
+    },
+    {
+      title: "Warehouse & Factory",
+      address: "Address: Plot No.16 D/1 and 16 D/2, SIPCOT Industrial Park, Hosur Phase II, Hosur Taluk, Krishnagiri Dist. Pin - 635126"
+    }
+  ];
+
+  return (
+    <main className="flex flex-col items-center min-h-screen bg-neutral-100 px-5 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 md:py-20 ">
+      <section className="w-full max-w-[68.688rem] mx-auto">
+        <h1 className="text-2xl sm:text-3xl text-red-700 text-center mb-8 sm:mb-12 md:mb-16">
+          JEF offices
+        </h1>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-6 md:gap-8">
+          {offices.map((office, index) => (
+            <article
+              key={index}
+              className="flex flex-col p-4 rounded-lg bg-neutral-100  hover:shadow-md transition-shadow duration-300"
+            >
+              <h2 className="text-base font-medium text-red-700 mb-3">
+                {office.title}
+              </h2>
+              <p className="text-sm sm:text-base font-light leading-6 text-black">
+                {office.address}
+              </p>
+            </article>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
+}
 
 export default GetInTouchForm;

@@ -101,7 +101,7 @@ const TermsAndConditions = () => {
   ];
 
   const SectionHeader = ({ title }) => (
-    <h2 className="mt-14 lg:text-3xl text-2xl tracking-wide font-normal leading-none text-red-700 max-md:mt-10">
+    <h2 className="mt-14 text-2xl tracking-wide font-normal leading-none text-red-700 max-md:mt-10">
       {title}
     </h2>
   );
@@ -160,10 +160,10 @@ const TermsAndConditions = () => {
        < Navbar/>
         <main className="flex overflow-hidden self-center justify-center mx-auto flex-col items-center px-20 py-56 text-base font-thin bg-neutral-100  text-zinc-800 max-md:px-5 max-md:py-24">
           <article className="flex overflow-hidden flex-col items-start px-10 py-16  max-w-full bg-white w-[1024px] max-md:px-5">
-            <h1 className="text-5xl font-light leading-none uppercase tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+            <h1 className="text-4xl font-normal leading-none uppercase tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
               Terms & Condition
             </h1>
-            <p className="mt-16 text-lg text-gray-700 leading-6 max-md:mt-10 max-md:max-w-full">
+            <p className="mt-16  text-lg text-gray-700 leading-6 max-md:mt-10 max-md:max-w-full">
               JEF Group of Companies ("JEF," "we," "our," or "us") is committed to protecting your privacy and ensuring that your personal data is handled in compliance with the applicable laws and regulations of the United Arab Emirates (UAE), including the UAE Personal Data Protection Law (PDPL). This Privacy Policy explains how we collect, use, disclose, and
               <br />
               safeguard your information when you visit our website [www.jefuae.com] (the "Site") or interact with us in other ways.

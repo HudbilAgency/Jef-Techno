@@ -192,7 +192,7 @@ const LightningProtectionStudies = () => {
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
       <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
+        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
           Lightning Protection Studies and <br /> System Testing Services
           </div>
@@ -456,7 +456,7 @@ function CarouselSection({ components }) {
             >
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
               <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
-              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-xl max-w-screen-xl">{component.description}</p>
+              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">{component.description}</p>
             </div>
             
             

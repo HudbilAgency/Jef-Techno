@@ -82,7 +82,7 @@ const PowerSystemStudies = () => {
       const navItems = [
         { label: 'HOME', isActive: true },
         { label: 'SERVICES', isActive: true },
-        { label: 'EARTHING STUDIES', isActive: false },
+        { label: 'POWER SYSTEM STUDIES', isActive: false },
       ];
 
       const [activeIndex, setActiveIndex] = useState(0);
@@ -464,7 +464,7 @@ function CarouselSection({ components }) {
             >
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
               <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
-              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-xl max-w-screen-xl">{component.description}</p>
+              <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">{component.description}</p>
             </div>
             
             

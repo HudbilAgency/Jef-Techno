@@ -150,7 +150,7 @@ const EarthingStudies = () => {
       <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
         <img
           loading="lazy"
-          src="https://cdn.builder.io/api/v1/image/assets/TEMP/6786160be35ce4ae023bd2f04360f5bea335ce494790c4d2fe3eb4f272f11752?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+          src="./SerivePage/Earthing Studies 1.png"
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
@@ -160,7 +160,7 @@ const EarthingStudies = () => {
           </h1>
           <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
             
-            <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
+            <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
           </div>
@@ -202,7 +202,7 @@ const EarthingStudies = () => {
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
       </div>
       <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed md:leading-[60px] tracking-[6.06px] w-[1071px]">
+        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed  tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
             Comprehensive Earthing/Grounding integrity testing services
           </div>

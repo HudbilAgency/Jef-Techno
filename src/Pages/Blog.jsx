@@ -26,62 +26,62 @@ const Blog = () => {
     {
       date: "August 15, 2024",
       title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-      content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
       imageUrl: "./BlogImg/BlogImg1.png",
       path: '/BlogInside'
     },
     {
       date: "August 15, 2024",
       title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-      content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
       imageUrl: "./BlogImg/BlogImg2.png"
     },
     {
       date: "August 15, 2024",
       title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-      content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
       imageUrl: "./BlogImg/BlogImg3.png"
     },
     {
       date: "August 15, 2024",
       title: "Ensuring Safety in the Oil and Gas Industry",
-      content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
       imageUrl: "./BlogImg/BlogImg4.png"
     },
     {
         date: "August 15, 2024",
         title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg1.png"
       },
       {
         date: "August 15, 2024",
         title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg2.png"
       },
       {
         date: "August 15, 2024",
         title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg3.png"
       },
       {
         date: "August 15, 2024",
         title: "Ensuring Safety in the Oil and Gas Industry",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg4.png"
       },
       {
         date: "August 15, 2024",
         title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg1.png"
       },
       {
         date: "August 15, 2024",
         title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-        content: "NEOM, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural NEOM Social Responsibility Awards ceremony. The celebratory event hosted by NEOM Social Responsibility (NEOM SR) honored the outstanding contributions being made by NEOM's employees, sectors, departments, partners and communities in the region.",
+        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
         imageUrl: "./BlogImg/BlogImg2.png"
       }
       
@@ -94,16 +94,15 @@ const Blog = () => {
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
-          <img loading="lazy" src="./BlogImg/BlogsMainImg.png" alt="MainImg" className="object-cover h-screen absolute inset-0 size-full" />
-          <div className="flex relative flex-col mb-0 max-w-full inset-y-2/3 lg:inset-x-40  max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
-            <h1 className="self-start xl:text-7xl lg:text-6xl text-6xl font-bold tracking-wider text-white">BLOGS</h1>
+          <img loading="lazy" src="./BlogImg/BlogMainImg.png" alt="MainImg" className="object-cover h-screen absolute inset-0 size-full" />
+          {/* <div className="flex relative flex-col mb-0 max-w-full inset-y-3/4 lg:inset-x-32 p-4   max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
+            <h1 className="self-start text-6xl font-bold tracking-wider text-white">BLOGS</h1>
             <div className="flex gap-2 md:gap-4 lg:gap-6 items-center mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              {/* <img loading="lazy" src="./PlayButtonImg.png" alt="PlayButtonImg" className="object-contain shrink-0 self-stretch my-auto w-16 aspect-square" /> */}
-              <button className="gap-1.5 self-stretch px-5 py-2 md:px-10 md:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px]">
+              <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Get in touch
               </button>
             </div>
-          </div>
+          </div> */}
         </div>
       </header>
       <main className="my-28 p-4 w-full max-w-[1312px] max-md:mt-10 max-md:max-w-full">
