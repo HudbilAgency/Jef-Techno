@@ -559,6 +559,7 @@ const FAQComponent = () => {
     { 
       question: "Industries", 
       content: [
+        { label: 'Industries Page', path: '/Industries' },
         { label: 'Oil and Gas', path: '' },
         { label: 'Power Utilites', path: '' },
         { label: 'Manufacturing Plant', path: '' },
