@@ -154,7 +154,7 @@ const EarthingStudies = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex inset-y-3/4 lg:inset-x-32 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+        <div className="flex inset-y-3/4 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
           <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EARTHING STUDIES
           </h1>
@@ -199,12 +199,12 @@ const EarthingStudies = () => {
         </div>
       </nav>
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-20 aspect-square" />
+        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
       </div>
-      <header className="flex p-4 flex-col items-center self-center mt-14 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl md:text-2xl font-medium uppercase leading-relaxed  tracking-[6.06px] w-[1071px]">
+      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+        <h1 className="flex flex-col max-w-full text-xl  font-medium uppercase leading-relaxed  tracking-[6.06px] w-[1071px]">
           <div className="w-full max-md:max-w-full">
-            Comprehensive Earthing/Grounding integrity testing services
+            Comprehensive Earthing/Grounding integrity <br /> testing services
           </div>
         </h1>
         <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">

@@ -36,7 +36,7 @@ function MainFooter() {
 
   return (
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
-      <div className="hidden lg:flex flex-col md:flex-row w-[85vw] max-w-[95vw] tracking-wider justify-between ">
+      <div className="hidden lg:flex flex-col md:flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between ">
         <Section title="About" items={itemsAbout} />
         <Section title="Services" items={itemsService} />
         <Section title="Locations" items={itemsLocation} />
@@ -73,8 +73,8 @@ function Footer() {
 
   return (
     <footer className="flex flex-col items-center pt-10 bg-stone-800">
-      <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[85vw] border border-solid border-neutral-400 max-md:mt-8" />
-      <div className="flex flex-row gap-10 justify-between items-start mt-5 lg:w-[85vw] max-w-[95vw]">
+      <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
+      <div className="flex flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
         <div className="hidden lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
@@ -86,7 +86,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
-        <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[85vw] max-w-[95vw] max-md:max-w-full">
+        <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs md:text-sm  font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
@@ -94,7 +94,7 @@ function Footer() {
           </div>
           <div className="text-xs md:text-sm mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
-              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 lg:h-10 -mt-[2%] -ml-[2%]' />
+              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 lg:h-10 -mt-[2%] ' />
           </div>   
         </div>
       </div>

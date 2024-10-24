@@ -311,7 +311,7 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-          <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
+          <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
             <h1 className="xl:text-6xl  lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             THINK ELECTRICAL, <br />
             THINK JEF
@@ -333,7 +333,7 @@ useGSAP(() => {
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className="inset-y-[26rem] md:inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
+        <div className="inset-y-[26rem] xl:mt-[2%] lg:inset-x-20 md:inset-y-2/3 0 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
             <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             END-to-END SOLUTIONS 
             <br />FOR ELECTRICAL PROTECTION
@@ -356,7 +356,7 @@ useGSAP(() => {
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
-        <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
+        <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
             <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EXCELLENCE THROUGH DIGITALISATION
             </h1>
@@ -374,10 +374,10 @@ useGSAP(() => {
 
         </div>
       </div>
-    <div ref={coverRef} className="absolute  w-full h-full bg-zinc-800"></div>
+    <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
     {index > 0 && (
         <div
-          className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          className="absolute top-1/2 left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
           onClick={handlePrev}
         >
           <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
@@ -385,7 +385,7 @@ useGSAP(() => {
       )}
       {index < totalSlides - 1 && (
         <div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          className="absolute top-1/2 right-20 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
           onClick={handleNext}
         >
           <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
@@ -435,7 +435,7 @@ useGSAP(() => {
         <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full"/>
         <div className="flex gap-5 p-4 max-md:flex-col">
           <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
-            <div className="flex z-10 my-20 flex-col items-start mt-20 mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
+            <div className="flex z-10 my-32 mt-56 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
               <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
@@ -556,7 +556,7 @@ useGSAP(() => {
     <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
       <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex lg:mx-[120px] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
+        <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
           <h1 className="text-2xl lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
             Contact us
           </h1>
@@ -672,7 +672,7 @@ const WhatWeDoSection = () => {
           {/* Right Section */}
           <section className="lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
             <div className="flex flex-col lg:w-[80%] text-xl font-medium leading-10 max-md:max-w-full">
-              <div className="shrink-0 mt-6 border border-zinc-400 thin-border max-md:max-w-full" />
+              <div className="shrink-0 mt-6 border border-red-700 thin-border max-md:max-w-full" />
               <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
             </div>
             <div className="lg:mt-12 w-full max-md:mt-10 max-md:max-w-full">
@@ -683,28 +683,28 @@ const WhatWeDoSection = () => {
                       <div className="flex gap-5 max-md:flex-col">
                         <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col grow uppercase tracking-[3px] ">
-                            <h3 className="text-xl font-bold items-start self-start text-green-600">Total Projects</h3>
-                            <div className="flex flex-col items-start self-start lg:mt-5 text-xl text-white whitespace-nowrap">
+                            <h3 className="text-base font-bold items-start self-start text-green-600">Total Projects</h3>
+                            <div className="flex flex-col items-start self-start lg:mt-5 text-base text-white whitespace-nowrap">
                               <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
-                              <h4 className="self-stretch mt-5 text-xl font-bold text-center text-green-600">gcc</h4>
+                              <h4 className="self-stretch mt-5 text-base font-bold text-center text-green-600">gcc</h4>
                               <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
                             </div>
                           </div>
                         </div>
                         <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
                           <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] ">
-                            <h3 className="text-xl font-bold text-start text-green-600">INDIA</h3>
-                            <p className="self-start lg:mt-5 text-xl text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                            <h3 className="text-base font-bold text-start text-green-600">INDIA</h3>
+                            <p className="self-start lg:mt-5 text-base text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
                           </div>
                         </div>
                       </div>
                     </div>
                     <div className="flex-col justify-end items-end lg:ml-[20%]">
-                      <h3 className="mt-10 text-xl font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                      <p className="self-stretch mt-6 w-[80%] text-base h-[23vh] leading-7 text-white ">
+                      <h3 className="mt-10 text-base font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
+                      <p className="self-stretch mt-6 w-[80%] text-sm h-[23vh] leading-7 text-white ">
                         {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                       </p>
-                      <button className="gap-2.5 text-lg  mt-28 md:mt-20 self-stretch px-5 py-2 lg:mt-5  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
+                      <button className="gap-2.5 text-base  mt-24 md:mt-20 self-stretch px-5 py-2 lg:mt-0  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
                         Read more
                       </button>
                     </div>
@@ -769,9 +769,9 @@ function FeatureSection() {
                   </p>
                   
                 </div>
-                <button className="buttonRM flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-xl uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] max-md:mt-10">
+                <button className="buttonRM flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
                   <span className="self-stretch my-auto">Read More</span>
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain shrink-0 self-stretch my-auto aspect-[1.2] w-[53px]" alt="" />
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
                   </button>
               </div>
             </div>

@@ -35,26 +35,18 @@ const AboutUs = () => {
    <>
    < Navbar />
     <section className='overflow-hidden'>
-            <main className="flex relative flex-col h-screen w-full  max-md:px-5 max-md:py-24 max-md:max-w-full">
+            <main className="flex relative flex-col h-screen w-full max-md:py-24 max-md:max-w-full">
             <img
                 loading="lazy"
                 src="./AboutUs/AboutUsMainBG.png"
                 alt="AboutUsMainbg"
                 className="object-cover absolute inset-0 size-full"
             />
-            <section className="flex relative inset-y-3/4 lg:inset-x-32 flex-col mt-8 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
+            <section className="flex relative inset-y-3/4 lg:inset-x-24 flex-col mt-8 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
                 <h1 className="md:text-5xl text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, THINK JEF
                 </h1>
                 <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
-                />
-              </button>
               <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Learn More
               </button>
@@ -73,17 +65,17 @@ const AboutUs = () => {
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 bg-zinc-800 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1380px] max-md:max-w-full">
         <header className="flex flex-col self-center max-w-full text-center text-white ">
-          <h1 className="flex justify-center items-center px-48 w-full text-4xl font-normal leading-none uppercase tracking-[3.36px] max-md:px-5 max-md:max-w-full ">
+          <h1 className="flex justify-center items-center px-48 w-full text-3xl font-normal leading-none uppercase tracking-[3.36px] max-md:px-5 max-md:max-w-full ">
             <span className="text-red-600 self-stretch pb-px my-auto min-w-[240px] max-md:text-4xl">
               Who we are ?
             </span>
           </h1>
-          <p className="pb-px mt-8 w-full text-xl font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-8 w-full text-lg font-light leading-9 max-md:max-w-full">
           JEF is a widely accredited technology-enabled company, focused on solving the
           toughest <br /> problems in the electrical engineering space with a comprehensive and
           innovative set of <br /> products and solutions.
           </p>
-          <p className="pb-px mt-8 w-full text-xl font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-8 w-full text-lg font-light leading-9 max-md:max-w-full">
           It was founded in 1994 with a clear vision to provide expertise about the most <br />
           comprehensive solutions to the toughest challenges relating to the safety of <br />
           electrical equipment.
@@ -201,7 +193,7 @@ const AboutUs = () => {
 
     <section>
   <div 
-    className="flex overflow-hidden relative gap-10 justify-center items-start py-32 bg-zinc-900"
+    className="flex overflow-hidden relative gap-10 justify-center items-start py-32 inset-0 bg-black bg-opacity-100"
     style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/66f6bb7d22178abfdbaa1bd2b07992f6d1ff63598849bb870a6de98573eb4dc0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244')", 
              backgroundSize: "cover", 
              backgroundPosition: "center",
@@ -213,7 +205,7 @@ const AboutUs = () => {
           <h1 className="pb-px w-full font-semibold text-3xl md:text-4xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
             JEF LEADERSHIP
           </h1>
-          <p className="mt-5 w-full text-lg font-thin leading-6 text-white max-md:max-w-full min-w-[90%]">
+          <p className="mt-5 w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
           Over the last couple of decades, with our help, our clients have been able to <br /> assure
           the long-term safety of their manpower and business.
           </p>
@@ -627,7 +619,7 @@ function EconomicEngine() {
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 w-full bg-neutral-100 max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col items-center w-full max-w-[1275px] max-md:max-w-full">
         <header className="flex flex-col max-w-full text-center text-zinc-900 w-full">
-          <h1 className="flex justify-center items-center px-36 w-full text-3xl md:text-4xl  font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full ">
+          <h1 className="flex justify-center items-center px-36 w-full text-3xl  font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full ">
             <span className="self-stretch pb-px my-auto min-w-[240px] max-md:max-w-full">
               An Economic Engine
             </span>
