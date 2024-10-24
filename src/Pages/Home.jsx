@@ -434,7 +434,7 @@ useGSAP(() => {
         <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="hidden lg:block object-cover absolute inset-0 size-full" />
         <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full"/>
         <div className="flex gap-5 p-4 max-md:flex-col">
-          <div className="flex lg:mx-[200px] flex-col  max-md:ml-0 max-md:w-full">
+          <div className="flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
             <div className="flex z-10 my-32 mt-56 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
               <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
@@ -464,23 +464,28 @@ useGSAP(() => {
 
 
 
-  <section className="py-10 bg-neutral-100">
-      <main className="lg:px-[200px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
+  <section className="py-16 bg-neutral-100">
+      <main className="lg:px-[100px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
         <div className="flex flex-col items-start mb-0 w-full  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
             <h1 className=" text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
-            <div className="flex gap-7 text-sm lg:text-base tracking-[3px]">
-              <div className="grow my-auto">40 ARTICLES IN TOTAL</div>
-              <Link to="/Blog">
-                  <button>
-                    <img
-                      loading="lazy"
-                      src="https://cdn.builder.io/api/v1/image/assets/TEMP/951171544b272ca27d823631886443b3e62258383a3a68c83393b1447e2eb810?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                      alt=""
-                      className="object-contain shrink-0 w-10 lg:w-13 aspect-square"
-                    />
-                  </button>
-              </Link>
+            <div className="flex gap-7 tracking-[1px]">
+              <div className="text-xs my-auto">40 ARTICLES IN TOTAL</div>
+              <button
+                className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : ""}`}
+                onClick={prevSlide}
+                style={{ visibility: currentIndex === 0 ? "hidden" : "visible" }} // Hide button if at the first slide
+              >
+                <img src="./HomePageImg/LeftArrow.png" alt="LeftArrow" className="w-8" />
+              </button>
+              <button
+                className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage - 1 ? "visibility-hidden" : ""}`}
+                onClick={nextSlide}
+                style={{ visibility: currentIndex >= totalItems - itemsPerPage - 1 ? "hidden" : "visible" }} // Hide button 1 slide before the last
+              >
+                <img src="./HomePageImg/RightArrow.png" alt="RightArrow" className="w-8" />
+              </button>
+
             </div>
           </header>
           <div className="flex justify-between w-full">
@@ -488,22 +493,6 @@ useGSAP(() => {
                 <a href="#newest" className="text-red-700 basis-auto">Newest</a>
                 <a href="#oldest" className="text-neutral-900">Oldest</a>
               </nav>
-              <div className="flex gap-2 md:gap-5 lg:gap-8 self-end items-end justify-end mt-5">
-                <button
-                  className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "opacity-50 cursor-not-allowed" : ""}`}
-                  onClick={prevSlide}
-                  disabled={currentIndex === 0} // Disable button if at the first slide
-                >
-                  <img src="./HomePageImg/LeftArrow.png" alt="LeftArrow" className="w-8" />
-                </button>
-                <button
-                  className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage ? "opacity-50 cursor-not-allowed" : ""}`}
-                  onClick={nextSlide}
-                  disabled={currentIndex >= totalItems - itemsPerPage} // Disable button if at the last slide
-                >
-                  <img src="./HomePageImg/RightArrow.png" alt="RightArrow" className="w-8" />
-                </button>
-              </div>
             </div>
 
 
@@ -512,10 +501,13 @@ useGSAP(() => {
         </div>
       </main>
       <section className="relative h-auto mt-5 bg-neutral-100">
-      <div className="flex-shrink-0 mx-[10px] lg:mx-[160px] top-0 flex h-auto items-center overflow-hidden">
+      <div className="flex-shrink-0 top-0 flex h-auto items-center overflow-hidden">
         <motion.div
           className="flex gap-4 flex-row" // Arrange cards in horizontal direction
-          animate={{ x: `-${(currentIndex * (100 / itemsPerPage))/(totalItems/itemsPerPage)}%` }} // Slide based on currentIndex
+          animate={{ 
+            x: `-${(currentIndex * (100 / itemsPerPage)) / (totalItems / itemsPerPage)}%`, // Slide based on currentIndex
+            marginLeft: currentIndex === 0 ? "4%" : "0%" // Smoothly transition between 4% and 0%
+          }}
           transition={{ 
             ease: [0.42, 0, 0.58, 1], // EaseInOut cubic-bezier for smooth transition
             duration: 0.8 // Slightly longer duration for a smooth feel
@@ -532,6 +524,7 @@ useGSAP(() => {
           ))}
         </motion.div>
       </div>
+
 
       {/* Slider Buttons */}
     </section>
