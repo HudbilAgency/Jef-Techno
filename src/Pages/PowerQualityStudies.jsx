@@ -192,7 +192,7 @@ const PowerQualityStudies = () => {
         <img loading="lazy" src="./SerivePage/PowerQualityBulb.png" alt="PowerQualityBulb" className="object-contain w-16 aspect-square" />
       </div>
       <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl font-medium uppercase leading-relaxed  tracking-wider w-[1071px]">
+        <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed  tracking-wider w-[1071px]">
           <div className="w-full max-md:max-w-full">
           Expert Power Quality Studies and <br /> Analysis Services
           </div>

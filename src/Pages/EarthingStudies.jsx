@@ -202,7 +202,7 @@ const EarthingStudies = () => {
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/a5b9fceb0e226e5b66fa7580d7059e32df43c8cd5c99cc7efcf4ad1973c1596e?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
       </div>
       <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
+        <h1 className="flex flex-col max-w-full text-2xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
           <div className="w-full max-md:max-w-full">
             Comprehensive Earthing/Grounding <br /> integrity testing services
           </div>
