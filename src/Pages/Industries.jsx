@@ -464,7 +464,7 @@ const Segments = () => {
       <div 
         className=" w-full h-full py-20 mainSection bg-white overflow-hidden relative">
         <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-          <h2 className="self-center text-4xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+          <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
             Segments
           </h2>
           <div className="flex flex-wrap justify-center mt-16 max-md:mt-10 w-full h-[30vh]">
