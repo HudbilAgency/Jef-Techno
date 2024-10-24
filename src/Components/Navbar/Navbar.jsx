@@ -77,7 +77,7 @@ const Navbar = () => {
   >
   
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
-        <header className="flex relative justify-between items-center self-center w-full  2xl:max-w-[92%] max-md:max-w-full">
+        <header className="flex relative gap-20 justify-between items-center self-center w-full  2xl:max-w-[92%] max-md:max-w-full">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
@@ -86,6 +86,7 @@ const Navbar = () => {
           />
 
           {/* Navigation Menu */}
+          <div className='flex justify-between w-screen'>
           <nav className="flex gap-5 xl:gap-8 items-center  my-auto max-md:max-w-full">
             {menuItems.map((item, index) => (
               <div
@@ -149,6 +150,8 @@ const Navbar = () => {
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
               <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
             </button>
+
+          </div>
 
           </div>
         </header>
