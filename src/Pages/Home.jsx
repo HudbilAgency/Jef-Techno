@@ -292,26 +292,6 @@ useGSAP(() => {
   };
 
   const currentData = carouselData[currentIndex];
-
-
-
-  // What we do Sectionn 
-
-  // const CircleItem = ({ text, className }) => (
-  //   <div className={`px-8 py-16 max-w-full rounded-full border border-solid ${className}`}>
-  //     {text}
-  //   </div>
-  // );
-  
- 
-  //   const circleItems = [
-  //     { text: "Earthing studies", className: "bg-red-700 border-red-700" },
-  //     { text: "Lightning Protection System Studies", className: "" },
-  //     { text: "Power Quality & Root cause Analysis", className: "border-stone-300" },
-  //     { text: "Power System Studies", className: "border-stone-300" },
-  //     { text: "Instrumentation Earthing", className: "" }
-  //   ];
-
     
     const totalSlides = 3;
 
@@ -415,23 +395,6 @@ useGSAP(() => {
 
 
 
-  {/* const [currentSlide, setCurrentSlide] = useState(0);
-  const totalSlides = 3; // Total number of slides
-
-  const handlePrev = () => {
-    if (currentSlide > 0) {
-      setCurrentSlide(currentSlide - 1);
-    }
-  };
-
-  const handleNext = () => {
-    if (currentSlide < totalSlides - 1) {
-      setCurrentSlide(currentSlide + 1);
-    }
-  }; */}
-{/* 
-   < LandingImages/> */}
-
 
 
 
@@ -445,69 +408,6 @@ useGSAP(() => {
 
 
 
-    {/* <section className="flex h-screen overflow-hidden flex-col bg-zinc-800">
-      <div className="flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/7a2ceda35d03e9aba12e6edcbd87485058a157c6b826569162b32f9a272e9db4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex relative  flex-col mb-0 w-full max-w-[1467px] max-md:mb-2.5 max-md:max-w-full">
-          <header className="flex flex-wrap gap-5 justify-between text-white uppercase tracking-[3px] max-md:max-w-full">
-            <div className="flex flex-col self-start text-3xl font-bold">
-              <h1 className="">what we do</h1>
-              <div  className="shrink-0 mt-5  border border-zinc-400 thin-border" />
-            </div>
-            <div className="flex flex-col text-3xl font-medium leading-10 max-md:max-w-full">
-              <div className="shrink-0 mt-6  border border-zinc-400 thin-border max-md:max-w-full" />
-              <h2 className="mt-7 max-md:max-w-full">Grounding studies projects completed</h2>
-            </div>
-          </header>
-          <div className="mt-12 w-full max-md:mt-10 max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col">
-              <div className="flex flex-row w-6/12 max-md:ml-0 max-md:w-full">
-                <div className="grow mt-24 max-md:mt-10 max-md:max-w-full">
-                  <div className="flex gap-5 mx-20 max-md:flex-col">
-                    {circleItems.map((item, index) => (
-                      <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-                        <CircleItem text={item.text} className={`text-base leading-6 text-center text-white uppercase w-[201px] ${item.className}`} />
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                <div className="flex flex-col items-start w-full max-md:mt-10 max-md:max-w-full">
-                  <div className="max-w-full w-[413px]">
-                    <div className="flex gap-5 max-md:flex-col">
-                      <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
-                        <div className="flex flex-col grow uppercase tracking-[3px] max-md:mt-10">
-                          <h3 className="text-2xl font-bold items-start self-start text-green-600">Total Projects</h3>
-                          <div className="flex flex-col items-start self-start mt-5 text-2xl text-white whitespace-nowrap">
-                            <p>165</p>
-                            <h4 className="self-stretch my-5 text-2xl font-bold text-center text-green-600">gcc</h4>
-                            <p>42</p>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-                        <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] max-md:mt-10">
-                          <h3 className="text-2xl font-bold text-center text-green-600">INDIA</h3>
-                          <p className="self-start mt-5 text-2xl text-white">123</p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <h3 className="mt-10 text-2xl font-bold text-center text-green-500 uppercase tracking-[3px] max-md:max-w-full">cAPACITY | UNIT | SQM AREA</h3>
-                  <p className="self-stretch mt-12 text-2xl leading-9 text-white max-md:mt-10 max-md:max-w-full">
-                    Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation.
-                  </p>
-                  <button className="gap-2.5 self-stretch px-2.5 py-2 mt-14 text-2xl text-red-700 uppercase bg-white min-h-[42px] h-14 rounded-[50px] w-[240px] max-md:mt-10">
-                    Read more
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> */}
 
 
 
@@ -906,30 +806,6 @@ function FeatureSection() {
 
 
 
-
-
-
-// Blog's Section Extra
-
-
-// function BlogCard({ imageSrc, title }) {
-//   return (
-//     <article className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-//       <div className="flex flex-col grow max-md:mt-10">
-//         <div className="flex flex-col justify-center w-full min-h-[400px]">
-//           <img loading="lazy" src={imageSrc} alt={title} className="object-contain w-[380px] aspect-square" />
-//         </div>
-//         <div className="flex flex-col items-start mt-4 w-full max-w-[400px] max-md:pr-5">
-//           <h2 className="text-lg leading-6 lg:h-16 text-stone-900">{title}</h2>
-//           <div className="flex gap-2 mt-6 text-xs tracking-widest leading-tight text-center text-red-700 uppercase">
-//             <div className="grow">Read more</div>
-//             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/3c99385a3888a56e12aa67bbca0d3363e44c74249fcb42246da50d1f716869d4?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 aspect-[2.07] w-[31px]" />
-//           </div>
-//         </div>
-//       </div>
-//     </article>
-//   );
-// }
 
 
 // Our Contact's Input Section

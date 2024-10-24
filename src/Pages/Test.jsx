@@ -1,129 +1,229 @@
-import React, { useState, useRef } from 'react';
+import React from 'react'
+import { useState, useEffect, useRef } from "react";
+import gsap from 'gsap';
 
-const images = [
-    "https://www.jorgefolgado.com/Imagens/img1.jpg",
-    'https://via.placeholder.com/800x300/00FF00/FFFFFF?text=Slide+2',
-  'https://via.placeholder.com/800x300/0000FF/FFFFFF?text=Slide+3',
-];
 
-export default function Test() {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isDragging, setIsDragging] = useState(false);
-  const startPos = useRef(0); // Ref to store the starting position of touch/drag
-  const currentTranslate = useRef(0); // Ref to store current translation value
-  const prevTranslate = useRef(0); // Ref to store the previous translation value
-  const animationID = useRef(null); // Ref for requestAnimationFrame
-  const sliderRef = useRef(null); // Ref for slider element
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
-    );
+const Test = () => {
+
+  const services = [
+    { image: './IndustriesPage/OilandGas.png', text: 'Oil & gas' },
+    { image: './IndustriesPage/Power.png', text: 'Power utilities' },
+    { image: './IndustriesPage/MFplant.png', text: 'manufacturing plant' },
+    { image: './IndustriesPage/Pplant.png', text: 'Process plant' },
+    { image: './IndustriesPage/CB.png', text: 'commercial buildings' },
+
+  ];
+
+
+  const services1 = [
+    { image: '', text: '' },
+    { image: './IndustriesPage/OilandGas.png', text: 'Oil & gas' },
+    { image: './IndustriesPage/Power.png', text: 'Power utilities' },
+    { image: './IndustriesPage/MFplant.png', text: 'manufacturing plant' },
+    { image: './IndustriesPage/Pplant.png', text: 'Process plant' },
+    { image: './IndustriesPage/CB.png', text: 'commercial buildings' },
+    { image: '', text: '' },
+  ];
+
+  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const serviceRefs = useRef([]);
+  const service1Refs = useRef([]);
+  const imgRef = useRef(null);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img) {
+      gsap.fromTo(img, 
+        { opacity: 0 }, 
+        { 
+          opacity: 1, 
+          duration: 2.5,
+          ease: 'power2.inOut'
+        }
+      );
+    }
+  }, [imgRef]);
+
+  const handleMouseEnter = (index, image) => {
+    setHoveredIndex(index);
+    setBackgroundImage(image);
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
-    );
+  const handleMouseLeave = () => {
+    setHoveredIndex(null);
+    setBackgroundImage('');
   };
 
-  // Handle touch start / mouse down
-  const handleTouchStart = (e) => {
-    setIsDragging(true);
-    startPos.current = getPositionX(e); // Record starting X position of touch/drag
-    sliderRef.current.style.transition = 'none'; // Disable transitions when dragging
-    animationID.current = requestAnimationFrame(animation); // Start animation loop
-  };
+  useEffect(() => {
+    serviceRefs.current = serviceRefs.current.slice(0, services.length);
+  }, [services]);
 
-  // Handle touch move / mouse move
-  const handleTouchMove = (e) => {
-    if (!isDragging) return;
-    const currentPosition = getPositionX(e);
-    currentTranslate.current = prevTranslate.current + currentPosition - startPos.current; // Calculate translation during drag
-  };
+  useEffect(() => {
+    serviceRefs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.2, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.2 : 1,
+            border: hoveredIndex !== null && services[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services[index]?.text === '' ? 'bg-stone-900' : 'bg-white',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services]);
 
-  // Handle touch end / mouse up
-  const handleTouchEnd = () => {
-    setIsDragging(false);
-    cancelAnimationFrame(animationID.current); // Stop the animation
-    const movedBy = currentTranslate.current - prevTranslate.current;
 
-    // Threshold for detecting a slide (50px)
-    if (movedBy < -50) nextSlide();
-    if (movedBy > 50) prevSlide();
+  useEffect(() => {
+    service1Refs.current = service1Refs.current.slice(0, services1.length);
+  }, [services1]);
 
-    sliderRef.current.style.transition = 'transform 0.5s ease-out'; // Add smooth transition back
-    currentTranslate.current = 0; // Reset translate value
-    prevTranslate.current = 0;
-  };
+  useEffect(() => {
+    service1Refs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services1[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.2 : 1,
+            border: hoveredIndex !== null && services1[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services1[index]?.text === '' ? 'bg-stone-900' : 'bg-white',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services1]);
 
-  // Get X position from touch or mouse event
-  const getPositionX = (e) => {
-    return e.type.includes('mouse') ? e.pageX : e.touches[0].clientX;
-  };
 
-  // Animation function to update slider transform in real-time during dragging
-  const animation = () => {
-    sliderRef.current.style.transform = `translateX(${currentTranslate.current}px)`;
-    if (isDragging) requestAnimationFrame(animation);
-  };
+
 
   return (
-    <div className="relative w-full max-w-4xl mx-auto mt-10">
-      {/* Carousel Images */}
-      <div
-        className="overflow-hidden relative h-64"
-        onMouseDown={handleTouchStart}
-        onMouseMove={handleTouchMove}
-        onMouseUp={handleTouchEnd}
-        onMouseLeave={handleTouchEnd} // Handle the case where the user stops dragging outside the carousel
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        <div
-          ref={sliderRef}
-          className="flex transition-transform duration-500 ease-in-out"
-          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
-        >
-          {images.map((image, index) => (
-            <div
-              key={index}
-              className="min-w-full h-full bg-cover bg-center"
-              style={{ backgroundImage: `url(${image})` }}
-            ></div>
-          ))}
+    <>
+        
+  <section className='lg:hidden'>
+    <div className={` h-full bg-white`}>
+      <div 
+        className=" w-full h-full py-20 mainSection bg-white overflow-hidden relative">
+        <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+          <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+            Segments
+          </h2>
+          <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[45vh]">
+            <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                 {services.slice(0, 3).map((service, index) => (
+                    <ServiceItem
+                      key={index}
+                      text={service.text}
+                      image={service.image}
+                      ref={(el) => (serviceRefs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+            </div>
+            <div className='flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
+              {services.slice(3).map((services, index) => (
+                <ServiceItem
+                key={index}
+                text={services.text}
+                image={services.image}
+                ref={(el) => (serviceRefs.current[index + 3] = el)}
+                onMouseEnter={() => handleMouseEnter(index + 3)}
+                onMouseLeave={handleMouseLeave}
+              />
+              ))}
+            </div>
+          </div>
+        </section>
         </div>
-      </div>
-
-      {/* Left Arrow */}
-      <button
-        className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-        onClick={prevSlide}
-      >
-        &#8592;
-      </button>
-
-      {/* Right Arrow */}
-      <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 rounded-full"
-        onClick={nextSlide}
-      >
-        &#8594;
-      </button>
-
-      {/* Dots/Indicators */}
-      <div className="flex justify-center mt-4">
-        {images.map((_, index) => (
-          <div
-            key={index}
-            className={`h-2 w-2 rounded-full mx-1 cursor-pointer ${
-              currentIndex === index ? 'bg-blue-600' : 'bg-gray-300'
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          ></div>
-        ))}
-      </div>
     </div>
-  );
+  </section>
+
+  <section className='hidden lg:block'>
+    <div className={` h-full bg-white`}>
+      <div 
+        className=" w-full h-full py-20 mainSection bg-white overflow-hidden relative">
+        <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+          <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+            Segments
+          </h2>
+          <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[30vh]">
+            <div className='flex items-center gap-x-2 md:gap-x-5 circleChild'>
+              {services1.slice(0, 9).map((services1, index) => (
+                <Service1Item
+                  key={index}
+                  text={services1.text}
+                  image={services1.image}
+                  ref={(el) => (service1Refs.current[index] = el)}
+                  onMouseEnter={() => handleMouseEnter(index)}
+                  onMouseLeave={handleMouseLeave}
+                />
+              ))}
+            </div>
+          </div>
+        </section>
+        </div>
+    </div>
+  </section>
+
+    </>
+  )
 }
+
+
+const Service1Item = React.forwardRef(({ image, text, onMouseEnter, onMouseLeave }, ref) => {
+  return (
+    <div
+  ref={ref}
+  className={`flex flex-col md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+    ${text === "" ? "bg-stone-900" : "border bg-stone-900 border-solid hover:bg-red-600"}`}
+  onMouseEnter={() => {
+    if (text !== "") {
+      onMouseEnter();
+    }
+  }}
+  onMouseLeave={() => {
+    if (text !== "") {
+      onMouseLeave();
+    }
+  }}
+> <img src={image} alt={image} />
+  <span className="text-center mt-2 text-xs ">{text}</span>
+</div>
+
+  );
+});
+
+
+const ServiceItem = React.forwardRef(({ image, text, onMouseEnter, onMouseLeave }, ref) => {
+  return (
+    <div
+  ref={ref}
+  className={`flex flex-col w-[8.5rem] h-[8.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+    ${text === "" ? "bg-stone-900" : "border bg-stone-900 border-solid hover:bg-red-600"}`}
+  onMouseEnter={() => {
+    if (text !== "") {
+      onMouseEnter();
+    }
+  }}
+  onMouseLeave={() => {
+    if (text !== "") {
+      onMouseLeave();
+    }
+  }}
+> <img src={image} alt={image} className='h-10'/>
+  <span className="text-center mt-1 text-[8px] ">{text}</span>
+</div>
+
+  );
+});
+
+export default Test
