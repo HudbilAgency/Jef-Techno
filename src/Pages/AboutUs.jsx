@@ -135,7 +135,7 @@ const AboutUs = () => {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 text-center bg-zinc-800 max-md:px-5">
       <div className="flex flex-col max-w-full w-[1115px]">
-        <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-3xl md:text-4xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] ">
+        <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-3xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] ">
           <span className="pb-px min-w-[240px] max-md:max-w-full ">
             Our Approach
           </span>
@@ -161,7 +161,7 @@ const AboutUs = () => {
         <div className="flex flex-col md:flex-row gap-5">
           <div className="flex flex-col w-full md:w-1/2">
             <div className="flex flex-col self-stretch my-auto max-md:mt-10">
-              <div className="flex flex-col justify-center p-2.5 w-full text-3xl sm:text-4xl md:text-5xl font-semibold leading-none text-red-700 tracking-[0.28rem]">
+              <div className="flex flex-col justify-center p-2.5 w-full text-3xl sm:text-4xl font-semibold leading-none text-red-700 tracking-[0.28rem]">
                 <div className="flex flex-col w-full h-[4.5rem]">
                   <div className="flex relative flex-col w-full">
                     <h2 className="pb-px w-full">Brand History</h2>
@@ -202,7 +202,7 @@ const AboutUs = () => {
     <div className="flex z-0 flex-col my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
-          <h1 className="pb-px w-full font-semibold text-3xl md:text-4xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
+          <h1 className="pb-px w-full font-bold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
             JEF LEADERSHIP
           </h1>
           <p className="mt-5 w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
@@ -254,7 +254,7 @@ const Overview = () => {
   return (
     <div className="flex flex-col justify-center items-center p-20 bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[70%] max-md:max-w-full">
-        <div className="flex justify-center items-center self-center px-72 max-w-full text-3xl md:text-4xl  font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 ">
+        <div className="flex justify-center items-center self-center px-72 max-w-full text-3xl  font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 ">
           <div className="self-stretch my-auto min-w-[240px] ">
             Overview
           </div>
@@ -263,7 +263,7 @@ const Overview = () => {
           <div className="flex max-md:flex-col">
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
-                <div className="ml-4 font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] max-md:ml-2.5">
+                <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] ">
                   From India to 24 Countries
                 </div>
                 <div className="mt-16 text-lg max-md:mt-10">
@@ -274,7 +274,7 @@ const Overview = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex overflow-hidden flex-col grow px-11 pt-12 pb-64 text-xl border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
                   3000+ Global Customer
@@ -284,7 +284,7 @@ const Overview = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-[33%] max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex overflow-hidden flex-col grow items-start px-11 pt-12 pb-40 text-xl font-light leading-9 text-white border border-solid border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
                   30 Years of Experience

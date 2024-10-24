@@ -199,9 +199,11 @@ const PowerSystemStudies = () => {
         </h1>
         <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
         We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid Green hydrogen plants Micro grids.
+        With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
+        <p>We have multiple licences & using all major Softwares like
         </p>
-        <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
-        <p>We have multiple licences & using all major Softwares like</p>
+        {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
+        {/* <p>We have multiple licences & using all major Softwares like</p> */}
         <div className="my-5">
           <p>PSSE</p>
           <p>PSCAD</p>
@@ -256,7 +258,7 @@ const PowerSystemStudies = () => {
               </div>
             )}
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-              <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
               <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
@@ -636,7 +638,7 @@ const VerticalCarousel = () => {
                           <span className="leading-9 tracking-widest text-white max-md:max-w-full">
                             {idx > 0 && "•"} {/* Add bullet point for new lines */}
                           </span>
-                          <p className="ml-4 text-base md:text-lg  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
+                          <p className="ml-4 text-base font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
                             {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                               ? (
                                 <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly

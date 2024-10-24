@@ -204,19 +204,19 @@ const EarthingStudies = () => {
       <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
         <h1 className="flex flex-col max-w-full text-xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
           <div className="w-full max-md:max-w-full">
-            Comprehensive Earthing/Grounding integrity <br /> testing services
+            Comprehensive Earthing/Grounding <br /> integrity testing services
           </div>
         </h1>
-        <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
+        <p className="self-stretch mt-12 w-[80%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
           As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
-          <br />
           With several patents in this field, our level of expertise is unmatched even we keep innovating further.
-        </p>
-        <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
-          <br />
           innovating further.
         </p>
+        {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
+          With several patents in this field, our level of expertise is unmatched even we keep
+          innovating further.
+        </p> */}
       </header>
       <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
         <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
@@ -262,7 +262,7 @@ const EarthingStudies = () => {
               </div>
             )}
             <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-              <h2 className="self-center text-3xl md:text-5xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
               <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
@@ -629,7 +629,7 @@ const VerticalCarousel = () => {
                       </ul>
 
 
-                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] lg:leading-[60px] uppercase max-md:max-w-full">
+                    <h2 className="mt-6 lg:w-[80%] md:text-2xl lg:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-10 max-md:max-w-full">
@@ -641,7 +641,7 @@ const VerticalCarousel = () => {
                             <span className="leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-base md:text-lg  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
+                            <p className="ml-4 text-base  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly

@@ -96,7 +96,7 @@ const Navbar = () => {
                 {item.path ? (
                   <NavLink
                     to={item.path} // Use path for routing if available
-                    className={`self-stretch my-auto md:text-sm xl:text-base font-medium tracking-[2px] text-white`}
+                    className={`self-stretch uppercase my-auto md:text-sm  font-medium tracking-[2px] text-white`}
                     activeClassName="active" // Optional: styling for active link
                   >
                     {item.label}
@@ -104,7 +104,7 @@ const Navbar = () => {
                 ) : (
                   <button
                     onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch my-auto md:text-sm xl:text-base font-medium text-white tracking-[2px]`}
+                    className={`self-stretch uppercase my-auto md:text-sm  font-medium text-white tracking-[2px]`}
                   >
                     {item.label}
                   </button>
@@ -129,7 +129,7 @@ const Navbar = () => {
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
                 onClick={toggleLanguage}
-                className={`self-stretch my-auto text-base md:text-base xl:text-base font-light tracking-[2px] text-white {
+                className={`self-stretch uppercase my-auto text-sm font-light tracking-[2px] text-white {
                   
                 }`}
               >
@@ -144,7 +144,7 @@ const Navbar = () => {
                     />
               </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 self-stretch text-wrap py-1.5 lg:py-3 px-4 lg:px-7 my-auto  md:text-sm xl:text-base text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
+            <Link to='/GetInTouchForm'><button className="gap-3 uppercase  self-stretch text-wrap py-1.5 lg:py-3 px-4 lg:px-7 my-auto  md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
               Contact Us
             </button></Link>
             <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
@@ -264,7 +264,7 @@ function AboutSection() {
                     <Link
                       to={item.path || "#"} // Use the path for clickable items, otherwise keep "#" for others
                       onMouseEnter={() => setHoveredItem(item.number)}
-                      className="self-stretch my-auto text-xl hover:text-gray-400 font-medium text-white"
+                      className="self-stretch my-auto text-lg hover:text-gray-400 font-medium text-white"
                     >
                       {item.title}
                     </Link>
@@ -382,7 +382,7 @@ function ServicesComponent() {
               <div
               onMouseEnter={() => setIsHovered(true)}
               className="flex gap-10 self-stretch my-auto min-w-[240px] w-[287px]">
-                <h2 className="text-xl hover:text-gray-400 font-medium text-white uppercase tracking-[3.36px]">
+                <h2 className="text-lg hover:text-gray-400 font-medium text-white uppercase tracking-[3.36px]">
                   Services
                 </h2>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
@@ -467,7 +467,7 @@ function IndustriesComponent() {
               <div 
               onMouseEnter={() => setIsHovered(true)}
               className="flex gap-10 self-stretch my-auto min-w-[240px] ">
-                <Link to={'/Industries'}><h2 className="text-xl font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
+                <Link to={'/Industries'}><h2 className="text-lg font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
                   Our Industries
                 </h2></Link>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
@@ -514,7 +514,7 @@ const LanguageSelector = () => {
       <ul className="flex flex-col items-end w-full">
         {languages.map((language, index) => (
           <li key={language} className={`gap-4 self-stretch ${index > 0 ? "mt-8" : ""} w-full`}>
-            <button className="w-full text-right">{language}</button>
+            <button className="w-full  text-right">{language}</button>
           </li>
         ))}
       </ul>

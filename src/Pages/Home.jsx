@@ -470,7 +470,7 @@ useGSAP(() => {
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
             <h1 className=" text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 tracking-[1px]">
-              <div className="text-xs my-auto">40 ARTICLES IN TOTAL</div>
+            <div className="text-xs my-auto">40 ARTICLES IN TOTAL</div>
               <button
                 className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : ""}`}
                 onClick={prevSlide}

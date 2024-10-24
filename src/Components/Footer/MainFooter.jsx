@@ -87,14 +87,14 @@ function Footer() {
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
-          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs md:text-sm  font-light basis-auto grow-0 tracking-widest">
+          <div className="flex shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs md:text-sm mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
-              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 lg:h-10 -mt-[2%] ' />
+              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
           </div>   
         </div>
       </div>

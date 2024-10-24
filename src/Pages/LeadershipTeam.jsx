@@ -151,7 +151,7 @@ export default function LeadershipTeam() {
                 aria-hidden="true"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-end pb-16">
+                <div className="relative z-10 lg:mx-[5%] p-3 h-full flex flex-col justify-end pb-16">
                 <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-wider mb-4">
                     JEF LEADERSHIP TEAM
                 </h1>
