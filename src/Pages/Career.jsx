@@ -15,57 +15,59 @@ const Career = () => {
       id: 1,
       timeAgo: "30 min ago",
       logo: "./CareerPage/Logo-1.png",
-      title: "Developer & expert in Java, Python",
-      company: "Armstrong, O'Hara and Hill",
+      title: "Business Development Manager (BDM)",
+      company: "JEF Group",
       category: "Hotels & Tourism",
       type: "Full time",
-      salary: "$40000-$42000",
-      location: "New-York, USA"
+      salary: "2,70,000 SAR per year",
+      location: "Saudi Arabia (KSA)",
+      path: '/JobDetails'
     },
     {
       id: 2,
       timeAgo: "12 min ago",
       logo: "./CareerPage/Logo-2.png",
-      title: "Regional Creative Facilitator",
-      company: "Wisozk - Becker Co",
+      title: "Technical Support Engineer",
+      company: "JEF Group",
       category: "Media",
-      type: "Part time",
-      salary: "$28000-$32000",
-      location: "Los Angeles, USA"
-    },
-    {
-      id: 3,
-      timeAgo: "15 min ago",
-      logo: "./CareerPage/Logo-3.png",
-      title: "Internal Integration Planner",
-      company: "Mraz, Quigley and Feest Inc.",
-      category: "Construction",
       type: "Full time",
-      salary: "$48000-$50000",
-      location: "Texas, USA"
+      salary: "12,854 AED",
+      location: "UAE",
+      path: '/TSE_CareersPage'
     },
-    {
-      id: 4,
-      timeAgo: "24 min ago",
-      logo: "./CareerPage/Logo-4.png",
-      title: "District Intranet Director",
-      company: "VonRueden - Weber Co",
-      category: "Commerce",
-      type: "Full time",
-      salary: "$42000-$48000",
-      location: "Florida, USA"
-    },
-    {
-      id: 5,
-      timeAgo: "26 min ago",
-      logo: "./CareerPage/Logo-5.png",
-      title: "Corporate Tactics Facilitator",
-      company: "Cormier, Turner and Flatley Inc",
-      category: "Commerce",
-      type: "Full time",
-      salary: "$38000-$40000",
-      location: "Boston, USA"
-    }
+    // {
+    //   id: 3,
+    //   timeAgo: "15 min ago",
+    //   logo: "./CareerPage/Logo-3.png",
+    //   title: "Internal Integration Planner",
+    //   company: "Mraz, Quigley and Feest Inc.",
+    //   category: "Construction",
+    //   type: "Full time",
+    //   salary: "$48000-$50000",
+    //   location: "Texas, USA"
+    // },
+    // {
+    //   id: 4,
+    //   timeAgo: "24 min ago",
+    //   logo: "./CareerPage/Logo-4.png",
+    //   title: "District Intranet Director",
+    //   company: "VonRueden - Weber Co",
+    //   category: "Commerce",
+    //   type: "Full time",
+    //   salary: "$42000-$48000",
+    //   location: "Florida, USA"
+    // },
+    // {
+    //   id: 5,
+    //   timeAgo: "26 min ago",
+    //   logo: "./CareerPage/Logo-5.png",
+    //   title: "Corporate Tactics Facilitator",
+    //   company: "Cormier, Turner and Flatley Inc",
+    //   category: "Commerce",
+    //   type: "Full time",
+    //   salary: "$38000-$40000",
+    //   location: "Boston, USA"
+    // }
   ]);
 
   const statistics = [
@@ -74,13 +76,6 @@ const Career = () => {
     { icon: "./CareerPage/building 1.png", count: "18,400", label: "Companies" }
   ];
 
-  const companyLogos = [
-    "http://b.io/ext_40-",
-    "http://b.io/ext_41-",
-    "http://b.io/ext_42-",
-    "http://b.io/ext_43-",
-    "http://b.io/ext_44-"
-  ];
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -207,7 +202,7 @@ const Career = () => {
             <div key={job.id} className="flex flex-col p-10 mt-6 max-w-full bg-white rounded-3xl shadow-[0px_3px_8px_rgba(48,150,137,0.08)] w-[1296px] max-md:px-5">
               <div className="flex flex-col w-full max-md:max-w-full">
                 <div className="flex flex-wrap gap-10 justify-between items-start w-full text-base text-red-700 max-md:max-w-full">
-                  <div className="px-2 py-2.5 rounded-lg bg-red-700 bg-opacity-10 min-h-[28px]">
+                  <div className="px-2 py-1.5 rounded-lg bg-red-700 bg-opacity-10 min-h-[28px]">
                     {job.timeAgo}
                   </div>
                   <img loading="lazy" src="./CareerPage/BookmarkLogo.png" alt="" className="object-contain shrink-0 w-6 aspect-square" />
@@ -216,16 +211,16 @@ const Career = () => {
                   <img loading="lazy" src={job.logo} alt={`${job.company} logo`} className="object-contain shrink-0 w-10 aspect-square" />
                   <div className="flex flex-col min-w-[240px] max-md:max-w-full">
                     <h3 className="text-3xl font-semibold max-md:max-w-full">{job.title}</h3>
-                    <p className="mt-5 text-base">{job.company}</p>
+                    <p className="mt-2 text-base">{job.company}</p>
                   </div>
                 </div>
               </div>
               <div className="flex flex-wrap gap-10 justify-between items-end mt-7 w-full text-base font-semibold max-md:max-w-full">
                 <div className="flex flex-wrap gap-6 items-end text-gray-500 min-w-[240px] max-md:max-w-full">
-                  <div className="flex gap-3 items-center">
+                  {/* <div className="flex gap-3 items-center">
                     <img loading="lazy" src="./CareerPage/Redbriefcase.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.category}</div>
-                  </div>
+                  </div> */}
                   <div className="flex gap-3 items-center">
                     <img loading="lazy" src="./CareerPage/clock.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.type}</div>
@@ -239,8 +234,8 @@ const Career = () => {
                     <div className="self-stretch my-auto">{job.location}</div>
                   </div>
                 </div>
-               <Link to={'/JobDetails'}>
-               <button className="overflow-hidden gap-2.5 self-stretch px-5 py-4 text-white capitalize bg-red-700 rounded-lg min-h-[40px]">
+               <Link to={job.path}>
+               <button className="overflow-hidden gap-2.5 self-stretch px-5 py-2 text-white capitalize bg-red-700 rounded-lg min-h-[40px]">
                   Job details
                 </button>
                </Link>
