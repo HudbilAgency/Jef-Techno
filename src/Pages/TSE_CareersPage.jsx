@@ -35,7 +35,7 @@ function JobDetails() {
      <main className="flex overflow-hidden flex-col bg-neutral-100 pb-10 max-md:pb-6rem">
       <header className="flex relative flex-col px-16 pt-64 pb-28 w-full text-6xl font-bold text-center text-white min-h-[26.375rem] max-md:px-5 max-md:pt-24 max-md:pb-28 max-md:max-w-full max-md:text-4xl">
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/74998d801ce9dc441f320957ef5f261d87fbade85d68d9d233164d48e0d2d61d?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3" alt="" className="object-cover absolute inset-0 size-full" />
-        <h1>Job Details</h1>
+        <h1 className='text-4xl'>Job Details</h1>
       </header>
 
       <section className="flex p-4 flex-col items-start self-center mt-24 w-full max-w-[81rem] max-md:mt-10 max-md:max-w-full">
