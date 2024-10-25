@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
 
-const TSE_CareersPage = () => {
+const BDMcareers = () => {
   return (
     <div>
         < JobDetails />
@@ -12,20 +12,20 @@ const TSE_CareersPage = () => {
 
 
 const jobOverviewData = {
-  title: "Technical Support Engineer",
+  title: "Business Development Manager",
   type: "Full Time",
-  category: "Engineer",
+  category: "BDM",
   experience: "5 Years",
-  degree: "Master",
-  salary: "12854 AED",
+  degree: "MBA",
+  salary: "2,70,000 SAR per year",
   gender: "All",
-  location: "UAE"
+  location: "Saudi Arabia (KSA)"
 };
 
 const iconTextItems = [
   { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/c0c893bf332dc34edb84763976d78e7514f60e452663cbbf15b2c426fae95741?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Full time" },
-  { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dc582fb81a3a7a17863b2c30e7f80a664d8c08f51514a8b03cd1568c2212adf8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "12854 AED" },
-  { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/aad532364fe57b522dac121a9ba4aad021d2c2f53556e2277d6daa3ba45b1580?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "UAE" }
+  { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dc582fb81a3a7a17863b2c30e7f80a664d8c08f51514a8b03cd1568c2212adf8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "2,70,000 SAR per year" },
+  { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/aad532364fe57b522dac121a9ba4aad021d2c2f53556e2277d6daa3ba45b1580?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Saudi Arabia (KSA)" }
 ];
 
 function JobDetails() {
@@ -42,7 +42,7 @@ function JobDetails() {
         <article className="flex flex-col self-stretch pt-8 w-full rounded-3xl  max-md:max-w-full">
           <div className="flex flex-wrap gap-10 justify-between items-start w-full text-base text-red-700 max-md:max-w-full">
             <span className="flex flex-col justify-center py-1 px-2 rounded-xl bg-red-700 bg-opacity-10">
-              12 min ago
+              30 min ago
             </span>
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bbbc56d84eb925a582acb30e6b9d6a52b24cb413a44e882b3923619e273f5f71?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3" alt="" className="object-contain shrink-0 w-6 aspect-square" />
           </div>
@@ -51,7 +51,7 @@ function JobDetails() {
             <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/bd96b3744a20ca3c949b675a1d60fa799c5f2a3d8e6f24035b4bc6cb08a405a1?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3" alt="JEF Group logo" className="object-contain shrink-0 w-10 aspect-square" />
             <div className="flex flex-col min-w-[15rem] max-md:max-w-full">
               <h2 className="text-4xl font-semibold max-md:max-w-full">
-                Technical Support Engineer, UAE
+              Business Development Manager (BDM)
               </h2>
               <p className="mt-2 text-base">JEF Group</p>
             </div>
@@ -138,12 +138,13 @@ function JobOverviewCard({ data }) {
         'Power System studies'
       ];
       const Profile = [
-        'Experience: 3-5 years in Project Management in EPC, Oil & Gas Companies.',
-        'Bachelors/Masters in Electrical Engineering (Preferably from Power System & energy Background)',
-        'Proven experience in technical support or a similar role within the electrical engineering industry.',
-        'Strong understanding of electrical systems and components, specifically with good understanding of Power System Studies, Power Quality Engineering.',
-        'Excellent communication and interpersonal skills',
-        'Excellent working skills in MS Office package ( Excel, Power Point & Word)'
+        'Bachelor’s degree in Electrical Engineering background, Masters in Business Administration (MBA) is an advantage',
+        'Proven professional experience as an electrical sales engineer or related role',
+        'Industry work experience of a minimum of 7 years in selling technical services directly to the ARAMCO, SEC, SABIC, etc.',
+        'Ability to drive and travel extensively around the region and outside the base location depending on the business requirements.',
+        'A collaborative, solutions-oriented approach and work cohesively with the stakeholders to maximize output.',
+        'Excellent presentation and communication skills, good organization skills, problem solving and analytical skill.',
+        'Fluency in English is must and business communication in Arabic language is an advantage.'
       ];
 
       const whatweoffer = [
@@ -156,20 +157,17 @@ function JobOverviewCard({ data }) {
         'Structured learning & upskilling programs conducted by subject matter experts',
         'Structured leadership development initiatives designed to foster professional growth and advancement',
         'Opportunity to Collaborate with highly accomplished technical experts in the field and work with skilled and dynamic team across geographies',
-        'As a culture, priority is always given to talent within the organization for growth',
-        'Structured learning & upskilling programs conducted by subject matter experts'        
+        'As a culture, priority is always given to talent within the organization for growth',      
       ];
 
       const Responsibility = [
-            '|Attending Technical Inquiries:|  Respond to technical inquiries from clients promptly and professionally, providing accurate information and solutions to their queries.',
-            '|Providing Technical Support:| Offer technical assistance to the project team to ensure smooth project execution, Collaborate with the project team to address technical challenges and provide solutions.',
-            '|Preparing Technical Offers:| Assist in the preparation of technical offers by analyzing project requirements, developing cost estimates, and creating comprehensive proposals aligned with client needs.',
-            '|Technical Documentation:| Develop and maintain technical documents such as method statements, approach plans, and other deliverable to support project implementation, ensuring adherence to industry standards and regulatory requirements.',
-            '|Client Interface:| Serve as a primary interface between our clients and the project team, establishing strong relationships, understanding client expectations, and effectively communicating technical requirements and project updates.',
-            '|Technical Meetings:| Attend technical meetings with clients, project stakeholders, and internal teams to discuss project requirements, progress, and any technical issues or challenges that may arise.',
-            '|Reporting to Technical Manager:| Support the Technical Manager in preparing offers, proposals, and technical presentations, leveraging your expertise to contribute valuable insights and recommendations.',
-            '|Proficiency in MS Office:| Demonstrate proficiency in Microsoft Office applications, particularly Excel, Word, and PowerPoint, to create and manage technical documents, presentations, and reports.',
-            '|Coordination with Project Team:| Collaborate closely with the project team, including engineers, technicians, and other stakeholders, to ensure alignment on technical specifications, project timelines, and deliverables.'
+            'Building business relationships and proactively supporting partners, Internal team and customers.',
+            'Achieving designated sales target within your territory.',
+            'Develop and nurture relationship with both new and existing customers',
+            'Preparing and executing business plans and bids, identifying and developing new market opportunities in the assigned geographical area and segments',
+            'Generating demand for JEF’s Technical Services through a constant and tailored approach towards Power and Oil & Gas Utilities, Process Industries, Engineering Studies & Consultancy.',
+            'Developing the business by identifying qualified opportunities and converting them into sustainable business',
+            'Organised planning and presenting reports on account progress, goals and quarterly initiatives to share with team members and stakeholders',
       ];
   return (
     <section className="flex flex-col pb-10 w-[76%] max-md:ml-0 max-md:w-full">
@@ -243,7 +241,7 @@ function JobOverviewCard({ data }) {
         </ul>
 
         <h2 className="text-2xl text-red-700 font-semibold mt-10">Your Reporting Line:</h2>
-        <h2 className="text-xl text-red-700 font-light p-3 mt-8 border w-fit border-red-500">Manager- Technical Services</h2>
+        <h2 className="text-xl text-red-700 font-light p-3 mt-8 border w-fit border-red-500">Regional BD Manager Middle East</h2>
 
         <div className='flex mt-16 gap-8'>
 
@@ -296,4 +294,4 @@ const SectionTitle = ({ children }) => (
   
   
 
-export default TSE_CareersPage
+export default BDMcareers

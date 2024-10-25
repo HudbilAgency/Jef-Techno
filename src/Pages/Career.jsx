@@ -21,7 +21,7 @@ const Career = () => {
       type: "Full time",
       salary: "2,70,000 SAR per year",
       location: "Saudi Arabia (KSA)",
-      path: '/JobDetails'
+      path: '/Business_Development_Manager_JobDetails'
     },
     {
       id: 2,
@@ -33,7 +33,7 @@ const Career = () => {
       type: "Full time",
       salary: "12,854 AED",
       location: "UAE",
-      path: '/TSE_CareersPage'
+      path: '/Technical_Support_Engineer_JobDetails'
     },
     // {
     //   id: 3,
@@ -189,7 +189,7 @@ const Career = () => {
         <div className="flex p-4 flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">
           <div className="flex flex-col min-w-[240px] text-stone-900 max-md:max-w-full">
             <h2 className="self-start text-4xl font-bold text-center max-md:max-w-full max-md:text-4xl">
-              Recent Jobs Available
+            Current Openings
             </h2>
             <p className="mt-10 text-sm max-md:max-w-full">
               At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. Lectus dolor blandit massa pretium id ultrices phasellus tortor. Risus risus lectus augue justo lacus viverra sit. Ultricies purus dolor viverra mi laoreet at cursus justo. Ultrices purus diam egestas amet faucibus tempor blandit. Elit velit mauris aliquam est diam. Leo sagittis consectetur diam morbi erat aenean. Vulputate praesent congue faucibus in euismod feugiat euismod volutpat. Adipiscing risus amet phasellus imperdiet eget vel pulvinar. Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.

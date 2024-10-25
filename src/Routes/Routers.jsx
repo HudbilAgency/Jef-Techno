@@ -20,6 +20,7 @@ import Test from '../Pages/Test';
 import LeadershipTeam from '../Pages/LeadershipTeam';
 import JobDetails from '../Pages/JobDetails';
 import TSE_CareersPage from '../Pages/TSE_CareersPage';
+import BDMcareers from '../Pages/BDMcareers';
 
 
 const Routers = () => { 
@@ -45,7 +46,8 @@ const Routers = () => {
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/LeadershipTeam" element={<LeadershipTeam/>} />
         <Route path="/JobDetails" element={<JobDetails/>} />
-        <Route path="/TSE_CareersPage" element={<TSE_CareersPage/>} />
+        <Route path="/Technical_Support_Engineer_JobDetails" element={<TSE_CareersPage/>} />
+        <Route path="/Business_Development_Manager_JobDetails" element={<BDMcareers/>} />
         <Route path="/Test" element={<Test/>} />
       </Routes> 
     </Router>
