@@ -94,15 +94,15 @@ const Blog = () => {
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">
         <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
-          <img loading="lazy" src="./BlogImg/BlogMainImg.png" alt="MainImg" className="object-cover h-screen absolute inset-0 size-full" />
-          {/* <div className="flex relative flex-col mb-0 max-w-full inset-y-3/4 lg:inset-x-32 p-4   max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
+          <img loading="lazy" src="./BlogImg/BlogsBanner.png" alt="MainImg" className="object-cover h-screen absolute inset-0 size-full" />
+          <div className="flex relative flex-col mb-0 max-w-full mt-[3%] inset-y-3/4 lg:inset-x-20 p-4   max-md:mt-10 max-md:mb-2.5 max-md:ml-2.5">
             <h1 className="self-start text-6xl font-bold tracking-wider text-white">BLOGS</h1>
-            <div className="flex gap-2 md:gap-4 lg:gap-6 items-center mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+            {/* <div className="flex gap-2 md:gap-4 lg:gap-6 items-center mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Get in touch
               </button>
-            </div>
-          </div> */}
+            </div> */}
+          </div>
         </div>
       </header>
       <main className="my-28 p-4 w-full max-w-[1312px] max-md:mt-10 max-md:max-w-full">
