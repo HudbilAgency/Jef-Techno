@@ -58,6 +58,22 @@ const Navbar = () => {
   };
 
 
+  const [scrollNav, setScrollNav] = useState(false);
+
+  // Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrollNav(true);
+      } else {
+        setScrollNav(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
 
   
 
@@ -67,14 +83,15 @@ const Navbar = () => {
 
   return (
     <div
-    className={`flex absolute w-full z-50 overflow-hidden flex-col ${
-      activeSection 
+    className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${
+      scrollNav || activeSection 
         ? 'bg-stone-800' 
         : location.pathname === '/' || location.pathname === '/AboutUs'
           ? 'lg:bg-transparent' 
           : 'bg-stone-800'
     }`}
   >
+
   
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
         <header className="flex relative gap-20 justify-between items-center self-center w-full  2xl:max-w-[92%] max-md:max-w-full">
@@ -186,34 +203,6 @@ const Navbar = () => {
 
 
          < FAQComponent/>
-
-        {/* <nav className="flex mt-[40%] sm:mt-[20%] md:mt-[10%] flex-col gap-10 self-center items-center my-auto w-full">
-            {menuItemsMobile.map((item, index) => (
-              <div
-                key={index}
-                className="flex justify-center items-center self-stretch my-auto"
-              >
-                {item.path ? (
-                  <NavLink
-                    to={item.path} // Use path for routing if available
-                    className="self-stretch my-auto text-white text-3xl  font-medium tracking-[2px]"
-                    activeClassName="active" // Optional: styling for active link
-                  >
-                    {item.label}
-                  </NavLink>
-                ) : (
-                  <button
-                    onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className="self-stretch my-auto text-white  text-3xl font-medium tracking-[2px]"
-                  >
-                    {item.label}
-                  </button>
-                  
-                )}
-              </div>
-            ))}
-            
-          </nav> */}
 
 
 
@@ -504,29 +493,6 @@ function IndustriesComponent() {
 
 
 
-
-
-const languages = ["Arabic", "French", "Deutch", "English"];
-
-const LanguageSelector = () => {
-  return (
-    <nav className="flex overflow-hidden flex-col text-base font-medium text-right text-white uppercase whitespace-nowrap max-w-[94px] tracking-[3.36px]">
-      <ul className="flex flex-col items-end w-full">
-        {languages.map((language, index) => (
-          <li key={language} className={`gap-4 self-stretch ${index > 0 ? "mt-8" : ""} w-full`}>
-            <button className="w-full  text-right">{language}</button>
-          </li>
-        ))}
-      </ul>
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/a81adce09be39cf88a0d46ca8aaa2c9d75422b95bb809ff25b10924e3afedcc6?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
-        alt=""
-        className="object-contain self-end mt-28 aspect-square w-[60px]"
-      />
-    </nav>
-  );
-};
 
 
 
