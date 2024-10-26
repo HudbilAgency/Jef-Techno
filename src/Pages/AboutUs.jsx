@@ -70,12 +70,12 @@ const AboutUs = () => {
               Who we are ?
             </span>
           </h1>
-          <p className="pb-px mt-8 w-full text-lg font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-8 w-full text-lg font-light  max-md:max-w-full">
           JEF is a widely accredited technology-enabled company, focused on solving the
           toughest <br /> problems in the electrical engineering space with a comprehensive and
           innovative set of <br /> products and solutions.
           </p>
-          <p className="pb-px mt-8 w-full text-lg font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-8 w-full text-lg font-light max-md:max-w-full">
           It was founded in 1994 with a clear vision to provide expertise about the most <br />
           comprehensive solutions to the toughest challenges relating to the safety of <br />
           electrical equipment.
@@ -140,7 +140,7 @@ const AboutUs = () => {
             Our Approach
           </span>
         </h2>
-        <p className="mt-16 text-lg md:text-xl font-light leading-9 text-white max-md:mt-10 max-md:max-w-full">
+        <p className="mt-16 text-lg md:text-xl font-light text-white max-md:mt-10 max-md:max-w-full">
           We provide Innovative Solutions that are{" "}
           <span className="font-extrabold">
             Technically Superior, Cost-effective and
@@ -269,7 +269,7 @@ const Overview = () => {
                 <div className="mt-16 text-lg max-md:mt-10">
                   Strong International Presence.
                 </div>
-                <div className="mt-5 text-lg">
+                <div className="mt-3 text-lg">
                   Prestigious Projects in many countries.
                 </div>
               </div>
@@ -292,7 +292,7 @@ const Overview = () => {
                 <div className="mt-16 text-lg w-[323px] max-md:mt-10">
                   Experience across geographies.
                 </div>
-                <div className="mt-4 text-lg">Serving many industries segments</div>
+                <div className="mt-3 text-lg">Serving many industries segments</div>
               </div>
             </div>
           </div>
@@ -624,7 +624,7 @@ function EconomicEngine() {
               An Economic Engine
             </span>
           </h1>
-          <p className="pb-px mt-16 w-full text-lg  font-light leading-9 max-md:max-w-full">
+          <p className="pb-px mt-16 w-full text-lg  font-light max-md:max-w-full">
           We provide the below-mentioned solutions for Transmission & Distribution Utilities, Oil & Gas <br /> Infrastructure, and such other customers. Earthing/Grounding Studies, Lightning Protection Studies <br /> Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>

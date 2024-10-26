@@ -191,7 +191,7 @@ const PowerSystemStudies = () => {
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
         <img loading="lazy" src="./SerivePage/PSLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
       </div>
-      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-sm text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
         <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
           <div className="w-full max-md:max-w-full">
           Power System Studies
@@ -204,12 +204,8 @@ const PowerSystemStudies = () => {
         </p>
         {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
         {/* <p>We have multiple licences & using all major Softwares like</p> */}
-        <div className="my-5">
-          <p>PSSE</p>
-          <p>PSCAD</p>
-          <p>DIG SILENT</p>
-          <p>ETAP</p>
-          <p>EMTP RV, CFEGS.</p>
+        <div className=" my-5">
+          <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CFEGS.</p>
         </div>
         <p>We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
         <p>Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure meeting the objectives of the projects ensure meeting the objectives of the project including technical aspects & timely completion.</p>

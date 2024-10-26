@@ -191,7 +191,7 @@ const LightningProtectionStudies = () => {
       <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
         <img loading="lazy" src="./SerivePage/LighningLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
       </div>
-      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base lg:text-lg leading-9 text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
         <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
           <div className="w-full max-md:max-w-full">
           Lightning Protection Studies and <br /> System Testing Services

@@ -137,10 +137,10 @@ function Industries() {
                 <img 
                 src={service.number}  className="h-[2rem] lg:h-[3rem]"/>
                 </h3>
-                <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl leading-8 text-red-700 max-md:max-w-full">
+                <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl  text-red-700 max-md:max-w-full">
                   {service.title}
                 </h4>
-                <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight lg:leading-9 text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
+                <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
                   {service.description}
                 </p>
               </article>
