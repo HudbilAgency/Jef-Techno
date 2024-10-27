@@ -493,7 +493,7 @@ useGSAP(() => {
     {/*  Why choose JEF Section  */}
 
     <section className="flex bg-fixed h-screen overflow-hidden  px-16 py-6 bg-stone-900 ">
-    <img className="h-32 my-auto" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+    <img className="h-32 my-auto hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
     <main className="lg:px-[180px]">
       <header className="flex flex-row gap-7 w-full max-w-[1522px] max-md:max-w-full">
       <FeatureSection/>

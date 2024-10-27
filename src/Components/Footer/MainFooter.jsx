@@ -133,7 +133,7 @@ function Footer() {
 
 function Section({ title, items }) {
   return (
-    <section className="flex X-axis-card-anm card-slider-footer flex-col min-h-[234px] w-[219px]">
+    <section className="flex .card-slider-footer X-axis-card-anm flex-col min-h-[234px] w-[219px]">
       <header className="w-full text-xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
         {title}
       </header>
