@@ -1,10 +1,98 @@
 import React ,{useState , useRef, useEffect} from 'react'
 import Navbar from '../Components/Navbar/Navbar'
 import MainFooter from '../Components/Footer/MainFooter';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const AboutUs = () => {
 
 
+
+
+  useEffect(() => {
+    gsap.utils.toArray('.Y-axis-text-Title').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: element,
+                    stagger: 0.6,
+                    start: 'top 100%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
+
+
+
+  useEffect(() => {
+    gsap.utils.toArray('.Y-axis-text').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: element,
+                    stagger: 0.6,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
+
+//  Card Sliderr --------------------------
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-card-anm'),
+          { opacity: 0, y: 50 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3, // 0.3s delay between each card animation
+            scrollTrigger: {
+              start:'top 60%',
+              trigger: '.card-slider',
+              toggleActions: 'play',
+            },
+          }
+        );
+      }, []);
+
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.X-axis-anm'),
+          { opacity: 0, x: 150 },
+          {
+            x: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.3, // 0.3s delay between each card animation
+            scrollTrigger: {
+              start: 'top 70%',
+              trigger: '.card-slider',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
 
 
 
@@ -43,11 +131,11 @@ const AboutUs = () => {
                 className="object-cover absolute inset-0 size-full"
             />
             <section className="flex relative inset-y-3/4 lg:inset-x-24 flex-col mt-8 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
-                <h1 className="md:text-5xl text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+                <h1 className="md:text-5xl Y-axis-text-Title text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, THINK JEF
                 </h1>
                 <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
+              <button className="uppercase Y-axis-text-Title px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Learn More
               </button>
             </div>
@@ -64,7 +152,7 @@ const AboutUs = () => {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 bg-zinc-800 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1380px] max-md:max-w-full">
-        <header className="flex flex-col self-center max-w-full text-center text-white ">
+        <header className="flex Y-axis-text flex-col self-center max-w-full text-center text-white ">
           <h1 className="flex justify-center items-center px-48 w-full text-3xl font-normal leading-none uppercase tracking-[3.36px] max-md:px-5 max-md:max-w-full ">
             <span className="text-red-600 self-stretch pb-px my-auto min-w-[240px] max-md:text-4xl">
               Who we are ?
@@ -85,8 +173,8 @@ const AboutUs = () => {
           <div className="flex flex-col justify-center items-center w-full max-w-[1240px] max-md:max-w-full">
             <div className="flex flex-wrap flex-1 justify-center mx-auto size-full max-md:px-5">
               {visionData.map((card, index) => (
-                <article key={index} className="flex flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
-                  <div className="flex flex-col px-5 py-14 w-full border border-white border-opacity-10 lg:h-[55vh] max-w-[310px] h-auto max-md:pl-5">
+                <article key={index} className="flex Y-axis-card-anm flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
+                  <div className="flex Y-axis-card-anm flex-col px-5 py-14 w-full hover:bg-stone-900 hover:border-opacity-80 border border-white border-opacity-10 lg:h-[55vh] max-w-[310px] h-auto max-md:pl-5">
                     <div className="flex flex-col items-center pb-8 w-full min-h-[110px]">
                       <div className="flex justify-center items-end w-full min-h-[80px]">
                         <div className="flex overflow-hidden flex-col flex-1 shrink w-full basis-0 min-w-[240px]">
@@ -136,11 +224,11 @@ const AboutUs = () => {
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 text-center bg-zinc-800 max-md:px-5">
       <div className="flex flex-col max-w-full w-[1115px]">
         <h2 className="flex flex-wrap gap-24 justify-center items-start self-center max-w-full text-3xl font-bold leading-none text-red-700 uppercase tracking-[3.36px] w-[714px] ">
-          <span className="pb-px min-w-[240px] max-md:max-w-full ">
+          <span className="pb-px Y-axis-text min-w-[240px] max-md:max-w-full ">
             Our Approach
           </span>
         </h2>
-        <p className="mt-16 text-lg md:text-xl font-light text-white max-md:mt-10 max-md:max-w-full">
+        <p className="mt-16 Y-axis-text text-lg md:text-xl font-light text-white max-md:mt-10 max-md:max-w-full">
           We provide Innovative Solutions that are{" "}
           <span className="font-extrabold">
             Technically Superior, Cost-effective and
@@ -164,12 +252,12 @@ const AboutUs = () => {
               <div className="flex flex-col justify-center p-2.5 w-full text-3xl sm:text-4xl font-semibold leading-none text-red-700 tracking-[0.28rem]">
                 <div className="flex flex-col w-full h-[4.5rem]">
                   <div className="flex relative flex-col w-full">
-                    <h2 className="pb-px w-full">Brand History</h2>
+                    <h2 className="pb-px Y-axis-text w-full">Brand History</h2>
                     <div className="flex absolute inset-x-0 z-0 max-w-full bottom-[-7.6875rem] min-h-[5.8125rem] w-full md:w-[33.25rem]" />
                   </div>
                 </div>
               </div>
-              <p className="mt-6 sm:mt-8 md:mt-11 text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
+              <p className="mt-6 Y-axis-text sm:mt-8 md:mt-11 text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
                 From three decades, JEF Techno as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
               </p>
             </div>
@@ -179,7 +267,7 @@ const AboutUs = () => {
               loading="lazy"
               src="./AboutUs/BrandHistory.png"
               alt="JEF Techno brand history illustration"
-              className="object-contain w-full aspect-[1.09]"
+              className="object-contain X-axis-anm w-full aspect-[1.09]"
             />
           </div>
         </div>
@@ -599,7 +687,7 @@ const sectors = [
 
 function SectorIcon({ name, imageSrc, altText }) {
   return (
-    <div className="flex justify-center items-center self-stretch px-9 py-11 my-auto rounded-[83px] max-md:px-5">
+    <div className="flex Y-axis-card-anm justify-center items-center self-stretch px-9 py-11 my-auto rounded-[83px] max-md:px-5">
       <div className="flex flex-col items-center self-stretch my-auto w-full">
         <div className="flex overflow-hidden flex-col flex-1 items-center w-full">
           <div className="flex flex-1 justify-center size-full">
@@ -620,11 +708,11 @@ function EconomicEngine() {
       <div className="flex flex-col items-center w-full max-w-[1275px] max-md:max-w-full">
         <header className="flex flex-col max-w-full text-center text-zinc-900 w-full">
           <h1 className="flex justify-center items-center px-36 w-full text-3xl  font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full ">
-            <span className="self-stretch pb-px my-auto min-w-[240px] max-md:max-w-full">
+            <span className="self-stretch Y-axis-text pb-px my-auto min-w-[240px] max-md:max-w-full">
               An Economic Engine
             </span>
           </h1>
-          <p className="pb-px mt-16 w-full text-lg  font-light max-md:max-w-full">
+          <p className="pb-px Y-axis-text mt-16 w-full text-lg  font-light max-md:max-w-full">
           We provide the below-mentioned solutions for Transmission & Distribution Utilities,<br /> Oil & Gas Infrastructure, and such other customers. Earthing/Grounding Studies, <br /> Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>

@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState , useEffect } from "react";
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
@@ -21,7 +21,6 @@ const menuItems = [
   { label: 'News', hasDropdown: true },
   { label: 'Careers', hasDropdown: false }
 ];
-
 
 
 //  Why choose JEF section
@@ -146,6 +145,79 @@ const buttonData = [
 
 
 function Home() {
+
+
+  // For blogs Animation 
+
+  useEffect(() => {
+    // Select all elements with the 'X-axis-anm' class and apply staggered animation
+    gsap.fromTo(
+      gsap.utils.toArray('.X-axis-card-anm'),
+      { opacity: 0, x: 120 },
+      {
+        x: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.3, // 0.3s delay between each card animation
+        scrollTrigger: {
+          trigger: '.card-slider',
+          start: '60% bottom', // Start animation when 50% of '.card-slider' is at the bottom of the viewport
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
+
+
+
+
+
+  useEffect(() => {
+    
+    gsap.utils.toArray('.Y-axis-text').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
+  
+  
+  
+
+
+
+// For X-axis animation ----------------------------------------
+
+      useEffect(() => {
+        gsap.utils.toArray('.X-axis-Title').forEach((element) => {
+            gsap.fromTo(
+                element,
+                { opacity: 0 , x: 120 },
+                {   x: 0,
+                    opacity: 1,
+                    duration: 0.8,
+                    scrollTrigger: {
+                        trigger: element,
+                        start: 'top 70%',
+                        toggleActions: 'play none none none',
+                          },
+                      }
+                  );
+              });
+          }, []);
 
 
   const itemsPerPageMobile = 1;  // 1 card on mobile
@@ -439,16 +511,16 @@ useGSAP(() => {
         <div className="flex gap-5 p-4 max-md:flex-col">
           <div className="flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
             <div className="flex z-10 my-32 mt-56 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
-              <h1 className="text-3xl font-bold uppercase tracking-[3px] max-md:max-w-full ">
+              <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
-              <p className="self-stretch my-20 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p className="self-stretch Y-axis-text my-20 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
-              <h2 className="text-xl lg:text-3xl  font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
-              <p className=" text-xl lg:text-2xl  max-md:max-w-full">{"Chairman and Managing Director"}</p>
-              <p className="text-xl lg:text-2xl ">{"JEF Group"}</p>
+              <h2 className="text-xl lg:text-3xl Y-axis-text font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className=" text-xl lg:text-2xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="text-xl lg:text-2xl Y-axis-text ">{"JEF Group"}</p>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
@@ -467,22 +539,22 @@ useGSAP(() => {
 
 
 
-  <section className="py-16 bg-neutral-100">
+  <section className="py-16 overflow-x-hidden bg-neutral-100 ">
       <main className="lg:px-[100px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
         <div className="flex flex-col items-start mb-0 w-full  max-md:max-w-full">
           <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
-            <h1 className=" text-4xl font-bold leading-none tracking-[3.36px]">BLOGS</h1>
+            <h1 className=" text-4xl font-bold leading-none X-axis-anm tracking-[3.36px]">BLOGS</h1>
             <div className="flex gap-7 tracking-[1px]">
-            <div className="text-xs my-auto">40 ARTICLES IN TOTAL</div>
+            <div className="text-xs X-axis-anm my-auto">40 ARTICLES IN TOTAL</div>
               <button
-                className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : ""}`}
+                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : ""}`}
                 onClick={prevSlide}
                 style={{ visibility: currentIndex === 0 ? "hidden" : "visible" }} // Hide button if at the first slide
               >
                 <img src="./HomePageImg/LeftArrow.png" alt="LeftArrow" className="w-8" />
               </button>
               <button
-                className={`bg-red-700 hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage - 1 ? "visibility-hidden" : ""}`}
+                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage - 1 ? "visibility-hidden" : ""}`}
                 onClick={nextSlide}
                 style={{ visibility: currentIndex >= totalItems - itemsPerPage - 1 ? "hidden" : "visible" }} // Hide button 1 slide before the last
               >
@@ -492,7 +564,7 @@ useGSAP(() => {
             </div>
           </header>
           <div className="flex justify-between w-full">
-              <nav className="flex gap-8 mt-5 text-xs uppercase whitespace-nowrap max-md:mt-10">
+              <nav className="flex gap-8 X-axis-anm mt-5 text-xs uppercase whitespace-nowrap max-md:mt-10">
                 <a href="#newest" className="text-red-700 basis-auto">Newest</a>
                 <a href="#oldest" className="text-neutral-900">Oldest</a>
               </nav>
@@ -553,10 +625,10 @@ useGSAP(() => {
       <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
         <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
         <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-          <h1 className="text-2xl lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+          <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
             Contact us
           </h1>
-          <p className="self-stretch mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
+          <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
           Get in touch with us for any business enquiry.
           </p>
           <form className="w-full mt-12 max-md:mt-10">
@@ -565,7 +637,7 @@ useGSAP(() => {
             ))}
             <button
               type="submit"
-              className="overflow-hidden px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+              className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
             >
               Submit
             </button>
@@ -817,7 +889,7 @@ function FormInput({ label, type }) {
         id={id}
         name={id}
         placeholder={label}
-        className="overflow-hidden px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+        className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
         required
       />
     </div>
@@ -1041,9 +1113,14 @@ const LandingImages = () => {
 
 
 function BlogCard({ imageSrc, title ,path }) {
+
+
+      
+
+
   return (
-    <article className="flex flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
-      <div className="flex flex-col grow max-md:mt-10">
+    <article className="flex X-axis-card-anm flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
+      <div className="flex flex-col X-axis-card-anm grow max-md:mt-10">
         <div className="flex flex-col justify-center w-full min-h-[400px] overflow-hidden relative">
           <img
             loading="lazy"
