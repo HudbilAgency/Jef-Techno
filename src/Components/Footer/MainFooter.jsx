@@ -20,9 +20,9 @@ function MainFooter() {
         duration: 0.7,
         stagger: 0.2, // 0.3s delay between each card animation
         scrollTrigger: {
-          trigger: '.card-slider',
-          start: 'top 80%', // Start animation when 50% of '.card-slider' is at the bottom of the viewport
-          toggleActions: 'play none none none',
+          trigger: '.card-slider-footer',
+        start: 'top 80%', // Adjusted start position
+        toggleActions: 'play none none none',
         },
       }
     );
@@ -101,25 +101,25 @@ function Footer() {
   return (
     <footer className="flex flex-col items-center pt-10 bg-stone-800">
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
-      <div className="flex flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
-        <div className="hidden X-axis-card-anm lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
+      <div className="flex X-axis-card-anm flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
+        <div className="hidden  card-slider-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex X-axis-card-anm flex-row h-full space-x-12 lg:space-x-6">
-          <button onClick={handleYoutubeButtonClick} className="object-contain"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
-          <button onClick={handleFacebookButtonClick} className="object-contain "><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
-          <button onClick={handleLinkedinButtonClick} className="object-contain  "><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
-          <button onClick={handleTwitterButtonClick} className="object-contain "><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
+          <button onClick={handleYoutubeButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
+          <button onClick={handleFacebookButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
+          <button onClick={handleLinkedinButtonClick} className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
+          <button onClick={handleTwitterButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
-        <div className="flex flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
-          <div className="flex X-axis-card-anm shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs font-light basis-auto grow-0 tracking-widest">
+        <div className="flex X-axis-card-anm flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
+          <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs X-axis-card-anm mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs card-slider-footer mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
               <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
           </div>   
@@ -133,7 +133,7 @@ function Footer() {
 
 function Section({ title, items }) {
   return (
-    <section className="flex X-axis-card-anm flex-col min-h-[234px] w-[219px]">
+    <section className="flex X-axis-card-anm card-slider-footer flex-col min-h-[234px] w-[219px]">
       <header className="w-full text-xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
         {title}
       </header>

@@ -153,15 +153,16 @@ function Home() {
     // Select all elements with the 'X-axis-anm' class and apply staggered animation
     gsap.fromTo(
       gsap.utils.toArray('.X-axis-card-anm'),
-      { opacity: 0, x: 120 },
+      { opacity: 0, x: 100 },
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 1.1,
         stagger: 0.3, // 0.3s delay between each card animation
         scrollTrigger: {
           trigger: '.card-slider',
-          start: '60% bottom', // Start animation when 50% of '.card-slider' is at the bottom of the viewport
+          start: 'top 80%', // Adjusted start position
+          end: 'bottom 20%',
           toggleActions: 'play none none none',
         },
       }
@@ -1120,7 +1121,7 @@ function BlogCard({ imageSrc, title ,path }) {
 
   return (
     <article className="flex X-axis-card-anm flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
-      <div className="flex flex-col X-axis-card-anm grow max-md:mt-10">
+      <div className="flex card-slider flex-col grow max-md:mt-10">
         <div className="flex flex-col justify-center w-full min-h-[400px] overflow-hidden relative">
           <img
             loading="lazy"

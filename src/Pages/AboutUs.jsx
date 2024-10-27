@@ -67,9 +67,9 @@ const AboutUs = () => {
             duration: 1,
             stagger: 0.3, // 0.3s delay between each card animation
             scrollTrigger: {
-              start:'top 60%',
+              start:'top 70%',
               trigger: '.card-slider',
-              toggleActions: 'play',
+              toggleActions: 'play none none none',
             },
           }
         );
@@ -86,8 +86,8 @@ const AboutUs = () => {
             duration: 1,
             stagger: 0.3, // 0.3s delay between each card animation
             scrollTrigger: {
-              start: 'top 70%',
-              trigger: '.card-slider',
+              start: 'top 80%',
+              trigger: '.Img-slider',
               toggleActions: 'play none none none',
             },
           }
@@ -173,8 +173,8 @@ const AboutUs = () => {
           <div className="flex flex-col justify-center items-center w-full max-w-[1240px] max-md:max-w-full">
             <div className="flex flex-wrap flex-1 justify-center mx-auto size-full max-md:px-5">
               {visionData.map((card, index) => (
-                <article key={index} className="flex Y-axis-card-anm flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
-                  <div className="flex Y-axis-card-anm flex-col px-5 py-14 w-full hover:bg-stone-900 hover:border-opacity-80 border border-white border-opacity-10 lg:h-[55vh] max-w-[310px] h-auto max-md:pl-5">
+                <article key={index} className="flex  Y-axis-card-anm flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
+                  <div className="flex card-slider flex-col px-5 py-14 w-full hover:bg-stone-900 hover:border-opacity-80 border border-white border-opacity-10 lg:h-[55vh] max-w-[310px] h-auto max-md:pl-5">
                     <div className="flex flex-col items-center pb-8 w-full min-h-[110px]">
                       <div className="flex justify-center items-end w-full min-h-[80px]">
                         <div className="flex overflow-hidden flex-col flex-1 shrink w-full basis-0 min-w-[240px]">
@@ -262,7 +262,7 @@ const AboutUs = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col mt-6 md:mt-0 md:ml-5 w-full md:w-1/2">
+          <div className="flex flex-col Img-slider mt-6 md:mt-0 md:ml-5 w-full md:w-1/2">
             <img
               loading="lazy"
               src="./AboutUs/BrandHistory.png"
@@ -290,10 +290,10 @@ const AboutUs = () => {
     <div className="flex z-0 flex-col my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
-          <h1 className="pb-px w-full font-bold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
+          <h1 className="pb-px w-full Y-axis-text font-bold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
             JEF LEADERSHIP
           </h1>
-          <p className="mt-5 w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
+          <p className="mt-5 Y-axis-text w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
           Over the last couple of decades, with our help, our clients have been able to <br /> assure
           the long-term safety of their manpower and business.
           </p>
@@ -339,18 +339,38 @@ const AboutUs = () => {
 
 
 const Overview = () => {
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm'),
+      { opacity: 0, y: 50 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.3, // 0.3s delay between each card animation
+        scrollTrigger: {
+          start:'top 70%',
+          trigger: '.card-slider-Overview',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
+
   return (
     <div className="flex flex-col justify-center items-center p-20 bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[70%] max-md:max-w-full">
         <div className="flex justify-center items-center self-center px-72 max-w-full text-3xl  font-semibold leading-none text-center text-white uppercase whitespace-nowrap tracking-[4.53px] w-[960px] max-md:px-5 ">
-          <div className="self-stretch my-auto min-w-[240px] ">
+          <div className="self-stretch Y-axis-card-anm my-auto min-w-[240px] ">
             Overview
           </div>
         </div>
         <div className="mt-20 max-md:mt-10 max-md:max-w-full">
-          <div className="flex max-md:flex-col">
+          <div className="flex Y-axis-card-anm max-md:flex-col">
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <div className="flex overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+              <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] ">
                   From India to 24 Countries
                 </div>
@@ -362,8 +382,8 @@ const Overview = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <div className="flex overflow-hidden flex-col grow px-11 pt-12 pb-64 text-xl border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+            <div className="flex  flex-col w-[33%] max-md:ml-0 max-md:w-full">
+              <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow px-11 pt-12 pb-64 text-xl border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
                   3000+ Global Customer
                 </div>
@@ -373,7 +393,7 @@ const Overview = () => {
               </div>
             </div>
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <div className="flex overflow-hidden flex-col grow items-start px-11 pt-12 pb-40 text-xl font-light leading-9 text-white border border-solid border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+              <div className="flex card-slider-Overview overflow-hidden hover:bg-stone-800 hover:border-opacity-80 flex-col grow items-start px-11 pt-12 pb-40 text-xl font-light leading-9 text-white border border-solid border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
                   30 Years of Experience
                 </div>
@@ -686,9 +706,29 @@ const sectors = [
 ];
 
 function SectorIcon({ name, imageSrc, altText }) {
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm1'),
+      { opacity: 0, y: 50 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        stagger: 0.3, // 0.3s delay between each card animation
+        scrollTrigger: {
+          start:'top 80%',
+          trigger: '.card-slider2',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
+
   return (
-    <div className="flex Y-axis-card-anm justify-center items-center self-stretch px-9 py-11 my-auto rounded-[83px] max-md:px-5">
-      <div className="flex flex-col items-center self-stretch my-auto w-full">
+    <div className="flex Y-axis-card-anm1 justify-center items-center self-stretch px-9 py-11 my-auto rounded-[83px] max-md:px-5">
+      <div className="flex card-slider2 flex-col items-center self-stretch my-auto w-full">
         <div className="flex overflow-hidden flex-col flex-1 items-center w-full">
           <div className="flex flex-1 justify-center size-full">
             <img loading="lazy" src={imageSrc} alt={altText} className="object-cover shrink " />
