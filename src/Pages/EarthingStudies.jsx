@@ -207,7 +207,7 @@ const EarthingStudies = () => {
             Comprehensive Earthing/Grounding <br /> integrity testing services
           </div>
         </h1>
-        <p className="self-stretch mt-12 w-[80%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
+        <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
           As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
           With several patents in this field, our level of expertise is unmatched even we keep innovating further.
           With several patents in this field, our level of expertise is unmatched even we keep

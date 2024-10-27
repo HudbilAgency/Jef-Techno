@@ -197,7 +197,7 @@ const PowerSystemStudies = () => {
           Power System Studies
           </div>
         </h1>
-        <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
+        <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto  mt-12 font-light max-md:mt-10 max-md:max-w-full">
         We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid Green hydrogen plants Micro grids.
         With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
         <p>We have multiple licences & using all major Softwares like
@@ -207,8 +207,8 @@ const PowerSystemStudies = () => {
         <div className=" my-5">
           <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CFEGS.</p>
         </div>
-        <p>We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
-        <p>Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure meeting the objectives of the projects ensure meeting the objectives of the project including technical aspects & timely completion.</p>
+        <p className="w-[80%] lg:w-[60%] text-center mx-auto">We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
+        <p className="w-[80%] lg:w-[60%] text-center mx-auto">Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure meeting the objectives of the projects ensure meeting the objectives of the project including technical aspects & timely completion.</p>
       </header>
       <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
         <p className="px-56 w-full max-md:px-5 max-md:max-w-full">

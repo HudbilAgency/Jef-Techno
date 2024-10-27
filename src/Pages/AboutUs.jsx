@@ -358,7 +358,7 @@ function LearningDevelopment() {
         </div>
 
         {/* Button controls over carousel */}
-        <div className="absolute mt-[2%] ml-[25%] lg:mt-0 lg:ml-0 inset-0 flex flex-col md:flex-row justify-between items-center z-50 px-10 md:px-20">
+        <div className="absolute mt-[2%] ml-[25%] lg:mt-0 lg:ml-0 inset-0 flex flex-col md:flex-row justify-between items-center z-40 px-10 md:px-20">
           <button onClick={() => handleImageClick(1)} className="lg:mb-4 md:mb-0">
             <img
               src="./AboutUs/Button - Previous.png"
@@ -625,7 +625,7 @@ function EconomicEngine() {
             </span>
           </h1>
           <p className="pb-px mt-16 w-full text-lg  font-light max-md:max-w-full">
-          We provide the below-mentioned solutions for Transmission & Distribution Utilities, Oil & Gas <br /> Infrastructure, and such other customers. Earthing/Grounding Studies, Lightning Protection Studies <br /> Power System Studies, Power Quality Studies, Instrumentation Earthing
+          We provide the below-mentioned solutions for Transmission & Distribution Utilities,<br /> Oil & Gas Infrastructure, and such other customers. Earthing/Grounding Studies, <br /> Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing
           </p>
         </header>
         <div className="items-center mt-20 max-w-full  max-md:mt-10">
