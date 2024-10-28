@@ -1,9 +1,9 @@
 import React, { useRef, useState , useEffect } from "react";
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
-import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from '../Components/Navbar/Navbar';
+import { useGSAP } from '@gsap/react'
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
