@@ -2,8 +2,36 @@ import React , { useState, useEffect, useRef } from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import MainFooter from "../Components/Footer/MainFooter";
 import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 function Industries() {
+
+
+
+  // Key Components 
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.card-slider',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
   useEffect(() => {
     
@@ -23,6 +51,46 @@ function Industries() {
                   }
               );
           });
+      }, []);
+
+  // Segments
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Segments-anm'),
+          { opacity: 0, y: 400 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 0.5,
+            stagger: 0.07,
+            scrollTrigger: {
+              trigger: '.circle-slider',
+              start: 'top 70%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Segments-anmMob'),
+          { opacity: 0, y: 400 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1,
+            stagger: 0.08,
+            scrollTrigger: {
+              trigger: '.circle-sliderMob',
+              start: 'top 70%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
       }, []);
 
   const serviceData = [
@@ -99,7 +167,7 @@ function Industries() {
 
     <section className="px-[5%] pt-[4%]">
         <main className="flex flex-col text-center">
-        <header className="flex flex-col w-full text-2xl lg:text-3xl font-semibold uppercase text-stone-900 tracking-[6.06px] max-md:max-w-full">
+        <header className="flex flex-col w-full text-2xl lg:text-3xl font-semibold uppercase text-stone-900 tracking-[2.06px] max-md:max-w-full">
             <img
             loading="lazy"
             src="./IndustriesPage/WindmilLogo.png"
@@ -146,13 +214,13 @@ function Industries() {
 
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
       <div className="flex flex-col w-full max-w-[1518px] max-md:max-w-full">
-        <h2 className="self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
+        <h2 className="Y-axis-card-anm self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
           service provided
         </h2>
-        <div className="flex flex-wrap gap-10 items-start mt-20 max-md:mt-10">
+        <div className="card-slider flex flex-wrap gap-10 items-start mt-20 max-md:mt-10">
           {serviceData.map((service, index) => (
             <React.Fragment key={service.number}>
-              <article className="flex flex-col pb-1.5 rounded-none min-w-[240px] w-[443px] max-md:max-w-full">
+              <article className="Y-axis-card-anm flex flex-col pb-1.5 rounded-none min-w-[240px] w-[443px] max-md:max-w-full">
                 <h3 className="self-start ">
                 <img 
                 src={service.number}  className="h-[2rem] lg:h-[3rem]"/>
@@ -176,20 +244,6 @@ function Industries() {
 
 
 
-    {/* <section className=" py-20">
-    <main>
-      <h1 className="text-4xl text-red-700 text-center font-semibold uppercase tracking-widest">Segments</h1>
-      <img
-        loading="lazy"
-        src="https://cdn.builder.io/api/v1/image/assets/TEMP/fec8dd4c0faf600f3fdc9aa66a007a0646ef06fff1de8c883aa0da6ffda49ac6?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
-        className="object-contain lg:h-60 mt-16 w-full aspect-[7.3] max-md:mt-10 max-md:max-w-full"
-        alt="Decorative image"
-      />
-    </main>
-    </section>
-    <section>
-      
-    </section> */}
 
 
       <section>
@@ -294,7 +348,7 @@ function IntegratingDiverseSpecializations() {
 const NavigationItem = ({ text, isActive }) => (
   <div className="flex items-center self-stretch my-auto">
     <div
-      className={`self-stretch my-auto text-base tracking-wide leading-none uppercase ${
+      className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase ${
         isActive ? 'text-white' : 'text-red-700'
       }`}
     >
@@ -448,8 +502,8 @@ const Segments = () => {
           <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
             Segments
           </h2>
-          <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[45vh]">
-            <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+          <div className="circle-sliderMob flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[45vh]">
+            <div className='Y-axis-Segments-anmMob flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                  {services.slice(0, 3).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -461,7 +515,7 @@ const Segments = () => {
                     />
                   ))}
             </div>
-            <div className='flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
+            <div className='Y-axis-Segments-anmMob flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
               {services.slice(3).map((services, index) => (
                 <ServiceItem
                 key={index}
@@ -488,7 +542,7 @@ const Segments = () => {
             Segments
           </h2>
           <div className="flex flex-wrap justify-center mt-16 max-md:mt-10 w-full h-[30vh]">
-            <div className='flex items-center gap-x-2 md:gap-x-5 circleChild'>
+            <div className='circle-slider flex items-center gap-x-2 md:gap-x-5 circleChild'>
               {services1.slice(0, 9).map((services1, index) => (
                 <Service1Item
                   key={index}
@@ -515,7 +569,7 @@ const Service1Item = React.forwardRef(({ image, text, onMouseEnter, onMouseLeave
   return (
     <div
   ref={ref}
-  className={`flex flex-col md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+  className={`flex Y-axis-Segments-anm flex-col md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
     ${text === "" ? "bg-stone-900" : "border bg-stone-900 border-solid hover:bg-red-600"}`}
   onMouseEnter={() => {
     if (text !== "") {

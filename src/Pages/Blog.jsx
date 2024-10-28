@@ -1,11 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
 import { Link} from 'react-router-dom';
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+
+gsap.registerPlugin(ScrollTrigger);
 
 const BlogPost = ({ date, title, content, imageUrl , path  }) => (
-  <article className="flex flex-col w-full  max-md:mt-10">
+  <article className="Y-axis-card-anm flex flex-col w-full  max-md:mt-10">
     <img loading="lazy" src={imageUrl} alt="" className="object-contain w-full aspect-[1.5]" />
     <time className="self-start mt-3.5 text-xs font-thin leading-snug uppercase text-zinc-600">{date}</time>
     <h2 className="mt-2.5 text-lg leading-6 uppercase text-stone-900">{title}</h2>
@@ -87,6 +91,64 @@ const Blog = () => {
       
   ];
 
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.card-slider',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm1'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.card-slider1',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm2'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.card-slider2',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
+
   return (
 
     <>
@@ -108,7 +170,7 @@ const Blog = () => {
       <main className="my-28 p-4 w-full max-w-[1312px] max-md:mt-10 max-md:max-w-full">
         <div className="flex gap-5 max-md:flex-col">
           {blogPosts.slice(0, 3).map((post, index) => (
-            <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+            <div key={index} className=" card-slider flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <BlogPost {...post} />
             </div>
           ))}
@@ -116,7 +178,7 @@ const Blog = () => {
         <div className="mt-24 w-full max-w-[1312px] max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
             {blogPosts.slice(3, 6).map((post, index) => (
-              <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+              <div key={index} className="card-slider1  flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                 <BlogPost {...post} />
               </div>
             ))}
@@ -125,7 +187,7 @@ const Blog = () => {
         <div className="mt-24 w-full max-w-[1312px] max-md:mt-10 max-md:max-w-full">
           <div className="flex gap-5 max-md:flex-col">
             {blogPosts.slice(6, 9).map((post, index) => (
-              <div key={index} className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
+              <div key={index} className="card-slider2 flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
                 <BlogPost {...post} />
               </div>
             ))}
