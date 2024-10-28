@@ -25,6 +25,28 @@ const LightningProtectionStudies = () => {
           });
       }, []);
 
+  // Testimonials
+
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Testimonials'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.Testimonials',
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
 
 // For Key Components
 
@@ -60,7 +82,7 @@ const LightningProtectionStudies = () => {
             stagger: 0.3,
             scrollTrigger: {
               trigger: '.circle-slider',
-              start: 'top 80%',
+              start: 'top 60%',
               end: 'bottom 20%',
               toggleActions: 'play none none none',
             },
@@ -382,7 +404,7 @@ const LightningProtectionStudies = () => {
               alt="Background for testimonials section" 
               className="object-cover absolute inset-0 size-full"
             />
-            <div className="Y-axis-text-Title-Service2 flex relative flex-col max-w-full w-full md:w-[679px]">
+            <div className="Testimonials Y-axis-Testimonials flex relative flex-col max-w-full w-full md:w-[679px]">
               <h2 className="self-center text-base tracking-widest leading-snug">
                 TESTIMONIALS
               </h2>

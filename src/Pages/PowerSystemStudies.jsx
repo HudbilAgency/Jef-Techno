@@ -5,6 +5,114 @@ import Navbar from "../Components/Navbar/Navbar";
 
 const PowerSystemStudies = () => {
 
+
+  useEffect(() => {
+    gsap.utils.toArray('.Y-axis-text-Title-Service3').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: element,
+                    stagger: 0.6,
+                    start: 'top 100%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
+       // Testimonials
+
+
+       useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Testimonials'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.Testimonials',
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
+
+// For Key Components
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-card-anm'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.card-slider',
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
+      // Our Services Animation 
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Service-anm'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.circle-slider',
+              start: 'top 60%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
+
+
+
+  useEffect(() => {
+    
+    gsap.utils.toArray('.ContactUsAnimation').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                stagger: 0.2,
+                scrollTrigger: {
+                    trigger: element,
+                    start: 'top 70%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
   const services = [
     { image: '', text: '' },
     { image: '', text: '' },
@@ -144,7 +252,7 @@ const PowerSystemStudies = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex inset-y-3/4 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+        <div className="Y-axis-text-Title-Service3 flex inset-y-3/4 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
           <h1 className=" uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
           Power System Studies
           </h1>
@@ -188,12 +296,12 @@ const PowerSystemStudies = () => {
           </div>
         </div>
       </nav>
-      <div className="flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
+      <div className="ContactUsAnimation flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
         <img loading="lazy" src="./SerivePage/PSLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
       </div>
-      <header className="flex p-4 flex-col items-center self-center mt-10 w-full text-sm text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+      <header className="ContactUsAnimation flex p-4 flex-col items-center self-center mt-10 w-full text-sm text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
         <h1 className="flex flex-col max-w-full text-2xl font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
-          <div className="w-full max-md:max-w-full">
+          <div className="ContactUsAnimation w-full max-md:max-w-full">
           Power System Studies
           </div>
         </h1>
@@ -204,19 +312,19 @@ const PowerSystemStudies = () => {
         </p>
         {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
         {/* <p>We have multiple licences & using all major Softwares like</p> */}
-        <div className=" my-5">
+        <div className="my-5">
           <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CFEGS.</p>
         </div>
         <p className="w-[80%] lg:w-[60%] text-center mx-auto">We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
         <p className="w-[80%] lg:w-[60%] text-center mx-auto">Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure meeting the objectives of the projects ensure meeting the objectives of the project including technical aspects & timely completion.</p>
       </header>
       <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
-        <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
+        <p className="ContactUsAnimation px-56 w-full max-md:px-5 max-md:max-w-full">
           Get in touch for Real-Life Case Studies and Testimonials
         </p>
         <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
       </div>
-      <button className="flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+      <button className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
         <span className="self-stretch my-auto">CONTACT US</span>
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
       </button>
@@ -257,8 +365,8 @@ const PowerSystemStudies = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
-                <div className='flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+              <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
+                <div className='Y-axis-Service-anm flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -270,7 +378,7 @@ const PowerSystemStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
+                <div className='Y-axis-Service-anm flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
                   {services.slice(9).map((service, index) => (
                     <ServiceItem
                       key={index + 9}
@@ -300,7 +408,7 @@ const PowerSystemStudies = () => {
               alt="Background for testimonials section" 
               className="object-cover absolute inset-0 size-full"
             />
-            <div className="flex relative flex-col max-w-full w-full md:w-[679px]">
+            <div className="Testimonials Y-axis-Testimonials flex relative flex-col max-w-full w-full md:w-[679px]">
               <h2 className="self-center text-base tracking-widest leading-snug">
                 TESTIMONIALS
               </h2>
@@ -443,7 +551,7 @@ function CarouselSection({ components }) {
       </div>
 
       {/* Carousel Section */}
-      <div className="flex justify-center items-center mt-10 w-full overflow-hidden">
+      <div className="card-slider flex justify-center items-center mt-10 w-full overflow-hidden">
         {/* Carousel wrapper */}
         <div
           className="flex transition-transform duration-500 ease-in-out"
@@ -455,7 +563,7 @@ function CarouselSection({ components }) {
           {components.map((component) => (
             <div
               key={component.title}
-              className="flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start w-full "
+              className="Y-axis-card-anm flex overflow-hidden flex-col self-center sm:self-start items-center sm:items-start w-full "
               style={{
                 flex: `0 0 ${100 / visibleCards}%`, // Adjust width of each card based on visibleCards
               }}
