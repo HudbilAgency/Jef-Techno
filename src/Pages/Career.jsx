@@ -1,9 +1,56 @@
-import React, { useState } from 'react';
+import React, { useState , useEffect } from 'react';
 import MainFooter from '../Components/Footer/MainFooter'
 import Navbar from '../Components/Navbar/Navbar';
 import { Link } from "react-router-dom";
+import gsap from 'gsap'
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Career = () => {
+ 
+
+  useEffect(() => {
+    gsap.utils.toArray('.Y-axis-text-Title-Careers').forEach((element) => {
+        gsap.fromTo(
+            element,
+            { opacity: 0 , y: 50 },
+            {   y: 0,
+                opacity: 1,
+                duration: 0.8,
+                scrollTrigger: {
+                    trigger: element,
+                    stagger: 0.6,
+                    start: 'top 100%',
+                    toggleActions: 'play none none none',
+                      },
+                  }
+              );
+          });
+      }, []);
+
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-card-anm'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.card-slider',
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []); 
+
+
   const [searchParams, setSearchParams] = useState({
     jobTitle: '',
     location: '',
@@ -96,7 +143,7 @@ const Career = () => {
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
         <section className="lg:flex hidden h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
         <img loading="lazy" src="./CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
-        <div className="flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
+        <div className="Y-axis-text-Title-Careers flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
           <div className="flex flex-col items-center w-full  max-md:max-w-full">
             <div className="flex flex-col items-center w-full text-center">
               <div className="flex flex-col items-center w-full">
@@ -197,9 +244,9 @@ const Career = () => {
           </div>
           <a href="#" className="text-xl font-semibold text-red-700">View all</a>
         </div>
-        <div className="flex flex-col items-center mt-16 w-full max-md:mt-10 max-md:max-w-full">
+        <div className="flex card-slider flex-col items-center mt-16 w-full max-md:mt-10 max-md:max-w-full">
           {jobs.map((job) => (
-            <div key={job.id} className="flex flex-col p-10 mt-6 max-w-full bg-white rounded-3xl shadow-[0px_3px_8px_rgba(48,150,137,0.08)] w-[1296px] max-md:px-5">
+            <div key={job.id} className="Y-axis-card-anm flex flex-col p-10 mt-6 max-w-full bg-white rounded-3xl shadow-[0px_3px_8px_rgba(48,150,137,0.08)] w-[1296px] max-md:px-5">
               <div className="flex flex-col w-full max-md:max-w-full">
                 <div className="flex flex-wrap gap-10 justify-between items-start w-full text-base text-red-700 max-md:max-w-full">
                   <div className="px-2 py-1.5 rounded-lg bg-red-700 bg-opacity-10 min-h-[28px]">
