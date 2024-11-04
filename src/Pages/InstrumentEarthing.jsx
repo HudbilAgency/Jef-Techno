@@ -868,7 +868,7 @@ function StandardList({ standards }) {
   return (
     <ul className="flex flex-col mt-20 ml-8 w-full text-white uppercase max-w-[80.4375rem] tracking-[0.28313rem] max-md:mt-10 max-md:max-w-full">
       {standards.map((standard) => (
-        <li key={standard.id} className="flex flex-wrap gap-1 items-center mt-1 w-full font-light max-md:max-w-full">
+        <li key={standard.id} className="card-slider Y-axis-card-anm flex flex-wrap gap-1 items-center mt-1 w-full font-light max-md:max-w-full">
           <div className={`grow shrink gap-2.5 self-stretch px-2.5 py-5 my-auto items-center  text-lg text-center ${standard.isRed ? 'bg-red-700' : 'border border-white border-solid'} min-h-[6.25rem] w-[9.3125rem]`}>
             {standard.title}
           </div>
