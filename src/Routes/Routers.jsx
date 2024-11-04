@@ -21,6 +21,7 @@ import LeadershipTeam from '../Pages/LeadershipTeam';
 import JobDetails from '../Pages/JobDetails';
 import TSE_CareersPage from '../Pages/TSE_CareersPage';
 import BDMcareers from '../Pages/BDMcareers';
+import InstrumentEarthing from '../Pages/InstrumentEarthing';
 
 
 const Routers = () => { 
@@ -42,6 +43,7 @@ const Routers = () => {
         <Route path="/LightningProtectionStudies" element={<LightningProtectionStudies/>} />
         <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
         <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
+        <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
         <Route path="/Industries" element={<Industries/>} />
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/LeadershipTeam" element={<LeadershipTeam/>} />

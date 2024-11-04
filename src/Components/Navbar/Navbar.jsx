@@ -353,7 +353,7 @@ function ServicesComponent() {
     {
       icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
       text: 'Instrumentation earthing studies',
-      path: '',
+      path: '/InstrumentEarthing',
     },
   ];
 
@@ -522,7 +522,7 @@ const FAQComponent = () => {
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
         { label: 'Earthing Studies', path: '/EarthingStudies' },
         { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
-        { label: 'Instrumentation Studies', path: '' }
+        { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
       ], 
       isOpen: false 
     },
