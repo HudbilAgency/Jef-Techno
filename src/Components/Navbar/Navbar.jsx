@@ -415,7 +415,7 @@ function ServicesComponent() {
 
 
 
-const IndustriesItem = ({ icon, text, isVisible }) => (
+const IndustriesItem = ({ path, icon, text, isVisible }) => (
   <div
     className={`flex gap-4 items-center mt-8 first:mt-0 transition-all duration-500 ease-in-out ${
       isVisible ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-4 invisible'
@@ -427,7 +427,9 @@ const IndustriesItem = ({ icon, text, isVisible }) => (
       alt=""
       className="object-contain shrink-0 self-stretch my-auto w-5 aspect-square"
     />
+    <Link to={path}>
     <div className="text-xs self-stretch  hover:text-gray-400 my-auto">{text}</div>
+    </Link>
   </div>
 );
 
@@ -435,11 +437,11 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
-    { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas' },
-    { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities' },
-    { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant' },
-    { icon: './AboutUs/ProcessPlant.png', text: 'Process Plant' },
-    { icon: './AboutUs/CBimg.png', text: 'Commercial Buildings' },
+    { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas'},
+    { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities' , path: '/PowerUtilites'},
+    { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
+    { icon: './AboutUs/ProcessPlant.png', text: 'Process Plant' , path: '/ProcessPlant'},
+    { icon: './AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
   ];
 
   return (
@@ -476,10 +478,11 @@ function IndustriesComponent() {
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {Industries.map((industry, index) => (
                   <IndustriesItem
-                    key={index}
-                    icon={industry.icon}
-                    text={industry.text}
-                    isVisible={isHovered}
+                  key={index}
+                  icon={industry.icon}
+                  text={industry.text}
+                  path={industry.path}
+                  isVisible={isHovered}
                   />
                 ))}
               </div>
@@ -530,11 +533,11 @@ const FAQComponent = () => {
       question: "Industries", 
       content: [
         { label: 'Industries Page', path: '/Industries' },
-        { label: 'Oil and Gas', path: '' },
-        { label: 'Power Utilites', path: '' },
-        { label: 'Manufacturing Plant', path: '' },
-        { label: 'Process Plant', path: '' },
-        { label: 'Commercial Buildings', path: '' }
+        { label: 'Oil and Gas', path: '/OilandGas' },
+        { label: 'Power Utilites', path: '/PowerUtilites' },
+        { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },
+        { label: 'Process Plant', path: '/ProcessPlant' },
+        { label: 'Commercial Buildings', path: '/CommercialBuilding' }
       ], 
       isOpen: false 
     },

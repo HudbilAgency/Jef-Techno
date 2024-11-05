@@ -899,7 +899,6 @@ const slides = [
       'Enhances safety and reliability',
       'Equipotential bonding',
       'Effective instrumentation grounding and its compliance to latest international standards'
-      // more points...
     ],
   },
   // Add more slides as needed

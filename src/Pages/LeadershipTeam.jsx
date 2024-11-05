@@ -8,130 +8,130 @@ export default function LeadershipTeam() {
   const leaders = [
     {
       id: 1,
-      name: "Nadhmi Al-Nasr",
-      title: "Chief Executive Officer",
-      image: "./LeadershipTeamImg/Nadhmi-Al-Nasr-3.png",
+      name: "Prashanth BG",
+      title: "CHAIRMAN & MANAGING DIRECTOR",
+      image: "./LeadershipTeamImg/PrashantBG.png",
       variant: "red"
     },
     {
       id: 2,
-      name: "Rayan Fayez",
-      title: "Deputy CEO",
-      image: "./LeadershipTeamImg/Rayan-Mohammed-Fayez.png",
+      name: "BADRINARAYANAN THIRUMALAI",
+      title: "Chief Executive Officer - JEF Products & EMI",
+      image: "./LeadershipTeamImg/BADRINARAYANAN.png",
       variant: "red"
     },
     {
       id: 3,
-      name: "Jassir Al-Jassir",
-      title: "Chief Governance, Risk and Compliance Officer",
-      image: "./LeadershipTeamImg/jassir-al-jassir.png", 
+      name: "PK KASINATHAN",
+      title: "Chief Executive Officer - JEF KNR",
+      image: "./LeadershipTeamImg/KASINATHAN.png", 
       variant: "red"
     },
     {
       id: 4,
-      name: "Dr Manar Al Moneef",
-      title: "Chief Investment Officer",
-      image: "./LeadershipTeamImg/Almoneef.png",
+      name: "AS RAVISHANKAR",
+      title: "SBU HEAD - Technical Services",
+      image: "./LeadershipTeamImg/RAVISHANKAR.png",
       variant: "red"
     },
-    {
-      id: 5,
-      name: "Dr Mahmoud Alyamani",
-      title: "Health and Well-Being Sector Head",
-      image: "./LeadershipTeamImg/mahmoud-alyamani-v3.png",
-      variant: "red"
-    },
-    {
-      id: 6,
-      name: "Nader Ashoor",
-      title: "Chief Financial Officer", 
-      image: "./LeadershipTeamImg/nader-ashoor.png",
-      variant: "red"
-    },
-    {
-      id: 7,
-      name: "Joseph Bradley",
-      title: "TONOMUS CEO",
-      image: "./LeadershipTeamImg/Bradley.png",
-      variant: "red"
-    },
-    {
-      id: 8,
-      name: "Dr Richard Bush",
-      title: "Chief Environment Officer",
-      image: "./LeadershipTeamImg/Richard-Bush.png",
-      variant: "red"
-    },
-    {
-      id: 9,
-      name: "Niall Gibbons",
-      title: "Head of Tourism",
-      image: "./LeadershipTeamImg/Niall-Gibbons.png",
-      variant: "red"
-    },
-    {
-      id: 10,
-      name: "Denis Hickey",
-      title: "Chief Development Officer, THE LINE",
-      image: "./LeadershipTeamImg/Hickey.png",
-      variant: "red"
-    },
-    {
-      id: 11,
-      name: "Michael Lynch",
-      title: "Entertainment & Culture Sector Head",
-      image: "./LeadershipTeamImg/michael-lynch-bnw.png",
-      variant: "red"
-    },
-    {
-      id: 12,
-      name: "Dr Paul Marshall",
-      title: "Head of Nature Region",
-      image: "./LeadershipTeamImg/Paul-Marshall_AYF03551.png",
-      variant: "red"
-    },
-    {
-      id: 13,
-      name: "Majid Mufti",
-      title: "JEF Investment Fund CEO",
-      image: "./LeadershipTeamImg/Majid-Mufti.png",
-      variant: "red"
-    },
-    {
-      id: 14,
-      name: "Jan Paterson",
-      title: "Head of Sport",
-      image: "./LeadershipTeamImg/Paterson.png",
-      variant: "red"
-    },
-    {
-      id: 15,
-      name: "Roberto Penno",
-      title: "Chief Projects Officer",
-      image: "./LeadershipTeamImg/roberto-penno-v2.png",
-      variant: "red"
-    },
-    {
-      id: 16,
-      name: "Stefan Ricketts",
-      title: "Chief Legal Officer",
-      image: "./LeadershipTeamImg/stefan-ricketts-v2.png",
-      variant: "red"
-    },
-    {
-      id: 17,
-      name: "Peter Terium",
-      title: "ENOWA CEO",
-      image: "./LeadershipTeamImg/Terium.png",
-      variant: "red"
-    },
-    {
-      id: 18,
-      name: "Vishal Wanchoo",
-      title: "OXAGON CEO",
-      image: "./LeadershipTeamImg/Vishal-Wanchoo_AYF02431-1.png",
-      variant: "red"
-    }
+    // {
+    //   id: 5,
+    //   name: "Dr Mahmoud Alyamani",
+    //   title: "Health and Well-Being Sector Head",
+    //   image: "./LeadershipTeamImg/mahmoud-alyamani-v3.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 6,
+    //   name: "Nader Ashoor",
+    //   title: "Chief Financial Officer", 
+    //   image: "./LeadershipTeamImg/nader-ashoor.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 7,
+    //   name: "Joseph Bradley",
+    //   title: "TONOMUS CEO",
+    //   image: "./LeadershipTeamImg/Bradley.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 8,
+    //   name: "Dr Richard Bush",
+    //   title: "Chief Environment Officer",
+    //   image: "./LeadershipTeamImg/Richard-Bush.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 9,
+    //   name: "Niall Gibbons",
+    //   title: "Head of Tourism",
+    //   image: "./LeadershipTeamImg/Niall-Gibbons.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 10,
+    //   name: "Denis Hickey",
+    //   title: "Chief Development Officer, THE LINE",
+    //   image: "./LeadershipTeamImg/Hickey.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 11,
+    //   name: "Michael Lynch",
+    //   title: "Entertainment & Culture Sector Head",
+    //   image: "./LeadershipTeamImg/michael-lynch-bnw.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 12,
+    //   name: "Dr Paul Marshall",
+    //   title: "Head of Nature Region",
+    //   image: "./LeadershipTeamImg/Paul-Marshall_AYF03551.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 13,
+    //   name: "Majid Mufti",
+    //   title: "JEF Investment Fund CEO",
+    //   image: "./LeadershipTeamImg/Majid-Mufti.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 14,
+    //   name: "Jan Paterson",
+    //   title: "Head of Sport",
+    //   image: "./LeadershipTeamImg/Paterson.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 15,
+    //   name: "Roberto Penno",
+    //   title: "Chief Projects Officer",
+    //   image: "./LeadershipTeamImg/roberto-penno-v2.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 16,
+    //   name: "Stefan Ricketts",
+    //   title: "Chief Legal Officer",
+    //   image: "./LeadershipTeamImg/stefan-ricketts-v2.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 17,
+    //   name: "Peter Terium",
+    //   title: "ENOWA CEO",
+    //   image: "./LeadershipTeamImg/Terium.png",
+    //   variant: "red"
+    // },
+    // {
+    //   id: 18,
+    //   name: "Vishal Wanchoo",
+    //   title: "OXAGON CEO",
+    //   image: "./LeadershipTeamImg/Vishal-Wanchoo_AYF02431-1.png",
+    //   variant: "red"
+    // }
   ];
 
   const filteredLeaders = leaders.filter(leader => 
@@ -207,7 +207,7 @@ export default function LeadershipTeam() {
                     <img
                         src={leader.image}
                         alt={leader.name}
-                        className="w-full aspect-square object-cover"
+                        className="w-full grayscale transition duration-500 hover:grayscale-0 aspect-square object-cover"
                     />
                     <h2 className="mt-6 text-xl text-zinc-900 font-medium">
                         {leader.name}

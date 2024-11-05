@@ -22,6 +22,11 @@ import JobDetails from '../Pages/JobDetails';
 import TSE_CareersPage from '../Pages/TSE_CareersPage';
 import BDMcareers from '../Pages/BDMcareers';
 import InstrumentEarthing from '../Pages/InstrumentEarthing';
+import OilandGas from '../Pages/Oil&Gas';
+import PowerUtilites from '../Pages/PowerUtilites';
+import ManufacturingPlant from '../Pages/ManufacturingPlant';
+import ProcessPlant from '../Pages/ProcessPlant';
+import CommercialBuilding from '../Pages/CommercialBuilding';
 
 
 const Routers = () => { 
@@ -45,6 +50,11 @@ const Routers = () => {
         <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
         <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
         <Route path="/Industries" element={<Industries/>} />
+        <Route path="/OilandGas" element={< OilandGas/>} />
+        <Route path="/PowerUtilites" element={< PowerUtilites/>} />
+        <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />
+        <Route path="/ProcessPlant" element={< ProcessPlant/>} />
+        <Route path="/CommercialBuilding" element={< CommercialBuilding/>} />
         <Route path="/AboutUs" element={<AboutUs/>} />
         <Route path="/LeadershipTeam" element={<LeadershipTeam/>} />
         <Route path="/JobDetails" element={<JobDetails/>} />
