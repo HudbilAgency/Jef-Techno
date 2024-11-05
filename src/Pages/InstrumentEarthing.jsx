@@ -69,6 +69,27 @@ const InstrumentEarthing = () => {
         );
       }, []);
 
+      // Key Check Points
+
+      useEffect(() => {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-Slider-anm'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.slider-anm',
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }, []);
+
       // Our Services Animation 
 
       useEffect(() => {
@@ -841,23 +862,61 @@ const keyPoints = [
   'Interconnection with different grounding systems.',
 ];
 
+const slides = [
+  {
+    title: 'WE FOCUS DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE YOUR OPERATIONS',
+    keyPoints: [
+      'Mix up between instrumentation and protective grounding system.',
+      "Grounding philosophy for is and nis systems.",
+      'Existing grounding scheme',
+      'Shields with high loop current',
+      'Electro magnetic interference on panels and field assets or instruments',
+      'Effective grounding of panels, junction boxes and field assets or instruments.',
+      'Grounding of cable armour’s',
+      'Grounding unused cables',
+      'Interconnection with different grounding systems.'
+    ],
+  },
+  {
+    title: 'WE FOCUS DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE YOUR OPERATIONS',
+    keyPoints: [
+      'Mix up between instrumentation and protective grounding system.',
+      "Grounding philosophy for is and nis systems.",
+      'Existing grounding scheme',
+      'Shields with high loop current',
+      'Electro magnetic interference on panels and field assets or instruments',
+      'Effective grounding of panels, junction boxes and field assets or instruments.',
+      'Grounding of cable armour’s',
+      'Grounding unused cables',
+      'Interconnection with different grounding systems.'
+    ],
+    title: ' BY PERFORMING INSTRUMENTAION GROUNDING STUDIES',
+    keyPoints: [
+      'Reduces unwanted trips',
+      'Reduces plant shutdown',
+      'Improves EMC',
+      'Prevents malfunction',
+      'Enhances safety and reliability',
+      'Equipotential bonding',
+      'Effective instrumentation grounding and its compliance to latest international standards'
+      // more points...
+    ],
+  },
+  // Add more slides as needed
+];
+
 function InstrumentationStudiesPage() {
   return (
     <main className="flex overflow-hidden flex-col items-center bg-stone-900 pt-[10%] max-md:pt-24">
-      <h1 className="text-3xl font-bold text-center text-red-700 uppercase leading-[4.0625rem] tracking-[0.28313rem] w-[72.5rem] max-md:max-w-full">
+      <h1 className="text-xl lg:text-2xl font-bold text-center text-red-700 uppercase lg:leading-[3.0625rem] tracking-[0.28313rem] w-[72.5rem] max-md:max-w-full">
         INTERNATIONAL STANDARDS THAT WE ADHERE TO FOR PERFORMING INSTRUMENTATION STUDIES
       </h1>
       <StandardList standards={standards} />
-      {/* <section className="flex overflow-hidden flex-col items-end self-stretch px-20 py-24 mt-36 w-full bg-stone-900 max-md:px-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex flex-wrap gap-10 w-full max-w-[94.25rem] max-md:max-w-full">
-          <KeyCheckPoints keyPoints={keyPoints} />
-          <button className="flex justify-center items-center my-auto min-h-[3.75rem] rotate-[-3.141592653589793rad]" aria-label="Next">
-            <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[3.75rem] min-h-[3.75rem] rotate-[3.141592653589793rad] rounded-[3.75rem] w-[3.75rem]">
-              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488" className="object-contain flex-1 w-6 aspect-square" alt="" />
-            </div>
-          </button>
+      <section className="flex overflow-hidden flex-col items-center self-stretch py-24 mt-36 w-full bg-stone-900 max-md:px-5 max-md:mt-10 max-md:max-w-full">
+        <div className="flex flex-wrap gap-10 w-full max-w-[100.25rem] max-md:max-w-full">
+          <KeyCheckPoints slides={slides} />
         </div>
-      </section> */}
+      </section>
     </main>
   );
 }
@@ -866,13 +925,13 @@ function InstrumentationStudiesPage() {
 
 function StandardList({ standards }) {
   return (
-    <ul className="flex flex-col mt-20 ml-8 w-full text-white uppercase max-w-[80.4375rem] tracking-[0.28313rem] max-md:mt-10 max-md:max-w-full">
+    <ul className="flex flex-col p-4 mt-20 mx-8 w-full text-white uppercase max-w-[80.4375rem] tracking-[0.28313rem] max-md:mt-10 max-md:max-w-full">
       {standards.map((standard) => (
         <li key={standard.id} className="card-slider Y-axis-card-anm flex flex-wrap gap-1 items-center mt-1 w-full font-light max-md:max-w-full">
-          <div className={`grow shrink gap-2.5 self-stretch px-2.5 py-5 my-auto items-center  text-lg text-center ${standard.isRed ? 'bg-red-700' : 'border border-white border-solid'} min-h-[6.25rem] w-[9.3125rem]`}>
+          <div className={`grow shrink gap-2.5 self-stretch px-2.5 py-5 my-auto items-center  text-lg text-center ${standard.isRed ? 'bg-red-700' : 'border border-gray-500 border-solid'} min-h-[6.25rem] w-[9.3125rem]`}>
             {standard.title}
           </div>
-          <div className={`grow shrink gap-3 self-stretch p-2.5 my-auto text-lg leading-10 ${standard.isRed ? 'bg-red-700' : 'border border-white border-solid'} min-h-[6.25rem] min-w-[15rem] w-[66.25rem] max-md:max-w-full`}>
+          <div className={`grow shrink gap-3 self-stretch p-2.5 my-auto text-lg leading-10 ${standard.isRed ? 'bg-red-700' : 'border border-gray-500 border-solid'} min-h-[6.25rem] min-w-[15rem] w-[66.25rem] max-md:max-w-full`}>
             {standard.description}
           </div>
         </li>
@@ -882,44 +941,93 @@ function StandardList({ standards }) {
 }
 
 
-function KeyCheckPoints({ keyPoints }) {
+
+
+
+
+function KeyCheckPoints({ slides }) {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % slides.length);
+  };
+
+  const midpoint = Math.ceil(slides[0].keyPoints.length / 2);
+
   return (
     <div className="flex-auto max-md:max-w-full">
       <div className="flex gap-5 max-md:flex-col">
-        <div className="flex flex-col w-[19%] max-md:ml-0 max-md:w-full">
-          <h2 className="flex flex-col px-5 pb-7 w-full text-3xl tracking-normal leading-9 text-white uppercase max-md:mt-10">
+        {/* Static left-side content */}
+        <div className="flex flex-col w-[19%] Y-axis-Slider-anm max-md:ml-0 max-md:w-full">
+          <h2 className="flex px-5 pb-7 w-full text-3xl tracking-normal leading-9 text-white uppercase max-md:mt-10">
+          <div className="border-l border-red-500 h-full mr-2"></div> 
             <span className="py-2 pr-2 min-w-[14.4375rem]">
               KEY <br /> CHECK <br /> POINTS
             </span>
           </h2>
         </div>
-        <div className="flex flex-col ml-5 w-[81%] max-md:ml-0 max-md:w-full">
-          <h3 className="grow text-3xl text-red-700 uppercase leading-[3.5rem] tracking-[0.28313rem] max-md:mt-10 max-md:max-w-full">
-            WE FOCUS DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE YOUR OPERATIONS
-          </h3>
-          <ul className="mt-8 w-full max-w-[75.375rem] max-md:mr-2.5 max-md:max-w-full">
-            <div className="flex gap-5 max-md:flex-col">
-              <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-                {keyPoints.slice(0, Math.ceil(keyPoints.length / 2)).map((point, index) => (
-                  <li key={index} className="text-2xl text-white leading-9 mt-5 max-md:max-w-full">
-                    {point}
-                  </li>
-                ))}
+
+        {/* Sliding right-side content */}
+        <div className="slider-container Y-axis-Slider-anm slider-anm">
+          <div
+            className="slides-wrapper"
+            style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+          >
+            {slides.map((slide, index) => (
+              <div key={index} className="slide">
+                <h3 className="grow text-2xl text-red-700 uppercase tracking-[0.28313rem] max-md:mt-10 max-md:max-w-full">
+                  {slide.title}
+                </h3>
+                <ul className="mt-8 w-full max-w-[75.375rem] max-md:mr-2.5 max-md:max-w-full">
+                  <div className="flex gap-5 max-md:flex-col">
+                    <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
+                      {slide.keyPoints.slice(0, midpoint).map((point, idx) => (
+                        <li key={idx} className="text-lg text-white mt-5 max-md:max-w-full">
+                          {idx + 1}. {point}
+                        </li>
+                      ))}
+                    </div>
+                    <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+                      {slide.keyPoints.slice(midpoint).map((point, idx) => (
+                        <li key={idx + midpoint} className="text-lg text-white mt-5 max-md:max-w-full">
+                          {idx + midpoint + 1}. {point}
+                        </li>
+                      ))}
+                    </div>
+                  </div>
+                </ul>
               </div>
-              <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
-                {keyPoints.slice(Math.ceil(keyPoints.length / 2)).map((point, index) => (
-                  <li key={index} className="text-2xl text-white leading-9 mt-5 max-md:max-w-full">
-                    {point}
-                  </li>
-                ))}
-              </div>
-            </div>
-          </ul>
+            ))}
+          </div>
         </div>
+
+        {/* Next button */}
+        <button
+          onClick={handleNext}
+          className={`flex self-start justify-start items-start min-h-[3.75rem] transition-transform duration-500 ${
+            currentIndex === 1 ? "rotate-180" : "rotate-0"
+          }`}
+          aria-label="Next"
+        >
+          <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[3.75rem] min-h-[3.75rem] rounded-[3.75rem] w-[3.75rem]">
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488"
+              className="object-contain flex-1 w-6 aspect-square"
+              alt="Next slide"
+            />
+          </div>
+        </button>
+
       </div>
     </div>
   );
 }
+
+
+
+
+
 
 
 

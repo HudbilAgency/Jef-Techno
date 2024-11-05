@@ -19,3 +19,21 @@
     }
   }
 
+  .slider-container {
+    overflow: hidden;
+    width: 100%;
+    max-width: 81%; /* Adjusts to the exact size of the right-side content */
+    position: relative;
+  }
+  
+  .slides-wrapper {
+    display: flex;
+    transition: transform 0.5s ease; /* Smooth slide transition */
+  }
+  
+  .slide {
+    min-width: 100%;
+    box-sizing: border-box;
+  }
+  
+  
