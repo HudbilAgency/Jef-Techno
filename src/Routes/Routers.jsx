@@ -14,7 +14,6 @@ import TermsAndConditions from '../Pages/TermsAndConditions';
 import LightningProtectionStudies from '../Pages/LightningProtectionStudies';
 import PowerQualityStudies from '../Pages/PowerQualityStudies';
 import PowerSystemStudies from '../Pages/PowerSystemStudies'
-import Industries from '../Pages/Industries';
 import AboutUs from '../Pages/AboutUs';
 import Test from '../Pages/Test';
 import LeadershipTeam from '../Pages/LeadershipTeam';
@@ -27,6 +26,7 @@ import PowerUtilites from '../Pages/PowerUtilites';
 import ManufacturingPlant from '../Pages/ManufacturingPlant';
 import ProcessPlant from '../Pages/ProcessPlant';
 import CommercialBuilding from '../Pages/CommercialBuilding';
+import RenewableEnergyResource from '../Pages/RenewableEnergyResource';
 
 
 const Routers = () => { 
@@ -49,7 +49,7 @@ const Routers = () => {
         <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
         <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
         <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
-        <Route path="/Industries" element={<Industries/>} />
+        <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
         <Route path="/OilandGas" element={< OilandGas/>} />
         <Route path="/PowerUtilites" element={< PowerUtilites/>} />
         <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />

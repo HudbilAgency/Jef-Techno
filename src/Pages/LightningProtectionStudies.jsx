@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
+import {Link } from 'react-router-dom';
 import Navbar from "../Components/Navbar/Navbar";
 
 const LightningProtectionStudies = () => {
@@ -394,6 +395,38 @@ const LightningProtectionStudies = () => {
 
 
 
+  <section>
+    < TestimonialsSection />
+  </section>
+
+ 
+    < MainFooter />
+   </>
+  )
+}
+
+
+const testimonials = [
+  "We are thankful to the JEF Techno's team for clearing many of our doubts related to lightning protection. LPS audit was conducted for our plant that happened successfully.",
+  "JEF supported us in providing very innovative and practical solutions to earthing and lightning protection systems. Every input from the team was with proper technical justification and in line with national & international standards.",
+  "We have been associated with JEF Techno for the last 5 years. Product Quality and After Sales Service provided by them is up to the mark.",
+  "We have taken JEF’s technical expertise for Lightning Protection System for our Bangalore Warehouse. While working with them, we got to know that lightning protection is just not some product, it’s a complete solution."
+];
+
+function TestimonialsSection() {
+  const [currentTestimonialIndex, setCurrentTestimonialIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonialIndex((prevIndex) =>
+        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 3000); // Adjust the duration as needed
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
     <section className="flex overflow-hidden flex-col text-center text-white w-full">
       <div className="flex overflow-hidden flex-col justify-center w-full h-[532px] max-md:max-w-full">
         <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
@@ -404,41 +437,40 @@ const LightningProtectionStudies = () => {
               alt="Background for testimonials section" 
               className="object-cover absolute inset-0 size-full"
             />
-            <div className="Testimonials Y-axis-Testimonials flex relative flex-col max-w-full w-full md:w-[679px]">
+            <div className="Testimonials gap-5 flex Y-axis-Testimonials relative flex-col max-w-full w-full md:w-[679px]">
               <h2 className="self-center text-base tracking-widest leading-snug">
                 TESTIMONIALS
               </h2>
               <h3 className="mt-8 text-2xl sm:text-3xl md:text-4xl font-normal uppercase tracking-widest max-md:max-w-full">
                 WHAT OUR CUSTOMERS SAY
               </h3>
-              <p className="mt-10 text-sm sm:text-lg font-thin leading-6 max-md:max-w-full">
-                A new benchmark for sustainability in an area of outstanding natural beauty, Magna will
-                be limited to 5% of the land for development. The region will protect, preserve and
-                regenerate the landscapes in which it sits – and ensure the wildlife is returned to its past
-                glory – for tourists, residents and guests to enjoy forever.
-              </p>
-              <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full sm:w-[90%] md:w-[510px] mx-auto">
-                {buttons.map((button, index) => (
-                  <div key={index} className="flex flex-col flex-1 grow shrink-0 justify-center p-2.5 text-sm leading-none basis-0 min-h-[80px] w-fit">
-                    <div className="flex items-center justify-center self-center py-1 w-full max-w-[235px] min-h-[60px]">
-                      <button className={`flex overflow-hidden justify-center items-center self-center px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
+              <div className="testimonial-slider mt-[5%]">
+                <p
+                  className="testimonial-slide"
+                  style={{
+                    transform: `translateX(-${currentTestimonialIndex * 100}%)`,
+                  }}
+                >
+                  {testimonials.map((text, index) => (
+                    <span key={index} className="testimonial-text text-gray-400">
+                      {text}
+                    </span>
+                  ))}
+                </p>
+                </div>
+                <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
+              <Link to={'/GetInTouchForm'}>
+               <button className={`flex overflow-hidden justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
                         CONTACT US
-                      </button>
-                    </div>
-                  </div>
-                ))}
+                </button>
+               </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
-
-
- 
-    < MainFooter />
-   </>
-  )
+    </section> 
+  );
 }
 
 

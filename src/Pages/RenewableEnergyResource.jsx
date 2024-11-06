@@ -8,7 +8,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-function Industries() {
+function RenewableEnergyResource() {
 
 
 
@@ -373,8 +373,8 @@ const NavigationItem = ({ text, isActive }) => (
 
 const navigationItems = [
   { text: 'HOME', isActive: false },
-  { text: 'Our Business', isActive: false },
-  { text: 'Industries', isActive: true },
+  { text: 'Industries', isActive: false },
+  { text: 'Renewable Energy Industry', isActive: true },
 ];
 
 const Navigation = () => (
@@ -617,4 +617,4 @@ const ServiceItem = React.forwardRef(({ image, text, onMouseEnter, onMouseLeave 
 
 
 
-export default Industries;
+export default RenewableEnergyResource;

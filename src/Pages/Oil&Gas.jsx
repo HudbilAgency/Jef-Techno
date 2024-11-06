@@ -393,7 +393,7 @@ const NavigationItem = ({ text, isActive }) => (
 
 const navigationItems = [
   { text: 'HOME', isActive: false },
-  { text: 'Our Business', isActive: false },
+  { text: 'Industries', isActive: false },
   { text: 'Oil and gas', isActive: true },
 ];
 

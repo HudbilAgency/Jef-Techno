@@ -37,3 +37,27 @@
   }
   
   
+
+
+  .testimonial-slider {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    position: relative;
+  }
+  
+  .testimonial-slide {
+    display: flex;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  .testimonial-text {
+    width: 100%;
+    padding: 0 1rem;
+    text-align: center;
+    flex-shrink: 0;
+  }
+  

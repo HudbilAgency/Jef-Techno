@@ -437,6 +437,7 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
+    { icon: './IndustriesPage/WindmilLogo.png', text: 'Renewable Energy Industry', path: '/RenewableEnergyResource'},
     { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas'},
     { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities' , path: '/PowerUtilites'},
     { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
@@ -458,9 +459,9 @@ function IndustriesComponent() {
               <div 
               onMouseEnter={() => setIsHovered(true)}
               className="flex gap-10 self-stretch my-auto min-w-[240px] ">
-                <Link to={'/Industries'}><h2 className="text-lg font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
+                <h2 className="text-lg font-medium hover:text-gray-400 text-white uppercase tracking-[3.36px]">
                   Our Industries
-                </h2></Link>
+                </h2>
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                   <img
                     loading="lazy"
