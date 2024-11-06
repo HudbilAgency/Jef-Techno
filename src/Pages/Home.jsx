@@ -174,6 +174,7 @@ function Home() {
 
 
 
+
   useEffect(() => {
     
     gsap.utils.toArray('.Y-axis-text').forEach((element) => {
@@ -342,10 +343,10 @@ useGSAP(() => {
     // Animations for mobile screens (1024px and below)
     if (smallScreen) {
       // Image and text animation for mobile view
-      tl.to(".SmImg1", { x: "-150vw" }, "display")
-        .to(".SmImg2", { x: "-85vw" }, "display")
-        .to(".textSM1", { y: "50vh" }, "display")
-        .to(".textSM2", { y: "-48vh" }, "display");
+      tl.to(".SmImg1", { x: "-150%" }, "display")
+        .to(".SmImg2", { x: "-113%" }, "display")
+        .to(".textSM1", { y: "200%" }, "display")
+        .to(".textSM2", { y: "-215%" }, "display");
     }
   });
 });
@@ -353,20 +354,37 @@ useGSAP(() => {
 
 
 
-  const [language, setLanguage] = useState('English');
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const toggleLanguage = () => {
-    setLanguage(prevLang => (prevLang === 'English' ? 'Français' : 'English'));
-  };
 
-  const handleButtonClick = () => {
-    setCurrentIndex((currentIndex + 1) % carouselData.length);
-  };
-
-  const currentData = carouselData[currentIndex];
     
     const totalSlides = 3;
+
+
+
+    const [marginLeft, setMarginLeft] = useState("1%");
+
+    const calculateMarginLeft = () => {
+      if (window.innerWidth >= 768) {
+        return currentIndex === 0 ? "4%" : "0%"; // 4% margin for md and larger screens
+      } else {
+        return currentIndex === 0 ? "1%" : "0%"; // 1% margin for smaller screens
+      }
+    };
+  
+    useEffect(() => {
+      // Set initial margin based on screen size
+      setMarginLeft(calculateMarginLeft());
+  
+      // Update margin when resizing
+      const handleResize = () => {
+        setMarginLeft(calculateMarginLeft());
+      };
+      window.addEventListener('resize', handleResize);
+  
+      // Cleanup event listener on component unmount
+      return () => window.removeEventListener('resize', handleResize);
+    }, [currentIndex]);
 
 
 
@@ -450,7 +468,7 @@ useGSAP(() => {
     <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
     {index > 0 && (
         <div
-          className="absolute top-1/2 left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          className="absolute top-1/2 lg:left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
           onClick={handlePrev}
         >
           <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
@@ -458,7 +476,7 @@ useGSAP(() => {
       )}
       {index < totalSlides - 1 && (
         <div
-          className="absolute top-1/2 right-20 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+          className="absolute top-1/2 lg:right-20 right-0 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
           onClick={handleNext}
         >
           <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
@@ -582,7 +600,7 @@ useGSAP(() => {
           className="flex gap-4 flex-row" // Arrange cards in horizontal direction
           animate={{ 
             x: `-${(currentIndex * (100 / itemsPerPage)) / (totalItems / itemsPerPage)}%`, // Slide based on currentIndex
-            marginLeft: currentIndex === 0 ? "4%" : "0%" // Smoothly transition between 4% and 0%
+            marginLeft // Smoothly transition between 4% and 1%
           }}
           transition={{ 
             ease: [0.42, 0, 0.58, 1], // EaseInOut cubic-bezier for smooth transition
@@ -678,11 +696,62 @@ const WhatWeDoSection = () => {
     }, 400); // Duration of the fade-out effect
   };
 
+    // What we do Mobile view --------------------------------------------//
+
+    useEffect(() => {
+      if (showSection) {
+        gsap.fromTo(
+          gsap.utils.toArray('.Y-axis-WWD-anm'),
+          { opacity: 0, y: 100 },
+          {
+            y: 0,
+            opacity: 1,
+            duration: 1.1,
+            stagger: 0.3,
+            scrollTrigger: {
+              trigger: '.WWD-slider',
+              start: 'top 70%',
+              toggleActions: 'play none none none',
+            },
+          }
+        );
+      }
+    }, [showSection]);
+
+
+
+
+        useEffect(() => {
+          if (showSection) {
+            gsap.utils.toArray('.Y-axis-text').forEach((element) => {
+              gsap.fromTo(
+                  element,
+                  { opacity: 0 , y: 50 },
+                  {   y: 0,
+                      opacity: 1,
+                      duration: 0.8,
+                      stagger: 0.2,
+                      scrollTrigger: {
+                          trigger: element,
+                          start: 'top 70%',
+                          toggleActions: 'play none none none',
+                            },
+                        }
+                    );
+                });
+          }
+        }, [showSection]);
+
+
+  
+    
+  
+
   const [fadeOut, setFadeOut] = useState(false);
   
   
   return (
-    <section className="flex lg:h-screen overflow-hidden flex-col bg-zinc-800">
+   <section className="flex lg:h-screen overflow-hidden flex-col bg-zinc-800">
        {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
           <video
@@ -715,10 +784,10 @@ const WhatWeDoSection = () => {
               <h1 className="text-white uppercase mt-[2%]">what we do</h1>
             </div>
             <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
-              <div className="grow max-md:max-w-full">
+              <div className="grow max-md:max-w-full WWD-slider">
                 <div className="mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
                   {buttonData.map((button, index) => (
-                    <Link key={index} to={button.path} className={`inline-flex`}>
+                    <Link key={index} to={button.path} className={`inline-flex Y-axis-WWD-anm`}>
                       <button
                         className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-28 h-28 xl:w-44 xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
                         onMouseEnter={() => setHoveredButtonIndex(index)}
@@ -739,7 +808,7 @@ const WhatWeDoSection = () => {
           </section>
 
           {/* Right Section */}
-          <section className="lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
+          <section className="Y-axis-text lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
             <div className="flex flex-col lg:w-[80%] text-xl font-medium leading-10 max-md:max-w-full">
               <div className="shrink-0 mt-6 border border-red-700 thin-border max-md:max-w-full" />
               <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
@@ -852,7 +921,7 @@ function FeatureSection() {
 
         {/* For Mobile View */}
 
-        <section className="lg:hidden mx-auto h-auto sm:size-[20rem]">
+        <section className="lg:hidden mx-auto h-auto ">
 
           <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
           <div className="flex sm:gap-80 gap-12 mt-5">

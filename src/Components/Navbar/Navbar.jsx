@@ -504,10 +504,8 @@ const FAQComponent = () => {
   const [faqData, setFaqData] = useState([
     { 
       question: "Home", 
-      content: [
-        { label: 'Home', path: '/' },
-      ], 
-      isOpen: false ,
+      path: "/", // Direct link path for Home
+      isOpen: false,
     },
     { 
       question: "About", 
@@ -515,9 +513,7 @@ const FAQComponent = () => {
         { label: 'About Us', path: '/AboutUs' },
         { label: 'JEF Leadership Team', path: '/LeadershipTeam' },
       ], 
-      isOpen: false , 
-
-      
+      isOpen: false,
     },
     { 
       question: "Our Services", 
@@ -528,26 +524,24 @@ const FAQComponent = () => {
         { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
         { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
       ], 
-      isOpen: false 
+      isOpen: false,
     },
     { 
       question: "Industries", 
       content: [
-        { label: 'Industries Page', path: '/Industries' },
+        { label: 'Renewable Energy Industry', path: '/RenewableEnergyResource' },
         { label: 'Oil and Gas', path: '/OilandGas' },
         { label: 'Power Utilites', path: '/PowerUtilites' },
         { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },
         { label: 'Process Plant', path: '/ProcessPlant' },
         { label: 'Commercial Buildings', path: '/CommercialBuilding' }
       ], 
-      isOpen: false 
+      isOpen: false,
     },
     { 
       question: "Blogs", 
-      content: [
-        { label: 'Blogs', path: '/Blog' },
-      ], 
-      isOpen: false 
+      path: "/Blog", // Direct link path for Blogs
+      isOpen: false,
     },
   ]);
 
@@ -560,7 +554,7 @@ const FAQComponent = () => {
     );
   };
 
-  const FAQItem = ({ question, content, isOpen, onToggle }) => {
+  const FAQItem = ({ question, content, path, isOpen, onToggle }) => {
     const contentRef = useRef(null);
     const [height, setHeight] = useState(0);
 
@@ -579,10 +573,26 @@ const FAQComponent = () => {
     return (
       <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
+          <Link to={path}>
           <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold  text-xl tracking-wider uppercase text-red-600">
             {question}
           </h2>
-          <div className="flex flex-col items-start self-stretch my-auto min-h-[40px]">
+          </Link>
+          {path ? (
+            <Link to={path}>
+              <button
+                className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
+                aria-label={`Go to ${question}`}
+              >
+                <img
+                  loading="lazy"
+                  src="./AboutUs/DropdownArr.png"
+                  alt=""
+                  className="object-contain flex-1 w-full aspect-square"
+                />
+              </button>
+            </Link>
+          ) : (
             <button
               className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
               aria-expanded={isOpen}
@@ -599,30 +609,33 @@ const FAQComponent = () => {
                 className="object-contain flex-1 w-full aspect-square"
               />
             </button>
-          </div>
+          )}
         </div>
-        <div
-          ref={contentRef}
-          className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
-          style={{ maxHeight: `${height}px` }}
-        >
-          <div className="px-5 py-5">
-            {/* Render content based on whether it's an array or a string */}
-            {Array.isArray(content) ? (
-              <ul>
-                {content.map((item, idx) => (
-                  <li key={idx} className="mb-2">
-                    <a href={item.path} className="text-stone-300 hover:underline">
-                      {item.label}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            ) : (
-              <p className='text-gray-500'>{content}</p>
-            )}
+        {!path && (
+          <div
+            ref={contentRef}
+            className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
+            style={{ maxHeight: `${height}px` }}
+          >
+            <div className="px-5 py-5">
+              {Array.isArray(content) ? (
+                <ul>
+                  {content.map((item, idx) => (
+                    <li key={idx} className="mb-2">
+                      <Link to={item.path}>
+                        <div className="text-stone-300 hover:underline">
+                          {item.label}
+                        </div>
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p className='text-gray-500'>{content}</p>
+              )}
+            </div>
           </div>
-        </div>
+        )}
       </div>
     );
   };
@@ -638,6 +651,7 @@ const FAQComponent = () => {
                 key={index}
                 question={item.question}
                 content={item.content} // Pass dynamic content
+                path={item.path} // Pass direct link path
                 isOpen={item.isOpen}
                 onToggle={() => toggleFAQ(index)}
               />
@@ -648,6 +662,7 @@ const FAQComponent = () => {
     </section>
   );
 };
+
 
 
 

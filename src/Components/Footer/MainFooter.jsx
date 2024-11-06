@@ -233,8 +233,29 @@ const FAQComponent = () => {
       }
     }, [isOpen]);
 
+
+    useEffect(() => {
+      // Select all elements with the 'X-axis-anm' class and apply staggered animation
+      gsap.fromTo(
+        gsap.utils.toArray('.X-axis-card-anm'),
+        { opacity: 0, x: 100 },
+        {
+          x: 0,
+          opacity: 1,
+          duration: 1,
+          stagger: 0.2, // 0.3s delay between each card animation
+          scrollTrigger: {
+            trigger: '.card-slider-footer',
+          start: 'top 80%',
+          end: 'top 100%', 
+          toggleActions: 'play none none none',
+          },
+        }
+      );
+    }, []);
+
     return (
-      <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
+      <div className=" flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
         <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
           <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold text-lg md:text-xl tracking-wider uppercase text-red-600">
             {question}
@@ -269,9 +290,11 @@ const FAQComponent = () => {
               <ul>
                 {content.map((item, idx) => (
                   <li key={idx} className="mb-2">
-                    <a href={item.path} className="text-stone-300 hover:underline">
-                      {item.label}
-                    </a>
+                    <Link to={item.path}>
+                      <div className="text-stone-300 hover:underline">
+                        {item.label}
+                      </div>
+                    </Link>
                   </li>
                 ))}
               </ul>
