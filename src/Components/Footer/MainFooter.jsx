@@ -53,8 +53,7 @@ function MainFooter() {
   ];
   
   const itemsBusiness = [
-    { name: 'Sectors', path: '' },
-    { name: 'Partners', path: '' }
+    { name: 'Industries', path: '' },
   ];
   
   const itemsCareers = [
@@ -194,8 +193,7 @@ const FAQComponent = () => {
     { 
       question: "Our Business", 
       content: [
-        { label: 'Sectors', path: '' },
-        { label: 'Partners', path: '' },
+        { label: 'Industries', path: '' },
       ], 
       isOpen: false 
     },

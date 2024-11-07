@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  top: 0px !important;
+}
+
 @keyframes pulse {
     0% {
       transform: scale(0.9);
@@ -61,3 +65,8 @@
     flex-shrink: 0;
   }
   
+
+  .VIpgJd-ZVi9od-ORHb-OEVmcd {
+    visibility: hidden !important;
+    display: none !important;
+  }

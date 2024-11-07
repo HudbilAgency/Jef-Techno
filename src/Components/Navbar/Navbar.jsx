@@ -1,5 +1,7 @@
-import React, { useState , useEffect , useRef } from 'react';
+import React, { useState , useEffect , useRef , useContext } from 'react';
 import { Link, NavLink ,useLocation } from 'react-router-dom';
+import { TranslationContext } from '../../Context/TranslationContext'
+
 
 
 const menuItems = [
@@ -19,6 +21,7 @@ const menuItemsMobile = [
 ];
 
 const Navbar = () => {
+  const { isArabic, toggleTranslation } = useContext(TranslationContext);
   const location = useLocation();
   const [activeSection, setActiveSection] = useState(''); // State to track active section
   const [language, setLanguage] = useState('English');
@@ -145,12 +148,12 @@ const Navbar = () => {
           <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
             <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
               <button
-                onClick={toggleLanguage}
+                onClick={toggleTranslation }
                 className={`self-stretch uppercase my-auto text-sm font-light tracking-[2px] text-white {
                   
                 }`}
               >
-                {language}
+                {isArabic ? "English" : "Arabic"}
               </button>
               <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
                      <img
@@ -437,7 +440,6 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
-    { icon: './IndustriesPage/WindmilLogo.png', text: 'Renewable Energy Industry', path: '/RenewableEnergyResource'},
     { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas'},
     { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities' , path: '/PowerUtilites'},
     { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
@@ -529,7 +531,6 @@ const FAQComponent = () => {
     { 
       question: "Industries", 
       content: [
-        { label: 'Renewable Energy Industry', path: '/RenewableEnergyResource' },
         { label: 'Oil and Gas', path: '/OilandGas' },
         { label: 'Power Utilites', path: '/PowerUtilites' },
         { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },

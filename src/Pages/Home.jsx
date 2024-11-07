@@ -387,6 +387,54 @@ useGSAP(() => {
     }, [currentIndex]);
 
 
+    const [showVideo, setShowVideo] = useState(false);
+    const [player, setPlayer] = useState(null);
+    const [fadeClass, setFadeClass] = useState('');
+  
+    // Load the YouTube API script
+    useEffect(() => {
+      const tag = document.createElement('script');
+      tag.src = "https://www.youtube.com/iframe_api";
+      const firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  
+      // This function is called by the YouTube API
+      window.onYouTubeIframeAPIReady = () => {
+        const ytPlayer = new window.YT.Player('yt-player', {
+          events: {
+            onStateChange: onPlayerStateChange,
+          },
+        });
+        setPlayer(ytPlayer);
+      };
+    }, []);
+  
+    // Handle the end of the video
+    const onPlayerStateChange = (event) => {
+      if (event.data === window.YT.PlayerState.ENDED) {
+        setShowVideo(false); // Close the video overlay
+      }
+    };
+  
+    // Function to handle button click and show the video
+    const handlePlayVideo = () => {
+      setShowVideo(true);
+      if (player) {
+        player.playVideo();
+      }
+      setTimeout(() => setFadeClass('opacity-100'), 10);
+    };
+  
+    // Function to close the video manually
+    const closeVideo = () => {
+      setShowVideo(false);
+      if (player) {
+        player.stopVideo();
+      }
+      setTimeout(() => setShowVideo(false), 300);
+    };
+  
+
 
 
   return (
@@ -408,14 +456,49 @@ useGSAP(() => {
             THINK JEF
             </h1>
             <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-14"
-                />
-              </button>
+            <div className="flex flex-col items-center">
+                 {/* Button to trigger the video */}
+                <button onClick={handlePlayVideo} className="mb-4">
+                  <img
+                    loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
+                    alt="Electrical icon"
+                    className="bg-repeat object-contain w-9 lg:w-14"
+                  />
+                </button>
+
+                {/* Conditionally render the iframe video at 90% screen width */}
+                {showVideo && (
+                  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                    <div className="w-[90vw] h-[90%]">
+                      {/* Close button */}
+                      <div className="-mt-[1%] flex justify-end">
+                        <button
+                          className="text-white border-white border border-spacing-2"
+                          onClick={closeVideo}
+                        >
+                          <img
+                            src="./HomePageImg/NavbarImg/CLoseMenuLogo.png"
+                            alt="closeButton"
+                            className="w-[2vw]"
+                          />
+                        </button>
+                      </div>
+
+                      {/* YouTube Iframe */}
+                      <iframe
+                        id="yt-player"
+                        className="w-full h-full object-contain rounded-md"
+                        src="https://www.youtube.com/embed/9xiS0T3smxM?enablejsapi=1&autoplay=1"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
+                    </div>
+                  </div>
+                )}
+          </div>
             </div>
           </div>
         </div>

@@ -1,10 +1,16 @@
 import Routers from './Routes/Routers.jsx';
+import { TranslationProvider } from "./Context/TranslationContext";
 
 function App() {
 
   return (
     <>
-    <div className='font-Montserrat'>< Routers/></div>
+    <TranslationProvider>
+      <div className='font-Montserrat'>
+      <div id="google_translate_element" style={{ display: "none" }}></div>
+        <Routers />
+      </div>
+    </TranslationProvider>
   </>
   )
 }

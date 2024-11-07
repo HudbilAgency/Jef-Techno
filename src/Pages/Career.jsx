@@ -143,7 +143,7 @@ const Career = () => {
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
         <section className="lg:flex hidden h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">
         <img loading="lazy" src="./CareerPage/CareerMainImg.png" alt="Background" className="object-cover inset-0 size-full" />
-        <div className="Y-axis-text-Title-Careers flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
+        {/* <div className="Y-axis-text-Title-Careers flex -inset-y-1/2 relative flex-col items-center self-center max-w-full">
           <div className="flex flex-col items-center w-full  max-md:max-w-full">
             <div className="flex flex-col items-center w-full text-center">
               <div className="flex flex-col items-center w-full">
@@ -225,7 +225,7 @@ const Career = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         {/* <div className="flex flex-wrap gap-10 justify-between px-20 py-10 w-full bg-stone-900 max-md:px-5">
           {companyLogos.map((logo, index) => (
             <img key={index} loading="lazy" src={logo} alt={`Company logo ${index + 1}`} className="object-contain shrink-0 h-auto" />
