@@ -10,6 +10,16 @@ gsap.registerPlugin(ScrollTrigger);
 
 function ProcessPlant() {
 
+  useEffect(() => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      document.querySelectorAll("video").forEach(video => {
+        video.play();
+      });
+    }
+  }, []);
+  
+
 
   // Our Services Animation
 
@@ -200,7 +210,7 @@ function ProcessPlant() {
     { label: 'Email', type: 'email' },
     { label: 'Mobile Number', type: 'tel' },
   ];
-
+  
   function FormInput({ label, type }) {
     const id = label.toLowerCase().replace(' ', '-');
   
@@ -225,7 +235,7 @@ function ProcessPlant() {
     <section className="flex h-screen overflow-hidden flex-col text-4xl font-bold lg:text-5xl  tracking-wider text-white ">
         <div className="flex flex-col h-screen relative max-md:text-4xl">
             <div className="">
-            <video autoPlay loop muted className="absolute size-full object-cover" >
+            <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
               <source src="./IndustriesPage/Process Plant - Option 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>

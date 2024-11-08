@@ -433,8 +433,18 @@ useGSAP(() => {
       }
       setTimeout(() => setShowVideo(false), 300);
     };
-  
 
+
+    useEffect(() => {
+      const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+      if (isIOS) {
+        document.querySelectorAll("video").forEach(video => {
+          video.play();
+        });
+      }
+    }, []);
+    
+  
 
 
   return (
@@ -446,7 +456,7 @@ useGSAP(() => {
     <div className="relative w-full h-screen overflow-hidden">
       <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
         <div className="relative w-full h-full ">
-          <video autoPlay loop muted className="absolute size-full object-cover" >
+          <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -503,7 +513,7 @@ useGSAP(() => {
           </div>
         </div>
         <div  className="relative w-full h-full">
-           <video autoPlay loop muted className="absolute size-full object-cover" >
+           <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
               <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
@@ -526,7 +536,7 @@ useGSAP(() => {
         
         </div>
         <div className="relative w-full h-full">
-             <video autoPlay loop muted className="absolute size-full object-cover" >
+             <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
                 <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
             </video>
@@ -607,8 +617,8 @@ useGSAP(() => {
 
 
     <main className="flex overflow-hidden flex-col">
-      <section className="overflow-hidden  relative  w-full">
-        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="hidden lg:block object-cover absolute inset-0 size-full" />
+      <section className="overflow-hidden relative w-full">
+        <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg"  className="hidden lg:block object-cover absolute inset-0 h-full w-full" />
         <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full"/>
         <div className="flex gap-5 p-4 max-md:flex-col">
           <div className="flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
