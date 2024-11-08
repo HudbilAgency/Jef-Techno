@@ -469,7 +469,7 @@ useGSAP(() => {
 
                 {/* Conditionally render the iframe video at 90% screen width */}
                 {showVideo && (
-                  <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-75 z-50">
+                  <div className="hidden fixed inset-0 lg:flex items-center justify-center bg-black bg-opacity-75 z-50">
                     <div className="w-[90vw] h-[90%]">
                       {/* Close button */}
                       <div className="-mt-[1%] flex justify-end">
