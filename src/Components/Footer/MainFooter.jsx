@@ -12,7 +12,7 @@ function MainFooter() {
   useEffect(() => {
     // Select all elements with the 'X-axis-anm' class and apply staggered animation
     gsap.fromTo(
-      gsap.utils.toArray('.X-axis-card-anm'),
+      gsap.utils.toArray('.X-axis-card-anm-footer'),
       { opacity: 0, x: 100 },
       {
         x: 0,
@@ -101,11 +101,11 @@ function Footer() {
   return (
     <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
-      <div className="flex X-axis-card-anm flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
+      <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
         <div className="hidden  card-slider-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
-        <div className="flex X-axis-card-anm flex-row h-full space-x-12 lg:space-x-6">
+        <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
           <button onClick={handleYoutubeButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
           <button onClick={handleFacebookButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
           <button onClick={handleLinkedinButtonClick} className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
@@ -113,7 +113,7 @@ function Footer() {
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
-        <div className="flex X-axis-card-anm flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
+        <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-xs font-light basis-auto grow-0 tracking-widest">
             <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
@@ -133,7 +133,7 @@ function Footer() {
 
 function Section({ title, items }) {
   return (
-    <section className="flex .card-slider-footer X-axis-card-anm flex-col min-h-[234px] w-[219px]">
+    <section className="flex .card-slider-footer X-axis-card-anm-footer flex-col min-h-[234px] w-[219px]">
       <header className="w-full text-xl font-bold tracking-widest text-red-700 uppercase whitespace-nowrap">
         {title}
       </header>
@@ -235,7 +235,7 @@ const FAQComponent = () => {
     useEffect(() => {
       // Select all elements with the 'X-axis-anm' class and apply staggered animation
       gsap.fromTo(
-        gsap.utils.toArray('.X-axis-card-anm'),
+        gsap.utils.toArray('.X-axis-card-anm-footer'),
         { opacity: 0, x: 100 },
         {
           x: 0,

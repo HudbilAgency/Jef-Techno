@@ -153,7 +153,7 @@ function Home() {
     // Select all elements with the 'X-axis-anm' class and apply staggered animation
     gsap.fromTo(
       gsap.utils.toArray('.X-axis-card-anm'),
-      { opacity: 0, x: 100 },
+      { opacity: 0, x: 120 },
       {
         x: 0,
         opacity: 1,
@@ -659,14 +659,14 @@ useGSAP(() => {
             <div className="flex gap-7 tracking-[1px]">
             <div className="text-xs X-axis-anm my-auto">40 ARTICLES IN TOTAL</div>
               <button
-                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : ""}`}
+                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : "visible"}`}
                 onClick={prevSlide}
                 style={{ visibility: currentIndex === 0 ? "hidden" : "visible" }} // Hide button if at the first slide
               >
                 <img src="./HomePageImg/LeftArrow.png" alt="LeftArrow" className="w-8" />
               </button>
               <button
-                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage - 1 ? "visibility-hidden" : ""}`}
+                className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex >= totalItems - itemsPerPage - 1 ? "visibility-hidden" : "visible"}`}
                 onClick={nextSlide}
                 style={{ visibility: currentIndex >= totalItems - itemsPerPage - 1 ? "hidden" : "visible" }} // Hide button 1 slide before the last
               >

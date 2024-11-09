@@ -70,3 +70,19 @@ body {
     visibility: hidden !important;
     display: none !important;
   }
+
+  /* @keyframes slideIn {
+    from { opacity: 0; transform: translateX(120%); }
+    to { opacity: 1; transform: translateX(0); }
+  }
+
+  .X-axis-card-anm {
+    animation: slideIn 2s ease forwards;
+  }
+
+  .X-axis-card-anm {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 2s ease, transform 2s ease;
+  }
+   */
