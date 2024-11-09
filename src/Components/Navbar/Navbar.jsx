@@ -19,17 +19,32 @@ const Navbar = () => {
   const location = useLocation();
   const [activeSection, setActiveSection] = useState(''); // State to track active section
   const [isSlideOpen, setIsSlideOpen] = useState(false); // State to handle slide-out menu
+  const [resetTimeout, setResetTimeout] = useState(null); // Timeout for reset
 
+  const handleMenuHover = (label) => {
+    // Clear any existing timeout to prevent premature reset
+    if (resetTimeout) {
+      clearTimeout(resetTimeout);
+      setResetTimeout(null);
+    }
 
-  const handleMenuClick = (label) => {
-    // Ensure activeSection is not set for "Home" or "Careers"
+    // Set active section based on hovered item
     if (label === 'Home' || label === 'Careers') {
-      setActiveSection(''); // Reset activeSection
+      setActiveSection(''); // Reset activeSection for these labels
     } else {
-      setActiveSection((prevSection) => (prevSection === label ? '' : label));
+      setActiveSection(label); // Set active section on hover
     }
   };
-  
+
+  const handleMouseLeave = () => {
+    // Set a timeout to reset activeSection after leaving the button and section
+    const timeout = setTimeout(() => {
+      setActiveSection('');
+    }, 200); // 200ms delay
+
+    setResetTimeout(timeout);
+  };
+
   useEffect(() => {
     if (activeSection || isSlideOpen) {
       document.body.style.overflow = 'hidden'; // Disable scroll
@@ -37,21 +52,18 @@ const Navbar = () => {
       document.body.style.overflow = ''; // Enable scroll
     }
 
-    // Cleanup when component unmounts or activeSection changes
     return () => {
       document.body.style.overflow = ''; // Reset scroll when component unmounts
+      if (resetTimeout) clearTimeout(resetTimeout); // Cleanup timeout
     };
-  }, [activeSection || isSlideOpen]);
-
+  }, [activeSection, isSlideOpen, resetTimeout]);
 
   const toggleSlideMenu = () => {
     setIsSlideOpen(!isSlideOpen);
   };
 
-
   const [scrollNav, setScrollNav] = useState(false);
 
-  // Detect scroll position
   useEffect(() => {
     const handleScroll = () => {
       if (window.scrollY > 0) {
@@ -66,26 +78,28 @@ const Navbar = () => {
   }, []);
 
 
-  
+  const [hoverLine, setHoverLine] = useState(''); // State for hover line
 
-  
-  
+  const handleMouseLineEnter = (label) => {
+    setHoverLine(label); // Set line based on hovered menu item
+  };
 
+  const handleMouseLineLeave = () => {
+    setHoverLine(''); // Remove line when hover ends
+  };
 
   return (
     <div
-    className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${
-      scrollNav || activeSection 
-        ? 'bg-stone-800' 
-        : location.pathname === '/' || location.pathname === '/AboutUs'
-          ? 'lg:bg-transparent' 
-          : 'bg-stone-800'
-    }`}
-  >
-
-  
+      className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${
+        scrollNav || activeSection 
+          ? 'bg-stone-800' 
+          : location.pathname === '/' || location.pathname === '/AboutUs'
+            ? 'lg:bg-transparent' 
+            : 'bg-stone-800'
+      }`}
+    >
       <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
-        <header className="flex relative gap-20 justify-between items-center self-center w-full  2xl:max-w-[92%] max-md:max-w-full">
+        <header className="flex relative gap-20 justify-between items-center self-center w-full 2xl:max-w-[92%] max-md:max-w-full">
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
@@ -93,74 +107,71 @@ const Navbar = () => {
             className="object-contain w-[5rem] 2xl:w-[8rem] aspect-[1.77]"
           />
 
-          {/* Navigation Menu */}
-          <div className='flex justify-between w-screen'>
-          <nav className="flex gap-5 xl:gap-8 items-center  my-auto max-md:max-w-full">
-            {menuItems.map((item, index) => (
-              <div
-                key={index}
-                className="lg:flex hidden gap-2 justify-center items-center self-stretch my-auto"
-              >
-                {item.path ? (
-                  <NavLink
-                    to={item.path} // Use path for routing if available
-                    className={`self-stretch uppercase my-auto md:text-sm  font-medium tracking-[2px] text-white`}
-                    activeClassName="active" // Optional: styling for active link
-                  >
-                    {item.label}
-                  </NavLink>
-                ) : (
-                  <button
-                    onClick={() => handleMenuClick(item.label)} // Toggle visibility of the section
-                    className={`self-stretch uppercase my-auto md:text-sm  font-medium text-white tracking-[2px]`}
-                  >
-                    {item.label}
-                  </button>
-                )}
-                {item.hasDropdown && (
-                  <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                    
-                    <img
-                      loading="lazy"
-                      src="./HomePageImg/NavbarImg/Dropdown.png"
-                      alt="Dropdown"
-                      className="object-contain w-9 hidden lg:block"
-                    />
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
+          <div className="flex justify-between w-screen">
+          <nav className="flex gap-5 xl:gap-8 items-center my-auto max-md:max-w-full">
+              {menuItems.map((item, index) => (
+                <div
+                  key={index}
+                  className="lg:flex hidden gap-2 justify-center items-center self-stretch my-auto"
+                >
+                  {item.path ? (
+                    <NavLink
+                      to={item.path}
+                      className="nav-item uppercase md:text-sm font-medium tracking-[2px] text-white"
+                      activeClassName="active"
+                    >
+                      {item.label}
+                    </NavLink>
+                  ) : (
+                    <button
+                      onMouseEnter={() => handleMenuHover(item.label)}
+                      onMouseLeave={handleMouseLeave}
+                      className="nav-item uppercase md:text-sm font-medium text-white tracking-[2px]"
+                    >
+                      {item.label}
+                    </button>
+                  )}
+                  {item.hasDropdown && (
+                    <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                      <img
+                        loading="lazy"
+                        src="./HomePageImg/NavbarImg/Dropdown.png"
+                        alt="Dropdown"
+                        className="object-contain w-9 hidden lg:block"
+                      />
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
 
-          {/* Language and Other Buttons */}
-          <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
-            <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
-              <button
-                onClick={toggleTranslation }
-                className={`self-stretch uppercase my-auto text-sm font-light tracking-[2px] text-white {
-                  
-                }`}
-              >
-                {isArabic ? "English" : "Arabic (عربي)"}
+
+            <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
+              <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
+                <button
+                  onClick={toggleTranslation}
+                  className="self-stretch uppercase my-auto text-sm font-light tracking-[2px] text-white"
+                >
+                  {isArabic ? "English" : "Arabic (عربي)"}
+                </button>
+                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                  <img
+                    loading="lazy"
+                    src="./HomePageImg/NavbarImg/Dropdown.png"
+                    alt="Dropdown"
+                    className="object-contain w-9 hidden lg:block"
+                  />
+                </div>
+              </div>
+              <Link to='/GetInTouchForm'>
+                <button className="gap-3 uppercase self-stretch text-wrap py-3 px-4 md:py-2 lg:py-3 md:px-4 lg:px-7 my-auto text-xs md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
+                  Contact Us
+                </button>
+              </Link>
+              <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
+                <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
               </button>
-              <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                     <img
-                      loading="lazy"
-                      src="./HomePageImg/NavbarImg/Dropdown.png"
-                      alt="Dropdown"
-                      className="object-contain w-9 hidden lg:block"
-                    />
-              </div>
             </div>
-            <Link to='/GetInTouchForm'><button className="gap-3 uppercase  self-stretch text-wrap py-3 px-4 md:py-2 lg:py-3 md:px-4 lg:px-7 my-auto text-xs md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px]">
-              Contact Us
-            </button></Link>
-            <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
-              <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
-            </button>
-
-          </div>
-
           </div>
         </header>
 
@@ -168,15 +179,30 @@ const Navbar = () => {
       </div>
 
       {/* Conditionally Render Sections */}
-      {activeSection === 'About' && <AboutSection />}
-      {activeSection === 'Our Services' && <ServicesComponent />}
-      {activeSection === 'Industries' && <IndustriesComponent />}
-      
-      
-      {/* Add more sections conditionally like this */}
-
-
-
+      {activeSection === 'About' && (
+        <div
+          onMouseEnter={() => handleMenuHover('About')}
+          onMouseLeave={handleMouseLeave}
+        >
+          <AboutSection />
+        </div>
+      )}
+      {activeSection === 'Our Services' && (
+        <div
+          onMouseEnter={() => handleMenuHover('Our Services')}
+          onMouseLeave={handleMouseLeave}
+        >
+          <ServicesComponent />
+        </div>
+      )}
+      {activeSection === 'Industries' && (
+        <div
+          onMouseEnter={() => handleMenuHover('Industries')}
+          onMouseLeave={handleMouseLeave}
+        >
+          <IndustriesComponent />
+        </div>
+      )}
 
       {/* Mobile Navbar Content */}
       <div
