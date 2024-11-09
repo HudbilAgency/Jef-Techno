@@ -66,23 +66,28 @@ body {
   }
   
 
-  .VIpgJd-ZVi9od-ORHb-OEVmcd {
+  .VIpgJd-ZVi9od-ORHb-OEVmcd , #goog-gt-tt , .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc{
     visibility: hidden !important;
     display: none !important;
   }
 
   /* @keyframes slideIn {
-    from { opacity: 0; transform: translateX(120%); }
+    from { opacity: 0; transform: translateX(220%); }
     to { opacity: 1; transform: translateX(0); }
   }
 
   .X-axis-card-anm {
-    animation: slideIn 2s ease forwards;
+    animation: slideIn 1s ease forwards;
   }
 
-  .X-axis-card-anm {
+  .X-axis-card-anm {VIpgJd-ZVi9od-aZ2wEe-wOHMyf 
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 2s ease, transform 2s ease;
+    transition: opacity 1s ease, transform 1s ease;
   }
    */
+
+
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+}

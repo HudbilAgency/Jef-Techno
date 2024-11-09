@@ -12,26 +12,14 @@ const menuItems = [
   { label: 'Blogs', hasDropdown: false , path: '/Blog' },
 ];
 
-const menuItemsMobile = [
-  { label: 'Home', path: '/' },
-  { label: 'About', path: '/AboutUs' },
-  { label: 'Our Services' },
-  { label: 'Blogs',  },
-  { label: 'Industries', path: '/Industries' }
-];
+
 
 const Navbar = () => {
   const { isArabic, toggleTranslation } = useContext(TranslationContext);
   const location = useLocation();
   const [activeSection, setActiveSection] = useState(''); // State to track active section
-  const [language, setLanguage] = useState('English');
   const [isSlideOpen, setIsSlideOpen] = useState(false); // State to handle slide-out menu
 
-
-
-  const toggleLanguage = () => {
-    setLanguage((prevLang) => (prevLang === 'English' ? 'Arabic (عربي)' : 'English'));
-  };
 
   const handleMenuClick = (label) => {
     // Ensure activeSection is not set for "Home" or "Careers"
@@ -153,7 +141,7 @@ const Navbar = () => {
                   
                 }`}
               >
-                {isArabic ? "English" : "Arabic"}
+                {isArabic ? "English" : "Arabic (عربي)"}
               </button>
               <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
                      <img
@@ -556,90 +544,77 @@ const FAQComponent = () => {
   };
 
   const FAQItem = ({ question, content, path, isOpen, onToggle }) => {
-    const contentRef = useRef(null);
-    const [height, setHeight] = useState(0);
+  const contentRef = useRef(null);
+  const [height, setHeight] = useState(0);
 
-    useEffect(() => {
-      if (isOpen && contentRef.current) {
-        setHeight(contentRef.current.scrollHeight);
-      } else {
-        const timeout = setTimeout(() => {
-          setHeight(0);
-        }, 1000); // Match this duration with the transition duration
+  useEffect(() => {
+    if (isOpen && contentRef.current) {
+      setHeight(contentRef.current.scrollHeight);
+    } else {
+      const timeout = setTimeout(() => {
+        setHeight(0);
+      }, 1000); // Match this duration with the transition duration
 
-        return () => clearTimeout(timeout);
-      }
-    }, [isOpen]);
+      return () => clearTimeout(timeout);
+    }
+  }, [isOpen]);
 
-    return (
-      <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
-        <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
-          <Link to={path}>
-          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold  text-xl tracking-wider uppercase text-red-600">
+  return (
+    <div className="flex flex-col justify-center p-px self-center border-b w-[85%] border-solid bg-transparent bg-opacity-70 max-md:max-w-full">
+      <div onClick={onToggle} className="flex gap-10 justify-between items-start py-5 md:py-10 w-full max-md:max-w-full">
+        <Link to={path}>
+          <h2 className="self-stretch py-px leading-relaxed my-auto font-semibold text-xl tracking-wider uppercase text-red-600">
             {question}
           </h2>
-          </Link>
-          {path ? (
-            <Link to={path}>
-              <button
-                className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
-                aria-label={`Go to ${question}`}
-              >
-                <img
-                  loading="lazy"
-                  src="./AboutUs/DropdownArr.png"
-                  alt=""
-                  className="object-contain flex-1 w-full aspect-square"
-                />
-              </button>
-            </Link>
-          ) : (
-            <button
-              className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
-              aria-expanded={isOpen}
-              aria-label={isOpen ? "Close answer" : "Open answer"}
-            >
-              <img
-                loading="lazy"
-                src={
-                  isOpen
-                    ? "./AboutUs/DropUpArr.png"
-                    : "./AboutUs/DropdownArr.png"
-                }
-                alt=""
-                className="object-contain flex-1 w-full aspect-square"
-              />
-            </button>
-          )}
-        </div>
-        {!path && (
-          <div
-            ref={contentRef}
-            className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
-            style={{ maxHeight: `${height}px` }}
+        </Link>
+        {!path && ( // Only show the dropdown button if no direct path exists
+          <button
+            className="flex flex-col justify-center p-3 w-10 min-h-[40px]"
+            aria-expanded={isOpen}
+            aria-label={isOpen ? "Close answer" : "Open answer"}
           >
-            <div className="px-5 py-5">
-              {Array.isArray(content) ? (
-                <ul>
-                  {content.map((item, idx) => (
-                    <li key={idx} className="mb-2">
-                      <Link to={item.path}>
-                        <div className="text-stone-300 hover:underline">
-                          {item.label}
-                        </div>
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              ) : (
-                <p className='text-gray-500'>{content}</p>
-              )}
-            </div>
-          </div>
+            <img
+              loading="lazy"
+              src={
+                isOpen
+                  ? "./AboutUs/DropUpArr.png"
+                  : "./AboutUs/DropdownArr.png"
+              }
+              alt=""
+              className="object-contain flex-1 w-full aspect-square"
+            />
+          </button>
         )}
       </div>
-    );
-  };
+      {!path && (
+        <div
+          ref={contentRef}
+          className="overflow-hidden transition-all w-[100vw] duration-300 ease-in-out"
+          style={{ maxHeight: `${height}px` }}
+        >
+          <div className="px-5 py-5">
+            {Array.isArray(content) ? (
+              <ul>
+                {content.map((item, idx) => (
+                  <li key={idx} className="mb-2">
+                    <Link to={item.path}>
+                      <div className="text-stone-300 hover:underline">
+                        {item.label}
+                      </div>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              <p className='text-gray-500'>{content}</p>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 
   return (
     <section className="flex mt-[15%] overflow-hidden relative flex-col">
