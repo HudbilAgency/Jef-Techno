@@ -320,8 +320,8 @@ useGSAP(() => {
       scrollTrigger: {
         trigger: ".container",
         toggleActions: "play none none reverse",
-        start: "10% 10%",
-        end: "center 35%",
+        start: "10 10%",
+        end: "center 50%",
         pin: true
       }
     });
@@ -337,7 +337,8 @@ useGSAP(() => {
       // Image Animation for larger screens
       tl.to(".image1", { x: "60rem", y: "-40rem" }, "display")
         .to(".image2", { x: "-63rem", y: "-40rem" }, "display")
-        .to(".buttonRM", { x: "3rem" }, "display");
+        .to(".buttonRM0", { x: "300rem" }, "display")
+        .fromTo(".buttonRM1", { x: "20rem", opacity: 0 }, { x: "0rem", opacity: 1 });
     }
 
     // Animations for mobile screens (1024px and below)
@@ -1000,10 +1001,18 @@ function FeatureSection() {
                   </p>
                   
                 </div>
-                <button className="buttonRM flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
-                  <span className="self-stretch my-auto">Read More</span>
+                <Link to={'/SmartDigitalization'}>
+                <button className="buttonRM0 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
+                  <span className="w-36 my-auto">Read More</span>
                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
-                  </button>
+                </button>
+                </Link>
+                <Link to={'/L&D-Centre'}>
+                <button className="buttonRM1 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 -mt-14 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
+                  <span className="w-36 my-auto">Read More</span>
+                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
+                </button>
+                </Link>
               </div>
             </div>
           </div>
