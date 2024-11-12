@@ -27,6 +27,8 @@ import ManufacturingPlant from '../Pages/ManufacturingPlant';
 import ProcessPlant from '../Pages/ProcessPlant';
 import CommercialBuilding from '../Pages/CommercialBuilding';
 import RenewableEnergyResource from '../Pages/RenewableEnergyResource';
+import SmartDigitalization from '../Pages/SmartDigitalization';
+import LD_Centre from '../Pages/L&D-Centre';
 
 
 const Routers = () => { 
@@ -36,6 +38,8 @@ const Routers = () => {
       < ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/SmartDigitalization" element={<SmartDigitalization />} />
+        <Route path="/L&D-Centre" element={<LD_Centre />} />
         <Route path="/CookiePolicy" element={<CookiePolicy />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />

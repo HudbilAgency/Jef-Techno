@@ -32,10 +32,10 @@ function MainFooter() {
 
 
   const itemsAbout = [
-    { name: 'What is JEF', path: '' },
-    { name: 'JEF leadership team', path: '' },
-    { name: 'JEF Smart Digitalization', path: '' },
-    { name: 'JEF L & D Centre', path: '' }
+    { name: 'What is JEF', path: '/AboutUs' },
+    { name: 'JEF leadership team', path: '/LeadershipTeam' },
+    { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
+    { name: 'JEF L & D Centre', path: '/L&D-Centre' }
   ];
   
   const itemsService = [
@@ -43,7 +43,7 @@ function MainFooter() {
     { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
     { name: 'Earthing Studies', path: '/EarthingStudies' },
     { name: 'LPS System Studies', path: '/LightningProtectionStudies' },
-    { name: 'Instrumentation Studies', path: '' }
+    { name: 'Instrumentation Studies', path: '/InstrumentEarthing' }
   ];
   
   const itemsLocation = [
@@ -165,8 +165,8 @@ const FAQComponent = () => {
       content: [
         { label: 'What is JEF', path: '/AboutUs' },
         { label: 'JEF leadership team', path: '/LeadershipTeam' },
-        { label: 'JEF Smart Digitalization', path: '' },
-        { label: 'JEF L & D Centre', path: '' }
+        { label: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
+        { label: 'JEF L & D Centre', path: '/L&D-Centre' }
       ], 
       isOpen: false 
     },
@@ -177,7 +177,7 @@ const FAQComponent = () => {
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
         { label: 'Earthing Studies', path: '/EarthingStudies' },
         { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
-        { label: 'Instrumentation Studies', path: '' }
+        { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
       ], 
       isOpen: false 
     },

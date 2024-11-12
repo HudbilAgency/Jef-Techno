@@ -346,7 +346,7 @@ function OilandGas() {
             <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
             Get in touch with us for any business enquiry.
             </p>
-            <form className="w-full mt-12 max-md:mt-10">
+            <form className="w-full Y-axis-text mt-12 max-md:mt-10">
               {inputFields.map((field, index) => (
                 <FormInput key={index} label={field.label} type={field.type} />
               ))}
