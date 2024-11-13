@@ -6,9 +6,9 @@ import { TranslationContext } from '../../Context/TranslationContext'
 
 const menuItems = [
   { label: 'Home', hasDropdown: false, path: '/' },
-  { label: 'About', hasDropdown: true },
-  { label: 'Our Services', hasDropdown: true },
-  { label: 'Industries', hasDropdown: true },
+  { label: 'About', hasDropdown: false },
+  { label: 'Our Services', hasDropdown: false },
+  { label: 'Industries', hasDropdown: false },
   { label: 'Blogs', hasDropdown: false , path: '/Blog' },
 ];
 

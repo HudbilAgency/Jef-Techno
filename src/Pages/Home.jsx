@@ -993,11 +993,11 @@ function FeatureSection() {
                 Our L&d centre
                 </h2>
                 <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-                  <p className="description1 -ml-[5%] text-xl mt-10 font-light leading-10 max-md:max-w-full">
-                  Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.
+                  <p className="description1 -ml-[5%] text-lg mt-10 font-light leading-10 max-md:max-w-full">
+                  Our patented Smart Digitization process captures knowledge, streamlines workflows, and ensures accuracy at scale. Trusted by over 450+ customers globally, it delivers secure, standardized reports with customizable formats— over 5,000 reports and a million data points captured to date. Fast, secure, and reliable insights with every report.
                   </p>
-                  <p className='description2 -mt-[8%] text-xl font-light leading-10 max-md:max-w-full'>
-                  Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.
+                  <p className='description2 -mt-[20%] text-lg font-light leading-10 max-md:max-w-full'>
+                  At JEF, we are committed to continuous improvement and excellence. The L&D Center is designed to enhance the skills and expertise of our employees, ensuring they stay ahead of industry trends and deliver superior service to our clients.
                   </p>
                   
                 </div>
@@ -1008,7 +1008,7 @@ function FeatureSection() {
                 </button>
                 </Link>
                 <Link to={'/L&D-Centre'}>
-                <button className="buttonRM1 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 -mt-14 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
+                <button className="buttonRM1 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 -mt-20 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
                   <span className="w-36 my-auto">Read More</span>
                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
                 </button>
