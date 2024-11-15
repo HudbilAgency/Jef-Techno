@@ -5,10 +5,9 @@ import { TranslationContext } from '../../Context/TranslationContext'
 
 
 const menuItems = [
-  { label: 'Home', hasDropdown: false, path: '/' },
-  { label: 'About', hasDropdown: false },
-  { label: 'Our Services', hasDropdown: false },
-  { label: 'Industries', hasDropdown: false },
+  { label: 'About', hasDropdown: true },
+  { label: 'Our Services', hasDropdown: true },
+  { label: 'Industries', hasDropdown: true },
   { label: 'Blogs', hasDropdown: false , path: '/Blog' },
 ];
 
@@ -98,51 +97,54 @@ const Navbar = () => {
             : 'bg-stone-800'
       }`}
     >
-      <div className="flex flex-col pt-5 w-full h-full max-md:max-w-full">
+      <div className="flex flex-col pt-6 w-full h-full max-md:max-w-full">
         <header className="flex relative gap-20 justify-between items-center self-center w-full 2xl:max-w-[92%] max-md:max-w-full">
+          <Link to={'/'}>
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
             alt="JEF Company logo"
             className="object-contain w-[5rem] 2xl:w-[8rem] aspect-[1.77]"
           />
+          </Link>
 
           <div className="flex justify-between w-screen">
           <nav className="flex gap-5 xl:gap-8 items-center my-auto max-md:max-w-full">
-              {menuItems.map((item, index) => (
-                <div
-                  key={index}
-                  className="lg:flex hidden gap-2 justify-center items-center self-stretch my-auto"
+          {menuItems.map((item, index) => (
+            <div
+              key={index}
+              className="lg:flex hidden gap-2 justify-center items-center self-stretch my-auto group" // Added 'group' here
+            >
+              {item.path ? (
+                <NavLink
+                  to={item.path}
+                  className="nav-item uppercase md:text-sm font-medium tracking-[2px] text-white"
+                  activeClassName="active"
                 >
-                  {item.path ? (
-                    <NavLink
-                      to={item.path}
-                      className="nav-item uppercase md:text-sm font-medium tracking-[2px] text-white"
-                      activeClassName="active"
-                    >
-                      {item.label}
-                    </NavLink>
-                  ) : (
-                    <button
-                      onMouseEnter={() => handleMenuHover(item.label)}
-                      onMouseLeave={handleMouseLeave}
-                      className="nav-item uppercase md:text-sm font-medium text-white tracking-[2px]"
-                    >
-                      {item.label}
-                    </button>
-                  )}
-                  {item.hasDropdown && (
-                    <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
-                      <img
-                        loading="lazy"
-                        src="./HomePageImg/NavbarImg/Dropdown.png"
-                        alt="Dropdown"
-                        className="object-contain w-9 hidden lg:block"
-                      />
-                    </div>
-                  )}
+                  {item.label}
+                </NavLink>
+              ) : (
+                <button
+                  onMouseEnter={() => handleMenuHover(item.label)}
+                  onMouseLeave={handleMouseLeave}
+                  className="nav-item uppercase md:text-sm font-medium text-white tracking-[2px]"
+                >
+                  {item.label}
+                </button>
+              )}
+              {item.hasDropdown && (
+                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                  <img
+                    loading="lazy"
+                    src="./HomePageImg/NavbarImg/Dropdown.png"
+                    alt="Dropdown"
+                    className="object-contain w-9 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
+                  />
                 </div>
-              ))}
+              )}
+            </div>
+          ))}
+
             </nav>
 
 
@@ -175,7 +177,7 @@ const Navbar = () => {
           </div>
         </header>
 
-        <div className="relative shrink-0 mt-6 h-px border border-solid border-neutral-200 max-md:max-w-full" />
+        <div className="relative shrink-0 mt-7 h-0 border-b border-solid border-neutral-600 max-md:max-w-full" />
       </div>
 
       {/* Conditionally Render Sections */}
@@ -288,7 +290,7 @@ function AboutSection() {
                 ))}
               </div>
               <div
-                className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]"
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
                 role="separator"
                 aria-orientation="vertical"
               ></div>
@@ -327,7 +329,7 @@ function AboutSection() {
 
 const ServiceItem = ({ icon, text, path, isVisible }) => (
   <div
-    className={`flex gap-4 items-center mt-8 first:mt-0 transition-all duration-500 ease-in-out ${
+    className={`flex gap-4 items-center mt-8 first:mt-10 transition-all duration-500 ease-in-out ${
       isVisible ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-4 invisible'
     }`}
   >
@@ -404,7 +406,11 @@ function ServicesComponent() {
           </div>
           <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
             <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
-              <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
+            <div
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
+                role="separator"
+                aria-orientation="vertical"
+              ></div>
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {services.map((service, index) => (
                   <ServiceItem
@@ -434,7 +440,7 @@ function ServicesComponent() {
 
 const IndustriesItem = ({ path, icon, text, isVisible }) => (
   <div
-    className={`flex gap-4 items-center mt-8 first:mt-0 transition-all duration-500 ease-in-out ${
+    className={`flex gap-4 items-center mt-8 first:mt-10 transition-all duration-500 ease-in-out ${
       isVisible ? 'opacity-100 translate-y-0 visible' : 'opacity-0 translate-y-4 invisible'
     }`}
   >
@@ -491,7 +497,11 @@ function IndustriesComponent() {
           </div>
           <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
             <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
-              <div className="shrink-0 w-px border border-solid border-neutral-300 h-[348px]" />
+            <div
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
+                role="separator"
+                aria-orientation="vertical"
+              ></div>
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {Industries.map((industry, index) => (
                   <IndustriesItem

@@ -3,6 +3,8 @@ import Navbar from '../Components/Navbar/Navbar'
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
+
 
 
 
@@ -135,9 +137,11 @@ const AboutUs = () => {
                 THINK ELECTRICAL, THINK JEF
                 </h1>
                 <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+              <Link to={'/GetInTouchForm'}>
               <button className="uppercase Y-axis-text-Title px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
-                Learn More
+                Get in touch
               </button>
+              </Link>
             </div>
             </section>
             </main>

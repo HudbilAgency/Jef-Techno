@@ -7,6 +7,7 @@ import { useGSAP } from '@gsap/react'
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
+import ContactUs from "../Components/ContactUs/ContactUs";
 
 
 
@@ -631,9 +632,9 @@ useGSAP(() => {
                 Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                 I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
               </p>
-              <h2 className="text-xl lg:text-3xl Y-axis-text font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
-              <p className=" text-xl lg:text-2xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
-              <p className="text-xl lg:text-2xl Y-axis-text ">{"JEF Group"}</p>
+              <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+              <p className=" text-xl lg:text-xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
+              <p className="text-xl lg:text-xl Y-axis-text ">{"JEF Group"}</p>
             </div>
           </div>
           <div className="flex flex-col ml-5 w-[54%] max-md:ml-0 max-md:w-full">
@@ -734,30 +735,7 @@ useGSAP(() => {
 
    {/*  Contact Us Section    */}
 
-    <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
-      <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-          <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
-            Contact us
-          </h1>
-          <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
-          Get in touch with us for any business enquiry.
-          </p>
-          <form className="w-full mt-12 max-md:mt-10">
-            {inputFields.map((field, index) => (
-              <FormInput key={index} label={field.label} type={field.type} />
-            ))}
-            <button
-              type="submit"
-              className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
-            >
-              Submit
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
+   < ContactUs />
 
 
   
@@ -976,7 +954,7 @@ function FeatureSection() {
        {/* For Large ScreenSizes */}
 
         <section className="hidden mx-auto lg:block overflow-hidden shrink-0 container self-center my-20 w-full h-screen  max-md:mt-10 max-md:max-w-full ">
-          <div className=" text-2xl mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
+          <div className=" text-base mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
                   Why choose JEF ?
                 </div>
           <div className={`flex gap-5 max-md:flex-col`}>
@@ -1002,14 +980,14 @@ function FeatureSection() {
                   
                 </div>
                 <Link to={'/SmartDigitalization'}>
-                <button className="buttonRM0 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 mt-16 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
-                  <span className="w-36 my-auto">Read More</span>
+                <button className="buttonRM0 flex text-wrap gap-2.5 justify-center items-center ml-[5%] self-start  px-2 mt-20 text-sm uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px] ">
+                  <span className="w-36 px-2 py-3 my-auto">Read More</span>
                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
                 </button>
                 </Link>
                 <Link to={'/L&D-Centre'}>
-                <button className="buttonRM1 flex gap-2.5 justify-center items-center ml-[5%] self-start  px-6 -mt-20 text-base uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 min-h-[64px] rounded-[50px] tracking-[2px] ">
-                  <span className="w-36 my-auto">Read More</span>
+                <button className="buttonRM1 flex text-sm gap-2.5 justify-center items-center ml-[28%] self-start  px-2 -mt-20 uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                  <span className="w-36 my-auto px-2 py-3">Read More</span>
                   <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
                 </button>
                 </Link>

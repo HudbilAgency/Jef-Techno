@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../Components/Navbar/Navbar";
 import {Link } from 'react-router-dom';
+import path from "path";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -119,9 +120,9 @@ const EarthingStudies = () => {
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' },
-    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies' },
-    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' , path: '/EarthingStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path:'/LightningProtectionStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path:'/PowerSystemStudies'},
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -129,8 +130,8 @@ const EarthingStudies = () => {
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' },
-    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' , path:'/PowerQualityStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' , path: '/InstrumentEarthing'},
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -514,7 +515,7 @@ function TestimonialsSection() {
                 </div>
                 <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
                <Link to={'/GetInTouchForm'}>
-               <button className={`flex overflow-hidden justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
+               <button className={`flex overflow-hidden text-sm justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
                         CONTACT US
                 </button>
                </Link>

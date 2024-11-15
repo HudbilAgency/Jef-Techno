@@ -119,7 +119,7 @@ function Footer() {
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
-          <div className="text-xs card-slider-footer mx-auto lg:mx-0 flex gap-4 tracking-wide max-md:max-w-full">
+          <div className="text-xs card-slider-footer mx-auto lg:mx-0 flex gap-1 tracking-wide max-md:max-w-full">
               Copyright 2023. All Rights Reserved © jeftechno | Designed by 
               <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
           </div>   
