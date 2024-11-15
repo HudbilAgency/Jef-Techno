@@ -1,4 +1,4 @@
-import React , { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
@@ -12,55 +12,63 @@ gsap.registerPlugin(ScrollTrigger);
 export default function LeadershipTeam() {
 
 
-    function FormInput({ label, type }) {
-        const id = label.toLowerCase().replace(' ', '-');
-      
-        return (
-          <div className="mb-6">
-            <label htmlFor={id} className="sr-only">{label}</label>
-            <input
-              type={type}
-              id={id}
-              name={id}
-              placeholder={label}
-              className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
-              required
-            />
-          </div>
-        );
-      }
-
-      const inputFields = [
-        { label: 'Name', type: 'text' },
-        { label: 'Email', type: 'email' },
-        { label: 'Mobile Number', type: 'tel' },
-      ];
-      
+  const navItems = [
+    { label: 'HOME', isActive: true },
+    { label: 'About Us', isActive: true },
+    { label: 'Jef Leadership Page', isActive: false },
+  ];
 
 
+  function FormInput({ label, type }) {
+    const id = label.toLowerCase().replace(' ', '-');
 
-    useEffect(() => {
-    
-        gsap.utils.toArray('.Y-axis-text').forEach((element) => {
-            gsap.fromTo(
-                element,
-                { opacity: 0 , y: 50 },
-                {   y: 0,
-                    opacity: 1,
-                    duration: 0.8,
-                    stagger: 0.2,
-                    scrollTrigger: {
-                        trigger: element,
-                        start: 'top 70%',
-                        toggleActions: 'play none none none',
-                          },
-                      }
-                  );
-              });
-          }, []);
+    return (
+      <div className="mb-6">
+        <label htmlFor={id} className="sr-only">{label}</label>
+        <input
+          type={type}
+          id={id}
+          name={id}
+          placeholder={label}
+          className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+          required
+        />
+      </div>
+    );
+  }
+
+  const inputFields = [
+    { label: 'Name', type: 'text' },
+    { label: 'Email', type: 'email' },
+    { label: 'Mobile Number', type: 'tel' },
+  ];
 
 
-          
+
+
+  useEffect(() => {
+
+    gsap.utils.toArray('.Y-axis-text').forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 50 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 70%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    });
+  }, []);
+
+
+
 
   const [searchTerm, setSearchTerm] = useState('');
 
@@ -83,7 +91,7 @@ export default function LeadershipTeam() {
       id: 3,
       name: "PK KASINATHAN",
       title: "Chief Executive Officer - JEF KNR",
-      image: "./LeadershipTeamImg/KASINATHAN.png", 
+      image: "./LeadershipTeamImg/KASINATHAN.png",
       variant: "red"
     },
     {
@@ -193,47 +201,58 @@ export default function LeadershipTeam() {
     // }
   ];
 
-  const filteredLeaders = leaders.filter(leader => 
+  const filteredLeaders = leaders.filter(leader =>
     leader.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
     leader.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
   return (
     <>
-        < Navbar />
-        <main className="flex flex-col min-h-screen bg-neutral-100">
-            <header className="relative h-screen overflow-hidden">
-                <img 
-                src="./LeadershipTeamImg/JEF Leadership image.png"
-                alt=""
-                className="absolute inset-0 w-full h-full object-cover"
-                aria-hidden="true"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-50" />
-                <div className="relative z-10 lg:mx-[5%] p-3 h-full flex flex-col justify-end pb-16">
-                <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-wider mb-4">
-                    JEF LEADERSHIP TEAM
-                </h1>
-                <p className="text-white text-sm lg:text-base font-light leading-relaxed max-w-3xl">
-                    The world's biggest project needs some of the world's most talented people. That's why the JEF leadership team consists of innovators and visionaries who do things differently.
-                </p>
-                </div>
-            </header>
+      < Navbar />
+      <main className="flex flex-col min-h-screen bg-neutral-100">
+        <header className="relative h-screen overflow-hidden">
+          <img
+            src="./LeadershipTeamImg/JEF Leadership image.png"
+            alt=""
+            className="absolute inset-0 w-full h-full object-cover"
+            aria-hidden="true"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-50" />
+          <div className="relative z-10 lg:mx-[5%] p-3 h-full flex flex-col justify-end pb-16">
+            <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-wider mb-4">
+              JEF LEADERSHIP TEAM
+            </h1>
+            <p className="text-white text-sm lg:text-base font-light leading-relaxed max-w-3xl">
+              The world's biggest project needs some of the world's most talented people. That's why the JEF leadership team consists of innovators and visionaries who do things differently.
+            </p>
+          </div>
+        </header>
 
-            <nav className="bg-zinc-800 py-4" aria-label="Breadcrumb">
-                <div className="container mx-auto px-4">
-                <div className="flex items-center space-x-2 text-xs lg:text-sm">
-                    <a href="/" className="text-red-700 uppercase hover:underline">HOME</a>
-                    <span className="text-red-700">/</span>
-                    <a href="/AboutUs" className="text-red-700 uppercase hover:underline">ABOUT US</a>
-                    <span className="text-red-700">/</span>
-                    <span className="text-neutral-300 uppercase">JEF LEADERSHIP TEAM</span>
+        <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
+          <div className="flex w-full max-md:max-w-full">
+            <div className="flex items-center h-full min-w-[240px]">
+              {navItems.map((item, index) => (
+                <div key={index} className="flex items-center self-stretch my-auto">
+                  <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
+                    {item.label}
+                  </div>
+                  {item.isActive && (
+                    <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
+                      <div className="flex items-center w-[7px]">
+                        <div className="flex flex-col justify-center self-stretch my-auto min-h-[7px] w-[7px]">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/98403646f26f29fd8d19e6e57b2e9f8b5de2f748795475a0d9039378b1786404?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-full aspect-square" />
+                        </div>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                </div>
-            </nav>
+              ))}
+            </div>
+          </div>
+        </nav>
 
-            <section className="container mx-auto px-4 py-16">
-                <div className="max-w-sm mb-16">
+        <section className="container mx-auto px-4 py-16">
+          {/* <div className="max-w-sm mb-16">
                 <div className="relative">
                     <input
                     type="search"
@@ -258,29 +277,28 @@ export default function LeadershipTeam() {
                     />
                     </svg>
                 </div>
-                </div>
+                </div> */}
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                {filteredLeaders.map((leader) => (
-                    <article key={leader.id} className="flex flex-col">
-                    <img
-                        src={leader.image}
-                        alt={leader.name}
-                        className="w-full grayscale transition duration-500 hover:grayscale-0 aspect-square object-cover"
-                    />
-                    <h2 className="mt-6 text-xl text-zinc-900 font-medium">
-                        {leader.name}
-                    </h2>
-                    <p className={`mt-4 text-sm ${
-                        leader.variant === 'red' ? 'text-red-700' : 'text-yellow-600'
-                    }`}>
-                        {leader.title}
-                    </p>
-                    <button
-                        className="mt-8 w-6 h-6"
-                        aria-label={`View ${leader.name}'s profile`}
-                    >
-                        {/* <svg
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+            {filteredLeaders.map((leader) => (
+              <article key={leader.id} className="flex flex-col">
+                <img
+                  src={leader.image}
+                  alt={leader.name}
+                  className="w-full grayscale transition duration-500 hover:grayscale-0 aspect-square object-cover"
+                />
+                <h2 className="mt-6 text-xl text-zinc-900 font-medium">
+                  {leader.name}
+                </h2>
+                <p className={`mt-4 text-sm ${leader.variant === 'red' ? 'text-red-700' : 'text-yellow-600'
+                  }`}>
+                  {leader.title}
+                </p>
+                <button
+                  className="mt-8 w-6 h-6"
+                  aria-label={`View ${leader.name}'s profile`}
+                >
+                  {/* <svg
                         viewBox="0 0 24 24"
                         fill="none"
                         stroke="currentColor"
@@ -293,38 +311,38 @@ export default function LeadershipTeam() {
                             d="M9 5l7 7-7 7"
                         />
                         </svg> */}
-                        <img src="./LeadershipTeamImg/Arrow.png" alt="Arrow" />
-                    </button>
-                    </article>
-                ))}
-                </div>
-            </section>
-            </main>
-            <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
-      <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
-        <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-        <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-          <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
-            Contact us
-          </h1>
-          <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
-          Get in touch with us for any business enquiry.
-          </p>
-          <form className="w-full mt-12 max-md:mt-10">
-            {inputFields.map((field, index) => (
-              <FormInput key={index} label={field.label} type={field.type} />
+                  <img src="./LeadershipTeamImg/Arrow.png" alt="Arrow" />
+                </button>
+              </article>
             ))}
-            <button
-              type="submit"
-              className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
-            >
-              Submit
-            </button>
-          </form>
+          </div>
+        </section>
+      </main>
+      <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
+        <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
+          <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
+          <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
+            <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+              Contact us
+            </h1>
+            <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
+              Get in touch with us for any business enquiry.
+            </p>
+            <form className="w-full mt-12 max-md:mt-10">
+              {inputFields.map((field, index) => (
+                <FormInput key={index} label={field.label} type={field.type} />
+              ))}
+              <button
+                type="submit"
+                className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+              >
+                Submit
+              </button>
+            </form>
+          </div>
         </div>
-      </div>
-    </section>
-        < MainFooter />    
+      </section>
+      < MainFooter />
     </>
   );
 }

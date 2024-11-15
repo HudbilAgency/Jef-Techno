@@ -117,13 +117,13 @@ const PowerQualityStudies = () => {
           });
       }, []);
 
-  const services = [
+   const services = [
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' },
-    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies' },
-    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' , path: '/EarthingStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path:'/LightningProtectionStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path:'/PowerSystemStudies'},
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -131,8 +131,8 @@ const PowerQualityStudies = () => {
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' },
-    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' , path:'/PowerQualityStudies'},
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' , path: '/InstrumentEarthing'},
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -369,6 +369,7 @@ const PowerQualityStudies = () => {
                     <ServiceItem
                       key={index}
                       text={service.text}
+                      path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index] = el)}
                       onMouseEnter={() => handleMouseEnter(index, service.image)}
@@ -381,6 +382,7 @@ const PowerQualityStudies = () => {
                     <ServiceItem
                       key={index + 9}
                       text={service.text}
+                      path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index + 9] = el)}
                       onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
@@ -462,7 +464,7 @@ function TestimonialsSection() {
                 </div>
                 <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
                 <Link to={'/GetInTouchForm'}>
-               <button className={`flex overflow-hidden justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
+               <button className={`flex overflow-hidden text-sm justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
                         CONTACT US
                 </button>
                </Link>
@@ -477,29 +479,31 @@ function TestimonialsSection() {
 
 
 
-const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
+
+const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave }, ref) => {
   return (
-    <div
-  ref={ref}
-  className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-    ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-  onMouseEnter={() => {
-    if (text !== "") {
-      onMouseEnter();
-    }
-  }}
-  onMouseLeave={() => {
-    if (text !== "") {
-      onMouseLeave();
-    }
-  }}
->
-  <span className="text-center text-[60%] md:text-sm ">{text}</span>
-</div>
+   <Link to={path}>
+     <div
+        ref={ref}
+        className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+          ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+        onMouseEnter={() => {
+          if (text !== "") {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          if (text !== "") {
+            onMouseLeave();
+          }
+        }}
+      >
+        <span className="text-center text-[60%] md:text-sm ">{text}</span>
+      </div>
+   </Link>
 
   );
 });
-
 
 
 

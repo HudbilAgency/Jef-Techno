@@ -382,6 +382,7 @@ const EarthingStudies = () => {
                     <ServiceItem
                       key={index}
                       text={service.text}
+                      path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index] = el)}
                       onMouseEnter={() => handleMouseEnter(index, service.image)}
@@ -394,6 +395,7 @@ const EarthingStudies = () => {
                     <ServiceItem
                       key={index + 9}
                       text={service.text}
+                      path={service.path}
                       image={service.image}
                       ref={(el) => (serviceRefs.current[index + 9] = el)}
                       onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
@@ -531,25 +533,27 @@ function TestimonialsSection() {
 
 
 
-const ServiceItem = React.forwardRef(({ text, onMouseEnter, onMouseLeave }, ref) => {
+const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave }, ref) => {
   return (
-    <div
-  ref={ref}
-  className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-    ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-  onMouseEnter={() => {
-    if (text !== "") {
-      onMouseEnter();
-    }
-  }}
-  onMouseLeave={() => {
-    if (text !== "") {
-      onMouseLeave();
-    }
-  }}
->
-  <span className="text-center text-[60%] md:text-sm ">{text}</span>
-</div>
+   <Link to={path}>
+     <div
+        ref={ref}
+        className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+          ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+        onMouseEnter={() => {
+          if (text !== "") {
+            onMouseEnter();
+          }
+        }}
+        onMouseLeave={() => {
+          if (text !== "") {
+            onMouseLeave();
+          }
+        }}
+      >
+        <span className="text-center text-[60%] md:text-sm ">{text}</span>
+      </div>
+   </Link>
 
   );
 });

@@ -133,12 +133,12 @@ const Navbar = () => {
                 </button>
               )}
               {item.hasDropdown && (
-                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                   <img
                     loading="lazy"
                     src="./HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
-                    className="object-contain w-9 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
+                    className="object-contain w-5 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
                   />
                 </div>
               )}
@@ -255,7 +255,7 @@ function AboutSection() {
   const [hoveredItem, setHoveredItem] = useState(null);
 
   return (
-    <section className="flex overflow-hidden flex-col h-[80vh] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+    <section className="flex overflow-hidden flex-col h-[80vh] pl-[11%] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
       <div className="ml-10 max-w-full w-[994px]">
         <div className="flex gap-5 max-md:flex-col">
           <nav className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
@@ -281,7 +281,7 @@ function AboutSection() {
                         <img
                           loading="lazy"
                           src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                          className="object-contain w-2.5 aspect-[0.56]"
+                          className="object-contain w-2"
                           alt=""
                         />
                       </div>
@@ -377,7 +377,7 @@ function ServicesComponent() {
   ];
 
   return (
-    <section className="flex overflow-hidden flex-col h-[80vh] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+    <section className="flex overflow-hidden flex-col h-[80vh] pl-[11%] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
       <div className="ml-10 max-w-full w-[1016px]">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
@@ -398,7 +398,7 @@ function ServicesComponent() {
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3"
                     alt=""
-                    className="object-contain w-2.5 aspect-[0.56]"
+                    className="object-contain w-2"
                   />
                 </div>
               </div>
@@ -468,7 +468,7 @@ function IndustriesComponent() {
   ];
 
   return (
-    <section className="flex overflow-hidden flex-col h-[80vh] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
+    <section className="flex overflow-hidden flex-col h-[80vh] pl-[11%] items-start px-16 pt-5 pb-96 bg-stone-900 max-md:px-5 max-md:pb-24">
       <div className="ml-10 max-w-full w-[1016px]">
         <div className="flex gap-5 max-md:flex-col">
           <div className="flex flex-col w-2/5 max-md:ml-0 max-md:w-full">
@@ -489,7 +489,7 @@ function IndustriesComponent() {
                     loading="lazy"
                     src="./AboutUs/RightArrow.png"
                     alt=""
-                    className="object-contain w-2.5 aspect-[0.56]"
+                    className="object-contain w-2"
                   />
                 </div>
               </div>

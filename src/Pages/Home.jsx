@@ -628,10 +628,15 @@ useGSAP(() => {
               <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
                 Founder message
               </h1>
-              <p className="self-stretch Y-axis-text my-20 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
-                Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
-                I hope you choose to work with us. For some reason, if you choose otherwise, I will look forward to the next opportunity to work together. Thank you!
+              <div className="self-stretch Y-axis-text my-20 space-y-5 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+              <p>
+              Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
               </p>
+              <p>Over the last 30 years of our existence, we have served more than 4000 customers in 24 countries. Consistently meeting & exceeding their expectations at every given opportunity, we at Team JEF have created a formidable track record for ourselves.
+              </p>
+              <p>No wonder customers THINK "JEF" when they THINK ELECTRICAL engineering.
+              </p>
+              </div>
               <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
               <p className=" text-xl lg:text-xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
               <p className="text-xl lg:text-xl Y-axis-text ">{"JEF Group"}</p>
