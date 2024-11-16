@@ -8,6 +8,10 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ContactUs from "../Components/ContactUs/ContactUs";
+import { button } from "framer-motion/client";
+
+
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -101,54 +105,67 @@ const carouselData = [
 
 const buttonData = [
   {
-    image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', marginTop: " lg:mt-[240px]", marginLeft: "lg:ms-[0px]",
+    image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png',
+    text: 'Earthing studies',
     title: "Grounding studies projects completed",
     path: '/EarthingStudies',
     totalProjects: 165,
     indiaProjects: 123,
     gcc: 42,
-    description: "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."
+    description: "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation.",
+    className: "mt-[calc(50vh-10rem)] 2xl:mt-[calc(50vh-12rem)]",
   },
   {
-    image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', marginTop: "-mt-[70%] lg:mt-[150px]", marginLeft: "lg:ms-[0px]",
+    image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png',
+    text: 'Lightning protection system studies',
     title: "Lightning Protection Studies Projects Completed",
     path: '/LightningProtectionStudies',
     totalProjects: 233,
     indiaProjects: 195,
     gcc: 38,
-    description: "The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets."
+    description: "The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets.",
+    className: "mt-[calc(50vh-15rem)] 2xl:mt-[calc(40vh-14rem)] -ml-[0.5rem] 2xl:ml-0",
   },
   {
-    image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'power system studies', marginTop: "-mt-[100%] lg:mt-[50px]", marginLeft: "lg:ms-[0px]",
+    image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png',
+    text: 'power system studies',
     title: "Power System Studies Projects Completed",
     path: '/PowerSystemStudies',
     totalProjects: 74,
     indiaProjects: 58,
     gcc: 16,
-    description: "A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety."
+    description: "A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety.",
+    className: "mt-[calc(30vh-35rem)] 2xl:mt-[calc(30vh-45rem)] ml-[20rem] 2xl:ml-[25rem]",
   },
   {
-    image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'power quality & root cause analysis', marginTop: "mt-[20%] lg:-mt-[50px]", marginLeft: "lg:ms-[130px]",
+    image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png',
+    text: 'power quality & root cause analysis',
     title: "Power Quality & Root Cause Studies Projects Completed",
     path: '/PowerQualityStudies',
     totalProjects: 66,
     indiaProjects: 36,
     gcc: 30,
-    description: "A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies."
+    description: "A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies.",
+    className: "mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] ml-[8rem] 2xl:ml-[10rem]",
   },
   {
-    image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'instrumentation earthing', marginTop: "-mt-[40%] lg:-mt-[160px]", marginLeft: "lg:ms-[20px]",
+    image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
+    text: 'instrumentation earthing',
     title: "Instrumentation Earthing Studies Projects Completed",
+    path: '/InstrumentEarthing',
     totalProjects: 32,
     indiaProjects: 24,
     gcc: "08",
-    description: "An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation."
+    description: "An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation.",
+    className: "mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] -ml-[0.5rem] 2xl:ml-0",
   },
 ];
 
 
 
+
 function Home() {
+
 
   // For blogs Animation 
 
@@ -172,6 +189,12 @@ function Home() {
     );
   }, []);
 
+
+
+
+
+
+
   useEffect(() => {
 
     gsap.utils.toArray('.Y-axis-text').forEach((element) => {
@@ -192,6 +215,12 @@ function Home() {
       );
     });
   }, []);
+
+
+
+
+
+
 
   // For X-axis animation ----------------------------------------
 
@@ -214,9 +243,11 @@ function Home() {
     });
   }, []);
 
+
   const itemsPerPageMobile = 1;  // 1 card on mobile
   const itemsPerPageTablet = 2;  // 2 cards on tablet
   const itemsPerPageDesktop = 3; // 3 cards on desktop
+
 
   // Responsive value for `itemsPerPage`
   const itemsPerPage = window.innerWidth >= 1024 ? itemsPerPageDesktop
@@ -288,6 +319,11 @@ function Home() {
     }
   };
 
+
+
+
+
+
   {/*Gsap Annimation*/ }
 
 
@@ -295,12 +331,14 @@ function Home() {
     let mm = gsap.matchMedia();
 
     mm.add({
-      // For larger screens (1024px and above)
-      largeScreen: "(min-width: 1024px)",
-      // For mobile screens (1024px and below)
-      smallScreen: "(max-width: 1023px)"
+      // For larger screens (1025px and above)
+      largeScreen: "(min-width: 1025px)",
+      // For medium screens (768px to 1024px)
+      mediumScreen: "(min-width: 768px) and (max-width: 1024px)",
+      // For small screens (below 768px)
+      smallScreen: "(max-width: 767px)"
     }, (context) => {
-      let { largeScreen, smallScreen } = context.conditions;
+      let { largeScreen, mediumScreen, smallScreen } = context.conditions;
 
       let tl = gsap.timeline({
         scrollTrigger: {
@@ -314,22 +352,30 @@ function Home() {
 
       // Animations for larger screens (1025px and above)
       if (largeScreen) {
-        // Text Animation for larger screens
         tl.to(".title1", { x: "3vw", opacity: 0, scrub: true }, "display")
           .to(".description1", { y: "1rem", opacity: 0 }, "display")
           .fromTo(".title2", { x: "2vw", opacity: 0 }, { x: 0, opacity: 1 })
-          .fromTo(".description2", { y: "0.5rem", opacity: 0 }, { y: 0, opacity: 1 });
-
-        // Image Animation for larger screens
-        tl.to(".image1", { x: "60rem", y: "-40rem" }, "display")
+          .fromTo(".description2", { y: "0.5rem", opacity: 0 }, { y: 0, opacity: 1 })
+          .to(".image1", { x: "60rem", y: "-40rem" }, "display")
           .to(".image2", { x: "-63rem", y: "-40rem" }, "display")
           .to(".buttonRM0", { x: "300rem" }, "display")
           .fromTo(".buttonRM1", { x: "20rem", opacity: 0 }, { x: "0rem", opacity: 1 });
       }
 
-      // Animations for mobile screens (1024px and below)
+      // Animations for medium screens (768px to 1024px)
+      if (mediumScreen) {
+        tl.to(".title1", { x: "2vw", opacity: 0.5, scrub: true }, "display")
+          .to(".description1", { y: "1rem", opacity: 0.5 }, "display")
+          .fromTo(".title2", { x: "1vw", opacity: 0 }, { x: 0, opacity: 0.8 })
+          .fromTo(".description2", { y: "0.3rem", opacity: 0 }, { y: 0, opacity: 0.8 })
+          .to(".image1", { x: "30rem", y: "-20rem" }, "display")
+          .to(".image2", { x: "10rem", y: "-18rem" }, "display")
+          .to(".buttonRM0", { x: "150rem" }, "display")
+          .fromTo(".buttonRM1", { x: "10rem", opacity: 0 }, { x: "0rem", opacity: 1 });
+      }
+
+      // Animations for small screens (below 768px)
       if (smallScreen) {
-        // Image and text animation for mobile view
         tl.to(".SmImg1", { x: "-150%" }, "display")
           .to(".SmImg2", { x: "-113%" }, "display")
           .to(".textSM1", { y: "200%" }, "display")
@@ -338,9 +384,17 @@ function Home() {
     });
   });
 
+
+
+
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
+
+
   const totalSlides = 3;
+
+
 
   const [marginLeft, setMarginLeft] = useState("1%");
 
@@ -437,7 +491,7 @@ function Home() {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: 'top 20%',
+          start: 'top 25%',
           end: 'bottom bottom',
           toggleActions: 'play none none reverse',
           pin: false,
@@ -476,13 +530,13 @@ function Home() {
         .fromTo(
           imgRef1.current,
           { x: 0, y: 0 },
-          { x: 800, y: -500, duration: 1, ease: 'power2.out' },
+          { x: 800, y: -500, duration: 1, ease: 'power2.inout' },
           0
         )
         .fromTo(
           imgRef2.current,
           { x: 800, y: 0, },
-          { x: 0, y: -450, duration: 1, ease: 'power2.out' },
+          { x: 0, y: -450, duration: 1, ease: 'power2.inout' },
           0
         );
     }, sectionRef);
@@ -500,20 +554,20 @@ function Home() {
               <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-            <div className="inset-y-2/3 lg:inset-x-20 px-4 flex gap-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-              <h1 className="xl:text-6xl  lg:text-5xl md:text-4xl text-3xl font-bold h-fit 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+            <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
+              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, <br />
                 THINK JEF
               </h1>
-              <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+              <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
                 <div className="flex flex-col items-center">
                   {/* Button to trigger the video */}
-                  <button onClick={handlePlayVideo} className="mb-4">
+                  <button onClick={handlePlayVideo} className=" mb-0">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                       alt="Electrical icon"
-                      className="bg-repeat object-contain w-9 lg:w-14"
+                      className="bg-repeat object-contain w-9 2xl:w-14"
                     />
                   </button>
 
@@ -558,7 +612,7 @@ function Home() {
               Your browser does not support the video tag.
             </video>
             <div className="inset-y-[26rem] xl:mt-[2%] lg:inset-x-20 md:inset-y-2/3 0 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
-              <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              <h1 className="2xl:text-6xl lg:text-4xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 END-to-END SOLUTIONS
                 <br />FOR ELECTRICAL PROTECTION
               </h1>
@@ -568,7 +622,7 @@ function Home() {
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                     alt="Electrical icon"
-                    className="bg-repeat object-contain w-9 lg:w-14"
+                    className="bg-repeat object-contain w-9 2xl:w-14"
                   />
                 </button>
               </div>
@@ -581,16 +635,16 @@ function Home() {
               Your browser does not support the video tag.
             </video>
             <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-              <h1 className="xl:text-6xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-20  2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 EXCELLENCE THROUGH DIGITALISATION
               </h1>
-              <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+              <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
                 <button>
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                     alt="Electrical icon"
-                    className="bg-repeat object-contain w-9 lg:w-14"
+                    className="bg-repeat object-contain w-9 2xl:w-14"
                   />
                 </button>
               </div>
@@ -601,31 +655,51 @@ function Home() {
         <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
         {index > 0 && (
           <div
-            className="absolute top-1/2 lg:left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            className="absolute top-1/2 hover:bg-red-500  lg:left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
             onClick={handlePrev}
           >
-            <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
+            <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
           </div>
         )}
         {index < totalSlides - 1 && (
           <div
-            className="absolute top-1/2 lg:right-20 right-0 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-0 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
             onClick={handleNext}
           >
-            <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
+            <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
           </div>
         )}
       </div>
 
+
+
+
+
+
+
       {/*  What we do Section */}
 
       <section>
-        <WhatWeDoSection />
+        < WhatWeDoSection />
+
       </section>
+
+
+
+
+
+
+
+
+
+
+
 
       {/*  Why choose JEF Section  */}
 
-      <section className="flex items-center px-16 bg-stone-900 overflow-hidden">
+      {/*  For large devices  */}
+
+      <section className="lg:flex items-center px-16 bg-stone-900 overflow-hidden hidden">
         <div className="flex items-center mt-40 mb-32">
           <img
             className="h-32 my-auto hidden lg:block"
@@ -678,33 +752,37 @@ function Home() {
                         reports with customizable formats— over 5,000 reports and a million data points captured to date.
                         Fast, secure, and reliable insights with every report.
                       </div>
-                      <Link to={'/SmartDigitalization'}>
-                        <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                          <span className="py-3 pl-4 my-auto">Read More</span>
-                          <img
-                            loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                            className="object-contain my-auto self-stretch w-7"
-                            alt=""
-                          />
-                        </button>
-                      </Link>
+                      <div className="w-fit">
+                        <Link to={'/SmartDigitalization'}>
+                          <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                            <span className="py-3 pl-4 my-auto">Read More</span>
+                            <img
+                              loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                              className="object-contain my-auto self-stretch w-7"
+                              alt=""
+                            />
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                     <div ref={divRef2}>
                       <div className="my-16">
                         At JEF, we are committed to continuous improvement and excellence. The L&D Center is designed to enhance the skills and expertise of our employees, ensuring they stay ahead of industry trends and deliver superior service to our clients.
                       </div>
-                      <Link to={'/L&D-Centre'}>
-                        <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                          <span className="py-3 pl-4 my-auto">Read More</span>
-                          <img
-                            loading="lazy"
-                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                            className="object-contain my-auto self-stretch w-7"
-                            alt=""
-                          />
-                        </button>
-                      </Link>
+                      <div className="w-fit">
+                        <Link to={'/L&D-Centre'}>
+                          <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                            <span className="py-3 pl-4 my-auto">Read More</span>
+                            <img
+                              loading="lazy"
+                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                              className="object-contain my-auto self-stretch w-7"
+                              alt=""
+                            />
+                          </button>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -714,14 +792,17 @@ function Home() {
         </div>
       </section>
 
-      {/* <section className="flex items-center py-60 px-16 bg-stone-900 ">
-        <div className="flex items-center">
-          <img className="h-32 my-auto hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
-          <main className="lg:px-[40px] xl:px-[100px]">
-            <FeatureSection />
-          </main>
-        </div>
-      </section> */}
+      {/*  For small & medium devices  */}
+
+
+      <section className="flex bg-fixed h-screen overflow-hidden  px-16 py-6 bg-stone-900 lg:hidden">
+        <img className="h-32 my-auto hidden lg:block" src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png" alt="ScrollPng" />
+        <main className="mx-auto overflow-hidden">
+          <FeatureSection />
+        </main>
+      </section>
+
+
 
       <main className="flex overflow-hidden flex-col">
         <section className="overflow-hidden relative w-full">
@@ -753,7 +834,15 @@ function Home() {
         </section>
       </main>
 
+
+
+
+
+
+
       {/*  Blog's Section  */}
+
+
 
       <section className="py-16 overflow-x-hidden bg-neutral-100 ">
         <main className="lg:px-[100px] flex overflow-hidden flex-col justify-center items-center px-20 pt-20 w-full bg-neutral-100 max-md:px-5  max-md:max-w-full">
@@ -785,6 +874,7 @@ function Home() {
                 <a href="#oldest" className="text-neutral-900">Oldest</a>
               </nav>
             </div>
+
 
             {/* Slider Section */}
 
@@ -827,13 +917,29 @@ function Home() {
 < CarousalImg/>
  */}
 
+
+
+
+
+
+
+
       {/*  Contact Us Section    */}
 
-      <ContactUs />
-      <MainFooter />
+      < ContactUs />
+
+
+
+
+
+
+      < MainFooter />
     </>
   );
 }
+
+
+
 
 // what we do Section
 
@@ -925,7 +1031,7 @@ const WhatWeDoSection = () => {
       )}
 
       {showSection && (
-        <section className="flex h-auto lg:h-screen overflow-hidden flex-col bg-zinc-800 ">
+        <section className="flex h-auto 2xl:h-screen overflow-hidden flex-col bg-zinc-800 ">
           <div className="flex relative flex-col px-20 pt-12 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
             <img
               loading="lazy"
@@ -938,22 +1044,23 @@ const WhatWeDoSection = () => {
 
               {/* Left Section */}
               <section className="flex flex-wrap w-[100%] lg:w-[40%] justify-between">
-                <div className="flex tracking-[3px] flex-col self-start text-2xl lg:text-3xl font-bold">
+                <div className="flex tracking-[3px] flex-col self-start text-lg 2xl:text-2xl font-bold">
                   <h1 className="text-white uppercase mt-[2%]">what we do</h1>
                 </div>
                 <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
                   <div className="grow max-md:max-w-full WWD-slider">
                     <div className="mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
                       {buttonData.map((button, index) => (
-                        <Link key={index} to={button.path} className={`inline-flex Y-axis-WWD-anm`}>
+                        <div key={index} className={`inline-flex Y-axis-WWD-anm ${button.className}`}
+                        >
                           <button
-                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-28 h-28 xl:w-44 xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${button.marginTop} ${button.marginLeft} ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-36 h-36 2xl:w-44 2xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
                             onMouseEnter={() => setHoveredButtonIndex(index)}
-                            onMouseLeave={() => setHoveredButtonIndex(null)}
                           >
-                            <span className="text-white text-[55%] lg:text-sm uppercase leading-none tracking-[0px]">{button.text}</span>
+                            <span className="text-white text-[55%] 2xl:text-sm uppercase leading-none tracking-[0px]">{button.text}</span>
                           </button>
-                        </Link>
+                        </div>
+
                       ))}
                     </div>
                     {/* <div className="lg:hidden ">
@@ -969,7 +1076,7 @@ const WhatWeDoSection = () => {
               <section className="Y-axis-text lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
                 <div className="flex flex-col lg:w-[80%] text-xl font-medium leading-10 max-md:max-w-full">
                   <div className="shrink-0 mt-6 border border-red-700 thin-border max-md:max-w-full" />
-                  <h2 className="mt-8 text-white uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
+                  <h2 className="mt-8 text-white 2xl:text-lg text-sm uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
                 </div>
                 <div className="lg:mt-12 w-full max-md:mt-10 max-md:max-w-full">
                   <div className="flex gap-5 max-md:flex-col">
@@ -979,30 +1086,32 @@ const WhatWeDoSection = () => {
                           <div className="flex gap-5 max-md:flex-col">
                             <div className="flex flex-col w-9/12 max-md:ml-0 max-md:w-full">
                               <div className="flex flex-col grow uppercase tracking-[3px] ">
-                                <h3 className="text-base font-bold items-start self-start text-green-600">Total Projects</h3>
-                                <div className="flex flex-col items-start self-start lg:mt-5 text-base text-white whitespace-nowrap">
+                                <h3 className="font-bold text-xs 2xl:text-base items-start self-start text-green-600">Total Projects</h3>
+                                <div className="flex flex-col items-start self-start lg:mt-5  text-xs 2xl:text-base text-white whitespace-nowrap">
                                   <p>{buttonData[hoveredButtonIndex]?.totalProjects || 165}</p>
-                                  <h4 className="self-stretch mt-5 text-base font-bold text-center text-green-600">gcc</h4>
+                                  <h4 className="self-stretch mt-5 text-xs 2xl:text-base font-bold text-center text-green-600">gcc</h4>
                                   <p>{buttonData[hoveredButtonIndex]?.gcc || 42}</p>
                                 </div>
                               </div>
                             </div>
                             <div className="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
                               <div className="flex flex-col uppercase whitespace-nowrap tracking-[3px] ">
-                                <h3 className="text-base font-bold text-start text-green-600">INDIA</h3>
-                                <p className="self-start lg:mt-5 text-base text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
+                                <h3 className="text-xs 2xl:text-base font-bold text-start text-green-600">INDIA</h3>
+                                <p className="self-start lg:mt-5 text-xs 2xl:text-base text-white">{buttonData[hoveredButtonIndex]?.indiaProjects || 123}</p>
                               </div>
                             </div>
                           </div>
                         </div>
                         <div className="flex-col justify-end items-end lg:ml-[20%]">
-                          <h3 className="mt-10 text-base font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                          <p className="self-stretch mt-6 w-[80%] text-sm h-[23vh] leading-7 text-white ">
+                          <h3 className="mt-10  text-xs 2xl:text-base font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
+                          <p className="self-stretch text-xs 2xl:text-base mt-6 2xl:w-[90%] h-[23vh] 2xl:leading-7 text-white ">
                             {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
                           </p>
-                          <button className="gap-2.5 text-base  mt-24 md:mt-20 self-stretch px-5 py-2 lg:mt-0  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white lg:py-4 rounded-[50px] lg:px-14">
-                            Read more
-                          </button>
+                          <Link to={buttonData[hoveredButtonIndex]?.path}>
+                            <button className="gap-2.5 text-xs 2xl:text-base self-stretch px-5 py-2 2xl:mt-12  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white 2xl:py-3 rounded-[50px] 2xl:px-12">
+                              Read more
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </div>
@@ -1018,87 +1127,29 @@ const WhatWeDoSection = () => {
   );
 };
 
+
+
+
+
+
+
+
+
+
+
+
+
 // Why Choose JEF Section 
+
+
 
 function FeatureSection() {
   return (
     <>
-      <section>
-        <div className="flex items-stretch h-full gap-28 text-white relative">
-          <div className="w-1/3 2xl:w-1/4 min-h-full max-h-[550px] xl:max-h-[500px] 2xl:max-h-[450px]">
-            <img className="w-full h-full object-cover" src="/HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" />
-          </div>
-          <div className="w-1/2 2xl:w-2/5 flex flex-col">
-            <div className=" text-base font-semibold tracking-widest text-red-700 uppercase mb-16">
-              Why choose JEF ?
-            </div>
-            <div className="text-5xl font-bold uppercase leading-none tracking-[3px] absolute top-16 right-[15%] 2xl:right-[40%]">
-              Smart digitalisation
-            </div>
-            <div className="my-16">
-              Our patented Smart Digitization process captures knowledge, streamlines workflows, and ensures accuracy at scale. Trusted by over 450+ customers globally, it delivers secure, standardized reports with customizable formats— over 5,000 reports and a million data points captured to date. Fast, secure, and reliable insights with every report.
-            </div>
-            <Link to={'/SmartDigitalization'}>
-              <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                <span className="py-3 pl-4 my-auto">Read More</span>
-                <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
-              </button>
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* For Large ScreenSizes */}
-
-      {/* <section className="hidden mx-auto lg:block overflow-hidden shrink-0 container self-center my-20 w-full h-screen  max-md:mt-10 max-md:max-w-full ">
-        <div className=" text-base mt-10 text-center font-semibold tracking-widest text-red-700 uppercase max-md:ml-2.5">
-          Why choose JEF ?
-        </div>
-        <div className={`flex gap-5 max-md:flex-col`}>
-          <div className={`box image1 flex  flex-col 2xl:w-[28%] w-[36%] max-md:ml-0 max-md:w-full`}>
-            <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png"} className="object-contain grow w-full aspect-[0.8] max-md:max-w-full" alt="" />
-          </div>
-
-          <div className={`flex flex-col ml-5 w-[64%] max-md:ml-0 max-md:w-full`}>
-            <div className="flex flex-col grow items-start mt-7 text-white max-md:max-w-full">
-              <h2 className="title1 mt-10  relative 2xl:-inset-x-32 text-6xl font-bold uppercase lg:w-[50%] tracking-[3px] max-md:mt-10  max-md:text-4xl">
-                Smart digitalisation
-              </h2>
-              <h2 className='absolute title2 mt-10  ml-[35%]  2xl:-inset-x-32 text-6xl font-bold uppercase lg:w-[30%] tracking-[3px] max-md:mt-10 z-10  max-md:text-4xl'>
-                Our L&d centre
-              </h2>
-              <div className="flex flex-col self-end  max-w-full w-[855px] max-md:mt-10">
-                <p className="description1 -ml-[5%] text-lg mt-10 font-light leading-10 max-md:max-w-full">
-                  Our patented Smart Digitization process captures knowledge, streamlines workflows, and ensures accuracy at scale. Trusted by over 450+ customers globally, it delivers secure, standardized reports with customizable formats— over 5,000 reports and a million data points captured to date. Fast, secure, and reliable insights with every report.
-                </p>
-                <p className='description2 -mt-[20%] text-lg font-light leading-10 max-md:max-w-full'>
-                  At JEF, we are committed to continuous improvement and excellence. The L&D Center is designed to enhance the skills and expertise of our employees, ensuring they stay ahead of industry trends and deliver superior service to our clients.
-                </p>
-
-              </div>
-              <Link to={'/SmartDigitalization'}>
-                <button className="buttonRM0 flex text-wrap gap-2.5 justify-center items-center ml-[5%] self-start  px-2 mt-20 text-sm uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px] ">
-                  <span className="w-36 px-2 py-3 my-auto">Read More</span>
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
-                </button>
-              </Link>
-              <Link to={'/L&D-Centre'}>
-                <button className="buttonRM1 flex text-sm gap-2.5 justify-center items-center ml-[28%] self-start  px-2 -mt-20 uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                  <span className="w-36 my-auto px-2 py-3">Read More</span>
-                  <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className=" object-contain my-auto self-stretch  w-7" alt="" />
-                </button>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className={`ml-auto mt-28 image2 flex 2xl:w-[28%] flex-col w-[32%] max-md:w-full`}>
-          <img loading="lazy" src={"./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"} className="object-contain bottom-m w-full aspect-[0.8] max-md:max-w-full" alt="" />
-        </div>
-      </section> */}
 
       {/* For Mobile View */}
 
-      <section className="lg:hidden mx-auto h-auto ">
+      <section className=" mx-auto h-auto ">
 
         <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
         <div className="flex sm:gap-80 gap-12 mt-5">
@@ -1356,7 +1407,14 @@ const LandingImages = () => {
   );
 };
 
+
+
+
 function BlogCard({ imageSrc, title, path }) {
+
+
+
+
 
   return (
     <article className="flex X-axis-card-anm flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
