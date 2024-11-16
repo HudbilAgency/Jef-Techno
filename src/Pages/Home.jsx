@@ -113,7 +113,7 @@ const buttonData = [
     indiaProjects: 123,
     gcc: 42,
     description: "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation.",
-    className: "mt-[calc(50vh-10rem)] 2xl:mt-[calc(50vh-12rem)]",
+    className: "mt-[calc(50vh-10rem)] md:mt-[calc(50vh-10rem)] 2xl:mt-[calc(50vh-12rem)]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png',
@@ -124,7 +124,7 @@ const buttonData = [
     indiaProjects: 195,
     gcc: 38,
     description: "The purpose of Lightning Protection System audit is to conduct lightning risk assessment and determine the level of protection required to the structure/facility as per the latest relevant standards. LPS Adequacy audit helps to manage and mitigate the risk due to lightning and protect the life and assets.",
-    className: "mt-[calc(50vh-15rem)] 2xl:mt-[calc(40vh-14rem)] -ml-[0.5rem] 2xl:ml-0",
+    className: "mt-[calc(40vh-15rem)] md:mt-[calc(50vh-15rem)] 2xl:mt-[calc(40vh-14rem)] md:-ml-[0.5rem] 2xl:ml-0",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png',
@@ -135,7 +135,7 @@ const buttonData = [
     indiaProjects: 58,
     gcc: 16,
     description: "A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety.",
-    className: "mt-[calc(30vh-35rem)] 2xl:mt-[calc(30vh-45rem)] ml-[20rem] 2xl:ml-[25rem]",
+    className: "mt-[calc(65vh-35rem)] md:mt-[calc(30vh-35rem)] 2xl:mt-[calc(30vh-45rem)] md:ml-[20rem] 2xl:ml-[25rem]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png',
@@ -146,7 +146,7 @@ const buttonData = [
     indiaProjects: 36,
     gcc: 30,
     description: "A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies.",
-    className: "mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] ml-[8rem] 2xl:ml-[10rem]",
+    className: "mt-[calc(10vh-4rem)] md:mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] md:ml-[8rem] 2xl:ml-[10rem]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
@@ -157,7 +157,7 @@ const buttonData = [
     indiaProjects: 24,
     gcc: "08",
     description: "An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation.",
-    className: "mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] -ml-[0.5rem] 2xl:ml-0",
+    className: "mt-[calc(10vh-10rem)] md:mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] md:-ml-[0.5rem] 2xl:ml-0",
   },
 ];
 
@@ -555,7 +555,7 @@ function Home() {
               Your browser does not support the video tag.
             </video>
             <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, <br />
                 THINK JEF
               </h1>
@@ -635,7 +635,7 @@ function Home() {
               Your browser does not support the video tag.
             </video>
             <div className="inset-y-2/3 xl:mt-[2%] lg:inset-x-20 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-20  2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              <h1 className="2xl:text-6xl lg:text-4xl  md:text-3xl text-3xl font-bold h-32 md:h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 EXCELLENCE THROUGH DIGITALISATION
               </h1>
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
@@ -1054,7 +1054,7 @@ const WhatWeDoSection = () => {
                         <div key={index} className={`inline-flex Y-axis-WWD-anm ${button.className}`}
                         >
                           <button
-                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-36 h-36 2xl:w-44 2xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-32 h-32 md:w-36 md:h-36 2xl:w-44 2xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
                             onMouseEnter={() => setHoveredButtonIndex(index)}
                           >
                             <span className="text-white text-[55%] 2xl:text-sm uppercase leading-none tracking-[0px]">{button.text}</span>
