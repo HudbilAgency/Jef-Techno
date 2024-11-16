@@ -98,13 +98,13 @@ const Navbar = () => {
       }`}
     >
       <div className="flex flex-col pt-6 w-full h-full max-md:max-w-full">
-        <header className="flex relative gap-20 justify-between items-center self-center w-full 2xl:max-w-[92%] max-md:max-w-full">
+        <header className="flex relative gap-20 justify-between items-center self-center w-[90%] 2xl:max-w-[92%] max-md:max-w-full">
           <Link to={'/'}>
           <img
             loading="lazy"
             src="https://cdn.builder.io/api/v1/image/assets/TEMP/1f72711985a65d5e9cccf583145ef02cf25367e53a9dbd9152d31ad79b46cc8c?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
             alt="JEF Company logo"
-            className="object-contain w-[5rem] 2xl:w-[8rem] aspect-[1.77]"
+            className="object-contain w-5 lg:w-[7rem] 2xl:w-[8rem]"
           />
           </Link>
 
@@ -118,7 +118,7 @@ const Navbar = () => {
               {item.path ? (
                 <NavLink
                   to={item.path}
-                  className="nav-item uppercase md:text-sm font-medium tracking-[2px] text-white"
+                  className="nav-item uppercase md:text-xs xl:text-sm font-medium tracking-[2px] text-white"
                   activeClassName="active"
                 >
                   {item.label}
@@ -127,7 +127,7 @@ const Navbar = () => {
                 <button
                   onMouseEnter={() => handleMenuHover(item.label)}
                   onMouseLeave={handleMouseLeave}
-                  className="nav-item uppercase md:text-sm font-medium text-white tracking-[2px]"
+                  className="nav-item uppercase md:text-xs xl:text-sm font-medium text-white tracking-[2px]"
                 >
                   {item.label}
                 </button>
@@ -152,16 +152,16 @@ const Navbar = () => {
               <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
                 <button
                   onClick={toggleTranslation}
-                  className="self-stretch uppercase my-auto text-sm font-light tracking-[2px] text-white"
+                  className="self-stretch uppercase my-auto text-xs xl:text-sm font-light tracking-[2px] text-white"
                 >
                   {isArabic ? "English" : "Arabic (عربي)"}
                 </button>
-                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-9 min-h-[36px]">
+                <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                   <img
                     loading="lazy"
                     src="./HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
-                    className="object-contain w-9 hidden lg:block"
+                    className="object-contain w-5 hidden lg:block"
                   />
                 </div>
               </div>
