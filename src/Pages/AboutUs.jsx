@@ -132,11 +132,11 @@ const AboutUs = () => {
                 alt="AboutUsMainbg"
                 className="object-cover absolute inset-0 size-full"
             />
-            <section className="flex relative inset-y-3/4 lg:inset-x-24 flex-col mt-8 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
+            <section className="flex relative inset-y-3/4 lg:inset-x-24 flex-col mt-4 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
                 <h1 className="md:text-5xl Y-axis-text-Title text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, THINK JEF
                 </h1>
-                <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
+                <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
               <Link to={'/GetInTouchForm'}>
               <button className="uppercase Y-axis-text-Title px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Get in touch
@@ -178,7 +178,7 @@ const AboutUs = () => {
             <div className="flex flex-wrap flex-1 justify-center mx-auto size-full max-md:px-5">
               {visionData.map((card, index) => (
                 <article key={index} className="flex  Y-axis-card-anm flex-col grow shrink justify-center h-full pr-px max-w-[311px] min-w-[240px] w-[249px]">
-                  <div className="flex card-slider flex-col px-5 py-14 w-full hover:bg-stone-900 hover:border-opacity-80 border border-white border-opacity-10 lg:h-[55vh] max-w-[310px] h-auto max-md:pl-5">
+                  <div className="flex card-slider flex-col px-5 py-14 w-full hover:bg-stone-900 hover:border-opacity-80 border border-white border-opacity-10 h-[80vh] 2xl:h-[55vh] max-w-[310px] max-md:pl-5">
                     <div className="flex flex-col items-center pb-8 w-full min-h-[110px]">
                       <div className="flex justify-center items-end w-full min-h-[80px]">
                         <div className="flex overflow-hidden flex-col flex-1 shrink w-full basis-0 min-w-[240px]">
@@ -191,7 +191,7 @@ const AboutUs = () => {
                     <h2 className="flex flex-col pb-16 text-sm tracking-widest leading-loose text-center text-white uppercase whitespace-nowrap min-h-[88px]">
                       <div className="w-full max-md:px-5">{card.title}</div>
                     </h2>
-                    <p className="flex z-10 flex-col pb-16 text-base font-thin leading-6 text-center text-white">
+                    <p className="flex z-10 flex-col pb-16 text-sm 2xl:text-base font-thin leading-6 text-center text-white">
                       <span className="pr-2 pl-2 w-full">{card.description}</span>
                     </p>
                     {card.learnMore && (
@@ -401,7 +401,7 @@ const Overview = () => {
                 <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
                   30 Years of Experience
                 </div>
-                <div className="mt-16 text-lg w-[323px] max-md:mt-10">
+                <div className="mt-16 text-lg max-md:mt-10">
                   Experience across geographies.
                 </div>
                 <div className="mt-3 text-lg">Serving many industries segments</div>
