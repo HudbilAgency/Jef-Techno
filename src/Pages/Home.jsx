@@ -135,7 +135,7 @@ const buttonData = [
     indiaProjects: 58,
     gcc: 16,
     description: "A Power System Study involves analyzing various aspects of an electrical power system to identify potential issues and optimize performance. These studies include load flow analysis, short circuit studies, relay coordination, arc flash analysis, and more, all aimed at enhancing system reliability and safety.",
-    className: "mt-[calc(65vh-35rem)] md:mt-[calc(30vh-35rem)] 2xl:mt-[calc(30vh-45rem)] md:ml-[20rem] 2xl:ml-[25rem]",
+    className: "mt-[calc(65vh-17rem)] md:mt-[calc(30vh-35rem)] 2xl:mt-[calc(30vh-45rem)] md:ml-[20rem] 2xl:ml-[25rem]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png',
@@ -250,7 +250,7 @@ function Home() {
 
 
   // Responsive value for `itemsPerPage`
-  const itemsPerPage = window.innerWidth >= 1024 ? itemsPerPageDesktop
+  const itemsPerPage = window.innerWidth >= 1280 ? itemsPerPageDesktop
     : window.innerWidth >= 768 ? itemsPerPageTablet
       : itemsPerPageMobile;// Number of cards visible at once
   const totalItems = blogData.length; // Total number of blog cards
@@ -1073,7 +1073,7 @@ const WhatWeDoSection = () => {
               </section>
 
               {/* Right Section */}
-              <section className="Y-axis-text lg:w-[40%] flex flex-col items-end self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
+              <section className="Y-axis-text lg:w-[40%] flex flex-col lg:items-end lg:self-end justify-end"> {/* Ensure the section takes 50% and is aligned to the right */}
                 <div className="flex flex-col lg:w-[80%] text-xl font-medium leading-10 max-md:max-w-full">
                   <div className="shrink-0 mt-6 border border-red-700 thin-border max-md:max-w-full" />
                   <h2 className="mt-8 text-white 2xl:text-lg text-sm uppercase tracking-wider max-md:max-w-full">{buttonData[hoveredButtonIndex]?.title || 'Grounding studies projects completed'}</h2>
@@ -1144,28 +1144,71 @@ const WhatWeDoSection = () => {
 
 
 function FeatureSection() {
+  useGSAP(() => {
+    let mm = gsap.matchMedia();
+  
+    mm.add({
+      // For larger screens (1024px and above)
+      largeScreen: "(min-width: 1025px)",
+      // For mobile screens (1024px and below)
+      smallScreen: "(max-width: 1024px)"
+    }, (context) => {
+      let { largeScreen, smallScreen } = context.conditions;
+  
+      let tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: ".container",
+          toggleActions: "play none none reverse",
+          start: "10 10%",
+          end: "center 50%",
+          pin: true
+        }
+      });
+  
+      // Animations for larger screens (1025px and above)
+      if (largeScreen) {
+        // Text Animation for larger screens
+        tl.to(".title1", { x: "3vw", opacity: 0, scrub: true }, "display")
+          .to(".description1", { y: "1rem", opacity: 0 }, "display")
+          .fromTo(".title2", { x: "2vw", opacity: 0 }, { x: 0, opacity: 1 })
+          .fromTo(".description2", { y: "0.5rem", opacity: 0 }, { y: 0, opacity: 1 });
+  
+        // Image Animation for larger screens
+        tl.to(".image1", { x: "60rem", y: "-40rem" }, "display")
+          .to(".image2", { x: "-63rem", y: "-40rem" }, "display")
+          .to(".buttonRM0", { x: "300rem" }, "display")
+          .fromTo(".buttonRM1", { x: "20rem", opacity: 0 }, { x: "0rem", opacity: 1 });
+      }
+  
+      // Animations for mobile screens (1024px and below)
+      if (smallScreen) {
+        // Image and text animation for mobile view
+        tl.to(".SmImg1", { x: "-150%" }, "display")
+          .to(".SmImg2", { x: "-113%" }, "display")
+          .to(".textSM1", { y: "200%" }, "display")
+          .to(".textSM2", { y: "-215%" }, "display");
+      }
+    });
+  });
+  
+
   return (
-    <>
+    <section className="lg:hidden mx-auto h-auto ">
 
-      {/* For Mobile View */}
-
-      <section className=" mx-auto h-auto ">
-
-        <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
-        <div className="flex sm:gap-80 gap-12 mt-5">
-          <img src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="SmImg1" />
-          <img src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className="SmImg2" />
-        </div>
-        <div className="textSM1 relative">
-          <h1 className=" text-white -mt-10 font-medium text-center text-3xl uppercase">Smart <br />digitalisation</h1>
-          <h3 className=" text-white text-lg  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
-        </div>
-        <div className="textSM2 relative">
-          <h1 className=" text-white mt-32 font-medium text-center text-3xl uppercase">Our L&d <br />centre</h1>
-          <h3 className=" text-white text-lg text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
-        </div>
-      </section>
-    </>
+    <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
+    <div className="flex sm:gap-80 gap-12 mt-5">
+      <img src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="SmImg1"/>
+      <img src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className="SmImg2"/>
+    </div>
+    <div className="textSM1 relative">
+      <h1 className=" text-white -mt-10 font-medium text-center text-3xl uppercase">Smart <br />digitalisation</h1>
+      <h3 className=" text-white text-lg  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+    </div>
+    <div className="textSM2 relative">
+      <h1 className=" text-white mt-32 font-medium text-center text-3xl uppercase">Our L&d <br />centre</h1>
+      <h3 className=" text-white text-lg text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
+    </div>
+  </section>
   );
 }
 

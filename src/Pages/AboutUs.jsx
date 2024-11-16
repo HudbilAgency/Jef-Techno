@@ -132,7 +132,7 @@ const AboutUs = () => {
                 alt="AboutUsMainbg"
                 className="object-cover absolute inset-0 size-full"
             />
-            <section className="flex relative inset-y-3/4 lg:inset-x-24 flex-col mt-4 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
+            <section className="flex relative px-4 inset-y-3/4 lg:inset-x-24 flex-col mt-4 w-full max-w-[1310px] max-md:mb-2.5 max-md:max-w-full">
                 <h1 className="md:text-5xl Y-axis-text-Title text-4xl font-bold tracking-wider text-white max-md:max-w-full max-md:text-4xl">
                 THINK ELECTRICAL, THINK JEF
                 </h1>
