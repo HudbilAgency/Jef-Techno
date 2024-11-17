@@ -655,7 +655,7 @@ function Home() {
         <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
         {index > 0 && (
           <div
-            className="absolute top-1/2 hover:bg-red-500  lg:left-24 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            className="absolute top-1/2 hover:bg-red-500  lg:left-24 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
             onClick={handlePrev}
           >
             <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
@@ -663,7 +663,7 @@ function Home() {
         )}
         {index < totalSlides - 1 && (
           <div
-            className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-0 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
             onClick={handleNext}
           >
             <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
