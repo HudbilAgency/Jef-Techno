@@ -428,13 +428,13 @@ const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }
   // Determine the position class based on the text of the item
   const positionClass =
     text === 'Power quality & root cause analysis' || text === 'Instrumentation earthing'
-      ? 'bottom-full'
-      : 'top-full';
+      ? 'bottom-1/2'
+      : 'bottom-1/2';
 
   return (
     <div
       ref={ref}
-      className={`relative flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+      className={` flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
         ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
       onMouseEnter={(e) => {
         setIsHovered(true);
@@ -445,15 +445,15 @@ const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }
         onMouseLeave(); // Calls the main onMouseLeave function to reset background image
       }}
     >
-      <span className="text-center text-[60%] md:text-sm ">{text}</span>
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
 
       {/* Hover Box - Visible only when hovered */}
       {isHovered && text && data.length > 0 && (
         <div className={`absolute left-1/2 transform -translate-x-1/2 ${positionClass} bg-white text-black p-4 rounded shadow-lg transition-opacity z-20 w-max mt-2`}>
           {data.map((item, index) => (
             <div key={index} className="text-center mb-1">
-              <h3 className="text-sm font-semibold">{item.label}</h3>
-              <p className="text-xs">{item.value}</p>
+              <h3 className="text-xs font-semibold">{item.label}</h3>
+              <p className="text-">{item.value}</p>
             </div>
           ))}
         </div>
@@ -461,6 +461,7 @@ const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }
     </div>
   );
 });
+
 
 
 
