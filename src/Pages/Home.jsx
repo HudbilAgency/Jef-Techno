@@ -546,7 +546,8 @@ function Home() {
 
   return (
     <>
-      <Navbar />
+      {!showVideo && <Navbar />}
+
       <div className="relative w-full h-screen overflow-hidden">
         <div ref={carouselRef} className="bg-no-repeat flex w-[300%] h-full ">
           <div className="relative w-full h-full ">
@@ -573,35 +574,36 @@ function Home() {
 
                   {/* Conditionally render the iframe video at 90% screen width */}
                   {showVideo && (
-                    <div className="hidden fixed inset-0 lg:flex items-center justify-center bg-black bg-opacity-75 z-50">
-                      <div className="w-[90vw] h-[90%]">
-                        {/* Close button */}
-                        <div className="-mt-[1%] flex justify-end">
-                          <button
-                            className="text-white border-white border border-spacing-2"
-                            onClick={closeVideo}
-                          >
-                            <img
-                              src="./HomePageImg/NavbarImg/CLoseMenuLogo.png"
-                              alt="closeButton"
-                              className="w-[2vw]"
-                            />
-                          </button>
-                        </div>
-
-                        {/* YouTube Iframe */}
-                        <iframe
-                          id="yt-player"
-                          className="w-full h-full object-contain rounded-md"
-                          src="https://www.youtube.com/embed/9xiS0T3smxM?enablejsapi=1&autoplay=1"
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                          allowFullScreen
-                        ></iframe>
+                  <div className="hidden fixed inset-0 lg:flex items-center justify-center bg-black bg-opacity-75 z-[9999]">
+                    <div className="w-[90vw] h-[90%]">
+                      {/* Close button */}
+                      <div className="-mt-[1%] flex justify-end">
+                        <button
+                          className="text-white border-white border border-spacing-2"
+                          onClick={closeVideo}
+                        >
+                          <img
+                            src="./HomePageImg/NavbarImg/CLoseMenuLogo.png"
+                            alt="closeButton"
+                            className="w-[2vw]"
+                          />
+                        </button>
                       </div>
+
+                      {/* YouTube Iframe */}
+                      <iframe
+                        id="yt-player"
+                        className="w-full h-full object-contain rounded-md"
+                        src="https://www.youtube.com/embed/9xiS0T3smxM?enablejsapi=1&autoplay=1"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                      ></iframe>
                     </div>
-                  )}
+                  </div>
+                )}
+
                 </div>
               </div>
             </div>
@@ -617,7 +619,7 @@ function Home() {
                 <br />FOR ELECTRICAL PROTECTION
               </h1>
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-                <button>
+                <button onClick={handlePlayVideo} >
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
@@ -653,22 +655,23 @@ function Home() {
           </div>
         </div>
         <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
-        {index > 0 && (
-          <div
-            className="absolute top-1/2 hover:bg-red-500  lg:left-24 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-            onClick={handlePrev}
-          >
-            <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
-          </div>
-        )}
-        {index < totalSlides - 1 && (
-          <div
-            className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-            onClick={handleNext}
-          >
-            <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
-          </div>
-        )}
+          {!showVideo && index > 0 && (
+            <div
+              className="absolute top-1/2 hover:bg-red-500 lg:left-24 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+              onClick={handlePrev}
+            >
+              <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
+            </div>
+          )}
+          {!showVideo && index < totalSlides - 1 && (
+            <div
+              className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+              onClick={handleNext}
+            >
+              <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
+            </div>
+          )}
+
       </div>
 
 
