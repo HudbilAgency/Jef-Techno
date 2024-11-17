@@ -1049,7 +1049,7 @@ const WhatWeDoSection = () => {
                 </div>
                 <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
                   <div className="grow max-md:max-w-full WWD-slider">
-                    <div className="mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
+                    <div className="lg:mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
                       {buttonData.map((button, index) => (
                         <div key={index} className={`inline-flex Y-axis-WWD-anm ${button.className}`}
                         >
@@ -1158,38 +1158,35 @@ function FeatureSection() {
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef0.current,
-          start: 'center center',
-          end: 'bottom bottom',
-          toggleActions: 'play none none reverse',
+          start: "center center", // Animations start when the section's center aligns with the viewport's center
+          end: "bottom bottom",  // Ends when the bottom of the section aligns with the bottom of the viewport
+          toggleActions: "play none none reverse",
           pin: false,
         },
       })
-        .to(
-          divRef3.current,
-          {
-            y: 500,
-            opacity: 1,
-            duration: 0.5,
-          },
-          0
-        )
-        .fromTo(
-          divRef4.current,
-          { y: 0, opacity: 0 },
-          { y: -300, opacity: 1, duration: 0.5 },
-          0
-        )
         .fromTo(
           imgRef3.current,
-          { x: 0},
-          { x: -500, duration: 1, ease: 'power2.inout' },
+          { x: 0, opacity: 1 },
+          { x: "-60vw", opacity: 0, duration: 1, ease: "power2.out" },
           0
         )
         .fromTo(
           imgRef4.current,
-          { x: 0},
-          { x: -360, duration: 1, ease: 'power2.inout' },
+          { x: 0, opacity: 0 },
+          { x: "-75vw", opacity: 1, duration: 1, ease: "power2.out" },
           0
+        )
+        .fromTo(
+          divRef3.current,
+          { y: 0, opacity: 1 },
+          { y: "20vh", opacity: 0, duration: 0.8, ease: "power2.out" },
+          "0" // Overlap timing with the previous animation
+        )
+        .fromTo(
+          divRef4.current,
+          { y: 0, opacity: 0 },
+          { y: '-40vh', opacity: 1, duration: 0.8, ease: "power2.out" },
+          "0"
         );
     }, sectionRef0);
 
