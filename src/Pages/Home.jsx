@@ -1198,16 +1198,16 @@ function FeatureSection() {
 
     <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
     <div className="my-5 flex gap-8 h-[60%]">
-      <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full flex mx-auto"/>
+      <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full "/>
       <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full"/>
     </div>
-    <div ref={divRef3} className=" relative">
-      <h1 className=" text-white -mt-[5rem] font-medium text-center text-3xl uppercase">Smart <br />digitalisation</h1>
-      <h3 className=" text-white text-lg  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+    <div ref={divRef3} className="relative">
+      <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />digitalisation</h1>
+      <h3 className=" text-white text-base  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
     </div>
-    <div ref={divRef4} className="textSM2 relative">
-      <h1 className=" text-white mt-[5rem] font-medium text-center text-3xl uppercase">Our L&d <br />centre</h1>
-      <h3 className=" text-white text-lg text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
+    <div ref={divRef4} className="relative">
+      <h1 className=" text-white mt-[5rem] font-bold  text-center text-3xl uppercase">Our L&d <br />centre</h1>
+      <h3 className=" text-white text-base text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
     </div>
   </section>
   );
