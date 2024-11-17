@@ -50,7 +50,7 @@ const BlogInside = () => {
     < Navbar />
     <section className="flex py-24 overflow-hidden flex-col bg-neutral-100">
       <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
-        <div className="flex  flex-col pt-[25rem] lg:pt-0 w-full 2xl:pb-[34rem] max-md:pb-24 max-md:max-w-full">
+        <div className="flex  flex-col pt-[25rem] 2xl:pt-0 w-full 2xl:pb-[34rem] max-md:pb-24 max-md:max-w-full">
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ae8bec9f19f28a99633e8efc266b71ba441441588b11e410f20a29fc6b2bfcff?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" className="object-cover h-screen absolute inset-0 size-full" alt="" />
           <div className="flex relative flex-wrap gap-5 justify-between items-center self-center w-full max-w-[1528px] max-md:max-w-full" />
         </div>
