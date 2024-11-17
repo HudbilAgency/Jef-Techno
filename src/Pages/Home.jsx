@@ -29,8 +29,8 @@ const menuItems = [
 
 const featureData = [
   {
-    title: 'Smart digitalisation',
-    description: 'Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.',
+    title: 'Smart Digitization',
+    description: 'Our patented tool that provides end to end Digitization for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.',
     imageSrc: 'https://cdn.builder.io/api/v1/image/assets/TEMP/c4c01e3bc7bed86c38d371bdd6bd1af13d97347baf0d4bf14d4585deece35459?apiKey=7904fd7afaaf4ee2b0837ab86d91b244&',
   },
   {
@@ -96,7 +96,7 @@ const carouselData = [
   {
     backgroundImage: './HomePageImg/Img3.png',
     buttonImage: './HomePageImg/ArrowImg.png',
-    text: 'EXCELLENCE THROUGH DIGITALISATION',
+    text: 'EXCELLENCE THROUGH Digitization',
     dotColors: ['bg-gray-400', 'bg-gray-400', 'bg-white']
   }
 ];
@@ -735,7 +735,7 @@ function Home() {
                       ref={textRef1}
                       className="text-5xl font-bold uppercase leading-none tracking-[3px] absolute top-16 right-[10%] 2xl:right-[40%]"
                     >
-                      Smart digitalisation
+                      Smart Digitization
                     </div>
                     <div
                       ref={textRef2}
@@ -1202,7 +1202,7 @@ function FeatureSection() {
       <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full"/>
     </div>
     <div ref={divRef3} className="relative">
-      <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />digitalisation</h1>
+      <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />Digitization</h1>
       <h3 className=" text-white text-base  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
     </div>
     <div ref={divRef4} className="relative">

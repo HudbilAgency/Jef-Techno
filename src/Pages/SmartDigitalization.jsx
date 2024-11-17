@@ -70,7 +70,7 @@ function SmartDigitalization() {
       </header>
       <section className="flex  overflow-hidden -mt-28 z-10 flex-col items-start self-center px-12 py-16 ml-4 max-w-full bg-white w-4/5 lg:w-3/5 max-md:px-5">
         <h1 className="text-3xl font-bold leading-none text-red-700 uppercase">
-          smart digitalisation
+          smart Digitization
         </h1>
         <p className="self-stretch mt-7 text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
           Our patented Smart Digitization process captures knowledge, streamlines workflows, and ensures accuracy at scale. Trusted by over 450+ customers globally, it delivers secure, standardized reports with customizable formats— over 5,000 reports and a million data points captured to date. Fast, secure, and reliable insights with every report.

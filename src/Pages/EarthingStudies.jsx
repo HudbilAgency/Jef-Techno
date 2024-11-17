@@ -817,7 +817,7 @@ const VerticalCarousel = () => {
                       </ul>
 
 
-                    <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
+                    <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold sm:ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-10 max-md:max-w-full">
@@ -829,7 +829,7 @@ const VerticalCarousel = () => {
                             <span className="leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-base lg:text-xs 2xl:text-base  font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
+                            <p className="sm:ml-4 text-base lg:text-xs 2xl:text-base  font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly

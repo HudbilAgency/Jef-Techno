@@ -496,7 +496,7 @@ const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave 
           }
         }}
       >
-        <span className="text-center lg:text-[10px] 2xl:text-[12px] md:text-sm ">{text}</span>
+        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
       </div>
    </Link>
 
@@ -695,14 +695,14 @@ const VerticalCarousel = () => {
         <div className="flex w-[95%] gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
           <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
-            <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
+          <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
               {benefitItems.map((item, index) => (
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
                     activeIndex === index
-                      ? "text-white md:text-xl xl:text-2xl font-semibold h-32 xl:h-56"
-                      : "h-auto text-base"
+                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                      : "h-auto text-xs 2xl:text-base"
                   }`}
                   onClick={() => handleClick(index)}
                 >
@@ -722,7 +722,7 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] 2xl:h-[86vh] lg:h-[75vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
@@ -736,7 +736,7 @@ const VerticalCarousel = () => {
                       loading="lazy"
                       src={content.imgSrc}
                       alt={content.title}
-                      className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
+                      className="object-contain max-w-full  w-[6rem] 2xl:w-[124px] transition-opacity duration-500 ease-in-out"
                     />
                     <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
                         {benefitItems.slice(0, 1).map((item, index) => (
@@ -764,7 +764,7 @@ const VerticalCarousel = () => {
                       </ul>
 
 
-                    <h2 className="mt-6 lg:w-[80%] md:text-2xl xl:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] lg:leading-[60px] uppercase max-md:max-w-full">
+                    <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold sm:ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
                       {content.title}
                     </h2>
                     <div className="mt-10 max-md:max-w-full">
@@ -776,7 +776,7 @@ const VerticalCarousel = () => {
                             <span className="leading-9 tracking-widest text-white max-md:max-w-full">
                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
                             </span>
-                            <p className="ml-4 text-base font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
+                            <p className="sm:ml-4 text-base lg:text-xs 2xl:text-base  font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
                                 ? (
                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly

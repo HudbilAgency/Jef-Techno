@@ -103,7 +103,7 @@ const Carousel = () => {
         
         <div className="mt-[450px] lg:mx-[200px] flex relative flex-col self-center   w-full max-w-[1310px] max-md:mt-10 max-md:max-w-full ">
             <h1 className="lg:text-6xl 2xl:text-7xl font-bold h-28 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-            EXCELLENCE THROUGH DIGITALISATION
+            EXCELLENCE THROUGH Digitization
             </h1>
             <div className="flex gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
               <button>

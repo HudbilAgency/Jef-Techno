@@ -541,7 +541,7 @@ const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave 
           }
         }}
       >
-        <span className="text-center lg:text-[10px] 2xl:text-[12px] md:text-sm ">{text}</span>
+        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
       </div>
    </Link>
 
@@ -670,195 +670,195 @@ function CarouselSection({ components }) {
 
 
 
-const VerticalCarousel = () => {
-  const benefitItems = [
-    "ABOUT Earthing studies",
-    "What is an Earthing/Grounding System Studies",
-    "Earthing/Grounding System Studies",
-    "Our Certifications and Expertise",
-    "Detailed Study Reports and Analysis",
-    "Benefits of Professional Earthing/Grounding System Studies",
-  ];
+// const VerticalCarousel = () => {
+//   const benefitItems = [
+//     "ABOUT Earthing studies",
+//     "What is an Earthing/Grounding System Studies",
+//     "Earthing/Grounding System Studies",
+//     "Our Certifications and Expertise",
+//     "Detailed Study Reports and Analysis",
+//     "Benefits of Professional Earthing/Grounding System Studies",
+//   ];
 
-  const cardContents = [
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is an earthing / grounding system studies",
-      description:
-        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our certifications and expertize",
-      description:
-        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Earthing/Grounding System Studies ?",
-      description:
-        "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensuring the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC, and local regulations.|Preventing operational disruptions and improving system efficiency",
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Preventing operational disruptions and improving system efficiency.",
-      description:
-        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Detailed Study Reports and Analysis",
-      description:
-        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Benefits of Professional Earthing/Grounding System Studies",
-      description:
-        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
-    },
-  ];
+//   const cardContents = [
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "What is an earthing / grounding system studies",
+//       description:
+//         "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
+//     },
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "Our certifications and expertize",
+//       description:
+//         `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
+//     },
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "Earthing/Grounding System Studies ?",
+//       description:
+//         "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensuring the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC, and local regulations.|Preventing operational disruptions and improving system efficiency",
+//     },
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "Preventing operational disruptions and improving system efficiency.",
+//       description:
+//         "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
+//     },
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "Detailed Study Reports and Analysis",
+//       description:
+//         `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
+//     },
+//     {
+//       imgSrc:
+//         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+//       title: "Benefits of Professional Earthing/Grounding System Studies",
+//       description:
+//         "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+//     },
+//   ];
 
-  const [activeIndex, setActiveIndex] = useState(0);
+//   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleClick = (index) => {
-    setActiveIndex(index);
-  };
+//   const handleClick = (index) => {
+//     setActiveIndex(index);
+//   };
 
-  return (
-    <section>
-      <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex w-[95%] gap-5 max-md:flex-col">
-          {/* Left Side: Benefit Items */}
-          <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
-            <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
-              {benefitItems.map((item, index) => (
-                <li
-                  key={index}
-                  className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
-                    activeIndex === index
-                      ? "text-white md:text-xl xl:text-2xl font-semibold h-32 xl:h-56"
-                      : "h-auto text-base"
-                  }`}
-                  onClick={() => handleClick(index)}
-                >
-                  {activeIndex === index && (
-                    <div className="bg-red-500 w-1 h-full mr-4"></div>
-                  )}
-                  <div
-                    className={`xl:w-[80%] uppercase min-w-[20%] ${
-                      activeIndex === index ? "text-white" : "text-gray-400"
-                    }`}
-                  >
-                    {item}
-                  </div>
-                </li>
-              ))}
-            </ul>
-          </div>
+//   return (
+//     <section>
+//       <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
+//         <div className="flex w-[95%] gap-5 max-md:flex-col">
+//           {/* Left Side: Benefit Items */}
+//           <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
+//             <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
+//               {benefitItems.map((item, index) => (
+//                 <li
+//                   key={index}
+//                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+//                     activeIndex === index
+//                       ? "text-white md:text-xl xl:text-2xl font-semibold h-32 xl:h-56"
+//                       : "h-auto text-base"
+//                   }`}
+//                   onClick={() => handleClick(index)}
+//                 >
+//                   {activeIndex === index && (
+//                     <div className="bg-red-500 w-1 h-full mr-4"></div>
+//                   )}
+//                   <div
+//                     className={`xl:w-[80%] uppercase min-w-[20%] ${
+//                       activeIndex === index ? "text-white" : "text-gray-400"
+//                     }`}
+//                   >
+//                     {item}
+//                   </div>
+//                 </li>
+//               ))}
+//             </ul>
+//           </div>
 
-          {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
-            <div
-              className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
-            >
-              {cardContents.map((content, index) => (
-                  <div
-                    key={index}
-                    className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 h-screen max-md:max-w-full"
-                  >
-                    <img
-                      loading="lazy"
-                      src={content.imgSrc}
-                      alt={content.title}
-                      className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
-                    />
-                    <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
-                        {benefitItems.slice(0, 1).map((item, index) => (
-                          <li
-                            key={index}
-                            className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
-                              activeIndex === index
-                                ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                                : "h-auto text-base"
-                            }`}
-                            onClick={() => handleClick(index)}
-                          >
-                            {activeIndex === index && (
-                              <div className="bg-red-500 w-1 h-full mr-4"></div>
-                            )}
-                            <div
-                              className={`w-[80%] uppercase min-w-[20%] ${
-                                activeIndex === index ? "text-white" : "text-gray-400"
-                              }`}
-                            >
-                              {item}
-                            </div>
-                          </li>
-                        ))}
-                      </ul>
-
-
-                    <h2 className="mt-6 lg:w-[80%] md:text-2xl lg:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
-                      {content.title}
-                    </h2>
-                    <div className="mt-10 max-md:max-w-full">
-                      <div className="flex gap-5 max-md:flex-col">
-                        <div className="flex h-auto flex-col w-full max-md:w-full">
-                          {/* Splitting description by period and inserting line breaks with bullet */}
-                          {content.description.split("|").map((sentence, idx) => (
-                          <div key={idx} className="flex items-start">
-                            <span className="leading-9 tracking-widest text-white max-md:max-w-full">
-                              {idx > 0 && "•"} {/* Add bullet point for new lines */}
-                            </span>
-                            <p className="ml-4 text-base  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
-                              {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
-                                ? (
-                                  <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
-                                ) : (
-                                  sentence.trim() // Render the rest of the text as normal
-                                )}
-                            </p>
+//           {/* Right Side: Vertical Carousel Content */}
+//           <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
+//             <div
+//               className="absolute transition-transform duration-500 ease-in-out"
+//               style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
+//             >
+//               {cardContents.map((content, index) => (
+//                   <div
+//                     key={index}
+//                     className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 h-screen max-md:max-w-full"
+//                   >
+//                     <img
+//                       loading="lazy"
+//                       src={content.imgSrc}
+//                       alt={content.title}
+//                       className="object-contain max-w-full aspect-[1.77] w-[6rem] xl:w-[124px] transition-opacity duration-500 ease-in-out"
+//                     />
+//                     <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
+//                         {benefitItems.slice(0, 1).map((item, index) => (
+//                           <li
+//                             key={index}
+//                             className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${
+//                               activeIndex === index
+//                                 ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+//                                 : "h-auto text-base"
+//                             }`}
+//                             onClick={() => handleClick(index)}
+//                           >
+//                             {activeIndex === index && (
+//                               <div className="bg-red-500 w-1 h-full mr-4"></div>
+//                             )}
+//                             <div
+//                               className={`w-[80%] uppercase min-w-[20%] ${
+//                                 activeIndex === index ? "text-white" : "text-gray-400"
+//                               }`}
+//                             >
+//                               {item}
+//                             </div>
+//                           </li>
+//                         ))}
+//                       </ul>
 
 
-
-                          </div>
-                        ))}
+//                     <h2 className="mt-6 lg:w-[80%] md:text-2xl lg:text-3xl font-semibold ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
+//                       {content.title}
+//                     </h2>
+//                     <div className="mt-10 max-md:max-w-full">
+//                       <div className="flex gap-5 max-md:flex-col">
+//                         <div className="flex h-auto flex-col w-full max-md:w-full">
+//                           {/* Splitting description by period and inserting line breaks with bullet */}
+//                           {content.description.split("|").map((sentence, idx) => (
+//                           <div key={idx} className="flex items-start">
+//                             <span className="leading-9 tracking-widest text-white max-md:max-w-full">
+//                               {idx > 0 && "•"} {/* Add bullet point for new lines */}
+//                             </span>
+//                             <p className="ml-4 text-base  font-light lg:leading-7 tracking-widest text-white max-md:max-w-full">
+//                               {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
+//                                 ? (
+//                                   <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
+//                                 ) : (
+//                                   sentence.trim() // Render the rest of the text as normal
+//                                 )}
+//                             </p>
 
 
 
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
+//                           </div>
+//                         ))}
 
-            </div>
-          </div>
 
-          {/* Additional Image Section */}
-          <div className="ml-5 w-[45%] max-md:ml-0 max-md:w-full">
-            <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
-              <img
-                loading="lazy"
-                src="./SerivePage/magna-discovery.jpg.png"
-                alt="Earthing/Grounding System Illustration"
-                className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+
+//                         </div>
+//                       </div>
+//                     </div>
+//                   </div>
+//                 ))}
+
+//             </div>
+//           </div>
+
+//           {/* Additional Image Section */}
+//           <div className="ml-5 w-[45%] max-md:ml-0 max-md:w-full">
+//             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
+//               <img
+//                 loading="lazy"
+//                 src="./SerivePage/magna-discovery.jpg.png"
+//                 alt="Earthing/Grounding System Illustration"
+//                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
+//               />
+//             </div>
+//           </div>
+//         </div>
+//       </div>
+//     </section>
+//   );
+// };
 
 
 
