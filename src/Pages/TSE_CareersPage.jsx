@@ -38,7 +38,7 @@ function JobDetails() {
         <h1 className='text-4xl'>Job Details</h1>
       </header>
 
-      <section className="flex p-4 flex-col items-start self-center mt-24 w-full max-w-[81rem] max-md:mt-10 max-md:max-w-full">
+      <section className="flex p-0 lg:p-10 xl:p-10 flex-col items-start self-center mt-24 w-full max-w-[81rem] max-md:mt-10 max-md:max-w-full">
         <article className="flex flex-col self-stretch pt-8 w-full rounded-3xl  max-md:max-w-full">
           <div className="flex flex-wrap gap-10 justify-between items-start w-full text-base text-red-700 max-md:max-w-full">
             <span className="flex flex-col justify-center py-1 px-2 rounded-xl bg-red-700 bg-opacity-10">

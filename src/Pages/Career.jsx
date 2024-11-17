@@ -232,7 +232,7 @@ const Career = () => {
           ))}
         </div> */}
       </section>
-      <section className="flex flex-col self-center py-16 mt-24 w-full max-w-[1440px] max-md:mt-10 max-md:max-w-full">
+      <section className="flex p-0 lg:p-10 xl:p-10 flex-col self-center py-16 mt-24 w-full max-w-[1440px] max-md:mt-10 max-md:max-w-full">
         <div className="flex p-4 flex-wrap gap-10 justify-between items-end self-center max-w-full w-[1296px]">
           <div className="flex flex-col min-w-[240px] text-stone-900 max-md:max-w-full">
             <h2 className="self-start text-4xl font-bold text-center max-md:max-w-full max-md:text-4xl">
