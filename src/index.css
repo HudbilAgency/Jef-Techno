@@ -100,10 +100,11 @@ body {
   /* Add some space for the line */
 }
 
+
 .nav-item::after {
   content: '';
   position: absolute;
-  bottom: -3rem; /* Set the gap between text and line */
+  bottom: -2.8rem; /* Set the gap between text and line */
   left: 0;
   width: 120%; /* Full width of the menu item */
   height: 2px; /* Thickness of the line */
@@ -113,6 +114,7 @@ body {
   transform-origin: left; /* Animate from left to right */
   transition: transform 0.3s ease; /* Smooth animation */
 }
+
 
 .nav-item:hover::after {
   transform: scaleX(1); /* Show the line on hover */
