@@ -1049,7 +1049,7 @@ const WhatWeDoSection = () => {
                 </div>
                 <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
                   <div className="grow max-md:max-w-full WWD-slider">
-                    <div className="lg:mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
+                    <div className="md:mt-[40%] lg:my-0 lg:gap-y-8 grid grid-cols-3  items-center self-center lg:flex flex-wrap lg:gap-5 lg:h-full max-md:flex-col">
                       {buttonData.map((button, index) => (
                         <div key={index} className={`inline-flex Y-axis-WWD-anm ${button.className}`}
                         >
