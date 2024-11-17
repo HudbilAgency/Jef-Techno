@@ -146,7 +146,7 @@ const buttonData = [
     indiaProjects: 36,
     gcc: 30,
     description: "A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies.",
-    className: "mt-[calc(10vh-4rem)] md:mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] md:ml-[8rem] 2xl:ml-[10rem]",
+    className: "mt-[calc(10vh-2rem)] md:mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] md:ml-[8rem] 2xl:ml-[10rem]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
@@ -157,7 +157,7 @@ const buttonData = [
     indiaProjects: 24,
     gcc: "08",
     description: "An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation.",
-    className: "mt-[calc(10vh-10rem)] md:mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] md:-ml-[0.5rem] 2xl:ml-0",
+    className: "mt-[calc(10vh-10rem)] md:mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] ml-[0.5rem] md:-ml-[0.5rem] 2xl:ml-0",
   },
 ];
 
@@ -1054,7 +1054,7 @@ const WhatWeDoSection = () => {
                         <div key={index} className={`inline-flex Y-axis-WWD-anm ${button.className}`}
                         >
                           <button
-                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-32 h-32 md:w-36 md:h-36 2xl:w-44 2xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
+                            className={`border-[.5px] p-4 border-white animate-[pulse_2s_infinite] hover:animate-none rounded-full w-28 h-28 md:w-36 md:h-36 2xl:w-44 2xl:h-44 bg-cover bg-center cursor-pointer transition-all duration-300 ease-in-out ${hoveredButtonIndex === index ? 'bg-red-500 border-none' : 'bg-transparent'}`}
                             onMouseEnter={() => setHoveredButtonIndex(index)}
                           >
                             <span className="text-white text-[55%] 2xl:text-sm uppercase leading-none tracking-[0px]">{button.text}</span>
@@ -1196,7 +1196,7 @@ function FeatureSection() {
   return (
     <section ref={sectionRef0} className="lg:hidden mx-auto h-screen ">
 
-    <h1 className="uppercase tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
+    <h1 className="uppercase tracking-wider sm:tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
     <div className="my-5 flex gap-8 h-[60%]">
       <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full "/>
       <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full"/>
@@ -1461,7 +1461,7 @@ function BlogCard({ imageSrc, title, path }) {
 
 
   return (
-    <article className="flex X-axis-card-anm flex-col lg:mx-6 w-[98vw] lg:w-[22vw]">
+    <article className="flex X-axis-card-anm flex-col lg:mx-6 w-[100vw] 2xl:w-[22vw]">
       <div className="flex card-slider flex-col grow max-md:mt-10">
         <div className="flex flex-col justify-center w-full min-h-[400px] overflow-hidden relative">
           <img
