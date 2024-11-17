@@ -427,7 +427,7 @@ const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }
   const positionClass =
     text === 'Power quality & root cause analysis' || text === 'Instrumentation earthing'
       ? 'bottom-1/2'
-      : 'bottom-1/2';
+      : 'top-1/2';
 
   return (
     <div

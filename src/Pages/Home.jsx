@@ -965,6 +965,15 @@ const WhatWeDoSection = () => {
   // What we do Mobile view --------------------------------------------//
 
   useEffect(() => {
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    if (isIOS) {
+      document.querySelectorAll("video").forEach(video => {
+        video.play();
+      });
+    }
+  }, []);
+
+  useEffect(() => {
     if (showSection) {
       gsap.fromTo(
         gsap.utils.toArray('.Y-axis-WWD-anm'),
