@@ -538,7 +538,7 @@ const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave 
    <Link to={path}>
      <div
         ref={ref}
-        className={`flex w-[7.2rem] h-[7.2rem] md:h-[11rem] md:w-[11rem] lg:w-[13rem] lg:h-[13rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
           ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
         onMouseEnter={() => {
           if (text !== "") {
@@ -551,7 +551,7 @@ const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave 
           }
         }}
       >
-        <span className="text-center text-[60%] md:text-sm ">{text}</span>
+        <span className="text-center lg:text-[10px] 2xl:text-[12px] md:text-sm ">{text}</span>
       </div>
    </Link>
 
