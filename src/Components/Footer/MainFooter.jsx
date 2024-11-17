@@ -102,7 +102,7 @@ function Footer() {
     <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
       <div className="flex X-axis-card-anm-footer-footer flex-row gap-10 justify-between items-start mt-5 lg:w-[88vw] max-w-[95vw]">
-        <div className="hidden  card-slider-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
+        <div className="hidden  card-slider-footer X-axis-card-anm-footer lg:block text-xl tracking-widest text-white uppercase max-md:max-w-full">
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">

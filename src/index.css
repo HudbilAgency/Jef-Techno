@@ -119,3 +119,7 @@ body {
 .nav-item:hover::after {
   transform: scaleX(1); /* Show the line on hover */
 }
+
+.X-axis-card-anm-footer{
+  opacity: 0;
+}
