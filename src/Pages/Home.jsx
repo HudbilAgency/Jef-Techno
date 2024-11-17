@@ -1054,7 +1054,7 @@ const WhatWeDoSection = () => {
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
          
-         <h1 className="z-50 text-white font-bold absolute inset-0 my-[50vh] flex  justify-center text-3xl sm:text-4xl underline">India to 24 Countries</h1>
+         <h1 className="z-50 text-white font-bold absolute inset-0 my-[50vh] flex  justify-center text-3xl sm:text-4xl uppercase underline">India to 24 Countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}

@@ -265,7 +265,7 @@ const EarthingStudies = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+        <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
           <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
             EARTHING STUDIES
           </h1>
@@ -551,7 +551,7 @@ const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave 
           }
         }}
       >
-        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px]">{text}</span>
       </div>
    </Link>
 
@@ -825,26 +825,19 @@ const VerticalCarousel = () => {
                         <div className="flex h-auto flex-col w-full max-md:w-full">
                           {/* Splitting description by period and inserting line breaks with bullet */}
                           {content.description.split("|").map((sentence, idx) => (
-                          <div key={idx} className="flex items-start">
-                            <span className="leading-9 tracking-widest text-white max-md:max-w-full">
-                              {idx > 0 && "•"} {/* Add bullet point for new lines */}
-                            </span>
-                            <p className="sm:ml-4 text-base lg:text-xs 2xl:text-base  font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
-                              {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim())
-                                ? (
-                                  <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
-                                ) : (
-                                  sentence.trim() // Render the rest of the text as normal
-                                )}
-                            </p>
-
-
-
-                          </div>
+                         <div key={idx} className="flex items-start">
+                         <span className="leading-none lg:-mt-[1.8%] 2xl:-mt-[0.5%] tracking-widest text-white max-md:max-w-full self-start">
+                           {idx > 0 && "•"} {/* Add bullet point for new lines */}
+                         </span>
+                         <p className="sm:ml-4 text-base lg:text-xs 2xl:text-base font-light 2xl:leading-7 tracking-widest text-white max-md:max-w-full">
+                           {["Enhanced Safety:", "Operational Reliability:", "Standards Compliance:", "Cost Savings:"].includes(sentence.trim()) ? (
+                             <span className="text-red-500 !important">{sentence.trim()}</span> // Add the color red forcibly
+                           ) : (
+                             sentence.trim() // Render the rest of the text as normal
+                           )}
+                         </p>
+                       </div>
                         ))}
-
-
-
                         </div>
                       </div>
                     </div>

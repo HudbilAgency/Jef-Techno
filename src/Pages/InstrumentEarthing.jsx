@@ -285,7 +285,7 @@ const InstrumentEarthing = () => {
           alt=""
           className="object-cover absolute inset-0 size-full"
         />
-        <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+        <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
           <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
              INSTRUMENTATION EARTHING STUDIES
           </h1>
@@ -993,7 +993,7 @@ function KeyCheckPoints({ slides }) {
 
   return (
     <div className="flex-auto max-md:max-w-full">
-      <div className="flex gap-5 max-md:flex-col">
+      <div className="flex lg:w-[95vw] 2xl:w-full gap-5 max-md:flex-col">
         {/* Static left-side content */}
         <div className="flex flex-col w-[19%] Y-axis-Slider-anm max-md:ml-0 max-md:w-full">
           <h2 className="flex px-5 pb-7 w-full text-3xl tracking-normal leading-9 text-white uppercase max-md:mt-10">
@@ -1019,14 +1019,14 @@ function KeyCheckPoints({ slides }) {
                   <div className="flex gap-5 max-md:flex-col">
                     <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
                       {slide.keyPoints.slice(0, midpoint).map((point, idx) => (
-                        <li key={idx} className="text-lg text-white mt-5 max-md:max-w-full">
+                        <li key={idx} className="text-base 2xl:text-lg text-white mt-5 max-md:max-w-full">
                           {idx + 1}. {point}
                         </li>
                       ))}
                     </div>
                     <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
                       {slide.keyPoints.slice(midpoint).map((point, idx) => (
-                        <li key={idx + midpoint} className="text-lg text-white mt-5 max-md:max-w-full">
+                        <li key={idx + midpoint} className="text-base 2xl:text-lg text-white mt-5 max-md:max-w-full">
                           {idx + midpoint + 1}. {point}
                         </li>
                       ))}
@@ -1046,7 +1046,7 @@ function KeyCheckPoints({ slides }) {
           }`}
           aria-label="Next"
         >
-          <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid basis-0 border-zinc-900 border-opacity-10 h-[3.75rem] min-h-[3.75rem] rounded-[3.75rem] w-[3.75rem]">
+          <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 h-[3.75rem] min-h-[3.75rem] rounded-[3.75rem] w-[3.75rem]">
             <img
               loading="lazy"
               src="https://cdn.builder.io/api/v1/image/assets/TEMP/5bcda9453f93d58b48e207cfd8d3b19c69b7c4768fd9e522cbaaea6950c4e4b3?placeholderIfAbsent=true&apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488"
