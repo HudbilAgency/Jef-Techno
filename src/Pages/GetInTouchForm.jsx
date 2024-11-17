@@ -76,7 +76,7 @@ const GetInTouchForm = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
+            <div className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
               <div className="flex flex-col grow justify-center max-md:mt-10 max-md:max-w-full">
                 <div className="flex flex-col w-full max-md:max-w-full">
                   <div className="flex flex-wrap gap-1 items-start pb-px w-full text-xs max-md:max-w-full">
