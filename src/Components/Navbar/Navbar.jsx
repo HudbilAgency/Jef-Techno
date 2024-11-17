@@ -135,6 +135,8 @@ const Navbar = () => {
               {item.hasDropdown && (
                 <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                   <img
+                    onMouseEnter={() => handleMenuHover(item.label)}
+                    onMouseLeave={handleMouseLeave}
                     loading="lazy"
                     src="./HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
