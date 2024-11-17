@@ -544,6 +544,37 @@ function Home() {
     return () => ctx.revert();
   }, []);
 
+  useEffect(() => {
+    if (showVideo) {
+      window.onYouTubeIframeAPIReady = () => {
+        const player = new YT.Player('yt-player-container', {
+          videoId: '9xiS0T3smxM',
+          playerVars: {
+            autoplay: 1,
+            controls: 1,
+          },
+          events: {
+            onStateChange: (event) => {
+              if (event.data === YT.PlayerState.ENDED) {
+                closeVideo(); // Automatically close the section when the video ends
+              }
+            },
+          },
+        });
+      };
+  
+      // Load YouTube API if not already loaded
+      if (!window.YT) {
+        const tag = document.createElement('script');
+        tag.src = 'https://www.youtube.com/iframe_api';
+        const firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+      } else {
+        window.onYouTubeIframeAPIReady();
+      }
+    }
+  }, [showVideo]);
+
   return (
     <>
       {!showVideo && <Navbar />}
@@ -591,15 +622,7 @@ function Home() {
                       </div>
 
                       {/* YouTube Iframe */}
-                      <iframe
-                        id="yt-player"
-                        className="w-full h-full object-contain rounded-md"
-                        src="https://www.youtube.com/embed/9xiS0T3smxM?enablejsapi=1&autoplay=1"
-                        title="YouTube video player"
-                        frameBorder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                      <div className="w-full h-full object-contain rounded-md" id="yt-player-container"></div>
                     </div>
                   </div>
                 )}
@@ -641,7 +664,7 @@ function Home() {
                 EXCELLENCE THROUGH DIGITALISATION
               </h1>
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
-                <button>
+                <button >
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
@@ -1031,7 +1054,7 @@ const WhatWeDoSection = () => {
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
          
-         <h1 className="z-50 text-white font-bold absolute inset-0 my-[50vh] flex  justify-center text-4xl underline">India to 24 Countries</h1>
+         <h1 className="z-50 text-white font-bold absolute inset-0 my-[50vh] flex  justify-center text-3xl sm:text-4xl underline">India to 24 Countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}
