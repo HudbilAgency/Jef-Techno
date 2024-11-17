@@ -1036,6 +1036,7 @@ const WhatWeDoSection = () => {
             className="object-cover absolute inset-0 size-full"
             autoPlay
             muted
+            playsInline 
           >
             <source src="./HomePageImg/Earth zoom.mp4" type="video/mp4" />
           </video>
