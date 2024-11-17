@@ -142,7 +142,7 @@ const GetInTouchForm = () => {
                   </div>
                   <textarea
                     id="query"
-                    className="flex mt-2.5 w-full bg-white rounded border border-gray-200 border-solid min-h-[92px] max-md:max-w-full"
+                    className="flex p-4 text-base mt-2.5 w-full bg-white rounded border border-gray-200 border-solid min-h-[92px] max-md:max-w-full"
                     maxLength={1000}
                     required
                   />
