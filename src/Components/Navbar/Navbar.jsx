@@ -529,6 +529,9 @@ function IndustriesComponent() {
 
 
 const FAQComponent = () => {
+
+  const { isArabic, toggleTranslation } = useContext(TranslationContext);
+
   const [faqData, setFaqData] = useState([
     { 
       question: "Home", 
@@ -670,6 +673,14 @@ const FAQComponent = () => {
                 onToggle={() => toggleFAQ(index)}
               />
             ))}
+            <div className='mt-[10%] mx-auto'>
+                <button
+                  onClick={toggleTranslation}
+                  className="self-stretch border p-4 uppercase my-auto text-base font-light border-red-500 tracking-[2px] text-white"
+                >
+                  {isArabic ? "English" : "Arabic (عربي)"}
+                </button>
+            </div>
           </div>
         </div>
       </div>
