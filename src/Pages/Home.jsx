@@ -832,12 +832,18 @@ function Home() {
           {/* bg-[url('/home-main.png')] */}
 
       <main className="flex overflow-hidden flex-col">
-        <section  className="bg-[url('./HomePageImg/FounderMsgSection.png')] bg-cover overflow-hidden relative w-full h-[100vh]">
+        <section 
+        style={{ backgroundImage: "url('/HomePageImg/FounderMsgSection.png')", 
+          backgroundSize: "cover", 
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat" }}
+        className="overflow-hidden relative w-full h-auto"
+        >
           {/* <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg" className="hidden lg:block object-cover absolute inset-0 h-full w-full" /> */}
           <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full" />
           <div className="flex gap-5 p-4 max-md:flex-col">
             <div className=" flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
-              <div className="flex  z-10 2xl:my-[50vh] 2xl:mt-28 lg:mt-12 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
+              <div className="flex  z-10 2xl:my-16 2xl:mt-28 lg:mt-12 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
                   Founder message
                 </h1>
