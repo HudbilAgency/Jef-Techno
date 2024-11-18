@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 
 

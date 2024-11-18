@@ -17,7 +17,7 @@ function MainFooter() {
       {
         x: 0,
         opacity: 1,
-        duration: 1,
+        duration: 0.8,
         stagger: 0.2, // 0.3s delay between each card animation
         scrollTrigger: {
           trigger: '.card-slider-footer',
