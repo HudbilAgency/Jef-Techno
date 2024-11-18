@@ -77,9 +77,11 @@ const MainImgWhite = () => {
                 />
               </div>
             </div>
+            <Link to={'/GetInTouchForm'}>
             <button className="gap-3 self-stretch p-2.5 my-auto text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[216px]">
               Get In Touch
             </button>
+           </Link>
           </div>
         </header>
         <div className="relative shrink-0 mt-6 h-px border border-solid border-neutral-200 max-md:max-w-full" />

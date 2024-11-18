@@ -115,7 +115,7 @@ const AboutUs = () => {
         },
         {
           icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/046a00e721b213a29322e89fd6ebaa8d2b511514f4b267d8a196e97e597db69f?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-          title: "assurane",
+          title: "ASSURANCE",
           description: "We strive to consistently deliver projects on time, exceeding the expectations of stakeholders in terms of quality and completeness while following the mandated systems and procedures."
         }
       ];
@@ -261,8 +261,8 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
-              <p className="mt-6 Y-axis-text sm:mt-8 md:mt-11 text-lg md:text-xl font-thin leading-7 sm:leading-8 text-black">
-                From three decades, JEF Techno as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
+              <p className="mt-6 Y-axis-text sm:mt-8 md:mt-11 text-lg md:text-xl font-extralight leading-7 sm:leading-8 text-black">
+                From three decades, JEF as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
               </p>
             </div>
           </div>
@@ -295,7 +295,7 @@ const AboutUs = () => {
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
           <h1 className="pb-px w-full Y-axis-text font-bold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
-            JEF LEADERSHIP
+           SAFETY AT SCALE
           </h1>
           <p className="mt-5 Y-axis-text w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
           Over the last couple of decades, with our help, our clients have been able to <br /> assure
@@ -757,7 +757,7 @@ function EconomicEngine() {
             </span>
           </h1>
           <p className="pb-px Y-axis-text mt-16 w-full text-lg  font-light max-md:max-w-full">
-          We provide the below-mentioned solutions for Transmission & Distribution Utilities,<br /> Oil & Gas Infrastructure, and such other customers. Earthing/Grounding Studies, <br /> Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing
+          We provide the below-mentioned solutions for Transmission & Distribution Utilities,<br /> Oil & Gas Infrastructure, and such other customers. <br /><p className='font-medium'> Earthing/Grounding Studies, Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing</p>
           </p>
         </header>
         <div className="items-center mt-20 max-w-full  max-md:mt-10">

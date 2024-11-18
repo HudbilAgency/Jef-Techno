@@ -260,10 +260,11 @@ const LightningProtectionStudies = () => {
           Lightning Protection Studies
           </h1>
           <div className="Y-axis-text-Title-Service2 flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
-            
+          <Link to={'/GetInTouchForm'}>
             <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
               Get in touch
             </button>
+          </Link>
           </div>
         </div>
       </div>
@@ -322,7 +323,9 @@ const LightningProtectionStudies = () => {
         <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
       </div>
       <button className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+      <Link to={'/GetInTouchForm'}>
         <span className="self-stretch my-auto">CONTACT US</span>
+      </Link>
         <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
       </button>
    </section>

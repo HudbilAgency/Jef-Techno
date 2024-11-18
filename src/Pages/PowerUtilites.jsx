@@ -3,6 +3,7 @@ import Navbar from "../Components/Navbar/Navbar";
 import MainFooter from "../Components/Footer/MainFooter";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 
 
 
@@ -127,13 +128,13 @@ function PowerUtilites() {
       }, []);
 
 
-      const services = [
+       const services = [
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
-        { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }] },
-        { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }] },
-        { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }] },
+        { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }] , path: '/EarthingStudies'},
+        { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }] , path: '/LightningProtectionStudies'},
+        { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }] , path: '/PowerSystemStudies'},
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
@@ -141,8 +142,8 @@ function PowerUtilites() {
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
-        { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }] },
-        { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }] },
+        { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }] , path: '/PowerQualityStudies'},
+        { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }] , path: '/InstrumentEarthing'},
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
@@ -267,8 +268,8 @@ function PowerUtilites() {
             className="object-cover self-center max-w-full aspect-square w-20"
             />
             <h1 className="mt-16 self-center lg:w-[40%] font-semibold max-md:mt-10 max-md:max-w-full">
-            OUR UNIQUE ARRAY OF SERVICES FOR <br /> UTILITIES
-ADDRESSING CHALLENGES OF <br />ENERGY TRANSITION.
+            OUR UNIQUE ARRAY OF SERVICES FOR  UTILITIES
+            address CHALLENGES OF ENERGY TRANSITION.
             </h1>
         </header>
         </main>
@@ -340,9 +341,11 @@ ADDRESSING CHALLENGES OF <br />ENERGY TRANSITION.
         <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
           <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
           <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
+          <Link to={'/GetInTouchForm'}>
             <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
               Contact us
             </h1>
+          </Link>
             <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
             Get in touch with us for any business enquiry.
             </p>
@@ -419,18 +422,19 @@ const Navigation = () => (
 
 
 
-const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }, ref) => {
+const ServiceItem = React.forwardRef(({ path, text, data, onMouseEnter, onMouseLeave }, ref) => {
   // Local state to track hover state within ServiceItem
   const [isHovered, setIsHovered] = React.useState(false);
 
   // Determine the position class based on the text of the item
   const positionClass =
     text === 'Power quality & root cause analysis' || text === 'Instrumentation earthing'
-       ? 'bottom-1/2'
+      ? 'bottom-1/2'
       : 'top-1/2';
 
   return (
-    <div
+    <Link to={path}>
+      <div
       ref={ref}
       className={` flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
         ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
@@ -457,8 +461,10 @@ const ServiceItem = React.forwardRef(({ text, data, onMouseEnter, onMouseLeave }
         </div>
       )}
     </div>
+    </Link>
   );
 });
+
 
 
 

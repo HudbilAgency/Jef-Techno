@@ -238,9 +238,6 @@ const Career = () => {
             <h2 className="self-start text-4xl font-bold text-center max-md:max-w-full max-md:text-4xl">
             Current Openings
             </h2>
-            <p className="mt-10 text-sm max-md:max-w-full">
-              At eu lobortis pretium tincidunt amet lacus ut aenean aliquet. Blandit a massa elementum id scelerisque rhoncus. Lectus dolor blandit massa pretium id ultrices phasellus tortor. Risus risus lectus augue justo lacus viverra sit. Ultricies purus dolor viverra mi laoreet at cursus justo. Ultrices purus diam egestas amet faucibus tempor blandit. Elit velit mauris aliquam est diam. Leo sagittis consectetur diam morbi erat aenean. Vulputate praesent congue faucibus in euismod feugiat euismod volutpat. Adipiscing risus amet phasellus imperdiet eget vel pulvinar. Risus in felis faucibus sit. Scelerisque consequat iaculis mauris amet vel felis id tincidunt nunc.
-            </p>
           </div>
           <a href="#" className="text-xl font-semibold text-red-700">View all</a>
         </div>

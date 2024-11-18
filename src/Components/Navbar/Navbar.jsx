@@ -6,7 +6,7 @@ import { TranslationContext } from '../../Context/TranslationContext'
 
 const menuItems = [
   { label: 'About', hasDropdown: true },
-  { label: 'Our Services', hasDropdown: true },
+  { label: 'Our Business', hasDropdown: true },
   { label: 'Industries', hasDropdown: true },
   { label: 'Blogs', hasDropdown: false , path: '/Blog' },
 ];
@@ -151,7 +151,7 @@ const Navbar = () => {
 
 
             <div className="flex gap-8 items-center self-stretch my-auto max-md:max-w-full">
-              <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto">
+              <div className="lg:flex hidden gap-2.5 items-center self-stretch my-auto group">
                 <button
                   onClick={toggleTranslation}
                   className="self-stretch uppercase my-auto text-xs xl:text-sm font-light tracking-[2px] text-white"
@@ -163,7 +163,7 @@ const Navbar = () => {
                     loading="lazy"
                     src="./HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
-                    className="object-contain w-5 hidden lg:block"
+                    className="object-contain w-5 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
                   />
                 </div>
               </div>
@@ -191,9 +191,9 @@ const Navbar = () => {
           <AboutSection />
         </div>
       )}
-      {activeSection === 'Our Services' && (
+      {activeSection === 'Our Business' && (
         <div
-          onMouseEnter={() => handleMenuHover('Our Services')}
+          onMouseEnter={() => handleMenuHover('Our Business')}
           onMouseLeave={handleMouseLeave}
         >
           <ServicesComponent />
@@ -240,7 +240,7 @@ const Navbar = () => {
 
 
 const navigationItems = [
-  { number: "01", title: "What is JEF" },
+  { number: "01", title: "About JEF" },
   { number: "02", title: "JEF leadership team", path: "/LeadershipTeam" },  // Add a path for the leadership team
   { number: "03", title: "Our mission" },
   { number: "04", title: "Our vision" }
@@ -300,7 +300,7 @@ function AboutSection() {
           </nav>
           <div className="flex flex-col ml-5 w-6/12 max-md:ml-0 max-md:w-full">
             <div
-              className={`transition-all duration-500 ease-in-out flex gap-10 mt-16 text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${
+              className={`transition-all duration-500 ease-in-out flex gap-10 mt-[10%] text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${
                 hoveredItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
               }`}
             >
@@ -544,7 +544,7 @@ const FAQComponent = () => {
       isOpen: false,
     },
     { 
-      question: "Our Services", 
+      question: "Our Business", 
       content: [
         { label: 'Power System Studies', path: '/PowerSystemStudies' },
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },

@@ -146,7 +146,7 @@ const buttonData = [
     indiaProjects: 36,
     gcc: 30,
     description: "A Power Quality Study involves a comprehensive analysis of your electrical system to identify disturbances and deviations in voltage, current, and frequency. These studies are essential for ensuring that your power supply is stable and free from issues that can lead to equipment malfunction or inefficiencies.",
-    className: "mt-[calc(10vh-2rem)] md:mt-[calc(20vh-14rem)] 2xl:mt-[calc(20vh-16rem)] md:ml-[8rem] 2xl:ml-[10rem]",
+    className: "mt-[calc(10vh-2rem)] md:mt-[calc(20vh-13rem)] 2xl:mt-[calc(20vh-16rem)] md:ml-[8rem] 2xl:ml-[10rem]",
   },
   {
     image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
@@ -594,14 +594,14 @@ function Home() {
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
                 <div className="flex flex-col items-center">
                   {/* Button to trigger the video */}
-                  <button onClick={handlePlayVideo} className=" mb-0">
+                  {/* <button onClick={handlePlayVideo} className=" mb-0">
                     <img
                       loading="lazy"
                       src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                       alt="Electrical icon"
                       className="bg-repeat object-contain w-9 2xl:w-14"
                     />
-                  </button>
+                  </button> */}
 
                   {/* Conditionally render the iframe video at 90% screen width */}
                   {showVideo && (
@@ -642,14 +642,14 @@ function Home() {
                 <br />FOR ELECTRICAL PROTECTION
               </h1>
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-                <button onClick={handlePlayVideo} >
+                {/* <button onClick={handlePlayVideo} >
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                     alt="Electrical icon"
                     className="bg-repeat object-contain w-9 2xl:w-14"
                   />
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -664,14 +664,14 @@ function Home() {
                 EXCELLENCE THROUGH DIGITALISATION
               </h1>
               <div className="flex gap-2 lg:gap-6 items-center self-start text-2xl uppercase text-neutral-900 tracking-[3px]">
-                <button >
+                {/* <button >
                   <img
                     loading="lazy"
                     src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
                     alt="Electrical icon"
                     className="bg-repeat object-contain w-9 2xl:w-14"
                   />
-                </button>
+                </button> */}
               </div>
             </div>
 
@@ -1054,7 +1054,7 @@ const WhatWeDoSection = () => {
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
          
-         <h1 className="z-50 text-white font-bold absolute inset-0 my-[50vh] flex  justify-center text-3xl sm:text-4xl uppercase underline">India to 24 Countries</h1>
+         <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">From India to 24 countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}
@@ -1082,7 +1082,7 @@ const WhatWeDoSection = () => {
 
               {/* Left Section */}
               <section className="flex flex-wrap w-[100%] lg:w-[40%] justify-between">
-                <div className="flex tracking-[3px] flex-col self-start text-lg 2xl:text-2xl font-bold">
+                <div className="flex tracking-[3px] flex-col self-start text-xl 2xl:text-3xl font-bold">
                   <h1 className="text-white uppercase mt-[2%]">what we do</h1>
                 </div>
                 <div className="flex flex-row my-auto max-md:ml-0 max-md:w-full">
@@ -1278,216 +1278,6 @@ function FormInput({ label, type }) {
 
 
 
-
-const LandingImages = () => {
-  const carouselRef = useRef(null);
-  const coverRef = useRef(null);
-  const [index, setIndex] = useState(0);
-  const totalSlides = 3; // Total number of slides
-  const startPos = useRef(0);
-  const isDragging = useRef(false);
-  const currentTranslate = useRef(0);
-  const prevTranslate = useRef(0);
-
-
-
-
-
-  const handleNext = () => {
-    if (index < 2) {
-      gsap.fromTo(
-        coverRef.current,
-        {
-          x: "100%",
-          y: "-100%",
-        },
-        {
-          x: "0%",
-          yoyo: true,
-          repeat: 1,
-        }
-      );
-      gsap.to(carouselRef.current, {
-        x: `-${(index + 1) * 33.33}%`,
-      });
-      setIndex(index + 1);
-    }
-  };
-
-  const handlePrev = () => {
-    if (index > 0) {
-      gsap.fromTo(
-        coverRef.current,
-        {
-          x: "-100%",
-          y: "-100%",
-        },
-        {
-          x: "0%",
-          y: "-100%",
-          yoyo: true,
-          repeat: 1,
-        }
-      );
-      gsap.to(carouselRef.current, {
-        x: `-${(index - 1) * 33.33}%`,
-      });
-      setIndex(index - 1);
-    }
-  };
-
-  // Handle touch/mouse start
-  const handleTouchStart = (e) => {
-    isDragging.current = true;
-    startPos.current = getPositionX(e);
-    carouselRef.current.style.transition = "none"; // Disable transitions while dragging
-  };
-
-  // Handle touch/mouse move
-  const handleTouchMove = (e) => {
-    if (!isDragging.current) return;
-    const currentPosition = getPositionX(e);
-    currentTranslate.current = prevTranslate.current + currentPosition - startPos.current;
-
-    carouselRef.current.style.transform = `translateX(${currentTranslate.current}px)`;
-  };
-
-  // Handle touch/mouse end
-  const handleTouchEnd = () => {
-    isDragging.current = false;
-    const movedBy = currentTranslate.current - prevTranslate.current;
-
-    // If moved by more than 50px, move to next/previous slide
-    if (movedBy < -50) handleNext();
-    if (movedBy > 50) handlePrev();
-
-    // Reset translate values
-    carouselRef.current.style.transition = "transform 0s ease-out";
-    prevTranslate.current = currentTranslate.current;
-    carouselRef.current.style.transform = `translateX(-${index * 33.33}%)`;
-  };
-
-  // Utility to get the current X position (mouse or touch)
-  const getPositionX = (e) => {
-    return e.type.includes("mouse") ? e.pageX : e.touches[0].clientX;
-  };
-
-  return (
-    <div className="relative w-full h-screen overflow-hidden">
-      <div
-        ref={carouselRef}
-        className="bg-no-repeat flex w-[300%] h-full"
-        onMouseDown={handleTouchStart}
-        onMouseMove={handleTouchMove}
-        onMouseUp={handleTouchEnd}
-        onMouseLeave={handleTouchEnd}
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
-      >
-        <div className="relative w-full h-full ">
-          <video autoPlay loop muted className="absolute size-full object-cover" >
-            <source src="./HomePageImg/Banner 1.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-4xl  lg:text-4xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full">
-              THINK ELECTRICAL, <br />
-              THINK JEF
-            </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
-                />
-              </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg rounded-[50px] w-[10rem] ">
-                Learn More
-              </button>
-            </div>
-          </div>
-        </div>
-        <div className="relative w-full h-full">
-          <video autoPlay loop muted className="absolute size-full object-cover" >
-            <source src="./HomePageImg/Banner 2.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="inset-y-[26rem] md:inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full  max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-5xl lg:text-5xl md:text-4xl text-3xl font-bold h-32 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-              END-to-END SOLUTIONS
-              <br />FOR ELECTRICAL PROTECTION
-            </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
-                />
-              </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 hover:bg-red-600 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
-                Learn More
-              </button>
-            </div>
-          </div>
-
-        </div>
-        <div className="relative w-full h-full">
-          <video autoPlay loop muted className="absolute size-full object-cover" >
-            <source src="./HomePageImg/Banner 3.mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
-          <div className="inset-y-2/3 lg:inset-x-40 p-4 flex relative flex-col self-center w-full max-w-[70%] max-md:mt-10 max-md:max-w-full ">
-            <h1 className="xl:text-5xl lg:text-5xl md:text-4xl text-3xl font-bold h-20 2xl:h-36 my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-              EXCELLENCE THROUGH DIGITALISATION
-            </h1>
-            <div className="flex gap-2 lg:gap-6 items-center self-start mt-12 text-2xl uppercase text-neutral-900 tracking-[3px] max-md:mt-10">
-              <button>
-                <img
-                  loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/8855ae14d9effa10b9317a704535212615d40fdec755767f2e9941cd3e8401cc?placeholderIfAbsent=true&apiKey=60c6eb6ce37644fdb727618799199006"
-                  alt="Electrical icon"
-                  className="bg-repeat object-contain w-9 lg:w-16"
-                />
-              </button>
-              <button className="gap-2.5 self-stretch px-2.5 py-1 lg:py-4 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-sm h-[2.5rem] lg:text-lg 2xl:min-h-[64px] rounded-[50px] w-[10rem] 2xl:w-[239px]">
-                Learn More
-              </button>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      {/* Cover Animation */}
-      <div ref={coverRef} className="absolute  w-full h-full bg-zinc-800"></div>
-
-      {/* Left Arrow */}
-      {index > 0 && (
-        <div
-          className="absolute top-1/2 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-          onClick={handlePrev}
-        >
-          <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" />
-        </div>
-      )}
-
-      {/* Right Arrow */}
-      {index < totalSlides - 1 && (
-        <div
-          className="absolute top-1/2 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-          onClick={handleNext}
-        >
-          <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" />
-        </div>
-      )}
-    </div>
-  );
-};
 
 
 
