@@ -286,7 +286,7 @@ const AboutUs = () => {
     <section>
   <div 
     className="flex overflow-hidden relative gap-10 justify-center items-start py-32 inset-0 bg-black bg-opacity-100"
-    style={{ backgroundImage: "url('https://cdn.builder.io/api/v1/image/assets/TEMP/66f6bb7d22178abfdbaa1bd2b07992f6d1ff63598849bb870a6de98573eb4dc0?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244')", 
+    style={{ backgroundImage: "url('./AboutUs/LeaderShipBG.png')", 
              backgroundSize: "cover", 
              backgroundPosition: "center",
              backgroundRepeat: "no-repeat" }}>
