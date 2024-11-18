@@ -494,7 +494,7 @@ function Home() {
           start: 'top 25%',
           end: 'bottom bottom',
           toggleActions: 'play none none reverse',
-          pin: false,
+          pin: true,
         },
       })
         .to(
@@ -829,18 +829,19 @@ function Home() {
       </section>
 
 
+          {/* bg-[url('/home-main.png')] */}
 
       <main className="flex overflow-hidden flex-col">
-        <section className="overflow-hidden relative w-full">
-          <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg" className="hidden lg:block object-cover absolute inset-0 h-full w-full" />
+        <section  className="bg-[url('./HomePageImg/FounderMsgSection.png')] bg-cover overflow-hidden relative w-full h-[100vh]">
+          {/* <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg" className="hidden lg:block object-cover absolute inset-0 h-full w-full" /> */}
           <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full" />
           <div className="flex gap-5 p-4 max-md:flex-col">
-            <div className="flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
-              <div className="flex z-10 my-32 mt-40 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
+            <div className=" flex lg:mx-[100px] flex-col  max-md:ml-0 max-md:w-full">
+              <div className="flex  z-10 2xl:my-[50vh] 2xl:mt-32 lg:mt-10 lg:my-[50vh] flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
                   Founder message
                 </h1>
-                <div className="self-stretch Y-axis-text my-20 space-y-5 lg:w-[35vw] text-lg lg:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
+                <div className="self-stretch Y-axis-text 2xl:my-20 lg:my-16 space-y-5 lg:w-[35vw] lg:text-base 2xl:text-xl  leading-10 text-stone-900 max-md:mt-10 max-md:max-w-full">
                   <p>
                     Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                   </p>
@@ -849,7 +850,7 @@ function Home() {
                   <p>No wonder customers THINK "JEF" when they THINK ELECTRICAL engineering.
                   </p>
                 </div>
-                <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold lg:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
+                <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold 2xl:mt-8 max-md:text-4xl">{"Prashanth BG"}</h2>
                 <p className=" text-xl lg:text-xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
                 <p className="text-xl lg:text-xl Y-axis-text ">{"JEF Group"}</p>
               </div>
