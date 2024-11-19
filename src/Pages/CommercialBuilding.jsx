@@ -307,6 +307,7 @@ function CommercialBuilding() {
                     <ServiceItem
                       key={index}
                       data={service.data}
+                      path={service.path}
                       text={service.text}
                       ref={(el) => (serviceRefs.current[index] = el)}
                       onMouseEnter={(event) => handleMouseEnter(index, service.image, event)}
@@ -321,6 +322,7 @@ function CommercialBuilding() {
                     <ServiceItem
                       key={index}
                       data={service.data}
+                      path={service.path}
                       text={service.text}
                       ref={(el) => (serviceRefs.current[index + 9] = el)}
                       onMouseEnter={() => handleMouseEnter(index + 9, service.image)}

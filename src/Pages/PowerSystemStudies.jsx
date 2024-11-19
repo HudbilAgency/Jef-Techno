@@ -248,12 +248,10 @@ const PowerSystemStudies = () => {
 
     <section className="flex overflow-hidden h-screen flex-col bg-white">
       <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
-        <img
-          loading="lazy"
-          src="./SerivePage/Power System Studies 3.png"
-          alt=""
-          className="object-cover absolute inset-0 size-full"
-        />
+      <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
+            <source src="./SerivePage/Power System Studies Banner Video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         <div className="Y-axis-text-Title-Service3 flex inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
           <h1 className=" uppercase lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
           Power System Studies

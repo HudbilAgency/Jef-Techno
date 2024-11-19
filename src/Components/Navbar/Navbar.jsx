@@ -92,7 +92,7 @@ const Navbar = () => {
       className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${
         scrollNav || activeSection 
           ? 'bg-stone-800' 
-          : location.pathname === '/' || location.pathname === '/AboutUs'
+          : location.pathname === '/' || location.pathname === '/AboutUs' || location.pathname === '/LeadershipTeam'
             ? 'lg:bg-transparent' 
             : 'bg-stone-800'
       }`}
@@ -240,14 +240,14 @@ const Navbar = () => {
 
 
 const navigationItems = [
-  { number: "01", title: "About JEF" },
+  { number: "01", title: "About JEF" , path: "/AboutUs"  },
   { number: "02", title: "JEF leadership team", path: "/LeadershipTeam" },  // Add a path for the leadership team
   { number: "03", title: "Our mission" },
   { number: "04", title: "Our vision" }
 ];
 
 const contentMap = {
-  "01": "About",
+  // "01": "About",
   "02": "",
   "03": "Deliver Value added, technically superior and cost-optimum solutions to enhance the safety & reliability of Electrical systems by combining knowledge, experience and technology.",
   "04": "Make more customers across the world benefit from our expertise and achieve 40% annual growth rate."

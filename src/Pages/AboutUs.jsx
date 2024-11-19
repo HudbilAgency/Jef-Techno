@@ -262,7 +262,7 @@ const AboutUs = () => {
                 </div>
               </div>
               <p className="mt-6 Y-axis-text sm:mt-8 md:mt-11 text-lg md:text-xl font-extralight leading-7 sm:leading-8 text-black">
-                From three decades, JEF as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF Techno has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
+                From three decades, JEF as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in various countries.
               </p>
             </div>
           </div>
@@ -294,7 +294,7 @@ const AboutUs = () => {
     <div className="flex z-0 flex-col my-auto max-w-screen min-w-[240px] w-full max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col w-full max-md:max-w-full">
         <div className="flex items-center my-auto text-center flex-col w-full max-md:max-w-full">
-          <h1 className="pb-px w-full Y-axis-text font-bold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
+          <h1 className="pb-px w-full Y-axis-text font-extrabold text-3xl  leading-loose text-red-600 tracking-[4.53px] max-md:max-w-full ">
            SAFETY AT SCALE
           </h1>
           <p className="mt-5 Y-axis-text w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
