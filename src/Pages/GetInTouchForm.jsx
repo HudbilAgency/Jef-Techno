@@ -29,17 +29,17 @@ const GetInTouchForm = () => {
                     <div className="flex flex-col w-full max-md:max-w-full">
                       <div className="flex relative gap-4 lg:gap-10 w-full text-xs max-md:max-w-full">
                         <label htmlFor={`input-${index}`} className="tracking-widest leading-tight uppercase min-w-[240px] text-zinc-900 w-[473px] max-md:max-w-full">
-                          <span className="text-stone-900">{field.label} </span>
+                          <span className="text-stone-900 font-normal">{field.label} </span>
                           <span className="text-red-700">*</span>
                         </label>
-                        <div className="absolute right-px self-start h-3 font-thin tracking-wide leading-none min-h-[12px] text-zinc-600">
+                        <div className="absolute right-px self-start h-3 font-light tracking-wide leading-none min-h-[12px] text-zinc-600">
                           {field.maxLength} characters
                         </div>
                       </div>
                       <input
                         id={`input-${index}`}
                         type="text"
-                        className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-base font-thin bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
+                        className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-base font-normal  bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
                         placeholder="Please type here"
                         maxLength={field.maxLength}
                         required
@@ -60,14 +60,14 @@ const GetInTouchForm = () => {
                         <span className="text-stone-900">Business Email address </span>
                         <span className="text-red-700">*</span>
                       </label>
-                      <div className="absolute -right-px self-start h-3 font-thin tracking-wide leading-none min-h-[12px] text-zinc-600">
+                      <div className="absolute -right-px self-start h-3 font-normal tracking-wide leading-none min-h-[12px] text-zinc-600">
                         100 characters
                       </div>
                     </div>
                     <input
                       id="email"
                       type="email"
-                      className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-sm font-thin whitespace-nowrap bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
+                      className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-sm font-normal whitespace-nowrap bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
                       placeholder="name@mail.com"
                       maxLength={100}
                       required
@@ -94,7 +94,7 @@ const GetInTouchForm = () => {
                       <input
                         id="phone"
                         type="tel"
-                        className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 w-full bg-white rounded border border-gray-200 border-solid max-md:max-w-full"
+                        className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 w-full bg-white font-normal rounded border border-gray-200 border-solid max-md:max-w-full"
                         placeholder="Please type here"
                         required
                       />
@@ -113,14 +113,14 @@ const GetInTouchForm = () => {
                       <span className="text-stone-900">Company name </span>
                       <span className="text-red-700">*</span>
                     </label>
-                    <div className="absolute -right-px self-start h-3 font-thin tracking-wide leading-none min-h-[12px] text-zinc-600">
+                    <div className="absolute -right-px self-start h-3 font-normal tracking-wide leading-none min-h-[12px] text-zinc-600">
                       100 characters
                     </div>
                   </div>
                   <input
                     id="company"
                     type="text"
-                    className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-sm font-thin bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
+                    className="flex flex-col pt-6 pr-2.5 pb-6 pl-2.5 mt-2.5 w-full text-sm font-normal bg-white rounded border border-gray-200 border-solid text-neutral-500 max-md:max-w-full"
                     placeholder="Please type here"
                     maxLength={100}
                     required
