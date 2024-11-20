@@ -280,12 +280,6 @@ function AboutSection() {
                     </Link>
                     {item.number === "01" && (
                       <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
-                        <img
-                          loading="lazy"
-                          src="https://cdn.builder.io/api/v1/image/assets/TEMP/2bb3117bb1e657fdbc997cd15e47263db3ce1251843c4a3543e9042a61e0fd2a?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                          className="object-contain w-2"
-                          alt=""
-                        />
                       </div>
                     )}
                   </div>

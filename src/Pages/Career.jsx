@@ -269,10 +269,10 @@ const Career = () => {
                     <img loading="lazy" src="./CareerPage/clock.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.type}</div>
                   </div>
-                  <div className="flex gap-3 items-center whitespace-nowrap">
+                  {/* <div className="flex gap-3 items-center whitespace-nowrap">
                     <img loading="lazy" src="./CareerPage/Wallet.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.salary}</div>
-                  </div>
+                  </div> */}
                   <div className="flex gap-3 items-center">
                     <img loading="lazy" src="./CareerPage/map-pin.png" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
                     <div className="self-stretch my-auto">{job.location}</div>

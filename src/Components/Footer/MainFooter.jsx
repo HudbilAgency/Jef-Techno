@@ -47,9 +47,9 @@ function MainFooter() {
   ];
   
   const itemsLocation = [
-    { name: 'Mena', path: '' },
-    { name: 'Europe', path: '' },
-    { name: 'Asian', path: '' }
+    { name: 'KSA', path: '' },
+    { name: 'UAE', path: '' },
+    { name: 'USA', path: '' }
   ];
   
   const itemsBusiness = [

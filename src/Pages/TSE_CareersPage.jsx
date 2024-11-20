@@ -24,7 +24,7 @@ const jobOverviewData = {
 
 const iconTextItems = [
   { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/c0c893bf332dc34edb84763976d78e7514f60e452663cbbf15b2c426fae95741?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "Full time" },
-  { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dc582fb81a3a7a17863b2c30e7f80a664d8c08f51514a8b03cd1568c2212adf8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "12854 AED" },
+  // { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/dc582fb81a3a7a17863b2c30e7f80a664d8c08f51514a8b03cd1568c2212adf8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "12854 AED" },
   { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/aad532364fe57b522dac121a9ba4aad021d2c2f53556e2277d6daa3ba45b1580?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", text: "UAE" }
 ];
 
@@ -103,7 +103,7 @@ function JobOverviewCard({ data }) {
     { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/1253f42025d325206476cbdc92730be5095b7c0c7f18790cc9f3297f429068c7?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Category", value: data.category },
     { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/ba06d9e64df4ce55a7b5feb493a35b7ecf67a20c7114af4d78ab8b2f5eef5e81?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Experience", value: data.experience },
     { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/155650577aa8d07140c2cbf2322c24237b386f416aefe0a8e58659623aa521bf?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Degree", value: data.degree },
-    { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/84ee00fc4d8d8132690f55f2492645807ed4bf2a8e9b324d919f0d382485001f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Offered Salary", value: data.salary },
+    // { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/84ee00fc4d8d8132690f55f2492645807ed4bf2a8e9b324d919f0d382485001f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Offered Salary", value: data.salary },
     { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/39226579ae1262ad778140d7abe4069e4d27370b4ccf3835f083fce88b7c705c?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Gender", value: data.gender },
     { icon: "https://cdn.builder.io/api/v1/image/assets/TEMP/9da26cb8d131bfb1544ecb718e8c714f37adb154d94689a11ce4eae48cb23da2?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3", label: "Location", value: data.location }
   ];
@@ -122,7 +122,7 @@ function JobOverviewCard({ data }) {
           </div>
         ))}
       </div>
-      <img src="./CareerPage/TseCareersMap.png" alt="map" className='mt-5'/>
+      {/* <img src="./CareerPage/TseCareersMap.png" alt="map" className='mt-5'/> */}
     </section>
   );
 }

@@ -320,10 +320,11 @@ const AboutUs = () => {
       </section>
 
 
-      <section>
+      {/* < SocialResponsibilities /> */}
+      {/* <section>
         <img src="./AboutUs/SRImg.png" alt="SRimg" />
-        {/* < SocialResponsibilities /> */}
-      </section>
+        
+      </section> */}
     
 
   
