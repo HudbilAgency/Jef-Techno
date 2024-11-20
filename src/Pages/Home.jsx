@@ -76,7 +76,7 @@ const blogData = [
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
   },
-  
+
 ];
 
 
@@ -479,6 +479,17 @@ function Home() {
     }
   }, []);
 
+  const [isScreenTall, setIsScreenTall] = useState(window.innerHeight > 800 && window.innerWidth > 1023);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenTall(window.innerHeight > 800 && window.innerWidth > 1023);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const sectionRef = useRef();
   const textRef1 = useRef();
   const textRef2 = useRef();
@@ -489,6 +500,13 @@ function Home() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
+
+      const initialXForImgRef2 = window.innerWidth > 1550
+        ? 1100
+        : window.innerWidth > 1200
+          ? 800
+          : 600;
+
       gsap.timeline({
         scrollTrigger: {
           trigger: sectionRef.current,
@@ -531,12 +549,12 @@ function Home() {
         .fromTo(
           imgRef1.current,
           { x: 0, y: 0 },
-          { x: 800, y: -500, duration: 1, ease: 'power2.inout' },
+          { x: 800, y: -550, duration: 1, ease: 'power2.inout' },
           0
         )
         .fromTo(
           imgRef2.current,
-          { x: 800, y: 0, },
+          { x: initialXForImgRef2, y: 0, },
           { x: 0, y: -450, duration: 1, ease: 'power2.inout' },
           0
         );
@@ -544,6 +562,7 @@ function Home() {
 
     return () => ctx.revert();
   }, []);
+
 
   useEffect(() => {
     if (showVideo) {
@@ -563,7 +582,7 @@ function Home() {
           },
         });
       };
-  
+
       // Load YouTube API if not already loaded
       if (!window.YT) {
         const tag = document.createElement('script');
@@ -606,27 +625,27 @@ function Home() {
 
                   {/* Conditionally render the iframe video at 90% screen width */}
                   {showVideo && (
-                  <div className="hidden fixed inset-0 lg:flex items-center justify-center bg-black bg-opacity-75 z-[9999]">
-                    <div className="w-[90vw] h-[90%]">
-                      {/* Close button */}
-                      <div className="-mt-[1%] flex justify-end">
-                        <button
-                          className="text-white border-white border border-spacing-2"
-                          onClick={closeVideo}
-                        >
-                          <img
-                            src="./HomePageImg/NavbarImg/CLoseMenuLogo.png"
-                            alt="closeButton"
-                            className="w-[2vw]"
-                          />
-                        </button>
-                      </div>
+                    <div className="hidden fixed inset-0 lg:flex items-center justify-center bg-black bg-opacity-75 z-[9999]">
+                      <div className="w-[90vw] h-[90%]">
+                        {/* Close button */}
+                        <div className="-mt-[1%] flex justify-end">
+                          <button
+                            className="text-white border-white border border-spacing-2"
+                            onClick={closeVideo}
+                          >
+                            <img
+                              src="./HomePageImg/NavbarImg/CLoseMenuLogo.png"
+                              alt="closeButton"
+                              className="w-[2vw]"
+                            />
+                          </button>
+                        </div>
 
-                      {/* YouTube Iframe */}
-                      <div className="w-full h-full object-contain rounded-md" id="yt-player-container"></div>
+                        {/* YouTube Iframe */}
+                        <div className="w-full h-full object-contain rounded-md" id="yt-player-container"></div>
+                      </div>
                     </div>
-                  </div>
-                )}
+                  )}
 
                 </div>
               </div>
@@ -679,22 +698,22 @@ function Home() {
           </div>
         </div>
         <div ref={coverRef} className="absolute w-full h-full bg-zinc-800"></div>
-          {!showVideo && index > 0 && (
-            <div
-              className="absolute top-1/2 hover:bg-red-500 lg:left-24 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-              onClick={handlePrev}
-            >
-              <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
-            </div>
-          )}
-          {!showVideo && index < totalSlides - 1 && (
-            <div
-              className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
-              onClick={handleNext}
-            >
-              <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
-            </div>
-          )}
+        {!showVideo && index > 0 && (
+          <div
+            className="absolute top-1/2 hover:bg-red-500 lg:left-24 left-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            onClick={handlePrev}
+          >
+            <img src="./HomePageImg/LeftArrow.png" alt="Left Arrow" className="size-6" />
+          </div>
+        )}
+        {!showVideo && index < totalSlides - 1 && (
+          <div
+            className="absolute hover:bg-red-500 top-1/2 lg:right-20 right-5 transform -translate-y-1/2 cursor-pointer border border-white rounded-full h-12 w-12 flex items-center justify-center"
+            onClick={handleNext}
+          >
+            <img src="./HomePageImg/RightArrow.png" alt="Right Arrow" className="size-6" />
+          </div>
+        )}
 
       </div>
 
@@ -726,14 +745,14 @@ function Home() {
 
       {/*  For large devices  */}
 
-      <section className="lg:flex items-center px-16 bg-stone-900 overflow-hidden hidden">
-        <div className="flex items-center mt-40 mb-32">
+      <section className={`lg:flex items-center justify-center px-16 bg-stone-900 overflow-hidden hidden ${isScreenTall ? 'h-screen' : 'h-full'}`}>
+        <div className={`flex items-center ${isScreenTall ? 'mt-0 mb-0 h-full' : 'mt-40 mb-32'}`}>
           <img
             className="h-32 my-auto hidden lg:block"
             src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png"
             alt="ScrollPng"
           />
-          <main className="lg:px-[40px] xl:px-[100px]">
+          <main ref={sectionRef} className="lg:px-[40px] xl:px-[100px]">
             <section>
               <div className="flex items-start h-full gap-28 text-white relative max-h-[500px]">
                 <div className="w-1/3 2xl:w-1/4">
@@ -756,7 +775,6 @@ function Home() {
                   <div className="text-base font-semibold tracking-widest text-red-700 uppercase mb-16">
                     Why choose JEF ?
                   </div>
-                  <div ref={sectionRef}></div>
                   <div className="">
                     <div
                       ref={textRef1}
@@ -830,14 +848,16 @@ function Home() {
       </section>
 
 
-          {/* bg-[url('/home-main.png')] */}
+      {/* bg-[url('/home-main.png')] */}
 
       <main className="flex overflow-hidden flex-col">
-        <section 
-        style={{ backgroundImage: "url('/HomePageImg/BGP.jpg')", 
-          backgroundSize: "cover", 
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat" }}
+        <section
+          style={{
+            backgroundImage: "url('/HomePageImg/BGP.jpg')",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
+            backgroundRepeat: "no-repeat"
+          }}
           className="overflow-hidden relative w-full h-auto"
         >
           {/* <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg" className="hidden lg:block object-cover absolute inset-0 h-full w-full" /> */}
@@ -1061,15 +1081,15 @@ const WhatWeDoSection = () => {
     <section className="flex lg:h-screen overflow-hidden flex-col bg-zinc-800">
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
-         
-         <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">From India to 24 countries</h1>
+
+          <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">From India to 24 countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}
             className="object-cover absolute inset-0 size-full"
             autoPlay
             muted
-            playsInline 
+            playsInline
           >
             <source src="./HomePageImg/Earth zoom.mp4" type="video/mp4" />
           </video>
@@ -1242,20 +1262,20 @@ function FeatureSection() {
   return (
     <section ref={sectionRef0} className="lg:hidden mx-auto h-screen ">
 
-    <h1 className="uppercase tracking-wider sm:tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
-    <div className="my-5 flex gap-8 h-[60%]">
-      <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full "/>
-      <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full"/>
-    </div>
-    <div ref={divRef3} className="relative">
-      <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />Digitization</h1>
-      <h3 className=" text-white text-base  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
-    </div>
-    <div ref={divRef4} className="relative">
-      <h1 className=" text-white mt-[5rem] font-bold  text-center text-3xl uppercase">Our L&d <br />centre</h1>
-      <h3 className=" text-white text-base text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
-    </div>
-  </section>
+      <h1 className="uppercase tracking-wider sm:tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
+      <div className="my-5 flex gap-8 h-[60%]">
+        <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full " />
+        <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full" />
+      </div>
+      <div ref={divRef3} className="relative">
+        <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />Digitization</h1>
+        <h3 className=" text-white text-base  text-center font-extralight">Our patented tool that provides end to end digitalisation for conducting system studies gives us a unique leverage to deliver quality & consistency at scale.</h3>
+      </div>
+      <div ref={divRef4} className="relative">
+        <h1 className=" text-white mt-[5rem] font-bold  text-center text-3xl uppercase">Our L&d <br />centre</h1>
+        <h3 className=" text-white text-base text-center font-extralight">Enhancing Value & Quality for Our Clients Through Our Continuous Learning & Development Program.</h3>
+      </div>
+    </section>
   );
 }
 
