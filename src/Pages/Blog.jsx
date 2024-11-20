@@ -11,7 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 const BlogPost = ({ date, title, content, imageUrl , path  }) => (
   <article className="Y-axis-card-anm flex flex-col w-full  max-md:mt-10">
     <img loading="lazy" src={imageUrl} alt="" className="object-contain w-full aspect-[1.5]" />
-    <time className="self-start mt-3.5 text-xs font-thin leading-snug uppercase text-zinc-600">{date}</time>
+    <time className="self-start mt-3.5 text-xs font-extralight leading-snug uppercase text-zinc-900">{date}</time>
     <h2 className="mt-2.5 text-lg leading-6 uppercase text-stone-900">{title}</h2>
     <p className="mt-3.5 text-sm font-thin leading-6 text-stone-900">{content}</p>
     <a href="#" className="flex gap-2.5 items-center self-start mt-6">
@@ -29,66 +29,30 @@ const Blog = () => {
   const blogPosts = [
     {
       date: "August 15, 2024",
-      title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
+      title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
+      content: "The oil and gas industry is a key driver of Abu Dhabi's economy, but it comes with significant safety challenges. From maintaining pipelines to protecting refineries, ensuring safety is vital for protecting people, equipment, and the environment.",
       imageUrl: "./BlogImg/BlogImg1.png",
       path: '/BlogInside'
     },
     {
       date: "August 15, 2024",
-      title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
+      title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
+      content: "In the UAE, industries are heavily reliant on electrical systems for smooth operations and energy efficiency. Power quality issues, such as poor power factor and harmonic distortions, can lead to higher energy costs and equipment wear. Conducting power factor and harmonic studies helps identify and address these challenges, ensuring operational efficiency and significant cost savings.",
       imageUrl: "./BlogImg/BlogImg2.png"
     },
     {
       date: "August 15, 2024",
-      title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
+      title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
+      content: "In the United Arab Emirates (UAE), the rapid expansion of renewable energy projects, particularly solar farms, necessitates meticulous planning and analysis to ensure the reliability and efficiency of electrical power systems. Comprehensive power system studies are essential to address the unique challenges posed by integrating renewable energy sources into the national grid.",
       imageUrl: "./BlogImg/BlogImg3.png"
     },
     {
       date: "August 15, 2024",
-      title: "Ensuring Safety in the Oil and Gas Industry",
-      content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
+      title: "Understanding the Importance of Power System Studies in the UAE",
+      content: "In the United Arab Emirates (UAE), the reliable operation of power systems is critical for sustaining the country’s rapidly growing industries, infrastructure, and energy demands. Power system studies play a vital role in identifying, analysing, and resolving electrical system issues, ensuring safety, efficiency, and compliance with international standards.",
       imageUrl: "./BlogImg/BlogImg4.png"
     },
-    {
-        date: "August 15, 2024",
-        title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg1.png"
-      },
-      {
-        date: "August 15, 2024",
-        title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg2.png"
-      },
-      {
-        date: "August 15, 2024",
-        title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg3.png"
-      },
-      {
-        date: "August 15, 2024",
-        title: "Ensuring Safety in the Oil and Gas Industry",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg4.png"
-      },
-      {
-        date: "August 15, 2024",
-        title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg1.png"
-      },
-      {
-        date: "August 15, 2024",
-        title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
-        content: "JEF, the sustainable development taking shape in northwest Saudi Arabia, yesterday (Wednesday, August 14) hosted its inaugural JEF Social Responsibility Awards ceremony. The celebratory event hosted by JEF Social Responsibility (JEF SR) honored the outstanding contributions being made by JEF's employees, sectors, departments, partners and communities in the region.",
-        imageUrl: "./BlogImg/BlogImg2.png"
-      }
-      
+    
   ];
 
 
@@ -193,7 +157,7 @@ const Blog = () => {
             ))}
           </div>
         </div>
-        <nav className="flex gap-4 items-center justify-center mt-20 max-md:mt-10" aria-label="Pagination">
+        {/* <nav className="flex gap-4 items-center justify-center mt-20 max-md:mt-10" aria-label="Pagination">
           <button className="gap-2.5 self-stretch px-2.5 py-2 my-auto text-base text-red-700 uppercase whitespace-nowrap border border-red-700 border-solid min-h-[40px] rounded-[60px] w-[129px]">
             Previous
           </button>
@@ -205,7 +169,7 @@ const Blog = () => {
               </span>
             </span>
           </button>
-        </nav>
+        </nav> */}
       </main>
     </section>
     < MainFooter />

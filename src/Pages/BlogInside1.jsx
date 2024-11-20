@@ -4,7 +4,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import Navbar from '../Components/Navbar/Navbar';
 import { Link} from 'react-router-dom';
 
-const BlogInside = () => {
+const BlogInside1 = () => {
   const faqItems = [
     {
       question: "Why are Power System Studies needed and important?",
@@ -123,4 +123,4 @@ const BlogInside = () => {
   );
 };
 
-export default BlogInside;
+export default BlogInside1;

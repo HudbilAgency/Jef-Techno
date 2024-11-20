@@ -5,7 +5,7 @@ import CookiePolicy from '../Pages/CookiePolicy';
 import PrivacyPolicy from '../Pages/PrivacyPolicy';
 import ScrollToTop from '../Components/ScrollToTop';
 import Blog from '../Pages/Blog';
-import BlogInside from '../Pages/BlogInside';
+import BlogInside1 from '../Pages/BlogInside1';
 import GetInTouchForm from '../Pages/GetInTouchForm';
 import GetInTouchPage from '../Pages/GetInTouchPage';
 import EarthingStudies from '../Pages/EarthingStudies';
@@ -43,7 +43,7 @@ const Routers = () => {
         <Route path="/CookiePolicy" element={<CookiePolicy />} />
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />
-        <Route path="/BlogInside" element={<BlogInside/>} />
+        <Route path="/BlogInside1" element={<BlogInside1/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/EarthingStudies" element={<EarthingStudies/>} />
