@@ -32,25 +32,28 @@ const Blog = () => {
       title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
       content: "The oil and gas industry is a key driver of Abu Dhabi's economy, but it comes with significant safety challenges. From maintaining pipelines to protecting refineries, ensuring safety is vital for protecting people, equipment, and the environment.",
       imageUrl: "./BlogImg/BlogImg1.png",
-      path: '/BlogInside'
+      path: '/BlogInside1'
     },
     {
       date: "August 15, 2024",
       title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
       content: "In the UAE, industries are heavily reliant on electrical systems for smooth operations and energy efficiency. Power quality issues, such as poor power factor and harmonic distortions, can lead to higher energy costs and equipment wear. Conducting power factor and harmonic studies helps identify and address these challenges, ensuring operational efficiency and significant cost savings.",
-      imageUrl: "./BlogImg/BlogImg2.png"
+      imageUrl: "./BlogImg/BlogImg2.png",
+       path: '/BlogInside2'
     },
     {
       date: "August 15, 2024",
       title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
       content: "In the United Arab Emirates (UAE), the rapid expansion of renewable energy projects, particularly solar farms, necessitates meticulous planning and analysis to ensure the reliability and efficiency of electrical power systems. Comprehensive power system studies are essential to address the unique challenges posed by integrating renewable energy sources into the national grid.",
-      imageUrl: "./BlogImg/BlogImg3.png"
+      imageUrl: "./BlogImg/BlogImg3.png",
+      path: '/BlogInside3'
     },
     {
       date: "August 15, 2024",
       title: "Understanding the Importance of Power System Studies in the UAE",
       content: "In the United Arab Emirates (UAE), the reliable operation of power systems is critical for sustaining the country’s rapidly growing industries, infrastructure, and energy demands. Power system studies play a vital role in identifying, analysing, and resolving electrical system issues, ensuring safety, efficiency, and compliance with international standards.",
-      imageUrl: "./BlogImg/BlogImg4.png"
+      imageUrl: "./BlogImg/BlogImg4.png",
+      path: '/BlogInside4'
     },
     
   ];

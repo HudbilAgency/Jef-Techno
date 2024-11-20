@@ -1,13 +1,20 @@
-import React , { useEffect} from "react";
+import React , {useState, useEffect} from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
 const ContactUs = () => {
+
+
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [mobile, setMobile] = useState("");
+
 
 
     useEffect(() => {
@@ -54,6 +61,37 @@ const ContactUs = () => {
         { label: 'Email', type: 'email' },
         { label: 'Mobile Number', type: 'tel' },
       ];
+
+      const handleSubmitForm = async () => {
+        
+    
+        const contactformData = {
+          name,
+          email,
+          mobile,
+        };
+    
+    
+        try {
+          const response = await axios.post(
+            "https://jef-server.onrender.com/reach-us-hudbil",
+            JSON.stringify(contactformData),
+            {
+              headers: {
+                "Content-Type": "application/json",
+              },
+            }
+          );
+          console.log("Server response:", response.data);
+        } catch (error) {
+          console.error("Error sending data to server:", error);
+        }
+
+
+        setName("");
+        setEmail("");
+        setMobile("");
+      };
       
 
 
@@ -63,21 +101,61 @@ const ContactUs = () => {
     <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
       <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
       <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-      <Link to={'/GetInTouchForm'}>
+      
         <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
           Contact us
         </h1>
-      </Link>
+      
         <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
         Get in touch with us for any business enquiry.
         </p>
         <form className="w-full Y-axis-text mt-12 max-md:mt-10">
-          {inputFields.map((field, index) => (
+          {/* {inputFields.map((field, index) => (
             <FormInput key={index} label={field.label} type={field.type} />
-          ))}
+          ))} */}
+          <div className="mb-6">
+          <label className="sr-only">{name}</label>
+            <input
+              type={name}
+              id={1}
+              name={name}
+              placeholder={'Name'}
+              className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              required
+              onChange={(e) => setName(e.target.value)}
+            />
+            </div>
+            <div className="mb-6">
+            <label className="sr-only">{name}</label>
+            <input
+              type={email}
+              id={2}
+              name={email}
+              placeholder={'Email'}
+              className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            />
+            </div>
+            <div className="mb-6">
+            <label className="sr-only">{name}</label>
+            <input
+              type={mobile}
+              id={3}
+              name={mobile}
+              placeholder={'Mobile Number'}
+              className="overflow-hidden Y-axis-text px-5 font-medium text-black py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              required
+              onChange={(e) => setMobile(e.target.value)}
+            />
+            </div>
           <button
-            type="submit"
+            type="submit"           
             className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmitForm();
+            }}
           >
             Submit
           </button>
