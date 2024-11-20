@@ -29,6 +29,7 @@ import CommercialBuilding from '../Pages/CommercialBuilding';
 import RenewableEnergyResource from '../Pages/RenewableEnergyResource';
 import SmartDigitalization from '../Pages/SmartDigitalization';
 import LD_Centre from '../Pages/L&D-Centre';
+import BlogInside2 from '../Pages/BlogInside2';
 
 
 const Routers = () => { 
@@ -44,6 +45,7 @@ const Routers = () => {
         <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
+        <Route path="/BlogInside2" element={<BlogInside2/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/EarthingStudies" element={<EarthingStudies/>} />
