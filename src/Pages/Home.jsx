@@ -54,28 +54,29 @@ const inputFields = [
 const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
-    title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
+    title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
-    title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
+    title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
-    title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
+    title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
+  },
+  {
+    imageSrc: "./HomePageImg/BlogsSection/Img4.png",
+    title: "Understanding the Importance of Power System Studies in the UAEs",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
-    title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
+    title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
-    title: "What are the Challenges for Electrical System Design and Engineering in Greenfield Projects",
+    title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
   },
-  {
-    imageSrc: "./HomePageImg/BlogsSection/Img3.png",
-    title: "Measurement, simulation, validation - The 3 key steps of Power System Studies",
-  },
+  
 ];
 
 
@@ -833,11 +834,11 @@ function Home() {
 
       <main className="flex overflow-hidden flex-col">
         <section 
-        style={{ backgroundImage: "url('/HomePageImg/FounderMsgSection.png')", 
+        style={{ backgroundImage: "url('/HomePageImg/BGP.jpg')", 
           backgroundSize: "cover", 
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat" }}
-        className="overflow-hidden relative w-full h-auto"
+          className="overflow-hidden relative w-full h-auto"
         >
           {/* <img src="./HomePageImg/FounderMsgSection.png" alt="foundersMsg" className="hidden lg:block object-cover absolute inset-0 h-full w-full" /> */}
           <img src="./AboutUs/FAQ-Bg-Img.png" alt="MobileViewBg" className="lg:hidden object-cover absolute inset-0 size-full" />
@@ -853,7 +854,7 @@ function Home() {
                   </p>
                   <p>Over the last 30 years of our existence, we have served more than 4000 customers in 24 countries. Consistently meeting & exceeding their expectations at every given opportunity, we at Team JEF have created a formidable track record for ourselves.
                   </p>
-                  <p>No wonder customers THINK "JEF" when they THINK ELECTRICAL engineering.
+                  <p>No wonder customers <span className="font-medium">THINK "JEF"</span> when they <span className="font-medium">THINK ELECTRICAL</span> engineering.
                   </p>
                 </div>
                 <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold mt-12 2xl:mt-10 max-md:text-4xl">{"Prashanth BG"}</h2>
