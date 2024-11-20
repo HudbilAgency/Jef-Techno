@@ -120,7 +120,7 @@ const ContactUs = () => {
               id={1}
               name={name}
               placeholder={'Name'}
-              className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
               required
               onChange={(e) => setName(e.target.value)}
             />
@@ -131,8 +131,8 @@ const ContactUs = () => {
               type={email}
               id={2}
               name={email}
-              placeholder={'Name'}
-              className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              placeholder={'Email'}
+              className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
               required
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -144,7 +144,7 @@ const ContactUs = () => {
               id={3}
               name={mobile}
               placeholder={'Mobile Number'}
-              className="overflow-hidden Y-axis-text px-5 py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
+              className="overflow-hidden Y-axis-text px-5 font-medium text-black py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
               required
               onChange={(e) => setMobile(e.target.value)}
             />
