@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ContactUs from "../Components/ContactUs/ContactUs";
-import { button } from "framer-motion/client";
-import path from "path";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -604,6 +603,23 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+      <title>JEF UAE: Premium Lightning Protection & Grounding System Products</title>
+      <meta name="description" content="Discover JEF UAE's range of high-quality lightning protection and grounding system products. Trusted solutions for enhanced safety in electrical grounding and surge protection systems across UAE."></meta>
+      <meta property="og:url" content="https://www.jefuae.com/"></meta>
+      <meta name="keywords" content="JEF UAE, lightning protection, grounding system, grounding products, surge protection, UAE, electrical safety, grounding solutions, lightning rods, grounding accessories"></meta>
+      <meta name="og:description" content="JEF UAE provides reliable lightning protection and grounding system products, ensuring top safety standards in electrical grounding and surge protection. Serving UAE industries with trusted solutions."></meta>
+      <meta name="og:site_name" content="Lightning Protection Systems | Grounding System Products"></meta>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
       {!showVideo && <Navbar />}
 
       <div className="relative w-full h-screen overflow-hidden">

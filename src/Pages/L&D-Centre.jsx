@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar/Navbar';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MainFooter from "../Components/Footer/MainFooter";
+import { Link } from "react-router-dom";
 
 
 
@@ -78,7 +79,7 @@ function LD_Centre() {
                         industry trends and deliver superior service to our clients.
                     </p>
                     <nav className="flex  gap-4 items-center mt-16 max-md:mt-10">
-                        <Button text="back" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/616169b3ed5242979df0a07098acf715c7d90b4bfc5e4acc44cf58fd9c278f6c?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" />
+                        <Link to={'/'}><Button text="back" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/616169b3ed5242979df0a07098acf715c7d90b4bfc5e4acc44cf58fd9c278f6c?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" /></Link>
                         <Button text="Share Article" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/67ffe9d5cbb1fb26aabfd831ddcbff80ebfc35ad8aacf3e369c8c56711636305?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" />
                     </nav>
                 </section>
