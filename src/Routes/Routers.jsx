@@ -52,12 +52,12 @@ const Routers = () => {
         <Route path="/BlogInside4" element={<BlogInside4/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
-        <Route path="/EarthingStudies" element={<EarthingStudies/>} />
+        <Route path="/earthing-studies" element={<EarthingStudies/>} />
         <Route path="/Career" element={<Career/>} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
-        <Route path="/LightningProtectionStudies" element={<LightningProtectionStudies/>} />
+        <Route path="/lightning-protection-studies" element={<LightningProtectionStudies/>} />
         <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
-        <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
+        <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
         <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
         <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
         <Route path="/OilandGas" element={< OilandGas/>} />

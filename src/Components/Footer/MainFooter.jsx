@@ -39,10 +39,10 @@ function MainFooter() {
   ];
 
   const itemsService = [
-    { name: 'Power System Studies', path: '/PowerSystemStudies' },
+    { name: 'Power System Studies', path: '/power-system-studies' },
     { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
-    { name: 'Earthing Studies', path: '/EarthingStudies' },
-    { name: 'LPS System Studies', path: '/LightningProtectionStudies' },
+    { name: 'Earthing Studies', path: '/earthing-studies' },
+    { name: 'LPS System Studies', path: '/lightning-protection-studies' },
     { name: 'Instrumentation Studies', path: '/InstrumentEarthing' }
   ];
 
@@ -158,10 +158,10 @@ const FAQComponent = () => {
     {
       question: "Services",
       content: [
-        { label: 'Power System Studies', path: '/PowerSystemStudies' },
+        { label: 'Power System Studies', path: '/power-system-studies' },
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
-        { label: 'Earthing Studies', path: '/EarthingStudies' },
-        { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
+        { label: 'Earthing Studies', path: '/earthing-studies' },
+        { label: 'LPS System Studies', path: '/lightning-protection-studies' },
         { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
       ],
       isOpen: false
