@@ -173,16 +173,21 @@ const FAQComponent = () => {
     {
       question: "Locations",
       content: [
-        { label: 'Mena', path: '' },
-        { label: 'Europe', path: '' },
-        { label: 'Asian', path: '' },
+        { label: 'India', path: '' },
+        { label: 'KSA', path: '' },
+        { label: 'UAE', path: '' },
+        { label: 'USA', path: '' },
       ],
       isOpen: false
     },
     {
-      question: "Our Business",
+      question: "Industries",
       content: [
-        { label: 'Industries', path: '' },
+        { label: 'Oil and Gas', path: '/industries/oilandgas' },
+        { label: 'Power Utilities', path: '/industries/powerutilities' },
+        { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+        { label: 'Process Plant', path: '/industries/processplant' },
+        { label: 'Commercial Buildings', path: '/industries/commercialbuilding' },
       ],
       isOpen: false
     },
