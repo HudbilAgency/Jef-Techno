@@ -128,7 +128,7 @@ const Navbar = () => {
     <div
       className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${scrollNav || activeSection
         ? 'bg-stone-800'
-        : location.pathname === '/' || location.pathname === '/AboutUs' || location.pathname === '/LeadershipTeam'
+        : location.pathname === '/' || location.pathname === '/about-us' || location.pathname === '/leadership-team'
           ? 'lg:bg-transparent'
           : 'bg-stone-800'
         }`}
@@ -308,8 +308,8 @@ const Navbar = () => {
 };
 
 const navigationItems = [
-  { number: "01", title: "About JEF", path: "/AboutUs" },
-  { number: "02", title: "JEF leadership team", path: "/LeadershipTeam" },  // Add a path for the leadership team
+  { number: "01", title: "About JEF", path: "/about-us" },
+  { number: "02", title: "JEF leadership team", path: "/leadership-team" },  // Add a path for the leadership team
   { number: "03", title: "Our mission" },
   { number: "04", title: "Our vision" }
 ];
@@ -365,7 +365,7 @@ function AboutSection() {
               className={`transition-all duration-500 ease-in-out flex gap-10 mt-[10%] text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${hoveredItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
                 }`}
             >
-              <Link to="/AboutUs">
+              <Link to="/about-us">
                 <h2 className="text-xs leading-5 hover:text-gray-400">
                   {hoveredItem ? contentMap[hoveredItem] : "About"}
                 </h2>
@@ -600,8 +600,8 @@ const FAQComponent = () => {
     {
       question: "About",
       content: [
-        { label: 'About Us', path: '/AboutUs' },
-        { label: 'JEF Leadership Team', path: '/LeadershipTeam' },
+        { label: 'About Us', path: '/about-us' },
+        { label: 'JEF Leadership Team', path: '/leadership-team' },
       ],
       isOpen: false,
     },

@@ -65,8 +65,8 @@ const Routers = () => {
         <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />
         <Route path="/ProcessPlant" element={< ProcessPlant/>} />
         <Route path="/CommercialBuilding" element={< CommercialBuilding/>} />
-        <Route path="/AboutUs" element={<AboutUs/>} />
-        <Route path="/LeadershipTeam" element={<LeadershipTeam/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/leadership-team" element={<LeadershipTeam/>} />
         <Route path="/JobDetails" element={<JobDetails/>} />
         <Route path="/Technical_Support_Engineer_JobDetails" element={<TSE_CareersPage/>} />
         <Route path="/Business_Development_Manager_JobDetails" element={<BDMcareers/>} />

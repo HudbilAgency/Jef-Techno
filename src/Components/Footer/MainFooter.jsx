@@ -32,8 +32,8 @@ function MainFooter() {
 
 
   const itemsAbout = [
-    { name: 'What is JEF', path: '/AboutUs' },
-    { name: 'JEF leadership team', path: '/LeadershipTeam' },
+    { name: 'What is JEF', path: '/about-us' },
+    { name: 'JEF leadership team', path: '/leadership-team' },
     { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
     { name: 'JEF L & D Centre', path: '/L&D-Centre' }
   ];
@@ -148,8 +148,8 @@ const FAQComponent = () => {
     {
       question: "ABOUT",
       content: [
-        { label: 'What is JEF', path: '/AboutUs' },
-        { label: 'JEF leadership team', path: '/LeadershipTeam' },
+        { label: 'What is JEF', path: '/about-us' },
+        { label: 'JEF leadership team', path: '/leadership-team' },
         { label: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
         { label: 'JEF L & D Centre', path: '/L&D-Centre' }
       ],
