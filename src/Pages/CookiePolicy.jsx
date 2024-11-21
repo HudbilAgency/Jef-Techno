@@ -55,6 +55,17 @@ const CookiePolicy = () => {
 
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar />
     <main className="flex overflow-hidden flex-col bg-neutral-100 lg:py-32 py-5">
       <section className="flex overflow-hidden flex-col items-start self-center px-20 py-20 mt-24 max-w-full text-base font-thin leading-7 bg-white text-zinc-900 w-[1024px] max-md:px-5 max-md:mt-10">

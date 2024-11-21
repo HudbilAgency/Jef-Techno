@@ -120,6 +120,17 @@ const Blog = () => {
   return (
 
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar/>
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">
