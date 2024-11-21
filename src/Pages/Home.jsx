@@ -9,6 +9,7 @@ import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ContactUs from "../Components/ContactUs/ContactUs";
 import { button } from "framer-motion/client";
+import path from "path";
 
 
 
@@ -55,26 +56,32 @@ const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
+    path: 'BlogInside1'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
+    path: 'BlogInside2'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
     title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
+    path: 'BlogInside3'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img4.png",
     title: "Understanding the Importance of Power System Studies in the UAEs",
+    path: 'BlogInside4'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
+    path: 'BlogInside1'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
+    path: 'BlogInside2'
   },
 
 ];
