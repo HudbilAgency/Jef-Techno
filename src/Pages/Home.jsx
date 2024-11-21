@@ -115,7 +115,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png',
     text: 'Earthing studies',
     title: "Grounding studies projects completed",
-    path: '/EarthingStudies',
+    path: '/earthing-studies',
     totalProjects: 165,
     indiaProjects: 123,
     gcc: 42,
