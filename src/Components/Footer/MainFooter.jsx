@@ -194,7 +194,7 @@ const FAQComponent = () => {
     {
       question: "Careers",
       content: [
-        { label: 'Working at JEF', path: '/careers' },
+        { label: 'Jobs', path: '/careers' },
       ],
       isOpen: false
     },
