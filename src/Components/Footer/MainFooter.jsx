@@ -58,7 +58,7 @@ function MainFooter() {
   ];
 
   const itemsCareers = [
-    { name: 'Jobs', path: '/Career' }
+    { name: 'Jobs', path: '/careers' }
   ];
 
 
@@ -102,7 +102,7 @@ function Footer() {
           <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
             <Link to="/privacypolicy" >Privacy Policy</Link>
             <Link to="/termsandconditions" >· Terms & Conditions</Link>
-            <Link to="/CookiePolicy" >· Cookie Policy</Link>
+            <Link to="/cookiepolicy" >· Cookie Policy</Link>
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2023. All Rights Reserved © jeftechno | Designed by
@@ -185,7 +185,7 @@ const FAQComponent = () => {
     {
       question: "Careers",
       content: [
-        { label: 'Working at JEF', path: '/Career' },
+        { label: 'Working at JEF', path: '/careers' },
       ],
       isOpen: false
     },

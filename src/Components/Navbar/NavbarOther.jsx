@@ -6,7 +6,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false, path: '/Career' }
+  { label: 'Careers', hasDropdown: false, path: '/careers' }
 ];
 
 const NavbarOther = () => {

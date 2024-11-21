@@ -43,7 +43,7 @@ const Routers = () => {
         <Route path="/" element={<Home />} />
         <Route path="/SmartDigitalization" element={<SmartDigitalization />} />
         <Route path="/L&D-Centre" element={<LD_Centre />} />
-        <Route path="/CookiePolicy" element={<CookiePolicy />} />
+        <Route path="/cookiepolicy" element={<CookiePolicy />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
@@ -53,15 +53,15 @@ const Routers = () => {
         <Route path="/get-in-touch" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/earthing-studies" element={<EarthingStudies/>} />
-        <Route path="/Career" element={<Career/>} />
+        <Route path="/careers" element={<Career/>} />
         <Route path="/termsandconditions" element={<TermsAndConditions/>} />
         <Route path="/lightning-protection-studies" element={<LightningProtectionStudies/>} />
         <Route path="/power-quality-studies" element={<PowerQualityStudies/>} />
         <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
         <Route path="/instrumentation-earthing-studies" element={<InstrumentEarthing/>} />
         <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
-        <Route path="/OilandGas" element={< OilandGas/>} />
-        <Route path="/PowerUtilites" element={< PowerUtilites/>} />
+        <Route path="/industries/oilandgas" element={< OilandGas/>} />
+        <Route path="/industries/powerutilities" element={< PowerUtilites/>} />
         <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />
         <Route path="/ProcessPlant" element={< ProcessPlant/>} />
         <Route path="/CommercialBuilding" element={< CommercialBuilding/>} />

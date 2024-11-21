@@ -521,8 +521,8 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
-    { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas' },
-    { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/PowerUtilites' },
+    { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/industries/oilandgas' },
+    { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/industries/powerutilities' },
     { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
     { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/ProcessPlant' },
     { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
@@ -619,8 +619,8 @@ const FAQComponent = () => {
     {
       question: "Industries",
       content: [
-        { label: 'Oil and Gas', path: '/OilandGas' },
-        { label: 'Power Utilites', path: '/PowerUtilites' },
+        { label: 'Oil and Gas', path: '/industries/oilandgas' },
+        { label: 'Power Utilites', path: '/industries/powerutilities' },
         { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },
         { label: 'Process Plant', path: '/ProcessPlant' },
         { label: 'Commercial Buildings', path: '/CommercialBuilding' }
