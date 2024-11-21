@@ -1,4 +1,4 @@
-import React ,{useState , useRef, useEffect} from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { Link } from "react-router-dom";
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -21,9 +21,9 @@ function MainFooter() {
         stagger: 0.2, // 0.3s delay between each card animation
         scrollTrigger: {
           trigger: '.card-slider-footer',
-        start: 'top 80%',
-        end: 'top 100%', 
-        toggleActions: 'play none none none',
+          start: 'top 80%',
+          end: 'top 100%',
+          toggleActions: 'play none none none',
         },
       }
     );
@@ -37,7 +37,7 @@ function MainFooter() {
     { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
     { name: 'JEF L & D Centre', path: '/L&D-Centre' }
   ];
-  
+
   const itemsService = [
     { name: 'Power System Studies', path: '/PowerSystemStudies' },
     { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
@@ -45,21 +45,22 @@ function MainFooter() {
     { name: 'LPS System Studies', path: '/LightningProtectionStudies' },
     { name: 'Instrumentation Studies', path: '/InstrumentEarthing' }
   ];
-  
+
   const itemsLocation = [
+    { name: 'India', path: '' },
     { name: 'KSA', path: '' },
     { name: 'UAE', path: '' },
     { name: 'USA', path: '' }
   ];
-  
+
   const itemsBusiness = [
     { name: 'Industries', path: '' },
   ];
-  
+
   const itemsCareers = [
     { name: 'Jobs', path: '/Career' }
   ];
-  
+
 
   return (
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
@@ -71,8 +72,8 @@ function MainFooter() {
         <Section title="Careers" items={itemsCareers} />
       </div>
       <div className='lg:hidden'>
-      < FAQComponent />
-        
+        < FAQComponent />
+
       </div>
       <Footer />
     </main>
@@ -82,22 +83,6 @@ function MainFooter() {
 
 function Footer() {
 
-   // JEF Techno Socials
-
-   const handleYoutubeButtonClick = () => {
-    window.location.href = 'https://www.youtube.com/@JEFgroup'; 
-   };
-   const handleFacebookButtonClick = () => {
-    window.location.href = 'https://www.facebook.com/JEFTECHNO/'; 
-   };
-   const handleLinkedinButtonClick = () => {
-    window.location.href = 'https://www.linkedin.com/company/jeftechnosolutions/'; 
-   };
-   const handleTwitterButtonClick = () => {
-    window.location.href = 'https://x.com/JeftechnoIndia'; 
-   };
-
-
   return (
     <footer className="card-slider-footer flex flex-col items-center pt-10 bg-stone-800">
       <hr className="hidden lg:block shrink-0 mt-2 max-w-[95vw] w-[88vw] border border-solid border-neutral-400 max-md:mt-8" />
@@ -106,23 +91,23 @@ function Footer() {
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
-          <button onClick={handleYoutubeButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></button>
-          <button onClick={handleFacebookButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></button>
-          <button onClick={handleLinkedinButtonClick} className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></button>
-          <button onClick={handleTwitterButtonClick} className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></button>
+          <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
+          <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
+          <a href="https://www.linkedin.com/company/jeftechnosolutions/" target="_blank" className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
+          <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
-            <Link  to="/PrivacyPolicy" >Privacy Policy</Link>
+            <Link to="/PrivacyPolicy" >Privacy Policy</Link>
             <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
             <Link to="/CookiePolicy" >· Cookie Policy</Link>
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
-              Copyright 2023. All Rights Reserved © jeftechno | Designed by 
-              <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
-          </div>   
+            Copyright 2023. All Rights Reserved © jeftechno | Designed by
+            <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
+          </div>
         </div>
       </div>
     </footer>
@@ -160,49 +145,49 @@ function Section({ title, items }) {
 
 const FAQComponent = () => {
   const [faqData, setFaqData] = useState([
-    { 
-      question: "ABOUT", 
+    {
+      question: "ABOUT",
       content: [
         { label: 'What is JEF', path: '/AboutUs' },
         { label: 'JEF leadership team', path: '/LeadershipTeam' },
         { label: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
         { label: 'JEF L & D Centre', path: '/L&D-Centre' }
-      ], 
-      isOpen: false 
+      ],
+      isOpen: false
     },
-    { 
-      question: "Services", 
+    {
+      question: "Services",
       content: [
         { label: 'Power System Studies', path: '/PowerSystemStudies' },
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
         { label: 'Earthing Studies', path: '/EarthingStudies' },
         { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
         { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
-      ], 
-      isOpen: false 
+      ],
+      isOpen: false
     },
-    { 
-      question: "Locations", 
+    {
+      question: "Locations",
       content: [
         { label: 'Mena', path: '' },
         { label: 'Europe', path: '' },
         { label: 'Asian', path: '' },
-      ], 
-      isOpen: false 
+      ],
+      isOpen: false
     },
-    { 
-      question: "Our Business", 
+    {
+      question: "Our Business",
       content: [
         { label: 'Industries', path: '' },
-      ], 
-      isOpen: false 
+      ],
+      isOpen: false
     },
-    { 
-      question: "Careers", 
+    {
+      question: "Careers",
       content: [
         { label: 'Working at JEF', path: '/Career' },
-      ], 
-      isOpen: false 
+      ],
+      isOpen: false
     },
   ]);
 
@@ -244,9 +229,9 @@ const FAQComponent = () => {
           stagger: 0.2, // 0.3s delay between each card animation
           scrollTrigger: {
             trigger: '.card-slider-footer',
-          start: 'top 80%',
-          end: 'top 100%', 
-          toggleActions: 'play none none none',
+            start: 'top 80%',
+            end: 'top 100%',
+            toggleActions: 'play none none none',
           },
         }
       );
