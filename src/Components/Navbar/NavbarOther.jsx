@@ -6,7 +6,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'News', hasDropdown: true },
-  { label: 'Careers', hasDropdown: false, path: '/Career' }
+  { label: 'Careers', hasDropdown: false, path: '/careers' }
 ];
 
 const NavbarOther = () => {
@@ -99,7 +99,7 @@ const NavbarOther = () => {
                 />
               </div>
             </div>
-            <Link to={'/GetInTouchForm'}>
+            <Link to={'/get-in-touch'}>
             <button className="gap-3 self-stretch p-2.5 my-auto text-xs lg:text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[8rem] 2xl:w-[216px]">
               Get In Touch
             </button>

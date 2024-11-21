@@ -4,7 +4,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
-
+import { Helmet } from 'react-helmet';
 
 
 
@@ -123,6 +123,17 @@ const AboutUs = () => {
 
   return (
    <>
+   <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
    < Navbar />
     <section className='overflow-hidden'>
             <main className="flex relative flex-col h-screen w-full max-md:py-24 max-md:max-w-full">
@@ -137,7 +148,7 @@ const AboutUs = () => {
                 THINK ELECTRICAL, THINK JEF
                 </h1>
                 <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
-              <Link to={'/GetInTouchForm'}>
+              <Link to={'/get-in-touch'}>
               <button className="uppercase Y-axis-text-Title px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
                 Get in touch
               </button>

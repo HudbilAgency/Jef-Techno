@@ -7,7 +7,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'Industries', hasDropdown: true },
-  { label: 'Blogs', hasDropdown: false, path: '/Blog' },
+  { label: 'Blogs', hasDropdown: false, path: '/blog' },
 ];
 
 const Navbar = () => {
@@ -128,7 +128,7 @@ const Navbar = () => {
     <div
       className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${scrollNav || activeSection
         ? 'bg-stone-800'
-        : location.pathname === '/' || location.pathname === '/AboutUs' || location.pathname === '/LeadershipTeam'
+        : location.pathname === '/' || location.pathname === '/about-us' || location.pathname === '/leadership-team'
           ? 'lg:bg-transparent'
           : 'bg-stone-800'
         }`}
@@ -174,7 +174,7 @@ const Navbar = () => {
                         onMouseEnter={() => handleMenuHover(item.label)}
                         onMouseLeave={handleMouseLeave}
                         loading="lazy"
-                        src="./HomePageImg/NavbarImg/Dropdown.png"
+                        src="../HomePageImg/NavbarImg/Dropdown.png"
                         alt="Dropdown"
                         className="object-contain w-5 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
                       />
@@ -197,7 +197,7 @@ const Navbar = () => {
                 <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                   <img
                     loading="lazy"
-                    src="./HomePageImg/NavbarImg/Dropdown.png"
+                    src="../HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
                     className={`object-contain w-5 hidden lg:block ${isDropdownVisible ? "transition-transform duration-300 transform rotate-180 group-hover:rotate-180" : "transition-transform duration-300 transform rotate-360"
                       }`}
@@ -244,13 +244,13 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <Link to='/GetInTouchForm' className='z-20'>
+              <Link to='/get-in-touch' className='z-20'>
                 <button className="gap-3 uppercase self-stretch py-3 px-4 md:py-2 lg:py-3 md:px-4 lg:px-7 my-auto text-xs md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px] whitespace-nowrap">
                   Contact Us
                 </button>
               </Link>
               <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
-                <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
+                <img src="../HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
               </button>
             </div>
           </div>
@@ -294,7 +294,7 @@ const Navbar = () => {
           className="absolute top-5 right-0 p-2 text-white"
           onClick={toggleSlideMenu}
         >
-          <img src="./HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]' />
+          <img src="../HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]' />
         </button>
         <div className="h-full">
           <FAQComponent />
@@ -308,8 +308,8 @@ const Navbar = () => {
 };
 
 const navigationItems = [
-  { number: "01", title: "About JEF", path: "/AboutUs" },
-  { number: "02", title: "JEF leadership team", path: "/LeadershipTeam" },  // Add a path for the leadership team
+  { number: "01", title: "About JEF", path: "/about-us" },
+  { number: "02", title: "JEF leadership team", path: "/leadership-team" },  // Add a path for the leadership team
   { number: "03", title: "Our mission" },
   { number: "04", title: "Our vision" }
 ];
@@ -365,7 +365,7 @@ function AboutSection() {
               className={`transition-all duration-500 ease-in-out flex gap-10 mt-[10%] text-xl font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 ${hoveredItem ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-5"
                 }`}
             >
-              <Link to="/AboutUs">
+              <Link to="/about-us">
                 <h2 className="text-xs leading-5 hover:text-gray-400">
                   {hoveredItem ? contentMap[hoveredItem] : "About"}
                 </h2>
@@ -521,11 +521,11 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
-    { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas' },
-    { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/PowerUtilites' },
-    { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
-    { icon: './AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/ProcessPlant' },
-    { icon: './AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
+    { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/industries/oilandgas' },
+    { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/industries/powerutilities' },
+    { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+    { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/industries/processplant' },
+    { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
   ];
 
   return (
@@ -548,7 +548,7 @@ function IndustriesComponent() {
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                   <img
                     loading="lazy"
-                    src="./AboutUs/RightArrow.png"
+                    src="../AboutUs/RightArrow.png"
                     alt=""
                     className="object-contain w-2"
                   />
@@ -600,7 +600,7 @@ const FAQComponent = () => {
     {
       question: "About",
       content: [
-        { label: 'About Us', path: '/AboutUs' },
+        { label: 'About Us', path: '/about-us' },
         { label: 'JEF Leadership Team', path: '/LeadershipTeam' },
       ],
       isOpen: false,
@@ -619,17 +619,17 @@ const FAQComponent = () => {
     {
       question: "Industries",
       content: [
-        { label: 'Oil and Gas', path: '/OilandGas' },
-        { label: 'Power Utilites', path: '/PowerUtilites' },
-        { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },
-        { label: 'Process Plant', path: '/ProcessPlant' },
-        { label: 'Commercial Buildings', path: '/CommercialBuilding' }
+        { label: 'Oil and Gas', path: '/industries/oilandgas' },
+        { label: 'Power Utilites', path: '/industries/powerutilities' },
+        { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+        { label: 'Process Plant', path: '/industries/processplant' },
+        { label: 'Commercial Buildings', path: '/industries/commercialbuilding' }
       ],
       isOpen: false,
     },
     {
       question: "Blogs",
-      path: "/Blog", // Direct link path for Blogs
+      path: "/blog", // Direct link path for Blogs
       isOpen: false,
     },
   ]);
@@ -677,8 +677,8 @@ const FAQComponent = () => {
                 loading="lazy"
                 src={
                   isOpen
-                    ? "./AboutUs/DropUpArr.png"
-                    : "./AboutUs/DropdownArr.png"
+                    ? "../AboutUs/DropUpArr.png"
+                    : "../AboutUs/DropdownArr.png"
                 }
                 alt=""
                 className="object-contain flex-1 w-full aspect-square"

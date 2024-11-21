@@ -3,6 +3,8 @@ import Navbar from '../Components/Navbar/Navbar';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import MainFooter from "../Components/Footer/MainFooter";
+import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -63,6 +65,17 @@ function LD_Centre() {
 
     return (
         <>
+            <Helmet>
+                <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+                <script>
+                    {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+                </script>
+            </Helmet>
             < Navbar />
             <main className="flex overflow-hidden flex-col pb-36 bg-neutral-100 max-md:pb-24">
                 <header className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
@@ -78,7 +91,7 @@ function LD_Centre() {
                         industry trends and deliver superior service to our clients.
                     </p>
                     <nav className="flex  gap-4 items-center mt-16 max-md:mt-10">
-                        <Button text="back" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/616169b3ed5242979df0a07098acf715c7d90b4bfc5e4acc44cf58fd9c278f6c?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" />
+                        <Link to={'/'}><Button text="back" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/616169b3ed5242979df0a07098acf715c7d90b4bfc5e4acc44cf58fd9c278f6c?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" /></Link>
                         <Button text="Share Article" icon="https://cdn.builder.io/api/v1/image/assets/TEMP/67ffe9d5cbb1fb26aabfd831ddcbff80ebfc35ad8aacf3e369c8c56711636305?apiKey=d3bbb7c7de3c4da4bc28ced0d6a3e488&" />
                     </nav>
                 </section>
@@ -90,11 +103,11 @@ function LD_Centre() {
                 <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
                     <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
                     <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-                    <Link to={'/GetInTouchForm'}>
-                        <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
-                            Contact us
-                        </h1>
-                        </Link>
+                        
+                            <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+                                Contact us
+                            </h1>
+                        
                         <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
                             Get in touch with us for any business enquiry.
                         </p>

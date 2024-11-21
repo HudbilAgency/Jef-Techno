@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../Components/Navbar/Navbar';
 import MainFooter from '../Components/Footer/MainFooter';
+import { Helmet } from 'react-helmet';
 
 const BDMcareers = () => {
   return (
@@ -31,6 +32,17 @@ const iconTextItems = [
 function JobDetails() {
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
      < Navbar/>
      <main className="flex overflow-hidden flex-col bg-neutral-100 pb-10 max-md:pb-6rem">
       <header className="flex relative flex-col px-16 pt-64 pb-28 w-full text-6xl font-bold text-center text-white min-h-[26.375rem] max-md:px-5 max-md:pt-24 max-md:pb-28 max-md:max-w-full max-md:text-4xl">

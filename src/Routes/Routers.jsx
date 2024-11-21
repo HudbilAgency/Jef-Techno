@@ -30,6 +30,8 @@ import RenewableEnergyResource from '../Pages/RenewableEnergyResource';
 import SmartDigitalization from '../Pages/SmartDigitalization';
 import LD_Centre from '../Pages/L&D-Centre';
 import BlogInside2 from '../Pages/BlogInside2';
+import BlogInside3 from '../Pages/BlogInside3';
+import BlogInside4 from '../Pages/BlogInside4';
 
 
 const Routers = () => { 
@@ -41,28 +43,30 @@ const Routers = () => {
         <Route path="/" element={<Home />} />
         <Route path="/SmartDigitalization" element={<SmartDigitalization />} />
         <Route path="/L&D-Centre" element={<LD_Centre />} />
-        <Route path="/CookiePolicy" element={<CookiePolicy />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/cookiepolicy" element={<CookiePolicy />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
         <Route path="/BlogInside2" element={<BlogInside2/>} />
-        <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
+        <Route path="/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies" element={<BlogInside3/>} />
+        <Route path="/BlogInside4" element={<BlogInside4/>} />
+        <Route path="/get-in-touch" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
-        <Route path="/EarthingStudies" element={<EarthingStudies/>} />
-        <Route path="/Career" element={<Career/>} />
-        <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
-        <Route path="/LightningProtectionStudies" element={<LightningProtectionStudies/>} />
-        <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
-        <Route path="/PowerSystemStudies" element={<PowerSystemStudies/>} />
-        <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
+        <Route path="/earthing-studies" element={<EarthingStudies/>} />
+        <Route path="/careers" element={<Career/>} />
+        <Route path="/termsandconditions" element={<TermsAndConditions/>} />
+        <Route path="/lightning-protection-studies" element={<LightningProtectionStudies/>} />
+        <Route path="/power-quality-studies" element={<PowerQualityStudies/>} />
+        <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
+        <Route path="/instrumentation-earthing-studies" element={<InstrumentEarthing/>} />
         <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
-        <Route path="/OilandGas" element={< OilandGas/>} />
-        <Route path="/PowerUtilites" element={< PowerUtilites/>} />
-        <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />
-        <Route path="/ProcessPlant" element={< ProcessPlant/>} />
-        <Route path="/CommercialBuilding" element={< CommercialBuilding/>} />
-        <Route path="/AboutUs" element={<AboutUs/>} />
-        <Route path="/LeadershipTeam" element={<LeadershipTeam/>} />
+        <Route path="/industries/oilandgas" element={< OilandGas/>} />
+        <Route path="/industries/powerutilities" element={< PowerUtilites/>} />
+        <Route path="/industries/manufacturingplant" element={< ManufacturingPlant/>} />
+        <Route path="/industries/processplant" element={< ProcessPlant/>} />
+        <Route path="/industries/commercialbuilding" element={< CommercialBuilding/>} />
+        <Route path="/about-us" element={<AboutUs/>} />
+        <Route path="/leadership-team" element={<LeadershipTeam/>} />
         <Route path="/JobDetails" element={<JobDetails/>} />
         <Route path="/Technical_Support_Engineer_JobDetails" element={<TSE_CareersPage/>} />
         <Route path="/Business_Development_Manager_JobDetails" element={<BDMcareers/>} />

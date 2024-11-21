@@ -32,18 +32,18 @@ function MainFooter() {
 
 
   const itemsAbout = [
-    { name: 'What is JEF', path: '/AboutUs' },
-    { name: 'JEF leadership team', path: '/LeadershipTeam' },
+    { name: 'What is JEF', path: '/about-us' },
+    { name: 'JEF leadership team', path: '/leadership-team' },
     { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
     { name: 'JEF L & D Centre', path: '/L&D-Centre' }
   ];
 
   const itemsService = [
-    { name: 'Power System Studies', path: '/PowerSystemStudies' },
-    { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
-    { name: 'Earthing Studies', path: '/EarthingStudies' },
-    { name: 'LPS System Studies', path: '/LightningProtectionStudies' },
-    { name: 'Instrumentation Studies', path: '/InstrumentEarthing' }
+    { name: 'Power System Studies', path: '/power-system-studies' },
+    { name: 'Power Quality Studies', path: '/power-quality-studies' },
+    { name: 'Earthing Studies', path: '/earthing-studies' },
+    { name: 'LPS System Studies', path: '/lightning-protection-studies' },
+    { name: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
   ];
 
   const itemsLocation = [
@@ -58,7 +58,7 @@ function MainFooter() {
   ];
 
   const itemsCareers = [
-    { name: 'Jobs', path: '/Career' }
+    { name: 'Jobs', path: '/careers' }
   ];
 
 
@@ -91,22 +91,22 @@ function Footer() {
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
-          <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
-          <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
-          <a href="https://www.linkedin.com/company/jeftechnosolutions/" target="_blank" className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
-          <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
+          <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
+          <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
+          <a href="https://www.linkedin.com/company/jeftechnosolutions/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
+          <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
         <div className="flex X-axis-card-anm-footer flex-wrap justify-between gap-6 w-full lg:w-[88vw] max-w-[95vw] max-md:max-w-full">
           <div className="flex card-slider-footer shrink gap-4 mx-auto lg:mx-0 lg:self-start text-[10px] sm:text-xs font-light basis-auto grow-0 tracking-widest">
-            <Link to="/PrivacyPolicy" >Privacy Policy</Link>
-            <Link to="/TermsAndConditions" >· Terms & Conditions</Link>
-            <Link to="/CookiePolicy" >· Cookie Policy</Link>
+            <Link to="/privacypolicy" >Privacy Policy</Link>
+            <Link to="/termsandconditions" >· Terms & Conditions</Link>
+            <Link to="/cookiepolicy" >· Cookie Policy</Link>
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2023. All Rights Reserved © jeftechno | Designed by
-            <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
+            <a className='-mt-[2%]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="../FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
           </div>
         </div>
       </div>
@@ -148,8 +148,8 @@ const FAQComponent = () => {
     {
       question: "ABOUT",
       content: [
-        { label: 'What is JEF', path: '/AboutUs' },
-        { label: 'JEF leadership team', path: '/LeadershipTeam' },
+        { label: 'What is JEF', path: '/about-us' },
+        { label: 'JEF leadership team', path: '/leadership-team' },
         { label: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
         { label: 'JEF L & D Centre', path: '/L&D-Centre' }
       ],
@@ -158,11 +158,11 @@ const FAQComponent = () => {
     {
       question: "Services",
       content: [
-        { label: 'Power System Studies', path: '/PowerSystemStudies' },
-        { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
-        { label: 'Earthing Studies', path: '/EarthingStudies' },
-        { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
-        { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
+        { label: 'Power System Studies', path: '/power-system-studies' },
+        { label: 'Power Quality Studies', path: '/power-quality-studies' },
+        { label: 'Earthing Studies', path: '/earthing-studies' },
+        { label: 'LPS System Studies', path: '/lightning-protection-studies' },
+        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
       ],
       isOpen: false
     },
@@ -185,7 +185,7 @@ const FAQComponent = () => {
     {
       question: "Careers",
       content: [
-        { label: 'Working at JEF', path: '/Career' },
+        { label: 'Working at JEF', path: '/careers' },
       ],
       isOpen: false
     },
@@ -253,8 +253,8 @@ const FAQComponent = () => {
                 loading="lazy"
                 src={
                   isOpen
-                    ? "./AboutUs/DropUpArr.png"
-                    : "./AboutUs/DropdownArr.png"
+                    ? "../AboutUs/DropUpArr.png"
+                    : "../AboutUs/DropdownArr.png"
                 }
                 alt=""
                 className="object-contain flex-1 w-full aspect-square"

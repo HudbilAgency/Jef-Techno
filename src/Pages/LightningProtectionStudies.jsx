@@ -3,6 +3,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
 import { Link } from 'react-router-dom';
 import Navbar from "../Components/Navbar/Navbar";
+import { Helmet } from 'react-helmet';
 
 const LightningProtectionStudies = () => {
 
@@ -122,9 +123,9 @@ const LightningProtectionStudies = () => {
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/EarthingStudies' },
-    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/LightningProtectionStudies' },
-    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/PowerSystemStudies' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -132,8 +133,8 @@ const LightningProtectionStudies = () => {
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', path: '/PowerQualityStudies' },
-    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/InstrumentEarthing' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', path: '/power-quality-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -245,6 +246,17 @@ const LightningProtectionStudies = () => {
   return (
     <>
 
+<Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
       < Navbar />
 
       {/* Landing Img Section */}
@@ -260,7 +272,7 @@ const LightningProtectionStudies = () => {
               Lightning Protection Studies
             </h1>
             <div className="Y-axis-text-Title-Service2 flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
-              <Link to={'/GetInTouchForm'}>
+              <Link to={'/get-in-touch'}>
                 <button className="px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white uppercase 2xl:min-h-[64px] rounded-[50px]">
                   Get in touch
                 </button>
@@ -323,7 +335,7 @@ const LightningProtectionStudies = () => {
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
         <button className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <Link to={'/GetInTouchForm'}>
+          <Link to={'/get-in-touch'}>
             <span className="self-stretch my-auto">CONTACT US</span>
           </Link>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
@@ -464,7 +476,7 @@ function TestimonialsSection() {
                 </p>
               </div>
               <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
-                <Link to={'/GetInTouchForm'}>
+                <Link to={'/get-in-touch'}>
                   <button className={`flex overflow-hidden text-sm justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
                     CONTACT US
                   </button>

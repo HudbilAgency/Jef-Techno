@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import ContactUs from "../Components/ContactUs/ContactUs";
-import { button } from "framer-motion/client";
+import { Helmet } from 'react-helmet';
 
 
 
@@ -55,26 +55,32 @@ const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
+    path: 'BlogInside1'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
+    path: 'BlogInside2'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
     title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
+    path: '/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img4.png",
     title: "Understanding the Importance of Power System Studies in the UAEs",
+    path: 'BlogInside4'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
+    path: 'BlogInside1'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img2.png",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
+    path: 'BlogInside2'
   },
 
 ];
@@ -120,7 +126,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png',
     text: 'Lightning protection system studies',
     title: "Lightning Protection Studies Projects Completed",
-    path: '/LightningProtectionStudies',
+    path: '/lightning-protection-studies',
     totalProjects: 233,
     indiaProjects: 195,
     gcc: 38,
@@ -131,7 +137,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png',
     text: 'power system studies',
     title: "Power System Studies Projects Completed",
-    path: '/PowerSystemStudies',
+    path: '/power-system-studies',
     totalProjects: 74,
     indiaProjects: 58,
     gcc: 16,
@@ -142,7 +148,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png',
     text: 'power quality & root cause analysis',
     title: "Power Quality & Root Cause Studies Projects Completed",
-    path: '/PowerQualityStudies',
+    path: '/power-quality-studies',
     totalProjects: 66,
     indiaProjects: 36,
     gcc: 30,
@@ -153,7 +159,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
     text: 'instrumentation earthing',
     title: "Instrumentation Earthing Studies Projects Completed",
-    path: '/InstrumentEarthing',
+    path: '/instrumentation-earthing-studies',
     totalProjects: 32,
     indiaProjects: 24,
     gcc: "08",
@@ -597,6 +603,23 @@ function Home() {
 
   return (
     <>
+      <Helmet>
+      <title>JEF UAE: Premium Lightning Protection & Grounding System Products</title>
+      <meta name="description" content="Discover JEF UAE's range of high-quality lightning protection and grounding system products. Trusted solutions for enhanced safety in electrical grounding and surge protection systems across UAE."></meta>
+      <meta property="og:url" content="https://www.jefuae.com/"></meta>
+      <meta name="keywords" content="JEF UAE, lightning protection, grounding system, grounding products, surge protection, UAE, electrical safety, grounding solutions, lightning rods, grounding accessories"></meta>
+      <meta name="og:description" content="JEF UAE provides reliable lightning protection and grounding system products, ensuring top safety standards in electrical grounding and surge protection. Serving UAE industries with trusted solutions."></meta>
+      <meta name="og:site_name" content="Lightning Protection Systems | Grounding System Products"></meta>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
       {!showVideo && <Navbar />}
 
       <div className="relative w-full h-screen overflow-hidden">

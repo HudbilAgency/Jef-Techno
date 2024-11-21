@@ -1,8 +1,9 @@
 import React from 'react';
-
 import MainFooter from '../Components/Footer/MainFooter';
 import Navbar from '../Components/Navbar/Navbar';
 import { Link} from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 
 const BlogInside1 = () => {
   const faqItems = [
@@ -51,6 +52,17 @@ const BlogInside1 = () => {
 
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar />
     <section className="flex py-24 overflow-hidden flex-col bg-neutral-100">
       <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
@@ -66,18 +78,18 @@ const BlogInside1 = () => {
         <h1 className="self-stretch mt-4 text-xl lg:text-3xl font-bold leading-10 text-red-700 uppercase max-md:max-w-full">
           Ensuring Safety in the Oil and Gas Industry in the UAE
         </h1>
-        <p className="mt-10 text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
+        <p className="mt-10 text-base font-extralight leading-6 text-zinc-800 max-md:max-w-full">
         The oil and gas industry is a key driver of Abu Dhabi's economy, but it comes with significant safety challenges. From maintaining pipelines to protecting refineries, ensuring safety is vital for protecting people, equipment, and the environment.
         </p>
         <h2 className="mt-10 text-2xl leading-tight text-zinc-800">Key Focus Areas for Safety in Abu Dhabi's Oil and Gas Sector</h2>
         {faqItems.map((item, index) => (
-          <div key={index} className="mt-10 ml-[2%] text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
+          <div key={index} className="mt-10 ml-[2%] text-base font-extralight leading-6 text-zinc-800 max-md:max-w-full">
             <strong>{item.question}</strong>
             <p>{item.answer}</p>
           </div>
         ))}
         <h2 className="mt-10 text-2xl leading-tight text-zinc-800">Why JEF Is the Right Partner for Abu Dhabi's Oil and Gas Industry</h2>
-        <p className="mt-5 text-base font-thin leading-6 text-zinc-800 max-md:max-w-full">
+        <p className="mt-5 text-base font-extralight leading-6 text-zinc-800 max-md:max-w-full">
           JEF offers expert solutions for lightning protection, electrical safety, and power quality tailored to the UAE’s unique needs. With services that meet international safety standards, JEF helps companies in Abu Dhabi protect their workforce, facilities, and investments
         </p>
         <p className="mt-10 text-base font-medium leading-6 text-zinc-800 max-md:max-w-full">

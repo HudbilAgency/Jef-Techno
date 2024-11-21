@@ -4,6 +4,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import { Link} from 'react-router-dom';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Helmet } from 'react-helmet';
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -46,7 +47,7 @@ const Blog = () => {
       title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
       content: "In the United Arab Emirates (UAE), the rapid expansion of renewable energy projects, particularly solar farms, necessitates meticulous planning and analysis to ensure the reliability and efficiency of electrical power systems. Comprehensive power system studies are essential to address the unique challenges posed by integrating renewable energy sources into the national grid.",
       imageUrl: "./BlogImg/BlogImg3.png",
-      path: '/BlogInside3'
+      path: '/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
     },
     {
       date: "August 15, 2024",
@@ -119,6 +120,17 @@ const Blog = () => {
   return (
 
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar/>
     <section className="flex overflow-hidden flex-col items-center bg-neutral-100">
       <header className="flex h-screen overflow-hidden flex-col self-stretch w-full bg-zinc-900 max-md:max-w-full">

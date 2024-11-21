@@ -26,7 +26,7 @@ const GetInTouchPage = () => {
               <div className="flex flex-col self-center mt-24 -mb-9 ml-3 w-full max-w-[1510px] max-md:mt-10 max-md:mb-2.5 max-md:max-w-full">
                 <div className="flex flex-col max-w-full text-xs text-white w-[658px]">
                   <div className="flex flex-col w-full max-md:max-w-full">
-                  <Link to={'/GetInTouchForm'}>
+                  <Link to={'/get-in-touch'}>
                     <h2 className="w-full font-bold tracking-widest leading-6 text-red-700 max-md:max-w-full">
                       GET IN TOUCH
                     </h2>
