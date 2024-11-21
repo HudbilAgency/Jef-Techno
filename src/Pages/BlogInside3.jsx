@@ -78,6 +78,17 @@ const BlogInside3 = () => {
 
     return (
         <>
+        <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
             < Navbar />
             <section className="flex py-24 overflow-hidden flex-col bg-neutral-100">
                 <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">

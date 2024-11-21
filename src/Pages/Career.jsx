@@ -140,6 +140,17 @@ const Career = () => {
 
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar />
     <main className="flex overflow-hidden flex-col bg-neutral-100  max-md:pb-24">
         <section className="lg:flex hidden h-screen flex-col w-full max-md:pt-24 max-md:max-w-full">

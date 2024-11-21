@@ -158,6 +158,17 @@ const TermsAndConditions = () => {
 
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
        < Navbar/>
         <main className="flex overflow-hidden self-center justify-center mx-auto flex-col items-center px-20 py-56 text-base font-thin bg-neutral-100  text-zinc-800 max-md:px-5 max-md:py-24">
           <article className="flex overflow-hidden flex-col items-start px-10 py-16  max-w-full bg-white w-[1024px] max-md:px-5">

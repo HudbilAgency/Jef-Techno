@@ -15,6 +15,17 @@ const GetInTouchForm = () => {
 
 
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar />
     <section className="flex p-5 py-32 overflow-hidden flex-col bg-neutral-100">
       <div className="flex flex-col self-center mt-24 w-full max-w-[1300px] max-md:mt-10 max-md:max-w-full">

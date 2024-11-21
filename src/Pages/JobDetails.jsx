@@ -49,6 +49,17 @@ const tags = ["Full time", "Commerce", "New - York", "Corporate", "Location"];
 function JobDetails() {
   return (
    <>
+   <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
     < Navbar />
     <main className="flex overflow-hidden flex-col items-center bg-neutral-100  max-md:pb-24">
       <header className="flex relative flex-col self-stretch px-16 pt-64 pb-28 w-full text-5xl font-bold text-center text-white min-h-[26.375rem] max-md:px-5 max-md:pt-24 max-md:pb-28 max-md:max-w-full max-md:text-4xl">

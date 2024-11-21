@@ -210,6 +210,17 @@ export default function LeadershipTeam() {
 
   return (
     <>
+    <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
       < Navbar />
       <main className="flex flex-col min-h-screen bg-neutral-100">
         <header className="relative h-screen overflow-hidden">
