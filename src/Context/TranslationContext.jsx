@@ -5,12 +5,13 @@ export const TranslationContext = createContext();
 export const TranslationProvider = ({ children }) => {
   const [isArabic, setIsArabic] = useState(false);
 
-  const toggleTranslation = () => {
+  const toggleTranslation = (lang) => {
     const selectLanguage = document.querySelector(".goog-te-combo");
     if (selectLanguage) {
-      selectLanguage.value = isArabic ? "en" : "ar";
+      const newLanguage = lang || (isArabic ? "en" : "ar");
+      selectLanguage.value = newLanguage;
       selectLanguage.dispatchEvent(new Event("change"));
-      setIsArabic(!isArabic);
+      setIsArabic(newLanguage === "ar");
     }
   };
 
