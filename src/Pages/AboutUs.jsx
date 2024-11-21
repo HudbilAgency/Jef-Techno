@@ -4,7 +4,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
-
+import { Helmet } from 'react-helmet';
 
 
 
@@ -123,6 +123,17 @@ const AboutUs = () => {
 
   return (
    <>
+   <Helmet>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
+        <script>
+          {`
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-V6J93962T6');
+                `}
+        </script>
+      </Helmet>
    < Navbar />
     <section className='overflow-hidden'>
             <main className="flex relative flex-col h-screen w-full max-md:py-24 max-md:max-w-full">

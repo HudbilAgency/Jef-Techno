@@ -4,6 +4,7 @@ import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../Components/Navbar/Navbar";
 import {Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 gsap.registerPlugin(ScrollTrigger);

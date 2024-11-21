@@ -4,6 +4,7 @@ import MainFooter from "../Components/Footer/MainFooter";
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
+import { Helmet } from 'react-helmet';
 
 
 

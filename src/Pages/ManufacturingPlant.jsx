@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import ContactUs from "../Components/ContactUs/ContactUs";
+import { Helmet } from 'react-helmet';
 
 
 gsap.registerPlugin(ScrollTrigger);

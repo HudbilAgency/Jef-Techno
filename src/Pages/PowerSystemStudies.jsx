@@ -3,6 +3,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap';
 import Navbar from "../Components/Navbar/Navbar";
 import {Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 
 const PowerSystemStudies = () => {

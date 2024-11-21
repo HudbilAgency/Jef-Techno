@@ -1,6 +1,7 @@
 import React from 'react';
 import MainFooter from '../Components/Footer/MainFooter';
 import Navbar from '../Components/Navbar/Navbar';
+import { Helmet } from 'react-helmet';
 
 const CookiePolicy = () => {
   const sections = [

@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import path from "path";
 import ContactUs from "../Components/ContactUs/ContactUs";
+import { Helmet } from 'react-helmet';
 
 
 
