@@ -215,8 +215,8 @@ const GetInTouchForm = () => {
               <div className="hidden lg:flex flex-col flex-1 grow shrink-0 text-sm font-normal leading-5 basis-0 min-h-[90px] text-stone-900 w-fit max-md:max-w-full">
                 <p className="z-10 pt-0 pb-7 w-full max-md:max-w-full">
                   By completing this form you are agreeing to being contacted by JEF, If you would also like to hear updates from other parts of JEF please select Yes. We will treat your information carefully. See our{" "}
-                  <a href="/TermsAndConditions" className="font-medium text-red-700">terms and Conditions</a>{" "}
-                  and <a href="/PrivacyPolicy" className="font-medium text-red-700">privacy policy</a>{" "}
+                  <a href="/termsandconditions" className="font-medium text-red-700">terms and Conditions</a>{" "}
+                  and <a href="/privacypolicy" className="font-medium text-red-700">privacy policy</a>{" "}
                   for more details.
                 </p>
               </div>

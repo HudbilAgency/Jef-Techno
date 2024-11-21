@@ -77,7 +77,7 @@ const MainImg = () => {
                 />
               </div>
             </div>
-            <Link to={'/GetInTouchForm'}>
+            <Link to={'/get-in-touch'}>
             <button className="gap-3 self-stretch p-2.5 my-auto text-2xl text-white bg-red-700 rounded-[30px] tracking-[2px] w-[216px]">
               Get In Touch
             </button>

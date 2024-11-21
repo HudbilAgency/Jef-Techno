@@ -8,7 +8,7 @@ const blogData = [
     id: 1,
     imageSrc: "./HomePageImg/BlogsSection/Img1.png",
     title: "Enhance Reliability, Efficiency and Compliance of Your Electrical Grid through Power System Studies",
-    path: '/blogInside'
+    path: '/BlogInside'
   },
   {
     id: 2,

@@ -244,7 +244,7 @@ const Navbar = () => {
                   </motion.div>
                 )}
               </AnimatePresence>
-              <Link to='/GetInTouchForm' className='z-20'>
+              <Link to='/get-in-touch' className='z-20'>
                 <button className="gap-3 uppercase self-stretch py-3 px-4 md:py-2 lg:py-3 md:px-4 lg:px-7 my-auto text-xs md:text-sm text-red-700 bg-white hover:text-white hover:bg-red-700 rounded-[30px] tracking-[2px] whitespace-nowrap">
                   Contact Us
                 </button>

@@ -65,7 +65,7 @@ const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
     title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
-    path: 'blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
+    path: '/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img4.png",

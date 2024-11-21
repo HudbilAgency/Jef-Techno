@@ -44,17 +44,17 @@ const Routers = () => {
         <Route path="/SmartDigitalization" element={<SmartDigitalization />} />
         <Route path="/L&D-Centre" element={<LD_Centre />} />
         <Route path="/CookiePolicy" element={<CookiePolicy />} />
-        <Route path="/PrivacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/privacypolicy" element={<PrivacyPolicy />} />
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
         <Route path="/BlogInside2" element={<BlogInside2/>} />
         <Route path="/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies" element={<BlogInside3/>} />
         <Route path="/BlogInside4" element={<BlogInside4/>} />
-        <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
+        <Route path="/get-in-touch" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
         <Route path="/earthing-studies" element={<EarthingStudies/>} />
         <Route path="/Career" element={<Career/>} />
-        <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
+        <Route path="/termsandconditions" element={<TermsAndConditions/>} />
         <Route path="/lightning-protection-studies" element={<LightningProtectionStudies/>} />
         <Route path="/power-quality-studies" element={<PowerQualityStudies/>} />
         <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
