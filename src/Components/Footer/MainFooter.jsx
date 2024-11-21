@@ -54,7 +54,11 @@ function MainFooter() {
   ];
 
   const itemsBusiness = [
-    { name: 'Industries', path: '' },
+    { name: 'Oil and Gas', path: '/industries/oilandgas' },
+    { name: 'Power Utilities', path: '/industries/powerutilities' },
+    { name: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+    { name: 'Process Plant', path: '/industries/processplant' },
+    { name: 'Commercial Buildings', path: '/industries/commercialbuilding' },
   ];
 
   const itemsCareers = [
@@ -66,9 +70,9 @@ function MainFooter() {
     <main className="flex overflow-hidden flex-col items-center lg:pt-24 bg-stone-800">
       <div className="hidden lg:flex flex-col md:flex-row w-[88vw] max-w-[95vw] tracking-wider justify-between ">
         <Section title="About" items={itemsAbout} />
-        <Section title="Services" items={itemsService} />
+        <Section title="Our Business" items={itemsService} />
         <Section title="Locations" items={itemsLocation} />
-        <Section title="Our Business" items={itemsBusiness} />
+        <Section title="Industries" items={itemsBusiness} />
         <Section title="Careers" items={itemsCareers} />
       </div>
       <div className='lg:hidden'>
@@ -156,7 +160,7 @@ const FAQComponent = () => {
       isOpen: false
     },
     {
-      question: "Services",
+      question: "Our Business",
       content: [
         { label: 'Power System Studies', path: '/power-system-studies' },
         { label: 'Power Quality Studies', path: '/power-quality-studies' },
