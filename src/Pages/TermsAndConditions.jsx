@@ -170,7 +170,7 @@ const TermsAndConditions = () => {
         </script>
       </Helmet>
        < Navbar/>
-        <main className="flex overflow-hidden self-center justify-center mx-auto flex-col items-center px-20 py-56 text-base font-thin bg-neutral-100  text-zinc-800 max-md:px-5 max-md:py-24">
+        <main className="flex overflow-hidden self-center justify-center mx-auto flex-col items-center px-20 py-56 text-base font-extralightn bg-neutral-100  text-zinc-800 max-md:px-5 max-md:py-24">
           <article className="flex overflow-hidden flex-col items-start px-10 py-16  max-w-full bg-white w-[1024px] max-md:px-5">
             <h1 className="text-4xl font-normal leading-none uppercase tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
               Terms & Condition

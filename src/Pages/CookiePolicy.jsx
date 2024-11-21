@@ -68,7 +68,7 @@ const CookiePolicy = () => {
       </Helmet>
     < Navbar />
     <main className="flex overflow-hidden flex-col bg-neutral-100 lg:py-32 py-5">
-      <section className="flex overflow-hidden flex-col items-start self-center px-20 py-20 mt-24 max-w-full text-base font-thin leading-7 bg-white text-zinc-900 w-[1024px] max-md:px-5 max-md:mt-10">
+      <section className="flex overflow-hidden flex-col items-start self-center px-20 py-20 mt-24 max-w-full text-base font-extralight leading-7 bg-white text-zinc-900 w-[1024px] max-md:px-5 max-md:mt-10">
         <h1 className="text-4xl leading-none font-light uppercase tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
           COOKIE POLICY
         </h1>
