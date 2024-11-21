@@ -134,9 +134,9 @@ function PowerUtilites() {
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
-        { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }] , path: '/earthing-studies'},
-        { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }] , path: '/lightning-protection-studies'},
-        { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }] , path: '/power-system-studies'},
+        { image: '../HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }] , path: '/earthing-studies'},
+        { image: '../HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }] , path: '/lightning-protection-studies'},
+        { image: '../HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }] , path: '/power-system-studies'},
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
@@ -144,8 +144,8 @@ function PowerUtilites() {
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
-        { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }] , path: '/power-quality-studies'},
-        { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }] , path: '/instrumentation-earthing-studies'},
+        { image: '../HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }] , path: '/power-quality-studies'},
+        { image: '../HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }] , path: '/instrumentation-earthing-studies'},
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
         { image: '', text: '', data: [] },
@@ -250,7 +250,7 @@ function PowerUtilites() {
         <div className="flex flex-col h-screen relative max-md:text-4xl">
             <div className="">
             <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-              <source src="./IndustriesPage/Power Utilities - Option 1.mp4" type="video/mp4" />
+              <source src="../IndustriesPage/Power Utilities - Option 1.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             <h1 className="inset-y-2/3 xl:mt-[10%] lg:inset-x-20 absolute inset-0 p-4 flex z-10">
@@ -276,7 +276,7 @@ function PowerUtilites() {
         <header className="flex flex-col w-full text-2xl font-semibold uppercase text-stone-900 tracking-[2.06px] max-md:max-w-full">
             <img
             loading="lazy"
-            src="./AboutUs/PoweUtilities.png"
+            src="../AboutUs/PoweUtilities.png"
             alt="Renewable Energy Industry Logo"
             className="object-cover self-center max-w-full aspect-square w-20"
             />
