@@ -14,7 +14,7 @@ const BlogPost = ({ date, title, content, imageUrl , path  }) => (
     <img loading="lazy" src={imageUrl} alt="" className="object-contain w-full aspect-[1.5]" />
     <time className="self-start mt-3.5 text-xs font-extralight leading-snug uppercase text-zinc-900">{date}</time>
     <h2 className="mt-2.5 text-lg leading-6 uppercase text-stone-900">{title}</h2>
-    <p className="mt-3.5 text-sm font-thin leading-6 text-stone-900">{content}</p>
+    <p className="mt-3.5 text-sm font-extralight leading-6 text-stone-900">{content}</p>
     <a href="#" className="flex gap-2.5 items-center self-start mt-6">
       <Link to={path} ><span className="self-stretch pb-px my-auto text-xs tracking-widest leading-tight text-red-700 uppercase">Learn More</span></Link>
       <span className="flex flex-col items-start self-stretch pl-0.5 my-auto min-h-[15px] w-[17px]">
