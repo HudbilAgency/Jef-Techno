@@ -106,7 +106,7 @@ function Footer() {
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2023. All Rights Reserved © jeftechno | Designed by
-            <img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8 -mt-[2%] ' />
+            <a className='-mt-[2%]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
           </div>
         </div>
       </div>
