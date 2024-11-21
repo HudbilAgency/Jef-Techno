@@ -62,9 +62,9 @@ const Routers = () => {
         <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
         <Route path="/industries/oilandgas" element={< OilandGas/>} />
         <Route path="/industries/powerutilities" element={< PowerUtilites/>} />
-        <Route path="/ManufacturingPlant" element={< ManufacturingPlant/>} />
-        <Route path="/ProcessPlant" element={< ProcessPlant/>} />
-        <Route path="/CommercialBuilding" element={< CommercialBuilding/>} />
+        <Route path="/industries/manufacturingplant" element={< ManufacturingPlant/>} />
+        <Route path="/industries/processplant" element={< ProcessPlant/>} />
+        <Route path="/industries/commercialbuilding" element={< CommercialBuilding/>} />
         <Route path="/about-us" element={<AboutUs/>} />
         <Route path="/leadership-team" element={<LeadershipTeam/>} />
         <Route path="/JobDetails" element={<JobDetails/>} />

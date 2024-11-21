@@ -523,8 +523,8 @@ function IndustriesComponent() {
   const Industries = [
     { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/industries/oilandgas' },
     { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/industries/powerutilities' },
-    { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
-    { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/ProcessPlant' },
+    { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+    { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/industries/processplant' },
     { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
   ];
 
@@ -621,9 +621,9 @@ const FAQComponent = () => {
       content: [
         { label: 'Oil and Gas', path: '/industries/oilandgas' },
         { label: 'Power Utilites', path: '/industries/powerutilities' },
-        { label: 'Manufacturing Plant', path: '/ManufacturingPlant' },
-        { label: 'Process Plant', path: '/ProcessPlant' },
-        { label: 'Commercial Buildings', path: '/CommercialBuilding' }
+        { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
+        { label: 'Process Plant', path: '/industries/processplant' },
+        { label: 'Commercial Buildings', path: '/industries/commercialbuilding' }
       ],
       isOpen: false,
     },
