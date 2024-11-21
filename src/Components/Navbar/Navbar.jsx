@@ -7,7 +7,7 @@ const menuItems = [
   { label: 'About', hasDropdown: true },
   { label: 'Our Business', hasDropdown: true },
   { label: 'Industries', hasDropdown: true },
-  { label: 'Blogs', hasDropdown: false, path: '/Blog' },
+  { label: 'Blogs', hasDropdown: false, path: '/blog' },
 ];
 
 const Navbar = () => {
@@ -174,7 +174,7 @@ const Navbar = () => {
                         onMouseEnter={() => handleMenuHover(item.label)}
                         onMouseLeave={handleMouseLeave}
                         loading="lazy"
-                        src="./HomePageImg/NavbarImg/Dropdown.png"
+                        src="../HomePageImg/NavbarImg/Dropdown.png"
                         alt="Dropdown"
                         className="object-contain w-5 hidden lg:block transition-transform duration-300 transform group-hover:rotate-180"
                       />
@@ -197,7 +197,7 @@ const Navbar = () => {
                 <div className="flex flex-col justify-center items-center self-stretch px-2.5 py-3.5 my-auto w-8 min-h-[20px]">
                   <img
                     loading="lazy"
-                    src="./HomePageImg/NavbarImg/Dropdown.png"
+                    src="../HomePageImg/NavbarImg/Dropdown.png"
                     alt="Dropdown"
                     className={`object-contain w-5 hidden lg:block ${isDropdownVisible ? "transition-transform duration-300 transform rotate-180 group-hover:rotate-180" : "transition-transform duration-300 transform rotate-360"
                       }`}
@@ -250,7 +250,7 @@ const Navbar = () => {
                 </button>
               </Link>
               <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
-                <img src="./HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
+                <img src="../HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
               </button>
             </div>
           </div>
@@ -294,7 +294,7 @@ const Navbar = () => {
           className="absolute top-5 right-0 p-2 text-white"
           onClick={toggleSlideMenu}
         >
-          <img src="./HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]' />
+          <img src="../HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]' />
         </button>
         <div className="h-full">
           <FAQComponent />
@@ -414,17 +414,17 @@ function ServicesComponent() {
     {
       icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b5f02d9fdb5718b196d139d6ebd861434cc16ed9ab32832947574565d35f1e8a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
       text: 'Earthing studies',
-      path: '/earthing-studies',
+      path: '/EarthingStudies',
     },
     {
       icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/867f2d5ce1ba02732c6bd156934c4e5560b9272459baee10a94cd80ed6bccf8f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
       text: 'Lightning protection studies',
-      path: '/lightning-protection-studies',
+      path: '/LightningProtectionStudies',
     },
     {
       icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/704550b3ea93f0d94056e8407f045bb96f426d89156169b780aa07bd555d1512?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
       text: 'Power system studies',
-      path: '/power-system-studies',
+      path: '/PowerSystemStudies',
     },
     {
       icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e7602f18306c0a2953e65246bde5f6d381c9d6dbb4b63b81ac2662d70c68741a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
@@ -521,11 +521,11 @@ function IndustriesComponent() {
   const [isHovered, setIsHovered] = useState(false);
 
   const Industries = [
-    { icon: './AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas' },
-    { icon: './AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/PowerUtilites' },
-    { icon: './AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
-    { icon: './AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/ProcessPlant' },
-    { icon: './AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
+    { icon: '../AboutUs/OilandGas.png', text: 'Oil and Gas', path: '/OilandGas' },
+    { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/PowerUtilites' },
+    { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/ManufacturingPlant' },
+    { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/ProcessPlant' },
+    { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
   ];
 
   return (
@@ -548,7 +548,7 @@ function IndustriesComponent() {
                 <div className="flex flex-col justify-center items-center py-1.5 pr-2.5 pl-2.5 min-h-[29px]">
                   <img
                     loading="lazy"
-                    src="./AboutUs/RightArrow.png"
+                    src="../AboutUs/RightArrow.png"
                     alt=""
                     className="object-contain w-2"
                   />
@@ -601,17 +601,17 @@ const FAQComponent = () => {
       question: "About",
       content: [
         { label: 'About Us', path: '/about-us' },
-        { label: 'JEF Leadership Team', path: '/leadership-team' },
+        { label: 'JEF Leadership Team', path: '/LeadershipTeam' },
       ],
       isOpen: false,
     },
     {
       question: "Our Business",
       content: [
-        { label: 'Power System Studies', path: '/power-system-studies' },
+        { label: 'Power System Studies', path: '/PowerSystemStudies' },
         { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
-        { label: 'Earthing Studies', path: '/earthing-studies' },
-        { label: 'LPS System Studies', path: '/lightning-protection-studies' },
+        { label: 'Earthing Studies', path: '/EarthingStudies' },
+        { label: 'LPS System Studies', path: '/LightningProtectionStudies' },
         { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
       ],
       isOpen: false,
@@ -629,7 +629,7 @@ const FAQComponent = () => {
     },
     {
       question: "Blogs",
-      path: "/Blog", // Direct link path for Blogs
+      path: "/blog", // Direct link path for Blogs
       isOpen: false,
     },
   ]);
@@ -677,8 +677,8 @@ const FAQComponent = () => {
                 loading="lazy"
                 src={
                   isOpen
-                    ? "./AboutUs/DropUpArr.png"
-                    : "./AboutUs/DropdownArr.png"
+                    ? "../AboutUs/DropUpArr.png"
+                    : "../AboutUs/DropdownArr.png"
                 }
                 alt=""
                 className="object-contain flex-1 w-full aspect-square"

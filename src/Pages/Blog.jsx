@@ -47,7 +47,7 @@ const Blog = () => {
       title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
       content: "In the United Arab Emirates (UAE), the rapid expansion of renewable energy projects, particularly solar farms, necessitates meticulous planning and analysis to ensure the reliability and efficiency of electrical power systems. Comprehensive power system studies are essential to address the unique challenges posed by integrating renewable energy sources into the national grid.",
       imageUrl: "./BlogImg/BlogImg3.png",
-      path: '/BlogInside3'
+      path: '/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
     },
     {
       date: "August 15, 2024",

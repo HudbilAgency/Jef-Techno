@@ -65,7 +65,7 @@ const blogData = [
   {
     imageSrc: "./HomePageImg/BlogsSection/Img3.png",
     title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
-    path: 'BlogInside3'
+    path: 'blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
   },
   {
     imageSrc: "./HomePageImg/BlogsSection/Img4.png",
@@ -148,7 +148,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png',
     text: 'power quality & root cause analysis',
     title: "Power Quality & Root Cause Studies Projects Completed",
-    path: '/PowerQualityStudies',
+    path: '/power-quality-studies',
     totalProjects: 66,
     indiaProjects: 36,
     gcc: 30,
@@ -159,7 +159,7 @@ const buttonData = [
     image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png',
     text: 'instrumentation earthing',
     title: "Instrumentation Earthing Studies Projects Completed",
-    path: '/InstrumentEarthing',
+    path: '/instrumentation-earthing-studies',
     totalProjects: 32,
     indiaProjects: 24,
     gcc: "08",

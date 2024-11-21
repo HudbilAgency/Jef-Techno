@@ -48,7 +48,7 @@ const Routers = () => {
         <Route path="/Blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
         <Route path="/BlogInside2" element={<BlogInside2/>} />
-        <Route path="/BlogInside3" element={<BlogInside3/>} />
+        <Route path="/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies" element={<BlogInside3/>} />
         <Route path="/BlogInside4" element={<BlogInside4/>} />
         <Route path="/GetInTouchForm" element={<GetInTouchForm/>} />
         <Route path="/GetInTouchPage" element={<GetInTouchPage/>} />
@@ -56,9 +56,9 @@ const Routers = () => {
         <Route path="/Career" element={<Career/>} />
         <Route path="/TermsAndConditions" element={<TermsAndConditions/>} />
         <Route path="/lightning-protection-studies" element={<LightningProtectionStudies/>} />
-        <Route path="/PowerQualityStudies" element={<PowerQualityStudies/>} />
+        <Route path="/power-quality-studies" element={<PowerQualityStudies/>} />
         <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
-        <Route path="/InstrumentEarthing" element={<InstrumentEarthing/>} />
+        <Route path="/instrumentation-earthing-studies" element={<InstrumentEarthing/>} />
         <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
         <Route path="/OilandGas" element={< OilandGas/>} />
         <Route path="/PowerUtilites" element={< PowerUtilites/>} />

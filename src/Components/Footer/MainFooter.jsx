@@ -40,10 +40,10 @@ function MainFooter() {
 
   const itemsService = [
     { name: 'Power System Studies', path: '/power-system-studies' },
-    { name: 'Power Quality Studies', path: '/PowerQualityStudies' },
+    { name: 'Power Quality Studies', path: '/power-quality-studies' },
     { name: 'Earthing Studies', path: '/earthing-studies' },
     { name: 'LPS System Studies', path: '/lightning-protection-studies' },
-    { name: 'Instrumentation Studies', path: '/InstrumentEarthing' }
+    { name: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
   ];
 
   const itemsLocation = [
@@ -91,10 +91,10 @@ function Footer() {
           FOLLOW jef ON SOCIAL MEDIA
         </div>
         <div className="flex X-axis-card-anm-footer flex-row h-full space-x-12 lg:space-x-6">
-          <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
-          <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
-          <a href="https://www.linkedin.com/company/jeftechnosolutions/" target="_blank" className="object-contain  card-slider-footer"><img src="./FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
-          <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="./FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
+          <a href="https://www.youtube.com/@JEFgroup" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Youtube.png" alt="YoutubeImg" /></a>
+          <a href="https://www.facebook.com/JEFTECHNO/" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Facebook.png" alt="FacebookImg" /></a>
+          <a href="https://www.linkedin.com/company/jeftechnosolutions/" target="_blank" className="object-contain  card-slider-footer"><img src="../FooterLogo/Link - Linkedin.png" alt="LinkedInImg" /></a>
+          <a href="https://x.com/JeftechnoIndia" target="_blank" className="object-contain card-slider-footer"><img src="../FooterLogo/Link - Twitter.png" alt="TwitterImg" /></a>
         </div>
       </div>
       <div className="flex overflow-hidden flex-col justify-center items-center  py-7 mt-6 w-screen text-white bg-stone-900  max-md:max-w-full">
@@ -106,7 +106,7 @@ function Footer() {
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2023. All Rights Reserved © jeftechno | Designed by
-            <a className='-mt-[2%]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="./FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
+            <a className='-mt-[2%]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="../FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
           </div>
         </div>
       </div>
@@ -159,10 +159,10 @@ const FAQComponent = () => {
       question: "Services",
       content: [
         { label: 'Power System Studies', path: '/power-system-studies' },
-        { label: 'Power Quality Studies', path: '/PowerQualityStudies' },
+        { label: 'Power Quality Studies', path: '/power-quality-studies' },
         { label: 'Earthing Studies', path: '/earthing-studies' },
         { label: 'LPS System Studies', path: '/lightning-protection-studies' },
-        { label: 'Instrumentation Studies', path: '/InstrumentEarthing' }
+        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
       ],
       isOpen: false
     },
@@ -253,8 +253,8 @@ const FAQComponent = () => {
                 loading="lazy"
                 src={
                   isOpen
-                    ? "./AboutUs/DropUpArr.png"
-                    : "./AboutUs/DropdownArr.png"
+                    ? "../AboutUs/DropUpArr.png"
+                    : "../AboutUs/DropdownArr.png"
                 }
                 alt=""
                 className="object-contain flex-1 w-full aspect-square"
