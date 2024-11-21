@@ -65,7 +65,6 @@ const ContactUs = () => {
       mobile,
     };
 
-
     try {
       const response = await axios.post(
         "https://jef-server.onrender.com/reach-us-hudbil",
@@ -80,8 +79,6 @@ const ContactUs = () => {
     } catch (error) {
       console.error("Error sending data to server:", error);
     }
-
-
     setName("");
     setEmail("");
     setMobile("");
@@ -100,16 +97,19 @@ const ContactUs = () => {
           <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
             Get in touch with us for any business enquiry.
           </p>
-          <form className="w-full Y-axis-text mt-12 max-md:mt-10">
+          <form id="userDetailsForm"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmitForm();
+            }} className="w-full Y-axis-text mt-12 max-md:mt-10">
             {/* {inputFields.map((field, index) => (
             <FormInput key={index} label={field.label} type={field.type} />
           ))} */}
             <div className="mb-6">
-              <label className="sr-only">{name}</label>
+              <label className="sr-only">Name</label>
               <input
-                type={name}
-                id={1}
-                name={name}
+                type="text"
+                name="text"
                 placeholder={'Name'}
                 className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
                 required
@@ -117,11 +117,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="mb-6">
-              <label className="sr-only">{name}</label>
+              <label className="sr-only">Email</label>
               <input
-                type={email}
-                id={2}
-                name={email}
+                type="email"
+                name="email"
                 placeholder={'Email'}
                 className="overflow-hidden Y-axis-text px-5 py-3 w-full font-medium text-black max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
                 required
@@ -129,11 +128,10 @@ const ContactUs = () => {
               />
             </div>
             <div className="mb-6">
-              <label className="sr-only">{name}</label>
+              <label className="sr-only">Mobile Number</label>
               <input
-                type={mobile}
-                id={3}
-                name={mobile}
+                type="number"
+                name="number"
                 placeholder={'Mobile Number'}
                 className="overflow-hidden Y-axis-text px-5 font-medium text-black py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
                 required
@@ -141,12 +139,8 @@ const ContactUs = () => {
               />
             </div>
             <button
-              type="submit"
+              form="userDetailsForm" type="submit"
               className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
-              onSubmit={(e) => {
-                e.preventDefault();
-                handleSubmitForm();
-              }}
             >
               Submit
             </button>
