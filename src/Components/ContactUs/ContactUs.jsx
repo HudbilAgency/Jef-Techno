@@ -89,7 +89,7 @@ const ContactUs = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:3000/contact-us-jef",
+        "https://jef-server-eopn.onrender.com/contact-us-jef",
         JSON.stringify(contactformData),
         {
           headers: {
@@ -155,12 +155,20 @@ const ContactUs = () => {
               <div className="mb-6">
                 <label className="sr-only">Mobile Number</label>
                 <input
-                  type="number"
+                  type="tel"
                   name="number"
                   placeholder={'Mobile Number'}
                   className="overflow-hidden Y-axis-text px-5 font-medium text-black py-3 w-full max-w-[380px] bg-white rounded-3xl border border-solid border-neutral-200"
                   required
                   onChange={(e) => setMobile(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (
+                      !/[0-9]/.test(e.key) &&
+                      !["Backspace", "ArrowLeft", "ArrowRight", "Tab", "Delete"].includes(e.key)
+                    ) {
+                      e.preventDefault();
+                    }
+                  }}
                 />
               </div>
               <button

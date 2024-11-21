@@ -38,7 +38,7 @@ const Routers = () => {
   return (
     <>
     <Router>
-      < ScrollToTop />
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/SmartDigitalization" element={<SmartDigitalization />} />
