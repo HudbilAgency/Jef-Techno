@@ -93,7 +93,7 @@ const BlogInside3 = () => {
             <section className="flex py-24 overflow-hidden flex-col bg-neutral-100">
                 <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
                     <div className="flex  flex-col pt-[25rem] 2xl:pt-0 w-full 2xl:pb-[34rem] max-md:pb-24 max-md:max-w-full">
-                        <img loading="lazy" src="../BlogImg/BlogImg3.png" className="object-cover h-screen absolute inset-0 size-full" alt="" />
+                        <img loading="lazy" src="/HomePageImg/BlogsSection/Img3.jpg" className="object-cover h-screen absolute inset-0 size-full" alt="" />
                         <div className="flex relative flex-wrap gap-5 justify-between items-center self-center w-full max-w-[1528px] max-md:max-w-full" />
                     </div>
                 </div>

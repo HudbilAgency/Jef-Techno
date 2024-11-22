@@ -53,32 +53,32 @@ const inputFields = [
 
 const blogData = [
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img1.png",
+    imageSrc: "./HomePageImg/BlogsSection/Img1.jpg",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
     path: 'BlogInside1'
   },
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img2.png",
+    imageSrc: "./HomePageImg/BlogsSection/Img2.jpg",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
     path: 'BlogInside2'
   },
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img3.png",
+    imageSrc: "./HomePageImg/BlogsSection/Img3.jpg",
     title: "Enhancing Renewable Energy Reliability: Comprehensive Power System Studies in the UAE",
     path: '/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies'
   },
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img4.png",
-    title: "Understanding the Importance of Power System Studies in the UAEs",
+    imageSrc: "./HomePageImg/BlogsSection/Img4.jpg",
+    title: "Understanding the Importance of Power System Studies in the UAE",
     path: 'BlogInside4'
   },
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img1.png",
+    imageSrc: "./HomePageImg/BlogsSection/Img1.jpg",
     title: "Ensuring Safety in the Oil and Gas Industry in the UAE",
     path: 'BlogInside1'
   },
   {
-    imageSrc: "./HomePageImg/BlogsSection/Img2.png",
+    imageSrc: "./HomePageImg/BlogsSection/Img2.jpg",
     title: "Maximizing Economic Efficiency through Power Factor and Harmonic Studies in the UAE",
     path: 'BlogInside2'
   },
@@ -216,6 +216,24 @@ function Home() {
           scrollTrigger: {
             trigger: element,
             start: 'top 70%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    });
+
+    gsap.utils.toArray('.Y-axis-text-founder').forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 50 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 90%',
             toggleActions: 'play none none none',
           },
         }
@@ -604,12 +622,12 @@ function Home() {
   return (
     <>
       <Helmet>
-      <title>JEF UAE: Premium Lightning Protection & Grounding System Products</title>
-      <meta name="description" content="Discover JEF UAE's range of high-quality lightning protection and grounding system products. Trusted solutions for enhanced safety in electrical grounding and surge protection systems across UAE."></meta>
-      <meta property="og:url" content="https://www.jefuae.com/"></meta>
-      <meta name="keywords" content="JEF UAE, lightning protection, grounding system, grounding products, surge protection, UAE, electrical safety, grounding solutions, lightning rods, grounding accessories"></meta>
-      <meta name="og:description" content="JEF UAE provides reliable lightning protection and grounding system products, ensuring top safety standards in electrical grounding and surge protection. Serving UAE industries with trusted solutions."></meta>
-      <meta name="og:site_name" content="Lightning Protection Systems | Grounding System Products"></meta>
+        <title>JEF UAE: Premium Lightning Protection & Grounding System Products</title>
+        <meta name="description" content="Discover JEF UAE's range of high-quality lightning protection and grounding system products. Trusted solutions for enhanced safety in electrical grounding and surge protection systems across UAE."></meta>
+        <meta property="og:url" content="https://www.jefuae.com/"></meta>
+        <meta name="keywords" content="JEF UAE, lightning protection, grounding system, grounding products, surge protection, UAE, electrical safety, grounding solutions, lightning rods, grounding accessories"></meta>
+        <meta name="og:description" content="JEF UAE provides reliable lightning protection and grounding system products, ensuring top safety standards in electrical grounding and surge protection. Serving UAE industries with trusted solutions."></meta>
+        <meta name="og:site_name" content="Lightning Protection Systems | Grounding System Products"></meta>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -769,7 +787,7 @@ function Home() {
       {/*  For large devices  */}
 
       <section className={`lg:flex items-center justify-center px-16 bg-stone-900 overflow-hidden hidden ${isScreenTall ? 'h-screen' : 'h-full'}`}>
-        <div className={`flex items-center ${isScreenTall ? 'mt-0 mb-0 h-full' : 'mt-40 mb-32'}`}>
+        <div className={`flex items-center ${isScreenTall ? 'mt-0 mb-0 h-full' : 'py-60'}`}>
           <img
             className="h-32 my-auto hidden lg:block"
             src="./HomePageImg/WhyChooseJEFImg/ScrollImg.png"
@@ -898,9 +916,11 @@ function Home() {
                   <p>No wonder customers <span className="font-medium">THINK "JEF"</span> when they <span className="font-medium">THINK ELECTRICAL</span> engineering.
                   </p>
                 </div>
-                <h2 className="text-xl lg:text-2xl Y-axis-text font-semibold max-md:text-4xl">{"Prashanth BG"}</h2>
-                <p className=" text-xl lg:text-xl Y-axis-text max-md:max-w-full">{"Chairman and Managing Director"}</p>
-                <p className="text-xl lg:text-xl Y-axis-text ">{"JEF Group"}</p>
+                <div className="Y-axis-text-founder">
+                  <h2 className="text-xl lg:text-2xl font-semibold max-md:text-4xl">{"Prashanth BG"}</h2>
+                  <p className=" text-xl lg:text-xl max-md:max-w-full">{"Chairman and Managing Director"}</p>
+                  <p className="text-xl lg:text-xl ">{"JEF Group"}</p>
+                </div>
               </div>
             </div>
 
