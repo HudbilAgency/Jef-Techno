@@ -45,7 +45,7 @@ const Routers = () => {
         <Route path="/L&D-Centre" element={<LD_Centre />} />
         <Route path="/cookiepolicy" element={<CookiePolicy />} />
         <Route path="/privacypolicy" element={<PrivacyPolicy />} />
-        <Route path="/Blog" element={<Blog/>} />
+        <Route path="/blog" element={<Blog/>} />
         <Route path="/BlogInside1" element={<BlogInside1/>} />
         <Route path="/BlogInside2" element={<BlogInside2/>} />
         <Route path="/blog/enhance-reliability-efficiency-compliance-electrical-grid-power-system-studies" element={<BlogInside3/>} />
