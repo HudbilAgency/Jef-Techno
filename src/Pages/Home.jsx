@@ -838,9 +838,8 @@ function Home() {
                         reports with customizable formats— over 5,000 reports and a million data points captured to date.
                         Fast, secure, and reliable insights with every report.
                       </div>
-                      <div className="w-fit">
-                        <Link to={'/SmartDigitalization'}>
-                          <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                      <div className="w-fit opacity-0">
+                          <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
                             <span className="py-3 pl-4 my-auto">Read More</span>
                             <img
                               loading="lazy"
@@ -849,16 +848,14 @@ function Home() {
                               alt=""
                             />
                           </button>
-                        </Link>
                       </div>
                     </div>
                     <div ref={divRef2}>
                       <div className="my-16">
                         At JEF, we are committed to continuous improvement and excellence. The L&D Center is designed to enhance the skills and expertise of our employees, ensuring they stay ahead of industry trends and deliver superior service to our clients.
                       </div>
-                      <div className="w-fit">
-                        <Link to={'/L&D-Centre'}>
-                          <button className="flex text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                      <div className="w-fit opacity-0">
+                          <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
                             <span className="py-3 pl-4 my-auto">Read More</span>
                             <img
                               loading="lazy"
@@ -867,7 +864,6 @@ function Home() {
                               alt=""
                             />
                           </button>
-                        </Link>
                       </div>
                     </div>
                   </div>

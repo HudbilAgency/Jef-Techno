@@ -6,9 +6,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link } from "react-router-dom";
 import { Helmet } from 'react-helmet';
 
-
-
-
 gsap.registerPlugin(ScrollTrigger);
 
 export default function LeadershipTeam() {
@@ -308,7 +305,7 @@ export default function LeadershipTeam() {
                   {leader.title}
                 </p>
                 <button
-                  className="mt-8 w-6 h-6"
+                  className="mt-8 w-6 h-6 hidden"
                   aria-label={`View ${leader.name}'s profile`}
                 >
                   {/* <svg
