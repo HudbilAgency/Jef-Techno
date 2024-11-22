@@ -126,7 +126,7 @@ const Navbar = () => {
 
   return (
     <div
-      className={`flex fixed w-full z-50 overflow-hidden flex-col transition-colors duration-900 ${scrollNav || activeSection
+      className={`flex fixed w-full z-[60] overflow-hidden flex-col transition-colors duration-900 ${scrollNav || activeSection
         ? 'bg-stone-800'
         : location.pathname === '/' || location.pathname === '/about-us' || location.pathname === '/leadership-team'
           ? 'lg:bg-transparent'
@@ -734,10 +734,25 @@ const FAQComponent = () => {
             ))}
             <div className='mt-[10%] mx-auto'>
               <button
-                onClick={toggleTranslation}
-                className="self-stretch border p-4 uppercase my-auto text-base font-light border-red-500 tracking-[2px] text-white"
+                onClick={() => {
+                  console.log("Switched to English");
+                  toggleTranslation("en");
+                }}
+                translate='no'
+                className={` ${isArabic ? "block" : "hidden"} self-stretch border p-4 uppercase my-auto text-base font-light border-red-500 tracking-[2px] text-white`}
               >
-                {isArabic ? "English" : "Arabic (عربي)"}
+                English
+              </button>
+
+              <button
+                onClick={() => {
+                  console.log("Switched to arabic");
+                  toggleTranslation("ar");
+                }}
+                translate='no'
+                className={` ${isArabic ? "hidden" : "block"} self-stretch border p-4 uppercase my-auto text-base font-light border-red-500 tracking-[2px] text-white`}
+              >
+                Arabic (عربي)
               </button>
             </div>
           </div>
