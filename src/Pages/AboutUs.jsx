@@ -230,7 +230,7 @@ const AboutUs = () => {
 
 
     <section>
-        < EconomicEngine />
+        < ExcellenceinElectricalEngineering />
     </section>
 
 
@@ -758,14 +758,15 @@ function SectorIcon({ name, imageSrc, altText }) {
   );
 }
 
-function EconomicEngine() {
+function ExcellenceinElectricalEngineering() {
   return (
     <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-24 w-full bg-neutral-100 max-md:px-5 max-md:max-w-full">
       <div className="flex flex-col items-center w-full max-w-[1275px] max-md:max-w-full">
         <header className="flex flex-col max-w-full text-center text-zinc-900 w-full">
           <h1 className="flex justify-center items-center px-36 w-full text-3xl  font-bold leading-none uppercase tracking-[4.53px] max-md:px-5 max-md:max-w-full ">
             <span className="self-stretch Y-axis-text pb-px my-auto min-w-[240px] max-md:max-w-full">
-              An Economic Engine
+               Excellence in Electrical
+               Engineering
             </span>
           </h1>
           <p className="pb-px Y-axis-text mt-16 w-full text-lg  font-light max-md:max-w-full">
