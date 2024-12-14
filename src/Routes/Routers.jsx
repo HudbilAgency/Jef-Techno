@@ -59,7 +59,7 @@ const Routers = () => {
         <Route path="/power-quality-studies" element={<PowerQualityStudies/>} />
         <Route path="/power-system-studies" element={<PowerSystemStudies/>} />
         <Route path="/instrumentation-earthing-studies" element={<InstrumentEarthing/>} />
-        <Route path="/RenewableEnergyResource" element={<RenewableEnergyResource/>} />
+        <Route path="/industries/renewableenergy" element={<RenewableEnergyResource/>} />
         <Route path="/industries/oilandgas" element={< OilandGas/>} />
         <Route path="/industries/powerutilities" element={< PowerUtilites/>} />
         <Route path="/industries/manufacturingplant" element={< ManufacturingPlant/>} />

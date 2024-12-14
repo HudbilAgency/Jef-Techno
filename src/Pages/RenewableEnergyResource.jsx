@@ -10,8 +10,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 function RenewableEnergyResource() {
 
-
-
   // Key Components 
 
   useEffect(() => {
@@ -95,17 +93,17 @@ function RenewableEnergyResource() {
 
   const serviceData = [
     {
-      number: './SerivePage/01.png',
+      number: '/SerivePage/01.png',
       title: 'Comprehensive Lightning Protection & Grounding Solutions',
       description: `We provide end- to-end services from system design to installation, ensuring your renewable energy facility is fully protected against electrical hazards. Lightning strikes and power surges can cause significant damage to solar farms or wind turbines, leading to costly downtimes. JEF's protection systems are tailored to withstand the harsh environmental conditions of the Middle East, ensuring optimal performance.`
     },
     {
-      number: './SerivePage/02.png',
+      number: '/SerivePage/02.png',
       title: 'Design and Detailed Engineering',
       description: `Our team of experts provides meticulous design and engineering services that comply with international standards such as IEC 62305 and local regulations. Whether it's solar PV, battery energy storage systems (BESS), or wind farms, our detailed engineering ensures efficient integration with the grid, reducing the risk of power quality issues.`
     },
     {
-      number: './SerivePage/03.png',
+      number: '/SerivePage/03.png',
       title: 'Adequacy Study & Root Cause Analysis (RCA)',
       description: 'Our Adequacy Study identifies gaps in your current systems, ensuring compliance and operational efficiency. The Root Cause Analysis addresses potential weaknesses and offers long-term solutions to avoid future disruptions.'
     }
@@ -150,13 +148,13 @@ function RenewableEnergyResource() {
                 `}
         </script>
       </Helmet>
-    < Navbar />
+    <Navbar />
     <section className="flex h-screen overflow-hidden flex-col text-4xl font-bold lg:text-5xl  tracking-wider text-white ">
         <div className="flex flex-col h-screen relative max-md:text-4xl">
             <div className="relative">
             <img
                 loading="lazy"
-                src="./IndustriesPage/IndustriesMainImg.png"
+                src="/IndustriesPage/IndustriesMainImg.png"
                 alt="Renewable Energy Industry background"
                 className="object-cover h-screen w-screen"
             />
@@ -181,7 +179,7 @@ function RenewableEnergyResource() {
         <header className="flex flex-col w-full text-2xl lg:text-3xl font-semibold uppercase text-stone-900 tracking-[2.06px] max-md:max-w-full">
             <img
             loading="lazy"
-            src="./IndustriesPage/WindmilLogo.png"
+            src="/IndustriesPage/WindmilLogo.png"
             alt="Renewable Energy Industry Logo"
             className="object-cover self-center max-w-full aspect-square w-20"
             />
@@ -266,7 +264,7 @@ function RenewableEnergyResource() {
 
       <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
         <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
-          <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
+          <img loading="lazy" src="/HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
           <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
           
             <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
@@ -325,7 +323,7 @@ function IntegratingDiverseSpecializations() {
           <div className="flex flex-col w-[40%] max-md:ml-0 max-md:w-full">
             <img
               loading="lazy"
-              src="./IndustriesPage/DiverseSpecializationsImg.png"
+              src="/IndustriesPage/DiverseSpecializationsImg.png"
               alt="Illustration representing diverse specializations in electrical engineering"
               className="object-cover grow w-full"
             />
@@ -406,22 +404,22 @@ const Navigation = () => (
 const Segments = () => {
 
   const services = [
-    { image: './IndustriesPage/OilandGas.png', text: 'Oil & gas' },
-    { image: './IndustriesPage/Power.png', text: 'Power utilities' },
-    { image: './IndustriesPage/MFplant.png', text: 'manufacturing plant' },
-    { image: './IndustriesPage/Pplant.png', text: 'Process plant' },
-    { image: './IndustriesPage/CB.png', text: 'commercial buildings' },
+    { image: '/IndustriesPage/OilandGas.png', text: 'Oil & gas' },
+    { image: '/IndustriesPage/Power.png', text: 'Power utilities' },
+    { image: '/IndustriesPage/MFplant.png', text: 'manufacturing plant' },
+    { image: '/IndustriesPage/Pplant.png', text: 'Process plant' },
+    { image: '/IndustriesPage/CB.png', text: 'commercial buildings' },
 
   ];
 
 
   const services1 = [
     { image: '', text: '' },
-    { image: './IndustriesPage/OilandGas.png', text: 'Oil & gas' },
-    { image: './IndustriesPage/Power.png', text: 'Power utilities' },
-    { image: './IndustriesPage/MFplant.png', text: 'manufacturing plant' },
-    { image: './IndustriesPage/Pplant.png', text: 'Process plant' },
-    { image: './IndustriesPage/CB.png', text: 'commercial buildings' },
+    { image: '/IndustriesPage/OilandGas.png', text: 'Oil & gas' },
+    { image: '/IndustriesPage/Power.png', text: 'Power utilities' },
+    { image: '/IndustriesPage/MFplant.png', text: 'manufacturing plant' },
+    { image: '/IndustriesPage/Pplant.png', text: 'Process plant' },
+    { image: '/IndustriesPage/CB.png', text: 'commercial buildings' },
     { image: '', text: '' },
   ];
 

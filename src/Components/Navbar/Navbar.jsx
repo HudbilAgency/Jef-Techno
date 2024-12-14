@@ -213,7 +213,6 @@ const Navbar = () => {
                     exit="exit"
                     variants={menuVariants}
                     className="fixed inset-0 bg-black bg-opacity-55 flex z-10 justify-center items-start"
-                    onClick={() => setIsDropdownVisible(false)}
                   >
                     <div
                       className=" text-white shadow-md mt-40 flex flex-col items-end text-right w-[90%] 2xl:max-w-[92%]"
@@ -525,7 +524,8 @@ function IndustriesComponent() {
     { icon: '../AboutUs/PoweUtilities.png', text: 'Power Utilities', path: '/industries/powerutilities' },
     { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
     { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/industries/processplant' },
-    { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/CommercialBuilding' },
+    { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/industries/commercialbuilding' },
+    { icon: '../AboutUs/CBimg.png', text: 'Renewable Energy', path: '/industries/renewableenergy' },
   ];
 
   return (

@@ -246,7 +246,7 @@ const LightningProtectionStudies = () => {
   return (
     <>
 
-<Helmet>
+      <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -322,11 +322,21 @@ const LightningProtectionStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 font-light max-md:mt-10 max-md:max-w-full">
-            JEF specializes in providing comprehensive Lightning Protection Studies to ensure the safety <br />
-            and protection of your structures from lightning strikes. Our experienced team uses advanced <br />
-            methodologies and standards to deliver effective lightning protection solutions as per IEC <br />
+            JEF specializes in providing comprehensive Lightning Protection Studies to ensure the safety <br className="hidden md:block" />
+            and protection of your structures from lightning strikes. Our experienced team uses advanced <br className="hidden md:block" />
+            methodologies and standards to deliver effective lightning protection solutions as per IEC <br className="hidden md:block" />
             standards for both existing and new structures.
           </p>
+          <div className="flex items-center justify-center">
+          <p className="self-stretch mt-10 font-light max-md:max-w-full flex items-start justify-center xl:w-[52%]">
+            <img src="/jef-shield-logo.png" className="w-6 h-6 cursor-pointer" alt="JEF Shield Logo" />
+            <span>
+              JEF SHIELD, an upgraded software for Lightning Protection risk assessment as per IEC
+              62305. You can determine whether the structure is safe against lightning strikes. If protection
+              is required, the software guides you to select the appropriate protection and optimize the same.
+            </span>
+          </p>
+</div>
         </header>
         <div className="ContactUsAnimation flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
@@ -646,6 +656,7 @@ const VerticalCarousel = () => {
   const benefitItems = [
     "ABOUT Lightning Protection Study?",
     "Importance of Lightning Protection Studies",
+    "Internal Lightning Protection and SPDs",
     "Our Approach to Lightning Protection Study Service",
     "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
@@ -667,6 +678,13 @@ const VerticalCarousel = () => {
       description:
         `Proper lightning protection is crucial for: | Ensuring the safety of personnel and equipment by preventing lightning-related
       hazards. | Complying with international standards such as IEC 62305 and local regulations.|Reducing the risk of fire, equipment damage, and operational downtime.|Protecting critical infrastructure and maintaining service continuity.`,
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Internal lighting protection and spds",
+      description:
+        "Effective internal lightning protection is essential for mitigating risks associated with transient over voltages. SPDs are crucial for:|Ensuring Safety: Protecting personnel and sensitive equipment from damage caused by surges and voltage spikes.|Compliance with Standards: Meeting international standards such as IEC 62305 for lightning protection and IEC 61643 for SPD performance.|Preventing Equipment Damage: Reducing the risk of failure in electronic devices, industrial machinery, and critical systems due to electrical surges.|Minimizing Operational Downtime: Avoiding costly disruptions caused by equipment damage or failure during lightning events.|Protecting Critical Infrastructure: Ensuring uninterrupted operations in sectors such as healthcare, data centers, oil & gas, and renewable energy."
     },
     {
       imgSrc:
@@ -715,8 +733,8 @@ const VerticalCarousel = () => {
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                      : "h-auto text-xs 2xl:text-base"
+                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                    : "h-auto text-xs 2xl:text-base"
                     }`}
                   onClick={() => handleClick(index)}
                 >
@@ -735,10 +753,10 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] 2xl:h-[86vh] lg:h-[75vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] 2xl:h-[86vh] lg:h-[80vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 6}%)` }}
+              style={{ transform: `translateY(-${(activeIndex * 100) / 7}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div
@@ -756,8 +774,8 @@ const VerticalCarousel = () => {
                       <li
                         key={index}
                         className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                            : "h-auto text-base"
+                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                          : "h-auto text-base"
                           }`}
                         onClick={() => handleClick(index)}
                       >

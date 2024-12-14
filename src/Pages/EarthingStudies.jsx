@@ -338,7 +338,7 @@ const EarthingStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
+            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years to 2 decades of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
             With several patents in this field, our level of expertise is unmatched even we keep innovating further.
             With several patents in this field, our level of expertise is unmatched even we keep
             innovating further.
@@ -716,16 +716,16 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is an earthing / grounding system studies",
+      title: "Preventing operational disruptions and improving system efficiency.",
       description:
-        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
+        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our certifications and expertize",
+      title: "What is an earthing / grounding system studies",
       description:
-        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
+        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
     },
     {
       imgSrc:
@@ -737,9 +737,9 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Preventing operational disruptions and improving system efficiency.",
+      title: "Our certifications and expertize",
       description:
-        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
+        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100`,
     },
     {
       imgSrc:

@@ -652,6 +652,11 @@ const VerticalCarousel = () => {
     "List of Studies for Renewable Energy",
     "For Industries",
     "Advanced System Studies",
+    "Planning and Operations Studies",
+    "Industrial Power System Studies",
+    "Power System Protection Studies",
+    "Electromagnetic Transient Studies",
+    "Power Quality Compliance Studies & Measurements",
   ];
 
 
@@ -687,16 +692,37 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Detailed Study Reports and Analysis",
+      title: "Planning and operations studies",
       description:
-        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
+      "|Grid impact Studies for new power generation facilities|Grid code compliance studies|Studies for BESS and Hybrid Power Plant|Transmission Network expansion for master plan studies|HVDC and HVAC interconnection studies|Hosting capacity studies for RES integration"
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Benefits of Professional Earthing/Grounding System Studies",
+      title: "industrial power system",
       description:
-        "| Enhanced Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability:Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+      "|Equipment sizing verification|Static and Dynamic security assessment|Islanding and load shedding studies"
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "power system protection studies",
+      description:
+      "|Protection coordination study|Arc flash risk assessment|Sizing-citing of FACTS devices|Event Analysis"
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Electromagnetic transient studies",
+      description:
+      "|Insulation Coordination|Lightning"
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "power quality compliance studies & measurements",
+      description:
+      "|Power factor correction sizing|Harmonic analysis and measurements|Capacitor bank studies|Flicker and Voltage unbalance studies|Grid code compliance testing"
     },
   ];
 
@@ -742,7 +768,7 @@ const VerticalCarousel = () => {
         <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] 2xl:h-[86vh] lg:h-[90vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100)/6}%)`}}
+              style={{ transform: `translateY(-${(activeIndex * 100)/9}%)`}}
             >
               {cardContents.map((content, index) => (
                   <div

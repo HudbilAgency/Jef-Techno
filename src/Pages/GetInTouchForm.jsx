@@ -1605,38 +1605,34 @@ const GetInTouchForm = () => {
 export function OfficeLocations() {
   const offices = [
     {
-      title: "GCC Headquarter",
-      address: "Office no: 4-B, 4th floor, Prestige Tower 16, Mohammad Bin Zayed City, Abu Dhabi, UAE, Ph. No: +971 552447290 | jefme@jeftechno.com"
+      title: "Our Global Head Office",
+      address: "JEF Techno Solutions Pvt Ltd, KR Square, No.1073, 15th Cross, 30th Main, Banashankari 2nd Stage, Bengaluru-560070",
+      phone: "",
+      email: "marketing@jeftechno.com",
     },
     {
-      title: "Global Head Office",
-      address: "1073, 15th Cross, 30th Main, Banashankari 2nd stage, Bangalore -560070, Phone: (080) 3756 9000 | marketing@jeftechno.com"
+      title: "Middle East Headquarter",
+      address: "Office no: 4-B, 4th floor, Prestige Tower 16, Mohammad Bin Zayed City, Abu Dhabi, UAE.",
+      phone: "+971 552447290",
+      email: "marketing@jeftechno.com",
     },
     {
-      title: "Coimbatore Office:",
-      address: "Logith Nivas, 1st floor, Dr. Abdul Kalaam Street, Nethaji Nagar Extension, Nanjundapuram Road, Coimbatore - 641036, Phone: +91 4223523697"
-    },
-    {
-      title: "Middle East Regional Office",
-      address: "Ground Floor, Accelerator Building Masdar City, Abu Dhabi, UAE"
+      title: "UAE Office",
+      address: "Ground Floor, Accelerator Building Masdar City, Abu Dhabi, UAE. Dhabi, UAE.",
+      phone: "+971 552447290",
+      email: "marketing@jeftechno.com",
     },
     {
       title: "Kingdom of Saudi Arabia - Regional Office",
-      address: "Shariq Hub, Office No-606, Prince Turki St, PO Box- 6140, Al Khobar Corniche, PC-34423, KSA."
-    },
-    {
-      title: "Registered Office",
-      address: "No. 9, TSP building, 2nd Floor, Ganapathy Colony, Thiru Vi Ka Industrial Estate, Guindy, Chennai - 600032"
-    },
-    {
-      title: "Warehouse & Factory",
-      address: "Address: Plot No.16 D/1 and 16 D/2, SIPCOT Industrial Park, Hosur Phase II, Hosur Taluk, Krishnagiri Dist. Pin - 635126"
+      address: "Prince Turki St, PO Box-6140, Al Khobar Corniche, PC-34423, KSA.",
+      phone: "+971 552447290",
+      email: "marketing@jeftechno.com",
     }
   ];
 
   return (
-    <main className="flex flex-col items-center min-h-screen bg-neutral-100 px-5 sm:px-8 md:px-12 lg:px-20 py-12 sm:py-16 md:py-20 ">
-      <section className="w-full max-w-[68.688rem] mx-auto">
+    <main className="flex flex-col items-center bg-neutral-100 px-5 sm:px-8 md:px-12 2xl:px-20 pt-10 xl:pt-0 pb-12 sm:pb-16 md:pb-20 ">
+      <section className="w-full max-w-[68.688rem] xl:max-w-full 2xl:max-w-[1300px] mx-auto xl:mx-0">
         <h1 className="text-2xl sm:text-3xl text-red-700 text-center mb-8 sm:mb-12 md:mb-16">
           JEF offices
         </h1>
@@ -1644,13 +1640,26 @@ export function OfficeLocations() {
           {offices.map((office, index) => (
             <article
               key={index}
-              className="flex flex-col p-4 rounded-lg bg-neutral-100  hover:shadow-md transition-shadow duration-300"
+              className="flex flex-col p-4 rounded-lg bg-neutral-100 hover:shadow-md transition-shadow duration-300"
             >
-              <h2 className="text-base font-medium text-red-700 mb-3">
+              <h2 className="text-base font-medium text-red-700 mb-4">
                 {office.title}
               </h2>
-              <p className="text-sm sm:text-base font-light leading-6 text-black">
+              <p
+                className={`text-sm sm:text-base font-light leading-6 text-black mb-6 ${index === 3 ? 'xl:h-[72px]' : 'xl:h-24'
+                  }`}
+              >
                 {office.address}
+              </p>
+                <p className={`text-sm sm:text-base font-light leading-6 text-[#C02429] mb-1 ${index === 0 ? 'opacity-0' : ''
+                  }`}>
+                  Ph. No: {office.phone}
+                </p>
+              <p className="text-sm sm:text-base font-light leading-6 text-[#C02429]">
+                Email:{' '}
+                <a href={`mailto:${office.email}`} className="underline">
+                  {office.email}
+                </a>
               </p>
             </article>
           ))}
