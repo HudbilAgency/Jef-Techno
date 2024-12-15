@@ -436,7 +436,7 @@ function ServicesComponent() {
       path: '/instrumentation-earthing-studies',
     },
     {
-      icon: '../emi-emc-nav.png',
+      icon: '/emi-emc-nav.png',
       text: 'EMI EMC',
       path: '/emi-emc',
     },
