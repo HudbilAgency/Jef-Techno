@@ -120,29 +120,53 @@ const EarthingStudies = () => {
   }, []);
 
   const services = [
-    { image: '', text: '' },
-    { image: '', text: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
     { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
     { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
     { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'EMI EMC', path: '/emi-emc' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
     { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
     { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
     { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Root cause analysis', path: '/root-cause-analysis' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'EMI EMC', path: '/emi-emc' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
   ];
+
+  const services2 = [
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+  ];
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [backgroundImage, setBackgroundImage] = useState('');
   const serviceRefs = useRef([]);
+  const service2Refs = useRef([]);
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -191,6 +215,29 @@ const EarthingStudies = () => {
       }
     });
   }, [hoveredIndex, services]);
+
+  useEffect(() => {
+    service2Refs.current = service2Refs.current.slice(0, services2.length);
+  }, [services2]);
+
+  useEffect(() => {
+    service2Refs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services2[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.5 : 1,
+            // border: hoveredIndex !== null && services2[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services2[index]?.text === '' ? 'transparent' : '',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services2]);
 
 
   const navItems = [
@@ -377,7 +424,7 @@ const EarthingStudies = () => {
       </section>
 
 
-      <section>
+      <section className="hidden sm:block">
         <div className={` h-full bg-slate-900`}>
           <div
             className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
@@ -395,8 +442,8 @@ const EarthingStudies = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="sm:flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full hidden">
-                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+              <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 8).map((service, index) => (
                     <ServiceItem
                       key={index}
@@ -423,29 +470,52 @@ const EarthingStudies = () => {
                   ))}
                 </div>
               </div>
-              <div className="flex sm:hidden circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+            </section>
+          </div>
+        </div>
+      </section>
+
+      <section className="block sm:hidden">
+        <div className={` h-full bg-slate-900`}>
+          <div
+            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+            {backgroundImage && (
+              <div className="absolute inset-0 w-full h-full ">
+                <img
+                  ref={imgRef}
+                  src={backgroundImage}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+                Our Services
+              </h2>
+              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
                 <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
-                  {services.slice(0, 9).map((service, index) => (
-                    <ServiceItem
+                  {services2.slice(0, 7).map((service2, index) => (
+                    <ServiceItem2
                       key={index}
-                      text={service.text}
-                      path={service.path}
-                      image={service.image}
-                      ref={(el) => (serviceRefs.current[index] = el)}
-                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
                 </div>
                 <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
-                  {services.slice(12,14).map((service, index) => (
-                    <ServiceItem
+                  {services2.slice(12, 14).map((service2, index) => (
+                    <ServiceItem2
                       key={index}
-                      text={service.text}
-                      path={service.path}
-                      image={service.image}
-                      ref={(el) => (serviceRefs.current[index] = el)}
-                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
@@ -455,45 +525,6 @@ const EarthingStudies = () => {
           </div>
         </div>
       </section>
-
-
-      {/* 
-    <section className="flex overflow-hidden flex-col text-center text-white w-full">
-      <div className="flex overflow-hidden flex-col justify-center w-full h-[532px] max-md:max-w-full">
-        <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
-          <div className="flex relative flex-col justify-center items-center px-5 sm:px-10 md:px-20 py-20 w-full min-h-[532px]">
-            <img 
-              loading="lazy" 
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8e06a7d505c4129965e4c18c8e0cb8829849853aeb8e18090ea753ccccfdc6f?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" 
-              alt="Background for testimonials section" 
-              className="object-cover absolute inset-0 size-full"
-            />
-            <div className="Testimonials flex Y-axis-Testimonials relative flex-col max-w-full w-full md:w-[679px]">
-              <h2 className="self-center text-base tracking-widest leading-snug">
-                TESTIMONIALS
-              </h2>
-              <h3 className="mt-8 text-2xl sm:text-3xl md:text-4xl font-normal uppercase tracking-widest max-md:max-w-full">
-                WHAT OUR CUSTOMERS SAY
-              </h3>
-              <p className="mt-10 text-sm sm:text-lg font-thin leading-6 max-md:max-w-full">
-              								We are thankful to the JEF Techno's team for clearing many of our doubts related to lightning protection. LPS audit was conducted for our plant that happened successfully.
-              </p>
-              <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full sm:w-[90%] md:w-[510px] mx-auto">
-                {buttons.map((button, index) => (
-                  <div key={index} className="flex flex-col flex-1 grow shrink-0 justify-center p-2.5 text-sm leading-none basis-0 min-h-[80px] w-fit">
-                    <div className="flex items-center justify-center self-center py-1 w-full max-w-[235px] min-h-[60px]">
-                      <button className={`flex overflow-hidden justify-center items-center self-center px-5 sm:px-9 py-5 my-auto ${button.className} border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] w-full sm:w-[235px]`}>
-                        CONTACT US
-                      </button>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> */}
 
       <section>
         < TestimonialsSection />
@@ -581,33 +612,52 @@ function TestimonialsSection() {
 
 
 const ServiceItem = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
-  return (
-    <Link to={path}>
-      <div
-        ref={ref}
-        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-          ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-        onMouseEnter={() => {
-          if (text !== "") {
-            onMouseEnter();
-          }
-        }}
-        onMouseLeave={() => {
-          if (text !== "") {
-            onMouseLeave();
-          }
-        }}
-      >
-        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px]">{text}</span>
-      </div>
-    </Link>
-
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
   );
+
+  return path ? <Link to={path}>{content}</Link> : content;
 });
 
+const ServiceItem2 = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
+  );
 
-
-
+  return path ? <Link to={path}>{content}</Link> : content;
+});
 
 
 function CarouselSection({ components }) {
