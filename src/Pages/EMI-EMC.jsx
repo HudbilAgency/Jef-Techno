@@ -681,7 +681,7 @@ function CarouselSection({ components }) {
               }}
             >
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
-              <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
+              <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl xl:h-28 2xl:h-20 sm:text-start my-5 text-center">{component.title}</h3>
               <div className=" text-gray-400 mb-6 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] flex items-start gap-4 sm:text-start text-lg max-w-screen-xl">
               <span>•</span>{component.description}</div>
               <div className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] flex items-start gap-4 sm:text-start text-lg max-w-screen-xl">
