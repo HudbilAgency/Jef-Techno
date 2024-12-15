@@ -122,19 +122,19 @@ const EarthingStudies = () => {
   const services = [
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: '', text: '' },
     { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
     { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
     { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'EMI EMC', path: '/emi-emc' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
-    { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', path: '/power-quality-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
     { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Root cause analysis', path: '/root-cause-analysis' },
     { image: '', text: '' },
     { image: '', text: '' },
     { image: '', text: '' },
@@ -256,7 +256,7 @@ const EarthingStudies = () => {
   return (
     <>
 
-<Helmet>
+      <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -338,10 +338,8 @@ const EarthingStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years to 2 decades of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations.
+            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years to 2 decades of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations. <br className="hidden md:block" />
             With several patents in this field, our level of expertise is unmatched even we keep innovating further.
-            With several patents in this field, our level of expertise is unmatched even we keep
-            innovating further.
           </p>
           {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
@@ -397,7 +395,35 @@ const EarthingStudies = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
+              <div className="sm:flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full hidden">
+                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                  {services.slice(0, 8).map((service, index) => (
+                    <ServiceItem
+                      key={index}
+                      text={service.text}
+                      path={service.path}
+                      image={service.image}
+                      ref={(el) => (serviceRefs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                  {services.slice(8).map((service, index) => (
+                    <ServiceItem
+                      key={index + 8}
+                      text={service.text}
+                      path={service.path}
+                      image={service.image}
+                      ref={(el) => (serviceRefs.current[index + 8] = el)}
+                      onMouseEnter={() => handleMouseEnter(index + 8, service.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+              </div>
+              <div className="flex sm:hidden circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
                 <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 9).map((service, index) => (
                     <ServiceItem
@@ -411,15 +437,15 @@ const EarthingStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10'>
-                  {services.slice(9).map((service, index) => (
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                  {services.slice(12,14).map((service, index) => (
                     <ServiceItem
-                      key={index + 9}
+                      key={index}
                       text={service.text}
                       path={service.path}
                       image={service.image}
-                      ref={(el) => (serviceRefs.current[index + 9] = el)}
-                      onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
+                      ref={(el) => (serviceRefs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service.image)}
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
@@ -706,6 +732,7 @@ const VerticalCarousel = () => {
   const benefitItems = [
     "ABOUT Earthing studies",
     "What is an Earthing/Grounding System Studies",
+    "Preventing Disruptions and Improving Efficiency",
     "Earthing/Grounding System Studies",
     "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
@@ -713,12 +740,13 @@ const VerticalCarousel = () => {
   ];
 
   const cardContents = [
+
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Preventing operational disruptions and improving system efficiency.",
+      title: "What is an earthing / grounding system studies",
       description:
-        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
+        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
     },
     {
       imgSrc:
@@ -726,6 +754,13 @@ const VerticalCarousel = () => {
       title: "What is an earthing / grounding system studies",
       description:
         "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
+    },
+    {
+      imgSrc:
+        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
+      title: "Preventing operational disruptions and improving system efficiency.",
+      description:
+        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
     },
     {
       imgSrc:
@@ -774,8 +809,8 @@ const VerticalCarousel = () => {
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                      : "h-auto text-xs 2xl:text-base"
+                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                    : "h-auto text-xs 2xl:text-base"
                     }`}
                   onClick={() => handleClick(index)}
                 >
@@ -797,7 +832,7 @@ const VerticalCarousel = () => {
           <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 6}%)` }}
+              style={{ transform: `translateY(-${(activeIndex * 100) / 7}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div
@@ -815,8 +850,8 @@ const VerticalCarousel = () => {
                       <li
                         key={index}
                         className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                            : "h-auto text-base"
+                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                          : "h-auto text-base"
                           }`}
                         onClick={() => handleClick(index)}
                       >
