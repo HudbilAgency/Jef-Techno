@@ -328,7 +328,7 @@ function AboutSection() {
       <div className="ml-10 max-w-full w-[994px]">
         <div className="flex gap-5 max-md:flex-col">
           <nav className="flex flex-col w-6/12 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-wrap grow gap-6 max-md:mt-10 max-md:max-w-full">
+            <div className="flex flex-wrap grow gap-6 max-md:mt-10 max-md:max-w-full h-full">
               <div className="flex flex-col grow shrink-0 items-start my-auto basis-0 w-fit max-md:max-w-full">
                 {navigationItems.map((item, index) => (
                   <div
@@ -353,7 +353,7 @@ function AboutSection() {
                 ))}
               </div>
               <div
-                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] min-h-full"
                 role="separator"
                 aria-orientation="vertical"
               ></div>
@@ -435,6 +435,16 @@ function ServicesComponent() {
       text: 'Instrumentation earthing studies',
       path: '/instrumentation-earthing-studies',
     },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'EMI EMC',
+      path: '/emi-emc',
+    },
+    {
+      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      text: 'Root Cause Analysis',
+      path: '/root-cause-analysis',
+    },
   ];
 
   return (
@@ -466,9 +476,9 @@ function ServicesComponent() {
             </header>
           </div>
           <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
+            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase h-full tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
               <div
-                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] min-h-full"
                 role="separator"
                 aria-orientation="vertical"
               ></div>
@@ -557,9 +567,9 @@ function IndustriesComponent() {
             </header>
           </div>
           <div className="flex flex-col ml-5 w-3/5 max-md:ml-0 max-md:w-full">
-            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
+            <div className="flex flex-wrap grow gap-10 text-base font-medium text-white h-full uppercase tracking-[3.36px] max-md:mt-10 max-md:max-w-full">
               <div
-                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] h-[250px]"
+                className="shrink-0 w-0 border-l border-solid border-neutral-700 mt-[9%] min-h-full"
                 role="separator"
                 aria-orientation="vertical"
               ></div>
@@ -612,7 +622,9 @@ const FAQComponent = () => {
         { label: 'LPS System Studies', path: '/lightning-protection-studies' },
         { label: 'Power System Studies', path: '/power-system-studies' },
         { label: 'Power Quality Studies', path: '/power-quality-studies' },
-        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
+        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' },
+        { label: 'EMI EMC', path: '/emi-emc' },
+        { label: 'Root Cause Analysis', path: '/root-cause-analysis' }
       ],
       isOpen: false,
     },
@@ -623,7 +635,8 @@ const FAQComponent = () => {
         { label: 'Power Utilites', path: '/industries/powerutilities' },
         { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
         { label: 'Process Plant', path: '/industries/processplant' },
-        { label: 'Commercial Buildings', path: '/industries/commercialbuilding' }
+        { label: 'Commercial Buildings', path: '/industries/commercialbuilding' },
+        { label: 'Renewable Energy', path: '/industries/renewableenergy' }
       ],
       isOpen: false,
     },
