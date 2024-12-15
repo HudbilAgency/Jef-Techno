@@ -385,8 +385,7 @@ const EarthingStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years to 2 decades of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations. <br className="hidden md:block" />
-            With several patents in this field, our level of expertise is unmatched even we keep innovating further.
+            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years to 2 decades of experience covering 300,000 riser connections spread across 18 countries, ranging from 66kV to 765kV process plants and other critical installations. With several patents in this field, our level of expertise is unmatched even we keep innovating further.
           </p>
           {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
@@ -781,7 +780,6 @@ function CarouselSection({ components }) {
 const VerticalCarousel = () => {
   const benefitItems = [
     "ABOUT Earthing studies",
-    "What is an Earthing/Grounding System Studies",
     "Preventing Disruptions and Improving Efficiency",
     "Earthing/Grounding System Studies",
     "Our Certifications and Expertise",
@@ -791,13 +789,6 @@ const VerticalCarousel = () => {
 
   const cardContents = [
 
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is an earthing / grounding system studies",
-      description:
-        "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
-    },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
@@ -882,7 +873,7 @@ const VerticalCarousel = () => {
           <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 7}%)` }}
+              style={{ transform: `translateY(-${(activeIndex * 100) / 6}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div

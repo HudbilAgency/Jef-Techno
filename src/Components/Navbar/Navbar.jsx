@@ -436,7 +436,7 @@ function ServicesComponent() {
       path: '/instrumentation-earthing-studies',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/emi-emc-nav.png',
       text: 'EMI EMC',
       path: '/emi-emc',
     },
