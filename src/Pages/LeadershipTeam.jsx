@@ -207,7 +207,7 @@ export default function LeadershipTeam() {
 
   return (
     <>
-    <Helmet>
+      <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -229,12 +229,9 @@ export default function LeadershipTeam() {
           />
           <div className="absolute inset-0 bg-black bg-opacity-50" />
           <div className="relative z-10 lg:mx-[5%] p-3 h-full flex flex-col justify-end pb-16">
-            <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-wider mb-4">
+            <h1 className="text-white text-3xl lg:text-5xl font-bold tracking-wider">
               JEF LEADERSHIP TEAM
             </h1>
-            <p className="text-white text-sm lg:text-base font-light leading-relaxed max-w-3xl">
-              The world's biggest project needs some of the world's most talented people. That's why the JEF leadership team consists of innovators and visionaries who do things differently.
-            </p>
           </div>
         </header>
 
@@ -332,11 +329,11 @@ export default function LeadershipTeam() {
         <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
           <img loading="lazy" src="./HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
           <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-         
+
             <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
               Contact us
             </h1>
-           
+
             <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
               Get in touch with us for any business enquiry.
             </p>

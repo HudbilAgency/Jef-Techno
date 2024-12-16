@@ -119,7 +119,7 @@ const buttonData = [
     totalProjects: 165,
     indiaProjects: 123,
     gcc: 42,
-    description: "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation.",
+    description: "Earthing is an crucial part of any electrical installation, ensuring protection from electrocution and fire, while also enabling the proper operation of protective systems.",
     className: "mt-[calc(50vh-10rem)] md:mt-[calc(50vh-10rem)] 2xl:mt-[calc(50vh-12rem)]",
   },
   {
@@ -839,15 +839,15 @@ function Home() {
                         Fast, secure, and reliable insights with every report.
                       </div>
                       <div className="w-fit opacity-0">
-                          <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                            <span className="py-3 pl-4 my-auto">Read More</span>
-                            <img
-                              loading="lazy"
-                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                              className="object-contain my-auto self-stretch w-7"
-                              alt=""
-                            />
-                          </button>
+                        <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                          <span className="py-3 pl-4 my-auto">Read More</span>
+                          <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                            className="object-contain my-auto self-stretch w-7"
+                            alt=""
+                          />
+                        </button>
                       </div>
                     </div>
                     <div ref={divRef2}>
@@ -855,15 +855,15 @@ function Home() {
                         At JEF, we are committed to continuous improvement and excellence. The L&D Center is designed to enhance the skills and expertise of our employees, ensuring they stay ahead of industry trends and deliver superior service to our clients.
                       </div>
                       <div className="w-fit opacity-0">
-                          <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
-                            <span className="py-3 pl-4 my-auto">Read More</span>
-                            <img
-                              loading="lazy"
-                              src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
-                              className="object-contain my-auto self-stretch w-7"
-                              alt=""
-                            />
-                          </button>
+                        <button className="flex cursor-default text-wrap gap-2 justify-center items-center self-start px-2 text-xs uppercase bg-red-700 border border-solid border-zinc-900 border-opacity-10 rounded-[50px]">
+                          <span className="py-3 pl-4 my-auto">Read More</span>
+                          <img
+                            loading="lazy"
+                            src="https://cdn.builder.io/api/v1/image/assets/TEMP/db980ec347a907dbb470da6524b4de0865962ecb1dce316128b11f72afbae1f5?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+                            className="object-contain my-auto self-stretch w-7"
+                            alt=""
+                          />
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -1101,20 +1101,25 @@ const WhatWeDoSection = () => {
     }
   }, [showSection]);
 
-
-
-
-
-
   const [fadeOut, setFadeOut] = useState(false);
 
+  const [isScreenTall, setIsScreenTall] = useState(window.innerHeight > 800 && window.innerWidth > 1023);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenTall(window.innerHeight > 800 && window.innerWidth > 1023);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
-    <section className="flex lg:h-screen overflow-hidden flex-col bg-zinc-800">
+    <section className={`flex overflow-hidden flex-col bg-zinc-800 ${isScreenTall ? 'lg:max-h-screen' : 'lg:max-h-[100vh]'}`}>
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
 
-          <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">From India to 24 countries</h1>
+          <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">Delivering Excellence Across 24 Countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}
@@ -1129,7 +1134,7 @@ const WhatWeDoSection = () => {
       )}
 
       {showSection && (
-        <section className="flex h-auto 2xl:h-screen overflow-hidden flex-col bg-zinc-800 ">
+        <section className={`flex overflow-hidden flex-col bg-zinc-800 ${isScreenTall ? '2xl:h-screen' : 'h-full'}`}>
           <div className="flex relative flex-col px-20 pt-12 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full">
             <img
               loading="lazy"
@@ -1203,7 +1208,7 @@ const WhatWeDoSection = () => {
                         <div className="flex-col justify-end items-end lg:ml-[20%]">
                           <h3 className="mt-10  text-xs 2xl:text-base font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
                           <p className="self-stretch text-xs 2xl:text-base mt-6 2xl:w-[90%] h-[23vh] 2xl:leading-7 text-white ">
-                            {buttonData[hoveredButtonIndex]?.description || "Earthing is an essential part of any electrical installation, essential for the safety from electrical shock, and fire and for operation of most of the protective systems of the electrical installation."}
+                            {buttonData[hoveredButtonIndex]?.description || "Earthing is an crucial part of any electrical installation, ensuring protection from electrocution and fire, while also enabling the proper operation of protective systems."}
                           </p>
                           <Link to={buttonData[hoveredButtonIndex]?.path}>
                             <button className="gap-2.5 text-xs 2xl:text-base self-stretch px-5 py-2 2xl:mt-12  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white 2xl:py-3 rounded-[50px] 2xl:px-12">
