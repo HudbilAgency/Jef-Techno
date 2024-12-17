@@ -227,24 +227,26 @@ function RenewableEnergyResource() {
           <h2 className="Y-axis-card-anm self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
             service provided
           </h2>
-          <div className="card-slider flex flex-wrap gap-10 items-start mt-20 max-md:mt-10">
+          <div className="card-slider grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-12 items-start mt-20 max-md:mt-10">
             {serviceData.map((service, index) => (
               <React.Fragment key={service.number}>
-                <article className="Y-axis-card-anm flex flex-col pb-1.5 rounded-none min-w-[240px] w-[443px] max-md:max-w-full">
-                  <h3 className="self-start ">
-                    <img
-                      src={service.number} className="h-[2rem] lg:h-[3rem]" />
-                  </h3>
-                  <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl  text-red-700 max-md:max-w-full">
-                    {service.title}
-                  </h4>
-                  <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
-                    {service.description}
-                  </p>
-                </article>
-                {index < serviceData.length - 1 && (
-                  <div className="shrink-0 w-[1px] border border-gray-600 h-[57vh] hidden md:block" />
-                )}
+                <div className="flex flex-col xl:flex-row gap-6 xl:gap-12 h-full">
+                  <article className="Y-axis-card-anm flex flex-col pt-1.5 pb-1.5 xl:pt-0 min-h-full rounded-none w-fit">
+                    <h3 className="self-start ">
+                      <img
+                        src={service.number} className="h-[2rem] lg:h-[3rem]" />
+                    </h3>
+                    <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl  text-red-700 max-md:max-w-full">
+                      {service.title}
+                    </h4>
+                    <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
+                      {service.description}
+                    </p>
+                  </article>
+                  {service.number !== '/03.png' && (
+                    <div className="xl:w-[1px] border border-gray-600 w-full h-[1px] xl:min-h-full" />
+                  )}
+                </div>
               </React.Fragment>
             ))}
           </div>
@@ -505,7 +507,7 @@ const Segments = () => {
   return (
     <>
 
-      <section className='lg:hidden'>
+      <section className='xl:hidden'>
         <div className={` h-full bg-white`}>
           <div
             className=" w-full h-full py-20 mainSection bg-white overflow-hidden relative">
@@ -513,7 +515,7 @@ const Segments = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Segments
               </h2>
-              <div className="circle-sliderMob flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[45vh]">
+              <div className="circle-sliderMob flex flex-wrap justify-center gap-x-2 md:gap-x-5 lg:gap-x-10 mt-20 max-md:mt-10 w-full h-full">
                 <div className='Y-axis-Segments-anmMob flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
                   {services.slice(0, 3).map((service, index) => (
                     <ServiceItem
@@ -544,15 +546,15 @@ const Segments = () => {
         </div>
       </section>
 
-      <section className='hidden lg:block'>
+      <section className='hidden xl:block'>
         <div className={` h-full bg-white`}>
           <div
-            className=" w-full h-full py-20 mainSection bg-white overflow-hidden relative">
-            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+            className=" w-full h-full py-20 mainSection bg-white relative">
+            <section className="flex flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Segments
               </h2>
-              <div className="flex flex-wrap justify-center mt-16 max-md:mt-10 w-full h-[30vh]">
+              <div className="flex flex-wrap justify-center mt-16 max-md:mt-10 w-full h-full">
                 <div className='circle-slider flex items-center gap-x-2 md:gap-x-5 circleChild'>
                   {services1.slice(0, 9).map((services1, index) => (
                     <Service1Item
