@@ -714,7 +714,7 @@ const EnvironmentFeature = ({ imageSrc, text }) => {
 
 
 const sectors = [
-  { name: "Renewable Energy", imageSrc: "./AboutUs/OilandGas.png", altText: "Renewable sector icon" },
+  { name: "Renewable Energy", imageSrc: "./AboutUs/RenewableEnergy.png", altText: "Renewable sector icon" },
   { name: "Oil & Gas", imageSrc: "./AboutUs/OilandGas.png", altText: "Manufacturing sector icon" },
   { name: "Power Utilities", imageSrc: "./AboutUs/PoweUtilities.png", altText: "Water sector icon" },
   { name: "Manufacturing Plant", imageSrc: "./AboutUs/MFplant.png", altText: "Technology and Digital sector icon" },

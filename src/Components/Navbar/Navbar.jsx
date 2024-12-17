@@ -431,7 +431,7 @@ function ServicesComponent() {
       path: '/power-quality-studies',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/ie-logo.png',
       text: 'Instrumentation earthing studies',
       path: '/instrumentation-earthing-studies',
     },
@@ -441,7 +441,7 @@ function ServicesComponent() {
       path: '/emi-emc',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/74ddbaff8275791cc7070e0e91bd52e5b6c933a25300b7964c1630c4c6275fc8?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/rc-logo.png',
       text: 'Root Cause Analysis',
       path: '/root-cause-analysis',
     },
@@ -535,7 +535,7 @@ function IndustriesComponent() {
     { icon: '../AboutUs/MFplant.png', text: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
     { icon: '../AboutUs/ProcessPlant.png', text: 'Process Plant', path: '/industries/processplant' },
     { icon: '../AboutUs/CBimg.png', text: 'Commercial Buildings', path: '/industries/commercialbuilding' },
-    { icon: '../AboutUs/CBimg.png', text: 'Renewable Energy', path: '/industries/renewableenergy' },
+    { icon: '../AboutUs/RenewableEnergy.png', text: 'Renewable Energy', path: '/industries/renewableenergy' },
   ];
 
   return (

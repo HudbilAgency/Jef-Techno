@@ -375,8 +375,8 @@ const LightningProtectionStudies = () => {
             standards for both existing and new structures.
           </p>
           <div className="flex items-center justify-center">
-            <p className="self-stretch mt-10 font-light max-md:max-w-full flex items-start justify-center xl:w-[52%]">
-              <img src="/jef-shield-logo.png" className="w-6 h-6 cursor-pointer" alt="JEF Shield Logo" />
+            <p className="self-stretch mt-10 font-light max-md:max-w-full flex flex-col gap-2 md:flex-row items-center justify-center xl:w-[52%]">
+              <img src="/jef-shield-logo.png" className="lg:h-36" alt="JEF Shield Logo" />
               <span>
                 JEF SHIELD, an upgraded software for Lightning Protection risk assessment as per IEC
                 62305. You can determine whether the structure is safe against lightning strikes. If protection
