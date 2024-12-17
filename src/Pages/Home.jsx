@@ -897,7 +897,8 @@ function Home() {
           }}
           className="overflow-hidden relative w-full h-auto"
         >
-          <div className="flex lg:items-end xl:items-start gap-10 2xl:mt-0 lg:gap-16 justify-between 2xl:justify-center 2xl:gap-40 px-4 lg:px-0 max-lg:flex-col 2xl:ml-[100x] md:mr-[100px] md:ml-[85px]">
+          <div className="flex lg:items-end xl:items-start gap-0 md:gap-6 2xl:mt-0 lg:gap-16 justify-between 2xl:justify-center 2xl:gap-40 px-4 lg:px-0 max-lg:flex-col 2xl:ml-[100x] md:mr-[100px] md:ml-[85px]">
+
             <div className=" flex flex-col w-full lg:w-1/2 xl:w-3/5 2xl:w-1/2 py-16">
               <div className="flex  z-10 lg:mt-12 2xl:mt-0 flex-col items-start  mr-0 font-light text-red-700 max-md:mt-10 max-md:max-w-full">
                 <h1 className="text-3xl Y-axis-text font-bold uppercase tracking-[3px] max-md:max-w-full ">
@@ -920,8 +921,12 @@ function Home() {
               </div>
             </div>
 
-            <div className=" flex flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 mt-10 2xl:mt-auto 2xl:max-h-[600px]">
-              <img className="h-full lg:h-auto xl:h-full" src="/HomePageImg/founder.png" />
+            <div className="hidden lg:flex flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:mt-auto 2xl:max-h-[600px]">
+              <img className="h-[70vh] lg:h-full" src="/HomePageImg/founder.png" />
+            </div>
+
+            <div className="flex lg:hidden flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:mt-auto 2xl:max-h-[600px]">
+              <img className="h-[70vh] object-contain lg:h-full" src="/HomePageImg/founder.png" />
             </div>
 
           </div>

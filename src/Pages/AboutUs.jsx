@@ -389,7 +389,7 @@ const Overview = () => {
           <div className="flex Y-axis-card-anm max-md:flex-col">
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
-                <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] ">
+                <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-24">
                   From India to 24 Countries
                 </div>
                 <div className="mt-16 text-lg max-md:mt-10">
@@ -401,8 +401,8 @@ const Overview = () => {
               </div>
             </div>
             <div className="flex  flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow px-11 pt-12 pb-64 text-xl border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
-                <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
+            <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+                <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-24">
                   3000+ Global Customers
                 </div>
                 <div className="mt-16 font-light text-lg leading-9 text-white max-md:mt-10">
@@ -411,8 +411,8 @@ const Overview = () => {
               </div>
             </div>
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-              <div className="flex card-slider-Overview overflow-hidden hover:bg-stone-800 hover:border-opacity-80 flex-col grow items-start px-11 pt-12 pb-40 text-xl font-light leading-9 text-white border border-solid border-white border-opacity-20 max-md:px-5 max-md:pb-24">
-                <div className="self-center font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] w-[330px]">
+            <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+                <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-[100px]">
                   30 Years of Industry Experience
                 </div>
                 <div className="mt-16 text-lg max-md:mt-10">
@@ -452,7 +452,7 @@ function LearningDevelopment() {
         </div>
       </header>
       <p className="mt-6 text-base font-light leading-loose text-white max-md:max-w-full">
-        This initiative will help us exceed our customers' delivery expectations in terms of Quality and Speed.
+        that help us exceed our customer’s delivery expectations in terms of Quality and Speed.
       </p>
 
       {/* Image and Button Section */}
@@ -465,8 +465,8 @@ function LearningDevelopment() {
               src="./AboutUs/Picture 1 1.png"
               alt="img1"
               className={`transition-all duration-500 mb-4 md:mb-0 ${activeImage === 1
-                  ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125"
-                  : "z-0 w-[50%] md:w-[40%] h-auto opacity-70"
+                ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125"
+                : "z-0 w-[50%] md:w-[40%] h-auto opacity-70"
                 }`}
             />
             {/* Image 2 */}
@@ -474,8 +474,8 @@ function LearningDevelopment() {
               src="./AboutUs/Picture 2 1.png"
               alt="img2"
               className={`transition-all duration-500 ${activeImage === 2
-                  ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125 md:-ml-20"
-                  : "z-0 w-[50%] md:w-[40%] h-auto opacity-70 md:-ml-20"
+                ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125 md:-ml-20"
+                : "z-0 w-[50%] md:w-[40%] h-auto opacity-70 md:-ml-20"
                 }`}
             />
           </div>
