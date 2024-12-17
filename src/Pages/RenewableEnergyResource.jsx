@@ -150,147 +150,148 @@ function RenewableEnergyResource() {
         </script>
       </Helmet>
       <Navbar />
-      <section className="flex h-screen overflow-hidden flex-col text-4xl font-bold lg:text-5xl  tracking-wider text-white ">
-        <div className="flex flex-col h-screen relative max-md:text-4xl">
-          <div className="relative">
-            <img
-              loading="lazy"
-              src="/IndustriesPage/IndustriesMainImg.png"
-              alt="Renewable Energy Industry background"
-              className="object-cover h-screen w-screen"
-            />
-            <h1 className="inset-y-2/3 xl:mt-[10%] lg:inset-x-20 absolute inset-0 p-4 flex z-10">
-              RENEWABLE ENERGY INDUSTRY
-            </h1>
+      <main className="w-full overflow-hidden">
+        <section className="flex h-screen overflow-hidden flex-col text-4xl font-bold lg:text-5xl  tracking-wider text-white ">
+          <div className="flex flex-col h-screen relative max-md:text-4xl">
+            <div className="">
+              <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
+                <source src="../IndustriesPage/REI.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+              <h1 className="inset-y-2/3 xl:mt-[10%] lg:inset-x-20 absolute inset-0 p-4 flex z-10">
+                RENEWABLE ENERGY INDUSTRY
+              </h1>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Navigated Section */}
+        {/* Navigated Section */}
 
-      <section>
-        < Navigation />
-      </section>
-
-
-      {/*  */}
-
-      <section className="px-[5%] pt-[4%]">
-        <main className="flex flex-col text-center">
-          <header className="flex flex-col w-full text-2xl lg:text-3xl font-semibold uppercase text-stone-900 tracking-[2.06px] max-md:max-w-full">
-            <img
-              loading="lazy"
-              src="/IndustriesPage/WindmilLogo.png"
-              alt="Renewable Energy Industry Logo"
-              className="object-cover self-center max-w-full aspect-square w-20"
-            />
-            <h1 className="mt-16 w-full font-medium max-md:mt-10 max-md:max-w-full">
-              Renewable Energy Industry
-            </h1>
-          </header>
-          <section className="mt-12 text-base xl:text-lg p-2 md:text-xl md:w-[80%] lg:w-[60%] self-center lg:leading-10 text-zinc-900 max-md:mt-10 max-md:max-w-full">
-            <p>
-              The Middle East, particularly the{" "}
-              <span className="font-semibold">UAE, Saudi Arabia, and Qatar</span>,
-              has committed to ambitious renewable energy goals. The regions
-              reliance on solar PV and wind energy has significantly increased,
-              making{" "}
-              <span className="font-semibold">
-                renewable energy infrastructure
-              </span>{" "}
-              critical to national sustainability strategies. JEF is positioned as a
-              key partner in this growth, offering state-of- the-art{" "}
-              <span className="font-semibold">
-                lightning protection, grounding solutions, and detailed engineering
-                services
-              </span>{" "}
-              designed to ensure the operational continuity and safety of renewable
-              energy projects.
-            </p>
-          </section>
-        </main>
-      </section>
+        <section>
+          < Navigation />
+        </section>
 
 
+        {/*  */}
 
-      <section>
-        < IntegratingDiverseSpecializations />
-      </section>
+        <section className="px-[5%] pt-[4%]">
+          <main className="flex flex-col text-center">
+            <header className="flex flex-col w-full text-2xl lg:text-3xl font-semibold uppercase text-stone-900 tracking-[2.06px] max-md:max-w-full">
+              <img
+                loading="lazy"
+                src="/IndustriesPage/WindmilLogo.png"
+                alt="Renewable Energy Industry Logo"
+                className="object-cover self-center max-w-full aspect-square w-20"
+              />
+              <h1 className="mt-16 w-full font-medium max-md:mt-10 max-md:max-w-full">
+                Renewable Energy Industry
+              </h1>
+            </header>
+            <section className="mt-12 text-base xl:text-lg p-2 md:text-xl md:w-[80%] lg:w-[60%] self-center lg:leading-10 text-zinc-900 max-md:mt-10 max-md:max-w-full">
+              <p>
+                The Middle East, particularly the{" "}
+                <span className="font-semibold">UAE, Saudi Arabia, and Qatar</span>,
+                has committed to ambitious renewable energy goals. The regions
+                reliance on solar PV and wind energy has significantly increased,
+                making{" "}
+                <span className="font-semibold">
+                  renewable energy infrastructure
+                </span>{" "}
+                critical to national sustainability strategies. JEF is positioned as a
+                key partner in this growth, offering state-of- the-art{" "}
+                <span className="font-semibold">
+                  lightning protection, grounding solutions, and detailed engineering
+                  services
+                </span>{" "}
+                designed to ensure the operational continuity and safety of renewable
+                energy projects.
+              </p>
+            </section>
+          </main>
+        </section>
 
 
 
-
-      {/* Service Provided Section */}
-
-      <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
-        <div className="flex flex-col w-full max-w-[1518px] max-md:max-w-full">
-          <h2 className="Y-axis-card-anm self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
-            service provided
-          </h2>
-          <div className="card-slider grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-12 items-start mt-20 max-md:mt-10">
-            {serviceData.map((service, index) => (
-              <React.Fragment key={service.number}>
-                <div className="flex flex-col xl:flex-row gap-6 xl:gap-12 h-full">
-                  <article className="Y-axis-card-anm flex flex-col pt-1.5 pb-1.5 xl:pt-0 min-h-full rounded-none w-fit">
-                    <h3 className="self-start ">
-                      <img
-                        src={service.number} className="h-[2rem] lg:h-[3rem]" />
-                    </h3>
-                    <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl  text-red-700 max-md:max-w-full">
-                      {service.title}
-                    </h4>
-                    <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
-                      {service.description}
-                    </p>
-                  </article>
-                  {service.number !== '/03.png' && (
-                    <div className="xl:w-[1px] border border-gray-600 w-full h-[1px] xl:min-h-full" />
-                  )}
-                </div>
-              </React.Fragment>
-            ))}
-          </div>
-        </div>
-      </section>
+        <section>
+          < IntegratingDiverseSpecializations />
+        </section>
 
 
 
 
+        {/* Service Provided Section */}
 
-
-      <section>
-        < Segments />
-      </section>
-
-
-
-
-      <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
-        <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
-          <img loading="lazy" src="/HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
-          <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
-
-            <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
-              Contact us
-            </h1>
-
-            <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
-              Get in touch with us for any business enquiry.
-            </p>
-            <form className="w-full mt-12 max-md:mt-10">
-              {inputFields.map((field, index) => (
-                <FormInput key={index} label={field.label} type={field.type} />
+        <section className="flex overflow-hidden flex-col justify-center items-center px-20 py-20 font-bold bg-stone-900 max-md:px-5">
+          <div className="flex flex-col w-full max-w-[1518px] max-md:max-w-full">
+            <h2 className="Y-axis-card-anm self-start text-3xl lg:text-4xl leading-none text-red-700 uppercase max-md:max-w-full ">
+              service provided
+            </h2>
+            <div className="card-slider grid grid-cols-1 xl:grid-cols-3 gap-10 xl:gap-12 items-start mt-20 max-md:mt-10">
+              {serviceData.map((service, index) => (
+                <React.Fragment key={service.number}>
+                  <div className="flex flex-col xl:flex-row gap-6 xl:gap-12 h-full">
+                    <article className="Y-axis-card-anm flex flex-col pt-1.5 pb-1.5 xl:pt-0 min-h-full rounded-none w-fit">
+                      <h3 className="self-start ">
+                        <img
+                          src={service.number} className="h-[2rem] lg:h-[3rem]" />
+                      </h3>
+                      <h4 className="mt-5 lg:mt-10 text-xl lg:text-2xl  text-red-700 max-md:max-w-full">
+                        {service.title}
+                      </h4>
+                      <p className="mt-5 lg:mt-10 text-base lg:text-lg font-extralight text-white max-md:mt-10 max-md:mr-2 max-md:max-w-full">
+                        {service.description}
+                      </p>
+                    </article>
+                    {service.number !== '/03.png' && (
+                      <div className="xl:w-[1px] border border-gray-600 w-full h-[1px] xl:min-h-full" />
+                    )}
+                  </div>
+                </React.Fragment>
               ))}
-              <button
-                type="submit"
-                className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
-              >
-                Submit
-              </button>
-            </form>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+
+
+
+
+
+        <section>
+          < Segments />
+        </section>
+
+
+
+
+        <section className="flex overflow-hidden flex-col text-base font-light  text-stone-300">
+          <div className="flex relative flex-col justify-center items-start px-20 py-24 w-full min-h-[628px] max-md:px-5 max-md:pb-24 max-md:max-w-full">
+            <img loading="lazy" src="/HomePageImg/ContactUsMainImg.png" alt="" className="object-cover absolute inset-0 size-full" />
+            <div className="flex lg:mx-[1%] relative flex-col items-start mb-0 max-w-full w-[521px] max-md:mb-2.5">
+
+              <h1 className="text-2xl Y-axis-text lg:text-3xl font-semibold text-red-700 uppercase tracking-[2px] max-md:text-4xl">
+                Contact us
+              </h1>
+
+              <p className="self-stretch Y-axis-text mt-4 text-sm lg:text-base font-normal leading-none text-white max-md:max-w-full">
+                Get in touch with us for any business enquiry.
+              </p>
+              <form className="w-full mt-12 max-md:mt-10">
+                {inputFields.map((field, index) => (
+                  <FormInput key={index} label={field.label} type={field.type} />
+                ))}
+                <button
+                  type="submit"
+                  className="overflow-hidden Y-axis-text px-16 py-3 mt-2 max-w-full text-xl font-semibold text-white whitespace-nowrap bg-red-700 rounded-3xl w-[380px] max-md:px-5"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+      </main>
 
       < MainFooter />
 

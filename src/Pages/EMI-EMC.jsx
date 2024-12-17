@@ -333,7 +333,7 @@ const EmiEmc = () => {
           className="object-cover absolute inset-0 size-full"
         /> */}
           <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
-            <source src="./SerivePage/Earthing Studies Banner video.mp4" type="video/mp4" />
+            <source src="./SerivePage/EMI EMC.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
           <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
