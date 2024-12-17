@@ -116,30 +116,54 @@ const PowerSystemStudies = () => {
           });
       }, []);
 
-   const services = [
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' , path: '/earthing-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path:'/lightning-protection-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path:'/power-system-studies'},
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' , path:'/power-quality-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' , path: '/instrumentation-earthing-studies'},
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-  ];
+      const services = [
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Root Cause Analysis 2.png', text: 'Root cause analysis', path: '/root-cause-analysis' },
+        { image: './HomePageImg/WhatWeDoSection/Emi Emc 2.png', text: 'EMI EMC', path: '/emi-emc' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+      ];
+    
+      const services2 = [
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+        { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+        { image: '', text: '', path: '' },
+      ];
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [backgroundImage, setBackgroundImage] = useState('');
   const serviceRefs = useRef([]);
+  const service2Refs = useRef([]);
   const imgRef = useRef(null);
 
   useEffect(() => {
@@ -188,6 +212,29 @@ const PowerSystemStudies = () => {
       }
     });
   }, [hoveredIndex, services]);
+
+  useEffect(() => {
+    service2Refs.current = service2Refs.current.slice(0, services2.length);
+  }, [services2]);
+
+  useEffect(() => {
+    service2Refs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services2[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.5 : 1,
+            // border: hoveredIndex !== null && services2[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services2[index]?.text === '' ? 'transparent' : '',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services2]);
 
 
       const navItems = [
@@ -361,9 +408,9 @@ const PowerSystemStudies = () => {
       </section>
 
 
-      <section>
+      <section className="hidden sm:block">
         <div className={` h-full bg-slate-900`}>
-          <div 
+          <div
             className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
             {backgroundImage && (
               <div className="absolute inset-0 w-full h-full ">
@@ -379,9 +426,9 @@ const PowerSystemStudies = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
-                <div className='Y-axis-Service-anm flex items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
-                  {services.slice(0, 9).map((service, index) => (
+              <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                  {services.slice(0, 8).map((service, index) => (
                     <ServiceItem
                       key={index}
                       text={service.text}
@@ -393,22 +440,73 @@ const PowerSystemStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='Y-axis-Service-anm flex gap-x-2 md:gap-x-5 lg:gap-x-10'>
-                  {services.slice(9).map((service, index) => (
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                  {services.slice(8).map((service, index) => (
                     <ServiceItem
-                      key={index + 9}
+                      key={index + 8}
                       text={service.text}
                       path={service.path}
                       image={service.image}
-                      ref={(el) => (serviceRefs.current[index + 9] = el)}
-                      onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
+                      ref={(el) => (serviceRefs.current[index + 8] = el)}
+                      onMouseEnter={() => handleMouseEnter(index + 8, service.image)}
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
                 </div>
               </div>
             </section>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="block sm:hidden">
+        <div className={` h-full bg-slate-900`}>
+          <div
+            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+            {backgroundImage && (
+              <div className="absolute inset-0 w-full h-full ">
+                <img
+                  ref={imgRef}
+                  src={backgroundImage}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+                Our Services
+              </h2>
+              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                  {services2.slice(0, 9).map((service2, index) => (
+                    <ServiceItem2
+                      key={index}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                  {services2.slice(12, 14).map((service2, index) => (
+                    <ServiceItem2
+                      key={index}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </section>
 
@@ -496,29 +594,52 @@ function TestimonialsSection() {
 
 
 
-const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave }, ref) => {
-  return (
-   <Link to={path}>
-     <div
-        ref={ref}
-        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-          ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-        onMouseEnter={() => {
-          if (text !== "") {
-            onMouseEnter();
-          }
-        }}
-        onMouseLeave={() => {
-          if (text !== "") {
-            onMouseLeave();
-          }
-        }}
-      >
-        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
-      </div>
-   </Link>
-
+const ServiceItem = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
   );
+
+  return path ? <Link to={path}>{content}</Link> : content;
+});
+
+const ServiceItem2 = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
+  );
+
+  return path ? <Link to={path}>{content}</Link> : content;
 });
 
 
