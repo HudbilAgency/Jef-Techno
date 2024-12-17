@@ -921,12 +921,12 @@ function Home() {
               </div>
             </div>
 
-            <div className="hidden lg:flex flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:mt-auto 2xl:max-h-[600px]">
+            <div className="hidden lg:flex flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 mt-auto 2xl:max-h-[600px]">
               <img className="h-[70vh] lg:h-full" src="/HomePageImg/founder.png" />
             </div>
 
             <div className="flex lg:hidden flex-col w-full lg:w-1/2 xl:w-1/3 2xl:w-1/4 lg:mt-auto 2xl:max-h-[600px]">
-              <img className="h-[70vh] object-contain lg:h-full" src="/HomePageImg/founder.png" />
+              <img className=" object-contain lg:h-full" src="/HomePageImg/founder.png" />
             </div>
 
           </div>
@@ -1124,7 +1124,7 @@ const WhatWeDoSection = () => {
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
 
-          <h1 className="Y-axis-text z-50 text-white font-normal absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">Delivering Excellence Across 24 Countries</h1>
+          <h1 className="Y-axis-text z-50 text-white font-normal text-center absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">Delivering Excellence Across 24 Countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}
