@@ -401,7 +401,7 @@ const Overview = () => {
               </div>
             </div>
             <div className="flex  flex-col w-[33%] max-md:ml-0 max-md:w-full">
-            <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+              <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-24">
                   3000+ Global Customers
                 </div>
@@ -411,7 +411,7 @@ const Overview = () => {
               </div>
             </div>
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
-            <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
+              <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-[100px]">
                   30 Years of Industry Experience
                 </div>
@@ -462,7 +462,7 @@ function LearningDevelopment() {
           <div className="relative w-full md:w-[80%] items-center justify-center flex flex-col md:flex-row">
             {/* Image 1 */}
             <img
-              src="./AboutUs/Picture 1 1.png"
+              src="./AboutUs/carousal1.png"
               alt="img1"
               className={`transition-all duration-500 mb-4 md:mb-0 ${activeImage === 1
                 ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125"
@@ -471,7 +471,7 @@ function LearningDevelopment() {
             />
             {/* Image 2 */}
             <img
-              src="./AboutUs/Picture 2 1.png"
+              src="./AboutUs/carousal2.png"
               alt="img2"
               className={`transition-all duration-500 ${activeImage === 2
                 ? "z-10 w-[60%] md:w-[50%] h-auto transform scale-125 md:-ml-20"
