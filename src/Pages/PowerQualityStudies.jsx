@@ -134,8 +134,8 @@ const PowerQualityStudies = () => {
     { image: '', text: '', path: '' },
     { image: '', text: '', path: '' },
     { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
-    { image: './HomePageImg/WhatWeDoSection/Root Cause Analysis 2.png', text: 'Root cause analysis', path: '/root-cause-analysis' },
-    { image: './HomePageImg/WhatWeDoSection/Emi Emc 2.png', text: 'EMI EMC', path: '/emi-emc' },
+    { image: './HomePageImg/WhatWeDoSection/Emi Emc 2.jpg', text: 'EMI EMC', path: '/emi-emc' },
+    { image: './HomePageImg/WhatWeDoSection/Root Cause Analysis 2.jpg', text: 'Root cause analysis', path: '/root-cause-analysis' },
     { image: '', text: '', path: '' },
     { image: '', text: '', path: '' },
     { image: '', text: '', path: '' },
@@ -439,7 +439,7 @@ const PowerQualityStudies = () => {
                     />
                   ))}
                 </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-10'>
                   {services.slice(8).map((service, index) => (
                     <ServiceItem
                       key={index + 8}
