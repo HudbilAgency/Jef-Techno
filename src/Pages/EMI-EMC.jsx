@@ -309,7 +309,7 @@ const EmiEmc = () => {
   return (
     <>
 
-<Helmet>
+      <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -338,7 +338,7 @@ const EmiEmc = () => {
           </video>
           <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
             <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-            EMI EMC
+              EMI EMC
             </h1>
             <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
               <Link to={'/get-in-touch'}>
@@ -382,16 +382,16 @@ const EmiEmc = () => {
           </div>
         </nav>
         <div className="ContactUsAnimation flex justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-        <img loading="lazy" src="./SerivePage/EMIEMCLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
-      </div>
+          <img loading="lazy" src="./SerivePage/EMIEMCLogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
+        </div>
         <header className="flex p-4 ContactUsAnimation flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
           <h1 className="flex flex-col max-w-full text-2xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
             <div className="w-full max-md:max-w-full">
-            Electromagnetic Interference (EMI) and <br className="hidden md:block" /> Electromagnetic Compatibility (EMC) <br className="hidden md:block" /> Studies
+              Electromagnetic Interference (EMI) and <br className="hidden md:block" /> Electromagnetic Compatibility (EMC) <br className="hidden md:block" /> Studies
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-          In an era of rapidly advancing technology, maintaining electromagnetic compatibility is critical for the reliable operation of electrical systems and devices. JEF offers comprehensive EMI and EMC Studies to ensure that your electrical infrastructure meets international standards, minimizing interference risks and ensuring system reliability.
+            In an era of rapidly advancing technology, maintaining electromagnetic compatibility is critical for the reliable operation of electrical systems and devices. JEF offers comprehensive EMI and EMC Studies to ensure that your electrical infrastructure meets international standards, minimizing interference risks and ensuring system reliability.
           </p>
           {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
@@ -710,7 +710,7 @@ function CarouselSection({ components }) {
     <section className="flex xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
       <div className="flex flex-wrap gap-5 justify-between w-full">
         <h2 className="md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
-        JEF’s EMI/EMC Study Services
+          JEF’s EMI/EMC Study Services
         </h2>
         <div className="flex self-end flex-col min-h-[60px]">
           <div className="flex gap-5 items-start w-full max-w-[140px]">
@@ -765,9 +765,9 @@ function CarouselSection({ components }) {
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
               <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl xl:h-28 2xl:h-20 sm:text-start my-5 text-center">{component.title}</h3>
               <div className=" text-gray-400 mb-6 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] flex items-start gap-4 sm:text-start text-lg max-w-screen-xl">
-              <span>•</span>{component.description}</div>
+                <span>•</span>{component.description}</div>
               <div className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] flex items-start gap-4 sm:text-start text-lg max-w-screen-xl">
-              <span>•</span>{component.description2}</div>
+                <span>•</span>{component.description2}</div>
             </div>
           ))}
         </div>
@@ -846,8 +846,8 @@ const VerticalCarousel = () => {
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                      : "h-auto text-xs 2xl:text-base"
+                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                    : "h-auto text-xs 2xl:text-base"
                     }`}
                   onClick={() => handleClick(index)}
                 >
@@ -887,8 +887,8 @@ const VerticalCarousel = () => {
                       <li
                         key={index}
                         className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                            : "h-auto text-base"
+                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                          : "h-auto text-base"
                           }`}
                         onClick={() => handleClick(index)}
                       >
@@ -941,7 +941,7 @@ const VerticalCarousel = () => {
             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
-                src="./SerivePage/magna-discovery.jpg.png"
+                src="/emi-emc-page.png"
                 alt="Earthing/Grounding System Illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />
