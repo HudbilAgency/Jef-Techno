@@ -43,7 +43,10 @@ function MainFooter() {
     { name: 'Power Quality Studies', path: '/power-quality-studies' },
     { name: 'Earthing Studies', path: '/earthing-studies' },
     { name: 'LPS System Studies', path: '/lightning-protection-studies' },
-    { name: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
+    { name: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' },
+    { name: 'Root Cause Analysis', path: '/root-cause-analysis' },
+    { name: 'EMI EMC', path: '/emi-emc' },
+
   ];
 
   const itemsLocation = [
@@ -59,6 +62,7 @@ function MainFooter() {
     { name: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
     { name: 'Process Plant', path: '/industries/processplant' },
     { name: 'Commercial Buildings', path: '/industries/commercialbuilding' },
+    { name: 'Renewable Energy', path: '/industries/renewableenergy' },
   ];
 
   const itemsCareers = [
@@ -166,7 +170,10 @@ const FAQComponent = () => {
         { label: 'Power Quality Studies', path: '/power-quality-studies' },
         { label: 'Earthing Studies', path: '/earthing-studies' },
         { label: 'LPS System Studies', path: '/lightning-protection-studies' },
-        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' }
+        { label: 'Instrumentation Studies', path: '/instrumentation-earthing-studies' },
+        { label: 'Root Cause Analysis', path: '/root-cause-analysis' },
+        { label: 'EMI EMC', path: '/emi-emc' },
+
       ],
       isOpen: false
     },
@@ -188,6 +195,7 @@ const FAQComponent = () => {
         { label: 'Manufacturing Plant', path: '/industries/manufacturingplant' },
         { label: 'Process Plant', path: '/industries/processplant' },
         { label: 'Commercial Buildings', path: '/industries/commercialbuilding' },
+        { label: 'Renewable Energy', path: '/industries/renewableenergy' },
       ],
       isOpen: false
     },

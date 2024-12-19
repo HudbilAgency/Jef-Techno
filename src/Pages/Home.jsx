@@ -807,7 +807,7 @@ function Home() {
                   <div ref={imgRef2} className="h-[450px]">
                     <img
                       className="w-full h-full object-cover"
-                      src="/HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"
+                      src="/HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.jpeg"
                       alt=""
                     />
                   </div>
@@ -1307,7 +1307,7 @@ function FeatureSection() {
       <h1 className="uppercase tracking-wider sm:tracking-widest text-center mt-[1rem] text-red-600 text-xl">Why choose JEF ?</h1>
       <div className="my-5 flex gap-8 h-[60%]">
         <img ref={imgRef3} src="./HomePageImg/WhyChooseJEFImg/Smart Digitization 1.png" alt="SmartDigitilizationImg" className="h-full " />
-        <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png" alt="OurL&DImg" className=" h-full" />
+        <img ref={imgRef4} src="./HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.jpeg" alt="OurL&DImg" className=" h-full" />
       </div>
       <div ref={divRef3} className="relative">
         <h1 className=" text-white -mt-[5rem] font-bold text-center text-3xl uppercase">Smart <br />Digitization</h1>
