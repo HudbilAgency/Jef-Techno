@@ -817,14 +817,14 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Industry applications",
       description:
-        "JEF’s Root Cause Analysis services cater to a wide range of industries, providing customized solutions for:|Oil & Gas: Resolving equipment malfunctions and grounding system inefficiencies in hazardous environments.|Power Utilities: Investigating failures in substations, transmission lines, and grid systems.|Manufacturing: : Identifying issues in power distribution and automation systems to ensure uninterrupted operations.|Process Plants: Addressing electrical safety risks and optimizing system performance in petrochemical and food processing facilities.|Warehouses and Commercial Buildings: Investigating power outages, grounding faults, and lightning protection system failures to enhance safety and reliability.",
+        "JEF’s Root Cause Analysis services cater to a wide range of industries, providing customized solutions for:|Oil & Gas: Resolving equipment malfunctions and grounding system inefficiencies in hazardous environments.|Power Utilities: Investigating failures in substations, transmission lines, and grid systems.|Manufacturing: Identifying issues in power distribution and automation systems to ensure uninterrupted operations.|Process Plants: Addressing electrical safety risks and optimizing system performance in petrochemical and food processing facilities.|Warehouses and Commercial Buildings: Investigating power outages, grounding faults, and lightning protection system failures to enhance safety and reliability.",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Why choose jef for emi/emc studies",
       description:
-        `Expertise: A team of skilled engineers with extensive experience in electrical fault investigation and system optimization.|Comprehensive Approach: A systematic process that identifies, analyzes, and resolves the root causes of issues.|Tailored Solutions: Customized action plans designed to meet the specific needs of your industry and operations.|Proven Success: A strong track record of delivering RCA services that improve system reliability and reduce downtime.`,
+        `|Expertise: A team of skilled engineers with extensive experience in electrical fault investigation and system optimization.|Comprehensive Approach: A systematic process that identifies, analyzes, and resolves the root causes of issues.|Tailored Solutions: Customized action plans designed to meet the specific needs of your industry and operations.|Proven Success: A strong track record of delivering RCA services that improve system reliability and reduce downtime.`,
     }
   ];
 

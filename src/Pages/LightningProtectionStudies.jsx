@@ -811,7 +811,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Our Approach to Lightning Protection Study Service",
       description:
-        "At JEF, our Lightning Protection Studies encompass a range of key services:|Risk Assessment: Evaluating the risk of lightning strikes to determine the need for protection and the level of protection required.|System Design: Designing external and internal lightning protection systems based on the assessed risk and protection levels.|Implementation: One team will always have an eye; ensure the designs recommended will be practically implementable at the specific site factoring in all possible constraints and special requirements.|Cost: Our solutions will be cost optimal and our BOQ will always reflect the most effective cost for a given project."
+        "At JEF, our Lightning Protection Studies encompass a range of key services:|Risk Assessment: Evaluating the risk of lightning strikes to determine the need for protection and the level of protection required.|System Design: Designing external and internal lightning protection systems based on the assessed risk and protection levels.|Implementation: One team will always have an eye & ensure the designs recommended will be practically implementable at the specific site factoring in all possible constraints and special requirements.|Cost: Our solutions will be cost optimal and our BOQ will always reflect the most effective cost for a given project."
     },
     {
       imgSrc:

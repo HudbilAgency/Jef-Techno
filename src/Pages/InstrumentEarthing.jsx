@@ -3,7 +3,7 @@ import MainFooter from '../Components/Footer/MainFooter';
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Navbar from "../Components/Navbar/Navbar";
-import {Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 
 
@@ -11,165 +11,191 @@ gsap.registerPlugin(ScrollTrigger);
 
 const InstrumentEarthing = () => {
 
- 
+
   useEffect(() => {
     gsap.utils.toArray('.Y-axis-text-Title-Service1').forEach((element) => {
-        gsap.fromTo(
-            element,
-            { opacity: 0 , y: 50 },
-            {   y: 0,
-                opacity: 1,
-                duration: 0.8,
-                scrollTrigger: {
-                    trigger: element,
-                    stagger: 0.6,
-                    start: 'top 100%',
-                    toggleActions: 'play none none none',
-                      },
-                  }
-              );
-          });
-      }, []);
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 50 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          scrollTrigger: {
+            trigger: element,
+            stagger: 0.6,
+            start: 'top 100%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    });
+  }, []);
 
-      useEffect(() => {
-        gsap.fromTo(
-          gsap.utils.toArray('.Y-axis-Testimonials'),
-          { opacity: 0, y: 100 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.1,
-            stagger: 0.3,
-            scrollTrigger: {
-              trigger: '.Testimonials',
-              start: 'top 80%',
-              end: 'bottom 20%',
-              toggleActions: 'play none none none',
-            },
-          }
-        );
-      }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-Testimonials'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.Testimonials',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
 
-// For Key Components
+  // For Key Components
 
-      useEffect(() => {
-        gsap.fromTo(
-          gsap.utils.toArray('.Y-axis-card-anm'),
-          { opacity: 0, y: 100 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.1,
-            stagger: 0.3,
-            scrollTrigger: {
-              trigger: '.card-slider',
-              start: 'top 80%',
-              end: 'bottom 20%',
-              toggleActions: 'play none none none',
-            },
-          }
-        );
-      }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-card-anm'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.card-slider',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
-      // Key Check Points
+  // Key Check Points
 
-      useEffect(() => {
-        gsap.fromTo(
-          gsap.utils.toArray('.Y-axis-Slider-anm'),
-          { opacity: 0, y: 100 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.1,
-            stagger: 0.3,
-            scrollTrigger: {
-              trigger: '.slider-anm',
-              start: 'top 80%',
-              end: 'bottom 20%',
-              toggleActions: 'play none none none',
-            },
-          }
-        );
-      }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-Slider-anm'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.slider-anm',
+          start: 'top 80%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
-      // Our Services Animation 
+  // Our Services Animation 
 
-      useEffect(() => {
-        gsap.fromTo(
-          gsap.utils.toArray('.Y-axis-Service-anm'),
-          { opacity: 0, y: 100 },
-          {
-            y: 0,
-            opacity: 1,
-            duration: 1.1,
-            stagger: 0.3,
-            scrollTrigger: {
-              trigger: '.circle-slider',
-              start: 'top 60%',
-              end: 'bottom 20%',
-              toggleActions: 'play none none none',
-            },
-          }
-        );
-      }, []);
+  useEffect(() => {
+    gsap.fromTo(
+      gsap.utils.toArray('.Y-axis-Service-anm'),
+      { opacity: 0, y: 100 },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1.1,
+        stagger: 0.3,
+        scrollTrigger: {
+          trigger: '.circle-slider',
+          start: 'top 60%',
+          end: 'bottom 20%',
+          toggleActions: 'play none none none',
+        },
+      }
+    );
+  }, []);
 
 
 
 
   useEffect(() => {
-    
-    gsap.utils.toArray('.ContactUsAnimation').forEach((element) => {
-        gsap.fromTo(
-            element,
-            { opacity: 0 , y: 50 },
-            {   y: 0,
-                opacity: 1,
-                duration: 0.8,
-                stagger: 0.2,
-                scrollTrigger: {
-                    trigger: element,
-                    start: 'top 70%',
-                    toggleActions: 'play none none none',
-                      },
-                  }
-              );
-          });
-      }, []);
 
-   const services = [
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies' , path: '/earthing-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path:'/lightning-protection-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path:'/power-system-studies'},
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis' , path:'/power-quality-studies'},
-    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing' , path: '/instrumentation-earthing-studies'},
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
-    { image: '', text: '' },
+    gsap.utils.toArray('.ContactUsAnimation').forEach((element) => {
+      gsap.fromTo(
+        element,
+        { opacity: 0, y: 50 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.8,
+          stagger: 0.2,
+          scrollTrigger: {
+            trigger: element,
+            start: 'top 70%',
+            toggleActions: 'play none none none',
+          },
+        }
+      );
+    });
+  }, []);
+
+  const services = [
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Emi Emc 2.jpg', text: 'EMI EMC', path: '/emi-emc' },
+    { image: './HomePageImg/WhatWeDoSection/Root Cause Analysis 2.jpg', text: 'Root cause analysis', path: '/root-cause-analysis' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
   ];
+
+  const services2 = [
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', path: '/earthing-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', path: '/lightning-protection-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', path: '/power-system-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: './HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality', path: '/power-quality-studies' },
+    { image: './HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', path: '/instrumentation-earthing-studies' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+    { image: '', text: '', path: '' },
+  ];
+
   const [hoveredIndex, setHoveredIndex] = useState(null);
   const [backgroundImage, setBackgroundImage] = useState('');
   const serviceRefs = useRef([]);
+  const service2Refs = useRef([]);
   const imgRef = useRef(null);
 
   useEffect(() => {
     const img = imgRef.current;
     if (img) {
-      gsap.fromTo(img, 
-        { opacity: 0 }, 
-        { 
-          opacity: 1, 
+      gsap.fromTo(img,
+        { opacity: 0 },
+        {
+          opacity: 1,
           duration: 2.5,
           ease: 'power2.inOut'
         }
@@ -210,70 +236,93 @@ const InstrumentEarthing = () => {
     });
   }, [hoveredIndex, services]);
 
+  useEffect(() => {
+    service2Refs.current = service2Refs.current.slice(0, services2.length);
+  }, [services2]);
 
-      const navItems = [
-        { label: 'HOME', isActive: true },
-        { label: 'SERVICES', isActive: true },
-        { label: 'INSTRUMENTATION EARTHING STUDIES', isActive: false },
-      ];
+  useEffect(() => {
+    service2Refs.current.forEach((ref, index) => {
+      if (ref) {
+        if (index === hoveredIndex && services2[index]?.text !== '') {
+          gsap.to(ref, { scale: 1.3, opacity: 1, duration: 0.2, ease: 'power2.inOut' });
+        } else {
+          gsap.to(ref, {
+            scale: hoveredIndex !== null ? 0.9 : 1,
+            opacity: hoveredIndex !== null ? 0.5 : 1,
+            // border: hoveredIndex !== null && services2[index]?.text === '' ? '1px solid white' : '',
+            backgroundColor: hoveredIndex !== null && services2[index]?.text === '' ? 'transparent' : '',
+            duration: 0.2,
+            ease: 'power2.inOut'
+          });
+        }
+      }
+    });
+  }, [hoveredIndex, services2]);
 
-      const [activeIndex, setActiveIndex] = useState(0);
 
-      const handleClick = (index) => {
-        setActiveIndex(index);
-      };
-    
-      const benefitItems = [
-        "ABOUT Earthing studies",
-        'What is an Earthing/Grounding System Studies',
-        'Earthing/Grounding System Studies',
-        'Our Certifications and Expertise',
-        'Detailed Study Reports and Analysis',
-        'Benefits of Professional Earthing/Grounding System Studies',
-      ];
+  const navItems = [
+    { label: 'HOME', isActive: true },
+    { label: 'SERVICES', isActive: true },
+    { label: 'INSTRUMENTATION EARTHING STUDIES', isActive: false },
+  ];
 
-      const components = [
-        
-  {
-    imageSrc: './SerivePage/01.png',
-    title: 'Riser Integrity Testing',
-    description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
-  },
-  {
-    imageSrc: './SerivePage/02.png',
-    title: 'Grid Integrity Testing',
-    description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.',
-  },
-  {
-    imageSrc: './SerivePage/03.png',
-    title: 'Soil Resistivity Testing',
-    description: 'Conducting tests to measure soil resistivity and design effective grounding systems.',
-  },
-  {
-    imageSrc: './SerivePage/04.png',
-    title: 'Touch and Step Potential Measurement',
-    description: 'Assessing the potential differences that can occur on the surface of the ground to ensure personnel safety.',
-  },
-  {
-    imageSrc: './SerivePage/05.png',
-    title: 'Simulation',
-    description: 'Earthing grid in CDEGS software.',
-  },
-  {
-    imageSrc: './SerivePage/06.png',
-    title: 'Earth Electrode Resistance Testing',
-    description: 'Measuring the resistance of earth electrodes using both Fall of Potential and Stake less methods.',
-  },
-      ]
+  const [activeIndex, setActiveIndex] = useState(0);
 
-      const buttons = [
-        { text: 'CONTACT US', className: 'bg-red-700' }
-      ];
-    
+  const handleClick = (index) => {
+    setActiveIndex(index);
+  };
+
+  const benefitItems = [
+    "ABOUT Earthing studies",
+    'What is an Earthing/Grounding System Studies',
+    'Earthing/Grounding System Studies',
+    'Our Certifications and Expertise',
+    'Detailed Study Reports and Analysis',
+    'Benefits of Professional Earthing/Grounding System Studies',
+  ];
+
+  const components = [
+
+    {
+      imageSrc: './SerivePage/01.png',
+      title: 'Riser Integrity Testing',
+      description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
+    },
+    {
+      imageSrc: './SerivePage/02.png',
+      title: 'Grid Integrity Testing',
+      description: 'Checking the continuity and integrity of the grounding grid using advanced impedance measurement techniques.',
+    },
+    {
+      imageSrc: './SerivePage/03.png',
+      title: 'Soil Resistivity Testing',
+      description: 'Conducting tests to measure soil resistivity and design effective grounding systems.',
+    },
+    {
+      imageSrc: './SerivePage/04.png',
+      title: 'Touch and Step Potential Measurement',
+      description: 'Assessing the potential differences that can occur on the surface of the ground to ensure personnel safety.',
+    },
+    {
+      imageSrc: './SerivePage/05.png',
+      title: 'Simulation',
+      description: 'Earthing grid in CDEGS software.',
+    },
+    {
+      imageSrc: './SerivePage/06.png',
+      title: 'Earth Electrode Resistance Testing',
+      description: 'Measuring the resistance of earth electrodes using both Fall of Potential and Stake less methods.',
+    },
+  ]
+
+  const buttons = [
+    { text: 'CONTACT US', className: 'bg-red-700' }
+  ];
+
 
   return (
-   <>
-    <Helmet>
+    <>
+      <Helmet>
         <script async src="https://www.googletagmanager.com/gtag/js?id=G-V6J93962T6"></script>
         <script>
           {`
@@ -284,125 +333,125 @@ const InstrumentEarthing = () => {
                 `}
         </script>
       </Helmet>
-    < Navbar/>
+      < Navbar />
 
-    {/* Landing Img Section */}
+      {/* Landing Img Section */}
 
-    <section className="flex overflow-hidden h-screen flex-col bg-white">
-      <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
-      <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
+      <section className="flex overflow-hidden h-screen flex-col bg-white">
+        <div className="flex relative flex-col w-full h-screen max-md:pb-24 max-md:max-w-full">
+          <video autoPlay loop muted playsInline className="absolute size-full object-cover" >
             <source src="./SerivePage/Instrumrntation Earthing Banner videos.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-        <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
-          <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
-             INSTRUMENTATION EARTHING STUDIES
-          </h1>
-          <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
-          <Link to={'/get-in-touch'}>
-            <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
-              Get in touch
-            </button>
-          </Link>
+          <div className="flex Y-axis-text-Title-Service1 inset-y-3/4 lg:-mt-[2%] 2xl:mt-0 lg:inset-x-20 p-4 relative flex-col self-center w-full max-md:mt-10 max-md:max-w-full mb-0 mx-40 max-w-full max-md:mb-2.5">
+            <h1 className=" lg:text-5xl md:text-4xl text-3xl font-bold my-auto tracking-wider text-white max-md:max-w-full max-md:text-4xl">
+              INSTRUMENTATION EARTHING STUDIES
+            </h1>
+            <div className="flex gap-6 items-center self-start mt-8 text-lg uppercase text-neutral-900  max-md:mt-10">
+              <Link to={'/get-in-touch'}>
+                <button className="uppercase px-5 lg:px-10 self-stretch  py-2 lg:py-3 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 text-lg hover:bg-red-700 hover:text-white 2xl:min-h-[64px] rounded-[50px]">
+                  Get in touch
+                </button>
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
 
 
-    {/* Contact Us section */}
+      {/* Contact Us section */}
 
 
 
-    <section className="flex h-auto -mb-11 md:mb-0 overflow-hidden flex-col bg-stone-900">
-      <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full" />
-      <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
-        <div className="flex w-full max-md:max-w-full">
-          <div className="flex items-center h-full min-w-[240px]">
-            {navItems.map((item, index) => (
-              <div key={index} className="flex items-center self-stretch my-auto">
-                <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
-                  {item.label}
-                </div>
-                {item.isActive && (
-                  <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
-                    <div className="flex items-center w-[7px]">
-                      <div className="flex flex-col justify-center self-stretch my-auto min-h-[7px] w-[7px]">
-                        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/98403646f26f29fd8d19e6e57b2e9f8b5de2f748795475a0d9039378b1786404?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-full aspect-square" />
+      <section className="flex h-auto -mb-11 md:mb-0 overflow-hidden flex-col bg-stone-900">
+        <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full" />
+        <nav className="flex flex-col justify-center py-6 px-24 w-full bg-zinc-800 min-h-[64px] max-md:px-5 max-md:max-w-full">
+          <div className="flex w-full max-md:max-w-full">
+            <div className="flex items-center h-full min-w-[240px]">
+              {navItems.map((item, index) => (
+                <div key={index} className="flex items-center self-stretch my-auto">
+                  <div className={`self-stretch my-auto text-xs tracking-wide leading-none uppercase whitespace-nowrap ${item.isActive ? 'text-red-700' : 'text-neutral-300'}`}>
+                    {item.label}
+                  </div>
+                  {item.isActive && (
+                    <div className="flex flex-col self-stretch px-2.5 my-auto w-[27px]">
+                      <div className="flex items-center w-[7px]">
+                        <div className="flex flex-col justify-center self-stretch my-auto min-h-[7px] w-[7px]">
+                          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/98403646f26f29fd8d19e6e57b2e9f8b5de2f748795475a0d9039378b1786404?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain flex-1 w-full aspect-square" />
+                        </div>
                       </div>
                     </div>
-                  </div>
-                )}
-              </div>
-            ))}
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
+        </nav>
+        <div className="flex ContactUsAnimation justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
+          <img loading="lazy" src="./SerivePage/IELogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
         </div>
-      </nav>
-      <div className="flex ContactUsAnimation justify-center items-end self-center px-80 mt-24 max-w-full min-h-[80px] w-[770px] max-md:px-5 max-md:mt-10">
-        <img loading="lazy" src="./SerivePage/IELogo.png" alt="Earthing Studies Logo" className="object-contain w-16 aspect-square" />
-      </div>
-      <header className="flex p-4 ContactUsAnimation flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
-        <h1 className="flex flex-col max-w-full text-2xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
-          <div className="w-full max-md:max-w-full">
-             JEF CAPABILITY
-          </div>
-        </h1>
-        <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-        JEF is pioneer in delivering top-tier instrumentation Grounding audits and studies
-        that ensures the safety and reliability of critical systems. Our expertise extends
-        across 150+ control rooms & instrumentation panel rooms, where we have
-        meticulously audited over 5,900 panels, 29,530+ junction boxes, and 64,900+ field
-        assets or filed instruments.
-        </p>
-        <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-        Our comprehensive audits are designed to identify and mitigate potential risks,
-        enhancing system performance, reliability and ensuring compliance with industry
-        standards. With a focus on quality and precision, we provide actionable insights to
-        optimize Grounding systems, safeguard equipment, and ensure the highest level of
-        operational integrity.
-        </p>
-        <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-        Partner with JEF for unparalleled expertise in instrumentation Grounding audits, and
-        experience the difference in safety, efficiency, and reliability for your operations.</p>
-      </header>
-      <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
-        <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
-          Get in touch for Real-Life Case Studies and Testimonials
-        </p>
-        <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
-      </div>
-      <button className="flex ContactUsAnimation gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-      <Link to={'/get-in-touch'}>
-        <span className="self-stretch my-auto">CONTACT US</span>
-      </Link>
-        <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-      </button>
-   </section>
+        <header className="flex p-4 ContactUsAnimation flex-col items-center self-center mt-10 w-full text-base text-center text-white max-w-[1391px] max-md:mt-10 max-md:max-w-full">
+          <h1 className="flex flex-col max-w-full text-2xl  font-medium uppercase leading-relaxed tracking-wider w-[1071px]">
+            <div className="w-full max-md:max-w-full">
+              JEF CAPABILITY
+            </div>
+          </h1>
+          <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
+            JEF is pioneer in delivering top-tier instrumentation Grounding audits and studies
+            that ensures the safety and reliability of critical systems. Our expertise extends
+            across 150+ control rooms & instrumentation panel rooms, where we have
+            meticulously audited over 5,900 panels, 29,530+ junction boxes, and 64,900+ field
+            assets or filed instruments.
+          </p>
+          <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
+            Our comprehensive audits are designed to identify and mitigate potential risks,
+            enhancing system performance, reliability and ensuring compliance with industry
+            standards. With a focus on quality and precision, we provide actionable insights to
+            optimize Grounding systems, safeguard equipment, and ensure the highest level of
+            operational integrity.
+          </p>
+          <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
+            Partner with JEF for unparalleled expertise in instrumentation Grounding audits, and
+            experience the difference in safety, efficiency, and reliability for your operations.</p>
+        </header>
+        <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
+          <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
+            Get in touch for Real-Life Case Studies and Testimonials
+          </p>
+          <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
+        </div>
+        <button className="flex ContactUsAnimation gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+          <Link to={'/get-in-touch'}>
+            <span className="self-stretch my-auto">CONTACT US</span>
+          </Link>
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
+        </button>
+      </section>
 
-    
 
-   
-{/* 
+
+
+      {/* 
       <section>
           < VerticalCarousel />
       </section> */}
 
-        <section>
-          < InstrumentationStudiesPage />
-        </section>
+      <section>
+        < InstrumentationStudiesPage />
+      </section>
 
 
-    
+
 
       {/* <section>
         < CarouselSection components={components} />
       </section> */}
 
 
-      <section>
+      <section className="hidden sm:block">
         <div className={` h-full bg-slate-900`}>
-          <div 
+          <div
             className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
             {backgroundImage && (
               <div className="absolute inset-0 w-full h-full ">
@@ -418,9 +467,9 @@ const InstrumentEarthing = () => {
               <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
                 Our Services
               </h2>
-              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
-                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
-                  {services.slice(0, 9).map((service, index) => (
+              <div className="circle-slider flex flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                  {services.slice(0, 8).map((service, index) => (
                     <ServiceItem
                       key={index}
                       text={service.text}
@@ -432,35 +481,86 @@ const InstrumentEarthing = () => {
                     />
                   ))}
                 </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10'>
-                  {services.slice(9).map((service, index) => (
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-10'>
+                  {services.slice(8).map((service, index) => (
                     <ServiceItem
-                      key={index + 9}
+                      key={index + 8}
                       text={service.text}
                       path={service.path}
                       image={service.image}
-                      ref={(el) => (serviceRefs.current[index + 9] = el)}
-                      onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
+                      ref={(el) => (serviceRefs.current[index + 8] = el)}
+                      onMouseEnter={() => handleMouseEnter(index + 8, service.image)}
                       onMouseLeave={handleMouseLeave}
                     />
                   ))}
                 </div>
               </div>
             </section>
-            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="block sm:hidden">
+        <div className={` h-full bg-slate-900`}>
+          <div
+            className=" w-full h-full py-20 mainSection bg-stone-900 overflow-hidden relative">
+            {backgroundImage && (
+              <div className="absolute inset-0 w-full h-full ">
+                <img
+                  ref={imgRef}
+                  src={backgroundImage}
+                  alt=""
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+              </div>
+            )}
+            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+                Our Services
+              </h2>
+              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                  {services2.slice(0, 7).map((service2, index) => (
+                    <ServiceItem2
+                      key={index}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10 mb-6'>
+                  {services2.slice(12, 14).map((service2, index) => (
+                    <ServiceItem2
+                      key={index}
+                      text={service2.text}
+                      path={service2.path}
+                      image={service2.image}
+                      ref={(el) => (service2Refs.current[index] = el)}
+                      onMouseEnter={() => handleMouseEnter(index, service2.image)}
+                      onMouseLeave={handleMouseLeave}
+                    />
+                  ))}
+                </div>
+              </div>
+            </section>
+          </div>
         </div>
       </section>
 
 
 
-  <section>
-    < TestimonialsSection />
-  </section>
+      <section>
+        < TestimonialsSection />
+      </section>
 
 
- 
-    < MainFooter />
-   </>
+
+      < MainFooter />
+    </>
   )
 }
 
@@ -490,10 +590,10 @@ function TestimonialsSection() {
       <div className="flex overflow-hidden flex-col justify-center w-full h-[532px] max-md:max-w-full">
         <div className="flex overflow-hidden flex-col w-full bg-white max-md:max-w-full">
           <div className="flex relative flex-col justify-center items-center px-5 sm:px-10 md:px-20 py-20 w-full min-h-[532px]">
-            <img 
-              loading="lazy" 
-              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8e06a7d505c4129965e4c18c8e0cb8829849853aeb8e18090ea753ccccfdc6f?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" 
-              alt="Background for testimonials section" 
+            <img
+              loading="lazy"
+              src="https://cdn.builder.io/api/v1/image/assets/TEMP/f8e06a7d505c4129965e4c18c8e0cb8829849853aeb8e18090ea753ccccfdc6f?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244"
+              alt="Background for testimonials section"
               className="object-cover absolute inset-0 size-full"
             />
             <div className="Testimonials gap-5 flex Y-axis-Testimonials relative flex-col max-w-full w-full md:w-[679px]">
@@ -516,48 +616,71 @@ function TestimonialsSection() {
                     </span>
                   ))}
                 </p>
-                </div>
-                <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
+              </div>
+              <div className="flex flex-wrap justify-center mt-10 max-w-full tracking-wider text-white uppercase w-full   mx-auto">
                 <Link to={'/get-in-touch'}>
-               <button className={`flex overflow-hidden text-sm justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
-                        CONTACT US
-                </button>
-               </Link>
+                  <button className={`flex overflow-hidden text-sm justify-center bg-red-700 items-center self-center px-16 md:px-14 py-3 my-auto border border-solid border-zinc-800 border-opacity-10 min-h-[55px] rounded-[60px] `}>
+                    CONTACT US
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section> 
+    </section>
   );
 }
 
 
 
 
-const ServiceItem = React.forwardRef(({ path , text, onMouseEnter, onMouseLeave }, ref) => {
-  return (
-   <Link to={path}>
-     <div
-        ref={ref}
-        className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
-          ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
-        onMouseEnter={() => {
-          if (text !== "") {
-            onMouseEnter();
-          }
-        }}
-        onMouseLeave={() => {
-          if (text !== "") {
-            onMouseLeave();
-          }
-        }}
-      >
-        <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
-      </div>
-   </Link>
-
+const ServiceItem = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
   );
+
+  return path ? <Link to={path}>{content}</Link> : content;
+});
+
+const ServiceItem2 = React.forwardRef(({ path, text, onMouseEnter, onMouseLeave }, ref) => {
+  const content = (
+    <div
+      ref={ref}
+      className={`flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
+        ${text === "" ? "bg-transparent" : "border border-solid hover:bg-red-600"}`}
+      onMouseEnter={() => {
+        if (text !== "") {
+          onMouseEnter();
+        }
+      }}
+      onMouseLeave={() => {
+        if (text !== "") {
+          onMouseLeave();
+        }
+      }}
+    >
+      <span className="text-center text-[10px] lg:text-[10px] 2xl:text-[12px] ">{text}</span>
+    </div>
+  );
+
+  return path ? <Link to={path}>{content}</Link> : content;
 });
 
 
@@ -660,7 +783,7 @@ function CarouselSection({ components }) {
               <img src={component.imageSrc} alt={component.title} className="h-[3rem]" />
               <h3 className="text-red-700 font-normal w-[80vw] sm:w-[90%] text-2xl sm:text-start my-5 text-center">{component.title}</h3>
               <p className=" text-gray-400 text-center w-[80vw] sm:w-[70%] font-thin lg:w-[80%] sm:text-start text-lg max-w-screen-xl">{component.description}</p>
-            </div>            
+            </div>
           ))}
         </div>
       </div>
@@ -887,7 +1010,7 @@ function CarouselSection({ components }) {
 
 const standards = [
   { id: 'IEEE1100', title: 'IEEE 1100', description: 'IEEE Recommended Practice for Powering and Grounding Electronic Equipment', isRed: true },
-  { id: 'IEEE1050', title: 'IEEE 1050', description: 'Guide for Instrumentation and Control Equipment rounding in Generating Stations', isRed: false },
+  { id: 'IEEE1050', title: 'IEEE 1050', description: 'Guide for Instrumentation and Control Equipment grounding in Generating Stations', isRed: false },
   { id: 'GP1265', title: 'GP 12-65', description: 'Guidance on Practice for Electromagnetic Compatibility', isRed: true },
   { id: 'GP1225', title: 'GP 12-25', description: 'Guidance on Practice for Grounding', isRed: false },
   { id: 'IEC6100052', title: 'IEC 61000-5-2', description: 'Electromagnetic Compatibility – Installation and Mitigation Guidelines – Grounding and Cabling', isRed: true },
@@ -1009,7 +1132,7 @@ function KeyCheckPoints({ slides }) {
         {/* Static left-side content */}
         <div className="flex flex-col w-[19%] Y-axis-Slider-anm max-md:ml-0 max-md:w-full">
           <h2 className="flex px-5 pb-7 w-full text-3xl tracking-normal leading-9 text-white uppercase max-md:mt-10">
-          <div className="border-l border-red-500 h-full mr-2"></div> 
+            <div className="border-l border-red-500 h-full mr-2"></div>
             <span className="py-2 pr-2 min-w-[14.4375rem]">
               KEY <br /> CHECK <br /> POINTS
             </span>
@@ -1053,9 +1176,8 @@ function KeyCheckPoints({ slides }) {
         {/* Next button */}
         <button
           onClick={handleNext}
-          className={`flex self-start justify-start items-start min-h-[3.75rem] transition-transform duration-500 ${
-            currentIndex === 1 ? "rotate-180" : "rotate-0"
-          }`}
+          className={`flex self-start justify-start items-start min-h-[3.75rem] transition-transform duration-500 ${currentIndex === 1 ? "rotate-180" : "rotate-0"
+            }`}
           aria-label="Next"
         >
           <div className="flex overflow-hidden flex-1 shrink justify-center items-center self-stretch px-5 my-auto bg-white border border-solid border-zinc-900 border-opacity-10 h-[3.75rem] min-h-[3.75rem] rounded-[3.75rem] w-[3.75rem]">

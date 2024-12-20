@@ -811,7 +811,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Compliance and standards",
       description:
-        "JEF ensures that all EMI/EMC studies meet or exceed international standards, including: |IEC 61000 (Electromagnetic Compatibility Standards).|IEEE 299 (Shielding Effectiveness of Enclosures).|IEEE 299 (Shielding Effectiveness of Enclosures).|Local regulatory guidelines specific to project locations.",
+        "JEF ensures that all EMI/EMC studies meet or exceed international standards, including: |IEC 61000 (Electromagnetic Compatibility Standards).|IEEE 299 (Shielding Effectiveness of Enclosures).|MIL-STD-461 (Control of Electromagnetic Interference).|Local regulatory guidelines specific to project locations.",
     },
     {
       imgSrc:
