@@ -266,7 +266,7 @@ const EarthingStudies = () => {
     {
       imageSrc: './SerivePage/01.png',
       title: 'Riser Integrity Testing',
-      description: 'Evaluating the condition of risers to detect faulty connections/joints with above & below ground.',
+      description: 'Evaluating the condition of risers to detect faulty connections/joints both above & below ground.',
     },
     {
       imageSrc: './SerivePage/02.png',
@@ -385,7 +385,7 @@ const EarthingStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-          As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries. We have tested 400 substation risers from 66kV to 765kV process plants and other critical installations. With several patents in this field, our level of expertise is unmatched even we keep innovating further.
+            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries. We have tested 400 substation risers from 66kV to 765kV process plants and other critical installations. With several patents in this field, our level of expertise is unmatched even as we keep innovating further.
           </p>
           {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
@@ -398,12 +398,10 @@ const EarthingStudies = () => {
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
-        <button className="flex ContactUsAnimation gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <Link to={'/get-in-touch'}>
-            <span className="self-stretch my-auto">CONTACT US</span>
-          </Link>
+        <Link to='/get-in-touch' className="flex ContactUsAnimation gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+          <span className="self-stretch my-auto">CONTACT US</span>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-        </button>
+        </Link>
       </section>
 
 
@@ -528,7 +526,7 @@ const EarthingStudies = () => {
       <section>
         < TestimonialsSection />
       </section>
-      
+
       < MainFooter />
     </>
   )
@@ -798,28 +796,28 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Earthing/Grounding System Studies ?",
       description:
-        "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensuring the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC, and local regulations.|Preventing operational disruptions and improving system efficiency.",
+        "|Having data of 300,000 earth riser connections in various geographics, the defect rate is alarming. (Get in touch with us to see the statistics)| Rectifying defective connections will help ensure the safety of personnel and equipment by preventing electric shock and equipment damage.|Enhancing the reliability and performance of electrical systems.|Complying with international standards such as IEEE, IEC and local regulations.|Preventing operational disruptions and improving system efficiency.",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Our certifications and expertize",
       description:
-        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, ${" "}IEEE 142, and IEEE 1100.`,
+        `JEFs team is certified and trained in the latest standards and practices, including: |3 patents in the area of Grounding System Testing. |IEEE Standards: Compliance with IEEE 80, IEEE 81, IEEE 142 and IEEE 1100.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Detailed Study Reports and Analysis",
       description:
-        `Our detailed reports include : |Comprehensive documentation of findings, measurements, and observations|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for optimizing system safety and protection against lightning`,
+        `Our detailed reports include : |Comprehensive documentation of test results, findings and observations with details of specific risers & joints that need rectification.|Summary of compliance with relevant standards and recommendations for improvements.|Actionable insights for enhancing system safety and performance including design and maintenance related aspects, if any.`,
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Benefits of Professional Earthing/Grounding System Studies",
       description:
-        "| Enhanced Electrical Safety: Reducing the risk of lightning-related hazards and protecting personnel and equipment.| Operational Reliability: Ensuring uninterrupted operations and protecting critical infrastructure |Standards Compliance: Meeting international and local regulations for lightning protection systems.|Cost Savings: Preventing costly damage and downtime through effective lightning protection measures.",
+        "|Enhanced Electrical Safety: Reducing the risk of electric shock and equipment damage.|Operational Efficiency: Ensuring reliable and efficient operation of electrical systems.|Standards Compliance: Meeting international and local regulations for earthing/grounding systems.|Cost Savings: Preventing costly equipment failures and operational disruptions.",
     },
   ];
 

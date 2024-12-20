@@ -382,12 +382,10 @@ const PowerQualityStudies = () => {
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
-        <button className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <Link to={'/get-in-touch'}>
-            <span className="self-stretch my-auto">CONTACT US</span>
-          </Link>
+        <Link to='/get-in-touch' className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+          <span className="self-stretch my-auto">CONTACT US</span>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-        </button>
+        </Link>
       </section>
 
 
@@ -777,7 +775,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "JEF’s value add",
       description:
-        "JEF has a large number of class ‘A’ power analysers and highly trained engineers & technicians to carry out complete power quality measurements for various applications including Renewable Energy, Industries, Airports, Data Centre etc. With a large team of qualified engineers based in our Abu Dhabi office, we cater to the requirements of clients in the entire GCC  North Africa areas."
+        "JEF has a large number of class ‘A’ power analysers and highly trained engineers & technicians to carry out complete power quality measurements for various applications including Renewable Energy, Industries, Airports, Data Centre etc. With a large team of qualified engineers based in our Abu Dhabi office, we cater to the requirements of clients in the entire GCC & North Africa areas."
     },
     {
       imgSrc:
@@ -835,8 +833,8 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                      : "h-auto text-xs 2xl:text-base"
+                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                    : "h-auto text-xs 2xl:text-base"
                     }`}
                   onClick={() => handleClick(index)}
                 >
@@ -876,8 +874,8 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
                       <li
                         key={index}
                         className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                            : "h-auto text-base"
+                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                          : "h-auto text-base"
                           }`}
                         onClick={() => handleClick(index)}
                       >

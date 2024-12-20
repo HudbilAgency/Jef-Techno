@@ -398,10 +398,10 @@ const InstrumentEarthing = () => {
             </div>
           </h1>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            JEF is pioneer in delivering top-tier instrumentation Grounding audits and studies
+            JEF is pioneer in delivering top-tier instrumentation. Grounding audits and studies
             that ensures the safety and reliability of critical systems. Our expertise extends
             across 150+ control rooms & instrumentation panel rooms, where we have
-            meticulously audited over 5,900 panels, 29,530+ junction boxes, and 64,900+ field
+            meticulously audited over 5,900+ panels, 29,000+ junction boxes and 64,000+ field
             assets or filed instruments.
           </p>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
@@ -412,8 +412,8 @@ const InstrumentEarthing = () => {
             operational integrity.
           </p>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            Partner with JEF for unparalleled expertise in instrumentation Grounding audits, and
-            experience the difference in safety, efficiency, and reliability for your operations.</p>
+            Partner with JEF for unparalleled expertise in Instrumentation Grounding audits and
+            experience the difference in safety, efficiency and reliability for your operations.</p>
         </header>
         <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
@@ -421,12 +421,10 @@ const InstrumentEarthing = () => {
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
-        <button className="flex ContactUsAnimation gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <Link to={'/get-in-touch'}>
-            <span className="self-stretch my-auto">CONTACT US</span>
-          </Link>
+        <Link to='/get-in-touch' className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+          <span className="self-stretch my-auto">CONTACT US</span>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-        </button>
+        </Link>
       </section>
 
 
@@ -1015,7 +1013,7 @@ const standards = [
   { id: 'GP1225', title: 'GP 12-25', description: 'Guidance on Practice for Grounding', isRed: false },
   { id: 'IEC6100052', title: 'IEC 61000-5-2', description: 'Electromagnetic Compatibility – Installation and Mitigation Guidelines – Grounding and Cabling', isRed: true },
   { id: 'BS74302011', title: 'BS-7430:2011', description: 'Code of Practice for Protective Grounding of Electrical Installations', isRed: false },
-  { id: 'DEP33641033Gen', title: 'DEP33.64.10.33Gen.', description: 'Electromagnetic Compatibility for Electrical and Electronics Systems', isRed: true },
+  { id: 'DEP33641033Gen', title: 'DEP 33.64. 10.33-Gen.', description: 'Electromagnetic Compatibility for Electrical and Electronics Systems', isRed: true },
   { id: 'IEEE812012', title: 'IEEE 81-2012', description: 'IEEE guide for Measuring Soil Resistivity, Ground Impedance, Earth Surface Potentials of the Grounding System.', isRed: false },
   { id: 'IEEE1422007', title: 'IEEE 142-2007', description: 'Grounding of Industrial and Commercial Power Systems', isRed: true },
   { id: 'IEEE5192014', title: 'IEEE-519-2014', description: 'IEEE Recommended Practice and Requirements for Harmonic Control in Electrical Power Systems', isRed: false },
@@ -1037,16 +1035,16 @@ const keyPoints = [
 
 const slides = [
   {
-    title: 'WE FOCUS DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE YOUR OPERATIONS',
+    title: 'WE FOCUS ON DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE RELIABILITY OF YOUR OPERATIONS',
     keyPoints: [
-      'Mix up between instrumentation and protective grounding system.',
-      "Grounding philosophy for is and nis systems.",
+      'Mix-up between instrumentation and protective grounding system.',
+      "Grounding philosophy for IS and NIS systems.",
       'Existing grounding scheme',
       'Shields with high loop current',
-      'Electro magnetic interference on panels and field assets or instruments',
-      'Effective grounding of panels, junction boxes and field assets or instruments.',
+      'Electromagnetic interference on panels and field assets or instruments',
       'Grounding of cable armour’s',
       'Grounding unused cables',
+      'Effective grounding of panels, junction boxes and field assets or instruments.',
       'Interconnection with different grounding systems.'
     ],
   },
@@ -1063,7 +1061,7 @@ const slides = [
       'Grounding unused cables',
       'Interconnection with different grounding systems.'
     ],
-    title: ' BY PERFORMING INSTRUMENTAION GROUNDING STUDIES',
+    title: 'ACHIEVED BY PERFORMING INSTRUMENTAION GROUNDING STUDIES',
     keyPoints: [
       'Reduces unwanted trips',
       'Reduces plant shutdown',

@@ -362,17 +362,17 @@ const PowerSystemStudies = () => {
             </div>
           </h1>
           <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto  mt-12 font-light max-md:mt-10 max-md:max-w-full">
-            We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid Green hydrogen plants Micro grids.
+            We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid & Green hydrogen plants & Micro grids.
             With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
-          <p>We have multiple licences & using all major Softwares like
+          <p>We have multiple licences & using all major Softwares like:
           </p>
           {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
           {/* <p>We have multiple licences & using all major Softwares like</p> */}
           <div className="my-5">
-            <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CFEGS.</p>
+            <p>PSSE, PSCAD, DIG SILENT, ETAP, EMTP RV, CDEGS.</p>
           </div>
           <p className="w-[80%] lg:w-[60%] text-center mx-auto">We have the ability to study any possible steady state, dynamic, EMT & Hormonic issues, in a new or existing plant.</p>
-          <p className="w-[80%] lg:w-[60%] text-center mx-auto">Over the last 30 years, JEF has been synonymous with going the “EXTRA MILE” to ensure meeting the objectives of the projects ensure meeting the objectives of the project including technical aspects & timely completion.</p>
+          <p className="w-[80%] lg:w-[60%] text-center mx-auto">Over the last 30 years, JEF has been synonymous with going the proverbial “EXTRA MILE” to ensure meeting the objectives of the project including technical aspects & timely completion.</p>
         </header>
         <div className="flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="ContactUsAnimation px-56 w-full max-md:px-5 max-md:max-w-full">
@@ -380,12 +380,10 @@ const PowerSystemStudies = () => {
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
-        <button className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
-          <Link to={'/get-in-touch'}>
-            <span className="self-stretch my-auto">CONTACT US</span>
-          </Link>
+        <Link to='/get-in-touch' className="ContactUsAnimation flex gap-3.5 justify-center items-center self-center py-4 px-10 max-w-full text-sm tracking-wider leading-none text-center text-white uppercase border border-white border-solid rounded-[60px]">
+          <span className="self-stretch my-auto">CONTACT US</span>
           <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ad33562234bc92238f0281eafa23a9b3c49a837f5ae8d3662c67bc1d8b919e14?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244" alt="" className="object-contain shrink-0 self-stretch my-auto w-6 aspect-square" />
-        </button>
+        </Link>
       </section>
 
 
@@ -782,23 +780,23 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is a Power System Study?",
+      title: "Why Choose Us?",
       description:
-        "With our patented & unique customer designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",
+        "With our patented & unique custom designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "List of Studies for Renewable Energy",
       description:
-        `|Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Stealy State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Power Quality Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test`
+        "Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Steady State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Dynamic Model Acceptance test|Power Quality Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test"
     },
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "For Industries",
       description:
-        "|Load Flow Studies|Short Circuit Studies|Protection & Relay Co-ordination Studies|Harmonic Analysis|Motor Starting Study|Transient Stability|Insulation Co-ordination Studies"
+        "|Load Flow Studies|Short Circuit Studies|Protection & Relay Co-ordination Studies|AC/DC Arc Flash Studies|Harmonic Analysis|Motor Starting Study|Transient Stability|Insulation Co-ordination Studies"
     },
     {
       imgSrc:
