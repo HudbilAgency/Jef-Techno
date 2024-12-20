@@ -682,7 +682,7 @@ function CarouselSection({ components }) {
   }, []);
 
   return (
-    <section className="flex xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
+    <section className="hidden xl:px-[100px] lg:px-[60px] flex-col items-start px-5 pt-16 pb-32 bg-black">
       <div className="flex flex-wrap gap-5 justify-between w-full">
         <h2 className="md:text-3xl text-2xl font-bold leading-none text-red-700 uppercase">
           KEY COMPONENTS OF THE STUDY
@@ -861,8 +861,8 @@ const VerticalCarousel = () => {
                 <li
                   key={index}
                   className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                      ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
-                      : "h-auto text-xs 2xl:text-base"
+                    ? "text-white lg:text-lg 2xl:text-2xl font-semibold h-32 2xl:h-56"
+                    : "h-auto text-xs 2xl:text-base"
                     }`}
                   onClick={() => handleClick(index)}
                 >
@@ -902,8 +902,8 @@ const VerticalCarousel = () => {
                       <li
                         key={index}
                         className={`flex transition-all duration-300 ease-in-out items-start w-full rounded-xl cursor-pointer ${activeIndex === index
-                            ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
-                            : "h-auto text-base"
+                          ? "text-white text-lg lg:text-2xl h-14 lg:h-24"
+                          : "h-auto text-base"
                           }`}
                         onClick={() => handleClick(index)}
                       >
