@@ -287,6 +287,18 @@ const RootCause = () => {
       description: 'Investigating power quality issues, including voltage sags, harmonics, and transients, to determine their root causes.',
       description2: 'Providing solutions to enhance power stability and prevent future disruptions.',
     },
+    {
+      imageSrc: './SerivePage/05.png',
+      title: 'Failure Mode Effect Analysis (FMEA)',
+      description: 'Systematic assessment of potential failure modes and their effects on system performance.',
+      description2: 'Implementing proactive measures to mitigate risks and improve system resilience.',
+    },
+    {
+      imageSrc: './SerivePage/06.png',
+      title: 'Corrective and Preventive Action Plans',
+      description: 'Development of detailed action plans to address identified root causes.',
+      description2: 'Implementation of preventive measures to avoid future occurences of similar issues.',
+    },
   ]
 
   const buttons = [

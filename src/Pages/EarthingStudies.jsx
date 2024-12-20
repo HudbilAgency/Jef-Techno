@@ -528,9 +528,7 @@ const EarthingStudies = () => {
       <section>
         < TestimonialsSection />
       </section>
-
-
-
+      
       < MainFooter />
     </>
   )
@@ -780,7 +778,6 @@ function CarouselSection({ components }) {
 const VerticalCarousel = () => {
   const benefitItems = [
     "ABOUT Earthing studies",
-    "Preventing Disruptions and Improving Efficiency",
     "Earthing/Grounding System Studies",
     "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
@@ -795,13 +792,6 @@ const VerticalCarousel = () => {
       title: "What is an earthing / grounding system studies",
       description:
         "An Earthing/Grounding System Study involves evaluating the effectiveness and integrity of both above and below ground connections in electrical installations. These studies help in pinpointing defective joints that can seriously affect the safety and performance of electrical systems.",
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Preventing operational disruptions and improving system efficiency.",
-      description:
-        "|Comprehensive documentation of test results, findings and observations with details of specific risers; joints that need rectification | Summary of compliance with relevant standards and recommendations for improvements | Actionable insights for enhancing system safety and performance including design and maintenance related aspects if any",
     },
     {
       imgSrc:
@@ -873,7 +863,7 @@ const VerticalCarousel = () => {
           <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 6}%)` }}
+              style={{ transform: `translateY(-${(activeIndex * 100) / 5}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div

@@ -269,16 +269,11 @@ const PowerSystemStudies = () => {
     },
     {
       imageSrc: './SerivePage/02.png',
-      title: 'Lightning Protection System (LPS) Design',
-      description: 'Selecting from a choice of methods like the Rolling Sphere, Protection Angle, and Mesh Methods to design effective LPS.',
-    },
-    {
-      imageSrc: './SerivePage/03.png',
       title: 'Surge Protection Devices (SPD):',
       description: 'Selecting Class I, II, and III SPDs at various levels of the electrical distribution system to protect against conducted surges.',
     },
     {
-      imageSrc: './SerivePage/04.png',
+      imageSrc: './SerivePage/03.png',
       title: 'Additional Mitigation Techniques',
       description: 'Using equi-potential bonding, warning notices, and other best engineering practices to further reduce risk.',
     },
