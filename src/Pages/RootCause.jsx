@@ -498,7 +498,7 @@ const RootCause = () => {
               </h2>
               <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
                 <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
-                  {services2.slice(0, 9).map((service2, index) => (
+                  {services2.slice(0, 7).map((service2, index) => (
                     <ServiceItem2
                       key={index}
                       text={service2.text}
@@ -801,7 +801,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Importance of root cause analysis",
       description:
-        "Recurring electrical faults, inefficiencies, or system breakdowns can disrupt operations, increase downtime, and escalate maintenance costs. RCA provides a systematic approach to uncover the root causes of these issues, ensuring long-term reliability and performance. Root Cause Analysis is crucial for:|Minimizing Downtime: Identifying and addressing the root causes of failures prevents disruptions in operations.|Enhancing Safety: Reducing risks associated with electrical faults and ensuring a safer working environment.|Cost Savings: Preventing recurring problems reduces repair and maintenance expenses.|Optimizing System Performance: Improving the efficiency and reliability of electrical systems",
+        "Recurring electrical faults, inefficiencies, or system breakdowns can disrupt operations, increase downtime, and escalate maintenance costs. RCA provides a systematic approach to uncover the root causes of these issues, ensuring long-term reliability and performance. Root Cause Analysis is crucial for:|Minimizing Downtime: Identifying and addressing the root causes of failures prevents disruptions in operations.|Enhancing Safety: Reducing risks associated with electrical faults and ensuring a safer working environment.|Cost Savings: Preventing recurring problems reduces repair and maintenance expenses.|Optimizing System Performance: Improving the efficiency and reliability of electrical systems.",
     },
     {
       imgSrc:
@@ -834,11 +834,11 @@ const VerticalCarousel = () => {
 
   return (
     <section>
-      <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 max-md:pl-5 max-md:mt-10 max-md:max-w-full">
-        <div className="flex w-[95%] gap-5 max-md:flex-col">
+      <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 px-5 md:px-12 lg:px-0 max-md:mt-10 max-md:w-full">
+        <div className="flex flex-col lg:flex-row w-full xl:w-[95%] gap-5 max-md:flex-col">
           {/* Left Side: Benefit Items */}
           <div className="flex flex-col lg:w-[44%] max-md:ml-0 max-md:w-full">
-            <ul className="hidden lg:flex flex-col mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-[90%] lg:w-[70%] max-md:pl-5 max-md:ml-2.5">
+            <ul className="flex flex-col lg:mx-auto justify-center space-y-5 max-w-full text-sm leading-6 text-gray-400 w-full lg:w-[70%]">
               {benefitItems.map((item, index) => (
                 <li
                   key={index}
@@ -863,15 +863,15 @@ const VerticalCarousel = () => {
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] max-sm:h-[70vh] overflow-hidden max-md:ml-0 max-md:w-full">
+          <div className="relative flex flex-col w-[56%] max-sm:h-[90vh] max-lg:h-[56vh] overflow-hidden max-md:ml-0 max-lg:w-full">
             <div
-              className="absolute transition-transform duration-500 ease-in-out"
+              className="absolute transition-transform duration-500 ease-in-out w-full"
               style={{ transform: `translateY(-${(activeIndex * 100) / 4}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 h-screen max-md:max-w-full"
+                  className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 mt-12 lg:mt-0 h-screen lg:w-full"
                 >
                   <img
                     loading="lazy"
@@ -879,7 +879,7 @@ const VerticalCarousel = () => {
                     alt={content.title}
                     className="object-contain max-w-full  w-[6rem] 2xl:w-[124px] transition-opacity duration-500 ease-in-out"
                   />
-                  <ul className="lg:hidden flex flex-col mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
+                  <ul className="hidden mx-auto justify-center space-y-5 my-4 max-w-full text-sm leading-6 text-gray-400 w-[90%] ">
                     {benefitItems.slice(0, 1).map((item, index) => (
                       <li
                         key={index}
@@ -903,7 +903,7 @@ const VerticalCarousel = () => {
                   </ul>
 
 
-                  <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold sm:ml-5 lg:ml-0 tracking-[4.53px] uppercase max-md:max-w-full">
+                  <h2 className="2xl:mt-6 mt-4 lg:w-[80%] lg:text-2xl 2xl:text-3xl font-semibold sm:ml-5 lg:ml-0 tracking-[4.53px] uppercase w-full">
                     {content.title}
                   </h2>
                   <div className="mt-10 max-md:max-w-full">
