@@ -248,7 +248,7 @@ const Navbar = () => {
                   Contact Us
                 </button>
               </Link>
-              <button className="md:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
+              <button className="lg:hidden mr-2 justify-items-center w-[2.3rem]" onClick={toggleSlideMenu}>
                 <img src="../HomePageImg/NavbarImg/MenuLogo.png" alt="Mobile View Menu Button" />
               </button>
             </div>
@@ -290,7 +290,7 @@ const Navbar = () => {
           } transition-transform duration-500 ease-in-out`}
       >
         <button
-          className="absolute top-5 right-0 p-2 text-white"
+          className="absolute top-5 right-4 p-2 text-white"
           onClick={toggleSlideMenu}
         >
           <img src="../HomePageImg/NavbarImg/CLoseMenuLogo.png" alt="closeButton" className='w-[10vw] sm:w-[5vw] md:w-[3vw]' />
