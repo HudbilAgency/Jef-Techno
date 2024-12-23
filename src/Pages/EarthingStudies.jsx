@@ -254,7 +254,7 @@ const EarthingStudies = () => {
 
   const benefitItems = [
     "ABOUT Earthing studies",
-    'What is an Earthing/Grounding System Studies',
+    'What is an Earthing/Grounding System Study',
     'Earthing/Grounding System Studies',
     'Our Certifications and Expertise',
     'Detailed Study Reports and Analysis',

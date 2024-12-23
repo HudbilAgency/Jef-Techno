@@ -778,7 +778,7 @@ const VerticalCarousel = () => {
     "Our Approach to Lightning Protection Study Service",
     "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
-    "Benefits of Professional Earthing/Grounding System Studies",
+    "Benefits of Professional Lightning Protection Studies",
   ];
 
   const cardContents = [
