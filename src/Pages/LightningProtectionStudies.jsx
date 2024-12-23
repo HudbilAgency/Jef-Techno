@@ -275,7 +275,7 @@ const LightningProtectionStudies = () => {
     },
     {
       imageSrc: './SerivePage/03.png',
-      title: 'Surge Protection Devices (SPD):',
+      title: 'Surge Protection Devices (SPD)',
       description: 'Selecting Class I, II, and III SPDs at various levels of the electrical distribution system to protect against conducted surges.',
     },
     {
