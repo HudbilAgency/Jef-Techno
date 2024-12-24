@@ -813,6 +813,17 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
     setActiveIndex(index);
   };
 
+  const [isScreenTall, setIsScreenTall] = useState(window.innerHeight < 600 && window.innerWidth > 1023);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsScreenTall(window.innerHeight < 600 && window.innerWidth > 1023);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
     <section>
       <div className="overflow-hidden py-20 w-full bg-stone-900 max-md:pt-24 px-5 md:px-12 lg:px-0 max-md:mt-10 max-md:w-full">
@@ -844,7 +855,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
           </div>
 
           {/* Right Side: Vertical Carousel Content */}
-          <div className="relative flex flex-col w-[56%] max-sm:h-[90vh] max-lg:h-[47vh] overflow-hidden max-md:ml-0 max-lg:w-full">
+          <div className={`relative flex flex-col w-[56%] max-sm:h-[90vh] max-lg:h-[47vh] overflow-hidden max-md:ml-0 max-lg:w-full ${isScreenTall ? '2xl:min-h-[120vh]' : ''}`}>
             <div
               className="absolute transition-transform duration-500 ease-in-out w-full"
               style={{ transform: `translateY(-${(activeIndex * 100) / 5}%)` }}
@@ -852,7 +863,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
               {cardContents.map((content, index) => (
                 <div
                   key={index}
-                  className="flex flex-col items-start text-2xl  md:text-3xl text-red-700 mt-12 lg:mt-0 h-screen lg:w-full"
+                  className={`flex flex-col items-start text-2xl  md:text-3xl text-red-700 mt-12 lg:mt-0 lg:w-full ${isScreenTall ? 'h-screen 2xl:min-h-[120vh]' : 'h-screen'}`}
                 >
                   <img
                     loading="lazy"
