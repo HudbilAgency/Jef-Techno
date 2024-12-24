@@ -257,7 +257,6 @@ const PowerQualityStudies = () => {
     "ABOUT Earthing studies",
     'What is an Earthing/Grounding System Studies',
     'Earthing/Grounding System Studies',
-    'Our Certifications and Expertise',
     'Detailed Study Reports and Analysis',
     'Benefits of Professional Earthing/Grounding System Studies',
   ];
@@ -765,7 +764,6 @@ const VerticalCarousel = () => {
     "JEF’s value add",
     "Importance of Power Quality Studies",
     "Our Approach to Power Quality Study Service",
-    "Our Certifications and Expertise",
     "Detailed Study Reports and Analysis",
   ];
 
@@ -792,13 +790,6 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
       title: "Our Approach to Power Quality Study Service",
       description:
         "At JEF, we follow a systematic approach to Power Quality Studies:|Data Collection: Using advanced power quality analyzers to gather data on voltage, current and frequency.|Analysis: Detailed analysis of collected data to identify power quality issues such as sags, swells, harmonics, and transients.|Reporting: Comprehensive reports detailing findings, compliance status, and recommendations for improvements.|Mitigation: Recommending implementation of tailored solutions to address identified power quality issues."
-    },
-    {
-      imgSrc:
-        "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Our Certifications and Expertise",
-      description:
-        "JEF is committed to excellence and quality. Our team is certified and trained in the latest standards and practices, including:|IEEE 1159 and IEEE 1100 standards for monitoring and mitigating power quality issues.|IEC 61000 series for electromagnetic compatibility and power quality."
     },
     {
       imgSrc:
@@ -856,7 +847,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
           <div className="relative flex flex-col w-[56%] max-sm:h-[90vh] max-lg:h-[47vh] overflow-hidden max-md:ml-0 max-lg:w-full">
             <div
               className="absolute transition-transform duration-500 ease-in-out w-full"
-              style={{ transform: `translateY(-${(activeIndex * 100) / 6}%)` }}
+              style={{ transform: `translateY(-${(activeIndex * 100) / 5}%)` }}
             >
               {cardContents.map((content, index) => (
                 <div

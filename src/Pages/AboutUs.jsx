@@ -176,9 +176,9 @@ const AboutUs = () => {
               </span>
             </h1>
             <p className="pb-px mt-8 w-full text-lg font-light  max-md:max-w-full">
-              JEF is a widely accredited technology-enabled company, focused on solving the
+              JEF is a widely renowned technology-enabled company, focused on solving the
               toughest <br className='hidden md:block' /> problems in the electrical engineering space with a comprehensive and
-              innovative set of <br className='hidden md:block' /> products and solutions.
+              innovative set of <br className='hidden md:block' /> services and solutions.
             </p>
             <p className="pb-px mt-8 w-full text-lg font-light max-md:max-w-full">
               Founded in 1994, our relentless commitment to innovation, quality, and <br className='hidden md:block' />
@@ -312,7 +312,7 @@ const AboutUs = () => {
                   SAFETY AT SCALE
                 </h1>
                 <p className="mt-5 Y-axis-text w-full text-lg font-light leading-6 text-white max-md:max-w-full min-w-[90%]">
-                  Over the last couple of decades, our clients have been able to assure the long-term <br className='hidden md:block' /> safety of their assets & people across geographics.
+                  Over the last couple of decades, our clients have been able to assure the long-term <br className='hidden md:block' /> safety of their assets & people across geographies.
                 </p>
               </div>
             </div>

@@ -74,7 +74,7 @@ export default function LeadershipTeam() {
   const leaders = [
     {
       id: 1,
-      name: "Prashanth BG",
+      name: "PRASHANTH BG",
       title: "CHAIRMAN & MANAGING DIRECTOR",
       image: "./LeadershipTeamImg/PrashantBG.png",
       variant: "red"
@@ -89,14 +89,14 @@ export default function LeadershipTeam() {
     {
       id: 3,
       name: "PK KASINATHAN",
-      title: "Chief Executive Officer - JEF KNR",
+      title: "Chief Executive Officer - JEF CONSULTING",
       image: "./LeadershipTeamImg/KASINATHAN.png",
       variant: "red"
     },
     {
       id: 4,
       name: "AS RAVISHANKAR",
-      title: "SBU HEAD - Technical Services",
+      title: "SBU HEAD - TECHNICAL SERVICES",
       image: "./LeadershipTeamImg/RAVISHANKAR.png",
       variant: "red"
     },

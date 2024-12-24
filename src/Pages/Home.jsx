@@ -1120,7 +1120,7 @@ const WhatWeDoSection = () => {
   }, []);
 
   return (
-    <section className={`flex overflow-hidden flex-col bg-zinc-800 ${isScreenTall ? 'lg:max-h-screen' : 'lg:max-h-[100vh]'}`}>
+    <section className={`flex overflow-hidden flex-col bg-zinc-800 ${isScreenTall ? 'lg:max-h-screen' : 'lg:max-h-[112vh]'}`}>
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
 
@@ -1212,11 +1212,11 @@ const WhatWeDoSection = () => {
                         </div>
                         <div className="flex-col justify-end items-end lg:ml-[20%]">
                           <h3 className="mt-10  text-xs 2xl:text-base font-bold text-start text-green-500 uppercase tracking-[3px] max-md:max-w-full">CAPACITY | UNIT | SQM AREA</h3>
-                          <p className="self-stretch text-xs 2xl:text-base mt-6 2xl:w-[90%] h-[23vh] 2xl:leading-7 text-white ">
-                            {buttonData[hoveredButtonIndex]?.description || "Earthing is an crucial part of any electrical installation, ensuring protection from electrocution and fire, while also enabling the proper operation of protective systems."}
+                          <p className="self-stretch text-xs 2xl:text-base mt-6 2xl:w-[90%] 2xl:leading-7 text-white ">
+                            {buttonData[hoveredButtonIndex]?.description || "Earthing is a crucial part of any electrical installation, ensuring protection from electrocution and fire, while also enabling the proper operation of protective systems."}
                           </p>
                           <Link to={buttonData[hoveredButtonIndex]?.path}>
-                            <button className="gap-2.5 text-xs 2xl:text-base self-stretch px-5 py-2 2xl:mt-12  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white 2xl:py-3 rounded-[50px] 2xl:px-12">
+                            <button className="gap-2.5 text-xs 2xl:text-base self-stretch px-5 py-2 mt-12  text-red-700 uppercase bg-white hover:bg-red-700 hover:text-white 2xl:py-3 rounded-[50px] 2xl:px-12">
                               Read more
                             </button>
                           </Link>

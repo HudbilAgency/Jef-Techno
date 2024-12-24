@@ -35,7 +35,7 @@ function MainFooter() {
     { name: 'What is JEF', path: '/about-us' },
     { name: 'JEF leadership team', path: '/leadership-team' },
     { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
-    { name: 'JEF L & D Centre', path: '/L&D-Centre' }
+    { name: 'JEF L&D Centre', path: '/L&D-Centre' }
   ];
 
   const itemsService = [
@@ -53,7 +53,6 @@ function MainFooter() {
     { name: 'India', path: '' },
     { name: 'KSA', path: '' },
     { name: 'UAE', path: '' },
-    { name: 'USA', path: '' }
   ];
 
   const itemsBusiness = [
@@ -114,7 +113,7 @@ function Footer() {
           </div>
           <div className="sm:text-xs text-[10px] card-slider-footer mx-auto lg:mx-0 flex gap-0 tracking-wide max-md:max-w-full">
             Copyright 2023. All Rights Reserved © jeftechno | Designed by
-            <a className='-mt-[2%]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="../FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
+            <a className='-mt-[2%] ml-[3px]' href="https://www.hudbil.com/" target="_blank" rel="noopener noreferrer"><img src="../FooterLogo/HudbilLogo.png" alt="hudbilLogo" className='h-8' /></a>
           </div>
         </div>
       </div>
@@ -158,8 +157,8 @@ const FAQComponent = () => {
       content: [
         { label: 'What is JEF', path: '/about-us' },
         { label: 'JEF leadership team', path: '/leadership-team' },
-        { label: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
-        { label: 'JEF L & D Centre', path: '/L&D-Centre' }
+        { label: 'JEF Smart Digitization', path: '/SmartDigitalization' },
+        { label: 'JEF L&D Centre', path: '/L&D-Centre' }
       ],
       isOpen: false
     },
@@ -183,7 +182,6 @@ const FAQComponent = () => {
         { label: 'India', path: '' },
         { label: 'KSA', path: '' },
         { label: 'UAE', path: '' },
-        { label: 'USA', path: '' },
       ],
       isOpen: false
     },

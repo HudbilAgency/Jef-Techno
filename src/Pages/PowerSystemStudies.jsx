@@ -364,7 +364,7 @@ const PowerSystemStudies = () => {
           <p className="self-stretch w-[80%] lg:w-[60%] text-center mx-auto  mt-12 font-light max-md:mt-10 max-md:max-w-full">
             We offer a very wide and comprehensive range of Power System Studies for Renewable Energy applications <br /> including Solar PV, WIND, BESS, Hybrid & Green hydrogen plants & Micro grids.
             With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p>
-          <p>We have multiple licences & using all major Softwares like:
+          <p>We have multiple licences and expertise in using all major softwares like:
           </p>
           {/* <p className="my-5">With experience in Grid codes of several countries, we bring comprehensive knowledge & Expertise.</p> */}
           {/* <p>We have multiple licences & using all major Softwares like</p> */}
@@ -780,7 +780,7 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "What is Power System Study?",
+      title: "Why choose Us?",
       description:
         "With our patented & unique custom designed & developed automation tool, we offer unparalleled customer service & have consistently ‘delighted’ our customers with the quality, completeness and timeliness of our work product.",
     },
@@ -789,7 +789,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "List of Studies for Renewable Energy",
       description:
-        "Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Stealy State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Power Quality Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test"
+        "Grid Integration Studies (for Solar, Wind, BESS, Hybrid, green hydrogen)|Steady State Analysis|Reactive Power Capability Analysis|Transient Studies|Grid Code Compliance Studies|Dynamic grid impact studies|Dynamic model acceptance test|Power Quality Analysis|Insulation Co-ordination Studies|Protection & Relay Co-ordination Studies|AC/DC Arc flash studies|Model Validation test"
     },
     {
       imgSrc:
