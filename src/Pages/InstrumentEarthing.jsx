@@ -417,7 +417,7 @@ const InstrumentEarthing = () => {
         </header>
         <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
-            Get in touch for Real-Life Case Studies and Testimonials
+            Get in touch for any queries and real-life case-studies
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>

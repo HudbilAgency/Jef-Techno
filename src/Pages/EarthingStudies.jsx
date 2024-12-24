@@ -385,7 +385,7 @@ const EarthingStudies = () => {
             </div>
           </h1>
           <p className="self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            As a pioneer in Earthing integrity testing services, we at JEF have over 12 years of experience covering 300,000 riser connections spread across 18 countries. We have tested 400 substation risers from 66kV to 765kV process plants and other critical installations. With several patents in this field, our level of expertise is unmatched even as we keep innovating further.
+            As a pioneer in Earthing integrity testing services, we at JEF have over two decades of experience covering 300,000 riser connections spread across 18 countries, 400 substations ranging from 66kV to 765kV process plants and other critical installations. With several patents in this field, our level of expertise is unmatched even as we keep innovating further.
           </p>
           {/* <p className="mt-12 max-md:mt-10 font-light max-md:max-w-full">
           With several patents in this field, our level of expertise is unmatched even we keep
@@ -394,7 +394,7 @@ const EarthingStudies = () => {
         </header>
         <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
-            Get in touch for Real-Life Case Studies and Testimonials
+            Get in touch for any queries and real-life case-studies
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
@@ -933,7 +933,7 @@ const VerticalCarousel = () => {
             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
-                src="./SerivePage/magna-discovery.jpg.png"
+                src="./SerivePage/Earthing.png"
                 alt="Earthing/Grounding System Illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />

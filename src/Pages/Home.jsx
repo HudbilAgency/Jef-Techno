@@ -807,7 +807,7 @@ function Home() {
                   <div ref={imgRef2} className="h-[450px]">
                     <img
                       className="w-full h-full object-cover"
-                      src="/HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.jpeg"
+                      src="/HomePageImg/WhyChooseJEFImg/Our L&D Centre 1.png"
                       alt=""
                     />
                   </div>
@@ -908,7 +908,7 @@ function Home() {
                   <p>
                     Every single day, we endeavour to make more customers across continents benefit from our work as a step to enhance reliability & safety in the electrical network.
                   </p>
-                  <p>Over the last 30 years of our existence, we have served more than 4000 customers in 24 countries. Consistently meeting & exceeding their expectations at every given opportunity, we at Team JEF have created a formidable track record for ourselves.
+                  <p>Over the last 30 years of our existence, we have served more than 4000 customers in 28 countries. Consistently meeting & exceeding their expectations at every given opportunity, we at Team JEF have created a formidable track record for ourselves.
                   </p>
                   <p>No wonder customers <span className="font-medium">THINK "JEF"</span> when they <span className="font-medium">THINK ELECTRICAL</span> engineering.
                   </p>
@@ -1124,7 +1124,7 @@ const WhatWeDoSection = () => {
       {!showSection && (
         <div className={`flex relative flex-col px-20 pt-16 w-full min-h-[1126px] max-md:px-5 max-md:py-24 max-md:max-w-full transition-opacity duration-500 ${fadeOut ? 'opacity-0' : 'opacity-100'}`}>
 
-          <h1 className="Y-axis-text z-50 text-white font-normal text-center absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">Delivering Excellence Across 24 Countries</h1>
+          <h1 className="Y-axis-text z-50 text-white font-normal text-center absolute inset-0 my-[50vh] flex  justify-center text-xl sm:text-4xl uppercase ">Delivering Excellence Across 28 countries</h1>
           <video
             ref={videoRef}
             onEnded={handleVideoEnd}

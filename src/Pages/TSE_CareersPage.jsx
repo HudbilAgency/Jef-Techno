@@ -190,7 +190,7 @@ function JobOverviewCard({ data }) {
         <article className="flex flex-col self-stretch max-md:max-w-full">
           <h2 className="text-2xl text-red-700 font-semibold">About JEF:</h2>
           <p className="mt-8 leading-6 max-md:max-w-full">
-            JEF is an innovative company with Indian roots and an extensive international presence across 24 countries in the ASEAN, Middle Eastern, African and European regions. We have been the preferred vendor for prestigious projects in many countries with 3000+ global customers and an astounding 90% customer retention rate.
+            JEF is an innovative company with Indian roots and an extensive international presence across 28 countries in the ASEAN, Middle Eastern, African and European regions. We have been the preferred vendor for prestigious projects in many countries with 3000+ global customers and an astounding 90% customer retention rate.
           </p>
           <p className='mt-8'>With over 30 years in the industry, we have a proven track record of successfully implementing
             several engineering solutions. Our services span the entire spectrum of electrical engineering

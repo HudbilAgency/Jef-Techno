@@ -378,7 +378,7 @@ const PowerQualityStudies = () => {
         </header>
         <div className="ContactUsAnimation flex flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
-            Get in touch for Real-Life Case Studies and Testimonials
+            Get in touch for any queries and real-life case-studies
           </p>
           <div className="flex mt-2.5 w-full min-h-[24px] max-md:max-w-full" />
         </div>
@@ -791,7 +791,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Our Approach to Power Quality Study Service",
       description:
-        "At JEF, we follow a systematic approach to Power Quality Studies:|Data Collection: Using advanced power quality analyzers to gather data on voltage, current, and frequency.|Analysis: Detailed analysis of collected data to identify power quality issues such as sags, swells, harmonics, and transients.|Reporting: Comprehensive reports detailing findings, compliance status, and recommendations for improvements.|Mitigation: Recommending implementation of tailored solutions to address identified power quality issues."
+        "At JEF, we follow a systematic approach to Power Quality Studies:|Data Collection: Using advanced power quality analyzers to gather data on voltage, current and frequency.|Analysis: Detailed analysis of collected data to identify power quality issues such as sags, swells, harmonics, and transients.|Reporting: Comprehensive reports detailing findings, compliance status, and recommendations for improvements.|Mitigation: Recommending implementation of tailored solutions to address identified power quality issues."
     },
     {
       imgSrc:
@@ -928,7 +928,7 @@ failures and/or inefficiencies.|Ensuring compliance with international standards
             <div className="flex flex-col grow justify-center my-[6%] max-md:mt-10 max-md:max-w-full">
               <img
                 loading="lazy"
-                src="./SerivePage/magna-discovery.jpg.png"
+                src="./SerivePage/Power Quality.png"
                 alt="Earthing/Grounding System Illustration"
                 className="object-cover w-full h-full aspect-[0.96] max-md:max-w-full"
               />

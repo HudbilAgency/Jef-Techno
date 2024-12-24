@@ -182,7 +182,7 @@ const AboutUs = () => {
             </p>
             <p className="pb-px mt-8 w-full text-lg font-light max-md:max-w-full">
               Founded in 1994, our relentless commitment to innovation, quality, and <br className='hidden md:block' />
-              client satisfaction has propelled us to become a trusted partner across 24 countries .
+              client satisfaction has propelled us to become a trusted partner across 28 countries .
             </p>
           </header>
           <div className="flex flex-col items-center px-16 mt-20 max-md:px-5 max-md:mt-10 max-md:max-w-full">
@@ -274,7 +274,7 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <p className="mt-6 Y-axis-text sm:mt-8 md:mt-11 text-lg md:text-xl font-extralight leading-7 sm:leading-8 text-black">
-                  From three decades, JEF as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in 24 countries.
+                  From three decades, JEF as a brand has been synonymous with quality, reliability and trustworthiness in our areas of operation. Since our inception in 1994, JEF has continuously developed new products, services and expanded to new geographies to become the front-runner in Electrical Engineering space. Through this wider network, JEF brand has now been established as a global player in our area of operation with many prestigious references in 28 countries.
                 </p>
               </div>
             </div>
@@ -390,7 +390,7 @@ const Overview = () => {
             <div className="flex flex-col w-[33%] max-md:ml-0 max-md:w-full">
               <div className="flex card-slider-Overview hover:bg-stone-800 hover:border-opacity-80 overflow-hidden flex-col grow items-start px-10 pt-12 pb-40 text-xl font-light leading-9 text-white border border-white border-opacity-20 max-md:px-5 max-md:pb-24">
                 <div className="font-medium leading-10 text-center text-red-700 uppercase tracking-[4.53px] 2xl:h-24">
-                  From India to 24 Countries
+                  From India to 28 countries
                 </div>
                 <div className="mt-16 text-lg max-md:mt-10">
                   Strong International Presence.
