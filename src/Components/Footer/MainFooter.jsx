@@ -34,7 +34,7 @@ function MainFooter() {
   const itemsAbout = [
     { name: 'What is JEF', path: '/about-us' },
     { name: 'JEF leadership team', path: '/leadership-team' },
-    { name: 'JEF Smart Digitalization', path: '/SmartDigitalization' },
+    { name: 'JEF Smart Digitization', path: '/SmartDigitalization' },
     { name: 'JEF L&D Centre', path: '/L&D-Centre' }
   ];
 
