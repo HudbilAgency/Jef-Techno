@@ -398,11 +398,7 @@ const InstrumentEarthing = () => {
             </div>
           </h1>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-            JEF is pioneer in delivering top-tier instrumentation. Grounding audits and studies
-            that ensures the safety and reliability of critical systems. Our expertise extends
-            across 150+ control rooms & instrumentation panel rooms, where we have
-            meticulously audited over 5,900+ panels, 29,000+ junction boxes and 64,000+ field
-            assets or filed instruments.
+          JEF is a pioneer in delivering top-tier Instrumentation Grounding audits and studies that ensure the safety and reliability of critical systems. Our experience extends across 150+ control rooms & instrumentation panel rooms, where we have meticulously audited over 5,900+ panels, 29,000+ junction boxes and 64000+ field assets or filed instruments.
           </p>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
             Our comprehensive audits are designed to identify and mitigate potential risks,
@@ -413,7 +409,7 @@ const InstrumentEarthing = () => {
           </p>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
             Partner with JEF for unparalleled expertise in Instrumentation Grounding audits and
-            experience the difference in safety, efficiency and reliability for your operations.</p>
+            experience the difference in safety, efficiency and reliability of your operations.</p>
         </header>
         <div className="flex ContactUsAnimation flex-col self-center mt-14 max-w-full text-sm md:text-base leading-6 text-center text-red-700 w-[770px] max-md:mt-10">
           <p className="px-56 w-full max-md:px-5 max-md:max-w-full">
@@ -1079,7 +1075,7 @@ function InstrumentationStudiesPage() {
   return (
     <main className="flex overflow-hidden flex-col items-center bg-stone-900 pt-[10%] max-md:pt-24">
       <h1 className="text-xl lg:text-2xl font-bold text-center text-red-700 uppercase lg:leading-[3.0625rem] tracking-[0.28313rem] w-[72.5rem] max-md:max-w-full">
-        INTERNATIONAL STANDARDS THAT WE ADHERE TO FOR PERFORMING INSTRUMENTATION STUDIES
+        INTERNATIONAL STANDARDS THAT WE ADHERE TO FOR PERFORMING INSTRUMENTATION EARTHING STUDIES
       </h1>
       <StandardList standards={standards} />
       <section className="flex overflow-hidden flex-col items-center self-stretch py-24 mt-36 w-full bg-stone-900 max-md:px-5 max-md:mt-10 max-md:max-w-full">

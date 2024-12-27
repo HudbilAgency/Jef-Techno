@@ -801,7 +801,7 @@ const VerticalCarousel = () => {
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
       title: "Importance of root cause analysis",
       description:
-        "Recurring electrical faults, inefficiencies, or system breakdowns can disrupt operations, increase downtime, and escalate maintenance costs. RCA provides a systematic approach to uncover the root causes of these issues, ensuring long-term reliability and performance. Root Cause Analysis is crucial for:|Minimizing Downtime: Identifying and addressing the root causes of failures prevents disruptions in operations.|Enhancing Safety: Reducing risks associated with electrical faults and ensuring a safer working environment.|Cost Savings: Preventing recurring problems reduces repair and maintenance expenses.|Optimizing System Performance: Improving the efficiency and reliability of electrical systems.",
+        "Recurring electrical faults, inefficiencies, or system breakdowns can disrupt operations, increase downtime, and escalate maintenance costs. RCA follows a systematic approach to uncover the root causes of these issues, ensuring long-term reliability and performance. Root Cause Analysis is crucial for:|Minimizing Downtime: Identifying and addressing the root causes of failures prevents disruptions in operations.|Enhancing Safety: Reducing risks associated with electrical faults and ensuring a safer working environment.|Cost Savings: Preventing recurring problems reduces repair and maintenance expenses.|Optimizing System Performance: Improving the efficiency and reliability of electrical systems.",
     },
     {
       imgSrc:
@@ -820,7 +820,7 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Why choose jef for emi/emc studies",
+      title: "Why Choose JEF for Root Cause Analysis?",
       description:
         `|Expertise: A team of skilled engineers with extensive experience in electrical fault investigation and system optimization.|Comprehensive Approach: A systematic process that identifies, analyzes, and resolves the root causes of issues.|Tailored Solutions: Customized action plans designed to meet the specific needs of your industry and operations.|Proven Success: A strong track record of delivering RCA services that improve system reliability and reduce downtime.`,
     }

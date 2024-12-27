@@ -821,7 +821,7 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Why choose jef for emi/emc studies",
+      title: "Why choose jef for emi/emc studies?",
       description:
         `|Expertise: Decades of experience in designing and implementing EMI/EMC solutions across diverse industries. |Comprehensive Solutions: From site surveys to mitigation strategies, we provide end-to-end services tailored to your requirements.|Compliance Assurance: Adherence to global standards ensures that your systems meet regulatory requirements and operate without disruption.|Proven Results: A track record of successfully delivering EMI/EMC solutions for high-stakes projects worldwide.`,
     }
