@@ -411,22 +411,22 @@ function ServicesComponent() {
 
   const services = [
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/b5f02d9fdb5718b196d139d6ebd861434cc16ed9ab32832947574565d35f1e8a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/es-nav-logo.png',
       text: 'Earthing studies',
       path: '/earthing-studies',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/867f2d5ce1ba02732c6bd156934c4e5560b9272459baee10a94cd80ed6bccf8f?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/lps-nav-logo.png',
       text: 'Lightning protection studies',
       path: '/lightning-protection-studies',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/704550b3ea93f0d94056e8407f045bb96f426d89156169b780aa07bd555d1512?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/pss-nav-logo.png',
       text: 'Power system studies',
       path: '/power-system-studies',
     },
     {
-      icon: 'https://cdn.builder.io/api/v1/image/assets/TEMP/e7602f18306c0a2953e65246bde5f6d381c9d6dbb4b63b81ac2662d70c68741a?placeholderIfAbsent=true&apiKey=ec02862acd164f0aad3ceef0d2a999c3',
+      icon: '/pqs-nav-logo.png',
       text: 'Power quality studies',
       path: '/power-quality-studies',
     },
