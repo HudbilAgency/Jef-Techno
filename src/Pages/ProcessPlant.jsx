@@ -132,26 +132,26 @@ function ProcessPlant() {
 
 
   const services = [
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '../HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }], path: '/earthing-studies' },
-    { image: '../HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }], path: '/lightning-protection-studies' },
-    { image: '../HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }], path: '/power-system-studies' },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '../HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }], path: '/power-quality-studies' },
-    { image: '../HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }], path: '/instrumentation-earthing-studies' },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-    { image: '', text: '', data: [] },
-  ];
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '../HomePageImg/WhatWeDoSection/Earthing Studies 2.png', text: 'Earthing studies', data: [{ label: 'Total Projects', value: 165 }, { label: 'gcc', value: 42 }, { label: 'INDIA', value: '123' }], path: '/earthing-studies' },
+      { image: '../HomePageImg/WhatWeDoSection/Lightning Protection 2.png', text: 'Lightning protection system studies', data: [{ label: 'Total Projects', value: 233 }, { label: 'gcc', value: 38 }, { label: 'INDIA', value: '195' }], path: '/lightning-protection-studies' },
+      { image: '../HomePageImg/WhatWeDoSection/Power System Studies 2.png', text: 'Power system studies', data: [{ label: 'Total Projects', value: 74 }, { label: 'gcc', value: 16 }, { label: 'INDIA', value: '58' }], path: '/power-system-studies' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '../HomePageImg/WhatWeDoSection/Power Quality and Root cause Analysis 2.png', text: 'Power quality & root cause analysis', data: [{ label: 'Total Projects', value: 66 }, { label: 'gcc', value: 30 }, { label: 'INDIA', value: '36' }], path: '/power-quality-studies' },
+      { image: '../HomePageImg/WhatWeDoSection/Instrumentation Earthing 2.png', text: 'Instrumentation earthing', data: [{ label: 'Total Projects', value: 32 }, { label: 'gcc', value: "08" }, { label: 'INDIA', value: '24' }], path: '/instrumentation-earthing-studies' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '', text: '', data: [], path: '' },
+      { image: '../HomePageImg/WhatWeDoSection/Emi Emc 2.jpg', text: 'EMI EMC', data: [{ label: 'Total Projects', value: 96 }, { label: 'gcc', value: "25" }, { label: 'INDIA', value: '71' }], path: '/emi-emc' },
+    ];
 
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
@@ -308,43 +308,58 @@ function ProcessPlant() {
                 />
               </div>
             )}
-            <section className="flex overflow-hidden flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
-              <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
-                Our Services
-              </h2>
-              <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-[39vh] lg:h-[55vh]">
-                <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
-                  {services.slice(0, 9).map((service, index) => (
-                    <ServiceItem
-                      key={index}
-                      data={service.data}
-                      path={service.path}
-                      text={service.text}
-                      ref={(el) => (serviceRefs.current[index] = el)}
-                      onMouseEnter={(event) => handleMouseEnter(index, service.image, event)}
-                      onMouseLeave={handleMouseLeave}
-                    />
-
-
-                  ))}
-                </div>
-                <div className='flex Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10'>
-                  {services.slice(9).map((service, index) => (
-                    <ServiceItem
-                      key={index}
-                      data={service.data}
-                      path={service.path}
-                      text={service.text}
-                      ref={(el) => (serviceRefs.current[index + 9] = el)}
-                      onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
-                      onMouseLeave={handleMouseLeave}
-                    />
-
-
-                  ))}
-                </div>
-              </div>
-            </section>
+            <section className="flex flex-col text-base leading-6 text-center text-white uppercase w-full relative z-10">
+                          <h2 className="self-center text-3xl font-semibold leading-none text-red-700 tracking-[4.53px] max-md:max-w-full max-md:text-4xl">
+                            Our Services
+                          </h2>
+                          <div className="flex circle-slider flex-wrap justify-center mt-20 max-md:mt-10 w-full h-full">
+                            <div className='flex Y-axis-Service-anm items-center gap-x-2 md:gap-x-5 lg:gap-x-10 circleChild'>
+                              {services.slice(0, 9).map((service, index) => (
+                                <ServiceItem
+                                  key={index}
+                                  path={service.path}
+                                  data={service.data}
+                                  text={service.text}
+                                  ref={(el) => (serviceRefs.current[index] = el)}
+                                  onMouseEnter={(event) => handleMouseEnter(index, service.image, event)}
+                                  onMouseLeave={handleMouseLeave}
+                                />
+            
+            
+                              ))}
+                            </div>
+                            <div className='flex items-center Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10'>
+                              {services.slice(9).map((service, index) => (
+                                <ServiceItem
+                                  key={index}
+                                  path={service.path}
+                                  data={service.data}
+                                  text={service.text}
+                                  ref={(el) => (serviceRefs.current[index + 9] = el)}
+                                  onMouseEnter={() => handleMouseEnter(index + 9, service.image)}
+                                  onMouseLeave={handleMouseLeave}
+                                />
+            
+            
+                              ))}
+                            </div>
+                            <div className='flex items-center Y-axis-Service-anm gap-x-2 md:gap-x-5 lg:gap-x-10'>
+                              {services.slice(18).map((service, index) => (
+                                <ServiceItem
+                                  key={index}
+                                  path={service.path}
+                                  data={service.data}
+                                  text={service.text}
+                                  ref={(el) => (serviceRefs.current[index + 18] = el)}
+                                  onMouseEnter={() => handleMouseEnter(index + 18, service.image)}
+                                  onMouseLeave={handleMouseLeave}
+                                />
+            
+            
+                              ))}
+                            </div>
+                          </div>
+                        </section>
           </div>
         </div>
       </section>
@@ -418,12 +433,11 @@ const ServiceItem = React.forwardRef(({ path, text, data, onMouseEnter, onMouseL
 
   // Determine the position class based on the text of the item
   const positionClass =
-    text === 'Power quality & root cause analysis' || text === 'Instrumentation earthing'
+    text === 'Power quality & root cause analysis' || text === 'Instrumentation earthing' || text === 'EMI EMC'
       ? 'bottom-1/2'
       : 'top-1/2';
 
-  return (
-    <Link to={path}>
+      const content = (
       <div
         ref={ref}
         className={` flex w-[7.2rem] h-[7.2rem] lg:h-[9rem] lg:w-[9rem] 2xl:w-[11.5rem] 2xl:h-[11.5rem] rounded-full items-center justify-center p-[0.5%] lg:p-[1.5%] transition-all duration-300 
@@ -451,8 +465,9 @@ const ServiceItem = React.forwardRef(({ path, text, data, onMouseEnter, onMouseL
           </div>
         )}
       </div>
-    </Link>
   );
+
+  return path ? <Link to={path}>{content}</Link> : content;
 });
 
 
