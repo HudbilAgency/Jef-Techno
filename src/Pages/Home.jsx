@@ -166,6 +166,17 @@ const buttonData = [
     description: "An Instrumentation Earthing Study involves evaluating the earthing system of instrumentation and control systems to ensure proper grounding. This study helps prevent electrical noise, surges, and other issues that can affect the accuracy and reliability of instrumentation.",
     className: "mt-[calc(10vh-10rem)] md:mt-[calc(10vh-14rem)] 2xl:mt-[calc(10vh-18rem)] ml-[0.5rem] md:-ml-[0.5rem] 2xl:ml-0",
   },
+  {
+    image: './HomePageImg/WhatWeDoSection/Emi Emc 2.jpg',
+    text: 'EMI EMC',
+    title: "EMI EMC Projects Completed",
+    path: '/emi-emc',
+    totalProjects: 96,
+    indiaProjects: 71,
+    gcc: "25",
+    description: "In an era of rapidly advancing technology, maintaining electromagnetic compatibility is critical for the reliable operation of electrical systems and devices.",
+    className: "mt-[calc(10vh-2rem)] md:mt-[calc(10vh-12rem)] 2xl:mt-[calc(10vh-15rem)] ml-4 md:-ml-8 2xl:-ml-10",
+  },
 ];
 
 
@@ -941,7 +952,7 @@ function Home() {
             <header className="flex flex-wrap gap-5 justify-between self-stretch w-full text-red-700 uppercase max-md:max-w-full">
               <h1 className=" text-4xl font-bold leading-none X-axis-anm tracking-[3.36px]">BLOGS</h1>
               <div className="flex gap-7 tracking-[1px]">
-                <div className="text-xs X-axis-anm my-auto">40 ARTICLES IN TOTAL</div>
+                <div className="text-xs X-axis-anm my-auto opacity-0 cursor-default">40 ARTICLES IN TOTAL</div>
                 <button
                   className={`bg-red-700 X-axis-anm hover:bg-black rounded-full p-3 ${currentIndex === 0 ? "visibility-hidden" : "visible"}`}
                   onClick={prevSlide}

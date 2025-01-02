@@ -398,7 +398,7 @@ const InstrumentEarthing = () => {
             </div>
           </h1>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
-          JEF is a pioneer in delivering top-tier Instrumentation Grounding audits and studies that ensure the safety and reliability of critical systems. Our experience extends across 150+ control rooms & instrumentation panel rooms, where we have meticulously audited over 5,900+ panels, 29,000+ junction boxes and 64000+ field assets or filed instruments.
+          JEF is a pioneer in delivering top-tier Instrumentation Grounding audits and studies that ensure the safety and reliability of critical systems. Our experience extends across 150+ control rooms & instrumentation panel rooms, where we have meticulously audited over 5,900+ panels, 29,000+ junction boxes and 64000+ field assets or field instruments.
           </p>
           <p className="ContactUsAnimation self-stretch mt-12 w-[80%] lg:w-[60%] text-center mx-auto font-light max-md:mt-10 max-md:max-w-full">
             Our comprehensive audits are designed to identify and mitigate potential risks,

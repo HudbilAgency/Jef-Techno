@@ -82,14 +82,14 @@ export default function LeadershipTeam() {
     {
       id: 2,
       name: "BADRINARAYANAN THIRUMALAI",
-      title: "Chief Executive Officer - JEF Products & EMI",
+      title: "CEO - JEF PRODUCTS & EMI",
       image: "./LeadershipTeamImg/BADRINARAYANAN.png",
       variant: "red"
     },
     {
       id: 3,
       name: "PK KASINATHAN",
-      title: "Chief Executive Officer - JEF CONSULTING",
+      title: "CEO - JEF CONSULTING",
       image: "./LeadershipTeamImg/KASINATHAN.png",
       variant: "red"
     },

@@ -256,7 +256,7 @@ function CommercialBuilding() {
               Your browser does not support the video tag.
             </video>
             <h1 className="uppercase inset-y-2/3 xl:mt-[10%] lg:inset-x-20 absolute inset-0 p-4 flex z-10">
-              COMMERICAL BULIDINGS
+              COMMERICAL BUILDINGS
             </h1>
           </div>
         </div>
@@ -283,9 +283,10 @@ function CommercialBuilding() {
               className="object-cover self-center max-w-full aspect-square w-20"
             />
             <h1 className="mt-16 self-center lg:w-[40%] font-semibold max-md:mt-10 max-md:max-w-full">
-              digitized SOLUTIONS FOR STRUCTURED
-              ELECTRICAL, FIRE SAFETY & HVAC AUDIT ACCORDING TO LOCAL
-              REGULATIONS <br /> SCALE WITH 100% ACCURACY, CONSISTANCY & SPEED.
+              DIGITIZED SOLUTIONS FOR STRUCTURED
+              ELECTRICAL, FIRE SAFETY &amp; HVAC
+              AUDITS ACCORDING TO LOCAL
+              REGULATIONS. <br /> <h1 className="mt-4"> SCALE WITH 100% ACCURACY, CONSISTENCY & SPEED.</h1>
             </h1>
           </header>
         </main>

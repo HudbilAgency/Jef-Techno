@@ -771,7 +771,8 @@ function ExcellenceinElectricalEngineering() {
             </span>
           </h1>
           <p className="pb-px Y-axis-text mt-16 w-full text-lg  font-light max-md:max-w-full">
-            We provide the below-mentioned solutions for Transmission & Distribution Utilities,<br /> Oil & Gas Infrastructure, and such other customers. <br /><p className='font-medium'> Earthing/Grounding Studies, Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing, EMI/EMC Studies and Root Cause Analysis.</p>
+          We provide the below mentioned solutions for customers across Transmission &amp;
+          Distribution Utilities,<br /> Oil & Gas Infrastructure and many other industry segments. <br /><p className='font-medium'> Earthing/Grounding Studies, Lightning Protection Studies, Power System Studies, Power Quality Studies, Instrumentation Earthing, EMI/EMC Studies and Root Cause Analysis.</p>
           </p>
         </header>
         <div className="items-center mt-20 max-w-full  max-md:mt-10">
