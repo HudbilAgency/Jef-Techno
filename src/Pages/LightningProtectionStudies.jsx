@@ -800,7 +800,7 @@ const VerticalCarousel = () => {
     {
       imgSrc:
         "https://cdn.builder.io/api/v1/image/assets/TEMP/6ea8583cc00a44231bfb61be46e3517321fdd08d7a42dfe22fc28df7bfdc2e24?placeholderIfAbsent=true&apiKey=7904fd7afaaf4ee2b0837ab86d91b244",
-      title: "Internal lighting protection and spds",
+      title: "Internal lightning protection and spds",
       description:
         "Effective internal lightning protection is essential for mitigating risks associated with transient over voltages. SPDs are crucial for:|Ensuring Safety: Protecting personnel and sensitive equipment from damage caused by surges and voltage spikes.|Compliance with Standards: Meeting international standards such as IEC 62305 for lightning protection and IEC 61643 for SPD performance.|Preventing Equipment Damage: Reducing the risk of failure in electronic devices, industrial machinery, and critical systems due to electrical surges.|Minimizing Operational Downtime: Avoiding costly disruptions caused by equipment damage or failure during lightning events.|Protecting Critical Infrastructure: Ensuring uninterrupted operations in sectors such as healthcare, data centers, oil & gas, and renewable energy."
     },

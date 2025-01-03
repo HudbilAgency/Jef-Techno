@@ -286,7 +286,7 @@ function CommercialBuilding() {
               DIGITIZED SOLUTIONS FOR STRUCTURED
               ELECTRICAL, FIRE SAFETY &amp; HVAC
               AUDITS ACCORDING TO LOCAL
-              REGULATIONS. <br /> <h1 className="mt-4"> SCALE WITH 100% ACCURACY, CONSISTENCY & SPEED.</h1>
+              REGULATIONS<br /> SCALE WITH 100% ACCURACY, CONSISTENCY & SPEED.
             </h1>
           </header>
         </main>
