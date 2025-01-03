@@ -1031,7 +1031,7 @@ const keyPoints = [
 
 const slides = [
   {
-    title: 'WE FOCUS ON DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE RELIABILITY OF YOUR OPERATIONS',
+    title: 'KEY CHECK POINTS WE FOCUS ON DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE RELIABILITY OF YOUR OPERATIONS',
     keyPoints: [
       'Mix-up between instrumentation and protective grounding system.',
       "Grounding philosophy for IS and NIS systems.",
@@ -1045,19 +1045,7 @@ const slides = [
     ],
   },
   {
-    title: 'WE FOCUS DURING OUR INSTRUMENTATION AUDITS AND STUDIES TO ENHANCE YOUR OPERATIONS',
-    keyPoints: [
-      'Mix up between instrumentation and protective grounding system.',
-      "Grounding philosophy for is and nis systems.",
-      'Existing grounding scheme',
-      'Shields with high loop current',
-      'Electro magnetic interference on panels and field assets or instruments',
-      'Effective grounding of panels, junction boxes and field assets or instruments.',
-      'Grounding of cable armour’s',
-      'Grounding unused cables',
-      'Interconnection with different grounding systems.'
-    ],
-    title: 'ACHIEVED BY PERFORMING INSTRUMENTAION GROUNDING STUDIES',
+    title: 'KEY CHECK POINTS ACHIEVED BY PERFORMING INSTRUMENTAION GROUNDING STUDIES',
     keyPoints: [
       'Reduces unwanted trips',
       'Reduces plant shutdown',
@@ -1122,16 +1110,8 @@ function KeyCheckPoints({ slides }) {
 
   return (
     <div className="flex-auto max-md:max-w-full">
-      <div className="flex lg:w-[95vw] 2xl:w-full gap-5 max-md:flex-col">
+      <div className="flex lg:w-[95vw] 2xl:w-full gap-5 items-center justify-center">
         {/* Static left-side content */}
-        <div className="flex flex-col w-[19%] Y-axis-Slider-anm max-md:ml-0 max-md:w-full">
-          <h2 className="flex px-5 pb-7 w-full text-3xl tracking-normal leading-9 text-white uppercase max-md:mt-10">
-            <div className="border-l border-red-500 h-full mr-2"></div>
-            <span className="py-2 pr-2 min-w-[14.4375rem]">
-              KEY <br /> CHECK <br /> POINTS
-            </span>
-          </h2>
-        </div>
 
         {/* Sliding right-side content */}
         <div className="slider-container Y-axis-Slider-anm slider-anm">
